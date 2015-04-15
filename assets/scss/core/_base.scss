@@ -1,0 +1,47 @@
+// ==========================================================================
+// Global Base Settings override
+// ==========================================================================
+
+
+html, body {
+  height: 100%;
+  font-family: $courier;
+}
+
+body {
+  padding: 50px 0 0 0;
+}
+
+.main{
+  margin-top: 0;
+}
+
+.navmenu {
+  z-index: 1;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+//  padding: 50px 0 0 0;
+  background: #fff;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .main{
+    margin-top: 80px;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+  .canvas {
+    padding: 0;
+  }
+}

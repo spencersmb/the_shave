@@ -1,0 +1,49 @@
+/*********************************************************
+
+Project Name: Website Bootstrap boilerplate
+Project Description:
+File Name: Master Sass file
+Author: Spencer Bigum
+Author URL:
+Version: 1.0.0
+
+*********************************************************/
+// ==========================================================================
+// Vendor - framework libraries
+// Boostrap
+// ==========================================================================
+@import "vendor/index";
+
+// ==========================================================================
+// Vendor - jasny bootstrap library - https://github.com/jasny/bootstrap
+// **Note - must cleanly load after bootstrap
+// ==========================================================================
+//@import "../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css";
+
+
+// ==========================================================================
+// Flickity plug-in Css
+// http://flickity.metafizzy.co/
+// ==========================================================================
+@import "../bower_components/flickity/dist/flickity.min.css";
+
+// ==========================================================================
+// Utilities
+// Config, Helpers, Mixins, fonts
+// ==========================================================================
+@import "core/index";
+
+// ==========================================================================
+// Modules
+// Navigation, Header, Footer, Sliders
+// ==========================================================================
+@import "modules/index";
+
+
+body{
+//   font:em(21px);
+//   color:green;
+//   @include border-top-radius(10px);
+//   @include background(linear-gradient(red, green) left repeat);
+}
+

@@ -1,0 +1,83 @@
+// ==========================================================================
+// Helper Classes
+// ==========================================================================
+
+.text-hide{
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.row{
+  margin-bottom:0;
+}
+
+.no-padding{
+  padding:0 !important;
+}
+
+.wba-img-replace { /* replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.container-wb{
+  max-width: 1200px;
+  margin:0 auto;
+  padding:0 .75rem;
+
+  @include breakpoint(mobile){
+    padding:0;
+  }
+}
+
+.clear{
+  clear:both;
+}
+
+.bold-helvetica{
+  font-weight:bold;
+  letter-spacing: .5px;
+}
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.clear-fix{
+  clear:both;
+}
+
+
+// TODO: Make gradient class more modular
+@mixin gradient($direction, $height){
+  width:100%;
+  position:absolute;
+  background:linear-gradient(to $direction,rgba(0,0,0,.65)0,rgba(0,0,0,0)100%);
+  z-index:0;
+  height:$height;
+  @content;
+}
+
+.gradient-top{
+  @include gradient(bottom, 200px);
+  top:0;
+}
+
+.gradient-bottom{
+  @include gradient(top, 200px);
+  bottom:0;
+}
+
+.gradient-bottom-projects{
+  @include gradient(top, 33%);
+  bottom:0;
+  // margin:0 .75rem .75rem .75rem;
+}

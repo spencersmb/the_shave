@@ -1,0 +1,43 @@
+.sh-desktop__nav{
+  height:80px;
+  width:100%;
+  background: #fff;
+  margin:0;
+
+  h1{
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    font-size:em(24px);
+    margin:0;
+    top:50%;
+    @include transform(translateY(-50%));
+  }
+}
+
+.navbar-toggle {
+  display: block; /* force showing the toggle */
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.nav__book{
+  position:absolute;
+  right:0;
+  top:50%;
+  @include transform(translateY(-50%));
+
+  ul{
+    width:100%;
+    height:100%;
+  }
+
+  li{
+    display: inline-block;
+  }
+}
+
+
+
+

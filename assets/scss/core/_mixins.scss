@@ -1,0 +1,74 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+@mixin round($round: 5px) {
+  border-radius: $round;
+  -moz-border-radius: $round;
+  -webkit-border-radius: $round;
+  background-clip: padding-box;
+}
+
+// Bem selectors
+// this adds __ to our specified class using the smacss guidelines
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+//modifier
+//add-- when you make a new file
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin img-replace($img, $h, $w, $disp: block) {
+  background-image: url('#{$path--rel}/#{$img}');
+  background-repeat: no-repeat;
+  width:$w;
+  height:$h;
+  display:$disp;
+  @content;
+}
+
+
+@mixin pull($direction: none){
+  @if $direction == "right" {
+    float: right !important;
+  }
+  @elseif $direction == "left" {
+    float: left !important;
+  }
+
+}
+
+@mixin letterpress($x: 0, $y: 0, $blur: 1px, $color: #000){
+  text-shadow:$x, $y, $blur, $color;
+}
+
+//BREAKPOINTS
+//TODO update breakpoints for Bootstrap
+@mixin breakpoint($point) {
+  @if $point == desktopXL {
+    @media (min-width: 1600px) { @content ; }
+  }
+  @else if $point == desktop {
+    @media (min-width: 1200px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 992px) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 768px) { @content ; }
+  }
+    //  @else if $point == phablet {
+    //    @media (min-width: $small-screen-up)  { @content ; }
+    //  }
+  @else if $point == mobile {
+    @media (max-width: 480px)  { @content ; }
+
+  }
+}
