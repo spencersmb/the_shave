@@ -1,0 +1,204 @@
+
+
+.staggered__container{
+
+	padding-top:40px;
+	max-width:970px;
+
+	h2{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+}
+
+.box{
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	width:100%;
+
+	.content{
+		position:relative;
+		z-index: 100;
+		background:$white;
+		margin:7.525em 20.5%;
+
+		p{
+			margin:0;
+		}
+	}
+
+
+}
+
+.box-lg{
+	// width:100%;
+
+	.content{
+		padding:2em;
+
+		h3{
+			margin:0 auto;
+			max-width: 75%;
+			margin-bottom: em(20px);
+			font-size: em(24px);
+			font-weight: 700;
+		}
+	}
+
+	img{
+		display: block;
+		position:absolute;
+		top:0;
+		min-height: 100%;
+		min-width: 100%;
+	}
+}
+
+.box-sm{
+		background-color:#eeeeee;
+
+	.content{
+		padding:25px 10%;
+	}
+
+	img{
+		display: block;
+		position:absolute;
+		top:0;
+		left:0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+.box-sm-hours{
+	
+	width:100%;
+
+	.content{
+		padding:25px 8%;
+		font-size: em(18px);
+	}
+
+	img{
+		display: block;
+		position:absolute;
+		top:0;
+		min-height: 100%;
+		min-width: 100%;
+	}
+
+}
+
+.box-sm-tall{
+	
+	width:100%;
+
+	img{
+		display: block;
+		position:relative;
+		top:0;
+		width:100%;
+	}
+
+}
+
+.box-last{
+	width:100%;
+
+	.content{
+		padding:2em;
+
+		h3{
+			margin:0 auto;
+			max-width: 75%;
+			margin-bottom: em(20px);
+			font-size: em(24px);
+			font-weight: 700;
+		}
+	}
+
+	img{
+		display: block;
+		position:absolute;
+		top:0;
+		min-height: 100%;
+		min-width: 100%;
+	}
+}
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	.box{
+		float:right;
+	}
+
+	.box-lg{
+		width:65.71166%;
+		margin-bottom: 3%;
+	}
+
+	.box-sm{
+		width:31.28834%;
+		margin-top:225px;
+		margin-left:3%;
+
+		.content{
+			padding:52px 10.8% 51px;
+			margin:0;
+			background:0;
+
+			p{
+				font-size: em(22px);
+				line-height: 28px;
+				font-weight: 500;
+			}
+		}
+
+		img{
+			position:relative;
+			width:100%;
+			height: auto;
+			min-width: 0;
+			min-height: 0;
+			overflow: hidden;
+		}
+	}
+
+	.box-sm-hours{
+		width:31.28834%;
+		margin:0 0 3.06748% 3.06748%;
+
+		.content{
+			margin:10em 20%;
+		}
+	}
+
+	.box-sm-tall{
+		width:31.28834%;
+		float:left;
+	}
+
+	.box-last{
+		width:65.65146%;
+	}
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+}

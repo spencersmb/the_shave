@@ -3,7 +3,7 @@
 # We also support plugins and frameworks, please read the docs http://docs.mixture.io/preprocessors#compass
 # require 'susy' # Susy (susy.oddbird.net) is available in Mixture, just uncomment to require and use
 
-project_path =File.expand_path("..",File.dirname(__FILE__))
+project_path =File.expand_path('..',File.dirname(__FILE__))
 
 http_path = "/"
 css_dir = "assets/css"

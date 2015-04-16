@@ -1,42 +1,192 @@
-.sh-desktop__nav{
-  height:80px;
-  width:100%;
-  background: #fff;
-  margin:0;
+//NAV BAR STYLES
+#header {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: $header-M;
+  width: 100%;
+  background: $white;
+  z-index: $above-content; //3
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 
-  h1{
-    position: relative;
-    text-align: center;
-    font-weight: 600;
-    font-size:em(24px);
-    margin:0;
-    top:50%;
-    @include transform(translateY(-50%));
+  @include transition-property(transform);
+  @include transition-duration(.4s);
+
+  //Slide-out nav amount
+  &.nav-is-open {
+    @include transform(translateX($navMove));
+  }
+
+  &.is-fixed {
+    position: fixed;
   }
 }
 
-.navbar-toggle {
-  display: block; /* force showing the toggle */
-  position: absolute;
+#sv__logo {
+  height:100%;
+  display: inline-block;
+  
+  h1{
+    font-weight: 700;
+    font-size: em(38px);
+  }
+
+  img {
+    display: block;
+  }
+}
+
+#sv__nav--trigger{
+  width:80px;
+  position:absolute;
   top:0;
   left:0;
-}
+  height:100%;
+  background-color:$white;
 
-.nav__book{
-  position:absolute;
-  right:0;
-  top:50%;
-  @include transform(translateY(-50%));
+  .sv__menu--icon {
 
-  ul{
-    width:100%;
-    height:100%;
-  }
-
-  li{
+    // Center line for Hamburger
     display: inline-block;
+    position: absolute;
+    @include center; 
+    width: 22px;
+    height: 2px;
+    background-color: $black;
+    @include transition-property(all);
+    @include transition-duration(.2s);
+
+
+    // Upper and lower lines
+    &::before, &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: inherit;
+      left: 0;
+      @include transition-property(all);
+      @include transition-duration(.2s);
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      bottom: -7px;
+    }
+
+  } //end SB menu icon
+
+  //turns hamburger into X
+  &.is-clicked {
+
+    .sv__menu--icon {
+      
+      //hide middle line
+      background-color: rgba($black, 0);
+
+      //add color to the two and leave the middle one invisible
+      &::before, &::after {
+        background-color: rgba($black, 1);
+      }
+
+      &::before {
+        top: 0;
+        @include transform(rotate(-45deg));
+      }
+
+      &::after {
+        bottom: 0;
+        @include transform(rotate(45deg));
+      }
+    }
+
+  }//end is clicked
+
+} //end Nav trigger
+
+
+
+//NAV SLIDE-IN STYLES
+#sv__navigation{
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+
+  // nav is covered by main content
+  z-index:$below-content;
+  // z-index:$content;
+
+  width: $navWidth; //260 default
+  background-color: $black;
+
+  overflow-y: auto;
+
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  
+  @include transition(transform .4s 0s, visibility .4s 0s);
+
+  &.nav-is-open {
+
+    //translate 0 because the menu is already in place, but fade in.
+    @include transform(translateX(0));
+    visibility: visible;
+    @include transition(transform .4s 0s, visibility .4s 0s);
+
+    /* smooth the scrolling on touch devices - webkit browsers */
+    -webkit-overflow-scrolling: touch;
   }
 }
+
+
+// .sh-desktop__nav{
+//   height:80px;
+//   width:100%;
+//   background: #fff;
+//   margin:0;
+
+//   h1{
+//     position: relative;
+//     text-align: center;
+//     font-weight: 600;
+//     font-size:em(24px);
+//     margin:0;
+//     top:50%;
+//     @include transform(translateY(-50%));
+//   }
+// }
+
+// .navbar-toggle {
+//   display: block; /* force showing the toggle */
+//   position: absolute;
+//   top:0;
+//   left:0;
+// }
+
+// .nav__book{
+//   position:absolute;
+//   right:0;
+//   top:50%;
+//   @include transform(translateY(-50%));
+
+//   ul{
+//     width:100%;
+//     height:100%;
+//   }
+
+//   li{
+//     display: inline-block;
+//   }
+// }
 
 
 

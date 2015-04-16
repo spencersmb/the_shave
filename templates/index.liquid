@@ -1,4 +1,15 @@
 {% block content %} 
-	<p>An empty, simple boilerplate for a fresh start.</p>     
-	<!-- TODO: Create my project :-) -->
+
+	<div class="container-fluid no-padding">
+	  {% include "feature-slider" %}
+	</div>
+
+	<div class="container-fluid feature__box--fluid">
+	  {% include "feature-boxs" %}
+	</div>
+
+	{% include "staggered-grid" %}
+
+
+
 {% endblock %}

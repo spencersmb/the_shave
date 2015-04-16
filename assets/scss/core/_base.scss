@@ -6,10 +6,19 @@
 html, body {
   height: 100%;
   font-family: $courier;
+  font-size: $base__font-size;
+  line-height: $base__line;
 }
 
 body {
   padding: 50px 0 0 0;
+}
+h1{
+  font-weight: 700;
+}
+h2{
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .main{
@@ -20,13 +29,40 @@ body {
   z-index: 1;
 }
 
-.canvas {
-  position: relative;
-  left: 0;
-  z-index: 2;
+a{
+  color:$black;
+  @include transition-property(color);
+  @include transition-duration(.4s);
+
+  &:hover{
+    color:$primary-color;
+    text-decoration: none;
+  }
+
+}
+
+.sv__container{
+  margin:0 auto;
+  max-width: 1400px;
+}
+
+.sv__main--content{
   min-height: 100%;
-//  padding: 50px 0 0 0;
-  background: #fff;
+  position: relative;
+  background-color: $white;
+  z-index: $content;
+  padding-top: $header-M;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden;
+
+  @include transition-property(transform);
+  @include transition-duration(.4s);
+  background-color:$white;
+  
+  //Slide-out nav amount
+  &.nav-is-open {
+    @include transform(translateX($navMove));
+  }
 }
 
 @media (min-width: 992px) {
