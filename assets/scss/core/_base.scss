@@ -19,6 +19,7 @@ h1{
 h2{
   text-transform: uppercase;
   font-weight: 700;
+  margin: 0 0 30px 0;
 }
 
 .main{
@@ -37,6 +38,12 @@ a{
   &:hover{
     color:$primary-color;
     text-decoration: none;
+  }
+
+  &:focus{
+    color:$black;
+    text-decoration: none;
+    outline:none;
   }
 
 }
