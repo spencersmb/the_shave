@@ -1,9 +1,15 @@
 //TODO: Fix margins on left and right side of container for table
 //TODO: Look at page jumping in IE and firefox. Safari?
-
-.container__pricing{
+.pricing__container{
+	position:relative;
+}
+.pricing__background{
 	width:100%;
 	height:100%;
+	position:absolute;
+	right:0;
+	z-index:-1;
+	opacity:.4;
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position: 50% 50%;
@@ -24,20 +30,71 @@
 	}
 
 	&--btn{
-		display:block;
+		position:absolute;
+		bottom:-12px;
+		left:0;
+		margin: 0 auto;
 		text-align: center;
-		color:$white;
-		background:$primary-color;
-		padding:25px;
 		width:100%;
 		font-weight: 500;
 		font-size: em(18px);
 		text-transform: uppercase;
+
+		a{	
+			font-weight: bold;
+			color:$white;
+			padding:25px;
+			background:$primary-color;
+		}
 	}
 
 	img{
 		width:100%;
 		max-height: 325px;
+	}
+}
+
+.pricing__box{
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	width:100%;
+
+	.content{
+		position:relative;
+		z-index: 100;
+		background:$white;
+		margin:7.525em 20.5%;
+
+		p{
+			margin:0;
+		}
+	}
+
+}
+
+.box-text{
+	width:100%;
+
+	.content{
+		padding:2em 2em 4em 2em;
+		position:relative;
+
+		h3{
+			margin:0 auto;
+			max-width: 75%;
+			margin-bottom: em(20px);
+			font-size: em(24px);
+			font-weight: 700;
+		}
+	}
+
+	img{
+		display: block;
+		position:absolute;
+		top:0;
+		min-height: 100%;
+		min-width: 100%;
 	}
 }
 
@@ -98,12 +155,14 @@
 
 }
 
+
 .nav-tabs>li.active>a{
 	color:$black;
 }
 
 .nav-tabs.nav-justified>li>a{
 	border-radius:0;
+	border-bottom:0;
 }
 
 .nav-tabs.nav-justified>.active>a,
@@ -129,7 +188,7 @@
 }
 
 .nav-justified>li>a, .nav-tabs.nav-justified>li>a{
-	margin-bottom:-1px;
+	// margin-bottom:-1px;
 }
 
 // ==========================================================================
@@ -166,4 +225,27 @@
 
 .panel-group .panel+.panel{
 	margin:0;
+}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body{
+	border-top:0;
+}
+
+.panel.panel-default.active{
+	.panel-heading{
+		border-bottom:0;
+	}
+}
+// a.collapsed{
+// 	border-bottom:1px solid #ddd;
+// }
+
+.panel-group .panel-heading{
+	border-bottom:1px solid #ddd;
+}
+
+.panel.panel-default.active{
+	a{
+		color:$primary-color;
+	}
 }

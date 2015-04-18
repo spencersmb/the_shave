@@ -8142,9 +8142,17 @@ a:focus {
     width: 65.65146%;
   }
 }
-.container__pricing {
+.pricing__container {
+  position: relative;
+}
+
+.pricing__background {
   width: 100%;
   height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  opacity: .4;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -8160,19 +8168,63 @@ a:focus {
   font-style: italic;
 }
 .pricing__mod--btn {
-  display: block;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  margin: 0 auto;
   text-align: center;
-  color: #fff;
-  background: #f95759;
-  padding: 25px;
   width: 100%;
   font-weight: 500;
   font-size: 1.125em;
   text-transform: uppercase;
 }
+.pricing__mod--btn a {
+  font-weight: bold;
+  color: #fff;
+  padding: 25px;
+  background: #f95759;
+}
 .pricing__mod img {
   width: 100%;
   max-height: 325px;
+}
+
+.pricing__box {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+.pricing__box .content {
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  margin: 7.525em 20.5%;
+}
+.pricing__box .content p {
+  margin: 0;
+}
+
+.box-text {
+  width: 100%;
+}
+.box-text .content {
+  padding: 2em 2em 4em 2em;
+  position: relative;
+}
+.box-text .content h3 {
+  margin: 0 auto;
+  max-width: 75%;
+  margin-bottom: 1.25em;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.box-text img {
+  display: block;
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -8211,6 +8263,7 @@ a:focus {
 
 .nav-tabs.nav-justified > li > a {
   border-radius: 0;
+  border-bottom: 0;
 }
 
 .nav-tabs.nav-justified > .active > a,
@@ -8232,10 +8285,6 @@ a:focus {
 
 .nav-tabs > li > a:hover {
   border-top: 4px solid #eee;
-}
-
-.nav-justified > li > a, .nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
-  margin-bottom: -1px;
 }
 
 .fade {
@@ -8266,4 +8315,20 @@ a:focus {
 
 .panel-group .panel + .panel {
   margin: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: 0;
+}
+
+.panel.panel-default.active .panel-heading {
+  border-bottom: 0;
+}
+
+.panel-group .panel-heading {
+  border-bottom: 1px solid #ddd;
+}
+
+.panel.panel-default.active a {
+  color: #f95759;
 }
