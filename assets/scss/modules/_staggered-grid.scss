@@ -78,7 +78,8 @@
 	width:100%;
 
 	.content{
-		padding:25px 8%;
+		position:relative;
+		padding:35px 8% 60px 8%;
 		font-size: em(18px);
 	}
 
@@ -184,6 +185,7 @@
 
 	.box-last{
 		width:65.65146%;
+		margin-bottom: 73px;
 	}
 
 }

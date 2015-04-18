@@ -1,0 +1,32 @@
+
+.sv-btn{
+  margin: 0 auto;
+  text-align: center;
+  color:$white;
+  // width:100%;
+  font-weight: bold;
+  background:$primary-color;
+}
+
+.offset__container{
+  position:absolute;
+  bottom:-12px;
+  left:0;
+  margin:0 auto;
+  width:100%;
+}
+
+.offset__btn{
+  @extend .sv-btn;
+  padding:25px;
+}
+
+.book__now--btn{
+  @extend .sv-btn;
+  font-weight: 500;
+  font-size: em(18px);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding:16px;
+  display:block;
+}

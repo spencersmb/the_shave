@@ -15,13 +15,6 @@ Version: 1.0.0
 @import "vendor/index";
 
 // ==========================================================================
-// Vendor - jasny bootstrap library - https://github.com/jasny/bootstrap
-// **Note - must cleanly load after bootstrap
-// ==========================================================================
-//@import "../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css";
-
-
-// ==========================================================================
 // Flickity plug-in Css
 // http://flickity.metafizzy.co/
 // ==========================================================================
@@ -38,12 +31,3 @@ Version: 1.0.0
 // Navigation, Header, Footer, Sliders
 // ==========================================================================
 @import "modules/index";
-
-
-body{
-//   font:em(21px);
-//   color:green;
-//   @include border-top-radius(10px);
-//   @include background(linear-gradient(red, green) left repeat);
-}
-

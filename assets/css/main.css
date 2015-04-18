@@ -7727,6 +7727,35 @@ a:focus {
   font-weight: normal;
   font-style: normal;
 }
+.sv-btn, .offset__btn, .book__now--btn {
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #f95759;
+}
+
+.offset__container {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.offset__btn {
+  padding: 25px;
+}
+
+.book__now--btn {
+  font-weight: 500;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 16px;
+  display: block;
+}
+
 #header {
   position: absolute;
   text-align: center;
@@ -8049,7 +8078,8 @@ a:focus {
   width: 100%;
 }
 .box-sm-hours .content {
-  padding: 25px 8%;
+  position: relative;
+  padding: 35px 8% 60px 8%;
   font-size: 1.125em;
 }
 .box-sm-hours img {
@@ -8140,6 +8170,7 @@ a:focus {
 
   .box-last {
     width: 65.65146%;
+    margin-bottom: 73px;
   }
 }
 .pricing__container {
@@ -8147,12 +8178,12 @@ a:focus {
 }
 
 .pricing__background {
-  width: 100%;
+  width: 63%;
   height: 100%;
   position: absolute;
   right: 0;
   z-index: -1;
-  opacity: .4;
+  opacity: .5;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -8166,23 +8197,6 @@ a:focus {
   margin: 0;
   color: #f95759;
   font-style: italic;
-}
-.pricing__mod--btn {
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  font-weight: 500;
-  font-size: 1.125em;
-  text-transform: uppercase;
-}
-.pricing__mod--btn a {
-  font-weight: bold;
-  color: #fff;
-  padding: 25px;
-  background: #f95759;
 }
 .pricing__mod img {
   width: 100%;
@@ -8228,8 +8242,12 @@ a:focus {
 }
 
 @media (min-width: 992px) {
+  .book__now--btn {
+    width: 32%;
+  }
+
   .pricing__tabs {
-    margin: 100px;
+    margin: 100px 100px 0 100px;
   }
 
   .pricing__mod {
