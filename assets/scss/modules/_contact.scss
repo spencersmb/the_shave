@@ -88,7 +88,8 @@
 // Displays greater than 600px 
 @include breakpoint(tablet) {
 	.contact__card{
-		height:31.5em;
+		// height:31.5em;
+		height:em(505px)
 	}
 
 }
@@ -96,7 +97,8 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 	.contact__card{
-		height:36.5em;
+		// height:36.5em;
+		height:em(576px)
 	}
 
 	

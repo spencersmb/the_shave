@@ -1,0 +1,32 @@
+.twitter__background{
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:50% 70%;
+}
+
+.twitter__wrapper{
+	text-align:center;
+	color:$white;
+	margin:0 auto;
+	padding:60px 0;
+
+	blockquote{
+		border:0;
+		width:80%;
+		margin:0 auto;
+
+	}
+
+	hr{
+		width:15%;
+		margin:40px auto;
+	}
+
+	img{
+		
+	}
+
+	h2{
+		margin-top:40px;
+	}
+}

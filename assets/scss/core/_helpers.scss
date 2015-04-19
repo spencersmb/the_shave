@@ -18,16 +18,16 @@
   padding:0 !important;
 }
 
-.wba-img-replace { /* replace text with a background-image */
+.img-replace { /* replace text with a background-image */
   display: inline-block;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
 
-.container-wb{
-  max-width: 1200px;
+.sv__container{
   margin:0 auto;
+  max-width: 1400px;
   padding:0 .75rem;
 
   @include breakpoint(mobile){
@@ -37,11 +37,6 @@
 
 .clear{
   clear:both;
-}
-
-.bold-helvetica{
-  font-weight:bold;
-  letter-spacing: .5px;
 }
 
 .pull-left {
@@ -80,4 +75,8 @@
   @include gradient(top, 33%);
   bottom:0;
   // margin:0 .75rem .75rem .75rem;
+}
+
+.red{
+  color:$primary-color;
 }
