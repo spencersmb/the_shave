@@ -17,10 +17,15 @@
 
 .pricing__mod{
 
+	&--body{
+		margin-bottom: 35px;
+	}
+
 
 	&--text{
 		background:$white;
 		padding: 25px;
+		margin:0;
 	}
 
 	&--desc{
@@ -28,26 +33,6 @@
 		color:$primary-color;
 		font-style:italic;
 	}
-
-	// &--btn{
-	// 	// position:absolute;
-	// 	// bottom:-12px;
-	// 	left:0;
-	// 	margin: 0 auto;
-	// 	text-align: center;
-	// 	width:100%;
-	// 	font-weight: 500;
-	// 	font-size: em(18px);
-	// 	text-transform: uppercase;
-	// 	height:36px;
-
-	// 	a{	
-	// 		font-weight: bold;
-	// 		color:$white;
-	// 		// padding:25px;
-	// 		background:$primary-color;
-	// 	}
-	// }
 
 	img{
 		width:100%;
@@ -109,10 +94,6 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
-	.book__now--btn{
-		width:32%;
-	}
-
 	.pricing__tabs{
 		margin:100px 100px 0 100px;
 	}
@@ -145,6 +126,7 @@
 // ==========================================================================
 .pricing__table--wrapper{
 	background:$white;
+	margin-left:35px;
 }
 
 .tab-control{
@@ -226,6 +208,7 @@
 	padding:30px 15px;
 	border-top-right-radius:0;
 	border-top-left-radius:0;
+	position:relative;
 }
 
 .panel-group .panel+.panel{
@@ -240,10 +223,24 @@
 	.panel-heading{
 		border-bottom:0;
 	}
+
+	.price__trigger{
+		
+		&::before, &::after {
+			background: $primary-color;
+		}
+
+		&::before {
+			@include transform(rotate(-45deg));
+		}
+
+		&::after {
+			@include transform(rotate(45deg));
+		}
+
+	}
 }
-// a.collapsed{
-// 	border-bottom:1px solid #ddd;
-// }
+
 
 .panel-group .panel-heading{
 	border-bottom:1px solid #ddd;
@@ -253,4 +250,44 @@
 	a{
 		color:$primary-color;
 	}
+}
+
+.price__trigger{
+	position:relative;
+	display:block;
+
+	&::before, &::after {
+
+		//arrow icon on the right
+		position: absolute;
+		right: 24px;
+		top: 50%;
+		height: 2px;
+		width: 13px;
+		background: $black;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		@include transition-property(transform);
+		@include transition-duration(.2s);
+
+	}
+
+	&::before {
+		@include transform(rotate(45deg));
+		top:3px;
+		right: 24px;
+	}
+
+	&::after {
+		top:12px;
+		@include transform(rotate(-45deg));
+	}
+
+	&:hover{
+		&::before, &::after {
+		background: $primary-color;
+		}
+	}
+
+
 }

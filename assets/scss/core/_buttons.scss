@@ -3,7 +3,7 @@
   margin: 0 auto;
   text-align: center;
   color:$white;
-  // width:100%;
+  font-size: 16px;
   font-weight: bold;
   background:$primary-color;
 }
@@ -24,9 +24,16 @@
 .book__now--btn{
   @extend .sv-btn;
   font-weight: 500;
-  font-size: em(18px);
   text-transform: uppercase;
   font-weight: bold;
   padding:16px;
   display:block;
+}
+
+
+@include breakpoint(laptop) {
+
+  .book__now--btn{
+    width:32%;
+  }
 }

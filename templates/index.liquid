@@ -1,15 +1,13 @@
 {% block content %} 
 
-	<div class="container-fluid no-padding">
-	  {% include "feature-slider" %}
-	</div>
+	{% include "feature-slider" %}
 
-	<div class="container-fluid feature__box--fluid">
-	  {% include "feature-boxs" %}
-	</div>
+	{% include "feature-boxs" %}
 
 	{% include "staggered-grid" %}
 
 	{% include "pricing-tabs" %}
+
+	{% include "contact-box" %}
 
 {% endblock %}

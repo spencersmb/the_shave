@@ -7533,6 +7533,10 @@ button.close {
   border-left: 0;
 }
 
+*::after, *::before {
+  content: '';
+}
+
 html, body {
   height: 100%;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -7731,6 +7735,7 @@ a:focus {
   margin: 0 auto;
   text-align: center;
   color: #fff;
+  font-size: 16px;
   font-weight: bold;
   background: #f95759;
 }
@@ -7749,13 +7754,17 @@ a:focus {
 
 .book__now--btn {
   font-weight: 500;
-  font-size: 1.125em;
   text-transform: uppercase;
   font-weight: bold;
   padding: 16px;
   display: block;
 }
 
+@media (min-width: 992px) {
+  .book__now--btn {
+    width: 32%;
+  }
+}
 #header {
   position: absolute;
   text-align: center;
@@ -8189,9 +8198,13 @@ a:focus {
   background-position: 50% 50%;
 }
 
+.pricing__mod--body {
+  margin-bottom: 35px;
+}
 .pricing__mod--text {
   background: #fff;
   padding: 25px;
+  margin: 0;
 }
 .pricing__mod--desc {
   margin: 0;
@@ -8242,10 +8255,6 @@ a:focus {
 }
 
 @media (min-width: 992px) {
-  .book__now--btn {
-    width: 32%;
-  }
-
   .pricing__tabs {
     margin: 100px 100px 0 100px;
   }
@@ -8256,6 +8265,7 @@ a:focus {
 }
 .pricing__table--wrapper {
   background: #fff;
+  margin-left: 35px;
 }
 
 .tab-control {
@@ -8329,6 +8339,7 @@ a:focus {
   padding: 30px 15px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  position: relative;
 }
 
 .panel-group .panel + .panel {
@@ -8342,6 +8353,23 @@ a:focus {
 .panel.panel-default.active .panel-heading {
   border-bottom: 0;
 }
+.panel.panel-default.active .price__trigger::before, .panel.panel-default.active .price__trigger::after {
+  background: #f95759;
+}
+.panel.panel-default.active .price__trigger::before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.panel.panel-default.active .price__trigger::after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 .panel-group .panel-heading {
   border-bottom: 1px solid #ddd;
@@ -8349,4 +8377,145 @@ a:focus {
 
 .panel.panel-default.active a {
   color: #f95759;
+}
+
+.price__trigger {
+  position: relative;
+  display: block;
+}
+.price__trigger::before, .price__trigger::after {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  height: 2px;
+  width: 13px;
+  background: #252525;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.price__trigger::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 3px;
+  right: 24px;
+}
+.price__trigger::after {
+  top: 12px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.price__trigger:hover::before, .price__trigger:hover::after {
+  background: #f95759;
+}
+
+.contact__wrapper {
+  overflow: hidden;
+  margin: 100px auto;
+  max-width: 1200px;
+}
+
+.contact__card {
+  float: left;
+  height: 27.5em;
+  width: 100%;
+  text-align: center;
+}
+.contact__card--left {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #f95759;
+  float: left;
+  width: 65%;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+}
+.contact__card--left img {
+  max-width: 782px;
+}
+.contact__card--right {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: #e8e8e8;
+  float: left;
+  width: 35%;
+  height: 100%;
+}
+.contact__card--content {
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.contact__shop {
+  color: #fff;
+  height: 50%;
+  background: #f95759;
+  position: relative;
+}
+
+.contact__hours {
+  position: relative;
+  height: 50%;
+}
+
+.contact__us {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+.contact__us--content {
+  position: relative;
+  background: #fff;
+  width: 65%;
+  height: 80px;
+  margin: 0 auto;
+  top: -8px;
+}
+.contact__us .inner__content {
+  text-align: left;
+  padding-left: 20px;
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .contact__card {
+    height: 31.5em;
+  }
+}
+@media (min-width: 992px) {
+  .contact__card {
+    height: 36.5em;
+  }
 }
