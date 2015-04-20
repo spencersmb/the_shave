@@ -8,6 +8,15 @@
   background:$primary-color;
 }
 
+.form-btn{
+  border:0;
+  padding:13px;
+  width:33%;
+  text-align:center;
+  margin:5px 0 0 0;
+  float:left;
+}
+
 .offset__container{
   position:absolute;
   bottom:-12px;
@@ -18,7 +27,7 @@
 
 .offset__btn{
   @extend .sv-btn;
-  padding:25px;
+  padding:18px 30px;
 }
 
 .book__now--btn{

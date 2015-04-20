@@ -1,0 +1,145 @@
+.footer__wrapper{
+	margin:em(65px) auto 0 auto;
+	max-width:1001.72px;
+	text-align:left;
+
+	h1{
+		font-size:em(32px);
+		font-weight:500;
+		line-height: 44px;
+		margin-top:0;
+		margin-bottom:em(35px);
+	}
+
+	.footer__name{
+		font-weight:700;
+		text-transform: uppercase;
+	}
+
+	.location, .contact{
+		h3{
+			font-weight:bold;
+			font-size:em(20px);
+			margin:0 0 em(20px) 0;
+		}
+
+		a{
+			color:$primary-color;
+		}
+
+		p{
+			margin:0;
+		}
+	}
+
+}
+
+.tagline{
+	font-weight:bold;
+	font-size:em(16px);
+	color:$primary-color;
+}
+
+.sv__spacer{
+	margin:em(20px) 0;
+}
+
+.email__form{
+	clear:both;
+	display:table;
+	width:100%;
+
+	&--input{
+		float:left;
+		width:65%;
+		margin-right: 2%;
+		font-size: em(24px);
+		padding: 1.1em 0 1.2em 0;
+		border-radius: 0;
+		border:0;
+		box-shadow:none;
+		color:#bcbcbc;
+		border-bottom:1px solid #bcbcbc;
+
+		&:focus{
+			box-shadow:none;
+			border-color:#bcbcbc;
+		}
+	}
+
+}
+
+.email__offers{
+	margin-top:15px;
+
+}
+.social{
+	width:100%;
+	margin:40px auto;
+	
+	ul{
+		text-align:center;
+	}
+
+	li{
+		display: inline-block;
+	}
+}
+
+.facebook, .twitter, .instagram, .linkedin{
+	margin:0 8px;
+
+	a{
+		width:38px;
+		height:38px;
+		display:block;
+	}
+}
+
+.facebook{
+  	background: url("../images/icons/facebook.png") no-repeat;
+  	@include image-2x("../images/icons/facebook@2x.png", 38px, 38px);
+}
+
+.twitter{
+	background: url("../images/icons/twitter.png") no-repeat;
+	@include image-2x("../images/icons/twitter@2x.png", 38px, 38px);
+}
+//TODO - find retina version of instagram
+.instagram{
+	background: url("../images/icons/instagram.png") no-repeat;
+	@include image-2x("../images/icons/instagram@2x.png", 38px, 38px);
+}
+
+
+.linkedin{
+	background: url("../images/icons/linkedin.png") no-repeat;
+	@include image-2x("../images/icons/linkedin@2x.png", 38px, 38px);
+}
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+
+	
+}

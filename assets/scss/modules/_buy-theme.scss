@@ -1,0 +1,55 @@
+.buy__container{
+	background:$black;
+	height:em(150px);
+	position:relative;
+	
+	.content{
+		padding:0;
+		max-width: 1001.72px;
+		display: table;
+		width:100%;
+		position:relative;
+		top:50%;
+		@include transform(translateY(-50%));
+		h1{	
+			// letter-spacing: 1px;
+			color:$white;
+			margin:10px auto 0 auto;
+		}
+
+		a{	
+			display: inline-block;
+			float:right;
+			width:177px;
+		}
+	}
+	
+}
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+
+	
+}

@@ -5,25 +5,595 @@
         <title>Empty</title>
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
         <!-- Styles -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
         <link href="/assets/css/main.min.css" rel="stylesheet" type="text/css" media="all" />
         <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
     <body>
-        <div id="wrapper">
-            <!-- Include -->
-            <header>
-	<h1>Empty</h1>
-</header>
-            <!-- Content block, child page inject content -->
-             
-	<p>An empty, simple boilerplate for a fresh start.</p>     
-	<!-- TODO: Create my project :-) -->
+        <header id="header" class="is-fixed">
 
-        </div>
+    <!--company logo-->
+    <a id="sv__logo" href="index.html">
+    <h1>The Shave</h1>
+    </a>
+
+    <!-- <nav id="sb-top-nav">
+        <ul>
+            <li><a href="css3.html">CSS3 Animations</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav> -->
+
+    <!--nav hamburger-->
+    <a id="sv__nav--trigger" href="#">
+      <!-- <span class="sb-menu-text">Menu</span> -->
+      <span class="sv__menu--icon"></span>
+    </a>
+
+</header>
+
+
+
+<!-- <div class="navbar navbar-default navbar-fixed-top sh-desktop__nav">
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+
+  <h1>The Shave</h1>
+
+  <div class="nav__book">
+      <ul>
+          <li>
+              Location Icon
+          </li>
+          <li>
+               <a class="btn btn-default" href="#" role="button">Book Now</a>
+          </li>
+      </ul>
+  </div>
+</div> -->
+
+        <!--nav slide out-->
+<nav id="sv__navigation">
+    <ul class="sv_nav--items">
+        <!--item with sub-items-->
+        <li class="item-has-children">
+            <a href="#">CodeDrops</a>
+                <!--sub-items list-->
+            <ul class="sub-menu">
+                <li><a href="sliding-header.html">Sliding Header</a></li>
+                <li><a href="panel-slide.html">Slide-In Panel</a></li>
+                <!--<li><a href="#0">Mobile Apps</a></li>-->
+            </ul>
+        </li> <!-- item-has-children -->
+
+        <li class="item-has-children">
+            <a href="#">Products</a>
+                <!--sub-items list-->
+                <ul class="sub-menu">
+                    <li><a href="#0">Brand</a></li>
+                    <li><a href="#0">Web Apps</a></li>
+                    <li><a href="#0">Mobile Apps</a></li>
+                </ul>
+        </li> <!-- item-has-children -->
+
+        <li class="item-has-children">
+            <a href="#">Wordpress Themes</a>
+                <!--sub-items list-->
+                <ul class="sub-menu">
+                    <li><a href="#0">Brand</a></li>
+                    <li><a href="#0">Web Apps</a></li>
+                    <li><a href="#0">Mobile Apps</a></li>
+                </ul>
+        </li> <!-- item-has-children -->
+
+
+    </ul> <!-- end item with sub-menu -->
+
+    <!--single item element-->
+    <ul class="sb-navigation sb-single-item-wrapper">
+        <li><a href="#0">Info</a></li>
+        <!-- other simple items here -->
+    </ul>
+
+    <!--social items -->
+    <div class="sb-navigation socials">
+        <a class="sb-twitter sb-img-replace" href="#0">Twitter</a>
+        <a class="sb-github sb-img-replace" href="#0">Git Hub</a>
+        <a class="sb-facebook sb-img-replace" href="#0">Facebook</a>
+        <a class="sb-google sb-img-replace" href="#0">Google Plus</a>
+    </div>
+    <!--social items rotate -->
+    <div class="sb-navigation">
+        <ul class="social-rotate">
+            <li class="text-hide" ><a href="#"><img src="images/facebook.png">facebook</a></li>
+            <li class="text-hide" ><a href="#"><img src="images/twitter_bird.png">twitter</a></li>
+            <li class="text-hide" ><a href="#"><img src="images/youtube.png">YouTube</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+        <main class="sv__main--content">
+
+            <!--  -->
+
+             
+	<section class="container-fluid no-padding">
+	<div class="gallery-container-rev">
+		<img src="/assets/images/feature-slider/barber-chair.jpg">
+	</div>
+</section>
+
+	<section class="container-fluid feature__box--fluid">
+	<div class="row sv__container feature__box--container">
+
+		<div class="col-sm-3 feature__box">
+			<figure class="feature__box--effect">
+				<img src="/assets/images/feature-boxs/feature-box-1.jpg" alt="img23"/>
+				<figcaption>
+					<h2>Clean Shave</h2>
+					<p>Find out what its like to get a real shave.</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+		</div>
+		<div class="col-sm-3 feature__box">
+			<figure class="feature__box--effect">
+				<img src="/assets/images/feature-boxs/feature-box-2.jpg" alt="img23"/>
+				<figcaption>
+					<h2>Inspiration Gallery</h2>
+					<p>Everything you need to know about what cut to get</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+		</div>
+		<div class="col-sm-3 feature__box">
+			<figure class="feature__box--effect">
+				<img src="/assets/images/feature-boxs/feature-box-3.jpg" alt="img23"/>
+				<figcaption>
+					<h2>Hair Cuts</h2>
+					<p>Need a hair cut? Look no further</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+		</div>
+		<div class="col-sm-3 feature__box">
+			<figure class="feature__box--effect">
+				<img src="/assets/images/feature-boxs/feature-box-4.jpg" alt="img23"/>
+				<figcaption>
+					<h2>Prices</h2>
+					<p>Quality service at a quality price.</p>
+					<a href="#">View more</a>
+				</figcaption>			
+			</figure>
+		</div>
+		
+	</div>
+</section>
+	<!-- TODO: Comment out page -->
+
+<section class="container sv__container staggered__container">
+  <h2>Beyond the shave</h2>
+
+  
+
+  <div class="box box-sm box-2">
+    <img src="/assets/images/staggered-grid/box-sm.jpg" alt="">
+    <div class="content">
+      <p>Take a look at the most popular hair and beared styles</p>
+      <i>icon</i>
+    </div>
+    <a href="" class="box-link"></a>
+  </div>
+
+  <div class="box box-lg box-1">
+    <div class="content">
+      <h3>How it all started</h3>
+      <p>From beared sculpting to modern hipster haircuts, we do it all, and we do it well.</p>
+      <i>icon</i>
+    </div>
+    <img src="/assets/images/staggered-grid/box-lg.jpg" alt="BarberShop">
+    <a href="" class="box-link"></a>
+  </div>
+
+  <div class="box box-sm-hours box-4">
+    <div class="content">
+      <p>View our weekly shop hours</p>
+      <div class="offset__container">
+        <a href="" class="offset__btn">Arr</a>
+      </div>
+        
+    </div>
+    <img src="/assets/images/staggered-grid/box-sm-hours.jpg" alt="BarberShop">
+  </div>
+
+  <div class="box box-sm-tall box-3 hidden-xs">
+    <img src="/assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop">
+    <a href="" class="box-link"></a>
+  </div>
+
+  <div class="box box-last box-1">
+    <div class="content">
+      <h3>Meet the staff</h3>
+      <p>Find the right barber or mustache expert to clean you up.</p>
+      <i>icon</i>
+    </div>
+    <img src="/assets/images/staggered-grid/box-last.jpg" alt="BarberShop">
+    <a href="" class="box-link"></a>
+  </div>
+
+</section>
+	<!-- TODO: Comment out page -->
+
+<section class="container-fluid pricing__container">
+	<div class="pricing__background" style="background-image: url(/assets/images/pricing-table/background-shave.jpg);"></div>
+
+	<!-- pricing text block -->
+	<div class="sv__container">
+		<div class="row pricing__tabs">
+
+			<!-- Finest Shave box -->
+			<div class="col-xs-12 col-sm-6 pricing__mod no-padding">
+				<div class="pricing__mod--img">
+					<img class="img-responsive" src="/assets/images/pricing-table/header-img.jpg" alt="">
+				</div>
+				<div class="pricing__mod--text">
+					<p class="pricing__mod--desc">masters of the blade</p>
+					<h2>The finest shave</h2>
+					<p class="pricing__mod--body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque perferendis eos aut quidem!
+					</p>
+		      	<a class="book__now--btn" href="#">Book Now</a>
+				</div>
+				
+			</div>
+
+			<!-- pricing tab accordian -->
+			<div class="col-xs-12 col-sm-6 no-padding">
+				<div class="pricing__table--wrapper">
+
+					<div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
+
+					<ul id="myTab" class="nav nav-tabs nav-justified" role="tablist">
+						<li role="presentation" class="active tab__control">
+							<a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="true">Beard & Mustache</a>
+						</li>
+						<li role="presentation" class="tab__control">
+							<a href="#haircut" role="tab" id="haircut-tab" data-toggle="tab" aria-controls="haircut" aria-expanded="false">Hair cuts</a>
+						</li>
+				    </ul>
+
+					  <!-- tab content -->
+						<div id="myTabContent" class="tab-content">
+								<!-- start breard and mustache -->
+					      <div role="tabpanel" class="tab-pane fade active in" id="beard" aria-labelledby="beard-tab">
+
+					      <!-- accordian1 -->
+					        <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+					          <div class="panel panel-default active ">
+					            <div class="panel-heading panel-left" role="tab" id="myheadingOne">
+					              <h4 class="panel-title">
+					                <a class="price__trigger" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseOne" aria-expanded="true" aria-controls="mycollapseOne" onclick="return false;">
+					                  Beard & Mustache Trim
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="mycollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="myheadingOne">
+					              <div class="panel-body">
+					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              </div>
+					            </div>
+					          </div>
+					          <div class="panel panel-default">
+					            <div class="panel-heading panel-left" role="tab" id="myheadingTwo">
+					              <h4 class="panel-title">
+					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseTwo" aria-expanded="false" aria-controls="mycollapseTwo" onclick="return false;">
+					                  The Shave
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="mycollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingTwo">
+					              <div class="panel-body">
+					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              </div>
+					            </div>
+					          </div>
+					          <div class="panel panel-default">
+					            <div class="panel-heading panel-left" role="tab" id="myheadingThree">
+					              <h4 class="panel-title">
+					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseThree" aria-expanded="false" aria-controls="mycollapseThree" onclick="return false;">
+					                  Beard Waxing
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="mycollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingThree">
+					              <div class="panel-body">
+					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+
+					      </div>
+					      <!-- end breard and mustache -->
+
+								<!-- start haircut -->
+					      <div role="tabpanel" class="tab-pane fade" id="haircut" aria-labelledby="haircut-tab">
+					         <!-- accordian -->
+					        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					          <div class="panel panel-default active">
+					            <div class="panel-heading panel-right" role="tab" id="headingOne">
+					              <h4 class="panel-title">
+					                <a class="price__trigger" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="return false;">
+					                  Collapsible Group Item #1
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					              <div class="panel-body">
+					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              </div>
+					            </div>
+					          </div>
+					          <div class="panel panel-default">
+					            <div class="panel-heading panel-right" role="tab" id="headingTwo">
+					              <h4 class="panel-title">
+					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="return false;">
+					                  Collapsible Group Item #2
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					              <div class="panel-body">
+					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              </div>
+					            </div>
+					          </div>
+					          <div class="panel panel-default">
+					            <div class="panel-heading panel-right" role="tab" id="headingThree">
+					              <h4 class="panel-title">
+					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="return false;">
+					                  Collapsible Group Item #3
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					              <div class="panel-body">
+					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+
+					      </div>
+					      <!-- end haircut -->
+
+			      </div>
+			      <!-- end tab content -->
+
+			    </div>
+					<!-- end pricing table -->	
+
+				</div>
+				<!-- end wrapper -->
+					
+			</div>
+			<!-- End pricing tab accordian -->
+			
+		</div>
+		<!-- End row pricing__tabs -->
+	</div>
+
+</section>
+<!-- End pricing container -->
+	<section class="container-fluid">
+	
+	<div class="row sv__container">
+		<div class="contact__wrapper">
+			<div class="contact__card">
+				<div class="contact__card--left">
+					<img class="img-responsive" src="/assets/images/contact/contact.jpg" alt="">
+					
+				</div>
+				<div class="contact__card--right">
+					<div class="contact__shop">
+						<div class="contact__card--content">
+							<h2>Our Shop</h2>
+							<p>Nordhoff st. , Northridge, CA 91324</p>
+							<p>303-333-3333</p>
+						</div>
+					</div>
+					<div class="contact__us">
+						<div class="contact__us--content">
+							<div class="inner__content">
+								<h3>contact us</h3>
+							</div>
+							
+						</div>
+					</div>
+					<div class="contact__hours">
+						<div class="contact__card--content">
+							<h2>Opening Hours</h2>
+							<p>Monday to Friday: 9am - 6pm</p>
+							<p>Saturday to Sunday: 10am - 4pm</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+<!-- End pricing container -->
+	<!-- TODO: mark-up twitterbox -->
+<section class="container-fluid no-padding">
+
+	<div class="twitter__background" style="background-image: url(/assets/images/backgrounds/twitter.jpg);">
+
+		<div class="row sv__container twitter__wrapper">
+
+			<img src="/assets/images/icons/twitter-badge.png" alt="">
+			
+			<h2>Latest Tweet</h2>
+
+			<blockquote>
+				<p>Sed ullamcorper efficitur tortor eu consectetur. Etiam tincidunt nisi quis ex convallis, vitae accumsan massa aliquam. Sed <span class="red">#Cleancut #Theshave</span></p>
+				<hr>
+				<cite>birdeman228 </cite>
+			</blockquote>			
+
+		</div>
+
+	</div>
+
+</section>
+<!-- End container -->
+	<!-- TODO: mark-up blog -->
+<section class="container-fluid no-padding blog">
+
+	<div class="sv__container blog__wrapper">
+		
+		<!-- feature-blog-entry -->
+		<article class="blog blog__feature blog-1">
+		  <div class="content">
+		  	<div class="content--container">
+		  		<h2>Blog</h2>
+		  		<h3>The finest shave a man can get headline </h3>
+		  		<p>posted march 20th | 345 views</p>
+		  	</div>
+		    <div class="offset__container">
+		      <a href="" class="offset__btn">Read More</a>
+		    </div>
+		  </div>
+		  <img src="/assets/images/blog/hero-feature.jpg" alt="BarberShop">
+		</article>
+
+		<div class="row blog__mod--wrapper">
+			<article class="col-xs-12 col-sm-6 blog__mod">
+				<div class="blog__mod--img">
+					<img class="img-responsive" src="/assets/images/pricing-table/header-img.jpg" alt="">
+				</div>
+				<div class="blog__mod--text">
+					<p class="blog__mod--desc">posted march 20th | 345 views</p>
+					<h2>The finest shave A man can get headdline goes here for right now</h2>
+					<p class="blog__mod--body">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a....
+					</p>
+				</div>
+			</article>
+			<article class="col-xs-12 col-sm-6 blog__mod">
+					<div class="blog__mod--img">
+						<img class="img-responsive" src="/assets/images/pricing-table/header-img.jpg" alt="">
+					</div>
+					<div class="blog__mod--text">
+						<p class="blog__mod--desc">posted march 20th | 345 views</p>
+						<h2>The finest shave A man can get headdline goes here for right now</h2>
+						<p class="blog__mod--body">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a....
+						</p>
+					</div>
+			</article>
+		</div>
+
+	</div>
+
+
+
+</section>
+<!-- End container -->
+	<section class="container-fluid no-padding ">
+	
+	<div class="buy__container">
+		<div class="sv__container content">
+			<div class="col-xs-12 col-sm-8 col-md-8 no-padding">
+				<h1>Own the shave theme today</h1>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-4 no-padding">
+				<a class="book__now--btn" href="#">Get it</a>
+			</div>
+		</div>
+	</div>
+
+</section>
+<!-- End container -->
+
+
+            <!--  -->
+
+        </main> <!-- end canvas -->
+
+        <footer class="container-fluid no-padding ">
+	<div class="footer__wrapper">
+		<!-- Shop vision -->
+		<div class="col-xs-12 no-padding">
+			<p class="tagline">We are masters of the blade</p>
+			<p class="sv__spacer">:::::</p>
+
+			<h1><span class="footer__name">The Shave</span> is a modern vintage HTML Barbershop theme designed for its users in mind. This theme comes with free support great stuff.
+			</h1>
+		</div>
+		<!-- end shop vision -->
+
+		<!-- footer contact us -->
+		<div class="row ">
+			<div class="col-xs-12 col sm-6 col-md-3 location">
+				<h3>Location</h3>
+				<p>Nordhoff st.</p>
+				<p>Northridge, CA 91324</p>
+			</div>
+
+			<div class="col-xs-12 col sm-6 col-md-3 contact">
+				<h3>Contact Us</h3>
+				<a href="tel:303-333-3333">303-333-3333</a>
+				<a href="info@theshave.com?subject=feedback">info@theshave.com</a>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6 email">
+				<div class="email__form form-group">
+					<form action="" method="post">
+						<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your e-mail address">
+						<button type="submit" class="sv-btn form-btn">Submit</button>
+					</form>
+				</div>
+				<div class="email__offers">
+					<p class="eamil__offers--connect">Stay Connected to our Shop</p>
+				</div>
+			</div>
+
+			<div class="col-xs-12 social">
+				<ul>
+					<li class="facebook text-hide"><a href="">Facebook</a></li>
+					<li class="twitter text-hide"><a href="">Twitter</a></li>
+					<li class="instagram text-hide"><a href="">Instagram</a></li>
+					<li class="linkedin text-hide"><a href="">Linkedin</a></li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end wrapper -->
+	
+</footer>
+<!-- End container -->
+
         <!-- Script block allowing child pages to inject their own scripts -->
         
-                <script src="/assets/scripts/jquery.min.js"></script>
-        <script src="/assets/scripts/bootstrap.js"></script>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        
+        <script src="/assets/scripts/jquery.min.js"></script>
+        <script src="/assets/scripts/bootstrap.min.js"></script>
+        <script src="/assets/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+        <script src="/assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
+        <script src="/assets/scripts/flickity-settings.min.js"></script>
+        <script src="/assets/scripts/nav-settings.min.js"></script>
+        <script src="/assets/scripts/main-settings.min.js"></script>
+        <script src="/assets/scripts/map-settings.min.js"></script>
+
+
     </body>
 </html>

@@ -1,5 +1,4 @@
 //TODO: Fix margins on left and right side of container for table
-//TODO: Look at page jumping in IE and firefox. Safari?
 .pricing__container{
 	position:relative;
 }
@@ -139,7 +138,7 @@
 	background:#ddd;
 	border-top:4px solid #ddd;
 	@include transition(background-color .4s ease-in-out, color .4s ease-in-out, border-color .4s);
-
+	color:$black;
 }
 
 
@@ -205,11 +204,14 @@
 		font-weight: bold;
 		font-size: em(18px);
 		}
+
+		a{
+			padding:em(15px);
+		}
 	}
 }
 
 .panel-heading{
-	padding:30px 15px;
 	border-top-right-radius:0;
 	border-top-left-radius:0;
 	position:relative;
@@ -229,6 +231,7 @@
 	}
 
 	.price__trigger{
+
 		
 		&::before, &::after {
 			background: $primary-color;
@@ -278,12 +281,12 @@
 
 	&::before {
 		@include transform(rotate(45deg));
-		top:3px;
-		right: 24px;
+		// top:3px;
+		right: 32px;
 	}
 
 	&::after {
-		top:12px;
+		// top:12px;
 		@include transform(rotate(-45deg));
 	}
 
@@ -292,6 +295,5 @@
 		background: $primary-color;
 		}
 	}
-
 
 }

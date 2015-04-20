@@ -17,17 +17,23 @@
 
         <main class="sv__main--content">
 
-          {% block header %}{% endblock %}
+            <!-- {% block header %}{% endblock %} -->
 
-          <div class="container-fluid no-padding">
             {% block content %}{% endblock %}
-          </div>
 
-          {% block footer %}{% endblock %}
+            <!-- {% block footer %}{% endblock %} -->
 
+            {% include "footer" %}
+            
         </main> <!-- end canvas -->
+
+        
+
         <!-- Script block allowing child pages to inject their own scripts -->
-        {% block scripts %}{% endblock %}
+        {% block scripts %}
+        
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+        {% endblock %}
         {{ "jquery.min.js" | asset_url | script_tag }}
         {{ "bootstrap.js" | asset_url | script_tag }}
         {{ "jasny-bootstrap.min.js" | asset_url | script_tag }}
@@ -35,5 +41,8 @@
         {{ "flickity-settings.js" | asset_url | script_tag }}
         {{ "nav-settings.js" | asset_url | script_tag }}
         {{ "main-settings.js" | asset_url | script_tag }}
+        {{ "map-settings.js" | asset_url | script_tag }}
+
+
     </body>
 </html>

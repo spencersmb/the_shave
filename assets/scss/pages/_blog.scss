@@ -1,0 +1,192 @@
+// ==========================================================================
+// Master Sass file for Blog
+// Section 1: Blog Feature box on homepage
+// Section 2: Blog index style
+// Section 3: Blog details page template
+// ==========================================================================
+
+.blog{
+	background:$grey;
+}
+
+.blog__wrapper{
+	text-align:center;
+	margin:120px auto 60px auto;
+}
+
+.blog{
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	width:100%;
+
+	.content{
+		position:relative;
+		z-index: 100;
+		background:$white;
+		margin:7.525em 20.5%;
+
+		p{
+			margin:0;
+		}
+	}
+
+}
+
+.blog__feature{
+	width:100%;
+
+	.content{
+		// padding: 0 2em;
+
+		h3{
+			margin:0 auto;
+			max-width: 75%;
+			margin-bottom: em(20px);
+			font-size: em(24px);
+			font-weight: 700;
+		}
+	}
+
+	img{
+		display: block;
+		position:absolute;
+		top:0;
+		min-height: 100%;
+		min-width: 100%;
+		left:-55px;
+	}
+}
+
+.blog__mod{
+	padding:0;
+	text-align:left;
+
+	&--wrapper{
+		margin:0 auto;
+		width:100%;
+	}
+	
+
+	&--body{
+	}
+
+
+	&--text{
+		background:$white;
+		padding: 30px;
+		margin:0;
+		h2{
+			text-transform: none;
+			font-size: 1.5em;
+			margin-bottom: 30px;
+		}
+	}
+
+	&--desc{
+		margin:0;
+		color:$primary-color;
+		font-style:italic;
+		font-size: em(14px);
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	img{
+		width:100%;
+		max-height: 325px;
+	}
+}
+
+
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+	.blog__feature{
+		width:90%;
+	}
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+	.blog__feature{
+		width:72.8%;
+		margin:0 auto;
+		// margin-bottom: 30px;
+
+		.content{
+			margin: em(210px) 30%;
+			height:em(315px);
+
+			&--container{
+
+				position:relative;
+				@include transform(translateY(-50%));
+				top:50%;
+
+				h3{	
+					font-size: em(20px);
+					text-align:center;
+					width:70%;
+					// padding-top:4em;
+				}
+
+				p{
+					color:$primary-color;
+					font-size: em(14px);
+					font-style: italic;
+					font-weight: 600;
+				}
+
+			}
+
+			
+		}
+
+
+	}
+
+	.blog__mod{
+		margin-top: 30px;
+
+		&:first-child{
+			padding-right:15px;
+		}
+
+		&:nth-child(2n){
+			padding-left:15px;
+		}
+		
+		&--wrapper{
+			width:72.8%;
+		}
+	}
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+}
+
+
+// ==========================================================================
+// Section 2: Blog index style 
+// 
+// ==========================================================================
+
+
+// ==========================================================================
+// Section 3: Blog details page template
+// 
+// ==========================================================================
