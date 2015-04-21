@@ -111,3 +111,18 @@
 .red{
   color:$primary-color;
 }
+
+.spacer{
+   &::after{
+    position:absolute;
+    top:47px;
+    left:0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color:$primary-color;
+    width:100%;
+    content:":::"
+  }
+}
+

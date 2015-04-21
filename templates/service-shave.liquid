@@ -2,27 +2,85 @@
 
 {% block content %}
 <!-- TODO: Comment this section out -->
-	<section class="container-fluid">
-		<div class="row inner__header">
+	<div class="container-fluid container__white">
+
+	</div>
+	<section class="container-fluid container__grey no-padding">
+		<div class="">
 
 			<!-- feature-service-card -->
-			<div class="blog blog__feature blog-1">
-			  <div class="content">
-			  	<div class="content--container">
-			  		<h2>Services</h2>
-			  		<h3>The finest shave a man can get headline </h3>
-			  	</div>
-			    <div class="offset__container">
-			      <a href="" class="offset__btn">Read More</a>
-			    </div>
-			  </div>
-			  <img src="{{ 'hero-feature.jpg' | asset_url}}" alt="BarberShop">
+			<div class="card__offset">
+				<div class="card card__feature offset__width">
+				  <div class="content">
+				  	<div class="content--container">
+				  		<h2 class="spacer" >Services</h2>
+				  		<h3>The finest shave a man can get headline </h3>
+				  	</div>
+				  </div>
+				  <img src="{{ 'shave-header.jpg' | asset_url}}" alt="BarberShop">
+				</div>
 			</div>
 			
 		</div>
 
-		<div class="services__wrapper">
-			
+		<div class="sv__container--sm">
+			<div class="offset__content">
+				<h2>A proper shave has become a lost art, and our goal is to revive it for the next generation.</h2>
+
+				<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music. and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.</p>
+			</div>
+		</div>
+		
+	</section>
+	<section class="container-fluid container__grey">
+	
+		<!-- HOW IT WORKS -->
+		<div class="row  sv__container--sm ">
+			<div class="shave__works">
+				<h2 class="spacer">How it works</h2>
+
+				<!-- GRID -->
+				<div class="shave__row">
+					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
+						<div class="content">
+						<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
+							<h3>Hot Towel</h3>
+							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
+						<div class="content">
+						<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
+							<h3>The Shave</h3>
+							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
+						</div>
+						
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg">
+						<img class="img-resonsive" src="{{ 'card-img.jpg' | asset_url}}" alt="">
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-4 visible-md visible-lg shave__card--img">
+						<img class="img-resonsive" src="{{ 'card-img.jpg' | asset_url}}" alt="">
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
+						<div class="content">
+							<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
+							<h3>Hot Towel</h3>
+							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
+						<div class="content">
+							<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
+							<h3>Hot Towel</h3>
+							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
+						</div>
+					</div>
+				
+				</div>
+				<!-- End Grid -->
+			</div>
 		</div>
 		
 	</section>

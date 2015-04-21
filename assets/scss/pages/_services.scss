@@ -1,1 +1,54 @@
-//TODO recode the blog feature box to a universal css
+//HOW IT WORKS
+.shave__works{
+	margin-top:80px;
+	text-align:center;
+	position: relative;
+}
+
+.shave__row{
+	
+
+	& > div{
+		height:418px;
+		background:#fff;
+	}
+}
+
+.shave__card{
+
+	overflow:hidden;
+	padding:0;
+
+
+
+	&--img{
+	overflow:hidden;
+	padding:0;
+	background:green;
+	height:100%;
+	position:relative;
+		img{
+			width:100%;
+			height: 100%;
+			position:absolute;
+		}
+	}
+
+	.content{
+		padding:1.5em;
+	}
+
+	&:nth-child(4){
+		clear:both;
+	}
+
+	&--icon{
+		margin: 75px auto 45px auto;
+		display: block;
+		img{
+			margin:0 auto;
+			width:39px;
+			height:69px;
+		}
+	}
+}
