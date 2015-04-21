@@ -10,7 +10,9 @@
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
     </head>
-    <body>
+    <body class="loading">
+
+        <div class="load-icon"></div>
         {% include "header" %}
 
         {% include "nav" %}
@@ -36,12 +38,19 @@
         {% endblock %}
         {{ "jquery.min.js" | asset_url | script_tag }}
         {{ "bootstrap.js" | asset_url | script_tag }}
-        {{ "jasny-bootstrap.min.js" | asset_url | script_tag }}
+        
+        <!-- Plugins -->
         {{ "flickity.pkgd.min.js" | asset_url | script_tag }}
         {{ "flickity-settings.js" | asset_url | script_tag }}
+        {{ "skrollr.js" | asset_url | script_tag }}
+        {{ "imagesloaded.js" | asset_url | script_tag }}
+        {{ "smooth-scroll.js" | asset_url | script_tag }}
+
+        <!-- Settings -->
         {{ "nav-settings.js" | asset_url | script_tag }}
         {{ "main-settings.js" | asset_url | script_tag }}
         {{ "map-settings.js" | asset_url | script_tag }}
+        {{ "skrollr-settings.js" | asset_url | script_tag }}
 
 
     </body>

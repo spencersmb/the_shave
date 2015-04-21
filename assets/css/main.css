@@ -7548,6 +7548,28 @@ body {
   padding: 50px 0 0 0;
 }
 
+.loading .load-icon {
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  background: url("../images/icons/ico_loading.gif") no-repeat center center;
+}
+
+section {
+  opacity: 0;
+}
+
+.loaded section,
+.no-js section {
+  opacity: 1;
+  -webkit-transition: opacity, 300ms, ease-out;
+  -moz-transition: opacity, 300ms, ease-out;
+  transition: opacity, 300ms, ease-out;
+}
+
 h1 {
   font-weight: 700;
 }
@@ -8364,6 +8386,7 @@ a:focus {
 }
 .pricing__container {
   position: relative;
+  overflow: hidden;
 }
 
 .pricing__mod--body {
