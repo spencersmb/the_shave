@@ -7618,9 +7618,9 @@ a:focus {
 .inner__header {
   text-align: center;
   clear: both;
+  margin-top: 5.25em;
 }
 .inner__header h1 {
-  margin-top: 1.25em;
   font-size: 4.6875em;
   color: #f95759;
 }
