@@ -5,6 +5,13 @@
 	position: relative;
 }
 
+.shaving{
+	margin:60px auto;
+	text-align:center;
+	position:relative;
+
+}
+
 .shave__row{
 	
 
@@ -49,6 +56,116 @@
 			margin:0 auto;
 			width:39px;
 			height:69px;
+		}
+	}
+}
+
+//Shaving Cream
+.title-head{
+	// color:$primary-color;
+	font-size:em(14px);
+	position:relative;
+	clear:both;
+}
+
+.shaving__cream{
+	margin-top:20px;
+	padding:1.5em;
+
+	ul{
+		padding:0;
+	}
+
+	li{
+		list-style-type: none;
+
+	}
+
+	h2{
+		margin-bottom: 15px;
+		color:$black;
+		font-style: italic;
+	}
+
+	h4{
+		color:$primary-color;
+	}
+
+	&--wrapper{
+	
+	padding:0;
+	position:relative;
+	margin:70px auto;
+	text-align:center;
+	display:table;
+	// background:$primary-color;
+
+	}
+
+	&--intro{
+		position:relative;
+
+		.intro-text{
+			font-size: em(18px);
+		}
+	}
+
+
+}
+
+// pricing boxs
+.price__box{
+	padding-top:15px;
+	padding-bottom:15px;
+	&--body{
+		margin-bottom: 35px;
+	}
+
+	&--text{
+		text-align:center;
+		background:$white;
+		padding: 25px;
+		margin:0;
+	}
+
+	&--desc{
+		margin:0;
+		color:$primary-color;
+		font-style:italic;
+	}
+
+	&--img{
+		max-height: 225px; //desktop
+		overflow: hidden;
+	}
+
+	img{
+		width:100%;
+	}
+
+	.price{
+		font-size: 24px;
+		font-weight:bold;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #CACACA;
+		margin:0 auto;
+	}
+
+	h2{
+		margin-bottom:25px;
+	}
+
+	ul{
+		padding:0;
+	}
+
+	li{
+		list-style-type: none;
+		padding:25px 0;
+		border-bottom: 1px solid #CACACA;
+
+		&:last-child{
+			margin-bottom: 45px;
 		}
 	}
 }
