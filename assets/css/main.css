@@ -7619,6 +7619,14 @@ a:focus {
   outline: none;
 }
 
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
 .sv__main--content {
   min-height: 100%;
   position: relative;
@@ -8901,6 +8909,166 @@ a:focus {
   }
 }
 
+.shave__faq--items {
+  height: auto;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  transition: transform 2s;
+  margin-bottom: 80px;
+}
+.shave__faq--items h2 {
+  text-align: center;
+}
+
+.shave__faq--group {
+  display: block;
+}
+.shave__faq--group h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  color: #252525;
+}
+.shave__faq--group > li {
+  background: #fff;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+.no-touch .shave__faq--group > li:hover {
+  box-shadow: 0 1px 10px rgba(37, 37, 37, 0.3);
+}
+.shave__faq--group .shave__faq--title {
+  margin: 2em 0 1em;
+}
+
+.shave__faq--trigger {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  padding: 30px 30px 60px;
+  line-height: 1.2;
+  font-size: 1.5em;
+  border: 1px solid transparent;
+}
+
+.shave__faq--content {
+  display: none;
+  border: 1px solid transparent;
+}
+.shave__faq--content p {
+  font-size: 0.9375em;
+  line-height: 1.5em;
+  color: #252525;
+  padding: 0 24px 30px;
+}
+
+@media (min-width: 768px) {
+  .shave__faq--group {
+    display: block;
+  }
+  .shave__faq--group h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #252525;
+  }
+  .shave__faq--group > li {
+    background: #fff;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+  }
+  .no-touch .shave__faq--group > li:hover {
+    box-shadow: 0 1px 10px rgba(37, 37, 37, 0.3);
+  }
+  .shave__faq--group .shave__faq--title {
+    margin: 2em 0 1em;
+  }
+
+  .shave__faq--trigger {
+    text-align: left;
+    position: relative;
+    display: block;
+    font-weight: 700;
+    margin: 0;
+    padding: 30px 75px 30px 30px;
+    line-height: 1.2;
+    font-size: 1.5em;
+    border: 1px solid transparent;
+  }
+  .shave__faq--trigger::before, .shave__faq--trigger::after {
+    /* arrow icon on the right */
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    height: 2px;
+    width: 13px;
+    background: #f95759;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .shave__faq--trigger::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 32px;
+  }
+  .shave__faq--trigger::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .active .shave__faq--trigger::before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .active .shave__faq--trigger::after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .shave__faq--content {
+    display: none;
+    border: 1px solid transparent;
+  }
+  .shave__faq--content p {
+    font-size: 0.9375em;
+    line-height: 1.5em;
+    color: #252525;
+    padding: 0 24px 30px;
+  }
+}
 .blog {
   background: #e8e8e8;
 }

@@ -38,6 +38,16 @@ $(function() {
 	    }
 	});
 
+	// ==========================================================================
+	// Services
+	// ==========================================================================
+
+	var faqTrigger = $('.shave__faq--trigger');
+
+		faqTrigger.on('click', function(e){
+			event.preventDefault();
+			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
+		});
 
     
 });

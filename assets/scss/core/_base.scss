@@ -1,6 +1,7 @@
 // ==========================================================================
 // Global Base Settings override
 // ==========================================================================
+
 *::after, *::before{
   content:'';
 }
@@ -81,6 +82,14 @@ a{
     outline:none;
   }
 
+}
+
+li{
+  list-style-type: none;
+}
+
+ul{
+  padding:0;
 }
 
 .sv__main--content{

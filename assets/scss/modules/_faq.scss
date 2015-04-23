@@ -1,9 +1,187 @@
+.shave__faq--items{
+	height:auto;
+	width:100%;
+	position:relative;
+	overflow:visible;
+	@include transform(translateZ(0));
+	@include transition(transform 2s);
+	margin-bottom:80px;
 
+	h2{
+		text-align: center;
+	}
+
+}
+
+.shave__faq--group{
+	display: block;
+
+	h2 {
+		text-transform: uppercase;
+		font-size:(24px);
+		font-weight: 700;
+		color: $black;
+	}
+
+	& > li{
+		background:$white;
+		margin-bottom: 25px;	
+		box-shadow: 0 1px 2px rgba(#000, .08);
+		@include transition(box-shadow .2s);
+
+		.no-touch &:hover {
+			box-shadow: 0 1px 10px rgba($black, .3);
+		}
+	}
+
+	.shave__faq--title {
+		margin: 2em 0 1em;
+	}
+}
+
+.shave__faq--trigger{
+	position: relative;
+	display: block;
+	font-weight: 700;
+	margin: 0;
+	text-align:center;
+	padding: 30px 30px 60px;
+	line-height: 1.2;
+	font-size: em(24px);
+	border: 1px solid transparent;
+
+	// &::before, &::after {
+	// 	/* arrow icon on the right */
+	// 	position: absolute;
+	// 	right: 166px;
+	// 	top: 75%;
+	// 	height: 2px;
+	// 	width: 13px;
+	// 	background: $primary-color;
+	// 	-webkit-backface-visibility: hidden;
+	// 	backface-visibility: hidden;
+	// 	@include transition-property(transform);
+	// 	@include transition-duration(.2s);
+	// }
+
+	// &::before {
+	// 	@include transform(rotate(45deg));
+	// 	right: 175px;
+	// }
+
+	// &::after {
+	// 	@include transform(rotate(-45deg));
+	// }
+
+	// .active &::before {
+	// 	@include transform(rotate(-45deg));
+	// }
+
+	// .active &::after {
+	// 	@include transform(rotate(45deg));
+	// }
+} //end trigger
+
+.shave__faq--content{
+	display:none;
+	border: 1px solid transparent;
+
+	p {
+		font-size:em(15px);
+		line-height: em(24px);
+		color: $black;
+		padding: 0 24px 30px;
+		
+	}
+}
 
 // Displays greater than 600px 
 @include breakpoint(tablet) {
 
-	
+	.shave__faq--group{
+		display: block;
+
+		h2 {
+			text-transform: uppercase;
+			font-size:(24px);
+			font-weight: 700;
+			color: $black;
+		}
+
+		& > li{
+			background:$white;
+			margin-bottom: 25px;	
+			box-shadow: 0 1px 2px rgba(#000, .08);
+			@include transition(box-shadow .2s);
+
+			.no-touch &:hover {
+				box-shadow: 0 1px 10px rgba($black, .3);
+			}
+		}
+
+		.shave__faq--title {
+			margin: 2em 0 1em;
+		}
+	}
+
+	.shave__faq--trigger{
+		text-align:left;
+		position: relative;
+		display: block;
+		font-weight: 700;
+		margin: 0;
+		padding: 30px 75px 30px 30px;
+		line-height: 1.2;
+		font-size: em(24px);
+		border: 1px solid transparent;
+
+		&::before, &::after {
+			/* arrow icon on the right */
+			position: absolute;
+			right: 24px;
+			top: 50%;
+			height: 2px;
+			width: 13px;
+			background: $primary-color;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			@include transition-property(transform);
+			@include transition-duration(.2s);
+		}
+
+		&::before {
+			@include transform(rotate(45deg));
+			right: 32px;
+		}
+
+		&::after {
+			@include transform(rotate(-45deg));
+		}
+
+		.active &::before {
+			@include transform(rotate(-45deg));
+		}
+
+		.active &::after {
+			@include transform(rotate(45deg));
+		}
+	} //end trigger
+
+	.shave__faq--content{
+		display:none;
+		border: 1px solid transparent;
+
+		p {
+			font-size:em(15px);
+			line-height: em(24px);
+			color: $black;
+			padding: 0 24px 30px;
+			
+		}
+	}
+
+
+
 
 }
 
