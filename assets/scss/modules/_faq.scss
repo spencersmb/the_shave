@@ -1,0 +1,29 @@
+
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+
+	
+}
