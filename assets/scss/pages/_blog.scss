@@ -14,49 +14,6 @@
 	margin:120px auto 60px auto;
 }
 
-// .blog{
-// 	position:relative;
-// 	overflow:hidden;
-// 	text-align:center;
-// 	width:100%;
-
-// 	.content{
-// 		position:relative;
-// 		z-index: 100;
-// 		background:$white;
-// 		margin:7.525em 20.5%;
-
-// 		p{
-// 			margin:0;
-// 		}
-// 	}
-
-// }
-
-// .blog__feature{
-// 	width:100%;
-
-// 	.content{
-// 		// padding: 0 2em;
-
-// 		h3{
-// 			margin:0 auto;
-// 			max-width: 75%;
-// 			margin-bottom: em(20px);
-// 			font-size: em(24px);
-// 			font-weight: 700;
-// 		}
-// 	}
-
-// 	img{
-// 		display: block;
-// 		position:absolute;
-// 		top:0;
-// 		min-height: 100%;
-// 		min-width: 100%;
-// 		left:-55px;
-// 	}
-// }
 
 .blog__mod{
 	padding:0;
@@ -119,43 +76,6 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
 
-	// .blog__feature{
-	// 	width:72.8%;
-	// 	margin:0 auto;
-	// 	// margin-bottom: 30px;
-
-	// 	.content{
-	// 		margin: em(210px) 30%;
-	// 		height:em(315px);
-
-	// 		&--container{
-
-	// 			position:relative;
-	// 			@include transform(translateY(-50%));
-	// 			top:50%;
-
-	// 			h3{	
-	// 				font-size: em(20px);
-	// 				text-align:center;
-	// 				width:70%;
-	// 				// padding-top:4em;
-	// 			}
-
-	// 			p{
-	// 				color:$primary-color;
-	// 				font-size: em(14px);
-	// 				font-style: italic;
-	// 				font-weight: 600;
-	// 			}
-
-	// 		}
-
-			
-	// 	}
-
-
-	// }
-
 	.blog__mod{
 		margin-top: 30px;
 
@@ -184,6 +104,86 @@
 // Section 2: Blog index style 
 // 
 // ==========================================================================
+
+//TODO: remove the margin bottom from being on existing classes and convert it into a variable and add it as its own class so its easy to change later like for mobile
+.blog{
+	margin-bottom:604px;
+}
+
+.blog__post{
+	margin:60px auto 100px auto;
+	clear:both;
+
+	.post__image{
+		max-width: 729px;
+	}
+
+	&:nth-child(odd){
+		float:right;
+
+		.post__image{
+			position:relative;
+			text-align:right;
+			float:right;
+		}
+	}
+
+	&:nth-child(even){
+		float:left;
+
+		.post__image{
+			position:relative;
+			text-align:right;
+			float:left;
+		}
+	}
+
+}
+
+.content__holder{
+	position:relative;
+	width:100%;
+	display:table;
+}
+
+
+
+.post__text{
+	position:relative;
+	background:#fff;
+	width:100%;
+	max-width:835px;
+	float:right;
+	clear:both;
+	padding:2em;
+
+	h3{
+		text-transform: uppercase;
+		margin:0 0 20px 0;
+		line-height: 26px;
+	}
+}
+
+.post__category{
+	color:$primary-color;
+	font-size:em(16px);
+}
+
+.post__info{
+	font-size:em(12px);
+	color:$primary-color;
+	margin:0 0 20px 0;
+	ul{
+		width:100%;
+		position:relative;
+	}
+	li{
+		display: inline-block;
+		border-right:1px solid $primary-color;
+		padding-right:10px;
+		line-height: 1em;
+	}
+}
 
 
 // ==========================================================================

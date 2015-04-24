@@ -1,7 +1,10 @@
 // ==========================================================================
 // Helper Classes
 // ==========================================================================
-
+.container-fluid, .container{
+  position:relative;
+  z-index: 3; 
+}
 .text-hide{
   font: 0/0 a;
   color: transparent;
@@ -129,5 +132,9 @@
 .border-bottom{
   border-bottom:1px solid $black;
   padding-bottom:75px !important;
+}
+
+.white-bg{
+  background:#fff;
 }
 

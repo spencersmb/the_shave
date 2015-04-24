@@ -2,6 +2,7 @@ $(function() {
 
 	var $menu_trigger = $('#sv__nav--trigger'),
 	    $content_wrapper = $('.sv__main--content'),
+	    $footer = $('footer'),
 	    $navigation = $('header');
 
 	    //Open Close Menu
@@ -14,6 +15,7 @@ $(function() {
 
 	        //Slide nav and header over at same time
 	        $navigation.toggleClass('nav-is-open');
+	        $footer.toggleClass('nav-is-open');
 	        $content_wrapper.toggleClass('nav-is-open');
 
 	        //show nav

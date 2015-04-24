@@ -1,3 +1,21 @@
+footer{
+	position:fixed !important;
+	bottom:0;
+	left:0;
+	width:100%;
+	z-index: 1 !important;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+
+	@include transition-property(transform);
+	@include transition-duration(.4s);
+
+	&.nav-is-open {
+	  @include transform(translateX($navMove));
+	}
+	background:#fff;
+}
+
 .footer__wrapper{
 	margin:em(65px) auto 0 auto;
 	max-width:1001.72px;
@@ -82,12 +100,22 @@
 	}
 }
 
-.facebook, .twitter, .instagram, .linkedin{
+.facebook, .twitter, .instagram, .linkedin,{
 	margin:0 8px;
 
 	a{
 		width:38px;
 		height:38px;
+		display:block;
+	}
+}
+
+.facebook-grey, .twitter-grey, .instagram-grey, .linkedin-grey{
+	margin:0 8px;
+
+	a{
+		width:51px;
+		height:51px;
 		display:block;
 	}
 }
@@ -108,7 +136,26 @@
 }
 
 
-.linkedin{
+.linkedin-grey{
+	background: url("../images/icons/linkedin.png") no-repeat;
+	@include image-2x("../images/icons/linkedin@2x.png", 38px, 38px);
+}
+
+.facebook-grey{
+  	background: url("../images/icons/facebook-grey.jpg") no-repeat;
+  	@include image-2x("../images/icons/facebook@2x.png", 54px, 54px);
+}
+
+.twitter-grey{
+	background: url("../images/icons/twitter.png") no-repeat;
+	@include image-2x("../images/icons/twitter@2x.png", 38px, 38px);
+}
+//TODO - find retina version of instagram
+.instagram-grey{
+	background: url("../images/icons/instagram.png") no-repeat;
+	@include image-2x("../images/icons/instagram@2x.png", 38px, 38px);
+}
+.linkedin-grey{
 	background: url("../images/icons/linkedin.png") no-repeat;
 	@include image-2x("../images/icons/linkedin@2x.png", 38px, 38px);
 }

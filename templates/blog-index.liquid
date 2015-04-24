@@ -1,0 +1,73 @@
+{% layout "layout" %}
+
+{% block content %}
+<!-- TODO: Add icons for post info -->
+<!-- TODO: Change ::: to be above text -->
+<!-- Intro blog -->
+{% include "blog/blog-index-intro" %}
+
+<!-- Blog Article List begin -->
+<section class="container-fluid container__grey blog">
+	<div class="row sv__container--sm">
+		<article class="blog__post">
+			<div class="content__holder">
+				<div class="post__image">
+					<img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt="">
+				</div>
+				<div class="post__text">
+					<h3><a href="#">The finest shave A man can get</a></h3>
+					<div class="post__info">
+						<ul><li>Mens Stlye</li>
+							<li>04.10.2013</li>
+							<li>345 views</li>
+						</ul>
+					</div>
+					<p>Mixtape Carles tattooed skateboard, letterpress artisan Neutra street art crucifix organic vinyl keffiyeh fingerstache Austin. Shabby chic photo booth distillery Odd Future. Chillwave deep v bespoke sartorial, tousled typewriter Carles twee. Leggings Carles PBR&B asymmetrical, forage kale chips messenger bag  drinking vinegar lomo....</p>
+					<div class="post__more">
+
+						<a class="blog__btn" href="#">Read More</a>
+						<ul>
+							<li class="facebook-grey text-hide"><a href="#">Facebook</a></li>
+							<li class="facebook-grey text-hide"><a href="#">Twitter</a></li>
+							<li class="facebook-grey text-hide"><a href="#">LinkedIn</a></li>
+							<li class="facebook-grey text-hide"><a href="#">Instagram</a></li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+		</article>
+		<article class="blog__post">
+			<div class="content__holder">
+				<div class="post__image">
+					<img class="img-responsive" src="{{ 'article-2.jpg' | asset_url}}" alt="">
+				</div>
+				<div class="post__text">
+					<p class="post__category">Mens Stlye</p>
+					<h3><a href="#">The finest shave A man can get</a></h3>
+					<div class="post__info">
+						<ul><li>Mens Stlye</li>
+							<li>04.10.2013</li>
+							<li>345 views</li>
+						</ul>
+					</div>
+					<p>Mixtape Carles tattooed skateboard, letterpress artisan Neutra street art crucifix organic vinyl keffiyeh fingerstache Austin. Shabby chic photo booth distillery Odd Future. Chillwave deep v bespoke sartorial, tousled typewriter Carles twee. Leggings Carles PBR&B asymmetrical, forage kale chips messenger bag  drinking vinegar lomo....</p>
+					<div class="post__more">
+
+						<a class="blog__btn" href="#">Read More</a>
+						<ul>
+							<li class="facebook-grey text-hide"><a href="#">Facebook</a></li>
+							<li class="facebook-grey text-hide"><a href="#">Twitter</a></li>
+							<li class="facebook-grey text-hide"><a href="#">LinkedIn</a></li>
+							<li class="facebook-grey text-hide"><a href="#">Instagram</a></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</section>
+<!-- End blog list -->
+{% endblock %}

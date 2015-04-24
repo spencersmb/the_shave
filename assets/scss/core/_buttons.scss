@@ -39,6 +39,42 @@
   display:block;
 }
 
+.post__more{
+  position:absolute;
+  bottom:-40px;
+  right:33px;
+  margin:0 auto;
+  width:100%;
+  text-align: right;
+
+  .blog__btn{
+    @extend .sv-btn;
+    float:right;
+    padding:13.5px 30px;
+  }
+  ul{
+    // position:absolute;
+    margin-right:9px;
+    float:right;
+    // right:0;
+    // width:100%;
+    // text-align: center;
+    display: flex;
+  }
+
+  li{
+    display: inline-block;
+    width:54px;
+    height:54px;
+    bottom:0;
+    right:80px;
+  }
+}
+
+.facebook-grey{
+
+}
+
 
 @include breakpoint(laptop) {
 

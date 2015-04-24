@@ -2,213 +2,70 @@
 
 {% block content %}
 <!-- TODO: Comment this section out -->
-	<div class="container-fluid container__white">
-
-	</div>
+<!-- TODO: Add Shaving Cream icons -->
+	
 	<!-- Offset header -->
-	<section class="container-fluid container__grey no-padding ">
-		<div class="">
-
-			<!-- feature-service-card -->
-			<div class="card__offset">
-				<div class="card card__feature offset__width">
-				  <div class="content">
-				  	<div class="content--container">
-				  		<h2 class="spacer" >Services</h2>
-				  		<h3>The finest shave a man can get headline </h3>
-				  	</div>
-				  </div>
-				  <img src="{{ 'shave-header.jpg' | asset_url}}" alt="BarberShop">
-				</div>
-			</div>
-			
-		</div>
-
-		<div class="sv__container--sm">
-			<div class="offset__content border-bottom">
-				<h2>A proper shave has become a lost art, and our goal is to revive it for the next generation.</h2>
-
-				<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music. and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.</p>
-			</div>
-		</div>
-		
-	</section>
+	{% include "service-shave/service-intro-shave" %}
+	<!-- End offset header -->
 
 	<!-- HOW IT WORKS -->
+	{% include "service-shave/how-it-works-shave" %}	
+	<!-- End section how it oworks -->
+
+	<!-- Start Types of shaving cream -->
 	<section class="container-fluid container__grey">
-	
-		<!-- HOW IT WORKS -->
+
 		<div class="row sv__container--sm">
-			<div class="shave__works">
-				<h2 class="spacer">How it works</h2>
-
-				<!-- GRID -->
-				<div class="shave__row">
-					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
-						<div class="content">
-						<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
-							<h3>Hot Towel</h3>
-							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
-						<div class="content">
-						<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
-							<h3>The Shave</h3>
-							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
-						</div>
-						
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg">
-						<img class="img-resonsive" src="{{ 'card-img.jpg' | asset_url}}" alt="">
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 visible-md visible-lg shave__card--img">
-						<img class="img-resonsive" src="{{ 'card-img.jpg' | asset_url}}" alt="">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
-						<div class="content">
-							<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
-							<h3>Hot Towel</h3>
-							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 shave__card">
-						<div class="content">
-							<span class="shave__card--icon"><img class="img-responsive" src="{{ 'shave-service-hot-towel.png' | asset_url}}" alt=""></span>
-							<h3>Hot Towel</h3>
-							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
-						</div>
-					</div>
-				
+			<div class="shaving__cream--wrapper border-bottom">
+			<span class="title-head">So fresh and so clean</span>
+				<div class="col-xs-12 shaving__cream--intro">
+					<h2 class="spacer">Choose a shaving cream</h2>
+					<p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fugiat repellat possimus eaque officiis, ex commodi fugit nisi! Quibusdam, eaque vel voluptate</p>
 				</div>
-				<!-- End Grid -->
-			</div>
-			<!-- End shave__works -->
-
-			</div>
-			<!-- End container sm -->
-
-		</section>
-		<!-- End section how it oworks -->
-
-		<!-- Start Types of shaving cream -->
-		<section class="container-fluid container__grey">
-
-			<div class="row sv__container--sm">
-				<div class="shaving__cream--wrapper border-bottom">
-				<span class="title-head">So fresh and so clean</span>
-					<div class="col-xs-12 shaving__cream--intro">
-						<h2 class="spacer">Choose a shaving cream</h2>
-						<p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fugiat repellat possimus eaque officiis, ex commodi fugit nisi! Quibusdam, eaque vel voluptate</p>
-					</div>
-					<div class="col-xs-12 col-md-4 shaving__cream">
-						<h2>Good</h2>
-						<h4>Standard Shaving Cream Package</h4>
-						<ul>
-							<li>Deep pour penetraion</li>
-							<li>Clensing / Moisturizing</li>
-							<li>Advance protection</li>
-						</ul>
-					</div>
-
-					<div class="col-xs-12 col-md-4 shaving__cream">
-						<h2>Better</h2>
-						<h4>Silver Shaving Cream Package </h4>
-						<ul>
-							<li>Deep pour penetraion</li>
-							<li>Clensing / Moisturizing</li>
-							<li>Advance protection</li>
-						</ul>
-					</div>
-
-					<div class="col-xs-12 col-md-4 shaving__cream">
-						<h2>Best</h2>
-						<h4>The family secret shaving cream recipe</h4>
-						<ul>
-							<li>Deep pour penetraion</li>
-							<li>Clensing / Moisturizing</li>
-							<li>Advance protection</li>
-							<li>Passed down for 5 generations</li>
-						</ul>
-					</div>
-
+				<div class="col-xs-12 col-md-4 shaving__cream">
+					<h2>Good</h2>
+					<h4>Standard Shaving Cream Package</h4>
+					<ul>
+						<li>Deep pour penetraion</li>
+						<li>Clensing / Moisturizing</li>
+						<li>Advance protection</li>
+					</ul>
 				</div>
-			</div>
-		</section>
-		<!-- End section shaving cream -->
 
-		<!-- Start Price module -->
-		<section class="container-fluid container__grey">
-
-			<!-- TODO CONVERT TO PRICE MODULE -->
-			<div class="sv__container shaving">
-
-				<h2 class="spacer">Shaving Specialties</h2>
-
-				<div class="row">
-					<!-- Price box 1-->
-					<div class="col-xs-12 col-md-4 price__box">
-						<div class="price__box--img">
-							<img class="img-responsive" src="{{'service-shave.jpg' | asset_url}}" alt="">
-						</div>
-						<div class="price__box--text">
-							<h2>The Shave</h2>
-							<p class="price">$45</p>
-							<ul>
-								<li>Hot Towel face massage</li>
-								<li>Optional full shave or trim</li>
-								<li>Free aftershave product Sample</li>
-							</ul>
-				      	<a class="book__now--btn" href="#">Book Now</a>
-						</div>
-						
-					</div>
-					
-					<!-- Price box 2 -->
-					<div class="col-xs-12 col-md-4 price__box">
-						<div class="price__box--img">
-							<img class="img-responsive" src="{{'service-shave.jpg' | asset_url}}" alt="">
-						</div>
-						<div class="price__box--text">
-							<h2>The Shave</h2>
-							<p class="price">$45</p>
-							<ul>
-								<li>Hot Towel face massage</li>
-								<li>Optional full shave or trim</li>
-								<li>Free aftershave product Sample</li>
-							</ul>
-				      	<a class="book__now--btn" href="#">Book Now</a>
-						</div>
-						
-					</div>
-
-					<!-- Price box 3 -->
-					<div class="col-xs-12 col-md-4 price__box">
-						<div class="price__box--img">
-							<img class="img-responsive" src="{{'service-shave.jpg' | asset_url}}" alt="">
-						</div>
-						<div class="price__box--text">
-							<h2>The Shave</h2>
-							<p class="price">$45</p>
-							<ul>
-								<li>Hot Towel face massage</li>
-								<li>Optional full shave or trim</li>
-								<li>Free aftershave product Sample</li>
-							</ul>
-				      	<a class="book__now--btn" href="#">Book Now</a>
-						</div>
-						
-					</div>
-					
+				<div class="col-xs-12 col-md-4 shaving__cream">
+					<h2>Better</h2>
+					<h4>Silver Shaving Cream Package </h4>
+					<ul>
+						<li>Deep pour penetraion</li>
+						<li>Clensing / Moisturizing</li>
+						<li>Advance protection</li>
+					</ul>
 				</div>
-				<!-- End row -->
+
+				<div class="col-xs-12 col-md-4 shaving__cream">
+					<h2>Best</h2>
+					<h4>The family secret shaving cream recipe</h4>
+					<ul>
+						<li>Deep pour penetraion</li>
+						<li>Clensing / Moisturizing</li>
+						<li>Advance protection</li>
+						<li>Passed down for 5 generations</li>
+					</ul>
+				</div>
+
 			</div>
-			<!-- End price module container-->	
+		</div>
 	</section>
+	<!-- End section shaving cream -->
+
+	<!-- Start Price module -->
+	{% include "service-shave/price-boxs-shave" %}	
 	<!-- End Section price module -->	
 
 	<!-- FAQ -->
-	{% include "faq" %}	
+	{% include "service-shave/faq-shave" %}	
 	<!-- End Faq -->
+
+	{% include "buy-theme" %}
+	
 {% endblock %}

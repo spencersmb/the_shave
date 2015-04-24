@@ -23,11 +23,12 @@
 
             {% block content %}{% endblock %}
 
-            <!-- {% block footer %}{% endblock %} -->
+            {% block footer %}{% endblock %}
 
-            {% include "footer" %}
+            
             
         </main> <!-- end canvas -->
+        {% include "footer" %}
 
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}
