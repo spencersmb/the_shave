@@ -1,5 +1,6 @@
 $(function() {
 
+	//Open close nav
 	var $menu_trigger = $('#sv__nav--trigger'),
 	    $content_wrapper = $('.sv__main--content'),
 	    $footer = $('footer'),
@@ -22,5 +23,39 @@ $(function() {
 	        $('#sv__navigation').toggleClass('nav-is-open');
 
 	    });
+
+    //ON SCROLL Add shadow
+
+    //Get current position of Nav element
+    var currentPosition = $(window).scrollTop();
+
+	if(currentPosition > 50){
+		$navigation.addClass('shadow-on');
+	}else{
+		if($navigation.hasClass('shadow-on')){
+			$navigation.removeClass('shadow-on');
+		}
+	}
+
+    function addShadow(){
+
+    	currentPosition = $(window).scrollTop();
+
+    	if(currentPosition > 50){
+    		$navigation.addClass('shadow-on');
+    	}else{
+    		if($navigation.hasClass('shadow-on')){
+    			$navigation.removeClass('shadow-on');
+    		}
+    	}
+
+
+    }
+
+    $(window).on('scroll', function(){
+    	(!window.requestAnimationFrame) ? addShadow() : window.requestAnimationFrame(addShadow);
+    });
+
+
     
 });

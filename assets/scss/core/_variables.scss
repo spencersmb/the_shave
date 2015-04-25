@@ -105,10 +105,6 @@ $tablet-max:              ($laptop - 1) !default;
 $laptop-max:              ($desktop - 1) !default;
 
 //Z-Index categories
-// $secondary-nav: 1;
-// $content-zindex: 2;
-// $header-zindex: 3;
-
 $below-content: 1;
 $content: 2;
 $above-content: 3;
@@ -120,3 +116,6 @@ $header-M: 80px;
 //Change nav slideout amount here
 $navWidth: 260px;
 $navMove: $navWidth;
+
+//Push space for footer
+$footerPush: 604px;
