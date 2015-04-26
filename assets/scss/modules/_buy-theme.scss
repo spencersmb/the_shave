@@ -1,5 +1,5 @@
 .buy__container{
-	background:$black;
+	background:$white;
 	height:em(150px);
 	position:relative;
 	
@@ -13,7 +13,7 @@
 		@include transform(translateY(-50%));
 		h1{	
 			// letter-spacing: 1px;
-			color:$white;
+			color:$black;
 			margin:10px auto 0 auto;
 		}
 

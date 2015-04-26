@@ -1,10 +1,14 @@
 // ==========================================================================
 // Master Sass file for Blog
+//
 // Section 1: Blog Feature box on homepage
 // Section 2: Blog index style
 // Section 3: Blog details page template
+// Section 4: Blog comments
 // ==========================================================================
 
+
+//TODO: add icons for date & time stamp etc.
 .blog{
 	background:$grey;
 }
@@ -185,3 +189,182 @@
 // Section 3: Blog details page template
 // 
 // ==========================================================================
+
+.blog__inner{
+		&--feature{
+		position:absolute;
+		top:-155px;
+		width:100%;
+		margin:0 auto;
+	}
+
+	&--content{
+		margin:0 auto;
+	}
+}
+
+.blog__content{
+	max-width:756px;
+	position:relative;
+	margin:0 auto;
+
+	&--inner{
+		padding:100px 15px 0;
+		margin:0 auto;
+	}
+
+	h3{
+		text-align: center;
+	}
+
+	p{
+		font-size: em(18px);
+		line-height: em(28px);
+		word-wrap: break-word;
+		margin-bottom:em(36px);
+	}
+
+	.pull-quote{
+		float:right;
+		width:55%;
+		margin-right: -25%;
+	}
+
+	q{
+		font-size: em(28px);
+		line-height: em(20px);
+		text-align: left;
+		font-weight: bold;
+		margin: 50px 0 50px 50px;
+	}
+
+	&--tags{
+		display: block;
+		border-bottom: 1px solid #CACACA; 
+
+		h5{
+			display: inline-block;
+		}
+
+		a{
+			color:$primary-color;
+		}
+	}
+
+}
+
+.blog__content--author{
+	padding:2em 0 4em;
+	display:table;
+	.image{
+
+		display:block;
+
+		img{
+			float:left;
+			max-width:100px;
+			max-height:100px;
+		}
+	}
+
+	.text{
+
+		padding-left:20px;
+
+		p{
+			word-wrap: break-word;
+			font-size: em(15px);
+			line-height: em(21px);
+		}
+
+	}
+
+
+}
+
+.blog__related{
+	position:relative;
+	margin: 0 auto;
+
+	&--header{
+		margin:60px 15px 0;
+		padding:10px 0 5px;
+		// border-bottom:1px solid #CACACA;
+	}
+
+	&--articles{
+		display: inline-block;
+		margin: 0 15px 40px;
+		padding-bottom:30px;
+		border-bottom:1px solid #CACACA;
+
+		.text{
+
+			h4{
+				text-transform: uppercase;
+				margin:em(20px) auto;
+			}
+		}
+
+		.article{
+			&:nth-child(odd){
+				padding-left:0;
+			}
+			&:nth-child(even){
+				padding-right:0;
+			}
+		}
+	}
+
+	a{
+		position:absolute;
+		display: block;
+		top:0;
+		width:100%;
+		height:100%;
+	}
+}
+
+// ==========================================================================
+// Section 4: Blog comments
+// 
+// ==========================================================================
+
+.comments{
+	padding:0 15px;
+	margin-bottom:25px;
+}
+.comments__header{
+	padding:10px 0 5px;
+
+	h3{
+		margin:0;
+	}
+
+}
+
+.user{
+	margin-bottom:25px;
+}
+
+.comments__users{
+	clear:both;
+	h4{
+		padding-top:25px;
+		margin-bottom:5px;
+	}
+
+}
+
+.comment{
+	margin:25px auto;
+}
+
+.comment__form{
+	.pen-icon{
+		left:15px;
+	}
+	.user-text{
+		margin-left: 0;
+	}
+}

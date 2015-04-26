@@ -17,11 +17,11 @@
 }
 
 .form__right{
-	padding-left:30px;
+	// padding-left:30px;
 }
 .connect__us{
 	clear:both;
-	margin-top: em(90px);
+	margin-top: 3.625em;
 	text-align:center;
 	padding-bottom:em(90px);
 
@@ -145,6 +145,7 @@
 	left:0;
 	width:52px;
 	height:52px;
+
 }
 
 .user-icon{
@@ -192,4 +193,5 @@
 	padding-top:13px;
 	margin-bottom:30px;
 	height:216px;
+	margin-left:30px;
 }

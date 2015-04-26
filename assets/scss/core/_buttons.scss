@@ -71,11 +71,11 @@
   }
 }
 
-.facebook-grey{
-
+.reply-btn{
+  font-weight: bold;
+  text-align: right;
+  float:right;
 }
-
-
 @include breakpoint(laptop) {
 
   .book__now--btn{

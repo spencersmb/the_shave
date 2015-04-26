@@ -10,20 +10,15 @@
         <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
-    <body>
-        <header id="header" class="is-fixed">
+    <body class="loading">
+
+        <div class="load-icon"></div>
+        <header id="header" class="is-fixed nav-shadow">
 
     <!--company logo-->
     <a id="sv__logo" href="index.html">
     <h1>The Shave</h1>
     </a>
-
-    <!-- <nav id="sb-top-nav">
-        <ul>
-            <li><a href="css3.html">CSS3 Animations</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav> -->
 
     <!--nav hamburger-->
     <a id="sv__nav--trigger" href="#">
@@ -33,28 +28,6 @@
 
 </header>
 
-
-
-<!-- <div class="navbar navbar-default navbar-fixed-top sh-desktop__nav">
-  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-
-  <h1>The Shave</h1>
-
-  <div class="nav__book">
-      <ul>
-          <li>
-              Location Icon
-          </li>
-          <li>
-               <a class="btn btn-default" href="#" role="button">Book Now</a>
-          </li>
-      </ul>
-  </div>
-</div> -->
 
         <!--nav slide out-->
 <nav id="sv__navigation">
@@ -122,7 +95,7 @@
             <!--  -->
 
              
-	<section class="container-fluid no-padding">
+	<section class="container-fluid no-padding white-bg">
 	<div class="gallery-container-rev">
 		<img src="/assets/images/feature-slider/barber-chair.jpg">
 	</div>
@@ -176,61 +149,62 @@
 </section>
 	<!-- TODO: Comment out page -->
 
-<section class="container sv__container staggered__container">
-  <h2>Beyond the shave</h2>
+<section class="container-fluid white-bg">
+  <div class="row staggered__container ">
+    
+    <h2>Beyond the shave</h2>
 
-  
-
-  <div class="box box-sm box-2">
-    <img src="/assets/images/staggered-grid/box-sm.jpg" alt="">
-    <div class="content">
-      <p>Take a look at the most popular hair and beared styles</p>
-      <i>icon</i>
-    </div>
-    <a href="" class="box-link"></a>
-  </div>
-
-  <div class="box box-lg box-1">
-    <div class="content">
-      <h3>How it all started</h3>
-      <p>From beared sculpting to modern hipster haircuts, we do it all, and we do it well.</p>
-      <i>icon</i>
-    </div>
-    <img src="/assets/images/staggered-grid/box-lg.jpg" alt="BarberShop">
-    <a href="" class="box-link"></a>
-  </div>
-
-  <div class="box box-sm-hours box-4">
-    <div class="content">
-      <p>View our weekly shop hours</p>
-      <div class="offset__container">
-        <a href="" class="offset__btn">Arr</a>
+    <div class="box box-sm box-2">
+      <img src="/assets/images/staggered-grid/box-sm.jpg" alt="">
+      <div class="content">
+        <p>Take a look at the most popular hair and beared styles</p>
+        <i>icon</i>
       </div>
-        
+      <a href="" class="box-link"></a>
     </div>
-    <img src="/assets/images/staggered-grid/box-sm-hours.jpg" alt="BarberShop">
-  </div>
 
-  <div class="box box-sm-tall box-3 hidden-xs">
-    <img src="/assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop">
-    <a href="" class="box-link"></a>
-  </div>
-
-  <div class="box box-last box-1">
-    <div class="content">
-      <h3>Meet the staff</h3>
-      <p>Find the right barber or mustache expert to clean you up.</p>
-      <i>icon</i>
+    <div class="box box-lg box-1">
+      <div class="content">
+        <h3>How it all started</h3>
+        <p>From beared sculpting to modern hipster haircuts, we do it all, and we do it well.</p>
+        <i>icon</i>
+      </div>
+      <img src="/assets/images/staggered-grid/box-lg.jpg" alt="BarberShop">
+      <a href="" class="box-link"></a>
     </div>
-    <img src="/assets/images/staggered-grid/box-last.jpg" alt="BarberShop">
-    <a href="" class="box-link"></a>
+
+    <div class="box box-sm-hours box-4">
+      <div class="content">
+        <p>View our weekly shop hours</p>
+        <div class="offset__container">
+          <a href="" class="offset__btn">Arr</a>
+        </div>
+          
+      </div>
+      <img src="/assets/images/staggered-grid/box-sm-hours.jpg" alt="BarberShop">
+    </div>
+
+    <div class="box box-sm-tall box-3 hidden-xs">
+      <img src="/assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop">
+      <a href="" class="box-link"></a>
+    </div>
+
+    <div class="box box-last box-1">
+      <div class="content">
+        <h3>Meet the staff</h3>
+        <p>Find the right barber or mustache expert to clean you up.</p>
+        <i>icon</i>
+      </div>
+      <img src="/assets/images/staggered-grid/box-last.jpg" alt="BarberShop">
+      <a href="" class="box-link"></a>
+    </div>
   </div>
 
 </section>
 	<!-- TODO: Comment out page -->
 
-<section class="container-fluid pricing__container">
-	<div class="pricing__background" style="background-image: url(/assets/images/pricing-table/background-shave.jpg);"></div>
+<section id="pricing-tab" class="container-fluid pricing__container">
+	<div class="transparent__background--offset" data-bottom-top="background-position: -300px 0;" data-top-bottom="background-position: 600px 0;" data-anchor-target="#pricing-tab" style="background-image: url(/assets/images/pricing-table/background-shave.jpg);"></div>
 
 	<!-- pricing text block -->
 	<div class="sv__container">
@@ -389,7 +363,7 @@
 
 </section>
 <!-- End pricing container -->
-	<section class="container-fluid">
+	<section class="container-fluid white-bg">
 	
 	<div class="row sv__container">
 		<div class="contact__wrapper">
@@ -431,9 +405,9 @@
 </section>
 <!-- End pricing container -->
 	<!-- TODO: mark-up twitterbox -->
-<section class="container-fluid no-padding">
+<section id="twitter" class="container-fluid no-padding">
 
-	<div class="twitter__background" style="background-image: url(/assets/images/backgrounds/twitter.jpg);">
+	<div class="twitter__background" data-bottom-top="background-position: 50% -200px;" data-top-bottom="background-position: 50% -550px;" data-anchor-target="#twitter" style="background-image: url(/assets/images/backgrounds/twitter.jpg);">
 
 		<div class="row sv__container twitter__wrapper">
 
@@ -459,10 +433,10 @@
 	<div class="sv__container blog__wrapper">
 		
 		<!-- feature-blog-entry -->
-		<article class="blog blog__feature blog-1">
+		<article class="card card__feature blog-1">
 		  <div class="content">
 		  	<div class="content--container">
-		  		<h2>Blog</h2>
+		  		<h2 class="spacer">Blog</h2>
 		  		<h3>The finest shave a man can get headline </h3>
 		  		<p>posted march 20th | 345 views</p>
 		  	</div>
@@ -504,7 +478,7 @@
 
 </section>
 <!-- End container -->
-	<section class="container-fluid no-padding ">
+	<section class="container-fluid no-padding footer-push">
 	
 	<div class="buy__container">
 		<div class="sv__container content">
@@ -521,16 +495,18 @@
 <!-- End container -->
 
 
-            <!--  -->
+            
 
+            
+            
         </main> <!-- end canvas -->
-
-        <footer class="container-fluid no-padding ">
+        <footer class="container-fluid no-padding loading">
 	<div class="footer__wrapper">
 		<!-- Shop vision -->
 		<div class="col-xs-12 no-padding">
+			<!-- Todo: Change space to match h2 -->
 			<p class="tagline">We are masters of the blade</p>
-			<p class="sv__spacer">:::::</p>
+			<p class="sv__spacer red">:::::</p>
 
 			<h1><span class="footer__name">The Shave</span> is a modern vintage HTML Barbershop theme designed for its users in mind. This theme comes with free support great stuff.
 			</h1>
@@ -563,20 +539,18 @@
 				</div>
 			</div>
 
-			<div class="col-xs-12 social">
-				<ul>
-					<li class="facebook text-hide"><a href="">Facebook</a></li>
-					<li class="twitter text-hide"><a href="">Twitter</a></li>
-					<li class="instagram text-hide"><a href="">Instagram</a></li>
-					<li class="linkedin text-hide"><a href="">Linkedin</a></li>
-				</ul>
-			</div>
-
 		</div>
 		<!-- end row -->
 	</div>
 	<!-- end wrapper -->
-	
+	<div class="col-xs-12 social">
+		<ul>
+			<li class="facebook text-hide"><a href="">Facebook</a></li>
+			<li class="twitter text-hide"><a href="">Twitter</a></li>
+			<li class="instagram text-hide"><a href="">Instagram</a></li>
+			<li class="linkedin text-hide"><a href="">Linkedin</a></li>
+		</ul>
+	</div>
 </footer>
 <!-- End container -->
 
@@ -587,12 +561,19 @@
         
         <script src="/assets/scripts/jquery.min.js"></script>
         <script src="/assets/scripts/bootstrap.min.js"></script>
-        <script src="/assets/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+        
+        <!-- Plugins -->
         <script src="/assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
         <script src="/assets/scripts/flickity-settings.min.js"></script>
+        <script src="/assets/scripts/skrollr.min.js"></script>
+        <script src="/assets/scripts/imagesloaded.min.js"></script>
+        <script src="/assets/scripts/smooth-scroll.min.js"></script>
+
+        <!-- Settings -->
         <script src="/assets/scripts/nav-settings.min.js"></script>
         <script src="/assets/scripts/main-settings.min.js"></script>
         <script src="/assets/scripts/map-settings.min.js"></script>
+        <script src="/assets/scripts/skrollr-settings.min.js"></script>
 
 
     </body>
