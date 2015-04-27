@@ -18,7 +18,10 @@
 
 .gallery {
   background: #FAFAFA;
-  padding-bottom: 33.3%; /* gallery height has percentage of width */
+  height:588px;
+  max-width: 877px;
+  margin:0 auto;
+  // padding-bottom: 33.3%; /* gallery height has percentage of width */
 }
 
 /* inherit size from gallery */
@@ -30,7 +33,7 @@
 .gallery-cell {
   width: 100%;
   height: 100%;
-  margin-right: 10px;
+  // margin-right: 10px;
   background: #8C8;
   counter-increment: gallery-cell;
 }
