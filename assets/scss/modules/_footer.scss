@@ -90,6 +90,8 @@ footer{
 	margin-top:15px;
 
 }
+
+//TOOD: put social icons in helper file
 .social{
 	width:100%;
 	margin:0 auto;
@@ -119,6 +121,13 @@ footer{
 	margin:0 8px;
 	width:51px;
 	height:51px;
+	display:block;
+}
+
+.social-dark{
+	margin:0 8px;
+	width:30px;
+	height:30px;
 	display:block;
 }
 
@@ -162,6 +171,29 @@ footer{
 	@include image-2x("../images/icons/social-grey/instagram@2x.jpg", 51px, 51px);
 }
 
+.linkedin-dark{
+	@extend .social-dark;
+	// background: url("../images/icons/social-dark/linkedin.png") no-repeat;
+	// @include image-2x("../images/icons/social-dark/linkedin@2x.png", 38px, 38px);
+}
+
+.facebook-dark{
+	@extend .social-dark;
+  	// background: url("../images/icons/social-dark/facebook.png") no-repeat;
+  	// @include image-2x("../images/icons/social-dark/facebook@2x.png", 38px, 38px);
+}
+
+.twitter-dark{
+	@extend .social-dark;
+	// background: url("../images/icons/social-dark/twitter.png") no-repeat;
+	// @include image-2x("../images/icons/social-dark/twitter@2x.png", 38px, 38px);
+}
+//TODO: find retina version of instagram
+.instagram-dark{
+	@extend .social-dark;
+	// background: url("../images/icons/social-dark/instagram.png") no-repeat;
+	// @include image-2x("../images/icons/social-dark/instagram@2x.png", 38px, 38px);
+}
 
 
 // Displays greater than 600px 

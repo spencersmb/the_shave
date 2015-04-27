@@ -49,5 +49,18 @@ $(function() {
 			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
 		});
 
-    
+    // ==========================================================================
+    // Team page
+    // ==========================================================================
+
+    var teamTrigger = $('.open');
+
+
+    teamTrigger.on('click', function(event){
+    	event.preventDefault();
+    	$(this).toggleClass('active');
+    	// $(this).prev('div').toggleClass('active');
+    	$(this).parent('div').toggleClass('active');
+    });
+
 });

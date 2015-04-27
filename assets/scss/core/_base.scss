@@ -139,16 +139,22 @@ ul{
   }
   h3{
     color:#959595;
-    max-width: em(550px);
+    max-width: 39.375em;
     margin-left: auto;
     margin-right: auto;
     font-weight: 300;
+    line-height: em(21px);
   }
 
 }
 
 .inner__header--sm{
-  margin:em(40px) auto em(80px);
+  margin:em(40px) auto 4em;
+
+  p{
+    margin-top: em(20px);
+    font-size: em(16px);
+  }
 }
 
 .card{
