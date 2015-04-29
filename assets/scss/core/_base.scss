@@ -35,10 +35,10 @@ footer.loading{
 
 }
 
-section {
+.sv__main--content {
   opacity: 0;
 }
-.loaded section,
+.loaded .sv__main--content,
 .no-js section {
   opacity: 1;
   @include transition(opacity, 300ms, ease-out);
@@ -151,7 +151,8 @@ ul{
 .inner__header--sm{
   margin:em(40px) auto 4em;
 
-  p{
+  h3{
+    color:#959595;
     margin-top: em(20px);
     font-size: em(16px);
   }

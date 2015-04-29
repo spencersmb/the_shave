@@ -20,17 +20,17 @@ footer{
 }
 
 .footer__wrapper{
-	margin:em(65px) auto em(40px) auto;
+	margin:em(40px) auto;
 	max-width:1001.72px;
 	text-align:left;
 	color:#fff;
 
 	h1{
-		font-size:em(32px);
+		font-size:em(26px);
 		font-weight:500;
-		line-height: 44px;
+		line-height: 36px;
 		margin-top:0;
-		margin-bottom:em(35px);
+		margin-bottom:em(32px);
 	}
 
 	.footer__name{
@@ -70,9 +70,10 @@ footer{
 		float:left;
 		width:65%;
 		margin-right: 2%;
-		font-size: em(24px);
-		padding: 1.1em 0 1.2em 0;
+		font-size: em(14px);
+		padding: 6px 12px;
 		border-radius: 0;
+		height:50px;
 		border:0;
 		box-shadow:none;
 		color:#bcbcbc;

@@ -18,6 +18,7 @@
 
 .form__right{
 	// padding-left:30px;
+	overflow:hidden;
 }
 .connect__us{
 	clear:both;
@@ -188,9 +189,14 @@
 	display:block;
 	border-radius:0;
 	border:0;
-	padding-left:56px;
+	padding:0 56px;
 	padding-top:13px;
 	margin-bottom:30px;
 	height:216px;
 	margin-left:30px;
+
+	&:focus{
+		box-shadow:none;
+		outline:0;
+	}
 }

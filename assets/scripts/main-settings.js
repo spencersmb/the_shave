@@ -63,4 +63,34 @@ $(function() {
     	$(this).parent('div').toggleClass('active');
     });
 
+    // ==========================================================================
+    // Gallery page
+    // ==========================================================================
+
+    $(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        itemSelector: ".gallery-item",
+					 //layoutMode: 'fitRows',
+					 percentPosition: true,
+		masonry: { "columnWidth": ".grid-sizer" }
+    });
+ 
+    // $('.portfolioFilter a').click(function(){
+    //     $('.portfolioFilter .current').removeClass('current');
+    //     $(this).addClass('current');
+ 
+    //     var selector = $(this).attr('data-filter');
+    //     $container.isotope({
+    //         filter: selector,
+    //         animationOptions: {
+    //             duration: 750,
+    //             easing: 'linear',
+    //             queue: false
+    //         }
+    //      });
+    //      return false;
+    // }); 
+});
+
 });
