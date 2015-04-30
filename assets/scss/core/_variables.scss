@@ -117,5 +117,8 @@ $header-M: 80px;
 $navWidth: 260px;
 $navMove: $navWidth;
 
+//Change nav slideout animation
+$pushNav: transform .4s ease-in-out, opacity 300ms, ease-out;
+
 //Push space for footer
 $footerPush: 443px;

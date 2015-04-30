@@ -41,7 +41,7 @@ footer.loading{
 .loaded .sv__main--content,
 .no-js section {
   opacity: 1;
-  @include transition(opacity, 300ms, ease-out);
+  // @include transition(opacity, 300ms, ease-out);
 }
 h1{
   font-weight: 700;
@@ -111,9 +111,9 @@ ul{
   padding-top: $header-M;
   /* Force Hardware Acceleration in WebKit */
   -webkit-backface-visibility: hidden;
-
-  @include transition-property(transform);
-  @include transition-duration(.4s);
+  @include transition($pushNav);
+  // @include transition-property(transform);
+  // @include transition-duration(.4s);
   background-color:transparent;
   
   //Slide-out nav amount

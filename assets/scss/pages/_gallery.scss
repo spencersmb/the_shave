@@ -7,6 +7,7 @@
 .grid-sizer, .gallery-item{
 	width: 100%;
 }
+
 .gallery-item{
 	float: none;
  	height: 500px;
@@ -15,11 +16,11 @@
 		width:100%;
 	}
 }
+
 // .item.width1{ width: 25%; }
 .gallery-item.width2 { width: 50%; }
 .gallery-item.height2 { height: 500px; }
 
-/* ---- isotope ---- */
 
 .portfolioContainer {
   background: $white;
@@ -34,7 +35,7 @@
   clear: both;
 }
 
-// Displays greater than 600px 
+// Displays greater than 768px 
 @include breakpoint(tablet) {
 	.gallery-item{
 		float: left;

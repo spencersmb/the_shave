@@ -11,7 +11,7 @@ footer{
 	-webkit-backface-visibility: hidden;
 	background:#373737;
 
-	@include transition(opacity 1.5s ease-out, transform .4s);
+	@include transition($pushNav);
 
 	&.nav-is-open {
 	  @include transform(translateX($navMove));

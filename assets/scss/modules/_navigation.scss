@@ -14,9 +14,9 @@
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
 
-  @include transition-property(transform);
-  @include transition-duration(.4s);
-
+  // @include transition-property(transform);
+  // @include transition-duration(.4s);
+  @include transition($pushNav);
 
   //Slide-out nav amount
   &.nav-is-open {
