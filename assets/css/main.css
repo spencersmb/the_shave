@@ -10020,217 +10020,217 @@ img.tp-slider-alternative-image {
   content: '\e802';
 }
 
-/* '' */
+/* 'εáé' */
 .revicon-pencil-1:before {
   content: '\e831';
 }
 
-/* '' */
+/* 'εá▒' */
 .revicon-picture-1:before {
   content: '\e803';
 }
 
-/* '' */
+/* 'εáâ' */
 .revicon-cancel:before {
   content: '\e80a';
 }
 
-/* '' */
+/* 'εáè' */
 .revicon-info-circled:before {
   content: '\e80f';
 }
 
-/* '' */
+/* 'εáÅ' */
 .revicon-trash:before {
   content: '\e801';
 }
 
-/* '' */
+/* 'εáü' */
 .revicon-left-dir:before {
   content: '\e817';
 }
 
-/* '' */
+/* 'εáù' */
 .revicon-right-dir:before {
   content: '\e818';
 }
 
-/* '' */
+/* 'εáÿ' */
 .revicon-down-open:before {
   content: '\e83b';
 }
 
-/* '' */
+/* 'εá╗' */
 .revicon-left-open:before {
   content: '\e819';
 }
 
-/* '' */
+/* 'εáÖ' */
 .revicon-right-open:before {
   content: '\e81a';
 }
 
-/* '' */
+/* 'εáÜ' */
 .revicon-angle-left:before {
   content: '\e820';
 }
 
-/* '' */
+/* 'εáá' */
 .revicon-angle-right:before {
   content: '\e81d';
 }
 
-/* '' */
+/* 'εá¥' */
 .revicon-left-big:before {
   content: '\e81f';
 }
 
-/* '' */
+/* 'εáƒ' */
 .revicon-right-big:before {
   content: '\e81e';
 }
 
-/* '' */
+/* 'εá₧' */
 .revicon-magic:before {
   content: '\e807';
 }
 
-/* '' */
+/* 'εáç' */
 .revicon-picture:before {
   content: '\e800';
 }
 
-/* '' */
+/* 'εáÇ' */
 .revicon-export:before {
   content: '\e80b';
 }
 
-/* '' */
+/* 'εáï' */
 .revicon-cog:before {
   content: '\e832';
 }
 
-/* '' */
+/* 'εá▓' */
 .revicon-login:before {
   content: '\e833';
 }
 
-/* '' */
+/* 'εá│' */
 .revicon-logout:before {
   content: '\e834';
 }
 
-/* '' */
+/* 'εá┤' */
 .revicon-video:before {
   content: '\e805';
 }
 
-/* '' */
+/* 'εáà' */
 .revicon-arrow-combo:before {
   content: '\e827';
 }
 
-/* '' */
+/* 'εáº' */
 .revicon-left-open-1:before {
   content: '\e82a';
 }
 
-/* '' */
+/* 'εá¬' */
 .revicon-right-open-1:before {
   content: '\e82b';
 }
 
-/* '' */
+/* 'εá½' */
 .revicon-left-open-mini:before {
   content: '\e822';
 }
 
-/* '' */
+/* 'εáó' */
 .revicon-right-open-mini:before {
   content: '\e823';
 }
 
-/* '' */
+/* 'εáú' */
 .revicon-left-open-big:before {
   content: '\e824';
 }
 
-/* '' */
+/* 'εáñ' */
 .revicon-right-open-big:before {
   content: '\e825';
 }
 
-/* '' */
+/* 'εáÑ' */
 .revicon-left:before {
   content: '\e836';
 }
 
-/* '' */
+/* 'εá╢' */
 .revicon-right:before {
   content: '\e826';
 }
 
-/* '' */
+/* 'εáª' */
 .revicon-ccw:before {
   content: '\e808';
 }
 
-/* '' */
+/* 'εáê' */
 .revicon-arrows-ccw:before {
   content: '\e806';
 }
 
-/* '' */
+/* 'εáå' */
 .revicon-palette:before {
   content: '\e829';
 }
 
-/* '' */
+/* 'εá⌐' */
 .revicon-list-add:before {
   content: '\e80c';
 }
 
-/* '' */
+/* 'εáî' */
 .revicon-doc:before {
   content: '\e809';
 }
 
-/* '' */
+/* 'εáë' */
 .revicon-left-open-outline:before {
   content: '\e82e';
 }
 
-/* '' */
+/* 'εá«' */
 .revicon-left-open-2:before {
   content: '\e82c';
 }
 
-/* '' */
+/* 'εá¼' */
 .revicon-right-open-outline:before {
   content: '\e82f';
 }
 
-/* '' */
+/* 'εá»' */
 .revicon-right-open-2:before {
   content: '\e82d';
 }
 
-/* '' */
+/* 'εá¡' */
 .revicon-equalizer:before {
   content: '\e83a';
 }
 
-/* '' */
+/* 'εá║' */
 .revicon-layers-alt:before {
   content: '\e804';
 }
 
-/* '' */
+/* 'εáä' */
 .revicon-popup:before {
   content: '\e828';
 }
 
-/* '' */
+/* 'εá¿' */
 *::after, *::before {
   content: '';
 }
@@ -10249,6 +10249,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu", sans-serif;
+  letter-spacing: .5px;
 }
 
 h1 {
@@ -10260,17 +10261,21 @@ h2 {
   font-weight: 700;
   margin: 0 0 92px 0;
   line-height: 1.3;
+  font-size: 2.125em;
 }
 
 h3 {
-  font-size: 1.5em;
+  margin-top: 0;
   font-weight: 600;
   margin-bottom: 1.5em;
+  font-size: 1.375em;
+  text-transform: uppercase;
 }
 
 h4 {
   font-size: 1.125em;
-  font-weight: 700;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -10636,6 +10641,7 @@ footer.loading {
   position: absolute;
   top: 47px;
   left: 0;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
@@ -10664,7 +10670,7 @@ footer.loading {
 }
 
 .footer-push {
-  margin-bottom: 443px;
+  margin-bottom: 435px;
 }
 
 .social-links {
@@ -10758,9 +10764,10 @@ footer.loading {
   float: right;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .book__now--btn {
-    width: 40%;
+    width: 100%;
+    max-width: 160px;
   }
 }
 #header {
@@ -10798,7 +10805,9 @@ footer.loading {
 }
 #sv__logo h1 {
   font-weight: 700;
-  font-size: 2.375em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-top: 28px;
 }
 #sv__logo img {
   display: block;
@@ -10955,6 +10964,7 @@ footer.loading {
   font-size: 1.125em;
   padding: 20px;
   color: #252525;
+  letter-spacing: 3px;
 }
 .feature__box figure p {
   margin: 0;
@@ -11033,11 +11043,21 @@ footer.loading {
   padding-top: 40px;
   max-width: 970px;
   background: #fff;
-  margin: 0 auto;
+  margin: 40px auto;
+}
+.staggered__container .intro {
+  margin: 80px auto;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
 }
 .staggered__container h2 {
-  text-align: center;
-  margin-bottom: 40px;
+  margin: 0 0 20px 0;
+}
+.staggered__container p {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #959595;
+  font-size: 1.125em;
 }
 
 .box {
@@ -11053,6 +11073,7 @@ footer.loading {
   margin: 7.525em 20.5%;
 }
 .box .content p {
+  color: #252525;
   margin: 0;
 }
 
@@ -11063,8 +11084,6 @@ footer.loading {
   margin: 0 auto;
   max-width: 75%;
   margin-bottom: 1.25em;
-  font-size: 1.5em;
-  font-weight: 700;
 }
 .box-lg img {
   display: block;
@@ -11094,7 +11113,7 @@ footer.loading {
 }
 .box-sm-hours .content {
   position: relative;
-  padding: 35px 8% 60px 8%;
+  padding: 42px 8% 60px 8%;
   font-size: 1.125em;
 }
 .box-sm-hours img {
@@ -11103,6 +11122,13 @@ footer.loading {
   top: 0;
   min-height: 100%;
   min-width: 100%;
+}
+.box-sm-hours p {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.375em;
+  font-weight: 500;
+  line-height: 32px;
 }
 
 .box-sm-tall {
@@ -11194,6 +11220,9 @@ footer.loading {
   background: #fff;
 }
 
+.pricing__mod h2 {
+  margin-bottom: 30px;
+}
 .pricing__mod--body {
   margin-bottom: 35px;
 }
@@ -11204,8 +11233,11 @@ footer.loading {
 }
 .pricing__mod--desc {
   margin: 0;
-  color: #f95759;
-  font-style: italic;
+  color: #959595;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
 }
 .pricing__mod img {
   width: 100%;
@@ -11262,6 +11294,7 @@ footer.loading {
 .pricing__table--wrapper {
   background: #fff;
   margin-left: 35px;
+  margin-bottom: 100px;
 }
 
 .tab-control {
@@ -11289,6 +11322,9 @@ footer.loading {
 .nav-tabs.nav-justified > li > a {
   border-radius: 0;
   border-bottom: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
 }
 
 .nav-tabs.nav-justified > .active > a,
@@ -11323,6 +11359,10 @@ footer.loading {
   box-shadow: 0;
 }
 
+.panel-body {
+  padding: 15px 33px;
+}
+
 .panel-default .panel-heading {
   color: #252525;
   background: #fff;
@@ -11333,6 +11373,8 @@ footer.loading {
 }
 .panel-default .panel-heading a {
   padding: 0.9375em;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .panel-heading {
@@ -11537,17 +11579,26 @@ footer.loading {
 }
 .contact__card--content {
   position: relative;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  top: 50%;
+  -webkit-transform: translateY(-47%);
+  -moz-transform: translateY(-47%);
+  -ms-transform: translateY(-47%);
+  -o-transform: translateY(-47%);
+  transform: translateY(-47%);
+  top: 47%;
+}
+.contact__card--content h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.contact__card--content p {
+  margin: 0;
 }
 
 .contact__shop {
   color: #fff;
   height: 50%;
+  padding: 2em;
   background: #f95759;
   position: relative;
 }
@@ -11555,6 +11606,14 @@ footer.loading {
 .contact__hours {
   position: relative;
   height: 50%;
+}
+.contact__hours .contact__card--content {
+  -webkit-transform: translateY(-55%);
+  -moz-transform: translateY(-55%);
+  -ms-transform: translateY(-55%);
+  -o-transform: translateY(-55%);
+  transform: translateY(-55%);
+  top: 55%;
 }
 
 .contact__us {
@@ -11627,31 +11686,36 @@ footer.loading {
 }
 
 .buy__container {
-  background: #fff;
-  height: 9.375em;
+  height: 200px;
   position: relative;
 }
-.buy__container .content {
-  padding: 0;
-  max-width: 1001.72px;
-  display: table;
-  width: 100%;
-  position: relative;
+.buy__container .buy__content {
+  position: absolute;
   top: 50%;
+  width: 100%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.buy__container .content h1 {
+.buy__container .buy__content h2 {
   color: #252525;
-  margin: 10px auto 0 auto;
+  margin: 0 auto;
 }
-.buy__container .content a {
-  display: inline-block;
-  float: right;
-  width: 177px;
+.buy__container .buy__content a {
+  margin-top: 5px;
+}
+
+.buy__now {
+  position: relative;
+}
+.buy__now p {
+  font-size: 1.125em;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
 }
 
 footer {
@@ -11677,25 +11741,26 @@ footer.nav-is-open {
 }
 
 .footer__wrapper {
-  margin: 2.5em auto;
+  margin: 3.75em auto 2.5em;
   max-width: 1001.72px;
   text-align: left;
   color: #fff;
 }
-.footer__wrapper h1 {
-  font-size: 1.625em;
+.footer__wrapper h3 {
+  font-size: 1.75em;
   font-weight: 300;
-  line-height: 36px;
+  line-height: 38px;
   margin-top: 0;
   margin-bottom: 2em;
+  text-transform: inherit;
 }
 .footer__wrapper .footer__name {
   font-weight: 500;
   text-transform: uppercase;
 }
-.footer__wrapper .location h3, .footer__wrapper .contact h3 {
+.footer__wrapper .location h4, .footer__wrapper .contact h4 {
   font-weight: 400;
-  font-size: 1.25em;
+  font-size: 1em;
   margin: 0 0 1.25em 0;
 }
 .footer__wrapper .location a, .footer__wrapper .contact a {
@@ -12037,12 +12102,21 @@ footer.nav-is-open {
   font-size: 1.5em;
   margin-bottom: 30px;
 }
-.blog__mod--desc {
-  margin: 0;
-  color: #f95759;
-  font-style: italic;
+.blog__mod--text ul {
+  display: table;
+}
+.blog__mod--text li {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  color: #959595;
   font-size: 0.875em;
-  font-weight: bold;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+  border-right: 1px solid #959595;
+  line-height: 1;
+  padding-right: 8px;
+}
+.blog__mod--desc {
   margin-bottom: 10px;
 }
 .blog__mod img {

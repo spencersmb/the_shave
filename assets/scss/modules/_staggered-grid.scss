@@ -4,10 +4,21 @@
 	padding-top:40px;
 	max-width:970px;
 	background:$white;
-	margin:0 auto;
-	h2{
+	margin:40px auto;
+
+	.intro{
+		margin: 80px auto;
 		text-align: center;
-		margin-bottom: 40px;
+		font-family: $heading-font;
+	}
+	h2{
+		margin:0 0 20px 0;
+	}
+	p{
+		font-weight: 300;
+		text-transform: uppercase;
+		color:$dark-grey;
+		font-size: em(18px);
 	}
 
 }
@@ -25,6 +36,7 @@
 		margin:7.525em 20.5%;
 
 		p{
+			color:$black;
 			margin:0;
 		}
 	}
@@ -42,8 +54,6 @@
 			margin:0 auto;
 			max-width: 75%;
 			margin-bottom: em(20px);
-			font-size: em(24px);
-			font-weight: 700;
 		}
 	}
 
@@ -79,7 +89,7 @@
 
 	.content{
 		position:relative;
-		padding:35px 8% 60px 8%;
+		padding:42px 8% 60px 8%;
 		font-size: em(18px);
 	}
 
@@ -89,6 +99,14 @@
 		top:0;
 		min-height: 100%;
 		min-width: 100%;
+	}
+
+	p{
+		font-family: $heading-font;
+		text-transform: uppercase;
+		font-size: em(22px);
+		font-weight: 500;
+		line-height: 32px;
 	}
 
 }

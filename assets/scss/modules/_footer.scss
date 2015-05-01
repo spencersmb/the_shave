@@ -20,17 +20,18 @@ footer{
 }
 
 .footer__wrapper{
-	margin:em(40px) auto;
+	margin:em(60px) auto em(40px);
 	max-width:1001.72px;
 	text-align:left;
 	color:#fff;
 
-	h1{
-		font-size:em(26px);
+	h3{
+		font-size:em(28px);
 		font-weight:300;
-		line-height: 36px;
+		line-height: 38px;
 		margin-top:0;
 		margin-bottom:em(32px);
+		text-transform: inherit;
 	}
 
 	.footer__name{
@@ -39,9 +40,9 @@ footer{
 	}
 
 	.location, .contact{
-		h3{
+		h4{
 			font-weight:400;
-			font-size:em(20px);
+			font-size:em(16px);
 			margin:0 0 em(20px) 0;
 		}
 

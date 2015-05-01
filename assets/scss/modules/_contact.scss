@@ -42,22 +42,36 @@
 	&--content{
 		// height: 100%;
 		position:relative;
-		@include transform(translateY(-50%));
-		top:50%;
+		@include transform(translateY(-47%));
+		top:47%;
+
+		h3{
+			margin-top: 0;
+			margin-bottom:20px;
+			font-weight: 500;
+		}
+		p{
+			margin:0;
+		}
 	}
 }
 
 .contact__shop{
 	color:$white;
 	height:50%;
-	// padding:em(48px) em(30px) em(48px) em(30px);
+	padding:2em;
 	background:$primary-color;
-	position:relative;	
+	position:relative;
 }
 
 .contact__hours{
 	position:relative;
 	height:50%;
+
+	.contact__card--content{
+		@include transform(translateY(-55%));
+		top:55%;
+	}
 }
 
 .contact__us{

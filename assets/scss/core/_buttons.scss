@@ -76,9 +76,34 @@
   text-align: right;
   float:right;
 }
+
+
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+  .book__now--btn{
+    width:100%;
+    max-width: 160px;
+  }
+
+}
+
+// Displays greater than 992px
 @include breakpoint(laptop) {
 
-  .book__now--btn{
-    width:40%;
-  }
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+  
+
+  
 }

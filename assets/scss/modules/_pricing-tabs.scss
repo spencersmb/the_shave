@@ -7,6 +7,10 @@
 
 .pricing__mod{
 
+	h2{
+		margin-bottom: 30px;
+	}
+
 	&--body{
 		margin-bottom: 35px;
 	}
@@ -20,8 +24,11 @@
 
 	&--desc{
 		margin:0;
-		color:$primary-color;
-		font-style:italic;
+		color:$dark-grey;
+		text-transform: uppercase;
+		font-size: em(18px);
+		font-family: $heading-font;
+		font-weight: 300;
 	}
 
 	img{
@@ -117,6 +124,7 @@
 .pricing__table--wrapper{
 	background:$white;
 	margin-left:35px;
+	margin-bottom:100px;
 }
 
 
@@ -141,6 +149,9 @@
 .nav-tabs.nav-justified>li>a{
 	border-radius:0;
 	border-bottom:0;
+	font-family:$heading-font;
+	font-size:em(16px);
+	font-weight:300;
 }
 
 .nav-tabs.nav-justified>.active>a,
@@ -187,6 +198,10 @@
 	box-shadow:0;
 }
 
+.panel-body{
+	padding:15px 33px;
+}
+
 .panel-default{
 	.panel-heading{
 		color:$black;
@@ -199,6 +214,8 @@
 
 		a{
 			padding:em(15px);
+			font-weight: 500;
+			text-transform: uppercase;
 		}
 	}
 }

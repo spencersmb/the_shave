@@ -1,32 +1,59 @@
 .buy__container{
-	background:$white;
-	height:em(150px);
+	height:200px;
 	position:relative;
 	
-	.content{
-		padding:0;
-		max-width: 1001.72px;
-		display: table;
-		width:100%;
-		position:relative;
+	.buy__content{
+		position:absolute;
 		top:50%;
+		width:100%;
 		@include transform(translateY(-50%));
-		h1{	
+		h2{	
 			// letter-spacing: 1px;
 			color:$black;
-			margin:10px auto 0 auto;
+			margin:0 auto;
 		}
 
-		a{	
-			display: inline-block;
-			float:right;
-			width:177px;
+		a{
+			margin-top:5px;
 		}
 	}
+	// .content{
+	// 	padding:0;
+	// 	max-width: 1001.72px;
+	// 	display: table;
+	// 	width:100%;
+	// 	position:relative;
+	// 	top:50%;
+	// 	@include transform(translateY(-50%));
+
+	// 	a{	
+	// 		display: inline-block;
+	// 		float:right;
+	// 		width:177px;
+	// 	}
+	// }
 	
 }
 
-// Displays greater than 600px 
+.buy__now{
+	position:relative;
+
+	p{
+		font-size: em(18px);
+		text-transform: uppercase;
+		margin:0;
+		font-family: $heading-font;
+		font-weight: 300;
+	}
+}
+
+.bn-container{
+
+
+
+}
+
+// Displays greater than 768px 
 @include breakpoint(tablet) {
 
 	

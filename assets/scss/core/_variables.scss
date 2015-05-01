@@ -23,6 +23,7 @@ $letter-space: 1px;
 $white     : #fff;
 $black     : #252525;
 $grey      : #e8e8e8;
+$dark-grey: #959595;
 
 
 //color palette modifiers
@@ -122,4 +123,4 @@ $navMove: $navWidth;
 $pushNav: transform .4s ease-in-out, opacity 300ms, ease-out;
 
 //Push space for footer
-$footerPush: 443px;
+$footerPush: 435px;
