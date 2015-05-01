@@ -17,32 +17,11 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-.loading {
-  background-color:#fff;
-  .load-icon{
-    position:absolute;
-    top:50%;
-    margin:0 auto;
-    width:100%;
-    height:50px;
-    background: url('../images/icons/ico_loading.gif') no-repeat center center;
-  }
-  
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $heading-font;
 }
 
-footer.loading{
-  opacity:0;
-
-}
-
-.sv__main--content {
-  opacity: 0;
-}
-.loaded .sv__main--content,
-.no-js section {
-  opacity: 1;
-  // @include transition(opacity, 300ms, ease-out);
-}
 h1{
   font-weight: 700;
 }
@@ -101,6 +80,33 @@ li{
 
 ul{
   padding:0;
+}
+
+.loading {
+  background-color:#fff;
+  .load-icon{
+    position:absolute;
+    top:50%;
+    margin:0 auto;
+    width:100%;
+    height:50px;
+    background: url('../images/icons/ico_loading.gif') no-repeat center center;
+  }
+  
+}
+
+footer.loading{
+  opacity:0;
+
+}
+
+.sv__main--content {
+  opacity: 0;
+}
+.loaded .sv__main--content,
+.no-js section {
+  opacity: 1;
+  // @include transition(opacity, 300ms, ease-out);
 }
 
 .sv__main--content{

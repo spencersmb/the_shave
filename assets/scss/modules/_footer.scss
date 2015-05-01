@@ -27,20 +27,20 @@ footer{
 
 	h1{
 		font-size:em(26px);
-		font-weight:500;
+		font-weight:300;
 		line-height: 36px;
 		margin-top:0;
 		margin-bottom:em(32px);
 	}
 
 	.footer__name{
-		font-weight:700;
+		font-weight:500;
 		text-transform: uppercase;
 	}
 
 	.location, .contact{
 		h3{
-			font-weight:bold;
+			font-weight:400;
 			font-size:em(20px);
 			margin:0 0 em(20px) 0;
 		}

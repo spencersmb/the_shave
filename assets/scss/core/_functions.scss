@@ -4,13 +4,13 @@
 
 // Import if Google Fonts URL is defined
 
-@if variable-exists(font-url--cabin){
-  @import url($font-url--cabin);
+@if variable-exists(font-url--ubuntu){
+  @import url($font-url--ubuntu);
 }
 
-@if variable-exists(font-url--gentium){
-  @import url($font-url--gentium);
-}
+// @if variable-exists(font-url--gentium){
+//   @import url($font-url--gentium);
+// }
 
 // Functions and Directives
 //$context: $base__font-size = basefont size is defualt if no context
