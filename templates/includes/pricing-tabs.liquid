@@ -1,14 +1,14 @@
 <!-- TODO: Comment out page -->
 <!-- TODO: Create universal parralx background image class for parralax -->
-<section id="pricing-tab" class="container-fluid pricing__container">
-	<div class="transparent__background--offset" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" data-anchor-target="#pricing-tab" style="background-image: url({{'background-shave.jpg' | asset_url}});"></div>
+<section  class="container-fluid pricing__container" >
+	<!-- <div class="transparent__background--offset" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" data-anchor-target="#pricing-tab" style="background-image: url({{'background-shave.jpg' | asset_url}});"></div> -->
 
 	<!-- pricing text block -->
-	<div class="sv__container">
-		<div class="row pricing__tabs">
+	<!-- <div class="sv__container"> -->
+		<div id="pricing-tab" class="row pricing__tabs" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#pricing-tab" style="background-image: url({{'test.jpg' | asset_url}});">
 
 			<!-- Finest Shave box -->
-			<div class="col-xs-12 col-sm-6 pricing__mod no-padding">
+			<!-- <div class="col-xs-12 col-sm-6 pricing__mod no-padding">
 				<div class="pricing__mod--img">
 					<img class="img-responsive" src="{{'header-img.jpg' | asset_url}}" alt="">
 				</div>
@@ -17,25 +17,28 @@
 					<h3>The best cuts for the best rates</h3>
 					<p class="pricing__mod--body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta fuga nobis. Ducimus blanditiis velit sit.
 					</p>
-		      	<!-- <a class="book__now--btn" href="#">View full list</a> -->
+					      	<a class="book__now--btn" href="#">View full list</a>
 				</div>
 				
+			</div> -->
+			
+			
+			
+
+			<div class="col-xs-12 col-sm-4 no-padding price__overview">
+			  
 			</div>
 
 			<!-- pricing tab accordian -->
-			<div class="col-xs-12 col-sm-6 no-padding">
-				<div class="pricing__table--wrapper">
+			<!-- <div class="col-xs-12 col-sm-6 no-padding"> -->
+			<div class="col-xs-8 no-padding has-height ">
+				<div class="pricing__table--wrapper ">
+
+					<div class="title-heading">
+						<h2>Price Overview</h2>
+					</div>
 
 					<div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
-
-					<ul id="myTab" class="nav nav-tabs nav-justified" role="tablist">
-						<li role="presentation" class="active tab__control">
-							<a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="true">Beard & Mustache</a>
-						</li>
-						<li role="presentation" class="tab__control">
-							<a href="#haircut" role="tab" id="haircut-tab" data-toggle="tab" aria-controls="haircut" aria-expanded="false">Hair cuts</a>
-						</li>
-				    </ul>
 
 					  <!-- tab content -->
 						<div id="myTabContent" class="tab-content">
@@ -48,13 +51,40 @@
 					            <div class="panel-heading panel-left" role="tab" id="myheadingOne">
 					              <h4 class="panel-title">
 					                <a class="price__trigger" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseOne" aria-expanded="true" aria-controls="mycollapseOne" onclick="return false;">
-					                  Beard & Mustache Trim
+					                  HairCuts
 					                </a>
 					              </h4>
 					            </div>
 					            <div id="mycollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="myheadingOne">
-					              <div class="panel-body">
-					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+					              <div class="panel-body price__sheet">
+
+					                <div class="item">
+														<div class="title">
+															<h3>Classic Cut</h3>
+														</div>
+														<div class="price">
+															<p>$25.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="title">
+															<h3>Buzz Cut</h3>
+														</div>
+														<div class="price">
+															<p>$15.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+														</div>
+													</div>
+
 					              </div>
 					            </div>
 					          </div>
@@ -62,13 +92,39 @@
 					            <div class="panel-heading panel-left" role="tab" id="myheadingTwo">
 					              <h4 class="panel-title">
 					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseTwo" aria-expanded="false" aria-controls="mycollapseTwo" onclick="return false;">
-					                  The Shave
+					                  Clean Shave
 					                </a>
 					              </h4>
 					            </div>
 					            <div id="mycollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingTwo">
-					              <div class="panel-body">
-					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              <div class="panel-body price__sheet">
+
+					               <div class="item">
+														<div class="title">
+															<h3>Classic Shave</h3>
+														</div>
+														<div class="price">
+															<p>$15.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="title">
+															<h3>Royal Shave</h3>
+														</div>
+														<div class="price">
+															<p>$15.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
 					              </div>
 					            </div>
 					          </div>
@@ -76,71 +132,88 @@
 					            <div class="panel-heading panel-left" role="tab" id="myheadingThree">
 					              <h4 class="panel-title">
 					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseThree" aria-expanded="false" aria-controls="mycollapseThree" onclick="return false;">
-					                  Beard Waxing
+					                  Beard or Mustache Trim
 					                </a>
 					              </h4>
 					            </div>
 					            <div id="mycollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingThree">
-					              <div class="panel-body">
-					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					              <div class="panel-body price__sheet">
+
+					                <div class="item">
+														<div class="title">
+															<h3>Classic Cut</h3>
+														</div>
+														<div class="price">
+															<p>$25.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="title">
+															<h3>Buzz Cut</h3>
+														</div>
+														<div class="price">
+															<p>$15.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
 					              </div>
 					            </div>
 					          </div>
+
+					          <div class="panel panel-default">
+					            <div class="panel-heading panel-left" role="tab" id="myheadingFour">
+					              <h4 class="panel-title">
+					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseFour" aria-expanded="false" aria-controls="mycollapseFour" onclick="return false;">
+					                  Hair Styling
+					                </a>
+					              </h4>
+					            </div>
+					            <div id="mycollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingFour">
+					              <div class="panel-body price__sheet">
+
+					                <div class="item">
+														<div class="title">
+															<h3>Classic Cut</h3>
+														</div>
+														<div class="price">
+															<p>$25.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
+													<div class="item">
+														<div class="title">
+															<h3>Buzz Cut</h3>
+														</div>
+														<div class="price">
+															<p>$15.00</p>
+														</div>
+
+														<div class="desc">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+														</div>
+													</div>
+
+					              </div>
+					            </div>
+					          </div>
+
 					        </div>
 
 					      </div>
 					      <!-- end breard and mustache -->
-
-								<!-- start haircut -->
-					      <div role="tabpanel" class="tab-pane fade" id="haircut" aria-labelledby="haircut-tab">
-					         <!-- accordian -->
-					        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-					          <div class="panel panel-default active">
-					            <div class="panel-heading panel-right" role="tab" id="headingOne">
-					              <h4 class="panel-title">
-					                <a class="price__trigger" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="return false;">
-					                  Collapsible Group Item #1
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-					              <div class="panel-body">
-					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					              </div>
-					            </div>
-					          </div>
-					          <div class="panel panel-default">
-					            <div class="panel-heading panel-right" role="tab" id="headingTwo">
-					              <h4 class="panel-title">
-					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="return false;">
-					                  Collapsible Group Item #2
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-					              <div class="panel-body">
-					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					              </div>
-					            </div>
-					          </div>
-					          <div class="panel panel-default">
-					            <div class="panel-heading panel-right" role="tab" id="headingThree">
-					              <h4 class="panel-title">
-					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="return false;">
-					                  Collapsible Group Item #3
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-					              <div class="panel-body">
-					                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					              </div>
-					            </div>
-					          </div>
-					        </div>
-
-					      </div>
-					      <!-- end haircut -->
 
 			      </div>
 			      <!-- end tab content -->
@@ -153,10 +226,12 @@
 					
 			</div>
 			<!-- End pricing tab accordian -->
+
+			
 			
 		</div>
 		<!-- End row pricing__tabs -->
-	</div>
+	<!-- </div> -->
 
 </section>
 <!-- End pricing container -->

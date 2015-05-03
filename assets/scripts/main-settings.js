@@ -1,8 +1,63 @@
 $(function() {
 
+	//price tab
+	//CONTROL GRID WITH NO IMAGES
+	var getFh = $('.has-height').height();
+	// var getSh = $('.has-sup-img').height();
+	//    console.log(getFh);
+
+	$('.no-height').css('height', getFh + 'px');
+	// $('.no-sup-img').css('height', getSh + 'px');
+
+	$('#myTabContent').on('shown.bs.collapse', function () {
+	  getFh = $('.has-height').height();
+
+	  $('.pricing__tabs').css('height', getFh + 'px');
+	  $('.no-height').css('height', getFh + 'px');
+	  $('.pricing__tabs').css('height', '100%');
+		console.log(getFh);
+	})
+
+	$('.panel__title').on('click', 'a', function(e){
+
+		getFh = $('.has-height').height();
+		console.log(getFh);
+		// var tabH = $(this).parent('li').height();
+		// var id = $(this).attr('href');
+
+		// var padding = $('.pricing__table--wrapper').css('padding-top');
+
+		// var paddingTop = parseInt(padding.replace('px',''));
+
+		// var newH = $('#myTabContent').find(id).height();
+
+		// var total = (paddingTop*2) + newH + tabH + 24;
+		// console.log("tab h" + tabH);
+		// console.log("accordian h" + newH);
+		// console.log("padding" + paddingTop*2);
+
+		$('.no-height').css('height', total + 'px');
+	});
+
+	//on resize
+	$(window).resize(function () {
+
+	    getFh = $('.has-img').height();
+	    getSh = $('.has-sup-img').height();
+
+	    $('.no-img').css('height', getFh + 'px');
+	    $('.no-sup-img').css('height', getSh + 'px');
+
+	});
+
 	//Accordian Left side
 	//Disable pricing table Tabs all being closed at once.
 	$('.panel-left a').on('click',function(e){
+
+		getFh = $('.has-height').height();
+		console.log(getFh);
+		
+
 	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
 	        e.stopPropagation();
 	    }
@@ -22,6 +77,7 @@ $(function() {
 	//Accordian Right side
 	//Disable pricing table Tabs all being closed at once.
 	$('.panel-right a').on('click',function(e){
+
 	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
 	        e.stopPropagation();
 	    }
@@ -37,6 +93,8 @@ $(function() {
 	    	$(this).parents('.panel').addClass('active');
 	    }
 	});
+
+	
 
 	// ==========================================================================
 	// Services

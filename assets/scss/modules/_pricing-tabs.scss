@@ -3,6 +3,36 @@
 	position:relative;
 	overflow:hidden;
 	background:$white;
+	@include transition(all .4s ease-in-out);
+}
+
+.pricing__tabs{
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: 50% 50%;
+	background-attachment:fixed;
+
+	.title-heading{
+		text-align: left;
+		padding-left:35px;
+		margin:0 auto;
+
+		h2{
+			margin:0 auto;
+			margin-bottom: 30px;
+		}
+
+		.desc{
+			text-transform: inherit;
+		}
+	}
+}
+
+.price__overview{
+	position:absolute;
+	height:100%;
+	background:rgba(255,255,255,0.8);
+	@include transition(all .4s ease-in-out);
 }
 
 .pricing__mod{
@@ -92,7 +122,8 @@
 @include breakpoint(laptop) {
 
 	.pricing__tabs{
-		margin:100px 100px 0 100px;
+		//DEISNG 1 CSS
+		// margin:100px 100px 0 100px;
 	}
 
 	.pricing__mod{
@@ -121,10 +152,20 @@
 // Pricing Tabs
 // 
 // ==========================================================================
+.pricing__table{
+	@include transition(all .4s ease-in-out);
+}
 .pricing__table--wrapper{
-	background:$white;
-	margin-left:35px;
-	margin-bottom:100px;
+	//DESIGNS 1 CSS
+	// background:$white;
+	// margin-left:35px;
+	// margin-bottom:100px;
+
+	//DESIGN2 Full width
+	margin:0 auto;
+	padding:5em 0;
+	max-width:800px;
+	@include transition(all .4s ease-in-out);
 }
 
 
@@ -200,16 +241,19 @@
 
 .panel-body{
 	padding:15px 33px;
+
+	
 }
 
 .panel-default{
+
 	.panel-heading{
 		color:$black;
 		background:#fff;
 
 		h4{
 		font-weight: bold;
-		font-size: em(18px);
+		font-size: em(22px);
 		}
 
 		a{
@@ -218,12 +262,61 @@
 			text-transform: uppercase;
 		}
 	}
+
+	.price__sheet{
+		padding:0 em(55px);
+		width:100%;
+
+		.item{
+			border:none;
+			margin-top: 5px;
+		}
+
+		.item .title{
+			margin-top: 0;
+		}
+
+		h3{
+			margin-top: em(4px);
+			margin-right: em(15px);
+			font-size: em(16px);
+			margin-bottom: em(5px);
+
+		}
+
+		.item .price{
+			margin-top: 0;
+			float:none;
+			color:$black;
+			font-weight: 300;
+			font-family: $heading-font;
+			margin-bottom:10px;
+		}
+
+		.item .desc{
+			width:100%;
+		}
+
+		p{
+			margin:0;
+		}
+	}
 }
 
+.has-height{
+	@include transition(all .5s ease-in-out);
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: 50% 50%;
+}
 .panel-heading{
 	border-top-right-radius:0;
 	border-top-left-radius:0;
 	position:relative;
+}
+
+.panel-group{
+	margin-bottom:0;
 }
 
 .panel-group .panel+.panel{

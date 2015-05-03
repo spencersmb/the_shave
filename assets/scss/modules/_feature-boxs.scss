@@ -1,7 +1,7 @@
 //Base Feature box setup
 //TODO: Switch transforms with bourbon transforms
 .feature__box{
-	padding:0;
+	padding:0 20px;
 
 	&--fluid{
 		background:$grey;
@@ -96,6 +96,7 @@
 	}
 
 	img{
+		width:100%;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 	}
