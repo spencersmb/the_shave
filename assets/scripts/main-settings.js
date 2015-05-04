@@ -21,20 +21,7 @@ $(function() {
 	$('.panel__title').on('click', 'a', function(e){
 
 		getFh = $('.has-height').height();
-		console.log(getFh);
-		// var tabH = $(this).parent('li').height();
-		// var id = $(this).attr('href');
-
-		// var padding = $('.pricing__table--wrapper').css('padding-top');
-
-		// var paddingTop = parseInt(padding.replace('px',''));
-
-		// var newH = $('#myTabContent').find(id).height();
-
-		// var total = (paddingTop*2) + newH + tabH + 24;
-		// console.log("tab h" + tabH);
-		// console.log("accordian h" + newH);
-		// console.log("padding" + paddingTop*2);
+		// console.log(getFh);
 
 		$('.no-height').css('height', total + 'px');
 	});
@@ -168,19 +155,19 @@ $(function() {
 						thumbHeight:50,
 						thumbAmount:5,
 
-						// navigationType:"bullet",
+						navigationType:"none",
 						navigationArrows:"solo",
 						navigationStyle:"preview4",
 
 						touchenabled:"on",
-						onHoverStop:"on",
+						onHoverStop:"off",
 
 						swipe_velocity: 0.7,
 						swipe_min_touches: 1,
 						swipe_max_touches: 1,
 						drag_block_vertical: false,
 
-												parallax:"mouse",
+						parallax:"mouse",
 						parallaxBgFreeze:"on",
 						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
 
