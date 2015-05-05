@@ -13,13 +13,13 @@
 	background-attachment:fixed;
 
 	.title-heading{
-		text-align: left;
-		padding-left:35px;
+		text-align: center;
 		margin:0 auto;
 
 		h2{
 			margin:0 auto;
 			margin-bottom: 30px;
+			font-size: em(24px);
 		}
 
 		.desc{
@@ -31,7 +31,7 @@
 .price__overview{
 	position:absolute;
 	height:100%;
-	background:rgba(255,255,255,0.8);
+	background:rgba(255,255,255, 1);
 	@include transition(all .4s ease-in-out);
 }
 
@@ -112,18 +112,23 @@
 }
 
 
-// Displays greater than 600px 
+// Displays greater than 768px 
 @include breakpoint(tablet) {
 
-
-}
-
-// Displays greater than 992px
-@include breakpoint(laptop) {
+	.price__overview{
+		background:rgba(255,255,255,0.8);
+	}
 
 	.pricing__tabs{
-		//DEISNG 1 CSS
-		// margin:100px 100px 0 100px;
+
+		.title-heading{
+			text-align: left;
+			padding-left:35px;
+
+			h2{
+				font-size: em(34px);
+			}
+		}
 	}
 
 	.pricing__mod{
@@ -133,6 +138,14 @@
 
 		}
 	}
+
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+	
 
 }
 
@@ -156,12 +169,7 @@
 	@include transition(all .4s ease-in-out);
 }
 .pricing__table--wrapper{
-	//DESIGNS 1 CSS
-	// background:$white;
-	// margin-left:35px;
-	// margin-bottom:100px;
 
-	//DESIGN2 Full width
 	margin:0 auto;
 	padding:5em 0;
 	max-width:800px;
@@ -221,6 +229,8 @@
 	// margin-bottom:-1px;
 }
 
+
+
 // ==========================================================================
 // Accordian
 // 
@@ -253,18 +263,18 @@
 
 		h4{
 		font-weight: bold;
-		font-size: em(22px);
+		font-size: em(18px);
 		}
 
 		a{
-			padding:em(15px);
+			padding:em(15px) 0;
 			font-weight: 500;
 			text-transform: uppercase;
 		}
 	}
 
 	.price__sheet{
-		padding:0 em(55px);
+		padding:0 em(15px);
 		width:100%;
 
 		.item{
@@ -328,8 +338,10 @@
 }
 
 .panel.panel-default.active{
+
 	.panel-heading{
 		border-bottom:0;
+		background: #f5f5f5;
 	}
 
 	.price__trigger{
@@ -347,6 +359,10 @@
 			@include transform(rotate(45deg));
 		}
 
+	}
+
+	.price__sheet{
+		background:#f5f5f5;
 	}
 }
 
@@ -399,6 +415,47 @@
 	}
 
 }
+
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+
+	.panel-default{
+		.price__sheet{
+			padding:0 em(55px);
+		}
+
+		.panel-heading{
+
+			h4{
+				font-weight: bold;
+				font-size: em(22px);
+			}
+
+			a{
+				padding:em(15px);
+			}
+		}
+	}
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+	
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+}
+
 // ==========================================================================
 // Pricing page full tab accordian
 // 

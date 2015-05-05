@@ -1,7 +1,9 @@
 //Base Feature box setup
 //TODO: Switch transforms with bourbon transforms
 .feature__box{
-	padding:0 15px;
+	display:table;
+	padding:15px;
+	margin:0 auto;
 
 	&--fluid{
 		background:$grey;
@@ -33,7 +35,7 @@
 			width:100%;
 			text-transform: uppercase;
 			font-size: em(18px);
-			padding: 20px;
+			padding: 23px 20px 10px;
 			color:$black;
 			letter-spacing: 3px;
 		}
@@ -91,51 +93,58 @@
 .feature__box--effect{
 
 	h2,img{
-		-webkit-transition: -webkit-transform 0.35s;
-		transition: transform 0.35s;
+		@include transition(opacity 0.35s, transform 0.35s);
+		// -webkit-transition: -webkit-transform 0.35s;
+		// transition: transform 0.35s;
 	}
 
 	img{
 		width:100%;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
+		@include transform(translate3d(0,-80px,0));
 	}
 
-	h2,p{
+	.content{
 		position: absolute;
 		bottom: 0;
 		left: 0;
+		background:#fff;
+		@include transition(opacity 0.35s, transform 0.35s);
+		@include transform(translate3d(0,0px,0));
 	}
 
 	//secondary text animation setup
 	p{
-		padding: 20px 30px;
+		padding: 10px 30px 20px;
 		text-transform: none;
 		font-size: em(16px);
-		opacity: 0;
-		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-		transition: opacity 0.35s, transform 0.35s;
-		-webkit-transform: translate3d(0,50px,0);
-		transform: translate3d(0,50px,0);
+		opacity: 1;
+		@include transition(opacity 0.35s, transform 0.35s);
+
+		// -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		// transition: opacity 0.35s, transform 0.35s;
+		// -webkit-transform: translate3d(0,50px,0);
+		// transform: translate3d(0,50px,0);
 	}
 
 	//moves image up on hover
 	&:hover img {
-	-webkit-transform: translate3d(0,-80px,0);
-	transform: translate3d(0,-80px,0);
+	@include transform(translate3d(0,-80px,0));
 	}
 
 	//moves h2 up on hover
-	&:hover h2 {
-		-webkit-transform: translate3d(0,-70px,0);
-		transform: translate3d(0,-70px,0);
+	&:hover .content {
+		@include transform(translate3d(0,0px,0));
+		// -webkit-transform: translate3d(0,-70px,0);
+		// transform: translate3d(0,-70px,0);
 	}
 
 	//reveal p tag on hover
 	&:hover p {
 		opacity: 1;
-		-webkit-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
+	// 	-webkit-transform: translate3d(0,0,0);
+	// 	transform: translate3d(0,0,0);
 	}
 
 }
@@ -150,7 +159,46 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+.feature__box{
+	figure{
+		h2{
+			padding: 37px 20px 10px;
+		}
+	}
+}
 
+.feature__box--effect{
+
+	.content{
+		@include transform(translate3d(0,50px,0));
+	}
+
+	p{
+		padding: 10px 30px 20px;
+		opacity: 0;
+	}
+
+	img{
+		width:100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		@include transform(translate3d(0, 0px,0));
+	}
+
+	&:hover img {
+	@include transform(translate3d(0,-80px,0));
+	}
+
+	&:hover .content {
+		@include transform(translate3d(0,-20px,0));
+	}
+
+	//reveal p tag on hover
+	&:hover p {
+		opacity: 1;
+	}
+
+}
 
 }
 

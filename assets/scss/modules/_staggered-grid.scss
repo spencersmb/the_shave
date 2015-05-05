@@ -1,10 +1,10 @@
 //TODO - add arrow icons
 
 .staggered__container{
-	padding-top:40px;
+	padding-top:15px;
 	max-width:970px;
 	background:$white;
-	margin:40px auto;
+	margin:0 auto;
 
 	.intro{
 		margin: 80px auto;
@@ -28,16 +28,58 @@
 	overflow:hidden;
 	text-align:center;
 	width:100%;
+	margin-bottom:15px;
 
 	.content{
 		position:relative;
 		z-index: 100;
 		background:$white;
-		margin:7.525em 20.5%;
+		margin:7.525em 19.5%;
 
 		p{
 			color:$black;
 			margin:0;
+		}
+
+		.clock{
+			padding-top:0;
+			margin: 0 auto;
+			width:100%;
+			text-align:center;
+		}
+	}
+
+	.box-link{
+		top:0;
+		position:absolute;
+		display: block;
+		width:100%;
+		height:100%;
+		left:0;
+		z-index: 1000;
+		text-indent: 200%;
+		white-space: nowrap;
+		font-size: 0;
+		opacity:0;
+	}
+
+	i{
+		padding-top:20px;
+		margin:0;
+		width:auto;
+	}
+
+	.offset__container{
+		bottom:-25px;
+		left:50%;
+		@include transform(translateX(-50%));
+
+		a{
+			padding:18px 0;
+		}
+
+		a>i{
+			padding:20px 30px;
 		}
 	}
 
@@ -89,8 +131,8 @@
 
 	.content{
 		position:relative;
-		padding:42px 8% 60px 8%;
-		font-size: em(18px);
+		padding:20px 8% 60px;
+		font-size: em(16px);
 	}
 
 	img{
@@ -151,8 +193,14 @@
 // Displays greater than 600px 
 @include breakpoint(tablet) {
 
+	.staggered__container{
+		padding-top:40px;
+		margin:40px auto;
+	}
+
 	.box{
 		float:right;
+		margin-bottom:0;
 	}
 
 	.box-lg{
@@ -166,7 +214,7 @@
 		margin-left:3%;
 
 		.content{
-			padding:52px 10.8% 51px;
+			padding:52px 10.8% 41px;
 			margin:0;
 			background:0;
 
@@ -193,6 +241,10 @@
 
 		.content{
 			margin:10em 20%;
+
+			p{
+				font-size: em(18px);
+			}
 		}
 	}
 

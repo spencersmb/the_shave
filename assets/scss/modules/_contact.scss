@@ -17,13 +17,15 @@
 		padding:0;
 		background:$primary-color;
 		float:left;
-		width:65%;
+		width:0%;
 		height:100%;
 		z-index: 100;
 		overflow: hidden;
 
 		img{
 			max-width: 782px;
+			position:relative;
+			left:-155px;
 		}
 
 	}
@@ -35,7 +37,7 @@
 		
 		background:$grey;
 		float:left;
-		width:35%;
+		width:100%;
 		height:100%;
 	}
 
@@ -49,6 +51,7 @@
 			margin-top: 0;
 			margin-bottom:20px;
 			font-weight: 500;
+			font-size: em(18px);
 		}
 		p{
 			margin:0;
@@ -70,7 +73,9 @@
 
 	.contact__card--content{
 		@include transform(translateY(-55%));
-		top:55%;
+		top:62%;
+		padding:5px 56px;
+		word-break:break-word;
 	}
 }
 
@@ -78,15 +83,16 @@
 	position:absolute;
 	@include transform(translateY(-50%));
 	width:100%;
+	z-index:1001;
 
 
 	&--content{
 		position:relative;
 		background:#fff;
 		width:65%;
-		height:80px;
+		height:60px;
 		margin:0 auto;
-		top:-8px;
+		top:0px;
 	}
 
 	.inner__content{
@@ -97,13 +103,79 @@
 		@include transform(translateY(-50%));
 	}
 
+	h4{
+		padding-left:0px;
+		margin-top: 0;
+		font-size: em(15px);
+	}
+
+	i{
+		position:absolute;
+		top:-1px;
+		right:17px;	
+	}
+
+	a{
+		@extend .box-link;
+	}
+
 }
 
 // Displays greater than 600px 
 @include breakpoint(tablet) {
 	.contact__card{
 		// height:31.5em;
-		height:em(505px)
+		height:em(505px);
+
+		&--content{
+
+			h3{
+				font-size: em(24px);
+			}
+		}
+
+		.contact__hours{
+			position:relative;
+			height:50%;
+
+			.contact__card--content{
+				@include transform(translateY(-55%));
+				top:55%;
+				padding:0;
+				word-break:break-word;
+			}
+		}
+
+		&--left{
+			width:55%;
+
+			img{
+				left:-155px;
+			}
+		}
+
+		&--right{
+			width:45%;
+		}
+	}
+
+	.contact__us{
+
+		&--content{
+			height:80px;
+
+		}
+
+		h4{
+			padding-left:0;
+			font-size: em(18px);
+		}
+
+		i{
+			position:absolute;
+			top:-1px;
+			right:11%;	
+		}
 	}
 
 }
@@ -112,7 +184,31 @@
 @include breakpoint(laptop) {
 	.contact__card{
 		// height:36.5em;
-		height:em(576px)
+		height:em(576px);
+
+		&--left{
+			width:65%;
+
+			img{
+				left:0px;
+			}
+		}
+
+		&--right{
+			width:35%;
+		}
+
+		.contact__us{
+			h4{
+				padding-left:10px;
+			}
+
+			i{
+				position:absolute;
+				top:-1px;
+				right:32px;	
+			}
+		}
 	}
 
 	
