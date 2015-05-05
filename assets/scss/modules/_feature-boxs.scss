@@ -1,7 +1,7 @@
 //Base Feature box setup
 //TODO: Switch transforms with bourbon transforms
 .feature__box{
-	padding:0 20px;
+	padding:0 15px;
 
 	&--fluid{
 		background:$grey;
@@ -138,4 +138,29 @@
 		transform: translate3d(0,0,0);
 	}
 
+}
+
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+
+  
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+  
 }
