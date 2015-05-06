@@ -10020,217 +10020,217 @@ img.tp-slider-alternative-image {
   content: '\e802';
 }
 
-/* 'εáé' */
+/* '' */
 .revicon-pencil-1:before {
   content: '\e831';
 }
 
-/* 'εá▒' */
+/* '' */
 .revicon-picture-1:before {
   content: '\e803';
 }
 
-/* 'εáâ' */
+/* '' */
 .revicon-cancel:before {
   content: '\e80a';
 }
 
-/* 'εáè' */
+/* '' */
 .revicon-info-circled:before {
   content: '\e80f';
 }
 
-/* 'εáÅ' */
+/* '' */
 .revicon-trash:before {
   content: '\e801';
 }
 
-/* 'εáü' */
+/* '' */
 .revicon-left-dir:before {
   content: '\e817';
 }
 
-/* 'εáù' */
+/* '' */
 .revicon-right-dir:before {
   content: '\e818';
 }
 
-/* 'εáÿ' */
+/* '' */
 .revicon-down-open:before {
   content: '\e83b';
 }
 
-/* 'εá╗' */
+/* '' */
 .revicon-left-open:before {
   content: '\e819';
 }
 
-/* 'εáÖ' */
+/* '' */
 .revicon-right-open:before {
   content: '\e81a';
 }
 
-/* 'εáÜ' */
+/* '' */
 .revicon-angle-left:before {
   content: '\e820';
 }
 
-/* 'εáá' */
+/* '' */
 .revicon-angle-right:before {
   content: '\e81d';
 }
 
-/* 'εá¥' */
+/* '' */
 .revicon-left-big:before {
   content: '\e81f';
 }
 
-/* 'εáƒ' */
+/* '' */
 .revicon-right-big:before {
   content: '\e81e';
 }
 
-/* 'εá₧' */
+/* '' */
 .revicon-magic:before {
   content: '\e807';
 }
 
-/* 'εáç' */
+/* '' */
 .revicon-picture:before {
   content: '\e800';
 }
 
-/* 'εáÇ' */
+/* '' */
 .revicon-export:before {
   content: '\e80b';
 }
 
-/* 'εáï' */
+/* '' */
 .revicon-cog:before {
   content: '\e832';
 }
 
-/* 'εá▓' */
+/* '' */
 .revicon-login:before {
   content: '\e833';
 }
 
-/* 'εá│' */
+/* '' */
 .revicon-logout:before {
   content: '\e834';
 }
 
-/* 'εá┤' */
+/* '' */
 .revicon-video:before {
   content: '\e805';
 }
 
-/* 'εáà' */
+/* '' */
 .revicon-arrow-combo:before {
   content: '\e827';
 }
 
-/* 'εáº' */
+/* '' */
 .revicon-left-open-1:before {
   content: '\e82a';
 }
 
-/* 'εá¬' */
+/* '' */
 .revicon-right-open-1:before {
   content: '\e82b';
 }
 
-/* 'εá½' */
+/* '' */
 .revicon-left-open-mini:before {
   content: '\e822';
 }
 
-/* 'εáó' */
+/* '' */
 .revicon-right-open-mini:before {
   content: '\e823';
 }
 
-/* 'εáú' */
+/* '' */
 .revicon-left-open-big:before {
   content: '\e824';
 }
 
-/* 'εáñ' */
+/* '' */
 .revicon-right-open-big:before {
   content: '\e825';
 }
 
-/* 'εáÑ' */
+/* '' */
 .revicon-left:before {
   content: '\e836';
 }
 
-/* 'εá╢' */
+/* '' */
 .revicon-right:before {
   content: '\e826';
 }
 
-/* 'εáª' */
+/* '' */
 .revicon-ccw:before {
   content: '\e808';
 }
 
-/* 'εáê' */
+/* '' */
 .revicon-arrows-ccw:before {
   content: '\e806';
 }
 
-/* 'εáå' */
+/* '' */
 .revicon-palette:before {
   content: '\e829';
 }
 
-/* 'εá⌐' */
+/* '' */
 .revicon-list-add:before {
   content: '\e80c';
 }
 
-/* 'εáî' */
+/* '' */
 .revicon-doc:before {
   content: '\e809';
 }
 
-/* 'εáë' */
+/* '' */
 .revicon-left-open-outline:before {
   content: '\e82e';
 }
 
-/* 'εá«' */
+/* '' */
 .revicon-left-open-2:before {
   content: '\e82c';
 }
 
-/* 'εá¼' */
+/* '' */
 .revicon-right-open-outline:before {
   content: '\e82f';
 }
 
-/* 'εá»' */
+/* '' */
 .revicon-right-open-2:before {
   content: '\e82d';
 }
 
-/* 'εá¡' */
+/* '' */
 .revicon-equalizer:before {
   content: '\e83a';
 }
 
-/* 'εá║' */
+/* '' */
 .revicon-layers-alt:before {
   content: '\e804';
 }
 
-/* 'εáä' */
+/* '' */
 .revicon-popup:before {
   content: '\e828';
 }
 
-/* 'εá¿' */
+/* '' */
 *::after, *::before {
   content: '';
 }
@@ -11060,6 +11060,7 @@ footer.loading {
   bottom: 0;
   left: 0;
   background: #fff;
+  width: 100%;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -11096,7 +11097,24 @@ footer.loading {
   opacity: 1;
 }
 
+@media (min-width: 768px) {
+  .feature__box figure {
+    max-width: 343px;
+    max-height: 390px;
+  }
+
+  .feature__box:nth-child(odd) .feature__box--effect {
+    float: right;
+  }
+  .feature__box:nth-child(even) .feature__box--effect {
+    float: left;
+  }
+}
 @media (min-width: 992px) {
+  .feature__box figure {
+    max-width: 100%;
+    max-height: 580px;
+  }
   .feature__box figure h2 {
     padding: 37px 20px 10px;
   }

@@ -110,6 +110,7 @@
 		bottom: 0;
 		left: 0;
 		background:#fff;
+		width:100%;
 		@include transition(opacity 0.35s, transform 0.35s);
 		@include transform(translate3d(0,0px,0));
 	}
@@ -151,7 +152,26 @@
 
 // Displays greater than 768px 
 @include breakpoint(tablet) {
+.feature__box{
+	figure{
+		max-width: 343px;
+		max-height: 390px;
+	}
+}
 
+.feature__box{
+	&:nth-child(odd){
+		.feature__box--effect{
+			float:right;	
+		}
+		
+	}
+	&:nth-child(even){
+		.feature__box--effect{
+			float:left;	
+		}
+	}
+}
   
 
 }
@@ -161,6 +181,9 @@
 
 .feature__box{
 	figure{
+		max-width: 100%;
+		max-height: 580px;
+
 		h2{
 			padding: 37px 20px 10px;
 		}
