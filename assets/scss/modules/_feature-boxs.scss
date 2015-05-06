@@ -26,6 +26,15 @@
 		text-align: center;
 		cursor: pointer;
 
+		.content{
+			position:absolute;
+			bottom:0;
+			width:100%;
+			margin:0 auto;
+			left:0;
+			background:#fff;
+		}
+
 		h2{
 			word-spacing: -0.15em;
 			font-weight: 700;
@@ -35,22 +44,32 @@
 			width:100%;
 			text-transform: uppercase;
 			font-size: em(18px);
-			padding: 23px 20px 10px;
+			padding: 23px 20px 6px;
 			color:$black;
 			letter-spacing: 3px;
+			position: relative;
+			bottom: 0;
+			left: 0;
 		}
 
 		p{
 			// letter-spacing: 1px;
 			// font-size: 68.5%;
+			text-align: center;
 			margin: 0;
+			position: relative;
+			bottom: 0;
+			left: 0;
+			display: block;
+			width:100%;
 		}
 
 		img {
 			position: relative;
 			display: block;
 			min-height: 100%;
-			max-height: 580px;
+			// max-height: 580px;
+			height:100%;
 			max-width: 100%;
 			// opacity: 0.8;
 		}
@@ -105,12 +124,7 @@
 		@include transform(translate3d(0,-80px,0));
 	}
 
-	.content{
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background:#fff;
-		width:100%;
+	.h2{
 		@include transition(opacity 0.35s, transform 0.35s);
 		@include transform(translate3d(0,0px,0));
 	}
@@ -122,7 +136,7 @@
 		font-size: em(16px);
 		opacity: 1;
 		@include transition(opacity 0.35s, transform 0.35s);
-
+		
 		// -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 		// transition: opacity 0.35s, transform 0.35s;
 		// -webkit-transform: translate3d(0,50px,0);
@@ -135,8 +149,8 @@
 	}
 
 	//moves h2 up on hover
-	&:hover .content {
-		@include transform(translate3d(0,0px,0));
+	&:hover h2 {
+		// @include transform(translate3d(0,-50px,0));
 		// -webkit-transform: translate3d(0,-70px,0);
 		// transform: translate3d(0,-70px,0);
 	}
@@ -146,6 +160,7 @@
 		opacity: 1;
 	// 	-webkit-transform: translate3d(0,0,0);
 	// 	transform: translate3d(0,0,0);
+		// @include transform(translate3d(0,-15px,0));
 	}
 
 }
@@ -156,6 +171,10 @@
 	figure{
 		max-width: 343px;
 		max-height: 390px;
+
+		p{
+			padding:10px 45px 20px;
+		}
 	}
 }
 
@@ -181,24 +200,35 @@
 
 .feature__box{
 	figure{
-		max-width: 100%;
-		max-height: 580px;
+
+		.content{
+			height:85px;
+		}
+
+		max-width: 343px;
+		max-height: 390px;
 
 		h2{
-			padding: 37px 20px 10px;
+			position: absolute;
+			padding: 29px 20px;
+		}
+		p{
+			padding:10px 30px 20px;
+			position: absolute;
 		}
 	}
 }
 
 .feature__box--effect{
 
-	.content{
-		@include transform(translate3d(0,50px,0));
-	}
+	// .content{
+	// 	@include transform(translate3d(0,50px,0));
+	// }
 
 	p{
 		padding: 10px 30px 20px;
 		opacity: 0;
+		@include transform(translate3d(0,80px,0));
 	}
 
 	img{
@@ -212,13 +242,14 @@
 	@include transform(translate3d(0,-80px,0));
 	}
 
-	&:hover .content {
-		@include transform(translate3d(0,-20px,0));
+	&:hover h2 {
+		@include transform(translate3d(0,-70px,0));
 	}
 
 	//reveal p tag on hover
 	&:hover p {
 		opacity: 1;
+		@include transform(translate3d(0,-15px,0));
 	}
 
 }
@@ -228,10 +259,45 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
 
+	.feature__box{
+		figure{
+
+			.content{
+				height:100px;
+			}
+
+			max-width: 445px;
+			max-height: 580px;
+
+			h2{
+				padding: 37px 20px;
+			}
+			p{
+
+			}
+		}
+	}
+
+	.feature__box--effect{
+		p{
+			@include transform(translate3d(0,80px,0));
+		}
+		&:hover h2{
+			@include transform(translate3d(0,-70px,0));
+		}
+	}
+
+
 
 }
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
+
+	.feature__box--effect{
+		&:hover h2{
+			@include transform(translate3d(0,-50px,0));
+		}
+	}
   
 }

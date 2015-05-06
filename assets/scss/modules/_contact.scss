@@ -1,6 +1,6 @@
 .contact__wrapper{
 	overflow:hidden;
-	margin:100px auto;
+	margin:0 auto 100px;
 	max-width:1200px;
 }
 .contact__card{
@@ -96,8 +96,8 @@
 	}
 
 	.inner__content{
-		text-align: left;
-		padding-left: 20px;
+		text-align: center;
+		// padding-left: 20px;
 		top:50%;
 		position:relative;
 		@include transform(translateY(-50%));
@@ -110,9 +110,10 @@
 	}
 
 	i{
-		position:absolute;
-		top:-1px;
-		right:17px;	
+		// position:absolute;
+		// top:-1px;
+		// right:17px;	
+		padding-left:20px;
 	}
 
 	a{
@@ -123,6 +124,11 @@
 
 // Displays greater than 600px 
 @include breakpoint(tablet) {
+
+	.contact__wrapper{
+		margin:100px auto;
+	}
+	
 	.contact__card{
 		// height:31.5em;
 		height:em(505px);
@@ -172,9 +178,7 @@
 		}
 
 		i{
-			position:absolute;
-			top:-1px;
-			right:11%;	
+			padding-left:20px;
 		}
 	}
 
@@ -199,15 +203,7 @@
 		}
 
 		.contact__us{
-			h4{
-				padding-left:10px;
-			}
 
-			i{
-				position:absolute;
-				top:-1px;
-				right:32px;	
-			}
 		}
 	}
 
