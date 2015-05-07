@@ -72,6 +72,17 @@
 	}
 }
 
+.blog__overview--contents{
+	background:#fff;
+	padding:3em;
+	text-align:center;
+
+	.title-heading{
+		text-align: center;
+		padding-bottom:40px;
+	}
+}
+
 
 
 // Displays greater than 600px 
@@ -93,21 +104,21 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
 
-	.blog__mod{
-		margin-top: 30px;
+	// .blog__mod{
+	// 	margin-top: 30px;
 
-		&:first-child{
-			padding-right:15px;
-		}
+	// 	&:first-child{
+	// 		padding-right:15px;
+	// 	}
 
-		&:nth-child(2n){
-			padding-left:15px;
-		}
+	// 	&:nth-child(2n){
+	// 		padding-left:15px;
+	// 	}
 		
-		&--wrapper{
-			width:72.8%;
-		}
-	}
+	// 	&--wrapper{
+	// 		width:72.8%;
+	// 	}
+	// }
 
 }
 

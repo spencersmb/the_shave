@@ -28,11 +28,16 @@
 	}
 }
 
-.price__overview{
+.price__overview,.blog__overview{
 	position:absolute;
 	height:100%;
 	background:rgba(255,255,255, 1);
 	@include transition(all .4s ease-in-out);
+}
+
+.blog__overview{
+		top:0;
+	right:0;
 }
 
 .pricing__mod{
@@ -115,7 +120,7 @@
 // Displays greater than 768px 
 @include breakpoint(tablet) {
 
-	.price__overview{
+	.price__overview, .blog__overview{
 		background:rgba(255,255,255,0.8);
 	}
 

@@ -10424,6 +10424,9 @@ footer.loading {
   width: 100%;
   margin: 0 auto;
 }
+.card__feature .content {
+  padding: 2.5em 0;
+}
 .card__feature .content h3 {
   margin: 0 auto;
   max-width: 75%;
@@ -10433,12 +10436,6 @@ footer.loading {
 }
 .card__feature .content--container {
   position: relative;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  top: 50%;
 }
 .card__feature img {
   display: block;
@@ -10446,6 +10443,13 @@ footer.loading {
   top: 0;
   min-height: 100%;
   min-width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .container__white {
@@ -10458,7 +10462,33 @@ footer.loading {
   position: relative;
 }
 
+#twitter {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .card .content {
+    margin: 7.525em 27.5%;
+  }
+
+  .card__feature .content {
+    height: 311px;
+  }
+  .card__feature .content--container {
+    position: relative;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}
 @media (min-width: 992px) {
+  .card .content {
+    margin: 7.525em 20.5%;
+  }
+
   .offset__content {
     padding: 410.5px 60px 0 60px;
   }
@@ -11465,13 +11495,18 @@ footer.loading {
   text-transform: inherit;
 }
 
-.price__overview {
+.price__overview, .blog__overview {
   position: absolute;
   height: 100%;
   background: white;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.blog__overview {
+  top: 0;
+  right: 0;
 }
 
 .pricing__mod h2 {
@@ -11537,7 +11572,7 @@ footer.loading {
 }
 
 @media (min-width: 768px) {
-  .price__overview {
+  .price__overview, .blog__overview {
     background: rgba(255, 255, 255, 0.8);
   }
 
@@ -12518,23 +12553,19 @@ footer.nav-is-open {
   max-height: 325px;
 }
 
+.blog__overview--contents {
+  background: #fff;
+  padding: 3em;
+  text-align: center;
+}
+.blog__overview--contents .title-heading {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
 @media (min-width: 992px) {
   .blog__feature {
     width: 90%;
-  }
-}
-@media (min-width: 1200px) {
-  .blog__mod {
-    margin-top: 30px;
-  }
-  .blog__mod:first-child {
-    padding-right: 15px;
-  }
-  .blog__mod:nth-child(2n) {
-    padding-left: 15px;
-  }
-  .blog__mod--wrapper {
-    width: 72.8%;
   }
 }
 .blog__post {

@@ -202,7 +202,7 @@ footer.loading{
   margin:0 auto;
 
   .content{
-    // padding: 0 2em;
+    padding: 2.5em 0;
 
     h3{
       margin:0 auto;
@@ -214,8 +214,6 @@ footer.loading{
 
     &--container{
       position:relative;
-      @include transform(translateY(-50%));
-      top:50%;
     }
   }
 
@@ -225,7 +223,9 @@ footer.loading{
     top:0;
     min-height: 100%;
     min-width: 100%;
-    // left:-55px;
+    top:50%;
+    left:50%;
+    @include transform(translateY(-50%) translateX(-50%));
   }
 }
 
@@ -239,10 +239,33 @@ footer.loading{
   position:relative;
 }
 
+#twitter{
+  clear: both;
+}
+
 
 
 // Displays greater than 768px 
 @include breakpoint(tablet) {
+
+  .card{
+    .content{
+      margin:7.525em 27.5%;
+    }
+  }
+
+  .card__feature{
+
+    .content{
+      height:311px;
+
+      &--container{
+        position:relative;
+        @include transform(translateY(-50%));
+        top:50%;
+      }
+    }
+  }
 
   
 
@@ -250,6 +273,12 @@ footer.loading{
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+  .card{
+    .content{
+      margin:7.525em 20.5%;;
+    }
+  }
 
   .offset__content{
     padding:410.5px 60px 0 60px;
