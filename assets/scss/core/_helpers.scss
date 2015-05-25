@@ -30,6 +30,10 @@
   padding:0 !important;
 }
 
+.no-margin{
+  margin:0 !important;
+}
+
 .img-replace { /* replace text with a background-image */
   display: inline-block;
   overflow: hidden;
@@ -49,6 +53,11 @@
   &--sm{
     margin:0 auto;
     max-width: 1001.72px;
+  }
+
+  &--md{
+    margin:0 auto;
+    max-width: 1360px;
   }
 }
 
@@ -181,6 +190,14 @@
 
 .white-bg{
   background:#fff;
+}
+
+.gold-bg{
+  background:$primary-color;
+}
+
+.white{
+  color:$white;
 }
 
 //make space for footer

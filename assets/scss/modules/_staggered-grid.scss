@@ -6,19 +6,24 @@
 	background:$white;
 	margin:0 auto;
 
-	.intro{
-		margin: 80px auto;
-		text-align: center;
-		font-family: $heading-font;
-	}
 	h2{
-		margin:0 0 20px 0;
+		font-size: em(97px);
+		line-height: 105px;
+		text-align: left;
+		margin-bottom:50px;
 	}
-	p{
-		font-weight: 300;
-		text-transform: uppercase;
-		color:$dark-grey;
+	h6{
 		font-size: em(18px);
+		color:$primary-color;
+		font-family: 'courier';
+		font-weight: 700;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin:0;
+	}
+	.sub-copy{
+		text-align: left;
 	}
 
 }
@@ -47,20 +52,6 @@
 			width:100%;
 			text-align:center;
 		}
-	}
-
-	.box-link{
-		top:0;
-		position:absolute;
-		display: block;
-		width:100%;
-		height:100%;
-		left:0;
-		z-index: 1000;
-		text-indent: 200%;
-		white-space: nowrap;
-		font-size: 0;
-		opacity:0;
 	}
 
 	i{
@@ -194,8 +185,8 @@
 @include breakpoint(tablet) {
 
 	.staggered__container{
-		padding-top:40px;
-		margin:40px auto;
+		// padding-top:40px;
+		margin:0 auto 40px;
 	}
 
 	.box{

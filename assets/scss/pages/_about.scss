@@ -1,0 +1,130 @@
+.split-bg{
+	background-size:cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width:50%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+
+}
+
+.split{
+	position:relative;
+	overflow:hidden;
+	background:$white;
+
+	.content{
+		width:50%;
+		float:left;
+		margin-left:50%;
+
+		.about{
+			float:left;
+			padding:100px;
+
+			h2{
+
+			}
+
+			img{
+				width:75px;
+			}
+		}
+
+	}
+}
+
+.process__container{
+	position:relative;
+}
+
+.grid__inner{
+	text-align:center;
+	padding:25px;
+	background:#f3f3f3;
+}
+
+.process__grid{
+	padding:100px 0;
+
+	i{
+		padding:10px 0;
+	}
+
+	h4{
+		padding-bottom:15px;
+	}
+
+	&--box{
+		
+		padding:0 1.25% 2.5% ;
+		// margin-left: 2.5%;
+		// margin-right: 2.5%;
+		// margin-bottom: 2.5%;
+		// float:right;
+		// width:45%;
+		padding-top:0;
+
+		&:nth-child(odd){
+			// clear:both;
+			
+		}
+
+	}
+
+	&--image{
+		float:left;
+		width:25%;
+	}
+
+	&--wrapper{
+		padding:100px 25px 100px;
+		position:relative;
+	}
+}
+.about__process{
+	padding:100px 0;
+	color:$white;
+	margin:0;
+}
+.process__box{
+	margin: 0 auto;
+
+}
+.process__icon{
+	text-align:center;
+	padding:25px;
+
+	img{
+		width:100px;
+	}
+
+	h6{
+		font-size: em(18px);
+
+	}
+}
+
+//TODO: change all tablets to correct size in comment
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+
+
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+}
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+  
+}

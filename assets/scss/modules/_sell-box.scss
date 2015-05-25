@@ -1,0 +1,91 @@
+.sell__box{
+	padding-top:60px;
+}
+
+.sell__wrapper{
+
+	margin:60px 0 25px 0;
+		
+	h6{
+		font-size: em(18px);
+		color:$primary-color;
+		font-family: 'courier';
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin:0;
+	}
+
+	h3{
+		font-size: em(97px);
+		margin:0;
+		line-height: 105px;
+		letter-spacing: 5px;
+	}
+
+	h5{
+		font-size: em(38px);
+		font-family: 'courier';
+		color:#aaaaaa;
+		text-transform: uppercase;
+		max-width: 800px;
+		margin-top:15px;
+	}
+}
+
+.icon__box{
+
+
+	.icon__wrapper{
+		margin:25px 0;
+		max-width: 59px;
+		img{
+
+			width: 100%;
+			display: block;
+			text-align: left;
+		}
+	}
+
+	&--content{
+		clear:both;
+		h5{
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: em(18px);
+			margin: 25px 0;
+		}
+	}
+
+	&--container{
+		margin-bottom: 60px;
+	}
+}
+
+.single__image{
+	text-align:center;
+	display:block;
+}
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+	
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+}

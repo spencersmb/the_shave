@@ -1,0 +1,42 @@
+.faded__headline{
+	text-align:left;
+	max-width:1400px;
+	margin:0 auto;
+	padding:3% 0;
+
+	h2{
+		margin:0 auto;
+		padding:0;
+		color: rgba(143, 121, 75, 0.5);
+		font-style: italic;
+		font-weight: 700;
+		font-size: em(230px);
+		line-height: 215px;
+		letter-spacing: 10px;
+	}
+
+}
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+	
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+}

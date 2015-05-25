@@ -8,9 +8,9 @@
   @import url($font-url--ubuntu);
 }
 
-// @if variable-exists(font-url--gentium){
-//   @import url($font-url--gentium);
-// }
+@if variable-exists(font-url--yellowtail){
+  @import url($font-url--yellowtail);
+}
 
 // Functions and Directives
 //$context: $base__font-size = basefont size is defualt if no context

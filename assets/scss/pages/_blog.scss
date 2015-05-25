@@ -75,11 +75,50 @@
 .blog__overview--contents{
 	background:#fff;
 	padding:3em;
-	text-align:center;
+
+	h2{
+
+		 &::after{
+		  position:absolute;
+		  top:59px;
+		  left:0;
+		  font-family: $heading-font;
+		  font-size: 18px;
+		  font-weight: 400;
+		  text-align: left;
+		  color:$black;
+		  width:100%;
+		  letter-spacing: 0px;
+		  content:"::::::::::"
+		}
+	}
+
+	.feature__post{
+		margin-bottom:40px;
+	}
 
 	.title-heading{
-		text-align: center;
 		padding-bottom:40px;
+		padding-left:0;
+		position:relative;
+	}
+
+	h3{
+		margin:0;
+	}
+
+	.details{
+		margin-top: 5px;
+		margin-bottom:20px;
+
+		span{
+			display: block;
+			float:left;
+		}
+
+	}
+	p{
+		clear:both;
 	}
 }
 

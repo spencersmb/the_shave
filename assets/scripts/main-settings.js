@@ -44,7 +44,10 @@ $(function() {
 	    }
 	});
 
-	
+	// ==========================================================================
+	// About
+	// ==========================================================================
+
 
 	// ==========================================================================
 	// Services
@@ -105,7 +108,6 @@ $(function() {
 	// Revolution Slider Settings
 	// ==========================================================================
 
-
    $('.tp-banner').revolution(
 		{
 						dottedOverlay:"none",
@@ -139,7 +141,7 @@ $(function() {
 						navigationHAlign:"center",
 						navigationVAlign:"bottom",
 						navigationHOffset:0,
-						navigationVOffset:20,
+						navigationVOffset:0,
 
 						soloArrowLeftHalign:"left",
 						soloArrowLeftValign:"center",
@@ -171,6 +173,7 @@ $(function() {
 						hideBulletsOnMobile:"off",
 						hideArrowsOnMobile:"off",
 						hideThumbsUnderResolution:0,
+						hideTimerBar:"on",
 
 						hideSliderAtLimit:0,
 						hideCaptionAtLimit:0,
