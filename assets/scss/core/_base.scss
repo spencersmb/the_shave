@@ -43,6 +43,7 @@ h3{
   margin-bottom: em(24px);
   font-size: em(22px);
   text-transform:uppercase;
+  letter-spacing: 5px;
 }
 
 h4{
@@ -146,6 +147,8 @@ footer.loading{
   margin:em(40px) auto em(200px);
   h1{
     font-size:em(75px);
+    max-width:800px;
+    margin:0 auto;
     // color:$primary-color;
   }
   p{
@@ -267,6 +270,7 @@ footer.loading{
 }
 
 .center__container{
+
   position:absolute;
   top:50%;
   left:8%;
@@ -277,6 +281,7 @@ footer.loading{
     margin:0 auto;
     max-width: 1000px;
   }
+
   h3{
     font-family: courier;
     font-size: em(38px);
@@ -285,6 +290,7 @@ footer.loading{
     max-width: 800px;
     line-height: 46px;
   }
+
   h5{
     font-family: $heading-font;
     font-weight: 700;
@@ -299,6 +305,61 @@ footer.loading{
       text-align: left;
       width:100%;
       content:"::::::::::"
+    }
+  }
+}
+
+//EFFECTs
+.parallax__background{
+  background-size:cover;
+  background-position:50% 70%;
+  background-attachment:fixed;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+
+//DIVIDERS
+.divider__plus{
+  margin:0 auto;
+  text-align: center;
+
+  p{
+    display: block;
+    border-bottom:1px solid $black;
+    line-height: 0em;
+    font-weight: bold;
+    margin:0 60px 25px;
+  }
+
+  span{
+    background:#eeeeee;
+    padding:0 20px;
+  }
+}
+
+//SPECIAL GRIDS & ROWS
+
+.row__three{
+  clear:both;
+  text-align:center;
+  padding-bottom:em(90px);
+
+  p{
+    margin:0;
+  }
+
+  a{
+    color:$primary-color;
+    font-weight: bold;
+  }
+
+  & > div{
+    padding:50px 25px 30px 25px;
+    border-left: 1px solid #878787;
+
+    &:first-child{
+      border-left:0;
     }
   }
 }

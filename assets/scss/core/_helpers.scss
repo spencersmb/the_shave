@@ -111,6 +111,24 @@
   @include transition(all .4s ease-in-out);
 }
 
+//HEADLINE OPTIONS
+
+.headline-set1{
+  margin:0 auto;
+  text-align: center;
+
+  h3{
+    font-size:em(42px);
+    letter-spacing: 6px;
+    margin:0;
+  }
+
+  h6{
+    font-size: em(16px);
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
 .title-heading{
   text-align: center;
   margin: 0 auto 80px;

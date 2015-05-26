@@ -41,10 +41,11 @@
 .book__now--btn{
   @extend .sv-btn;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 300;
   padding:16px 26px;
-  font-size: 13px;
+  font-size: 14px;
   display:block;
+  letter-spacing: 1px;
 
   &:hover{
     color:$white;

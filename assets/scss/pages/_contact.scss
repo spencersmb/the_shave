@@ -20,29 +20,7 @@
 	// padding-left:30px;
 	overflow:hidden;
 }
-.connect__us{
-	clear:both;
-	text-align:center;
-	padding-bottom:em(90px);
 
-	p{
-		margin:0;
-	}
-
-	a{
-		color:$primary-color;
-		font-weight: bold;
-	}
-
-	& > div{
-		padding:50px 25px 30px 25px;
-		border-left: 1px solid #878787;
-
-		&:first-child{
-			border-left:0;
-		}
-	}
-}
 
 .social__icons{
   h3{

@@ -10273,6 +10273,7 @@ h3 {
   margin-bottom: 1.5em;
   font-size: 1.375em;
   text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 h4 {
@@ -10378,6 +10379,8 @@ footer.loading {
 }
 .inner__header h1, .inner__header--sm h1 {
   font-size: 4.6875em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .inner__header p, .inner__header--sm p {
   font-size: 1.5em;
@@ -10527,6 +10530,51 @@ footer.loading {
   text-align: left;
   width: 100%;
   content: "::::::::::";
+}
+
+.parallax__background {
+  background-size: cover;
+  background-position: 50% 70%;
+  background-attachment: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.divider__plus {
+  margin: 0 auto;
+  text-align: center;
+}
+.divider__plus p {
+  display: block;
+  border-bottom: 1px solid #252525;
+  line-height: 0em;
+  font-weight: bold;
+  margin: 0 60px 25px;
+}
+.divider__plus span {
+  background: #eeeeee;
+  padding: 0 20px;
+}
+
+.row__three {
+  clear: both;
+  text-align: center;
+  padding-bottom: 5.625em;
+}
+.row__three p {
+  margin: 0;
+}
+.row__three a {
+  color: #af8c45;
+  font-weight: bold;
+}
+.row__three > div {
+  padding: 50px 25px 30px 25px;
+  border-left: 1px solid #878787;
+}
+.row__three > div:first-child {
+  border-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -10721,6 +10769,21 @@ footer.loading {
   transition: all 0.4s ease-in-out;
 }
 
+.headline-set1 {
+  margin: 0 auto;
+  text-align: center;
+}
+.headline-set1 h3 {
+  font-size: 2.625em;
+  letter-spacing: 6px;
+  margin: 0;
+}
+.headline-set1 h6 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 .title-heading {
   text-align: center;
   margin: 0 auto 80px;
@@ -10878,10 +10941,11 @@ footer.loading {
 
 .book__now--btn {
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 300;
   padding: 16px 26px;
-  font-size: 13px;
+  font-size: 14px;
   display: block;
+  letter-spacing: 1px;
 }
 .book__now--btn:hover {
   color: #fff;
@@ -12819,6 +12883,7 @@ footer.nav-is-open {
 .blog__overview--contents .details {
   margin-top: 5px;
   margin-bottom: 20px;
+  font-size: 0.875em;
 }
 .blog__overview--contents .details span {
   display: block;
@@ -13056,26 +13121,6 @@ footer.nav-is-open {
   overflow: hidden;
 }
 
-.connect__us {
-  clear: both;
-  text-align: center;
-  padding-bottom: 5.625em;
-}
-.connect__us p {
-  margin: 0;
-}
-.connect__us a {
-  color: #af8c45;
-  font-weight: bold;
-}
-.connect__us > div {
-  padding: 50px 25px 30px 25px;
-  border-left: 1px solid #878787;
-}
-.connect__us > div:first-child {
-  border-left: 0;
-}
-
 .social__icons h3 {
   margin-bottom: 6px;
 }
@@ -13221,9 +13266,9 @@ footer.nav-is-open {
 }
 
 .shave__works {
-  margin-top: 80px;
   text-align: center;
   position: relative;
+  margin-bottom: 90px;
 }
 
 .shaving {
@@ -13232,32 +13277,35 @@ footer.nav-is-open {
   position: relative;
 }
 
-.shave__row > div {
-  height: 418px;
-  background: #fff;
-}
-
 .shave__card {
   overflow: hidden;
-  padding: 0;
+  padding: 15px;
 }
 .shave__card--img {
   overflow: hidden;
   padding: 0;
-  background: green;
-  height: 100%;
   position: relative;
+  background-size: cover;
+  background-position: 50% 0;
+  overflow: hidden;
 }
 .shave__card--img img {
   width: 100%;
   height: 100%;
-  position: absolute;
 }
 .shave__card .content {
-  padding: 1.5em;
+  padding: 50px;
+  background: #eeeeee;
+  position: relative;
+}
+.shave__card .content h3 {
+  margin: 0 0 25px 0;
 }
 .shave__card:nth-child(4) {
   clear: both;
+}
+.shave__card i {
+  padding: 25px 0;
 }
 .shave__card--icon {
   margin: 75px auto 45px auto;
@@ -13267,6 +13315,36 @@ footer.nav-is-open {
   margin: 0 auto;
   width: 39px;
   height: 69px;
+}
+
+.service__products {
+  padding: 60px 0;
+  color: #fff;
+}
+.service__products--row {
+  padding-top: 90px;
+}
+.service__products--row > div {
+  padding: 0;
+  border-left: none;
+  border-right: 1px solid #fff;
+}
+.service__products--row > div:last-child {
+  border-right: 0;
+}
+.service__products .content {
+  padding: 25px;
+}
+.service__products .content h6 {
+  margin-top: 25px;
+  font-family: courier;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.service__products .content h3 {
+  font-weight: 600;
 }
 
 .title-head {
@@ -13307,53 +13385,70 @@ footer.nav-is-open {
   font-size: 1.125em;
 }
 
-.price__box {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-.price__box--body {
-  margin-bottom: 35px;
-}
-.price__box--text {
-  text-align: center;
-  background: #fff;
-  padding: 25px;
-  margin: 0;
-}
-.price__box--desc {
-  margin: 0;
-  color: #af8c45;
-  font-style: italic;
-}
-.price__box--img {
-  max-height: 225px;
-  overflow: hidden;
-}
-.price__box img {
-  width: 100%;
-}
-.price__box .price {
-  font-size: 24px;
-  font-weight: bold;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #CACACA;
-  margin: 0 auto;
-}
-.price__box h2 {
-  margin-bottom: 25px;
-}
-.price__box ul {
-  padding: 0;
-}
-.price__box li {
-  list-style-type: none;
-  padding: 25px 0;
-  border-bottom: 1px solid #CACACA;
-}
-.price__box li:last-child {
-  margin-bottom: 45px;
+.shaving {
+  padding: 40px 0;
 }
 
+.price__wrapper {
+  padding: 60px 0;
+}
+
+.price__table {
+  background: #fff;
+  padding: 15%;
+  margin: 0 0 25px 0;
+}
+.price__table .price__header {
+  margin-bottom: 25px;
+}
+.price__table .price__header h2 {
+  margin: 0 0 35px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.price__table .price__header .price {
+  font-size: 3.5em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  line-height: 46px;
+  position: relative;
+  display: inline-block;
+  padding-top: 20px;
+}
+.price__table .price__header .price span {
+  font-size: 18px;
+  position: absolute;
+  top: 0px;
+  left: -15px;
+}
+.price__table .divider__plus {
+  text-align: center;
+}
+.price__table .divider__plus .middle {
+  color: #959595;
+}
+.price__table .divider__plus p {
+  border-bottom: 1px solid #959595;
+  margin: 0 0 25px 0;
+}
+.price__table .divider__plus span {
+  background: #fff;
+  position: relative;
+  left: -2px;
+}
+.price__table ul {
+  padding: 15px 0 45px;
+}
+.price__table li {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  .shave__card {
+    overflow: hidden;
+    padding: 0;
+  }
+}
 .team__wrapper {
   margin-top: 80px;
 }

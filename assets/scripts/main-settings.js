@@ -53,12 +53,55 @@ $(function() {
 	// Services
 	// ==========================================================================
 
-	var faqTrigger = $('.shave__faq--trigger');
+		var faqTrigger = $('.shave__faq--trigger');
 
 		faqTrigger.on('click', function(event){
 			event.preventDefault();
 			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
 		});
+
+		//HOW IT WORKS BOXS
+		var arrHeight =[];
+		var arrClean =[];
+
+		$(".shave__card").each(function(item){
+			// console.log($(this).height());
+			arrHeight.push($(this).height());
+			arrClean.push($(this).height());
+		});
+
+    	var largest = arrHeight.sort().reverse()[0];
+
+    	var indexOf = $.inArray( largest, arrClean);
+
+    	$('.shave__card').eq(indexOf).addClass('tallest');
+
+    	$(".shave__card").each(function(item){
+			
+			//Set new height of container
+			$(this).children('.content').css('height', largest + 'px');
+		});
+
+		$(".shave__card--img").each(function(item){
+			
+			//Set new height of container
+			$(this).css('height', largest + 'px');
+		});
+
+
+		function getHeight(){
+			$('.shave__card').children('.content').height('auto');
+			return $('.shave__card.tallest').height();
+		};
+
+		$(window).on('resize', function(){
+
+			var newHeight = getHeight();
+			$(".shave__card--img").css('height', newHeight + 'px');
+			$('.shave__card').children('.content').css('height', newHeight + 'px');
+
+		});
+
 
     // ==========================================================================
     // Team page
