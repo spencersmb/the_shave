@@ -13275,6 +13275,7 @@ footer.nav-is-open {
   margin: 60px auto;
   text-align: center;
   position: relative;
+  padding: 40px 0 0;
 }
 
 .shave__card {
@@ -13385,18 +13386,14 @@ footer.nav-is-open {
   font-size: 1.125em;
 }
 
-.shaving {
-  padding: 40px 0;
-}
-
 .price__wrapper {
   padding: 60px 0;
 }
 
 .price__table {
   background: #fff;
-  padding: 15%;
-  margin: 0 0 25px 0;
+  padding: 10%;
+  margin: 0 auto 30px;
 }
 .price__table .price__header {
   margin-bottom: 25px;
@@ -13443,7 +13440,66 @@ footer.nav-is-open {
   padding-bottom: 15px;
 }
 
+.barber__box {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border: 15px solid #fff;
+  width: 48%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  height: auto;
+}
+
+.barber__profile {
+  background: #af8c45;
+  position: relative;
+  display: block;
+  padding: 10px;
+}
+.barber__profile h6 {
+  position: absolute;
+  z-index: 3;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  bottom: 0;
+  color: #fff;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform: translate3d(0, -50%, 0) scale3d(0.8, 0.8, 1);
+}
+.barber__profile img {
+  position: absolute;
+  z-index: 2;
+  padding: 10px;
+  top: 50%;
+  min-height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: translate3d(0, -50%, 0) scale3d(1.4, 1.4, 1);
+}
+.barber__profile:hover h6 {
+  transform: translate3d(10%, -50%, 0) scale3d(1, 1, 1);
+}
+.barber__profile:hover img {
+  opacity: .4;
+  transform: translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1);
+}
+
 @media (min-width: 992px) {
+  .price__table {
+    max-width: 400px;
+    padding: 15%;
+  }
+
   .shave__card {
     overflow: hidden;
     padding: 0;

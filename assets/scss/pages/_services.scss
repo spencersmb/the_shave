@@ -11,8 +11,9 @@
 	margin:60px auto;
 	text-align:center;
 	position:relative;
-
+	padding:40px 0 0;
 }
+
 
 .shave__row{
 	
@@ -31,7 +32,6 @@
 
 		overflow:hidden;
 		padding:0;
-		// max-width: 464px;
 		// height: 411px;
 		// background:green;
 		position:relative;
@@ -56,14 +56,6 @@
 		h3{
 			margin:0 0 25px 0;
 		}
-	}
-
-	.content-inner{
-		// position:absolute;
-		// top:50%;
-		// left:0;
-		// width:100%;
-		// @include transform(translateY(-50%));
 	}
 
 	&:nth-child(4){
@@ -180,17 +172,16 @@
 
 // pricing boxs
 
-.shaving{
-	padding:40px 0;
-}
 
 .price__wrapper{
 	padding:60px 0;
 }
+
 .price__table{
 	background:$white;
-	padding:15%;
-	margin:0 0 25px 0;
+	padding:10%;
+	margin:0 auto 30px;
+
 
 	.price__header{
 		margin-bottom: 25px;
@@ -220,6 +211,7 @@
 	}
 
 	.divider__plus{
+
 		text-align: center;
 
 		.middle{
@@ -247,61 +239,75 @@
 	}
 }
 
-// .price__box{
-// 	padding-top:15px;
-// 	padding-bottom:15px;
-// 	&--body{
-// 		margin-bottom: 35px;
-// 	}
+//Barbers
+.baber__box--wrapper{
+	// max-width:1170px;
+}
 
-// 	&--text{
-// 		text-align:center;
-// 		background:$white;
-// 		padding: 25px;
-// 		margin:0;
-// 	}
+.barber__box{
+	position:relative;
+	// height:20vh;
+	overflow:hidden;
+	padding:0;
+	border:15px solid $white;
+		width:48%;
+	min-width:320px;
+	max-width:480px;
+	max-height:360px;
+	height:auto;
+}
 
-// 	&--desc{
-// 		margin:0;
-// 		color:$primary-color;
-// 		font-style:italic;
-// 	}
+.barber__profile{
+	background:$primary-color;
+	position:relative;
+	display:block;
+	padding:10px;
 
-// 	&--img{
-// 		max-height: 225px; //desktop
-// 		overflow: hidden;
-// 	}
+	h6{
+		position:absolute;
+		z-index: 3;
+		font-size: em(28px);
+		text-transform: uppercase;
+		bottom:0;
+		color:$white;
+		margin:0;
+		@include transition (all .3s ease-in-out);
+		transform-origin: 50% 100%;
+		-webkit-transform-origin: 50% 100%;
+		transform:translate3d(0, -50%, 0) scale3d(.8, .8, 1);
 
-// 	img{
-// 		width:100%;
-// 	}
+	}
+	
+	img{
+		position: absolute;
+		z-index: 2;
+		padding:10px;
+		top:50%;
+		min-height: 100%;
+		width:100%;
+		opacity:1;
+		@include transition (all .3s ease-in-out);
+		transform:translate3d(0, -50%, 0) scale3d(1.4, 1.4, 1);
 
-// 	.price{
-// 		font-size: 24px;
-// 		font-weight:bold;
-// 		padding-bottom: 30px;
-// 		border-bottom: 1px solid #CACACA;
-// 		margin:0 auto;
-// 	}
+	}
 
-// 	h2{
-// 		margin-bottom:25px;
-// 	}
+	&:hover{
 
-// 	ul{
-// 		padding:0;
-// 	}
+		h6{
+			transform:translate3d(10%, -50%, 0) scale3d(1, 1, 1);
+		}
 
-// 	li{
-// 		list-style-type: none;
-// 		padding:25px 0;
-// 		border-bottom: 1px solid #CACACA;
+		img{
+			opacity:.4;
+			transform:translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1);
+		}
 
-// 		&:last-child{
-// 			margin-bottom: 45px;
-// 		}
-// 	}
-// }
+	}
+}
+
+.link-hide{
+
+}
 
 // Displays greater than 768px 
 @include breakpoint(tablet) {
@@ -311,6 +317,11 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+	.price__table{
+		max-width: 400px;
+		padding:15%;
+	}
 
 	.shave__card{
 
