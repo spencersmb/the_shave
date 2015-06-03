@@ -64,8 +64,11 @@ $(function() {
 		//Safari
 		if((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName == "Netscape")){
 
-			$(body);
-			//return "safari";
+			$('body').addClass('safari');
+
+			$('section').last().removeClass('footer-push');
+
+			return "safari";
 		}
 
 		//Opera
@@ -74,21 +77,42 @@ $(function() {
 		}
 	}
 
-	console.log(WhichBrowser());
+	WhichBrowser();
 
-	//function GetBrowser()
-	//{
-	//	return  navigator ? navigator.userAgent.toLowerCase() : "other";
-	//}
-    //
-	//console.log(GetBrowser());
-	//decent work around
-	//var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor')>0;         // At least Safari 3+: "[object HTMLElementConstructor]"
-	//console.log(isSafari);
+	
+	// ==========================================================================
+	// Footer-push resize
+	// ==========================================================================
+	(function() {
+
+		if($('section').last().hasClass('footer-push')){
+			
+			var footerHeight = $('footer').height() + 'px';
+
+			//set footerpush margin to same height as footer
+			$('.footer-push').css('margin-bottom', footerHeight);
+
+			function getfootHeight(){
+				return $('footer').height();
+			};
+
+			$(window).on('resize', function(){
+
+				var newHeight = getfootHeight();
+				console.log(newHeight);
+				$('.footer-push').css('margin-bottom', newHeight + 'px');
+
+			});
+
+		}
+		
+	})();	
+
 
 	// ==========================================================================
 	// Services
 	// ==========================================================================
+
 
 		var faqTrigger = $('.shave__faq--trigger');
 
@@ -159,29 +183,13 @@ $(function() {
     // ==========================================================================
 
     $(window).load(function(){
-    var $container = $('.portfolioContainer');
-    $container.isotope({
-        itemSelector: ".gallery-item",
-					 //layoutMode: 'fitRows',
-					 percentPosition: true,
-		masonry: { "columnWidth": ".grid-sizer" }
-    });
- 
-    // $('.portfolioFilter a').click(function(){
-    //     $('.portfolioFilter .current').removeClass('current');
-    //     $(this).addClass('current');
- 
-    //     var selector = $(this).attr('data-filter');
-    //     $container.isotope({
-    //         filter: selector,
-    //         animationOptions: {
-    //             duration: 750,
-    //             easing: 'linear',
-    //             queue: false
-    //         }
-    //      });
-    //      return false;
-    // }); 
+	    var $container = $('.portfolioContainer');
+	    $container.isotope({
+	        itemSelector: ".gallery-item",
+						 //layoutMode: 'fitRows',
+						 percentPosition: true,
+			masonry: { "columnWidth": ".grid-sizer" }
+	    });
 	});
 
 	// ==========================================================================

@@ -10577,6 +10577,10 @@ footer.loading {
   border-left: 0;
 }
 
+.safari {
+  height: 100% !important;
+}
+
 @media (min-width: 768px) {
   .card .content {
     margin: 7.525em 27.5%;
