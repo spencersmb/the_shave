@@ -45,9 +45,46 @@ $(function() {
 	});
 
 	// ==========================================================================
-	// About
+	// Safari special footer settings
 	// ==========================================================================
+	function WhichBrowser(){
+		//IE
+		if(navigator.appName == "Microsoft Internet Explorer"){
+			return "msie";
+		}
 
+		//Chrome
+		if((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName == "Netscape")){
+			return "chrome";
+		}
+		//Firefox
+		if((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (navigator.appName == "Netscape")){
+			return "firefox";
+		}
+		//Safari
+		if((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName == "Netscape")){
+
+			$(body);
+			//return "safari";
+		}
+
+		//Opera
+		if(navigator.appName == "Opera"){
+			return "opera";
+		}
+	}
+
+	console.log(WhichBrowser());
+
+	//function GetBrowser()
+	//{
+	//	return  navigator ? navigator.userAgent.toLowerCase() : "other";
+	//}
+    //
+	//console.log(GetBrowser());
+	//decent work around
+	//var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor')>0;         // At least Safari 3+: "[object HTMLElementConstructor]"
+	//console.log(isSafari);
 
 	// ==========================================================================
 	// Services
