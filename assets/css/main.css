@@ -13276,7 +13276,6 @@ footer.nav-is-open {
 .shave__works {
   text-align: center;
   position: relative;
-  margin-bottom: 90px;
 }
 
 .shaving {
@@ -13395,7 +13394,7 @@ footer.nav-is-open {
 }
 
 .price__wrapper {
-  padding: 60px 0;
+  padding: 60px 0 0;
 }
 
 .price__table {
@@ -13448,60 +13447,57 @@ footer.nav-is-open {
   padding-bottom: 15px;
 }
 
+.baber__box--wrapper {
+  margin: 90px auto;
+}
+
+.barber__row {
+  padding-top: 60px;
+  margin: 0 auto;
+}
+
 .barber__box {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  border: 15px solid #fff;
-  width: 48%;
-  min-width: 320px;
-  max-width: 480px;
-  max-height: 360px;
-  height: auto;
+  float: none;
+  margin: 0 auto;
+  max-width: 511px;
+  padding-bottom: 25px;
+}
+.barber__box a {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .barber__profile {
-  background: #af8c45;
   position: relative;
   display: block;
-  padding: 10px;
-}
-.barber__profile h6 {
-  position: absolute;
-  z-index: 3;
-  font-size: 1.75em;
-  text-transform: uppercase;
-  bottom: 0;
-  color: #fff;
-  margin: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  transform: translate3d(0, -50%, 0) scale3d(0.8, 0.8, 1);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 .barber__profile img {
-  position: absolute;
-  z-index: 2;
-  padding: 10px;
-  top: 50%;
-  min-height: 100%;
-  width: 100%;
-  opacity: 1;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  transform: translate3d(0, -50%, 0) scale3d(1.4, 1.4, 1);
-}
-.barber__profile:hover h6 {
-  transform: translate3d(10%, -50%, 0) scale3d(1, 1, 1);
+  -webkit-transform: translateX(0) scale3d(1.2, 1.2, 1);
+  -moz-transform: translateX(0) scale3d(1.2, 1.2, 1);
+  -ms-transform: translateX(0) scale3d(1.2, 1.2, 1);
+  -o-transform: translateX(0) scale3d(1.2, 1.2, 1);
+  transform: translateX(0) scale3d(1.2, 1.2, 1);
 }
 .barber__profile:hover img {
-  opacity: .4;
-  transform: translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1);
+  -webkit-transform: translateX(25px) scale3d(1.2, 1.2, 1);
+  -moz-transform: translateX(25px) scale3d(1.2, 1.2, 1);
+  -ms-transform: translateX(25px) scale3d(1.2, 1.2, 1);
+  -o-transform: translateX(25px) scale3d(1.2, 1.2, 1);
+  transform: translateX(25px) scale3d(1.2, 1.2, 1);
 }
 
+@media (min-width: 768px) {
+  .barber__box {
+    float: left;
+  }
+}
 @media (min-width: 992px) {
   .price__table {
     max-width: 400px;

@@ -4,7 +4,6 @@
 .shave__works{
 	text-align:center;
 	position: relative;
-	margin-bottom:90px;
 }
 
 .shaving{
@@ -174,7 +173,7 @@
 
 
 .price__wrapper{
-	padding:60px 0;
+	padding:60px 0 0;
 }
 
 .price__table{
@@ -242,64 +241,66 @@
 //Barbers
 .baber__box--wrapper{
 	// max-width:1170px;
+	margin:90px auto;
+}
+
+.barber__row{
+	padding-top:60px;
+	margin:0 auto;
 }
 
 .barber__box{
-	position:relative;
-	// height:20vh;
-	overflow:hidden;
-	padding:0;
-	border:15px solid $white;
-		width:48%;
-	min-width:320px;
-	max-width:480px;
-	max-height:360px;
-	height:auto;
+	float:none;
+	margin:0 auto;
+	max-width:511px;
+	padding-bottom:25px;
+
+	a{
+		display:block;
+		width:100%;
+		text-align: center;
+	}
+
 }
 
 .barber__profile{
-	background:$primary-color;
 	position:relative;
 	display:block;
-	padding:10px;
+	overflow:hidden;
+	height:100%;
+	width:100%;
 
 	h6{
-		position:absolute;
-		z-index: 3;
-		font-size: em(28px);
-		text-transform: uppercase;
-		bottom:0;
-		color:$white;
-		margin:0;
-		@include transition (all .3s ease-in-out);
-		transform-origin: 50% 100%;
-		-webkit-transform-origin: 50% 100%;
-		transform:translate3d(0, -50%, 0) scale3d(.8, .8, 1);
+		// position:absolute;
+		// z-index: 3;
+		// font-size: em(28px);
+		// text-transform: uppercase;
+		// bottom:0;
+		// color:$white;
+		// margin:0;
+		// @include transition (all .3s ease-in-out);
+		// transform-origin: 50% 100%;
+		// -webkit-transform-origin: 50% 100%;
+		// transform:translate3d(0, -50%, 0) scale3d(.8, .8, 1);
 
 	}
 	
 	img{
-		position: absolute;
-		z-index: 2;
-		padding:10px;
-		top:50%;
-		min-height: 100%;
-		width:100%;
-		opacity:1;
 		@include transition (all .3s ease-in-out);
-		transform:translate3d(0, -50%, 0) scale3d(1.4, 1.4, 1);
+		@include transform(translateX(0) scale3d(1.2, 1.2, 1));
+		// transform:translateX(0) scale3d(1.2, 1.2, 1);
 
 	}
 
 	&:hover{
 
 		h6{
-			transform:translate3d(10%, -50%, 0) scale3d(1, 1, 1);
+			// transform:translate3d(10%, -50%, 0) scale3d(1, 1, 1);
 		}
 
 		img{
-			opacity:.4;
-			transform:translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1);
+			// opacity:.4;
+			@include transform(translateX(25px) scale3d(1.2, 1.2, 1));
 		}
 
 	}
@@ -311,6 +312,9 @@
 
 // Displays greater than 768px 
 @include breakpoint(tablet) {
+	.barber__box{
+		float:left;
+	}
 
 
 }
