@@ -1,11 +1,7 @@
 // TODO: Add 15px padding left and right of main container - match blog inner
 //TODO: fix input spaceing
 footer{
-	position:fixed !important;
-  	position: -webkit-sticky !important;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
+	position:relative !important;
 	bottom:0;
 	left:0;
 	opacity:1;
@@ -23,78 +19,140 @@ footer{
 
 }
 
-.footer__wrapper{
-	margin:em(60px) auto em(40px);
-	max-width:1001.72px;
-	text-align:left;
-	color:#fff;
-
-	h3{
-		font-size:em(28px);
-		font-weight:300;
-		line-height: 38px;
-		margin-top:0;
-		margin-bottom:em(32px);
-		text-transform: inherit;
-	}
-
-	.footer__name{
-		font-weight:500;
-		text-transform: uppercase;
-	}
-
-	.location, .contact{
-		h4{
-			font-weight:400;
-			font-size:em(16px);
-			margin:0 0 em(20px) 0;
-		}
-
-		a{
-			color:$primary-color;
-		}
-
-		p{
-			margin:0;
-		}
-	}
-
+.footer-mobile{
+	height:100% !important;
 }
+
+.footer__wrapper{
+	margin:0 auto;
+	max-width:1200px;
+	color:#fff;
+	padding: 0 45px;
+}
+
+.footer__logo{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+
+
+	.logo__container{
+		text-align: center;
+		padding: 2em;
+		position:relative;
+		margin:3em auto 1em;
+		z-index: 100;
+		font-family: $heading-font;
+		
+		h5{
+			font-size: em(19px);
+			text-transform: uppercase;
+			margin:0 0 5px 0;
+			font-weight: 500;
+		}
+
+		h3{
+			font-size: em(63px);
+			margin:0;
+			letter-spacing: 7px;
+		}
+
+		h4{
+			color:$primary-color;
+			font-size: em(18px);
+			font-family: $courier;
+			text-transform: none; 
+		}
+	}
+}
+
+.footer__desc{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+
 
 .tagline{
 	font-weight:bold;
 	font-size:em(16px);
 }
 
+.email__wrapper{
+	margin-top:20px;
+	margin-bottom:50px;
+}
+
 .email__form{
 	clear:both;
 	display:table;
 	width:100%;
+	margin-bottom:0;
 
-	&--input{
+	input{
+		background:transparent;
 		float:left;
-		width:65%;
-		margin-right: 2%;
-		font-size: em(14px);
-		padding: 6px 12px;
+		font-size: em(26px);
+		padding: 0;
 		border-radius: 0;
 		height:50px;
 		border:0;
 		box-shadow:none;
-		color:#bcbcbc;
+		color:$primary-color;
 		border-bottom:1px solid #bcbcbc;
 
 		&:focus{
 			box-shadow:none;
 			border-color:#bcbcbc;
 		}
+
+		&::-webkit-input-placeholder{
+			color:$primary-color;
+		}
+		&::-moz-placeholder {
+			color:$primary-color;
+		}
+		&:-moz-placeholder{
+			color:$primary-color;
+		}
+		&:-ms-input-placeholder{
+			color:$primary-color;
+		}
 	}
 
 }
 
 .email__offers{
-	margin-top:15px;
+	margin-top:5px;
+	font-size:em(14px);
+}
 
+	
+.footer__contact{
+
+	margin-bottom:30px;	
+
+	.footer__address{
+		p{
+			margin-bottom: 0;
+
+		}
+	}
+
+	.contact{
+		a{
+			color:$primary-color;
+			display: block;
+
+		}
+	}
+
+}
+
+.copyright{
+	font-size:em(14px);
+	margin-top:15px;
+	padding:0 15px;
 }
 
 //TOOD: put social icons in helper file
@@ -102,23 +160,24 @@ footer{
 	width:100%;
 	margin:0 auto;
 	padding:20px 0;
-	background:$black;
 	
 	ul{
-		text-align:center;
+		text-align:left;
 	}
 
 	li{
 		display: inline-block;
+		background-size:contain;	
+
 	}
 }
 
 .facebook, .twitter, .instagram, .linkedin,{
-	margin:0 8px;
+	margin:0 8px 0 0;
 
 	a{
-		width:38px;
-		height:38px;
+		width:23px;
+		height:23px;
 		display:block;
 	}
 }
@@ -148,6 +207,11 @@ footer{
 }
 //TODO: find retina version of instagram
 .instagram{
+	background: url("../images/icons/social-white/instagram.png") no-repeat;
+	@include image-2x("../images/icons/social-white/instagram@2x.png", 38px, 38px);
+}
+//TODO: make linkedin logo
+.linkedin{
 	background: url("../images/icons/social-white/instagram.png") no-repeat;
 	@include image-2x("../images/icons/social-white/instagram@2x.png", 38px, 38px);
 }
@@ -205,12 +269,141 @@ footer{
 // Displays greater than 600px 
 @include breakpoint(tablet) {
 
-	
+	.footer__logo{
+
+		.logo__container{
+			margin:5em 19% 1em;
+		}
+	}
+
+	.email__form{
+		input{
+			font-size: em(32px);
+			text-align:center;
+		}
+	}
+
+	.email__offers{
+		text-align:center;
+	}
+
+	.email__wrapper{
+		margin-bottom:50px;
+	}
+
+	.footer__contact{
+		margin-bottom:40px;
+
+		.footer__address{
+			text-align:right;
+
+			p{
+				padding-right:10px;				
+			}
+		}
+
+		.contact{
+			a{
+				padding-left:10px;
+			}
+		}
+
+	}
+
+
+	.copyright{
+		padding:0;
+		text-align:right;
+	}
+
 
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+	footer{
+		position:fixed !important;
+	  	position: -webkit-sticky !important;
+		position: -moz-sticky;
+		position: -ms-sticky;
+		position: -o-sticky;
+		bottom:0;
+		left:0;
+		opacity:1;
+		width:100%;
+		z-index: 1 !important;
+		-webkit-transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
+		background:#373737;
+
+		@include transition($pushNav);
+
+		&.nav-is-open {
+		  @include transform(translateX($navMove));
+		}
+
+	}
+
+	.footer__wrapper{
+		margin:em(40px) auto;
+		padding:0;
+	}
+
+	.footer__logo{
+		width:50%;
+		float:left;
+
+		.logo__container{
+			padding: 2em;
+			margin:7em 19%;
+		}
+	}
+
+	.footer__desc{
+		width:50%;
+	}
+
+	.email__wrapper{
+		max-width:470px;
+	}
+
+	.email__form{
+		input{
+			text-align:left;
+		}
+	}
+
+	.email__offers{
+		text-align:left;
+	}
+
+	.email__wrapper{
+		margin-bottom:70px;
+	}
+
+	.footer__contact{
+		margin-bottom:70px;
+
+		.footer__address{
+			text-align:left;
+			
+			p{
+				padding-right:0;				
+			}
+		}
+
+		.contact{
+			a{
+				padding-left:0;
+			}
+		}
+
+	}
+
+	.copyright{
+		text-align:left;
+	}
 
 
 

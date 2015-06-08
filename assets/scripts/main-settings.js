@@ -85,28 +85,104 @@ $(function() {
 	// ==========================================================================
 	(function() {
 
-		if($('section').last().hasClass('footer-push')){
-			
-			var footerHeight = $('footer').height() + 'px';
+		
+		var tablet = 991,
+			resizedWidth;
 
-			//set footerpush margin to same height as footer
-			$('.footer-push').css('margin-bottom', footerHeight);
+		$(window).on('resize', function(){
+		(!window.requestAnimationFrame) ? setTimeout(specialFooter, 300) : window.requestAnimationFrame(specialFooter);
+		});
 
-			function getfootHeight(){
-				return $('footer').height();
-			};
+		specialFooter();
+
+		function checkWindowWidth(){
+
+			var windowSize = $(window).width();
 
 			$(window).on('resize', function(){
-
-				var newHeight = getfootHeight();
-				console.log(newHeight);
-				$('.footer-push').css('margin-bottom', newHeight + 'px');
-
+				resizedWidth = $(window).width();
+				console.log(resizedWidth);
 			});
 
+			if( resizedWidth > tablet || windowSize > tablet ){
+				return true;
+			} else {
+				return false;
+			}
 		}
+
+		function specialFooter(){
+			var desktop = checkWindowWidth();
+				console.log(checkWindowWidth());
+			if( desktop ){
+
+				$('body').removeClass('footer-mobile');
+
+				if($('section').last().hasClass('footer-push')){
+					
+					var footerHeight = $('footer').height() + 'px';
+
+					//set footerpush margin to same height as footer
+					$('.footer-push').css('margin-bottom', footerHeight);
+
+					// function getfootHeight(){
+					// 	return $('footer').height();
+					// };
+
+					// $(window).on('resize', function(){
+
+					// 	var newHeight = getfootHeight();
+					// 	console.log(newHeight);
+					// 	$('.footer-push').css('margin-bottom', newHeight + 'px');
+
+					// });
+
+				}
+
+			}else {
+				console.log('false');
+				$('section').last().css('margin-bottom', 0);
+				$('body').addClass('footer-mobile');
+			}
+
+
+		}
+
+		
 		
 	})();	
+
+		// var windowSize = $(window).width();
+		// var tablet = 768;
+
+
+		// $(window).on('resize', function(){
+		// 	windowSize = $(window).width();
+		// }
+
+		// if(windowSize > tablet){
+			
+		// 	if($('section').last().hasClass('footer-push')){
+			
+		// 		var footerHeight = $('footer').height() + 'px';
+
+		// 		//set footerpush margin to same height as footer
+		// 		$('.footer-push').css('margin-bottom', footerHeight);
+
+		// 		function getfootHeight(){
+		// 			return $('footer').height();
+		// 		};
+
+		// 		$(window).on('resize', function(){
+
+		// 			var newHeight = getfootHeight();
+		// 			console.log(newHeight);
+		// 			$('.footer-push').css('margin-bottom', newHeight + 'px');
+
+		// 		});
+
+		// 	}
+		// }
 
 
 	// ==========================================================================
