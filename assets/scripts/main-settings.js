@@ -97,59 +97,44 @@ $(function() {
 
 		function checkWindowWidth(){
 
-			var windowSize = $(window).width();
+			var windowSize = $(window).width() + 15;
 
 			$(window).on('resize', function(){
-				resizedWidth = $(window).width();
-				console.log(resizedWidth);
+				resizedWidth = $(window).width() + 15;
+				// console.log(resizedWidth);
 			});
 
-			if( resizedWidth > tablet || windowSize > tablet ){
+			if( resizedWidth >= tablet || windowSize >= tablet ){
+				// console.log('true');
 				return true;
 			} else {
+				// console.log('false');
 				return false;
 			}
 		}
 
 		function specialFooter(){
 			var desktop = checkWindowWidth();
-				console.log(checkWindowWidth());
 			if( desktop ){
 
 				$('body').removeClass('footer-mobile');
 
-				if($('section').last().hasClass('footer-push')){
-					
+				if($('main').find('.footer-push')){
+					// console.log('true');
 					var footerHeight = $('footer').height() + 'px';
 
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
 
-					// function getfootHeight(){
-					// 	return $('footer').height();
-					// };
-
-					// $(window).on('resize', function(){
-
-					// 	var newHeight = getfootHeight();
-					// 	console.log(newHeight);
-					// 	$('.footer-push').css('margin-bottom', newHeight + 'px');
-
-					// });
-
 				}
 
 			}else {
-				console.log('false');
-				$('section').last().css('margin-bottom', 0);
+				
+				$('main').find('.footer-push').css('margin-bottom', 0);
 				$('body').addClass('footer-mobile');
 			}
-
-
 		}
 
-		
-		
 	})();	
 
 		// var windowSize = $(window).width();
@@ -207,12 +192,15 @@ $(function() {
 			arrClean.push($(this).height());
 		});
 
+		//reorder largest to smallest and get the largest item
     	var largest = arrHeight.sort().reverse()[0];
 
+    	//find the index of the largest box, then add a tallest class to it
     	var indexOf = $.inArray( largest, arrClean);
 
     	$('.shave__card').eq(indexOf).addClass('tallest');
 
+    	//Set heights of the content boxs and then image boxs next
     	$(".shave__card").each(function(item){
 			
 			//Set new height of container
@@ -227,12 +215,14 @@ $(function() {
 
 
 		function getHeight(){
+			//on-resize set height to auto and target the tallest item only for height
 			$('.shave__card').children('.content').height('auto');
 			return $('.shave__card.tallest').height();
 		};
 
 		$(window).on('resize', function(){
 
+			//use tallest height for everything
 			var newHeight = getHeight();
 			$(".shave__card--img").css('height', newHeight + 'px');
 			$('.shave__card').children('.content').css('height', newHeight + 'px');
@@ -255,7 +245,7 @@ $(function() {
     });
 
     // ==========================================================================
-    // Gallery page
+    // Gallery Index page
     // ==========================================================================
 
     $(window).load(function(){
@@ -267,6 +257,50 @@ $(function() {
 			masonry: { "columnWidth": ".grid-sizer" }
 	    });
 	});
+
+	// ==========================================================================
+    // Gallery Detail page
+    // ==========================================================================
+    (function(){
+
+    	//Special gallery settings for responsiveness
+		var imgHeight;
+
+		//get height of image on window resize
+    	function getImgHeightMaster(){
+    		var myImg = document.querySelector("#myImg");
+    		var currHeight = myImg.clientHeight;
+
+    		return currHeight;
+    	}
+
+    	//get height of thumbnail on window resize
+    	function getThumbnailHeight(){
+    		var myImg = document.querySelector("#myThumb");
+    		var currHeight = myImg.clientHeight;
+
+    		return currHeight;
+    	}
+
+    	//apply
+    	$(window).on('resize', function(){
+			
+			$(".gallery-main").find('.flickity-viewport').height(getImgHeightMaster());
+			$('.gallery-nav').height(getThumbnailHeight());
+		});
+
+
+		//Grid stats
+		var statBoxHeight = $(".stats__container").find('.quad-box').height();
+
+		$(".quad-box").each(function(item){
+			// console.log($(this).height());
+			$(this).height(statBoxHeight);
+		});
+
+
+
+    })();
 
 	// ==========================================================================
 	// Revolution Slider Settings

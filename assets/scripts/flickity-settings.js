@@ -7,7 +7,7 @@
 
 //GALLERY DETAILS PAGE
 $('.gallery-main').flickity({
-	setGallerySize: false,
+	setGallerySize: true,
 	prevNextButtons: false,
 	pageDots: false
 });

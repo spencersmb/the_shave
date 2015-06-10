@@ -256,8 +256,8 @@
 
 .blog__inner{
 		&--feature{
-		position:absolute;
-		top:-155px;
+		position:relative;
+		top:0;
 		width:100%;
 		margin:0 auto;
 	}
@@ -387,6 +387,46 @@
 		width:100%;
 		height:100%;
 	}
+}
+
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+
+
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+	.blog__inner{
+			&--feature{
+			position:absolute;
+			top:-155px;
+			width:100%;
+			margin:0 auto;
+		}
+
+		&--content{
+			margin:0 auto;
+		}
+	}
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+
+	
 }
 
 // ==========================================================================

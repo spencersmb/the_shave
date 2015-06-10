@@ -148,7 +148,7 @@ footer.loading{
   h1{
     font-size:em(75px);
     max-width:800px;
-    margin:0 auto;
+    margin:0 auto 25px;
     // color:$primary-color;
   }
   p{
@@ -161,6 +161,16 @@ footer.loading{
     margin-right: auto;
     font-weight: 300;
     line-height: em(21px);
+  }
+  h4{
+    text-transform: none;
+    font-weight:300;
+    font-size:em(16px);
+    color:#959595;
+    line-height: em(28px);
+    max-width: 900px;
+    text-align: center;
+    margin:0 auto;  
   }
 
 }
@@ -236,7 +246,7 @@ footer.loading{
 }
 
 .container__white{
-  min-height:440px;
+  min-height:100%;
   background:#fff;
 }
 
@@ -296,7 +306,11 @@ footer.loading{
     font-weight: 700;
     font-size: em(34px);
     margin-bottom: 25px;
-    &::before{
+  }
+}
+
+.heading-divider{
+      &::before{
       position:absolute;
       top:-25px;
       left:15px;
@@ -306,7 +320,6 @@ footer.loading{
       width:100%;
       content:"::::::::::"
     }
-  }
 }
 
 //EFFECTs
@@ -367,6 +380,7 @@ footer.loading{
 //Special settings for Safari
 .safari{
   height: 100% !important;
+
 }
 
 
@@ -399,6 +413,8 @@ footer.loading{
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+
+
   .card{
     .content{
       margin:7.525em 20.5%;;
@@ -410,11 +426,11 @@ footer.loading{
   }
 
   .offset__content--gallery{
-    padding:622.5px 60px 0 60px;
+    padding:0;
   }
 
   .offset__width{
-    width:1001.72px !important;
+    max-width:1200px !important;
   }
 
   .card__offset{
@@ -451,6 +467,15 @@ footer.loading{
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+
+  .offset__content--gallery{
+    padding:622.5px 60px 0 60px;
+  }
+
+  .container__white{
+    min-height:440px;
+    background:#fff;
+  }
 
   .card__feature{
    width:72.8%;
