@@ -195,20 +195,33 @@
 
 .quad-box{
 	position:relative;
-	overflow:hidden;
+	height:299px;
 	text-align:center;
 	width:100%;
-	background:$white;
+	// background:$white;
 	border: 1px solid #e8e8e8;
 
 	.inner{
-		margin:6em 3em;
+		background:$white;
+		height:100%;
+		width:100%;
+		position:absolute;
+
+		.content{
+			margin:6em 3em;
+		}
 	}
 
 	h5{
 		font-size: em(16px);
 		font-weight: bold;
 		font-family:$courier;
+	}
+
+	.inner-back{
+		margin:6em 3em;
+		color:$primary-color;
+		background:$primary-color;
 	}
 }
 
@@ -228,6 +241,8 @@
 		text-align: center;
 	}
 }
+
+
 
 // Displays greater than 768px 
 @include breakpoint(tablet) {

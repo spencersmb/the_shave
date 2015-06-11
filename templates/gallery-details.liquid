@@ -1,7 +1,7 @@
 {% layout "layout" %}
 
 {% block content %}
-<section class="container-fluid footer-push white-bg no-padding">
+<div class="container-fluid footer-push white-bg no-padding">
 
 		<!-- Intro blog -->
 		{% include "gallery/gallery-detail-intro" %}
@@ -9,6 +9,7 @@
 		<div class="container-fluid container__grey">
 			<div class="container sv__container--md ">
 				
+				{% comment %}Stats block{% endcomment %}
 				<div class="row stats__container">
 
 					{% comment %}Hair desc{% endcomment %}
@@ -29,66 +30,174 @@
 					
 					{% comment %}Hair Stats Grid{% endcomment %}
 					<div class="col-xs-12 col-md-7">
-						<div class="col-xs-12 col-sm-6 no-padding">
-							<div class="quad-box">
-								<div class="inner">
-									<img src="{{ 'stat-1.jpg' | asset_url}}" alt="">
-									<h5>
-										Hair Length
-									</h5>
-									<p>Medium</p>
+
+					<!-- TODO: figure out touch support for cards -->
+						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="quad-box flipper">
+								<div class="inner front">
+									<div class="content">
+										<img src="{{ 'stat-1.jpg' | asset_url}}" alt="">
+										<h5>
+											Hair Length
+										</h5>
+										<p>Medium</p>
+									</div>
+								</div>
+								<div class="back">
+									<p>back</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-6 no-padding">
-							<div class="quad-box">
-								<div class="inner">
-									<img src="{{ 'stat-2.jpg' | asset_url}}" alt="">
-									<h5>
-										Face Type
-									</h5>
-									<p>Square</p>
+
+						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="quad-box flipper">
+								<div class="inner front">
+									<div class="content">
+										<img src="{{ 'stat-2.jpg' | asset_url}}" alt="">
+										<h5>
+											Face Type
+										</h5>
+										<p>Square</p>
+									</div>
+								</div>
+								<div class="back">
+									<p>back</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-6 no-padding">
-							<div class="quad-box">
-								<div class="inner">
-									<img src="{{ 'stat-3.jpg' | asset_url}}" alt="">
-									<h5>
-										Hair Type
-									</h5>
-									{% comment %}<p>Medium</p>{% endcomment %}
+
+						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="quad-box flipper">
+								<div class="inner front">
+									<div class="content">
+										<img src="{{ 'stat-3.jpg' | asset_url}}" alt="">
+										<h5>
+											Hair Type
+										</h5>
+									</div>
+								</div>
+								<div class="back">
+									<p>back</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-12 col-sm-6 no-padding">
-							<div class="quad-box">
-								<div class="inner">
-									<img src="{{ 'stat-4.jpg' | asset_url}}" alt="">
-									<h5>
-										Time to cut
-									</h5>
-									<p>Fast</p>
+
+						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
+							<div class="quad-box flipper">
+								<div class="inner front">
+									<div class="content">
+										<img src="{{ 'stat-4.jpg' | asset_url}}" alt="">
+										<h5>
+											Time to cut
+										</h5>
+										<p>Fast</p>
+									</div>
+								</div>
+								<div class="back">
+									<p>back</p>
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 
+
 			</div>
+			{% comment %}
 			<div class="sv__container--sm">
+				
+			</div>
+			{% endcomment %}
+			
+		</div>
+
+	<!-- Barbers -->
+	<div class="container sv__container--md baber__box--wrapper">
+
+		<div class="headline-set1">
+			<h6>Select the best Barber</h6>
+			<h3>suggested barber</h3>
+		</div>
+
+		<div class="row barber__row">
+			
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
+
+				<a href="#" >
+				<div class="barber__profile">
+					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
+				</div>
+						
+					<div class="barber__title">
+						<h6>Adam Henry</h6>
+					</div>
+
+				</a>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
+
+				<a href="#" >
+				<div class="barber__profile">
+					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
+				</div>
+						
+					<div class="barber__title">
+						<h6>Adam Henry</h6>
+					</div>
+
+				</a>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
+
+				<a href="#" >
+				<div class="barber__profile">
+					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
+				</div>
+						
+					<div class="barber__title">
+						<h6>Adam Henry</h6>
+					</div>
+
+				</a>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
+
+				<a href="#" >
+				<div class="barber__profile">
+					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
+				</div>
+						
+					<div class="barber__title">
+						<h6>Adam Henry</h6>
+					</div>
+
+				</a>
 				
 			</div>
 			
 		</div>
+		<!-- End row -->
+		<div class="center-block text-center center-btn">
+			<button class="btn btn-gold">Book appointment</button>
+		</div>
+		
+	</div>
+	<!-- End Barber module container-->	
 
-
+	{% comment %}
 	{% include "blog/blog-related-articles" %}
 
 	{% include "blog/blog-comments" %}
+	{% endcomment %}
 
-</section>
+</div>
 
 
 {% endblock %}

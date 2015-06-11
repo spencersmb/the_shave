@@ -91,6 +91,28 @@
   float:right;
 }
 
+.btn-gold{
+  border-color:transparent;
+  padding:13px 36px;
+  font-size:em(12px);
+  font-family:$heading-font;
+  text-transform:uppercase;
+  border-radius:0;
+  background-color:$primary-color;
+  font-weight: 500;
+  color:#fff;
+  @include transition(all 0.35s);
+
+  &:hover{
+    color:$white;
+    background:#5f5134;
+  }
+}
+
+.center-btn{
+  margin-top: 40px;
+}
+
 
 // Displays greater than 768px 
 @include breakpoint(tablet) {
