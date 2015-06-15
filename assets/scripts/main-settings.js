@@ -1,6 +1,6 @@
 $(function() {
 
-	//Accordian Left side
+	// //Accordian Left side
 	//Disable pricing table Tabs all being closed at once.
 	$('.panel-left a').on('click',function(e){
 
@@ -44,9 +44,9 @@ $(function() {
 	    }
 	});
 
-	// ==========================================================================
-	// Safari special footer settings
-	// ==========================================================================
+	// // ==========================================================================
+	// // Safari special footer settings
+	// // ==========================================================================
 	function WhichBrowser(){
 		//IE
 		if(navigator.appName == "Microsoft Internet Explorer"){
@@ -80,9 +80,9 @@ $(function() {
 	WhichBrowser();
 
 	
-	// ==========================================================================
-	// Footer-push resize
-	// ==========================================================================
+	// // ==========================================================================
+	// // Footer-push resize
+	// // ==========================================================================
 	(function() {
 
 		
@@ -170,9 +170,9 @@ $(function() {
 		// }
 
 
-	// ==========================================================================
-	// Services
-	// ==========================================================================
+	// // ==========================================================================
+	// // Services
+	// // ==========================================================================
 
 
 		var faqTrigger = $('.shave__faq--trigger');
@@ -230,9 +230,9 @@ $(function() {
 		});
 
 
-    // ==========================================================================
-    // Team page
-    // ==========================================================================
+ //    // ==========================================================================
+ //    // Team page
+ //    // ==========================================================================
 
     var teamTrigger = $('.open');
 
@@ -244,9 +244,9 @@ $(function() {
     	$(this).parent('div').toggleClass('active');
     });
 
-    // ==========================================================================
-    // Gallery Index page
-    // ==========================================================================
+ //    // ==========================================================================
+ //    // Gallery Index page
+ //    // ==========================================================================
 
     $(window).load(function(){
 	    var $container = $('.portfolioContainer');
@@ -257,50 +257,6 @@ $(function() {
 			masonry: { "columnWidth": ".grid-sizer" }
 	    });
 	});
-
-	// ==========================================================================
-    // Gallery Detail page
-    // ==========================================================================
-    (function(){
-
-    	//Special gallery settings for responsiveness
-		var imgHeight;
-
-		//get height of image on window resize
-    	function getImgHeightMaster(){
-    		var myImg = document.querySelector("#myImg");
-    		var currHeight = myImg.clientHeight;
-
-    		return currHeight;
-    	}
-
-    	//get height of thumbnail on window resize
-    	function getThumbnailHeight(){
-    		var myImg = document.querySelector("#myThumb");
-    		var currHeight = myImg.clientHeight;
-
-    		return currHeight;
-    	}
-
-    	//apply
-    	$(window).on('resize', function(){
-			
-			$(".gallery-main").find('.flickity-viewport').height(getImgHeightMaster());
-			$('.gallery-nav').height(getThumbnailHeight());
-		});
-
-
-		//Grid stats
-		var statBoxHeight = $(".stats__container").find('.quad-box').height();
-
-		$(".quad-box").each(function(item){
-			// console.log($(this).height());
-			$(this).height(statBoxHeight);
-		});
-
-
-
-    })();
 
 	// ==========================================================================
 	// Revolution Slider Settings

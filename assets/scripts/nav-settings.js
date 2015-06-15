@@ -1,28 +1,50 @@
 $(function() {
 
-	//Open close nav
+	//Open close 
 	var $menu_trigger = $('#sv__nav--trigger'),
 	    $content_wrapper = $('.sv__main--content'),
 	    $footer = $('footer'),
-	    $navigation = $('header');
+	    $navigation = $('#header');
 
-	    //Open Close Menu
-	    $menu_trigger.on('click', function(event){
+	    //Open Close navA
+	    // $menu_trigger.on('click', function(event){
 
-	        event.preventDefault();
+	    //     event.preventDefault();
 
-	        //Add class to transform hamburger to X
-	        $menu_trigger.toggleClass('is-clicked');
+	    //     //Add class to transform hamburger to X
+	    //     $menu_trigger.toggleClass('is-clicked');
 
-	        //Slide nav and header over at same time
-	        $navigation.toggleClass('nav-is-open');
-	        $footer.toggleClass('nav-is-open');
-	        $content_wrapper.toggleClass('nav-is-open');
+	    //     //Slide nav and header over at same time
+	    //     $navigation.toggleClass('nav-is-open');
+	    //     $footer.toggleClass('nav-is-open');
+	    //     $content_wrapper.toggleClass('nav-is-open');
 
-	        //show nav
-	        $('#sv__navigation').toggleClass('nav-is-open');
+	    //     //show nav
+	    //     $('#sv__navigation').toggleClass('nav-is-open');
 
-	    });
+	    // });
+
+
+
+		//SETTINGS FOR NAVB
+
+		function toggleNavB(boolean){
+			$('body').toggleClass('navB__pause', boolean);
+			$('.sv__navB--container, .sv__overlay--navB').toggleClass('is-visible', boolean);
+			$('main').toggleClass('scale-down', boolean);
+		}
+
+		//Open Nav
+		$menu_trigger.on('click', function(evt){
+			evt.preventDefault();
+			toggleNavB(true);
+		});
+
+		//Close Nav
+		$('.sv__NavB--close, .sv__overlay--navB').on('click', function(evt){
+			evt.preventDefault();
+			toggleNavB(false);
+		});
 
     //ON SCROLL Add shadow
 

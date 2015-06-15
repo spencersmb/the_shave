@@ -118,23 +118,35 @@ footer.loading{
   // @include transition(opacity, 300ms, ease-out);
 }
 
-.sv__main--content{
-  height: auto;
-  position: relative;
-  background-color: $white;
-  z-index: $content;
-  padding-top: $header-M;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
-  @include transition($pushNav);
-  // @include transition-property(transform);
-  // @include transition-duration(.4s);
-  background-color:transparent;
+//nav A
+// .sv__main--content{
+//   height: auto;
+//   position: relative;
+//   background-color: $white;
+//   z-index: $content;
+//   padding-top: $header-M;
+//   /* Force Hardware Acceleration in WebKit */
+//   -webkit-backface-visibility: hidden;
+//   @include transition($pushNav);
+//   // @include transition-property(transform);
+//   // @include transition-duration(.4s);
+//   background-color:transparent;
   
-  //Slide-out nav amount
-  &.nav-is-open {
-    @include transform(translateX($navMove));
-  }
+//   //Slide-out nav amount
+//   &.nav-is-open {
+//     @include transform(translateX($navMove));
+//   }
+// }
+
+.sv__main--content {
+  position: relative;
+  height: auto;
+  z-index: $content;
+  background-color: $white;
+  background-color:transparent;
+  padding-top: $header-M;
+  @include transition(transform .4s);
+  box-shadow: 0 0 30px darken(#5c4b51, 20%);
 }
 
 .sv__spacer{

@@ -201,3 +201,50 @@
 
 
 {% endblock %}
+{% block scripts %}
+<script>
+	// ==========================================================================
+    // Gallery Detail page
+    // ==========================================================================
+    (function(){
+
+    	//Special gallery settings for responsiveness
+		var imgHeight;
+
+		//get height of image on window resize
+    	function getImgHeightMaster(){
+    		var myImg = document.querySelector("#myImg");
+    		var currHeight = myImg.clientHeight;
+
+    		return currHeight;
+    	}
+
+    	//get height of thumbnail on window resize
+    	function getThumbnailHeight(){
+    		var myImg = document.querySelector("#myThumb");
+    		var currHeight = myImg.clientHeight;
+
+    		return currHeight;
+    	}
+
+    	//apply
+    	$(window).on('resize', function(){
+			
+			$(".gallery-main").find('.flickity-viewport').height(getImgHeightMaster());
+			$('.gallery-nav').height(getThumbnailHeight());
+		});
+
+
+		//Grid stats
+		var statBoxHeight = $(".stats__container").find('.quad-box').height();
+
+		$(".quad-box").each(function(item){
+			// console.log($(this).height());
+			$(this).height(statBoxHeight);
+		});
+
+
+
+    })();
+</script>
+{% endblock %}

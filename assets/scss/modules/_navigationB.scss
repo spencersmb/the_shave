@@ -1,0 +1,201 @@
+// NAV B SETTINGS
+$animation-duration: 0.4s;
+// super light grid - it works with the .cd-container class inside style.scss
+
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+.navB__pause{
+  overflow-y: hidden;
+  margin-right: 15px;
+}
+
+.sv__navB--container{
+  position: fixed;
+  z-index: 4;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow-y: auto;
+  background-color: $white;
+
+  //Animation
+  @include transform(translateZ(0));
+  @include backface-visibility(hidden);
+
+  //move to right 100%
+  @include transform(translateX(126%));
+  @include transition(transform $animation-duration 0s, box-shadow 0s $animation-duration);
+
+  &.is-visible {
+    @include transform(translateX(0));
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -4px 0 30px rgba(#000, .2);
+    @include transition(transform $animation-duration 0s, box-shadow 0s 0s);
+  }
+
+  header{
+    padding:3.2em 6.25% 0 0;
+    height: em(116px);
+    position:relative;
+    background-color:$white;
+  }
+
+  h3{
+    font: {
+      size: em(16px);
+      weight: bold;
+    }
+    text-transform: uppercase;
+    color:$primary-color;
+    text-align:center;
+  }
+
+}
+
+.sv__NavB--close{
+
+  position: absolute;
+  height: 29px;
+  width: 44px;
+ 
+  left: 1.25%;
+  @include center(y);
+
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+
+  &::after, 
+  &::before {
+    //X lines
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 32px;
+    left: 50%;
+    top: 50%;
+    background-color: $black; 
+    @include backface-visibility(hidden);
+  }
+
+  &::after {
+    @include transform(translateX(-50%) translateY(-50%) rotate(45deg));
+  }
+
+  &::before {
+    @include transform(translateX(-50%) translateY(-50%) rotate(-45deg));
+  }
+
+  .no-touch &:hover {
+    opacity: .8;
+  }
+}
+
+//Boxs
+.sv__navB{
+
+  margin-bottom: 0;
+  @include clearfix;
+  background-color: darken(#ffffff, 15%);
+
+  li {
+    @include column(.5);
+
+    //height of nav
+    height: calc((100vh - 68px)/3);
+    min-height: 120px;
+    border: 1px solid $white;
+    border-top: none;
+    border-left: none;
+
+    &:nth-of-type(2n) {
+      border-right-width: 0;
+    }
+  }
+
+}
+
+.sv__overlay--navB {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: rgba(#000, .35);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+  @include backface-visibility(hidden);
+  @include transition(opacity $animation-duration 0s, visibility 0s $animation-duration);
+  
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity $animation-duration 0s, visibility 0s 0s);
+  }
+}
+
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+
+  .sv__navB--container{
+    position: fixed;
+    z-index: 4;
+    top:0;
+    width:80%;
+
+    &.is-visible {
+      @include transform(translateX(25%));
+    }
+  } 
+
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+.sv__navB{
+  li {
+        /* 116px is the navigation header height and the menu items will be allocated in 3 rows */
+        height: calc((100vh - 116px)/3);
+        min-height: 200px;
+      }
+
+  }
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+  .sv__navB{
+    li {
+      @include column(.3333);
+      /* 116px is the navigation header height  and the menu items will be allocated in 2 rows */
+      height: calc((100vh - 116px)/2);
+      min-height: 250px;
+
+      &:nth-of-type(2n) {
+        border-right-width: 1px;
+      }
+      
+      &:nth-of-type(3n) {
+        border-right-width: 0;
+      }
+    }
+  }
+
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+  
+
+  
+}
+
+

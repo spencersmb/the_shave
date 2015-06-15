@@ -12,13 +12,16 @@
 
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
+        {{ "jquery.min.js" | asset_url | script_tag }}
+        {{ "bootstrap.js" | asset_url | script_tag }}
     </head>
     <body class="loading">
 
         <div class="load-icon"></div>
         {% include "header" %}
 
-        {% include "nav" %}
+        {% comment %}nav-a{% endcomment %}
+        {% comment %}{% include "nav" %}{% endcomment %}
 
         <main class="sv__main--content">
 
@@ -31,15 +34,16 @@
             
             
         </main> <!-- end canvas -->
+        
+        {% comment %}{% include "navB" %}{% endcomment %}
+
         {% include "footer" %}
 
         <!-- Script block allowing child pages to inject their own scripts -->
-        {% block scripts %}
-        
+        {% block scripts %} {% endblock %}
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        {% endblock %}
-        {{ "jquery.min.js" | asset_url | script_tag }}
-        {{ "bootstrap.js" | asset_url | script_tag }}
+        
+        
         
         <!-- Plugins -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
@@ -58,17 +62,6 @@
         {{ "main-settings.js" | asset_url | script_tag }}
         {{ "map-settings.js" | asset_url | script_tag }}
         {{ "skrollr-settings.js" | asset_url | script_tag }}
-
-        {{ "jquery.arctext.js" | asset_url | script_tag }}
-
-
-
-        <script>
-       
-        </script>
-
-
-
 
     </body>
 </html>
