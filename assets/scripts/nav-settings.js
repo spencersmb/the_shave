@@ -1,10 +1,21 @@
 $(function() {
 
 	//Open close 
-	var $menu_trigger = $('#sv__nav--trigger'),
-	    $content_wrapper = $('.sv__main--content'),
+	var $menu_trigger = $('.sv-dropdown-trigger'),
+	    // $content_wrapper = $('.sv__main--content'),
+	    $nav = $('.sv-dropdown'),
 	    $footer = $('footer'),
 	    $navigation = $('#header');
+
+
+	    //dropdown nav
+	    $menu_trigger.on('click', function(event){
+	    	event.preventDefault();
+
+    	    //Open nav
+    	    $nav.toggleClass('dropdown-is-active');
+    	    $menu_trigger.toggleClass('active');
+	    });
 
 	    //Open Close navA
 	    // $menu_trigger.on('click', function(event){
@@ -28,23 +39,23 @@ $(function() {
 
 		//SETTINGS FOR NAVB
 
-		function toggleNavB(boolean){
-			$('body').toggleClass('navB__pause', boolean);
-			$('.sv__navB--container, .sv__overlay--navB').toggleClass('is-visible', boolean);
-			$('main').toggleClass('scale-down', boolean);
-		}
+		// function toggleNavB(boolean){
+		// 	$('body').toggleClass('navB__pause', boolean);
+		// 	$('.sv__navB--container, .sv__overlay--navB').toggleClass('is-visible', boolean);
+		// 	$('main').toggleClass('scale-down', boolean);
+		// }
 
-		//Open Nav
-		$menu_trigger.on('click', function(evt){
-			evt.preventDefault();
-			toggleNavB(true);
-		});
+		// //Open Nav
+		// $menu_trigger.on('click', function(evt){
+		// 	evt.preventDefault();
+		// 	toggleNavB(true);
+		// });
 
-		//Close Nav
-		$('.sv__NavB--close, .sv__overlay--navB').on('click', function(evt){
-			evt.preventDefault();
-			toggleNavB(false);
-		});
+		// //Close Nav
+		// $('.sv__NavB--close, .sv__overlay--navB').on('click', function(evt){
+		// 	evt.preventDefault();
+		// 	toggleNavB(false);
+		// });
 
     //ON SCROLL Add shadow
 

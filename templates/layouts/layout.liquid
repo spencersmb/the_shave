@@ -7,6 +7,7 @@
         <!-- Styles -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
         {{ "main.css" | asset_url | stylesheet_tag }}
+        {{ "modernizr.js" | asset_url | script_tag }}
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -20,22 +21,13 @@
         <div class="load-icon"></div>
         {% include "header" %}
 
-        {% comment %}nav-a{% endcomment %}
-        {% comment %}{% include "nav" %}{% endcomment %}
-
         <main class="sv__main--content">
-
-            <!-- {% block header %}{% endblock %} -->
 
             {% block content %}{% endblock %}
 
             {% block footer %}{% endblock %}
-
-            
             
         </main> <!-- end canvas -->
-        
-        {% comment %}{% include "navB" %}{% endcomment %}
 
         {% include "footer" %}
 

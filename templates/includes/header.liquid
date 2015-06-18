@@ -6,9 +6,32 @@
     </a>
 
     <!--nav hamburger-->
-    <a id="sv__nav--trigger" href="#">
+    {% comment %}<a id="sv__nav--trigger" href="#">
       <!-- <span class="sb-menu-text">Menu</span> -->
       <span class="sv__menu--icon"></span>
-    </a>
+    </a>{% endcomment %}
+	<div class="sv-dropdown-wrapper">
+		<a href="#" class="sv-dropdown-trigger">Menu</a>
+
+		<nav class="sv-dropdown">
+			<h2>Title</h2>
+			<a href="#" class="sv-close">Close</a>
+
+			<ul class="sv-dropdown-content">
+				<li>
+					<form class="sv-search">
+						<input type="search" placeholder="Search...">
+					</form>
+				</li>
+				<li>
+					<a href="#">Page 1</a>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+    
+
+    
 
 </header>

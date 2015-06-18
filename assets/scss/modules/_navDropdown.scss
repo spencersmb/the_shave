@@ -1,0 +1,180 @@
+//NAV BAR STYLES
+
+//TODO change to black for test
+
+//Nav A
+#header {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  height: $header-M;
+  width: 100%;
+  background: $white;
+  z-index: $above-content; //3
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+
+  // @include transition-property(transform);
+  // @include transition-duration(.4s);
+  @include transition($pushNav);
+
+  &.is-fixed {
+    position: fixed;
+  }
+}
+
+#sv__logo {
+  height:100%;
+  display: inline-block;
+  left:-5px;
+  position:relative;
+  
+  h1{
+    font-weight: 700;
+    font-size: em(24px);
+    text-transform: uppercase;
+    margin-top: 28px;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+
+.nav-shadow{
+  @include transition-property(all !important);
+  @include box-shadow(none);
+}
+
+.shadow-on{
+    @include transition-duration(.2s);
+    @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+}
+
+.sv-dropdown-wrapper{
+  display: inline-block;
+  position:absolute;
+  top:19px;
+  left:5%;
+}
+
+.sv-dropdown-trigger{
+  display: block;
+  background-color:$black;
+  color:$white;
+  padding: 0 36px 0 20px;
+  font-size:16px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  &:focus{
+    color:$white;
+  }
+
+  .no-touch &:hover {
+    color:$white;
+    background-color: lighten($black, 5%);
+  }
+
+  &.active{
+    background-color:$primary-color;
+    
+    .no-touch &:hover {
+      color:$white;
+      background-color:lighten($primary-color, 5%);;
+    }
+
+  }
+}
+
+.sv-dropdown h2,
+.sv-dropdown-content a,
+.sv-dropdown-content ul a {
+  height:50px;
+  line-height: 50px;
+}
+
+.sv-dropdown h2,
+.sv-dropdown-content a,
+.sv-dropdown-content ul a,
+.sv-dropdown-content .sv-divider {
+  padding: 0 20px;
+}
+
+.sv-dropdown{
+  position:fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  color: $black;
+
+  /* Force Hardware Acceleration */
+  @include backface-visibility(hidden);
+  @include transform(translateZ(0));
+
+  @include transform(translateY(-100%));
+  @include transition(transform .5s 0s, visibility 0s .5s);
+
+  &.dropdown-is-active{
+    visibility: visible;
+    @include transform(translateY(0));
+    @include transition(transform .5s 0s, visibility 0s 0s);
+  }
+
+
+}
+
+
+
+// Displays greater than 768px 
+@include breakpoint(tablet) {
+
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+
+
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+  .sv-dropdown{
+    position:absolute;
+    top: 100%;
+    height: auto;
+    width:auto;
+    @include transform(translateX(0));
+    box-shadow: 0 4px 12px rgba(#000, .1);
+    opacity: 0;
+    @include transform(translateY(30px));
+    @include transition(opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s);
+
+    &.dropdown-is-active {
+        opacity: 1;
+        @include transform(translateY(0));
+        @include transition(opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s);
+      }
+
+    h2, .sv-close{
+      display: none;
+    }
+  }
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+  
+
+  
+}
