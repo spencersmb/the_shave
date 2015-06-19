@@ -3,7 +3,7 @@ $(function() {
 	//Open close 
 	var $menu_trigger = $('.sv-dropdown-trigger'),
 	    // $content_wrapper = $('.sv__main--content'),
-	    $nav = $('.sv-dropdown'),
+	    $nav = $('.cd-dropdown'),
 	    $footer = $('footer'),
 	    $navigation = $('#header');
 
