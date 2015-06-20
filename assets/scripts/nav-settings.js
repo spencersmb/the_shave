@@ -1,61 +1,58 @@
 $(function() {
 
 	//Open close 
-	var $menu_trigger = $('.sv-dropdown-trigger'),
+	var $menu_trigger = $('.cd-dropdown-trigger'),
 	    // $content_wrapper = $('.sv__main--content'),
 	    $nav = $('.cd-dropdown'),
 	    $footer = $('footer'),
 	    $navigation = $('#header');
 
 
-	    //dropdown nav
+	    //open dropdown nav
 	    $menu_trigger.on('click', function(event){
 	    	event.preventDefault();
 
     	    //Open nav
     	    $nav.toggleClass('dropdown-is-active');
-    	    $menu_trigger.toggleClass('active');
+    	    $menu_trigger.toggleClass('dropdown-is-active');
 	    });
 
-	    //Open Close navA
-	    // $menu_trigger.on('click', function(event){
+	    //on mobile - open submenu
+	    $('.has-children').children('a').on('click', function(event){
 
-	    //     event.preventDefault();
+	    	//prevent default clicking on direct children of .has-children 
+	    	event.preventDefault();
+	    	var selected = $(this);
+	    	selected.next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('move-out');
+	    });
 
-	    //     //Add class to transform hamburger to X
-	    //     $menu_trigger.toggleClass('is-clicked');
+	//on desktop - differentiate between a user trying to hover over a dropdown item vs trying to navigate into a submenu's contents
+	var submenuDirection = ( !$('.cd-dropdown-wrapper').hasClass('open-to-left') ) ? 'right' : 'left';
+	$('.cd-dropdown-content').menuAim({
+        activate: function(row) {
+        	$(row).children().addClass('is-active').removeClass('fade-out');
+        	if( $('.cd-dropdown-content .fade-in').length == 0 ) $(row).children('ul').addClass('fade-in');
+        },
+        deactivate: function(row) {
+        	$(row).children().removeClass('is-active');
+        	if( $('li.has-children:hover').length == 0 || $('li.has-children:hover').is($(row)) ) {
+        		$('.cd-dropdown-content').find('.fade-in').removeClass('fade-in');
+        		$(row).children('ul').addClass('fade-out')
+        	}
+        },
+        exitMenu: function() {
+        	$('.cd-dropdown-content').find('.is-active').removeClass('is-active');
+        	return true;
+        },
+        submenuDirection: submenuDirection,
+    });
 
-	    //     //Slide nav and header over at same time
-	    //     $navigation.toggleClass('nav-is-open');
-	    //     $footer.toggleClass('nav-is-open');
-	    //     $content_wrapper.toggleClass('nav-is-open');
-
-	    //     //show nav
-	    //     $('#sv__navigation').toggleClass('nav-is-open');
-
-	    // });
-
-
-
-		//SETTINGS FOR NAVB
-
-		// function toggleNavB(boolean){
-		// 	$('body').toggleClass('navB__pause', boolean);
-		// 	$('.sv__navB--container, .sv__overlay--navB').toggleClass('is-visible', boolean);
-		// 	$('main').toggleClass('scale-down', boolean);
-		// }
-
-		// //Open Nav
-		// $menu_trigger.on('click', function(evt){
-		// 	evt.preventDefault();
-		// 	toggleNavB(true);
-		// });
-
-		// //Close Nav
-		// $('.sv__NavB--close, .sv__overlay--navB').on('click', function(evt){
-		// 	evt.preventDefault();
-		// 	toggleNavB(false);
-		// });
+    //submenu items - go back link
+	$('.go-back').on('click', function(){
+		var selected = $(this),
+			visibleNav = $(this).parent('ul').parent('.has-children').parent('ul');
+		selected.parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('move-out');
+	}); 
 
     //ON SCROLL Add shadow
 
