@@ -22,13 +22,13 @@
 				<div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
 
 				<ul id="myTab" class="nav nav-tabs nav-justified white-tabs" role="tablist">
-					<li role="presentation" class="tab__control ">
+					<li id="beard-mustache" role="presentation" class="tab__control ">
 						<a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="false">Beard & Mustache</a>
 					</li>
-					<li role="presentation" class="tab__control active">
+					<li id="shave" role="presentation" class="tab__control active">
 						<a href="#shaving" role="tab" id="shaving-tab" data-toggle="tab" aria-controls="shaving" aria-expanded="false">Shaving</a>
 					</li>
-					<li role="presentation" class="tab__control">
+					<li id="haircut" role="presentation" class="tab__control">
 						<a href="#haircut" role="tab" id="haircut-tab" data-toggle="tab" aria-controls="haircut" aria-expanded="false">Hair Cuts</a>
 					</li>
 			    </ul>
@@ -131,6 +131,45 @@
 								<div class="item">
 									<div class="title">
 										<h3>Head Shave</h3>
+									</div>
+									<div class="price">
+										<p>$35.00</p>
+									</div>
+
+									<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="title">
+										<h3>Classic Shave</h3>
+									</div>
+									<div class="price">
+										<p>$35.00</p>
+									</div>
+
+									<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="title">
+										<h3>Classic Shave</h3>
+									</div>
+									<div class="price">
+										<p>$35.00</p>
+									</div>
+
+									<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="title">
+										<h3>Classic Shave</h3>
 									</div>
 									<div class="price">
 										<p>$35.00</p>
@@ -257,4 +296,44 @@
 	</section>
 
 
+{% endblock %}
+{% block scripts %}
+<script>
+	// ==========================================================================
+    // Set tab active based on URL
+    // ==========================================================================
+	$(function() {
+
+		//Filter
+		var val = window.location.hash;
+		var hash;
+		console.log(val);
+
+		if(val != ''){
+			hash = val.substr(5);
+
+			$('#myTab > li').each(function(){
+				$(this).removeClass('active');
+				if( hash === this.id ){
+					$(this).addClass('active');
+				}
+			});
+
+		}
+
+		//Change size of body depending on content in tabs
+
+			$('#myTab').on('click', 'li', function(){
+				var galleryPageHeight = $(window).height();
+				console.log(galleryPageHeight);
+		  		var tabContentHeight = $('.sv__container--sm').height();
+		  		console.log(tabContentHeight);
+		  		var updatedHeight = galleryPageHeight - tabContentHeight;
+
+		  		$('body').css('height', updatedHeight + 'px');
+			})
+			
+	});
+    
+</script>
 {% endblock %}

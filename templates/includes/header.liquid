@@ -5,11 +5,6 @@
     <h1>The Shave</h1>
     </a>
 
-    <!--nav hamburger-->
-    {% comment %}<a id="sv__nav--trigger" href="#">
-      <!-- <span class="sb-menu-text">Menu</span> -->
-      <span class="sv__menu--icon"></span>
-    </a>{% endcomment %}
 	<div class="cd-dropdown-wrapper">
 		<a href="#" class="cd-dropdown-trigger">Menu</a>
 
@@ -25,24 +20,30 @@
 
 					<!-- Services -->
 					<li class="has-children">
-						<a href="/services">Services</a>
+						<a href="/services">What to expect</a>
 
 						<ul class="cd-dropdown-services is-hidden">
 							{% comment %}<li class="go-back"><a href="#0">Menu</a></li>{% endcomment %}
 							<li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
 
-							<li style="background-image: url({{'nav-haircuts.jpg' | asset_url}});">
+							<li class="cd-service-bg" style="background-image: url({{'nav-shave.jpg' | asset_url}});" onmouseover="$(this).css('background-image','url({{'nav-shave-hover.jpg' | asset_url}})');" onmouseout="$(this).css('background-image','url({{'nav-shave.jpg' | asset_url}})');">
 
 								<a class="cd-dropdown-item" href="/service-shave">
-									<h3>The Shave</h3>
+									<h3>When you get a shave</h3>
+									<p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
 								</a>
+								
+
 							</li>
 
-							<li style="background-image: url({{'nav-haircuts.jpg' | asset_url}});">
+							<li class="cd-service-bg" style="background-image: url({{'nav-haircuts.jpg' | asset_url}});" onmouseover="$(this).css('background-image','url({{'nav-haircuts-hover.jpg' | asset_url}})');" onmouseout="$(this).css('background-image','url({{'nav-haircuts.jpg' | asset_url}})');">
 
 								<a class="cd-dropdown-item" href="/service-shave">
-									<h3>Haircuts</h3>
+									<h3>When you get a hair cut</h3>
+									<p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
 								</a>
+
+
 							</li>
 
 						</ul> <!-- .cd-dropdown-gallery -->
@@ -90,7 +91,7 @@
 
 					<!-- List items -->
 					<li class="has-children">
-						<a href="/">Service list</a>
+						<a href="/">Our Services</a>
 
 						<ul class="cd-secondary-dropdown is-hidden">
 							<li class="go-back"><a href="#0">Menu</a></li>
@@ -100,14 +101,14 @@
 
 								<ul class="is-hidden">
 									<li class="go-back"><a href="#0">Haircuts</a></li>
-									<li class="see-all"><a href="/gallery">View Gallery</a></li>
+									<li class="see-all"><a href="/full-gallery/#filter=.hair">View Gallery</a></li>
 									<li class="has-children">
 										<a href="#0">Mens Cuts</a>
 
 										<ul class="is-hidden">
-											<li class="go-back"><a href="#0">Mens Cuts</a></li>
-											<li class="see-all"><a href="/gallery">View Gallery</a></li>
-											<li><a href="http://codyhouse.co/?p=748">Classic Cut</a></li>
+											<li class="go-back"><a href="/prices/#tab=haircut">Mens Cuts</a></li>
+											<li class="see-all"><a href="/full-gallery/#filter=.hair">View Gallery</a></li>
+											<li><a href="/prices/#tab=haircut">Classic Cut</a></li>
 											<li><a href="http://codyhouse.co/?p=748">Buzz Cut</a></li>
 											<li><a href="http://codyhouse.co/?p=748">Cut &amp; Shave</a></li>
 											<li><a href="http://codyhouse.co/?p=748">Color</a></li>
@@ -136,8 +137,8 @@
 
 								<ul class="is-hidden">
 									<li class="go-back"><a href="#0">Shave</a></li>
-									<li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
-									<li><a href="http://codyhouse.co/?p=748">The Signature Shave</a></li>
+									<li class="see-all"><a href="/full-gallery/#filter=.shave">View Gallery</a></li>
+									<li><a href="/prices/#tab=shave">The Signature Shave</a></li>
 									<li><a href="http://codyhouse.co/?p=748">The Royal Shave</a></li>
 									<li><a href="http://codyhouse.co/?p=748">Traditional Shave</a></li>
 									<li><a href="#0">Razor edging</a></li>
@@ -151,7 +152,7 @@
 								<ul class="is-hidden">
 									<li class="go-back"><a href="#0">Mustaches</a></li>
 									<li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
-									<li><a href="http://codyhouse.co/?p=748">Mustache Trim</a></li>
+									<li><a href="/prices/#tab=beard-mustache">Mustache Trim</a></li>
 									<li><a href="http://codyhouse.co/?p=748">Mustache Wax</a></li>
 									<li><a href="http://codyhouse.co/?p=748">Stlye the Stash</a></li>
 								</ul>
@@ -162,7 +163,7 @@
 
 								<ul class="is-hidden">
 									<li class="go-back"><a href="#0">Clothing</a></li>
-									<li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+									<li class="see-all"><a href="/full-gallery/#filter=.beard">View Gallery</a></li>
 									<li><a href="http://codyhouse.co/?p=748">Beard Trim</a></li>
 									<li><a href="http://codyhouse.co/?p=748">Beard Waxing</a></li>
 									<li><a href="http://codyhouse.co/?p=748">Goatee Trim</a></li>
@@ -277,7 +278,7 @@
 					{% comment %}<li class="cd-divider">Divider</li>{% endcomment %}
 					
 				</ul> <!-- .cd-dropdown-content -->
-			</nav> <!-- .cd-dropdown -->
+		</nav> <!-- .cd-dropdown -->
 
 	</div>
     

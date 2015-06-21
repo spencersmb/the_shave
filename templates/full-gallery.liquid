@@ -88,6 +88,7 @@
 
 {% endblock %}
 {% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
 <script>
 	// ==========================================================================
     // Full gallery Isotope
@@ -112,14 +113,28 @@
 	  		var filterContentHeight = $('.full-width-gallery').height();
 	  		
 	  		var updatedHeight = galleryPageHeight - filterContentHeight;
-	  		
+
 	  		$('body').css('height', updatedHeight + 'px');
 		});
 
-	});
+		//Filter
+		var val = window.location.hash;
+		var hash;
+		// console.log(val);
 
-	$(function() {
-		
+		if(val != ''){
+			hash = val.substr(8);
+			// console.log(hash)
+			$fullGrid.isotope({ filter: hash });
+			// $('#myTab > li').each(function(){
+			// 	$(this).removeClass('active');
+			// 	if( hash === this.id ){
+			// 		$(this).addClass('active');
+			// 	}
+			// });
+
+		}
+
 	});
     
 </script>
