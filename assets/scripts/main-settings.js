@@ -254,8 +254,8 @@ $(function() {
 	        itemSelector: ".gallery-item",
 						 //layoutMode: 'fitRows',
 						 percentPosition: true,
-			masonry: { "columnWidth": ".grid-sizer" }
-	    });
+			masonry: { "columnWidth": 100 }
+	    }); 
 	});
 
 	// ==========================================================================

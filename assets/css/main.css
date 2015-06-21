@@ -14950,6 +14950,17 @@ footer.nav-is-open {
   clear: both;
 }
 
+.full-width-gallery span {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: none;
+  position: absolute;
+  min-height: 100%;
+}
+
 @media (min-width: 768px) {
   .gallery-item {
     float: left;
@@ -14958,6 +14969,93 @@ footer.nav-is-open {
 
   .grid-sizer, .gallery-item {
     width: 25%;
+  }
+
+  .full-width-gallery .gallery-item {
+    float: left;
+    height: 450px;
+    overflow: hidden;
+  }
+  .full-width-gallery .gallery-item img {
+    width: 100%;
+  }
+  .full-width-gallery .grid-sizer {
+    width: 50%;
+  }
+  .full-width-gallery .gallery-item {
+    width: 50%;
+  }
+  .full-width-gallery .gallery-item.width2 {
+    width: 100%;
+  }
+  .full-width-gallery .gallery-item.height2 {
+    height: 900px;
+  }
+}
+@media (min-width: 992px) {
+  .full-width-gallery .gallery-item {
+    float: left;
+    height: 300px;
+    overflow: hidden;
+  }
+  .full-width-gallery .gallery-item img {
+    width: 100%;
+  }
+  .full-width-gallery .grid-sizer {
+    width: 25%;
+  }
+  .full-width-gallery .gallery-item {
+    width: 25%;
+  }
+  .full-width-gallery .gallery-item.width2 {
+    width: 50%;
+  }
+  .full-width-gallery .gallery-item.height2 {
+    height: 600px;
+  }
+}
+@media (min-width: 1200px) {
+  .full-width-gallery .gallery-item {
+    float: left;
+    height: 350px;
+    overflow: hidden;
+  }
+  .full-width-gallery .gallery-item img {
+    width: 100%;
+  }
+  .full-width-gallery .grid-sizer {
+    width: 25%;
+  }
+  .full-width-gallery .gallery-item {
+    width: 25%;
+  }
+  .full-width-gallery .gallery-item.width2 {
+    width: 50%;
+  }
+  .full-width-gallery .gallery-item.height2 {
+    height: 700px;
+  }
+}
+@media (min-width: 1600px) {
+  .full-width-gallery .gallery-item {
+    float: left;
+    height: 450px;
+    overflow: hidden;
+  }
+  .full-width-gallery .gallery-item img {
+    width: 100%;
+  }
+  .full-width-gallery .grid-sizer {
+    width: 20%;
+  }
+  .full-width-gallery .gallery-item {
+    width: 20%;
+  }
+  .full-width-gallery .gallery-item.width2 {
+    width: 40%;
+  }
+  .full-width-gallery .gallery-item.height2 {
+    height: 900px;
   }
 }
 .gallery {

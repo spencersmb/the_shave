@@ -1,0 +1,103 @@
+{% layout "layout" %}
+
+{% block content %}
+<!-- TODO: Comment this section out -->
+	<section class="container-fluid white-bg">
+		<div class="row sv__container--sm">
+
+			<div class="col-xs-12 inner__header--sm">
+				<h1>Trending Cuts</h1>
+				<h3>The latest hair cuts that made our heads turn.</h3>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="container-fluid footer-push container__white no-padding">
+		
+		<div class="full-width-gallery">
+
+		 	<div class="grid-sizer"></div>
+			
+
+			{% comment %}section1{% endcomment %}
+			<div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    <div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		 	<div class="gallery-item width2 height2 objects">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    <div class="gallery-item width2 people places">
+		        <span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
+		    </div> 
+		    
+			<div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    <div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    {% comment %}section1{% endcomment %}
+
+		    <div class="gallery-item width2 height2 objects">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    
+
+
+
+		    <div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+
+
+		    <div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    <div class="gallery-item width2 people places">
+		        <span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    <div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		    <div class="gallery-item food">
+		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		    </div>
+
+		 
+		</div>
+
+	</section>
+
+
+{% endblock %}
+{% block scripts %}
+<script>
+	// ==========================================================================
+    // Full gallery Isotope
+    // ==========================================================================
+    $(window).load(function(){
+	    var $fullGrid = $('.full-width-gallery');
+	    $fullGrid.isotope({
+	        itemSelector: ".gallery-item",
+						 //layoutMode: 'fitRows',
+						 percentPosition: true,
+			masonry: { "columnWidth": ".grid-sizer" }
+	    }); 
+	});
+    
+</script>
+{% endblock %}
