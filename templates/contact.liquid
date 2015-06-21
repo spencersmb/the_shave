@@ -92,3 +92,7 @@
 	</section>
 
 {% endblock %}
+{% block scripts %}
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    {{ "map-settings.js" | asset_url | script_tag }}
+{% endblock %}

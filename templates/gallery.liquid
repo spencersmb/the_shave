@@ -56,3 +56,21 @@
 
 
 {% endblock %}
+{% block scripts %}
+<script>
+// ==========================================================================
+// Gallery Index page
+// ==========================================================================
+
+	    $(window).load(function(){
+		    var $container = $('.portfolioContainer');
+		    $container.isotope({
+		        itemSelector: ".gallery-item",
+							 //layoutMode: 'fitRows',
+							 percentPosition: true,
+				masonry: { "columnWidth": ".grid-sizer" }
+		    }); 
+		});
+    
+</script>
+{% endblock %}

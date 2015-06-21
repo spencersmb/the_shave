@@ -103,17 +103,16 @@
 
 	    $('.filter-group').on( 'click', 'li', function() {
 
-	    	console.log($(window).height());
 	    	var galleryPageHeight = $(window).height();
-	    	console.log(galleryPageHeight);
 
 	  		var filterValue = $(this).attr('data-filter');
+
 	  		$fullGrid.isotope({ filter: filterValue });
 
 	  		var filterContentHeight = $('.full-width-gallery').height();
-	  		console.log(filterContentHeight);
 	  		
 	  		var updatedHeight = galleryPageHeight - filterContentHeight;
+	  		
 	  		$('body').css('height', updatedHeight + 'px');
 		});
 

@@ -80,3 +80,71 @@
 	{% include "buy-theme" %}
 	
 {% endblock %}
+
+{% block scripts %}
+<script>
+
+	$(function() {
+
+		// ==========================================================================
+		// Services
+		// ==========================================================================
+
+		var faqTrigger = $('.shave__faq--trigger');
+
+		faqTrigger.on('click', function(event){
+			event.preventDefault();
+			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
+		});
+
+		//HOW IT WORKS BOXS
+		var arrHeight =[];
+		var arrClean =[];
+
+		$(".shave__card").each(function(item){
+			// console.log($(this).height());
+			arrHeight.push($(this).height());
+			arrClean.push($(this).height());
+		});
+
+		//reorder largest to smallest and get the largest item
+    	var largest = arrHeight.sort().reverse()[0];
+
+    	//find the index of the largest box, then add a tallest class to it
+    	var indexOf = $.inArray( largest, arrClean);
+
+    	$('.shave__card').eq(indexOf).addClass('tallest');
+
+    	//Set heights of the content boxs and then image boxs next
+    	$(".shave__card").each(function(item){
+			
+			//Set new height of container
+			$(this).children('.content').css('height', largest + 'px');
+		});
+
+		$(".shave__card--img").each(function(item){
+			
+			//Set new height of container
+			$(this).css('height', largest + 'px');
+		});
+
+
+		function getHeight(){
+			//on-resize set height to auto and target the tallest item only for height
+			$('.shave__card').children('.content').height('auto');
+			return $('.shave__card.tallest').height();
+		};
+
+		$(window).on('resize', function(){
+
+			//use tallest height for everything
+			var newHeight = getHeight();
+			$(".shave__card--img").css('height', newHeight + 'px');
+			$('.shave__card').children('.content').css('height', newHeight + 'px');
+
+		});
+		
+	});
+    
+</script>
+{% endblock %}

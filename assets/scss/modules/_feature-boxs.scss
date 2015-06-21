@@ -67,7 +67,7 @@
 		img {
 			position: relative;
 			display: block;
-			min-height: 100%;
+			// min-height: 100%; turn off safari issue
 			// max-height: 580px;
 			height:100%;
 			max-width: 100%;

@@ -18,6 +18,11 @@ body {
   padding: 0;
   overflow-x: hidden;
 
+  //Special settings for Safari
+  &.safari{
+  height: 100% !important;
+}
+
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -431,11 +436,7 @@ footer.loading{
   }
 }
 
-//Special settings for Safari
-.safari{
-  height: 100% !important;
 
-}
 
 
 // Displays greater than 768px 

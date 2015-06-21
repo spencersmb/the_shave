@@ -202,6 +202,8 @@
 
 {% endblock %}
 {% block scripts %}
+    {{ "flickity.pkgd.min.js" | asset_url | script_tag }}
+    {{ "flickity-settings.js" | asset_url | script_tag }}
 <script>
 	// ==========================================================================
     // Gallery Detail page

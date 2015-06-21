@@ -211,3 +211,24 @@
 
 
 {% endblock %}
+{% block scripts %}
+	<script>
+
+		$(function() {
+			// ==========================================================================
+			// Team page
+			// ==========================================================================
+
+			   var teamTrigger = $('.open');
+
+			   teamTrigger.on('click', function(event){
+			   	event.preventDefault();
+			   	$(this).toggleClass('active');
+			   	// $(this).prev('div').toggleClass('active');
+			   	$(this).parent('div').toggleClass('active');
+			   });
+			
+		});
+	    
+	</script>
+{% endblock %}

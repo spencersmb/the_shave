@@ -33,27 +33,18 @@
 
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %} {% endblock %}
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        
-        
-        
+
         <!-- Plugins -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
         {{ "jquery.menu-aim.js" | asset_url | script_tag }}
-        {{ "flickity.pkgd.min.js" | asset_url | script_tag }}
-        {{ "flickity-settings.js" | asset_url | script_tag }}
         {{ "skrollr.js" | asset_url | script_tag }}
 
         {{ "imagesloaded.js" | asset_url | script_tag }}
         <!-- {{ "smooth-scroll.js" | asset_url | script_tag }} -->
-        
-        {{ "jquery.themepunch.tools.min.js" | asset_url | script_tag }}
-        {{ "jquery.themepunch.revolution.js" | asset_url | script_tag }}
 
         <!-- Settings -->
         {{ "nav-settings.js" | asset_url | script_tag }}
         {{ "main-settings.js" | asset_url | script_tag }}
-        {{ "map-settings.js" | asset_url | script_tag }}
         {{ "skrollr-settings.js" | asset_url | script_tag }}
 
     </body>
