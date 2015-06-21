@@ -14,66 +14,69 @@
 	</section>
 
 	<section class="container-fluid footer-push container__white no-padding">
+
+		<div class="col-xs-12 gallery-filters">
+			<ul class="filter-group">
+				<li class="filter-item" data-filter="*">Show All</li>
+				<li class="filter-item" data-filter=".hair">Hair Styles</li>
+				<li class="filter-item" data-filter=".beard">Beard Sculpts</li>
+				<li class="filter-item" data-filter=".mustache">Mustache twirls</li>
+			</ul>
+		</div>
 		
-		<div class="full-width-gallery">
+		<div class="col-xs-12 full-width-gallery no-padding">
 
 		 	<div class="grid-sizer"></div>
 			
 
 			{% comment %}section1{% endcomment %}
-			<div class="gallery-item food">
+			<div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    <div class="gallery-item food">
+		    <div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		 	<div class="gallery-item width2 height2 objects">
+		 	<div class="gallery-item width2 height2 beard">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    <div class="gallery-item width2 people places">
+		    <div class="gallery-item width2 mustache">
 		        <span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
 		    </div> 
 		    
-			<div class="gallery-item food">
+			<div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    <div class="gallery-item food">
+		    <div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    {% comment %}section1{% endcomment %}
+		    {% comment %}section2{% endcomment %}
 
-		    <div class="gallery-item width2 height2 objects">
+		    <div class="gallery-item width2 height2 beard">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    
-
-
-
-		    <div class="gallery-item food">
+		    <div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-
-
-		    <div class="gallery-item food">
+		    <div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    <div class="gallery-item width2 people places">
+		    <div class="gallery-item width2 mustache">
 		        <span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    <div class="gallery-item food">
+		    <div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
-		    <div class="gallery-item food">
+		    <div class="gallery-item hair">
 		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
 		    </div>
 
@@ -96,7 +99,28 @@
 						 //layoutMode: 'fitRows',
 						 percentPosition: true,
 			masonry: { "columnWidth": ".grid-sizer" }
-	    }); 
+	    });
+
+	    $('.filter-group').on( 'click', 'li', function() {
+
+	    	console.log($(window).height());
+	    	var galleryPageHeight = $(window).height();
+	    	console.log(galleryPageHeight);
+
+	  		var filterValue = $(this).attr('data-filter');
+	  		$fullGrid.isotope({ filter: filterValue });
+
+	  		var filterContentHeight = $('.full-width-gallery').height();
+	  		console.log(filterContentHeight);
+	  		
+	  		var updatedHeight = galleryPageHeight - filterContentHeight;
+	  		$('body').css('height', updatedHeight + 'px');
+		});
+
+	});
+
+	$(function() {
+		
 	});
     
 </script>
