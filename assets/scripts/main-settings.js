@@ -82,6 +82,7 @@ $(function() {
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
 
+					$('body').css('height','100%');
 				}
 
 			}else {

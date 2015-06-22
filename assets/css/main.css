@@ -10373,7 +10373,7 @@ footer.loading {
   margin: 2.5em auto 12.5em;
 }
 .inner__header h1, .inner__header--sm h1 {
-  font-size: 4.6875em;
+  font-size: 5.25em;
   max-width: 800px;
   margin: 0 auto 25px;
 }
@@ -10387,12 +10387,16 @@ footer.loading {
   margin-right: auto;
   font-weight: 300;
   line-height: 1.3125em;
+  font-family: courier;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  text-transform: none;
 }
 .inner__header h4, .inner__header--sm h4 {
   text-transform: none;
   font-weight: 300;
   font-size: 1em;
-  color: #959595;
+  color: #666666;
   line-height: 1.75em;
   max-width: 900px;
   text-align: center;
@@ -10405,7 +10409,7 @@ footer.loading {
 .inner__header--sm h3 {
   color: #959595;
   margin-top: 1.25em;
-  font-size: 1em;
+  font-size: 1.3125em;
 }
 
 .card {
@@ -15013,6 +15017,10 @@ footer.safari {
 .filter-group .filter-item:hover {
   color: #af8c45;
 }
+.filter-group .filter-item.selected {
+  color: #af8c45;
+  border-bottom: 3px solid #af8c45;
+}
 
 @media (min-width: 768px) {
   .gallery-item {
@@ -15226,6 +15234,10 @@ footer.safari {
 }
 .quad-box .inner .content {
   margin: 6em 3em;
+}
+.quad-box .inner img {
+  display: block;
+  margin: 0 auto;
 }
 .quad-box h5 {
   font-size: 1em;

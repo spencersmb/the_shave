@@ -14,43 +14,48 @@
 	</section>
 
 	<section class="container-fluid footer-push container__white no-padding">
-		
-		<div class="portfolioContainer sv__container--sm">
 
-		 	<div class="grid-sizer"></div>
-		    <div class="gallery-item width2 height2 objects">
-		        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
-		    </div>
-		 
-		    <div class="gallery-item width2 people places">
-		        <img class="img-responsive" src="{{ 'iso-2.jpg' | asset_url}}" alt="image">
-		    </div>    
-		 
-		    <div class="gallery-item width1 food">
-		        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
-		    </div>
-		     
-		    <div class="gallery-item width1 places">
-		        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
-		    </div>
-		 
-		    <div class="gallery-item width2 people places">
-		        <img class="img-responsive" src="{{ 'iso-2.jpg' | asset_url}}" alt="image">
-		    </div>
-		 
-		    <div class="gallery-item width2 height2 objects">
-		        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
-		    </div>
-		 
-		    <div class="gallery-item width1 food">
-		        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
-		    </div>
-		     
-		    <div class="gallery-item width1 places">
-		        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
-		    </div>   
-		 
+		{% include "gallery/gallery-filter" %}
+		
+		<div class="col-xs-12">
+			<div class="portfolioContainer sv__container--sm">
+
+			 	<div class="grid-sizer"></div>
+			    <div class="gallery-item width2 height2 hair">
+			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			    </div>
+			 
+			    <div class="gallery-item width2 beard">
+			        <img class="img-responsive" src="{{ 'iso-2.jpg' | asset_url}}" alt="image">
+			    </div>    
+			 
+			    <div class="gallery-item width1 mustache">
+			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			    </div>
+			     
+			    <div class="gallery-item width1 shave">
+			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			    </div>
+			 
+			    <div class="gallery-item width2 beard">
+			        <img class="img-responsive" src="{{ 'iso-2.jpg' | asset_url}}" alt="image">
+			    </div>
+			 
+			    <div class="gallery-item width2 height2 hair">
+			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			    </div>
+			 
+			    <div class="gallery-item width1 mustache">
+			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			    </div>
+			     
+			    <div class="gallery-item width1 shave">
+			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			    </div>   
+			 
+			</div>
 		</div>
+		
 
 	</section>
 
@@ -71,6 +76,49 @@
 							 percentPosition: true,
 				masonry: { "columnWidth": ".grid-sizer" }
 		    }); 
+
+		    //filter isotop + window height
+		    $('.filter-group').on( 'click', 'li', function() {
+
+		    	$(this).parent().children('li').each(function(){
+		    		$(this).removeClass('selected');
+		    	});
+		    	
+		    	$(this).addClass('selected');
+
+		    	var galleryPageHeight = $(window).height();
+
+		  		var filterValue = $(this).attr('data-filter');
+
+		  		$container.isotope({ filter: filterValue });
+
+		  		var filterContentHeight = $('.portfolioContainer').height();
+		  		
+		  		var updatedHeight = galleryPageHeight - filterContentHeight;
+
+		  		$('body').css('height', updatedHeight + 'px');
+			});
+
+			//Filter
+			var val = window.location.hash;
+			var hash;
+			// console.log(val);
+
+			if(val != ''){
+				hash = val.substr(8);
+				
+				// console.log(hash)
+				$container.isotope({ filter: hash });
+
+				$('.filter-group > li').each(function(){
+					var data = $(this).data('filter');
+					if( data === hash){
+						$(this).addClass('selected');
+					}
+					return;
+				});
+				
+			}
 		});
     
 </script>

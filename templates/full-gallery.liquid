@@ -15,14 +15,7 @@
 
 	<section class="container-fluid footer-push container__white no-padding">
 
-		<div class="col-xs-12 gallery-filters">
-			<ul class="filter-group">
-				<li class="filter-item" data-filter="*">Show All</li>
-				<li class="filter-item" data-filter=".hair">Hair Styles</li>
-				<li class="filter-item" data-filter=".beard">Beard Sculpts</li>
-				<li class="filter-item" data-filter=".mustache">Mustache twirls</li>
-			</ul>
-		</div>
+		{% include "gallery/gallery-filter" %}
 		
 		<div class="col-xs-12 full-width-gallery no-padding">
 
@@ -104,6 +97,12 @@
 
 	    $('.filter-group').on( 'click', 'li', function() {
 
+	    	$(this).parent().children('li').each(function(){
+	    		$(this).removeClass('selected');
+	    	});
+	    	
+	    	$(this).addClass('selected');
+
 	    	var galleryPageHeight = $(window).height();
 
 	  		var filterValue = $(this).attr('data-filter');
@@ -124,15 +123,18 @@
 
 		if(val != ''){
 			hash = val.substr(8);
+
 			// console.log(hash)
 			$fullGrid.isotope({ filter: hash });
-			// $('#myTab > li').each(function(){
-			// 	$(this).removeClass('active');
-			// 	if( hash === this.id ){
-			// 		$(this).addClass('active');
-			// 	}
-			// });
 
+			$('.filter-group > li').each(function(){
+				var data = $(this).data('filter');
+				if( data === hash){
+					$(this).addClass('selected');
+				}
+				return;
+			});
+			
 		}
 
 	});
