@@ -10499,6 +10499,7 @@ footer.loading {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-transform: initial;
   font-size: 1em;
+  color: #333333;
 }
 
 .center__container {
@@ -14318,7 +14319,7 @@ footer.safari {
 @media (min-width: 1200px) {
   .blog__inner--feature {
     position: absolute;
-    top: -155px;
+    top: -116px;
     width: 100%;
     margin: 0 auto;
   }
@@ -15244,10 +15245,26 @@ footer.safari {
   font-weight: bold;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
-.quad-box .inner-back {
-  margin: 6em 3em;
-  color: #af8c45;
+.quad-box .back {
+  position: relative;
   background: #af8c45;
+}
+.quad-box .back .content {
+  position: absolute;
+  padding: 0 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.quad-box .back h5 {
+  border-bottom: 1px solid;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .barber {

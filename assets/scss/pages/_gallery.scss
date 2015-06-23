@@ -322,11 +322,27 @@
 		font-family:$courier;
 	}
 
-	.inner-back{
-		margin:6em 3em;
-		color:$primary-color;
+	.back{
+		position:relative;
 		background:$primary-color;
+
+		.content{
+			position:absolute;
+			padding:0 20px;
+			top:50%;
+			@include transform(translateY(-50%));
+		}
+
+		h5{
+			border-bottom:1px solid;
+			max-width: 200px;
+			margin:0 auto;
+			margin-bottom: 10px;
+			padding-bottom:10px;
+		}
 	}
+
+
 }
 
 .barber{
@@ -363,6 +379,7 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+
 
 
 

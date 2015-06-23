@@ -123,26 +123,6 @@ footer.loading{
   // @include transition(opacity, 300ms, ease-out);
 }
 
-//nav A
-// .sv__main--content{
-//   height: auto;
-//   position: relative;
-//   background-color: $white;
-//   z-index: $content;
-//   padding-top: $header-M;
-//   /* Force Hardware Acceleration in WebKit */
-//   -webkit-backface-visibility: hidden;
-//   @include transition($pushNav);
-//   // @include transition-property(transform);
-//   // @include transition-duration(.4s);
-//   background-color:transparent;
-  
-//   //Slide-out nav amount
-//   &.nav-is-open {
-//     @include transform(translateX($navMove));
-//   }
-// }
-
 .sv__main--content {
   position: relative;
   height: auto;
@@ -297,6 +277,7 @@ footer.loading{
     font-family:$courier;
     text-transform:initial;
     font-size: em(16px);
+    color:darken($white, 80%);
   }
 }
 
