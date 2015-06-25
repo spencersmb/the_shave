@@ -887,7 +887,7 @@ $primary-font: sans-serif;
         position:relative;
         overflow: hidden;
         // background-color:$primary-color;
-        @include transition(all .2s);
+        // @include transition(all .2s);
 
         &:nth-of-type(2n) {
           margin-right: 0;
@@ -985,7 +985,7 @@ $primary-font: sans-serif;
         height:auto;
         width:100%;
         opacity: 1;
-        @include transition(all .3s);
+        @include transition(opacity .3s);
       }
     }
 
