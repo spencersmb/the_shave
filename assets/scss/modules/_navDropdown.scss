@@ -885,7 +885,8 @@ $primary-font: sans-serif;
         margin-right: 0;
         height:250px;
         position:relative;
-        background-color:$primary-color;
+        overflow: hidden;
+        // background-color:$primary-color;
         @include transition(all .2s);
 
         &:nth-of-type(2n) {
@@ -895,6 +896,17 @@ $primary-font: sans-serif;
       }
 
       .cd-service-bg{
+
+
+        .active{
+          opacity:1;
+
+        }
+
+        .hidden{
+          opacity:0;
+          
+        }
 
         &:before{
           content: ' ';
@@ -967,10 +979,13 @@ $primary-font: sans-serif;
       }
 
       img {
-        position: static;
-        height: auto;
-        width: 100%;
-        margin: 0 0 0.6em;
+        position: absolute;
+        top:0;
+        left:0;
+        height:auto;
+        width:100%;
+        opacity: 1;
+        @include transition(all .3s);
       }
     }
 

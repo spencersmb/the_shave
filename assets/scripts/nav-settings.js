@@ -52,8 +52,18 @@ $(function() {
 		var selected = $(this),
 			visibleNav = $(this).parent('ul').parent('.has-children').parent('ul');
 		selected.parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('move-out');
-	}); 
+	});
 
+	//SUBMENU ITEM IMAGE HOVER
+	$('.cd-service-bg').mouseover( function(){
+		console.log('hover');
+		$(this).children('img').last().css('opacity', 0);
+	});
+	$('.cd-service-bg').mouseout( function(){
+		console.log('out');
+		$(this).children('img').last().css('opacity', 1);
+	});
+ 
     //ON SCROLL Add shadow
 
     //Get current position of Nav element
