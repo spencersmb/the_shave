@@ -15389,26 +15389,26 @@ footer.safari {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  opacity: .1;
 }
 
 .split {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: #EAEAEA;
 }
 .split .content {
-  width: 50%;
-  float: left;
-  margin-left: 50%;
+  width: 100%;
 }
 .split .content .about {
   float: left;
-  padding: 100px;
+  padding: 55px;
+  position: relative;
 }
 .split .content .about img {
   width: 75px;
@@ -15465,4 +15465,55 @@ footer.safari {
 }
 .process__icon h6 {
   font-size: 1.125em;
+}
+
+@media (min-width: 768px) {
+  .about__process {
+    padding: 70px 0;
+    color: #fff;
+    margin: 0;
+  }
+
+  .split-bg {
+    width: 40%;
+    opacity: 1;
+  }
+
+  .split {
+    background: #fff;
+  }
+  .split .content {
+    width: 60%;
+    float: left;
+    margin-left: 40%;
+  }
+  .split .content .about {
+    float: left;
+    padding: 70px;
+  }
+  .split .content .about img {
+    width: 75px;
+  }
+}
+@media (min-width: 992px) {
+  .about__process {
+    padding: 100px 0;
+  }
+
+  .split-bg {
+    width: 50%;
+  }
+
+  .split .content {
+    width: 50%;
+    float: left;
+    margin-left: 50%;
+  }
+  .split .content .about {
+    float: left;
+    padding: 100px;
+  }
+  .split .content .about img {
+    width: 75px;
+  }
 }

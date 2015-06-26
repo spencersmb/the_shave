@@ -29,8 +29,8 @@
 						<a href="#shaving" role="tab" id="shaving-tab" data-toggle="tab" aria-controls="shaving" aria-expanded="false">Shaving</a>
 					</li>
 
-					<li id="haircut" role="presentation" class="tab__control">
-						<a href="#haircuts" role="tab" id="haircuts-tab" data-toggle="tab" aria-controls="haircuts" aria-expanded="false">Hair Cuts</a>
+					<li id="haircuts" role="presentation" class="tab__control">
+						<a href="#hair-cuts" role="tab" id="haircuts-tab" data-toggle="tab" aria-controls="hair-cuts" aria-expanded="false">Hair Cuts</a>
 					</li>
 			    </ul>
 
@@ -189,7 +189,7 @@
 					<!-- end shaving -->
 
 					<!-- start haircut -->
-					<div role="tabpanel" class="tab-pane fade" id="haircuts" aria-labelledby="haircuts-tab">
+					<div role="tabpanel" class="tab-pane fade" id="hair-cuts" aria-labelledby="haircuts-tab">
 						
 						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
@@ -313,11 +313,24 @@
 
 		if(val != ''){
 			hash = val.substr(5);
-
+			
 			$('#myTab > li').each(function(){
 				$(this).removeClass('active');
 				if( hash === this.id ){
+					
+					var panelId = $(this).find('a').attr('href').substr(1);
+
+					//show correct matching content with active Tab
+					$('#myTabContent > div').each( function(){
+						$(this).removeClass('active').removeClass('in');
+
+						if(panelId === this.id){
+							$(this).addClass('active').addClass('in');
+						}
+					});
+
 					$(this).addClass('active');
+
 				}
 			});
 
