@@ -1,3 +1,7 @@
+.shave__faq{
+	margin:90px auto;
+}
+
 .shave__faq--items{
 	height:auto;
 	width:100%;
@@ -5,11 +9,7 @@
 	overflow:visible;
 	@include transform(translateZ(0));
 	@include transition(transform 2s);
-	margin-bottom:80px;
-
-	h2{
-		text-align: center;
-	}
+	padding-top:60px;
 
 }
 
@@ -50,36 +50,7 @@
 	font-size: em(24px);
 	border: 1px solid transparent;
 
-	// &::before, &::after {
-	// 	/* arrow icon on the right */
-	// 	position: absolute;
-	// 	right: 166px;
-	// 	top: 75%;
-	// 	height: 2px;
-	// 	width: 13px;
-	// 	background: $primary-color;
-	// 	-webkit-backface-visibility: hidden;
-	// 	backface-visibility: hidden;
-	// 	@include transition-property(transform);
-	// 	@include transition-duration(.2s);
-	// }
-
-	// &::before {
-	// 	@include transform(rotate(45deg));
-	// 	right: 175px;
-	// }
-
-	// &::after {
-	// 	@include transform(rotate(-45deg));
-	// }
-
-	// .active &::before {
-	// 	@include transform(rotate(-45deg));
-	// }
-
-	// .active &::after {
-	// 	@include transform(rotate(45deg));
-	// }
+	
 } //end trigger
 
 .shave__faq--content{
@@ -165,6 +136,7 @@
 		.active &::after {
 			@include transform(rotate(45deg));
 		}
+		
 	} //end trigger
 
 	.shave__faq--content{
@@ -176,12 +148,8 @@
 			line-height: em(24px);
 			color: $black;
 			padding: 0 24px 30px;
-			
 		}
 	}
-
-
-
 
 }
 

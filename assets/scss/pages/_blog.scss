@@ -249,6 +249,176 @@
 }
 
 
+//NEW BLOG POST STYLES
+
+.post-wrapper{
+  margin-top:40px;
+//  display: table;
+}
+
+.blog-post{
+  margin:0 auto 50px;
+  padding:0;
+
+  &:nth-child(odd){
+	padding-right:15px;
+  }
+
+  &:nth-child(even){
+	padding-left:15px;
+  }
+
+  &.featured-post{
+	border-bottom: 1px solid #CACACA;
+
+	&:nth-child(odd){
+	  padding-right:0;
+	}
+  }
+
+  .content{
+	position:relative;
+	width:100%;
+	display:table;
+  }
+
+  .post-info{
+	font-size:14px;
+	display:table;
+	width:100%;
+	margin-bottom:20px;
+
+	i{
+	  color:$black;
+	  margin-right:10px;
+	}
+	
+	.time{
+	  color:$primary-color;
+	  padding:0;
+
+	  ul{
+		margin:0;
+		text-align:center;
+	  }
+
+	  li{
+		display:inline-block;
+		border-right:1px solid $primary-color;
+		padding-right:20px;
+		margin-right:10px;
+		line-height: 15px;
+
+		&:nth-last-child(1){
+		  padding-right:0;
+		  border-right:none;
+		}
+
+		a{
+		  color:$primary-color;
+		}
+	  }
+
+	  i{
+		margin-top:5px;
+	  }
+	}
+
+	&.featured-info{
+	  margin-bottom: 10px;
+
+	  .time{
+		ul{
+		  text-align: right;
+		}
+
+		li{
+
+		  &:nth-last-child(1){
+			margin-right:0;
+		  }
+		}
+	  }
+
+	}
+
+	.comments{
+	  margin:0;
+	  padding:0;
+
+	  a{
+		display: inline;
+		color:$primary-color;
+	  }
+
+	}
+
+  } //end post info
+
+  .time{
+
+
+  }
+
+  .post-text{
+	max-width:800px;
+	width:100%;
+	margin:0 auto;
+
+	.post-tags{
+	  text-align:center;
+	  margin:20px 0;
+
+	  a{
+		color:$primary-color;
+		margin:0 15px;
+		border-bottom:1px solid $primary-color;
+		display:inline-block;
+	  }
+	}
+
+	h3{
+	  text-align:center;
+	  font-size:22px;
+	  line-height: 28px;
+	  font-weight: 500;
+	  margin: 20px 0;
+	  letter-spacing: 0;
+	}
+
+	&.featured-text{
+	  h3{
+		margin-top:40px;
+		font-size:28px;
+		line-height:34px;
+		margin-bottom: 30px;
+		font-weight: 700;
+	  }
+
+	  p{
+		margin-top:35px;
+		margin-bottom:40px;
+	  }
+
+	  .post-tags{
+		margin:0;
+
+		a{
+
+		}
+	  }
+	}
+
+  }
+
+
+  .social{
+	border:0;
+	margin-top:30px;
+	margin-bottom:30px;
+  }
+}
+
 // ==========================================================================
 // Section 3: Blog details page template
 // 

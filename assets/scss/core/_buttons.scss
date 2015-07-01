@@ -101,7 +101,9 @@
   background-color:$primary-color;
   font-weight: 500;
   color:#fff;
+  display: inline-block;
   @include transition(all 0.35s);
+  cursor:pointer;
 
   &:hover{
     color:$white;

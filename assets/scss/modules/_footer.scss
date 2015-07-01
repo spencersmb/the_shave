@@ -106,6 +106,7 @@ footer{
 		box-shadow:none;
 		color:$primary-color;
 		border-bottom:1px solid #bcbcbc;
+		text-align: center;
 
 		&:focus{
 			box-shadow:none;
@@ -131,11 +132,12 @@ footer{
 .email__offers{
 	margin-top:5px;
 	font-size:em(14px);
+	text-align:center;
 }
 
 	
 .footer__contact{
-
+	text-align:center;
 	margin-bottom:30px;	
 
 	.footer__address{
@@ -159,6 +161,7 @@ footer{
 	font-size:em(14px);
 	margin-top:15px;
 	padding:0 15px;
+	text-align:center;
 }
 
 //TOOD: put social icons in helper file
@@ -166,9 +169,10 @@ footer{
 	width:100%;
 	margin:0 auto;
 	padding:20px 0;
+  	border-top:none;
 	
 	ul{
-		text-align:left;
+		text-align:center;
 	}
 
 	li{
@@ -179,7 +183,7 @@ footer{
 }
 
 .facebook, .twitter, .instagram, .linkedin,{
-	margin:0 8px 0 0;
+	margin:0 8px;
 
 	a{
 		width:23px;
@@ -285,12 +289,7 @@ footer{
 	.email__form{
 		input{
 			font-size: em(32px);
-			text-align:center;
 		}
-	}
-
-	.email__offers{
-		text-align:center;
 	}
 
 	.email__wrapper{
@@ -309,9 +308,24 @@ footer{
 		}
 
 		.contact{
+			
+			text-align: left;
+
 			a{
 				padding-left:10px;
 			}
+		}
+
+	}
+
+	.social{
+		
+		ul{
+			text-align:left;
+		}
+
+		& > div{
+			padding:0 !important;
 		}
 
 	}
@@ -320,6 +334,7 @@ footer{
 	.copyright{
 		padding:0;
 		text-align:right;
+		padding-right:15px;
 	}
 
 
@@ -349,6 +364,10 @@ footer{
 		  @include transform(translateX($navMove));
 		}
 
+	}
+
+	.facebook, .twitter, .instagram, .linkedin,{
+		margin:0 8px 0 0;
 	}
 
 	.footer__wrapper{
@@ -400,18 +419,13 @@ footer{
 		}
 
 		.contact{
+			text-align: right;
 			a{
 				padding-left:0;
 			}
 		}
 
 	}
-
-	.copyright{
-		text-align:left;
-	}
-
-
 
 }
 

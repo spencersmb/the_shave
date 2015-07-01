@@ -128,7 +128,7 @@ footer.loading{
   height: auto;
   z-index: $content;
   background-color: $white;
-  background-color:transparent;
+//  background-color:transparent;
   padding-top: $header-M;
   @include transition(transform .4s);
   box-shadow: 0 0 30px darken(#5c4b51, 20%);
@@ -142,9 +142,10 @@ footer.loading{
   text-align: center;
   clear:both;
   margin:em(40px) auto em(200px);
+
   h1{
     font-size:em(84px);
-    max-width:800px;
+    max-width:850px;
     margin:0 auto 25px;
     // color:$primary-color;
   }
@@ -183,6 +184,23 @@ footer.loading{
     color:#959595;
     margin-top: em(20px);
     font-size:em(21px);
+    letter-spacing: 0;
+  }
+}
+
+//Todo: Add additional SCSS for ELEMEnts AND TYPOGRAPHY
+
+blockquote{
+  border-left:5px solid $primary-color;
+  font-size:21.5px;
+  line-height: 30px;
+  font-family: $ubuntu;
+  font-weight:300;
+  color:$black;
+
+  &.reverse{
+    color:$white;
+    border-left:5px solid $black;
   }
 }
 
@@ -427,6 +445,8 @@ footer.loading{
 // Displays greater than 768px 
 @include breakpoint(tablet) {
 
+
+
   .card{
     .content{
       margin:7.525em 27.5%;
@@ -452,6 +472,15 @@ footer.loading{
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+  blockquote{
+    border-left:5px solid $primary-color;
+    font-size:24.5px;
+    line-height: 40px;
+    font-family: $ubuntu;
+    font-weight:300;
+    color:$black;
+  }
 
 
 

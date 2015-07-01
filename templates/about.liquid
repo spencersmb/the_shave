@@ -1,4 +1,17 @@
 {% block content %} 
+
+<section class="container-fluid white-bg">
+	<div class="row">
+
+		<div class="col-xs-12 inner__header--sm">
+			<h1>
+				About Us.
+			</h1>
+			<h3>The Shave theme is a solid HTML/CSS3 template for sale</h3>
+		</div>
+	</div>
+	
+</section>
 	
 <section class="container-fluid no-padding split">
 	
@@ -8,13 +21,15 @@
 
 	<div class="content">
 		<div class="about">
-			<h2>About</h2>
+			{% comment %}<h2>About</h2>{% endcomment %}
 
 			<blockquote>Delivering amazing <strong>aerial</strong> shots and footage for virtually <strong>any situation</strong> from virtually <strong>any perspective</strong>.</blockquote>
 
 			<p>Ever since I can remember, I've had passions for photography, architecture, nature and adventure. Advanced radio controlled drone technology has enabled me to take these passions to the next level. I’m <a href="http://twitter.com/jschuller" target="_blank">Jason Schuller</a>, and I’ve created <strong>Atmospheric</strong> and have assembled a small like-minded team to deliver aerial photography and videography services for you or your business including <strong>architectural</strong>, <strong>biological</strong> or <strong>geological</strong> settings. Read more about our <a href="#services">services</a> below.</p>
 
-			<img src="{{'about-signature.png' | asset_url}}" alt="">
+			<!-- Todo: Inline link with services and smooth scroll -->
+
+			{% comment %}<img src="{{'about-signature.png' | asset_url}}" alt="">{% endcomment %}
 
 		</div>
 		
@@ -72,14 +87,14 @@
 				<img class="img-responsive" src="{{'razor.jpg' | asset_url}}" alt="">
 			</div>
 
-			<div class="col-sm-12 col-md-9 process__grid--wrapper">
-				
-				<div class="row no-margin center-boxs">
+			<div class="col-sm-12 col-md-9 ">
+				<h3 class="text-center" >Our Srevices</h3>
+				<div class="row no-margin process__grid--wrapper">
 					
 						<div class="col-sm-12 col-md-6 process__grid--box">
 							<div class="grid__inner">
 								<i class="fa fa-anchor fa-2x"></i>
-								<h4>Title headling</h4>
+								<h4>Clean Shaves</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							</div>	
 						</div>
@@ -87,7 +102,7 @@
 						<div class="col-sm-12 col-md-6 process__grid--box">
 							<div class="grid__inner">
 								<i class="fa fa-anchor fa-2x"></i>
-								<h4>Title headling</h4>
+								<h4>Hip Haircuts</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							</div>	
 						</div>
@@ -95,7 +110,7 @@
 						<div class="col-sm-12 col-md-6 process__grid--box">
 							<div class="grid__inner">
 								<i class="fa fa-anchor fa-2x"></i>
-								<h4>Title headling</h4>
+								<h4>Mustache Styling</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							</div>	
 						</div>
@@ -103,7 +118,7 @@
 						<div class="col-sm-12 col-md-6 process__grid--box">
 							<div class="grid__inner">
 								<i class="fa fa-anchor fa-2x"></i>
-								<h4>Title headling</h4>
+								<h4>Beard Sculpting</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							</div>	
 						</div>

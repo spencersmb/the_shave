@@ -4,70 +4,247 @@
 <!-- TODO: Add icons for post info -->
 <!-- TODO: Change ::: to be above text -->
 <!-- Intro blog -->
-{% include "blog/blog-index-intro" %}
+<section class="container-fluid white-bg">
+	<div class="row sv__container--sm">
+
+		<div class="col-xs-12 inner__header--sm">
+			<h1>Our Blog</h1>
+			<h3>Get the latest news on trends, deals, and cool stuff.</h3>
+		</div>
+	</div>
+
+</section>
 
 <!-- Blog Article List begin -->
-<section class="container-fluid container__grey footer-push">
-	<div class="row sv__container--sm">
-		<article class="blog__post">
-			<div class="content__holder">
-				<div class="post__image">
-					<img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt="">
-				</div>
-				<div class="post__text">
-					<h3><a href="#">The finest shave A man can get</a></h3>
-					<div class="post__info">
-						<ul><li>Mens Stlye</li>
-							<li>04.10.2013</li>
-							<li>345 views</li>
-						</ul>
-					</div>
-					<p>Mixtape Carles tattooed skateboard, letterpress artisan Neutra street art crucifix organic vinyl keffiyeh fingerstache Austin. Shabby chic photo booth distillery Odd Future. Chillwave deep v bespoke sartorial, tousled typewriter Carles twee. Leggings Carles PBR&B asymmetrical, forage kale chips messenger bag  drinking vinegar lomo....</p>
-					<div class="post__more">
+<section class="container-fluid white-bg footer-push">
 
-						<a class="blog__btn" href="#">Read More</a>
-						<ul>
-							<li class="facebook-grey text-hide"><a href="#">Facebook</a></li>
-							<li class="facebook-grey text-hide"><a href="#">Twitter</a></li>
-							<li class="facebook-grey text-hide"><a href="#">LinkedIn</a></li>
-							<li class="facebook-grey text-hide"><a href="#">Instagram</a></li>
-						</ul>
+	<div class="container">
+
+		<div class="row">
+
+			<!-- #featured-post# -->
+			<article class="blog-post featured-post">
+
+				<div class="content">
+
+					<div class="post-info featured-info">
+
+						<div class="col-xs-12 col-sm-6 comments">
+							<a href="#"><i class="fa fa-comment-o"></i>245 Comments</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 time">
+							<ul>
+								<li><i class="fa fa-clock-o"></i>posted March 20th</li>
+								<li><i class="fa fa-eye"></i>345 views</li>
+							</ul>
+						</div>
 
 					</div>
 
+					<div class="post-image">
+						<a href=""><img class="img-responsive" src="{{ 'featured-image.jpg' | asset_url}}" alt=""></a>
+					</div>
+
+					<div class="post-text featured-text">
+						<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
+
+						<div class="post-tags">
+							<a href="">Fashion</a>
+							<a href="">Hipster</a>
+							<a href="">Single</a>
+						</div>
+
+						<p>It’s time for another Text Drive post! To be honest, there’s nothing I love typing with more than a beautiful script. There’s something about the way all the letters connect so seamlessly, so beautifully, all at the same time. While brush scripts are definitely in the spotlight these days, there’s something to be said for more subtle, personality driven, simple scripts… Scripts that have *just* enough decoration where you scale them up or zoom out a bit and take them in. Bonus points when you’ve got a great quote to typeset :)
+						</p>
+
+						<div class="text-center">
+							<a class="btn-gold">Read More</a>
+						</div>
+
+						<div class="social">
+							<a class="facebook-dark text-hide" href="#">
+								<img class="img-responsive" src="{{ 'facebook.png' | asset_url}}" alt="">
+								facebook
+							</a>
+							<a class="twitter-dark text-hide" href="#">
+								<img class="img-responsive" src="{{ 'twitter.png' | asset_url}}" alt="">
+								twitter
+							</a>
+							<a class="instagram-dark text-hide" href="#">
+								<img class="img-responsive" src="{{ 'instagram.png' | asset_url}}" alt="">
+								instagram
+							</a>
+							<a class="linkedin-dark text-hide" href="#">
+								<img class="img-responsive" src="{{ 'linkedin.png' | asset_url}}" alt="">
+								linkedin
+							</a>
+						</div>
+
+
+					</div>
+
 				</div>
+
+			</article>
+			<!-- end featured post -->
+
+			<!-- 2 col articles -->
+			<div class="post-wrapper">
+				<!-- Article 1 -->
+				<article class="col-xs-12 col-sm-6 blog-post">
+
+					<div class="content">
+
+						<div class="post-image">
+							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
+						</div>
+
+						<div class="post-text">
+
+
+
+							<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
+
+							<div class="post-info">
+
+
+								<div class="col-xs-12 time">
+									<ul>
+										<li>posted March 20th</li>
+										<li>345 views</li>
+										<li><a href="#">245 Comments</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
+							</p>
+
+						</div>
+
+					</div>
+
+				</article>
+
+				<!-- Article 2 -->
+				<article class="col-xs-12 col-sm-6 blog-post">
+
+					<div class="content">
+
+						<div class="post-image">
+							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
+						</div>
+
+						<div class="post-text">
+
+
+
+							<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
+
+							<div class="post-info">
+
+
+								<div class="col-xs-12 time">
+									<ul>
+										<li>posted March 20th</li>
+										<li>345 views</li>
+										<li><a href="#">245 Comments</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
+							</p>
+
+						</div>
+
+					</div>
+
+				</article>
+
+				<!-- Article 1 -->
+				<article class="col-xs-12 col-sm-6 blog-post">
+
+					<div class="content">
+
+						<div class="post-image">
+							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
+						</div>
+
+						<div class="post-text">
+
+
+
+							<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
+
+							<div class="post-info">
+
+
+								<div class="col-xs-12 time">
+									<ul>
+										<li>posted March 20th</li>
+										<li>345 views</li>
+										<li><a href="#">245 Comments</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
+							</p>
+
+						</div>
+
+					</div>
+
+				</article>
+
+				<!-- Article 2 -->
+				<article class="col-xs-12 col-sm-6 blog-post">
+
+					<div class="content">
+
+						<div class="post-image">
+							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
+						</div>
+
+						<div class="post-text">
+
+
+
+							<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
+
+							<div class="post-info">
+
+
+								<div class="col-xs-12 time">
+									<ul>
+										<li>posted March 20th</li>
+										<li>345 views</li>
+										<li><a href="#">245 Comments</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
+							</p>
+
+						</div>
+
+					</div>
+
+				</article>
 			</div>
-		</article>
-		<article class="blog__post">
-			<div class="content__holder">
-				<div class="post__image">
-					<img class="img-responsive" src="{{ 'article-2.jpg' | asset_url}}" alt="">
-				</div>
-				<div class="post__text">
-					<p class="post__category">Mens Stlye</p>
-					<h3><a href="#">The finest shave A man can get</a></h3>
-					<div class="post__info">
-						<ul><li>Mens Stlye</li>
-							<li>04.10.2013</li>
-							<li>345 views</li>
-						</ul>
-					</div>
-					<p>Mixtape Carles tattooed skateboard, letterpress artisan Neutra street art crucifix organic vinyl keffiyeh fingerstache Austin. Shabby chic photo booth distillery Odd Future. Chillwave deep v bespoke sartorial, tousled typewriter Carles twee. Leggings Carles PBR&B asymmetrical, forage kale chips messenger bag  drinking vinegar lomo....</p>
-					<div class="post__more">
 
-						<a class="blog__btn" href="#">Read More</a>
-						<ul>
-							<li class="facebook-grey text-hide"><a href="#">Facebook</a></li>
-							<li class="facebook-grey text-hide"><a href="#">Twitter</a></li>
-							<li class="facebook-grey text-hide"><a href="#">LinkedIn</a></li>
-							<li class="facebook-grey text-hide"><a href="#">Instagram</a></li>
-						</ul>
+		</div>
 
-					</div>
-				</div>
-			</div>
-		</article>
 	</div>
+
 </section>
 <!-- End blog list -->
+
 {% endblock %}
