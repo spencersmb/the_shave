@@ -1,0 +1,90 @@
+{% layout "layout" %}
+
+{% block content %}
+
+<div class="container-fluid footer-push white-bg no-padding">
+	<article>
+
+		<!-- Intro blog -->
+		{% include "blog/blog-inner-intro" %}
+
+		<section class="container-fluid container__grey">
+			<div class="sv__container--sm blog__content">
+				<div class="blog__content--inner">
+					<h3>Reinventing on-demand entertainment.</h3>
+					<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.
+					</p>
+
+					<p>on, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.
+					</p>
+
+					<p class="pull-quote">
+						<q>This is an example of a centered pull quote on for important things to say.</q>
+					</p>
+					<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music. TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays.
+					</p>
+
+					<p class="pull-quote right">
+						<q >This is an example of a right aligned pull quote on for other things to say.</q>
+					</p>
+
+					<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music. TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays.
+					</p>
+
+					<p class="pull-quote left">
+						<q >This is an example of a left aligned pull quote on for more important thins to say.</q>
+					</p>
+
+					<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.
+					</p>
+				</div>
+
+			</div>
+			<div class="sv__container--sm">
+				<div class="col-xs-12">
+					<div class="blog__content--tags">
+						<h5>Tags</h5>
+						<a href="">Fashion</a>
+						<a href="">Hipster</a>
+						<a href="">Premium</a>
+						<a href="#">Hair Cuts</a>
+						<!--
+						<a href="#">Articles,</a>
+						<a href="#">Hair Cut,</a>
+						<a href="#">Hipster,</a>
+						<a href="#">Premium,</a> -->
+					</div>
+
+					<!-- Author -->
+					<div class="blog__content--author">
+						<div class="image col-xs-12">
+							<img class="img-circle" src="{{ 'author-img.jpg' | asset_url}}" alt="">
+						</div>
+						<div class="text col-xs-12 text-center">
+							<h4>Jacob Holiday</h4>
+							<p>With what mingled joy  and sorrow do I take up the pen to write to my dearest friend! Oh, what a change between to-day and yesterday!</p>
+						</div>
+					</div>
+
+
+					<div class="offset__container social-links">
+						<a class="facebook-grey text-hide" href="#">facebook</a>
+						<a class="twitter-grey text-hide" href="#">twitter</a>
+						<a class="instagram-grey text-hide" href="#">instagram</a>
+						<a class="linkedin-grey text-hide" href="#">linkedin</a>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+	</article>
+
+	{% include "blog/blog-related-articles" %}
+
+	{% include "blog/blog-comments" %}
+
+</div>
+
+
+{% endblock %}
