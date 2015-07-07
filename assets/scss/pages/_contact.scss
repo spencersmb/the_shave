@@ -22,20 +22,10 @@
 }
 
 
-.social__icons{
-  h3{
-    margin-bottom: 6px;
-  }
-  
-  ul{
-    text-align:center;
-    padding:0;
-    margin:0;
-  }
-
-  li{
-    display: inline-block;
-  }
+.meta-share{
+	a{
+		padding:0 10px;
+	}
 }
 
 #google__container {
@@ -141,12 +131,6 @@
 	@include image-2x("../images/icons/phone-icon@2x.jpg", 52px, 52px);
 }
 
-.pen-icon{
-	left:31px;
-	background: url("../images/icons/pen-icon.png") no-repeat;
-	// @include image-2x("../images/icons/phone-icon@2x.jpg", 52px, 52px);
-}
-
 .user-name, .user-email, .user-phone{
 	height:52px;
 	width:100%;
@@ -176,5 +160,24 @@
 	&:focus{
 		box-shadow:none;
 		outline:0;
+	}
+}
+
+.pencil, .pencil-contact{
+
+	i{
+		position:absolute;
+		top:10px;
+		left:15px;
+		padding-left:15px;
+		margin-bottom:30px;
+		font-size:25px;
+		color:$primary-color;
+	}
+}
+
+.pencil-contact{
+	i{
+		left:30px;
 	}
 }

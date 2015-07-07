@@ -53,8 +53,9 @@ h3{
 
 h4{
   font-size: em(18px);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h5{
@@ -496,7 +497,7 @@ blockquote{
   }
 
   .offset__content{
-    padding:410.5px 60px 0 60px;
+    padding:500px 60px 0;
   }
 
   .offset__content--gallery{
