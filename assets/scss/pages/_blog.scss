@@ -173,79 +173,79 @@
 //
 // ==========================================================================
 
-.blog__post{
-	margin:60px auto 100px auto;
-	clear:both;
-
-	.post__image{
-		max-width: 729px;
-	}
-
-	&:nth-child(odd){
-		float:right;
-
-		.post__image{
-			position:relative;
-			text-align:right;
-			float:right;
-		}
-	}
-
-	&:nth-child(even){
-		float:left;
-
-		.post__image{
-			position:relative;
-			text-align:right;
-			float:left;
-		}
-	}
-
-}
-
-.content__holder{
-	position:relative;
-	width:100%;
-	display:table;
-}
-
-
-
-.post__text{
-	position:relative;
-	background:#fff;
-	width:100%;
-	max-width:835px;
-	float:right;
-	clear:both;
-	padding:2em;
-
-	h3{
-		margin:0 0 20px 0;
-		line-height: 26px;
-	}
-}
-
-.post__category{
-	color:$primary-color;
-	font-size:em(16px);
-}
-
-.post__info{
-	font-size:em(12px);
-	color:$primary-color;
-	margin:0 0 20px 0;
-	ul{
-		width:100%;
-		position:relative;
-	}
-	li{
-		display: inline-block;
-		border-right:1px solid $primary-color;
-		padding-right:10px;
-		line-height: 1em;
-	}
-}
+// .blog__post{
+// 	margin:60px auto 100px auto;
+// 	clear:both;
+//
+// 	.post__image{
+// 		max-width: 729px;
+// 	}
+//
+// 	&:nth-child(odd){
+// 		float:right;
+//
+// 		.post__image{
+// 			position:relative;
+// 			text-align:right;
+// 			float:right;
+// 		}
+// 	}
+//
+// 	&:nth-child(even){
+// 		float:left;
+//
+// 		.post__image{
+// 			position:relative;
+// 			text-align:right;
+// 			float:left;
+// 		}
+// 	}
+//
+// }
+//
+// .content__holder{
+// 	position:relative;
+// 	width:100%;
+// 	display:table;
+// }
+//
+//
+//
+// .post__text{
+// 	position:relative;
+// 	background:#fff;
+// 	width:100%;
+// 	max-width:835px;
+// 	float:right;
+// 	clear:both;
+// 	padding:2em;
+//
+// 	h3{
+// 		margin:0 0 20px 0;
+// 		line-height: 26px;
+// 	}
+// }
+//
+// .post__category{
+// 	color:$primary-color;
+// 	font-size:em(16px);
+// }
+//
+// .post__info{
+// 	font-size:em(12px);
+// 	color:$primary-color;
+// 	margin:0 0 20px 0;
+// 	ul{
+// 		width:100%;
+// 		position:relative;
+// 	}
+// 	li{
+// 		display: inline-block;
+// 		border-right:1px solid $primary-color;
+// 		padding-right:10px;
+// 		line-height: 1em;
+// 	}
+// }
 
 
 //NEW BLOG POST STYLES
@@ -273,19 +273,19 @@
 	&:nth-child(odd){
 	  padding-right:0;
 	}
-  }
+}
 
   .content{
-	position:relative;
-	width:100%;
-	display:table;
+		position:relative;
+		width:100%;
+		display:table;
   }
 
   .post-info{
-	font-size:14px;
-	display:table;
-	width:100%;
-	margin-bottom:20px;
+		font-size:14px;
+		display:table;
+		width:100%;
+		margin-bottom:15px;
 
 	i{
 	  color:$black;
@@ -297,16 +297,21 @@
 	  padding:0;
 
 	  ul{
-		margin:0;
-		text-align:center;
+			margin:0;
+			text-align:center;
 	  }
 
 	  li{
-		display:inline-block;
-		border-right:1px solid $primary-color;
-		padding-right:20px;
-		margin-right:10px;
-		line-height: 15px;
+			display:table-cell;
+			border-right:1px solid $primary-color;
+			padding-right:20px;
+			margin-right:10px;
+			line-height: 15px;
+			padding-left: 20px;
+
+		&:nth-child(1){
+			padding-left: 0;
+		}
 
 		&:nth-last-child(1){
 		  padding-right:0;
@@ -332,7 +337,7 @@
 		}
 
 		li{
-
+			display:inline-block;
 		  &:nth-last-child(1){
 			margin-right:0;
 		  }
@@ -355,65 +360,67 @@
   } //end post info
 
 
-.post-text{
-	max-width:800px;
-	width:100%;
-	margin:0 auto;
+	.post-text{
+		max-width:800px;
+		width:100%;
+		margin:0 auto;
 
-	.post-tags{
-	  text-align:center;
-	  margin:20px 0;
+		.post-tags{
+		  text-align:center;
+		  margin:20px 0;
 
-	  a{
-		color:$primary-color;
-		margin:0 15px;
-		border-bottom:1px solid $primary-color;
-		display:inline-block;
-	  }
-	}
+		  a{
+			color:$primary-color;
+			margin:0 15px;
+			border-bottom:1px solid $primary-color;
+			display:inline-block;
+		  }
+		}
 
-	h4{
-	  text-align:center;
-	  font-size:22px;
-	  line-height: 28px;
-	  margin: 20px 0;
-	  letter-spacing: 0;
-		font-weight: 500;
-	}
+		h4{
+			text-transform: none;
+			margin:20px 0 15px;
+			line-height: 29px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			font-size: 24px;
+		}
 
-	&.featured-text{
-	  h3{
-			text-align: center;
-			margin-top:40px;
-			font-size:28px;
-			line-height:34px;
-			margin-bottom: 30px;
-			font-weight: 700;
-	  }
+		&.featured-text{
+		  h3{
+				text-align: center;
+				margin-top:40px;
+				font-size:28px;
+				line-height:34px;
+				margin-bottom: 30px;
+				font-weight: 700;
+		  }
 
-	  p{
-			margin-top:35px;
-			margin-bottom:40px;
-	  }
+		  p{
+				margin-top:35px;
+				margin-bottom:40px;
+		  }
 
-	  .post-tags{
-			margin:0;
-
-		a{
+		  .post-tags{
+				margin:0;
+		  }
 
 		}
-	  }
+
+	} //end post-text class;
+
+	.social{
+		border:0;
+		margin-top:30px;
+		margin-bottom:30px;
+
+	  a{
+			padding:0 5px;
+		}
+
 	}
 
-}
-
-
-  .social{
-	border:0;
-	margin-top:30px;
-	margin-bottom:30px;
-  }
-}
+} //End blog post class
 
 // ==========================================================================
 // Section 3: Blog details page template
@@ -460,6 +467,10 @@
 		text-align: center;
 		margin-bottom:em(36px);
 
+		&::before, &::after{
+			content: none;
+		}
+
 		&.right, &.left{
 			width:55%;
 		}
@@ -483,7 +494,9 @@
 		font-size: em(28px);
 		line-height: em(20px);
 		text-align: left;
-		font-weight: bold;
+		font-weight: 300;
+		font-family: $ubuntu;
+
 	}
 
 	&--tags{
@@ -497,7 +510,6 @@
 		}
 
 		a{
-			//96722A
 		color:darken($primary-color, 12%);
 		margin:0 15px;
 		border-bottom:1px solid $primary-color;
@@ -550,7 +562,7 @@
 	margin: 0 auto;
 
 	&--header{
-		margin:85px 15px 22px;
+		margin:70px 15px 22px;
 		padding:10px 0 5px;
 		text-align: center;
 
@@ -570,6 +582,7 @@
 				margin:em(20px) auto;
 				line-height: 24px;
 				font-weight: 500;
+				letter-spacing: 1px;
 			}
 		}
 
@@ -589,6 +602,16 @@
 		top:0;
 		width:100%;
 		height:100%;
+	}
+}
+
+.blog__article--title{
+	h4{
+		text-transform: none;
+		margin:em(20px) auto;
+		line-height: 24px;
+		font-weight: 500;
+		letter-spacing: 1px;
 	}
 }
 
@@ -732,11 +755,11 @@
 //RESPOND TO COMMENT
 
 .comment__respond{
-	margin:25px auto;
+	margin:55px auto;
 
 	&--title{
 		text-align: center;
-		margin: 40px auto;
+		margin: 0 auto 40px;
 	}
 }
 
