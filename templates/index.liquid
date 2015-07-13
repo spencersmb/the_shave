@@ -1,5 +1,5 @@
-{% block content %} 
-	
+{% block content %}
+
 	{% include "feature-slider" %}
 
 	{% include "feature-boxs" %}
@@ -26,55 +26,8 @@
 
 $(function() {
 
-	// ==========================================================================
-	// Accordian Tabs
-	// ==========================================================================
-
-	$('.panel-left a').on('click',function(e){
-
-		getFh = $('.has-height').height();
-		console.log(getFh);
-		
-
-	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-	        e.stopPropagation();
-	    }
-	    if( $(this).parents('.panel').hasClass('active')){
-	    	//do nothing cus its active
-	    }
-	    //add border bottom to panel if not active
-	    if(!$(this).parents('.panel').hasClass('active')){
-	    	$("#accordion1 > div").each(function(){
-	    		$(this).removeClass("active");
-	    	});
-
-	    	$(this).parents('.panel').addClass('active');
-	    }
-	});
-
-	//Accordian Right side
-	//Disable pricing table Tabs all being closed at once.
-	$('.panel-right a').on('click',function(e){
-
-	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-	        e.stopPropagation();
-	    }
-	    if( $(this).parents('.panel').hasClass('active')){
-	    	//do nothing cus its active
-	    }
-	    //add border bottom to panel if not active
-	    if(!$(this).parents('.panel').hasClass('active')){
-	    	$("#accordion > div").each(function(){
-	    		$(this).removeClass("active");
-	    	});
-
-	    	$(this).parents('.panel').addClass('active');
-	    }
-	});
 
 
-
-	// ==========================================================================
 	// Revolution Slider Settings
 	// ==========================================================================
     $('.tp-banner').revolution(
@@ -149,10 +102,10 @@ $(function() {
 			hideAllCaptionAtLilmit:0,
 			startWithSlide:0,
 			// videoJsPath:"rs-plugin/videojs/",
-			fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old 
+			fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old
 	});
 });
-    
+
 </script>
 
 {% endblock %}

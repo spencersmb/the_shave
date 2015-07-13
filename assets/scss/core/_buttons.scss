@@ -39,17 +39,82 @@
 }
 
 .book__now--btn{
-  @extend .sv-btn;
+  display: block;
+  position: relative;
+  padding: 0 5px !important;
+  line-height: 40px !important;
+  background-color: transparent;
+  color: $black;
+  border:3px solid $black;
+  margin: 0 auto;
+  width: 100%;
+  font-family: $ubuntu;
+  font-size:12px !important;
+  font-weight: 500;
   text-transform: uppercase;
-  font-weight: 300;
-  padding:16px 26px;
-  font-size: 14px;
-  display:block;
-  letter-spacing: 1px;
+  @include transition(all 0.2s);
 
-  &:hover{
+
+  .no-touch &:hover {
     color:$white;
-    background:#5f5134;
+    background-color: $primary-color;
+    border:3px solid $primary-color;
+
+    &::before, &::after {
+      background:$primary-color;
+    }
+  }
+
+  &:focus{
+    color:$dark-grey;
+  }
+
+  &.featured{
+    background-color: $primary-color;
+    color:$white;
+    border:3px solid $primary-color !important;
+  }
+
+  &.slider-btn{
+    max-width: 100% !important;
+    padding:0 20px !important;
+  }
+
+  &.price-tab{
+    color:$black !important;
+    max-width: 160px;
+    text-align: center;
+    margin:20px 0;
+    float:left;
+
+
+    &:hover{
+      color:$white !important;
+    }
+  }
+}
+
+
+.nav__book{
+  position: absolute;
+  top:26px;
+  right:5%;
+  width:20%;
+
+  a{
+    display: inline-block;
+    float:right;
+  }
+}
+
+.book__nav{
+  font-family: $ubuntu;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: 2px solid $primary-color;
+
+  i{
+    margin-left:7px;
   }
 }
 
@@ -116,11 +181,11 @@
 }
 
 
-// Displays greater than 768px 
+// Displays greater than 768px
 @include breakpoint(tablet) {
   .book__now--btn{
     width:100%;
-    max-width: 160px;
+    max-width: 105px;
   }
 
 }
@@ -141,7 +206,7 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-  
 
-  
+
+
 }

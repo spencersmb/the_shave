@@ -12,6 +12,9 @@
 	background-position: 50% 50%;
 	background-attachment:fixed;
 
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+
 	.title-heading{
 		text-align: center;
 		margin:0 auto;
@@ -117,7 +120,7 @@
 }
 
 
-// Displays greater than 768px 
+// Displays greater than 768px
 @include breakpoint(tablet) {
 
 	.price__overview, .blog__overview{
@@ -150,7 +153,7 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
-	
+
 
 }
 
@@ -161,14 +164,14 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-	
+
 }
 
 
 
 // ==========================================================================
 // Pricing Tabs
-// 
+//
 // ==========================================================================
 .pricing__table{
 	@include transition(all .4s ease-in-out);
@@ -238,7 +241,7 @@
 
 // ==========================================================================
 // Accordian
-// 
+//
 // ==========================================================================
 .fade{
 	@include transition(all .5s ease-in-out);
@@ -246,7 +249,7 @@
 }
 
 .pricing__accordian{
-	
+
 }
 
 .panel{
@@ -257,7 +260,7 @@
 .panel-body{
 	padding:15px 33px;
 
-	
+
 }
 
 .panel-default{
@@ -296,7 +299,8 @@
 			margin-right: em(15px);
 			font-size: em(16px);
 			margin-bottom: em(5px);
-
+			font-family: courier;
+			letter-spacing: 2px;
 		}
 
 		.item .price{
@@ -304,7 +308,7 @@
 			float:none;
 			color:$black;
 			font-weight: 300;
-			font-family: $heading-font;
+			font-family: courier;
 			margin-bottom:10px;
 		}
 
@@ -351,7 +355,7 @@
 
 	.price__trigger{
 
-		
+
 		&::before, &::after {
 			background: $primary-color;
 		}
@@ -421,7 +425,7 @@
 
 }
 
-// Displays greater than 768px 
+// Displays greater than 768px
 @include breakpoint(tablet) {
 
 	.panel-default{
@@ -447,7 +451,7 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
-	
+
 
 }
 
@@ -458,12 +462,12 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-	
+
 }
 
 // ==========================================================================
 // Pricing page full tab accordian
-// 
+//
 // ==========================================================================
 
 .full__table--wrapper{
@@ -517,7 +521,7 @@
 		margin-top: 35px;
 		margin-bottom: 35px;
 	}
-	
+
 	h3{
 		font-size: em(18px);
 		margin-bottom:15px;
@@ -526,7 +530,7 @@
 
 	.item{
 		padding-bottom:20px;
-		border-bottom: 1px solid #CACACA; 
+		border-bottom: 1px solid #CACACA;
 
 		.title{
 			margin-top: 30px;

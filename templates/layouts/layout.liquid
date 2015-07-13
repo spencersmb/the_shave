@@ -8,7 +8,7 @@
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
         {{ "main.css" | asset_url | stylesheet_tag }}
         {{ "modernizr.js" | asset_url | script_tag }}
-        
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         <!-- Style block allowing child pages to inject their own styles -->
@@ -26,7 +26,7 @@
             {% block content %}{% endblock %}
 
             {% block footer %}{% endblock %}
-            
+
         </main> <!-- end canvas -->
 
         {% include "footer" %}
@@ -35,7 +35,7 @@
         {% block scripts %} {% endblock %}
 
         <!-- Plugins -->
-        
+
         {{ "jquery.menu-aim.js" | asset_url | script_tag }}
         {{ "skrollr.js" | asset_url | script_tag }}
 
@@ -45,7 +45,6 @@
         <!-- Settings -->
         {{ "nav-settings.js" | asset_url | script_tag }}
         {{ "main-settings.js" | asset_url | script_tag }}
-        {{ "skrollr-settings.js" | asset_url | script_tag }}
 
     </body>
 </html>

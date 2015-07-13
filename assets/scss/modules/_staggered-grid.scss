@@ -10,7 +10,7 @@
 		font-size: em(97px);
 		line-height: 105px;
 		text-align: left;
-		margin-bottom:50px;
+		margin-bottom:16px;
 	}
 	h6{
 		font-size: em(18px);
@@ -28,18 +28,36 @@
 
 }
 
+
+.box-link{
+  top:0;
+  position:absolute;
+  display: block;
+  width:100%;
+  height:100%;
+  left:0;
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity:0;
+	cursor: pointer;
+}
+
 .box{
 	position:relative;
 	overflow:hidden;
 	text-align:center;
 	width:100%;
 	margin-bottom:15px;
+	background-color: $black;
 
 	.content{
 		position:relative;
 		z-index: 100;
 		background:$white;
 		margin:7.525em 19.5%;
+		overflow: hidden;
 
 		p{
 			color:$black;
@@ -51,6 +69,55 @@
 			margin: 0 auto;
 			width:100%;
 			text-align:center;
+		}
+
+	}
+
+	.box-overlay{
+		opacity: 0;
+		width:99.99%;
+		height:100%;
+		position: absolute;
+		top:0;
+		left:0;
+		background-color: $black;
+		z-index: 3;
+		@include transition(opacity .25s);
+	}
+
+	.animate-off{
+		opacity: 1;
+		position: relative;
+		left:16px;
+		@include transition(transform .2s ease-in-out, opacity 300ms ease-out);
+	}
+
+	.animate-on{
+		color:$primary-color;
+		opacity: 0;
+		position: relative;
+		@include transition(transform .2s ease-in-out, opacity 300ms ease-out);
+		@include transform(translateX(-200px));
+	}
+
+
+
+	&:hover{
+		.box-overlay{
+			opacity: .5;
+		}
+		.animate-off{
+			opacity: 0;
+			@include transform(translateX(200px));
+		}
+		.animate-on{
+			opacity: 1;
+			right:3px;
+			@include transform(translateX(-50%));
+		}
+
+		.offset__btn > .animate-on{
+				color:$white;
 		}
 	}
 
@@ -65,13 +132,25 @@
 		left:50%;
 		@include transform(translateX(-50%));
 
-		a{
-			padding:18px 0;
+		.offset__btn{
+			padding:15px 0;
+			height:55px;
+			width:40%;
+			overflow: hidden;
 		}
 
-		a>i{
-			padding:20px 30px;
+		i{
+			padding:0;
 		}
+
+		.animate-off{
+			left:11px;
+		}
+
+
+		// a>i{
+		// 	padding:20px 30px;
+		// }
 	}
 
 
@@ -104,6 +183,7 @@
 
 	.content{
 		padding:25px 10%;
+		background-color: #ECECEC;
 	}
 
 	img{
@@ -117,13 +197,14 @@
 }
 
 .box-sm-hours{
-	
+
 	width:100%;
 
 	.content{
 		position:relative;
 		padding:20px 8% 60px;
 		font-size: em(16px);
+		overflow: visible;
 	}
 
 	img{
@@ -139,13 +220,14 @@
 		text-transform: uppercase;
 		font-size: em(22px);
 		font-weight: 500;
-		line-height: 32px;
+		line-height: 24px;
+		padding-top:10px;
 	}
 
 }
 
 .box-sm-tall{
-	
+
 	width:100%;
 
 	img{
@@ -181,7 +263,7 @@
 	}
 }
 
-// Displays greater than 600px 
+// Displays greater than 600px
 @include breakpoint(tablet) {
 
 	.staggered__container{
@@ -207,7 +289,6 @@
 		.content{
 			padding:52px 10.8% 41px;
 			margin:0;
-			background:0;
 
 			p{
 				font-size: em(22px);
@@ -263,5 +344,5 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-	
+
 }
