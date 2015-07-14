@@ -14354,21 +14354,34 @@ footer.safari {
   background: #fff;
   padding: 3em;
 }
-.blog__overview--contents h2::after {
-  position: absolute;
-  top: 59px;
-  left: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: left;
-  color: #252525;
-  width: 100%;
-  letter-spacing: 0px;
-  content: "::::::::::";
+.blog__overview--contents h2 {
+  margin-bottom: 0;
 }
 .blog__overview--contents .feature__post {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  display: table;
+}
+.blog__overview--contents .post-img {
+  float: left;
+  width: 33.333333%;
+  position: relative;
+}
+.blog__overview--contents .feature-content {
+  margin-left: 33.333333%;
+  width: 66.333333%;
+  padding-left: 25px;
+  position: relative;
+}
+.blog__overview--contents .feature-content h3 {
+  margin: 0 0 30px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 24px;
+}
+.blog__overview--contents .feature-content a {
+  color: #af8c45;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .blog__overview--contents .title-heading {
   padding-bottom: 40px;
@@ -14386,9 +14399,6 @@ footer.safari {
 .blog__overview--contents .details span {
   display: block;
   float: left;
-}
-.blog__overview--contents p {
-  clear: both;
 }
 
 @media (min-width: 992px) {
