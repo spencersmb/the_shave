@@ -6,16 +6,9 @@
 	position: relative;
 }
 
-.shaving{
-	margin:60px auto;
-	text-align:center;
-	position:relative;
-	padding:40px 0 0;
-}
-
-
 .shave__row{
-	
+display: table;
+padding: 0 60px 90px;
 
 	& > div{
 		// height:418px;
@@ -60,7 +53,7 @@
 	&:nth-child(4){
 		clear:both;
 	}
-	
+
 	i{
 		padding:25px 0;
 	}
@@ -80,11 +73,10 @@
 //Shaving Cream
 
 .service__products{
-	padding:60px 0;
 	color:$white;
+	padding:25px 0 30px;
 
 	&--row{
-		padding-top: 90px;
 
 			& > div{
 		    padding:0;
@@ -115,7 +107,7 @@
 
 	}
 
-	
+
 }
 .title-head{
 	// color:$primary-color;
@@ -148,7 +140,7 @@
 	}
 
 	&--wrapper{
-	
+
 	padding:0;
 	position:relative;
 	margin:70px auto;
@@ -173,7 +165,7 @@
 
 
 .price__wrapper{
-	padding:60px 0 0;
+
 }
 
 .price__table{
@@ -239,13 +231,12 @@
 }
 
 //Barbers
-.baber__box--wrapper{
-	// max-width:1170px;
-	margin:90px auto;
-}
+// .baber__box--wrapper{
+// 	// max-width:1170px;
+// 	margin:90px auto 60px;
+// }
 
 .barber__row{
-	padding-top:60px;
 	margin:0 auto;
 }
 
@@ -284,7 +275,7 @@
 		// transform:translate3d(0, -50%, 0) scale3d(.8, .8, 1);
 
 	}
-	
+
 	img{
 		@include transition (all .3s ease-in-out);
 		@include transform(translateX(0) scale3d(1.2, 1.2, 1));
@@ -310,7 +301,7 @@
 
 }
 
-// Displays greater than 768px 
+// Displays greater than 768px
 @include breakpoint(tablet) {
 	.barber__box{
 		float:left;
@@ -333,7 +324,7 @@
 		padding:0;
 	}
 
-	
+
 
 }
 
@@ -344,5 +335,5 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-	
+
 }

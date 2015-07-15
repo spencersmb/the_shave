@@ -113,6 +113,22 @@
 
 //HEADLINE OPTIONS
 
+
+	.headline-sm{
+		text-align: center;
+		margin:0 auto;
+
+		h2{
+			margin:0 auto;
+			margin-bottom: 45px;
+			font-size: 21px;
+		}
+    //
+		// .desc{
+		// 	text-transform: inherit;
+		// }
+	}
+
 .headline-set1{
   margin:0 auto;
   text-align: center;
@@ -129,6 +145,7 @@
     font-weight: 300;
   }
 }
+
 .title-heading{
   text-align: center;
   margin: 0 auto 80px;

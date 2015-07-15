@@ -10418,6 +10418,13 @@ footer.loading {
   letter-spacing: 0;
 }
 
+.inner-content-module {
+  margin: 60px auto;
+  text-align: center;
+  position: relative;
+  padding: 88px 0 60px;
+}
+
 blockquote {
   border-left: 5px solid #af8c45;
   font-size: 21.5px;
@@ -10564,11 +10571,13 @@ blockquote.reverse {
 
 .parallax__background {
   background-size: cover;
-  background-position: 50% 70%;
+  background-position: 50% 50%;
   background-attachment: fixed;
   overflow: hidden;
   width: 100%;
   height: 100%;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 }
 
 .flip-container {
@@ -10646,7 +10655,6 @@ blockquote.reverse {
 .row__three {
   clear: both;
   text-align: center;
-  padding-bottom: 5.625em;
 }
 .row__three p {
   margin: 0;
@@ -10871,6 +10879,16 @@ blockquote.reverse {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.headline-sm {
+  text-align: center;
+  margin: 0 auto;
+}
+.headline-sm h2 {
+  margin: 0 auto;
+  margin-bottom: 45px;
+  font-size: 21px;
 }
 
 .headline-set1 {
@@ -12874,27 +12892,6 @@ blockquote.reverse {
   transition: all 0.4s ease-in-out;
 }
 
-.pricing__tabs {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-}
-.pricing__tabs .title-heading {
-  text-align: center;
-  margin: 0 auto;
-}
-.pricing__tabs .title-heading h2 {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  font-size: 1.5em;
-}
-.pricing__tabs .title-heading .desc {
-  text-transform: inherit;
-}
-
 .price__overview, .blog__overview {
   position: absolute;
   height: 100%;
@@ -14002,7 +13999,6 @@ footer.safari {
   -webkit-transition: -webkit-transform 2s;
   -moz-transition: -moz-transform 2s;
   transition: transform 2s;
-  padding-top: 60px;
 }
 
 .shave__faq--group {
@@ -14037,7 +14033,7 @@ footer.safari {
   text-align: center;
   padding: 30px 30px 60px;
   line-height: 1.2;
-  font-size: 1.5em;
+  font-size: 21px;
   border: 1px solid transparent;
 }
 
@@ -14354,39 +14350,46 @@ footer.safari {
   background: #fff;
   padding: 3em;
 }
-.blog__overview--contents h2 {
-  margin-bottom: 0;
-}
 .blog__overview--contents .feature__post {
   margin-bottom: 20px;
   display: table;
-}
-.blog__overview--contents .post-img {
-  float: left;
-  width: 33.333333%;
   position: relative;
 }
+.blog__overview--contents .post-img {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 200px;
+  position: absolute;
+}
 .blog__overview--contents .feature-content {
-  margin-left: 33.333333%;
-  width: 66.333333%;
-  padding-left: 25px;
+  margin-left: 228px;
   position: relative;
 }
 .blog__overview--contents .feature-content h3 {
-  margin: 0 0 30px;
+  margin: 0 0 5px;
   font-size: 18px;
   letter-spacing: 2px;
   line-height: 24px;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
-.blog__overview--contents .feature-content a {
+.blog__overview--contents .feature-content .feature-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+}
+.blog__overview--contents .feature-content:hover h3 {
   color: #af8c45;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.blog__overview--contents .title-heading {
-  padding-bottom: 40px;
-  padding-left: 0;
-  position: relative;
 }
 .blog__overview--contents h3 {
   margin: 0;
@@ -14972,11 +14975,9 @@ footer.safari {
   position: relative;
 }
 
-.shaving {
-  margin: 60px auto;
-  text-align: center;
-  position: relative;
-  padding: 40px 0 0;
+.shave__row {
+  display: table;
+  padding: 0 60px 90px;
 }
 
 .shave__card {
@@ -15020,11 +15021,8 @@ footer.safari {
 }
 
 .service__products {
-  padding: 60px 0;
   color: #fff;
-}
-.service__products--row {
-  padding-top: 90px;
+  padding: 25px 0 30px;
 }
 .service__products--row > div {
   padding: 0;
@@ -15087,10 +15085,6 @@ footer.safari {
   font-size: 1.125em;
 }
 
-.price__wrapper {
-  padding: 60px 0 0;
-}
-
 .price__table {
   background: #fff;
   padding: 10%;
@@ -15141,12 +15135,7 @@ footer.safari {
   padding-bottom: 15px;
 }
 
-.baber__box--wrapper {
-  margin: 90px auto;
-}
-
 .barber__row {
-  padding-top: 60px;
   margin: 0 auto;
 }
 

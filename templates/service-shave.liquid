@@ -2,14 +2,14 @@
 
 {% block content %}
 <!-- TODO: Comment this section out -->
-<!-- TODO: Add Shaving Cream icons --> 
-	
+<!-- TODO: Add Shaving Cream icons -->
+
 	<!-- Offset header -->
-	{% include "service-shave/service-intro-shave" %} 
+	{% include "service-shave/service-intro-shave" %}
 	<!-- End offset header -->
 
 	<!-- HOW IT WORKS -->
-	{% include "service-shave/how-it-works-shave" %}	
+	{% include "service-shave/how-it-works-shave" %}
 	<!-- End section how it oworks -->
 
 	<!-- Start Types of shaving cream -->
@@ -17,17 +17,22 @@
 
 		<div class="parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;"  data-anchor-target="#service" style="background-image: url({{'service-shave-bg.jpg' | asset_url}});">
 
-		<div class="sv__container--md">
+		<div class="sv__container--md inner-content-module">
+
+			<div class="headline-sm white">
+				<h2>Pick your favorite aroma</h2>
+			</div>
 
 			<div class="row service__products no-margin">
 
-				<div class="headline-set1">
+				<!-- <div class="headline-combo-A">
 					<h6>picking your favorite aroma:</h6>
 					<h3>Shaving Cream</h3>
-				</div>
+				</div> -->
+
 
 				<div class="col-xs-12 row__three service__products--row">
-					
+
 					<div class="col-xs-12 col-sm-12 col-md-4">
 						<div class="content">
 							<i class="fa fa-cogs fa-2x"></i>
@@ -36,7 +41,7 @@
 							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 						</div>
 					</div>
-					
+
 					<div class="col-xs-12 col-sm-12 col-md-4">
 						<div class="content">
 							<i class="fa fa-cogs fa-2x"></i>
@@ -45,7 +50,7 @@
 							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 						</div>
 					</div>
-					
+
 					<div class="col-xs-12 col-sm-12 col-md-4">
 						<div class="content">
 							<i class="fa fa-cogs fa-2x"></i>
@@ -61,24 +66,24 @@
 			</div>
 
 		</div><!-- end parralax bg -->
-		
+
 	</section>
 	<!-- End section shaving cream -->
 
 	<!-- Start Price module -->
-	{% include "service-shave/price-boxs-shave" %}	
-	<!-- End Section price module -->	
+	{% include "service-shave/price-boxs-shave" %}
+	<!-- End Section price module -->
 
 	<!-- Start Price module -->
-	{% include "service-shave/suggested-barber" %}	
-	<!-- End Section price module -->	
+	{% include "service-shave/suggested-barber" %}
+	<!-- End Section price module -->
 
 	<!-- FAQ -->
-	{% include "service-shave/faq-shave" %}	
+	{% include "service-shave/faq-shave" %}
 	<!-- End Faq -->
 
 	{% include "buy-theme" %}
-	
+
 {% endblock %}
 
 {% block scripts %}
@@ -117,13 +122,13 @@
 
     	//Set heights of the content boxs and then image boxs next
     	$(".shave__card").each(function(item){
-			
+
 			//Set new height of container
 			$(this).children('.content').css('height', largest + 'px');
 		});
 
 		$(".shave__card--img").each(function(item){
-			
+
 			//Set new height of container
 			$(this).css('height', largest + 'px');
 		});
@@ -143,8 +148,8 @@
 			$('.shave__card').children('.content').css('height', newHeight + 'px');
 
 		});
-		
+
 	});
-    
+
 </script>
 {% endblock %}

@@ -2,7 +2,7 @@
 <!-- TODO: Create universal parralx background image class for parralax -->
 <section  class="container-fluid pricing__container" >
 
-		<div id="blog" class="row pricing__tabs" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#blog" style="background-image: url({{'test2.jpg' | asset_url}});">
+		<div id="blog" class="row parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#blog" style="background-image: url({{'test2.jpg' | asset_url}});">
 
 			<div class="col-xs-12 col-sm-7 col-md-5 no-padding blog__overview">
 
@@ -13,22 +13,28 @@
 
 					<div class="blog__overview--contents">
 
-						<div class="title-heading">
-							<h2>From the blog</h2>
+						<div class="headline-sm">
+							<h2>Featured Posts</h2>
 						</div>
 
 						<div class="feature__post">
 
+							<div class="post-img">
+								<a href="#">
+								<img class="img-responsive" src="{{'blog-feature-thumb.jpg' | asset_url }}" alt="" />
+								</a>
+							</div>
 
 							<div class="feature-content">
-								<div class="post-img">
-									<a href="#">
-									<img class="img-responsive" src="{{'blog-feature-thumb.jpg' | asset_url }}" alt="" />
-									</a>
-								</div>
+
 								<h3>A beautifully hand crafted theme packed with tons of features.</h3>
 
-								<a href="#">read more</a>
+								<div class="details">
+									<div class="author">by <a href="#">Spencer bigum</a></div>
+									<div class="stats">233 views | 20 comments</div>
+								</div>
+
+								<a class="feature-link" href="#">read more</a>
 								<!-- <p>Msed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui...</p> -->
 							</div>
 
