@@ -91,7 +91,7 @@ padding: 0 60px 90px;
 	.content{
 		margin:25px;
 		padding:55px 25px;
-		background-color: rgba(255, 255, 255, 0.45);
+		background-color: rgba(255, 255, 255, 0.65);
 
 		h2{
 			font-size: 24px;
@@ -101,9 +101,8 @@ padding: 0 60px 90px;
 		h6{
 			margin-top: 25px;
 			font-family: courier;
-			text-transform: uppercase;
 			font-weight: 300;
-			font-size: em(16px);
+			font-size: 14px;
 			letter-spacing: 2px;
 		}
 		h3{
@@ -283,16 +282,16 @@ padding: 0 60px 90px;
 		// transform:translateX(0) scale3d(1.2, 1.2, 1);
 	}
 
-	.rotate{
-		position: absolute;
-		color:$white;
-		opacity: 0;
-		top:50%;
-		left:50%;
-		z-index: 4;
-		@include transition (all .2s cubic-bezier(0, 2.8, 0, 2.8));
-		@include transform(translateX(-50%) translateY(-50%) rotate(0));
-	}
+	// .rotate{
+	// 	position: absolute;
+	// 	color:$white;
+	// 	opacity: 0;
+	// 	top:50%;
+	// 	left:50%;
+	// 	z-index: 4;
+	// 	@include transition (all .2s cubic-bezier(0, 2.8, 0, 2.8));
+	// 	@include transform(translateX(-50%) translateY(-50%) rotate(0));
+	// }
 
 	&:hover{
 
@@ -301,10 +300,10 @@ padding: 0 60px 90px;
 			@include transform(translateX(25px) scale3d(1.2, 1.2, 1));
 		}
 
-		.rotate{
-			opacity: .8;
-			@include transform(translateX(-50%) translateY(-50%) rotate(180deg));
-		}
+		// .rotate{
+		// 	opacity: .4;
+		// 	@include transform(translateX(-50%) translateY(-50%) rotate(180deg));
+		// }
 
 	}
 

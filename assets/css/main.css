@@ -12648,6 +12648,9 @@ blockquote.reverse {
   width: 100%;
   text-align: center;
 }
+.box .content h3 {
+  line-height: 28px;
+}
 .box .box-overlay {
   opacity: 0;
   width: 99.99%;
@@ -12809,8 +12812,6 @@ blockquote.reverse {
   margin: 0 auto;
   max-width: 75%;
   margin-bottom: 1.25em;
-  font-size: 1.5em;
-  font-weight: 700;
 }
 .box-last img {
   display: block;
@@ -13414,6 +13415,7 @@ blockquote.reverse {
   padding-left: 0px;
   margin-top: 0;
   font-size: 0.9375em;
+  font-weight: 500;
 }
 .contact__us i {
   padding-left: 20px;
@@ -14029,7 +14031,7 @@ footer.safari {
   text-align: center;
   padding: 30px 30px 60px;
   line-height: 1.2;
-  font-size: 21px;
+  font-size: 16;
   border: 1px solid transparent;
 }
 
@@ -14077,7 +14079,7 @@ footer.safari {
     margin: 0;
     padding: 30px 75px 30px 30px;
     line-height: 1.2;
-    font-size: 1.5em;
+    font-size: 18px;
     border: 1px solid transparent;
   }
   .shave__faq--trigger::before, .shave__faq--trigger::after {
@@ -14344,25 +14346,33 @@ footer.safari {
 
 .blog__overview--contents {
   background: #fff;
-  padding: 3em;
+  padding: 3em 0 0;
+}
+.blog__overview--contents h2 {
+  margin-bottom: 20px;
 }
 .blog__overview--contents .feature__post {
-  margin-bottom: 20px;
   display: table;
   position: relative;
+  padding: 25px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
-.blog__overview--contents .post-img {
+.blog__overview--contents .feature__post .feature-link {
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
-  width: 200px;
-  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
 }
-.blog__overview--contents .feature-content {
-  margin-left: 228px;
-  position: relative;
-}
-.blog__overview--contents .feature-content h3 {
+.blog__overview--contents .feature__post h3 {
   margin: 0 0 5px;
   font-size: 18px;
   letter-spacing: 2px;
@@ -14374,18 +14384,20 @@ footer.safari {
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-.blog__overview--contents .feature-content .feature-link {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  text-indent: -9999px;
+.blog__overview--contents .feature__post:hover {
+  background-color: #eeeeee;
 }
-.blog__overview--contents .feature-content:hover h3 {
+.blog__overview--contents .feature__post:hover h3 {
   color: #af8c45;
+}
+.blog__overview--contents .post-img {
+  overflow: hidden;
+  width: 200px;
+  position: absolute;
+}
+.blog__overview--contents .feature-content {
+  margin-left: 228px;
+  position: relative;
 }
 .blog__overview--contents h3 {
   margin: 0;
@@ -15029,7 +15041,7 @@ footer.safari {
 .service__products .content {
   margin: 25px;
   padding: 55px 25px;
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.65);
 }
 .service__products .content h2 {
   font-size: 24px;
@@ -15038,9 +15050,8 @@ footer.safari {
 .service__products .content h6 {
   margin-top: 25px;
   font-family: courier;
-  text-transform: uppercase;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 .service__products .content h3 {
@@ -15178,22 +15189,6 @@ footer.safari {
   -o-transform: translateX(0) scale3d(1.2, 1.2, 1);
   transform: translateX(0) scale3d(1.2, 1.2, 1);
 }
-.barber__profile .rotate {
-  position: absolute;
-  color: #fff;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  z-index: 4;
-  -webkit-transition: all 0.2s cubic-bezier(0, 2.8, 0, 2.8);
-  -moz-transition: all 0.2s cubic-bezier(0, 2.8, 0, 2.8);
-  transition: all 0.2s cubic-bezier(0, 2.8, 0, 2.8);
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(0);
-  -moz-transform: translateX(-50%) translateY(-50%) rotate(0);
-  -ms-transform: translateX(-50%) translateY(-50%) rotate(0);
-  -o-transform: translateX(-50%) translateY(-50%) rotate(0);
-  transform: translateX(-50%) translateY(-50%) rotate(0);
-}
 .barber__profile:hover img {
   opacity: .4;
   -webkit-transform: translateX(25px) scale3d(1.2, 1.2, 1);
@@ -15201,14 +15196,6 @@ footer.safari {
   -ms-transform: translateX(25px) scale3d(1.2, 1.2, 1);
   -o-transform: translateX(25px) scale3d(1.2, 1.2, 1);
   transform: translateX(25px) scale3d(1.2, 1.2, 1);
-}
-.barber__profile:hover .rotate {
-  opacity: .8;
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
-  -moz-transform: translateX(-50%) translateY(-50%) rotate(180deg);
-  -ms-transform: translateX(-50%) translateY(-50%) rotate(180deg);
-  -o-transform: translateX(-50%) translateY(-50%) rotate(180deg);
-  transform: translateX(-50%) translateY(-50%) rotate(180deg);
 }
 
 .barber__title h6 {

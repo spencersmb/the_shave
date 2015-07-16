@@ -34,7 +34,7 @@
 		top:0;
 		left:0;
 		margin:0;
-		
+
 		background:$grey;
 		float:left;
 		width:100%;
@@ -107,12 +107,13 @@
 		padding-left:0px;
 		margin-top: 0;
 		font-size: em(15px);
+		font-weight:500;
 	}
 
 	i{
 		// position:absolute;
 		// top:-1px;
-		// right:17px;	
+		// right:17px;
 		padding-left:20px;
 	}
 
@@ -122,13 +123,13 @@
 
 }
 
-// Displays greater than 600px 
+// Displays greater than 600px
 @include breakpoint(tablet) {
 
 	.contact__wrapper{
 		margin:100px auto;
 	}
-	
+
 	.contact__card{
 		// height:31.5em;
 		height:em(505px);
@@ -207,7 +208,7 @@
 		}
 	}
 
-	
+
 }
 
 // Displays greater than 1200px
@@ -218,5 +219,5 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-	
+
 }
