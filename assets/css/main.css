@@ -10665,10 +10665,6 @@ blockquote.reverse {
 }
 .row__three > div {
   padding: 50px 25px 30px 25px;
-  border-left: 1px solid #878787;
-}
-.row__three > div:first-child {
-  border-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -14981,6 +14977,7 @@ footer.safari {
 }
 
 .shave__card {
+  min-height: 330px;
   overflow: hidden;
   padding: 15px;
 }
@@ -14997,12 +14994,14 @@ footer.safari {
   height: 100%;
 }
 .shave__card .content {
-  padding: 50px;
+  padding: 65px 50px 50px;
   background: #eeeeee;
   position: relative;
 }
 .shave__card .content h3 {
-  margin: 0 0 25px 0;
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 .shave__card:nth-child(4) {
   clear: both;
@@ -15021,19 +15020,20 @@ footer.safari {
 }
 
 .service__products {
-  color: #fff;
-  padding: 25px 0 30px;
+  color: #252525;
+  padding: 0 0 30px;
 }
 .service__products--row > div {
   padding: 0;
-  border-left: none;
-  border-right: 1px solid #fff;
-}
-.service__products--row > div:last-child {
-  border-right: 0;
 }
 .service__products .content {
-  padding: 25px;
+  margin: 25px;
+  padding: 55px 25px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.service__products .content h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
 }
 .service__products .content h6 {
   margin-top: 25px;
@@ -15045,6 +15045,11 @@ footer.safari {
 }
 .service__products .content h3 {
   font-weight: 600;
+  font-family: courier;
+}
+.service__products .content i {
+  display: table;
+  margin: 0 auto;
 }
 
 .title-head {
@@ -15096,7 +15101,8 @@ footer.safari {
 .price__table .price__header h2 {
   margin: 0 0 35px 0;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: courier;
 }
 .price__table .price__header .price {
   font-size: 3.5em;
@@ -15106,18 +15112,20 @@ footer.safari {
   position: relative;
   display: inline-block;
   padding-top: 20px;
+  color: #af8c45;
 }
 .price__table .price__header .price span {
   font-size: 18px;
   position: absolute;
-  top: 0px;
+  top: 7px;
   left: -15px;
 }
 .price__table .divider__plus {
   text-align: center;
 }
 .price__table .divider__plus .middle {
-  color: #959595;
+  color: #252525;
+  font-weight: 300;
 }
 .price__table .divider__plus p {
   border-bottom: 1px solid #959595;
@@ -15157,6 +15165,8 @@ footer.safari {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  background-color: #252525;
+  opacity: 1;
 }
 .barber__profile img {
   -webkit-transition: all 0.3s ease-in-out;
@@ -15168,20 +15178,61 @@ footer.safari {
   -o-transform: translateX(0) scale3d(1.2, 1.2, 1);
   transform: translateX(0) scale3d(1.2, 1.2, 1);
 }
+.barber__profile .rotate {
+  position: absolute;
+  color: #fff;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  -webkit-transition: all 0.2s cubic-bezier(0, 2.8, 0, 2.8);
+  -moz-transition: all 0.2s cubic-bezier(0, 2.8, 0, 2.8);
+  transition: all 0.2s cubic-bezier(0, 2.8, 0, 2.8);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(0);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(0);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(0);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(0);
+  transform: translateX(-50%) translateY(-50%) rotate(0);
+}
 .barber__profile:hover img {
+  opacity: .4;
   -webkit-transform: translateX(25px) scale3d(1.2, 1.2, 1);
   -moz-transform: translateX(25px) scale3d(1.2, 1.2, 1);
   -ms-transform: translateX(25px) scale3d(1.2, 1.2, 1);
   -o-transform: translateX(25px) scale3d(1.2, 1.2, 1);
   transform: translateX(25px) scale3d(1.2, 1.2, 1);
 }
+.barber__profile:hover .rotate {
+  opacity: .8;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
+}
+
+.barber__title h6 {
+  font-size: 18px;
+  font-family: courier;
+}
 
 @media (min-width: 768px) {
   .barber__box {
     float: left;
   }
+
+  .service__products .product-item:nth-child(2n+1) {
+    clear: both;
+  }
 }
 @media (min-width: 992px) {
+  .service__products .product-item:nth-child(2n+1) {
+    clear: none;
+  }
+  .service__products .product-item:nth-child(3n+1) {
+    clear: both;
+  }
+
   .price__table {
     max-width: 400px;
     padding: 15%;

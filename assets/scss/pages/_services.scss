@@ -16,7 +16,7 @@ padding: 0 60px 90px;
 }
 
 .shave__card{
-
+	min-height: 330px;
 	overflow:hidden;
 	padding:15px;
 
@@ -41,12 +41,14 @@ padding: 0 60px 90px;
 	}
 
 	.content{
-		padding:50px;
+		padding: 65px 50px 50px;
 		background:#eeeeee;
 		position: relative;
 
 		h3{
-			margin:0 0 25px 0;
+			margin:0 0 15px 0;
+			font-size: 18px;
+			letter-spacing: 2px;
 		}
 	}
 
@@ -73,25 +75,28 @@ padding: 0 60px 90px;
 //Shaving Cream
 
 .service__products{
-	color:$white;
-	padding:25px 0 30px;
+	color:$black;
+	padding:0 0 30px;
 
 	&--row{
 
 			& > div{
 		    padding:0;
-		    border-left:none;
-		    border-right: 1px solid #fff;
 
 		    &:last-child{
-		      border-right:0;
 		    }
 		  }
 	}
 
 	.content{
+		margin:25px;
+		padding:55px 25px;
+		background-color: rgba(255, 255, 255, 0.45);
 
-		padding:25px;
+		h2{
+			font-size: 24px;
+			margin-bottom:25px;
+		}
 
 		h6{
 			margin-top: 25px;
@@ -103,6 +108,12 @@ padding: 0 60px 90px;
 		}
 		h3{
 			font-weight: 600;
+			font-family: courier;
+		}
+
+		i{
+			display: table;
+			margin: 0 auto;
 		}
 
 	}
@@ -180,7 +191,8 @@ padding: 0 60px 90px;
 		h2{
 			margin:0 0 35px 0;
 			font-size: 16px;
-			font-weight: 500;
+			font-weight: 600;
+			font-family: courier;
 		}
 
 		.price{
@@ -191,11 +203,12 @@ padding: 0 60px 90px;
 			position:relative;
 			display: inline-block;
 			padding-top:20px;
+			color:$primary-color;
 
 			span{
 				font-size: 18px;
 				position:absolute;
-				top:0px;
+				top:7px;
 				left:-15px;
 			}
 		}
@@ -206,7 +219,8 @@ padding: 0 60px 90px;
 		text-align: center;
 
 		.middle{
-			color:$dark-grey;
+			color:$black;
+			font-weight: 300;
 		}
 
 		p{
@@ -260,11 +274,48 @@ padding: 0 60px 90px;
 	overflow:hidden;
 	height:100%;
 	width:100%;
+	background-color: $black;
+	opacity:1;
 
+	img{
+		@include transition (all .3s ease-in-out);
+		@include transform(translateX(0) scale3d(1.2, 1.2, 1));
+		// transform:translateX(0) scale3d(1.2, 1.2, 1);
+	}
+
+	.rotate{
+		position: absolute;
+		color:$white;
+		opacity: 0;
+		top:50%;
+		left:50%;
+		z-index: 4;
+		@include transition (all .2s cubic-bezier(0, 2.8, 0, 2.8));
+		@include transform(translateX(-50%) translateY(-50%) rotate(0));
+	}
+
+	&:hover{
+
+		img{
+			opacity:.4;
+			@include transform(translateX(25px) scale3d(1.2, 1.2, 1));
+		}
+
+		.rotate{
+			opacity: .8;
+			@include transform(translateX(-50%) translateY(-50%) rotate(180deg));
+		}
+
+	}
+
+}
+
+.barber__title{
 	h6{
 		// position:absolute;
 		// z-index: 3;
-		// font-size: em(28px);
+		font-size: 18px;
+		font-family: courier;
 		// text-transform: uppercase;
 		// bottom:0;
 		// color:$white;
@@ -273,26 +324,6 @@ padding: 0 60px 90px;
 		// transform-origin: 50% 100%;
 		// -webkit-transform-origin: 50% 100%;
 		// transform:translate3d(0, -50%, 0) scale3d(.8, .8, 1);
-
-	}
-
-	img{
-		@include transition (all .3s ease-in-out);
-		@include transform(translateX(0) scale3d(1.2, 1.2, 1));
-		// transform:translateX(0) scale3d(1.2, 1.2, 1);
-
-	}
-
-	&:hover{
-
-		h6{
-			// transform:translate3d(10%, -50%, 0) scale3d(1, 1, 1);
-		}
-
-		img{
-			// opacity:.4;
-			@include transform(translateX(25px) scale3d(1.2, 1.2, 1));
-		}
 
 	}
 }
@@ -307,11 +338,32 @@ padding: 0 60px 90px;
 		float:left;
 	}
 
+	.service__products{
+
+		.product-item{
+			&:nth-child(2n+1){
+				clear:both;
+			}
+		}
+	}
+
 
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+	.service__products{
+
+		.product-item{
+			&:nth-child(2n+1){
+				clear:none;
+			}
+			&:nth-child(3n+1){
+				clear:both;
+			}
+		}
+	}
 
 	.price__table{
 		max-width: 400px;
