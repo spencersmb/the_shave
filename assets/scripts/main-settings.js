@@ -82,7 +82,7 @@ $(function() {
 				$('body').removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
-					// console.log('true');
+					console.log('true');
 					var footerHeight = $('footer').height() + 'px';
 
 					//set footerpush margin to same height as footer
@@ -103,7 +103,7 @@ $(function() {
 		// ==========================================================================
 
 		$('.panel-left a').on('click', function(e) {
-
+			console.log('left');
 			getFh = $('.has-height').height();
 			// console.log(getFh);
 
@@ -122,13 +122,17 @@ $(function() {
 
 				$(this).parents('.panel').addClass('active');
 
+				adjustWindow();
+
+				specialFooter();
 			}
 		});
 
+		//TODO: Check to remove right side JS
 		//Accordian Right side
 		//Disable pricing table Tabs all being closed at once.
 		$('.panel-right a').on('click', function(e) {
-
+			console.log('right');
 			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
 				e.stopPropagation();
 			}
@@ -143,9 +147,6 @@ $(function() {
 
 				$(this).parents('.panel').addClass('active');
 
-				specialFooter();
-
-				adjustWindow();
 			}
 		});
 
