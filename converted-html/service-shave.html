@@ -3,15 +3,18 @@
     <head>
         <!-- Title block allowing child pages to override -->
         <title>Empty</title>
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <!-- Styles -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
-        <link href="/assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
-        
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="assets/scripts/modernizr.min.js"></script>
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         <!-- Style block allowing child pages to inject their own styles -->
         
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/bootstrap.min.js"></script>
     </head>
     <body class="loading">
 
@@ -23,84 +26,310 @@
     <h1>The Shave</h1>
     </a>
 
-    <!--nav hamburger-->
-    <a id="sv__nav--trigger" href="#">
-      <!-- <span class="sb-menu-text">Menu</span> -->
-      <span class="sv__menu--icon"></span>
-    </a>
+    <div class="cd-dropdown-wrapper">
+  <a href="#" class="cd-dropdown-trigger">Menu</a>
+
+  <nav class="cd-dropdown">
+      <h2>Title</h2>
+      <a href="#0" class="cd-close">Close</a>
+      <ul class="cd-dropdown-content">
+        <li>
+          <form class="cd-search">
+            <input type="search" placeholder="Search...">
+          </form>
+        </li>
+
+        <!-- Services -->
+        <li class="has-children">
+          <a href="services.html">What to expect</a>
+
+          <ul class="cd-dropdown-services is-hidden">
+            
+            <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
+
+            <li class="cd-service-bg">
+
+              <a class="cd-dropdown-item" href="service-shave.html">
+                <h3>When you get a shave</h3>
+                <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+              </a>
+
+              <img src="assets/images/dropdown-nav/nav-shave-hover.jpg" alt="">
+
+              <img class="" src="assets/images/dropdown-nav/nav-shave.jpg" alt="">
+
+
+
+            </li>
+
+            <li class="cd-service-bg">
+
+              <a class="cd-dropdown-item" href="service-shave.html">
+                <h3>When you get a hair cut</h3>
+                <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+              </a>
+
+              <img src="assets/images/dropdown-nav/nav-haircuts-hover.jpg" alt="">
+
+              <img class="" src="assets/images/dropdown-nav/nav-haircuts.jpg" alt="">
+
+
+            </li>
+
+          </ul> <!-- .cd-dropdown-gallery -->
+        </li> <!-- .has-children -->
+
+        <!-- Gallery -->
+        <li class="has-children">
+          <a href="gallery.html">Gallery</a>
+
+          <ul class="cd-dropdown-gallery is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="gallery.html">Browse Full Gallery</a></li>
+
+            <li>
+
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+          </ul> <!-- .cd-dropdown-gallery -->
+        </li> <!-- .has-children -->
+
+        <!-- List items -->
+        <li class="has-children">
+          <a href="index.html">Our Services</a>
+
+          <ul class="cd-secondary-dropdown is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="prices.html">View All Prices</a></li>
+            <li class="has-children">
+              <a href="service-shave.html">Get a haircut</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Haircuts</a></li>
+                <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                <li class="has-children">
+                  <a href="#0">Mens Cuts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Go back</a></li>
+                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Classic Cut</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Buzz Cut</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Cut &amp; Shave</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Color</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Shampoo</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#0">Kids Cuts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Kids Cuts</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Kids Cut</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Full style</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Shampoo</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://codyhouse.co/?p=748">Book an appointment</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Get a consultation</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Find a barber</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">The Shave</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Shave</a></li>
+                <li class="see-all"><a href="full-gallery.html#filter=.shave">View Gallery</a></li>
+                <li><a href="prices.html#tab=shave">The Signature Shave</a></li>
+                <li><a href="http://codyhouse.co/?p=748">The Royal Shave</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Traditional Shave</a></li>
+                <li><a href="#0">Razor edging</a></li>
+                <li><a href="#0">Head Shave</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">Mustaches</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Mustaches</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+                <li><a href="prices.html#tab=beard-mustache">Mustache Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Mustache Wax</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Stlye the Stash</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">Beards</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="full-gallery.html#filter=.beard">View Gallery</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Waxing</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Goatee Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Sculpt</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Coloring</a></li>
+              </ul>
+            </li>
+          </ul> <!-- .cd-secondary-dropdown -->
+        </li> <!-- .has-children -->
+
+        <!-- elements items with icons -->
+        <li class="has-children">
+          <a href="http://codyhouse.co/?p=748">Elements</a>
+          <ul class="cd-dropdown-icons is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+            <li>
+              <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                <h3>Pricing Tables</h3>
+                <p>Simple way to hold data</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
+                <h3>SVG Icons</h3>
+                <p>1000+ Free Icons included</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
+                <h3>Google Map Service</h3>
+                <p>Add your own location easily</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
+                <h3>Revolution Slider</h3>
+                <p>Plugin Included with purchase</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                <h3>Responsive Site</h3>
+                <p>Looks good on every device</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                <h3>Retina quality</h3>
+                <p>Looks amazing on all devices</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                <h3>Stylish Layouts</h3>
+                <p>Sleek page layouts</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                <h3>Beautiful Gallery</h3>
+                <p>Isotop Gallery plugin setup</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                <h3>Service #9</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
+                <h3>Service #10</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                <h3>Service #11</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                <h3>Service #12</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+          </ul> <!-- .cd-dropdown-icons -->
+        </li> <!-- .has-children -->
+
+        <li><a href="prices.html">Prices</a></li>
+
+        <li><a href="team.html">Team</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="blog-index.html">Blog</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        
+
+      </ul> <!-- .cd-dropdown-content -->
+  </nav> <!-- .cd-dropdown -->
+
+</div>
+
+
+  <!-- Book now button -->
+  <div class="nav__book">
+    <a href="#" class="book__nav">Book Now<i class="fa fa-calendar"></i></a>
+  </div>
+
 
 </header>
 
 
-        <!--nav slide out-->
-<nav id="sv__navigation">
-    <ul class="sv_nav--items">
-        <!--item with sub-items-->
-        <li class="item-has-children">
-            <a href="#">CodeDrops</a>
-                <!--sub-items list-->
-            <ul class="sub-menu">
-                <li><a href="sliding-header.html">Sliding Header</a></li>
-                <li><a href="panel-slide.html">Slide-In Panel</a></li>
-                <!--<li><a href="#0">Mobile Apps</a></li>-->
-            </ul>
-        </li> <!-- item-has-children -->
-
-        <li class="item-has-children">
-            <a href="#">Products</a>
-                <!--sub-items list-->
-                <ul class="sub-menu">
-                    <li><a href="#0">Brand</a></li>
-                    <li><a href="#0">Web Apps</a></li>
-                    <li><a href="#0">Mobile Apps</a></li>
-                </ul>
-        </li> <!-- item-has-children -->
-
-        <li class="item-has-children">
-            <a href="#">Wordpress Themes</a>
-                <!--sub-items list-->
-                <ul class="sub-menu">
-                    <li><a href="#0">Brand</a></li>
-                    <li><a href="#0">Web Apps</a></li>
-                    <li><a href="#0">Mobile Apps</a></li>
-                </ul>
-        </li> <!-- item-has-children -->
-
-
-    </ul> <!-- end item with sub-menu -->
-
-    <!--single item element-->
-    <ul class="sb-navigation sb-single-item-wrapper">
-        <li><a href="#0">Info</a></li>
-        <!-- other simple items here -->
-    </ul>
-
-    <!--social items -->
-    <div class="sb-navigation socials">
-        <a class="sb-twitter sb-img-replace" href="#0">Twitter</a>
-        <a class="sb-github sb-img-replace" href="#0">Git Hub</a>
-        <a class="sb-facebook sb-img-replace" href="#0">Facebook</a>
-        <a class="sb-google sb-img-replace" href="#0">Google Plus</a>
-    </div>
-    <!--social items rotate -->
-    <div class="sb-navigation">
-        <ul class="social-rotate">
-            <li class="text-hide" ><a href="#"><img src="images/facebook.png">facebook</a></li>
-            <li class="text-hide" ><a href="#"><img src="images/twitter_bird.png">twitter</a></li>
-            <li class="text-hide" ><a href="#"><img src="images/youtube.png">YouTube</a></li>
-        </ul>
-    </div>
-
-</nav>
-
         <main class="sv__main--content">
-
-            <!--  -->
 
             
 <!-- TODO: Comment this section out -->
-<!-- TODO: Add Shaving Cream icons --> 
-	
+<!-- TODO: Add Shaving Cream icons -->
+
 	<!-- Offset header -->
 	<!-- TODO: Comment this section out -->
 <section class="container-fluid white-bg">
@@ -109,10 +338,10 @@
 		<div class="col-xs-12 inner__header--sm">
 			<h1>The Smoothest Shave You’ll Ever Get
 			</h1>
-			<h3>Here is how it works</h3>
+			<h3>Get the best shave through our unique experience</h3>
 		</div>
 	</div>
-</section> 
+</section>
 	<!-- End offset header -->
 
 	<!-- HOW IT WORKS -->
@@ -128,60 +357,60 @@
 				<!-- Item 1 -->
 				<div class="col-xs-12 col-sm-12 col-md-4 shave__card">
 					<div class="content">
-						<i class="fa fa-cogs fa-2x"></i>
+						<i class="fa fa-bookmark fa-lg"></i>
 						<h3>Hot Towel Message</h3>
-						<div class="divider__plus">
+						<!-- <div class="divider__plus">
 							<p class="middle">
 								<span>+</span>
 							</p>
-						</div>
+						</div> -->
 						<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave. </p>
 					</div>
 				</div>
 
 				<!-- Image 1 -->
 				<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg" style="background-image: url(/assets/images/Services/shave/service-image-1.jpg);">
-					<!-- <img class="img-responsive" src="/assets/images/Services/shave/service-image-1.jpg" alt=""> -->
+					<!-- <img class="img-responsive" src="assets/images/Services/shave/service-image-1.jpg" alt=""> -->
 				</div>
 
 				<!-- Item 2 -->
 				<div class="col-xs-12 col-sm-12 col-md-4 shave__card">
 					<div class="content">
-						<i class="fa fa-cogs fa-2x"></i>
-						<h3>Hot Towel Message</h3>
-						<div class="divider__plus">
+						<i class="fa fa-tint fa-lg"></i>
+						<h3>Our Finest Shaving Cream</h3>
+						<!-- <div class="divider__plus">
 							<p class="middle">
 								<span>+</span>
 							</p>
-						</div>
-						<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave. We opened our boutique to provide men with top-notch grooming through traditional barber practices. We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div> -->
+						<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 					</div>
-					
+
 				</div>
 
 				<!-- ROW 2 -->
 				<!-- Image 2 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg" style="background-image: url(/assets/images/Services/shave/service-image-1.jpg);">
-					<!-- <img class="img-responsive" src="/assets/images/Services/shave/service-image-1.jpg" alt=""> -->
+				<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg" style="background-image: url(/assets/images/Services/shave/service-image-2.jpg);">
+					<!-- <img class="img-responsive" src="assets/images/Services/shave/service-image-1.jpg" alt=""> -->
 				</div>
 
 				<!-- Item 2 -->
 				<div class="col-xs-12 col-sm-12 col-md-4 shave__card">
 					<div class="content">
-						<i class="fa fa-cogs fa-2x"></i>
-						<h3>Hot Towel Message</h3>
-						<div class="divider__plus">
+						<i class="fa fa-star fa-lg"></i>
+						<h3>The Perfect Shave</h3>
+						<!-- <div class="divider__plus">
 							<p class="middle">
 								<span>+</span>
 							</p>
-						</div>
-						<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave. We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div> -->
+						<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 					</div>
 				</div>
 
 				<!-- Image 3 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg" style="background-image: url(/assets/images/Services/shave/service-image-1.jpg);">
-					<!-- <img class="img-responsive" src="/assets/images/Services/shave/service-image-1.jpg" alt=""> -->
+				<div class="col-xs-12 col-sm-6 col-md-4 shave__card--img visible-md visible-lg" style="background-image: url(/assets/images/Services/shave/service-image-3.jpg);">
+					<!-- <img class="img-responsive" src="assets/images/Services/shave/service-image-1.jpg" alt=""> -->
 				</div>
 
 			</div>
@@ -192,7 +421,8 @@
 	</div>
 	<!-- End container sm -->
 
-</section>	
+</section>
+
 	<!-- End section how it oworks -->
 
 	<!-- Start Types of shaving cream -->
@@ -200,43 +430,49 @@
 
 		<div class="parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;"  data-anchor-target="#service" style="background-image: url(/assets/images/backgrounds/service-shave-bg.jpg);">
 
-		<div class="sv__container--md">
+		<div class="sv__container--md inner-content-module">
+
+			<div class="headline-sm">
+				<h2>Premium Shaving Cream</h2>
+			</div>
 
 			<div class="row service__products no-margin">
 
-				<div class="headline-set1">
+				<!-- <div class="headline-combo-A">
 					<h6>picking your favorite aroma:</h6>
 					<h3>Shaving Cream</h3>
-				</div>
+				</div> -->
+
 
 				<div class="col-xs-12 row__three service__products--row">
-					
-					<div class="col-xs-12 col-sm-12 col-md-4">
+
+					<div class="col-xs-12 col-sm-6 col-md-4 product-item">
 						<div class="content">
-							<i class="fa fa-cogs fa-2x"></i>
-							<h6>Cream 1</h6>
-							<h3>unscented</h3>
+							<i class="fa fa-adjust fa-2x"></i>
+							<h6>Unscented</h6>
+							<h3>Classic Cream</h3>
 							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 						</div>
 					</div>
-					
-					<div class="col-xs-12 col-sm-12 col-md-4">
+
+					<div class="col-xs-12 col-sm-6 col-md-4 product-item">
 						<div class="content">
-							<i class="fa fa-cogs fa-2x"></i>
-							<h6>Cream 2</h6>
+							<i class="fa fa-skyatlas fa-2x"></i>
+							<h6>Warm and Rich</h6>
 							<h3>Sandalwood</h3>
 							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 						</div>
 					</div>
-					
-					<div class="col-xs-12 col-sm-12 col-md-4">
+
+					<div class="col-xs-12 col-sm-6 col-md-4 product-item">
 						<div class="content">
-							<i class="fa fa-cogs fa-2x"></i>
-							<h6>Cream 3</h6>
+							<i class="fa fa-pagelines fa-2x"></i>
+							<h6>Moisturizing</h6>
 							<h3>OCean kelp</h3>
 							<p>A hot towel for 10 min relaxes the skin and opens up the pours for a clean accurate shave.</p>
 						</div>
 					</div>
+
 				</div>
 
 			</div>
@@ -244,38 +480,42 @@
 			</div>
 
 		</div><!-- end parralax bg -->
-		
+
 	</section>
 	<!-- End section shaving cream -->
 
 	<!-- Start Price module -->
 	<section class="container-fluid container__grey">
 
-	<div class="sv__container--md shaving">
+	<div class="sv__container--md inner-content-module">
 
-		<div class="headline-set1">
+		<!-- <div class="headline-set1">
 			<h6>find the right plan</h6>
 			<h3>pricing</h3>
+		</div> -->
+
+		<div class="headline-sm">
+			<h2>SHaving Packages</h2>
 		</div>
 
 		<div class="row price__wrapper">
-			
+
 			<div class="col-sm-12 col-md-4 price__container">
-				<div class="price__table">
+				<div class="price__table card-shadow-lt">
 
 					<div class="price__header">
 						<h2>Basic</h2>
 
 						<div class="divider__plus">
 							<p class="middle">
-								<span>+</span>
+								<span>x</span>
 							</p>
 						</div>
 
 						<p class="price"><span>$</span>10</p>
 					</div>
 
-					
+
 
 					<ul>
 						<li>Hot Towel Steam</li>
@@ -285,25 +525,25 @@
 					</ul>
 
 					<a href="#" class="book__now--btn">Book Now</a>
-				</div>	
+				</div>
 			</div>
-			
+
 			<div class="col-sm-12 col-md-4 price__container">
-				<div class="price__table">
+				<div class="price__table card-shadow-lt">
 
 					<div class="price__header">
-						<h2>Basic</h2>
+						<h2>Hipster</h2>
 
 						<div class="divider__plus">
 							<p class="middle">
-								<span>+</span>
+								<span>x</span>
 							</p>
 						</div>
 
 						<p class="price"><span>$</span>10</p>
 					</div>
 
-					
+
 
 					<ul>
 						<li>Hot Towel Steam</li>
@@ -313,25 +553,25 @@
 					</ul>
 
 					<a href="#" class="book__now--btn">Book Now</a>
-				</div>		
+				</div>
 			</div>
-			
+
 			<div class="col-sm-12 col-md-4 price__container">
-				<div class="price__table">
+				<div class="price__table card-shadow-lt">
 
 					<div class="price__header">
-						<h2>Basic</h2>
+						<h2>Uber</h2>
 
 						<div class="divider__plus">
 							<p class="middle">
-								<span>+</span>
+								<span>x</span>
 							</p>
 						</div>
 
 						<p class="price"><span>$</span>10</p>
 					</div>
 
-					
+
 
 					<ul>
 						<li>Hot Towel Steam</li>
@@ -341,20 +581,20 @@
 					</ul>
 
 					<a href="#" class="book__now--btn">Book Now</a>
-				</div>		
+				</div>
 			</div>
-		
-			
+
+
 		</div>
 		<!-- End row -->
 	</div>
-	<!-- End price module container-->	
+	<!-- End price module container-->
 </section>
 
 	<!-- Price box 1
 			<div class="col-xs-12 col-md-4 price__box">
 				<div class="price__box--img">
-					<img class="img-responsive" src="/assets/images/Services/shave/service-shave.jpg" alt="">
+					<img class="img-responsive" src="assets/images/Services/shave/service-shave.jpg" alt="">
 				</div>
 				<div class="price__box--text">
 					<h2>The Shave</h2>
@@ -366,13 +606,13 @@
 					</ul>
 		      	<a class="book__now--btn" href="#">Book Now</a>
 				</div>
-				
+
 			</div>
-			
+
 			Price box 2
 			<div class="col-xs-12 col-md-4 price__box">
 				<div class="price__box--img">
-					<img class="img-responsive" src="/assets/images/Services/shave/service-shave.jpg" alt="">
+					<img class="img-responsive" src="assets/images/Services/shave/service-shave.jpg" alt="">
 				</div>
 				<div class="price__box--text">
 					<h2>The Shave</h2>
@@ -384,13 +624,13 @@
 					</ul>
 		      	<a class="book__now--btn" href="#">Book Now</a>
 				</div>
-				
+
 			</div>
-	
+
 			Price box 3
 			<div class="col-xs-12 col-md-4 price__box">
 				<div class="price__box--img">
-					<img class="img-responsive" src="/assets/images/Services/shave/service-shave.jpg" alt="">
+					<img class="img-responsive" src="assets/images/Services/shave/service-shave.jpg" alt="">
 				</div>
 				<div class="price__box--text">
 					<h2>The Shave</h2>
@@ -402,80 +642,100 @@
 					</ul>
 		      	<a class="book__now--btn" href="#">Book Now</a>
 				</div>
-				
-			</div> -->	
-	<!-- End Section price module -->	
+
+			</div> -->
+
+	<!-- End Section price module -->
 
 	<!-- Start Price module -->
 	<section class="container-fluid container__white">
 
-	<div class="sv__container--md baber__box--wrapper">
+	<div class="container sv__container--md inner-content-module">
 
-		<div class="headline-set1">
+		<!-- <div class="headline-set1">
 			<h6>Select the best Barber</h6>
 			<h3>suggested barber</h3>
+		</div> -->
+		<div class="headline-sm">
+			<h2>SUGGESTED BARBERS</h2>
 		</div>
 
-		<div class="row">
-			
-			<div class="col-sm-12 col-md-3 barber__box">
+		<div class="row barber__row">
 
-				<a href="#" class="barber__profile">
-						<img class="img-responsive barber__image" src="/assets/images/barbers/barber-1.jpg" alt="">
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
+
+				<a href="#" >
+				<div class="barber__profile">
+					<!-- <i class="fa fa-plus-circle fa-3x rotate"></i> -->
+					<img class="img-responsive barber__image" src="assets/images/barbers/barber-1.jpg" alt="">
+				</div>
+
 					<div class="barber__title">
 						<h6>Adam Henry</h6>
 					</div>
 
 				</a>
-				
+
 			</div>
 
-			<div class="col-sm-12 col-md-3 barber__box">
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
 
-				<a href="#" class="barber__profile">
-						<img class="img-responsive barber__image" src="/assets/images/barbers/barber-1.jpg" alt="">
+				<a href="#" >
+				<div class="barber__profile">
+					<!-- <i class="fa fa-plus-circle fa-3x rotate"></i> -->
+					<img class="img-responsive barber__image" src="assets/images/barbers/barber-1.jpg" alt="">
+				</div>
+
 					<div class="barber__title">
 						<h6>Adam Henry</h6>
 					</div>
 
 				</a>
-				
+
 			</div>
 
-			<div class="col-sm-12 col-md-3 barber__box">
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
 
-				<a href="#" class="barber__profile">
-						<img class="img-responsive barber__image" src="/assets/images/barbers/barber-1.jpg" alt="">
+				<a href="#" >
+				<div class="barber__profile">
+					<!-- <i class="fa fa-plus-circle fa-3x rotate"></i> -->
+					<img class="img-responsive barber__image" src="assets/images/barbers/barber-1.jpg" alt="">
+				</div>
+
 					<div class="barber__title">
 						<h6>Adam Henry</h6>
 					</div>
 
 				</a>
-				
+
 			</div>
 
-			<div class="col-sm-12 col-md-3 barber__box">
+			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
 
-				<a href="#" class="barber__profile">
-						<img class="img-responsive barber__image" src="/assets/images/barbers/barber-1.jpg" alt="">
+				<a href="#" >
+				<div class="barber__profile">
+					<!-- <i class="fa fa-plus-circle fa-3x rotate"></i> -->
+					<img class="img-responsive barber__image" src="assets/images/barbers/barber-1.jpg" alt="">
+				</div>
+
 					<div class="barber__title">
 						<h6>Adam Henry</h6>
 					</div>
 
 				</a>
-				
+
 			</div>
-			
+
 		</div>
 		<!-- End row -->
 	</div>
-	<!-- End price module container-->	
+	<!-- End price module container-->
 </section>
 
 	<!-- Price box 1
 			<div class="col-xs-12 col-md-4 price__box">
 				<div class="price__box--img">
-					<img class="img-responsive" src="/assets/images/Services/shave/service-shave.jpg" alt="">
+					<img class="img-responsive" src="assets/images/Services/shave/service-shave.jpg" alt="">
 				</div>
 				<div class="price__box--text">
 					<h2>The Shave</h2>
@@ -487,13 +747,13 @@
 					</ul>
 		      	<a class="book__now--btn" href="#">Book Now</a>
 				</div>
-				
+
 			</div>
-			
+
 			Price box 2
 			<div class="col-xs-12 col-md-4 price__box">
 				<div class="price__box--img">
-					<img class="img-responsive" src="/assets/images/Services/shave/service-shave.jpg" alt="">
+					<img class="img-responsive" src="assets/images/Services/shave/service-shave.jpg" alt="">
 				</div>
 				<div class="price__box--text">
 					<h2>The Shave</h2>
@@ -505,13 +765,13 @@
 					</ul>
 		      	<a class="book__now--btn" href="#">Book Now</a>
 				</div>
-				
+
 			</div>
-	
+
 			Price box 3
 			<div class="col-xs-12 col-md-4 price__box">
 				<div class="price__box--img">
-					<img class="img-responsive" src="/assets/images/Services/shave/service-shave.jpg" alt="">
+					<img class="img-responsive" src="assets/images/Services/shave/service-shave.jpg" alt="">
 				</div>
 				<div class="price__box--text">
 					<h2>The Shave</h2>
@@ -523,53 +783,71 @@
 					</ul>
 		      	<a class="book__now--btn" href="#">Book Now</a>
 				</div>
-				
-			</div> -->	
-	<!-- End Section price module -->	
+
+			</div> -->
+
+	<!-- End Section price module -->
 
 	<!-- FAQ -->
 	<section class="container-fluid container__grey">
-	<div class="row sv__container--sm">
+
+<div class="shave__faq">
+
+
+	<div class="headline-sm">
+		<h2>Freaquently Asked Questions</h2>
+	</div>
+
+	<div class="row sv__container--sm ">
+<!--
+		<div class="headline-set1">
+			<h6>Select the best Barber</h6>
+			<h3>suggested barber</h3>
+		</div> -->
+
 		<div class="shave__faq--items">
-		<h2 class="spacer">F.A.Q</h2>
+
 			<ul id="basics" class="shave__faq--group">
-				<li>
+				<li class="card-shadow-lt">
 					<a class="shave__faq--trigger" href="#" onclick="return false;">How do I find the right barber?</a>
 					<div class="shave__faq--content">
 						<p>To change your password you need to do the following steps.</p>
-					</div> 
+					</div>
 				</li>
 			</ul>
 
 			<ul class="shave__faq--group">
-				<li>
+				<li class="card-shadow-lt">
 					<a class="shave__faq--trigger" href="#" onclick="return false;">That blade near my neck looks dangerous?</a>
 					<div class="shave__faq--content">
 						<p>And you call yourself a man. Of course it's dangerous, and its completly safe. Our staff of highly trained barbers are like highly skilled ninjas with years of practice.</p>
-					</div> 
+					</div>
 				</li>
 			</ul>
 
 			<ul class="shave__faq--group">
-				<li>
+				<li class="card-shadow-lt">
 					<a class="shave__faq--trigger" href="#" onclick="return false;">What is a straight shave?</a>
 					<div class="shave__faq--content">
 						<p>To change your password you need to do the following steps.</p>
-					</div> 
+					</div>
 				</li>
 			</ul>
 
 			<ul class="shave__faq--group">
-				<li>
+				<li class="card-shadow-lt">
 					<a class="shave__faq--trigger" href="#" onclick="return false;">Can I try this at home?</a>
 					<div class="shave__faq--content">
 						<p>To change your password you need to do the following steps.</p>
-					</div> 
+					</div>
 				</li>
 			</ul>
 		</div>
-	</div>	
-</section>	
+	</div>
+
+</div>
+</section>
+
 	<!-- End Faq -->
 
 	<section class="container-fluid no-padding white-bg footer-push">
@@ -590,105 +868,179 @@
 
 </section>
 <!-- End container -->
-	
 
 
-            
 
             
-            
+
         </main> <!-- end canvas -->
+
         <footer class="container-fluid no-padding loading">
+		
 	<div class="footer__wrapper">
 		
-
-		<!-- footer contact us -->
-		<div class="row ">
-			<!-- Shop vision -->
-			<div class="col-xs-12">
-				<!-- Todo: Change space to match h2 -->
-				<!-- <p class="tagline">We are masters of the blade</p>
-				<p class="sv__spacer red">:::::</p> -->
-
-				<h3><span class="footer__name">The Shave</span> is a modern vintage HTML Barbershop theme designed for its users in mind. This theme comes with free support great stuff.
-				</h3>
-			</div>
-			<!-- end shop vision -->
-			<div class="col-xs-12 col sm-6 col-md-3 location">
-				<h4>Location</h3>
-				<p>Nordhoff st.</p>
-				<p>Northridge, CA 91324</p>
-			</div>
-
-			<div class="col-xs-12 col sm-6 col-md-3 contact">
-				<h4>Contact</h3>
-				<a href="tel:303-333-3333">303-333-3333</a>
-				<a href="info@theshave.com?subject=feedback">info@theshave.com</a>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-6 email">
-				<div class="email__form form-group">
-					<form action="" method="post">
-						<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your e-mail address">
-						<button type="submit" class="sv-btn form-btn">Submit</button>
-					</form>
-				</div>
-				<div class="email__offers">
-					<p class="eamil__offers--connect">Stay Connected to our Shop</p>
+		<div class="row no-margin">
+			<div class="footer__logo no-padding">
+				<div class="logo__container">
+					<h5>The</h5>
+					<h3>Shave</h3>
+					<h4>Mens Barbershop</h4>
 				</div>
 			</div>
 
+			<div class="footer__desc">
+
+				<div class="row no-margin">
+					
+					<!-- email -->
+					<div class="col-xs-12 email__wrapper">
+						<div class="email__form form-group">
+							<form action="" method="post">
+								<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
+								<!-- <button type="submit" class="sv-btn form-btn">Submit</button> -->
+							</form>
+						</div>
+
+						<!-- subtext to email -->
+						<div class="email__offers">
+							<p class="eamil__offers--connect">Get the latest updates, special offers and much more.</p>
+						</div>
+					</div>
+
+					<!-- address -->
+					<div class="col-xs-12 footer__contact">
+						
+						<div class="col-xs-12 col-sm-6 footer__address no-padding">
+							<p>Nordhoff st.</p>
+							<p>NorthRidge, CA 91324</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 contact no-padding">
+							<a href="mailto:info@theshave.com">info@theshave.com</a>
+							<a href="tel:303-313-0303">303-313-0303</a>
+						</div>
+
+					</div>
+
+					<!-- social media -->
+					<div class="col-xs-12 social">
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<ul>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="twitter text-hide"><a href="">Twitter</a></li>
+								<li class="instagram text-hide"><a href="">Instagram</a></li>
+								<li class="linkedin text-hide"><a href="">Linkedin</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+							</ul>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="copyright">
+								<p>2015 The Shave LTD</p>
+							</div>
+						</div>
+						
+					</div>
+					<!-- end social media -->
+
+				</div>
+				<!-- end row -->
+					
+			</div>
+			<!-- end right side -->
 		</div>
 		<!-- end row -->
+
 	</div>
-	<!-- end wrapper -->
-	<div class="col-xs-12 social">
-		<ul>
-			<li class="facebook text-hide"><a href="">Facebook</a></li>
-			<li class="twitter text-hide"><a href="">Twitter</a></li>
-			<li class="instagram text-hide"><a href="">Instagram</a></li>
-			<li class="linkedin text-hide"><a href="">Linkedin</a></li>
-		</ul>
-	</div>
+	<!-- end container -->
+
 </footer>
+
+
+
 <!-- End container -->
 
         <!-- Script block allowing child pages to inject their own scripts -->
         
-        
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        
-        <script src="/assets/scripts/jquery.min.js"></script>
-        <script src="/assets/scripts/bootstrap.min.js"></script>
-        
-        <!-- Plugins -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
-        <script src="/assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
-        <script src="/assets/scripts/flickity-settings.min.js"></script>
-        <script src="/assets/scripts/skrollr.min.js"></script>
+<script>
 
-        <script src="/assets/scripts/imagesloaded.min.js"></script>
-        <!-- <script src="/assets/scripts/smooth-scroll.min.js"></script> -->
-        
-        <script src="/assets/scripts/jquery.themepunch.tools.min.js"></script>
-        <script src="/assets/scripts/jquery.themepunch.revolution.min.js"></script>
+	$(function() {
+
+		// ==========================================================================
+		// Services
+		// ==========================================================================
+
+		var faqTrigger = $('.shave__faq--trigger');
+
+		faqTrigger.on('click', function(event){
+			event.preventDefault();
+			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
+		});
+
+		//HOW IT WORKS BOXS
+		var arrHeight =[];
+		var arrClean =[];
+
+		$(".shave__card").each(function(item){
+			// console.log($(this).height());
+			arrHeight.push($(this).height());
+			arrClean.push($(this).height());
+		});
+
+		//reorder largest to smallest and get the largest item
+    	var largest = arrHeight.sort().reverse()[0];
+
+    	//find the index of the largest box, then add a tallest class to it
+    	var indexOf = $.inArray( largest, arrClean);
+
+    	$('.shave__card').eq(indexOf).addClass('tallest');
+
+    	//Set heights of the content boxs and then image boxs next
+    	$(".shave__card").each(function(item){
+
+			//Set new height of container
+			$(this).children('.content').css('height', largest + 'px');
+		});
+
+		$(".shave__card--img").each(function(item){
+
+			//Set new height of container
+			$(this).css('height', largest + 'px');
+		});
+
+
+		function getHeight(){
+			//on-resize set height to auto and target the tallest item only for height
+			$('.shave__card').children('.content').height('auto');
+			return $('.shave__card.tallest').height();
+		};
+
+		$(window).on('resize', function(){
+
+			//use tallest height for everything
+			var newHeight = getHeight();
+			$(".shave__card--img").css('height', newHeight + 'px');
+			$('.shave__card').children('.content').css('height', newHeight + 'px');
+
+		});
+
+	});
+
+</script>
+
+
+        <!-- Plugins -->
+
+        <script src="assets/scripts/jquery.menu-aim.min.js"></script>
+        <script src="assets/scripts/skrollr.min.js"></script>
+
+        <script src="assets/scripts/imagesloaded.min.js"></script>
+        <!-- <script src="assets/scripts/smooth-scroll.min.js"></script> -->
 
         <!-- Settings -->
-        <script src="/assets/scripts/nav-settings.min.js"></script>
-        <script src="/assets/scripts/main-settings.min.js"></script>
-        <script src="/assets/scripts/map-settings.min.js"></script>
-        <script src="/assets/scripts/skrollr-settings.min.js"></script>
-
-        <script src="/assets/scripts/jquery.arctext.min.js"></script>
-
-
-
-        <script>
-       
-        </script>
-
-
-
+        <script src="assets/scripts/nav-settings.min.js"></script>
+        <script src="assets/scripts/main-settings.min.js"></script>
 
     </body>
 </html>

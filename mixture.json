@@ -1,36 +1,36 @@
 {
-    "debug": false,
-    "lintScripts": false,
-    "preprocessorLocations": [
-        "assets"
-    ],
-    "preprocessorScriptOutput": "assets/scripts",
-    "preprocessorStyleOutput": "assets/css",
-    "projectName": "The Shave",
-    "projectDescription": "A clean and modern HTML theme for barbershops",
-    "publishedId": null,
-    "serverHostname": null,
-    "serverPort": null,
-    "templateDirectory": "templates",
-    "templateDefaultLayout": "layout",
-    "templateDefaultPage": "index",
-    "type": "mixture",
-    "simpleModePartnerServer": null,
-    "modelSource": null,
-    "domain": null,
-    "convertHtml": {
-        "relativePaths": false
-    },
-    "customRuby": false,
-   
-    "customRubyPath": "/Ruby21-x/lib/ruby/gems/2.1.0",
-    "autoPrefixer": null,
-    "useCompass": true,
-    "sass": {
-      "outputStyle": "nested",
-      "sourceMap": false,
-      "lineNumbers": false,
-      "useLibSass": true,
-      "debugInfo": false
-    }
+  "debug": false,
+  "lintScripts": false,
+  "preprocessorLocations": [
+    "assets"
+  ],
+  "preprocessorScriptOutput": "assets/scripts",
+  "preprocessorStyleOutput": "assets/css",
+  "projectName": "The Shave",
+  "projectDescription": "A clean and modern HTML theme for barbershops",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "templateDirectory": "templates",
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "type": "mixture",
+  "simpleModePartnerServer": null,
+  "modelSource": null,
+  "domain": null,
+  "convertHtml": {
+    "relativePaths": true
+  },
+  "customRuby": false,
+
+  "customRubyPath": "/Ruby21-x/lib/ruby/gems/2.1.0",
+  "autoPrefixer": null,
+  "useCompass": true,
+  "sass": {
+    "outputStyle": "nested",
+    "sourceMap": false,
+    "lineNumbers": false,
+    "useLibSass": true,
+    "debugInfo": false
+  }
 }

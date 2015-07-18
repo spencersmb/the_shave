@@ -1,70 +1,31 @@
 $(function() {
 
-	//Accordian Left side
-	//Disable pricing table Tabs all being closed at once.
-	$('.panel-left a').on('click',function(e){
-
-		getFh = $('.has-height').height();
-		console.log(getFh);
-		
-
-	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-	        e.stopPropagation();
-	    }
-	    if( $(this).parents('.panel').hasClass('active')){
-	    	//do nothing cus its active
-	    }
-	    //add border bottom to panel if not active
-	    if(!$(this).parents('.panel').hasClass('active')){
-	    	$("#accordion1 > div").each(function(){
-	    		$(this).removeClass("active");
-	    	});
-
-	    	$(this).parents('.panel').addClass('active');
-	    }
-	});
-
-	//Accordian Right side
-	//Disable pricing table Tabs all being closed at once.
-	$('.panel-right a').on('click',function(e){
-
-	    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
-	        e.stopPropagation();
-	    }
-	    if( $(this).parents('.panel').hasClass('active')){
-	    	//do nothing cus its active
-	    }
-	    //add border bottom to panel if not active
-	    if(!$(this).parents('.panel').hasClass('active')){
-	    	$("#accordion > div").each(function(){
-	    		$(this).removeClass("active");
-	    	});
-
-	    	$(this).parents('.panel').addClass('active');
-	    }
-	});
-
-	// ==========================================================================
-	// Safari special footer settings
-	// ==========================================================================
-	function WhichBrowser(){
+	// // ==========================================================================
+	// // Safari special footer settings
+	// // ==========================================================================
+	function WhichBrowser() {
 		//IE
-		if(navigator.appName == "Microsoft Internet Explorer"){
+		if (navigator.appName == "Microsoft Internet Explorer") {
 			return "msie";
 		}
 
 		//Chrome
-		if((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName == "Netscape")){
+		if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
+				navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
+				"Netscape")) {
 			return "chrome";
 		}
 		//Firefox
-		if((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (navigator.appName == "Netscape")){
+		if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
+				navigator.appName == "Netscape")) {
 			return "firefox";
 		}
 		//Safari
-		if((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName == "Netscape")){
+		if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
+				navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
+				"Netscape")) {
 
-			$('body').addClass('safari');
+			$('body, footer').addClass('safari');
 
 			$('section').last().removeClass('footer-push');
 
@@ -72,203 +33,214 @@ $(function() {
 		}
 
 		//Opera
-		if(navigator.appName == "Opera"){
+		if (navigator.appName == "Opera") {
 			return "opera";
 		}
 	}
 
 	WhichBrowser();
 
-	
-	// ==========================================================================
-	// Footer-push resize
-	// ==========================================================================
+
+	// // ==========================================================================
+	// // Footer-push resize
+	// // ==========================================================================
 	(function() {
 
-		if($('section').last().hasClass('footer-push')){
-			
-			var footerHeight = $('footer').height() + 'px';
 
-			//set footerpush margin to same height as footer
-			$('.footer-push').css('margin-bottom', footerHeight);
+		var tablet = 991,
+			resizedWidth;
 
-			function getfootHeight(){
-				return $('footer').height();
-			};
+		$(window).on('resize', function() {
+			(!window.requestAnimationFrame) ? setTimeout(specialFooter, 300):
+				window.requestAnimationFrame(specialFooter);
+		});
 
-			$(window).on('resize', function(){
+		specialFooter();
 
-				var newHeight = getfootHeight();
-				console.log(newHeight);
-				$('.footer-push').css('margin-bottom', newHeight + 'px');
+		function checkWindowWidth() {
 
+			var windowSize = $(window).width() + 15;
+
+			$(window).on('resize', function() {
+				resizedWidth = $(window).width() + 15;
+				// console.log(resizedWidth);
 			});
 
+			if (resizedWidth >= tablet || windowSize >= tablet) {
+				// console.log('true');
+				return true;
+			} else {
+				// console.log('false');
+				return false;
+			}
 		}
-		
-	})();	
+
+		function specialFooter() {
+			var desktop = checkWindowWidth();
+			if (desktop) {
+
+				$('body').removeClass('footer-mobile');
+
+				if ($('main').find('.footer-push')) {
+					console.log('true');
+					var footerHeight = $('footer').height() + 'px';
+
+					//set footerpush margin to same height as footer
+					$('.footer-push').css('margin-bottom', footerHeight);
+
+					$('body').css('height', '100%');
+				}
+
+			} else {
+
+				$('main').find('.footer-push').css('margin-bottom', 0);
+				$('body').addClass('footer-mobile');
+			}
+		}
+
+		// ==========================================================================
+		// Accordian Tabs
+		// ==========================================================================
+
+		$('.panel-left a').on('click', function(e) {
+			console.log('left');
+			getFh = $('.has-height').height();
+			// console.log(getFh);
 
 
-	// ==========================================================================
-	// Services
-	// ==========================================================================
+			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+				e.stopPropagation();
+			}
+			if ($(this).parents('.panel').hasClass('active')) {
+				//do nothing cus its active
+			}
+			//add border bottom to panel if not active
+			if (!$(this).parents('.panel').hasClass('active')) {
+				$("#accordion1 > div").each(function() {
+					$(this).removeClass("active");
+				});
 
+				$(this).parents('.panel').addClass('active');
 
-		var faqTrigger = $('.shave__faq--trigger');
+				adjustWindow();
 
-		faqTrigger.on('click', function(event){
-			event.preventDefault();
-			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
+				specialFooter();
+			}
 		});
 
-		//HOW IT WORKS BOXS
-		var arrHeight =[];
-		var arrClean =[];
+		//TODO: Check to remove right side JS
+		//Accordian Right side
+		//Disable pricing table Tabs all being closed at once.
+		$('.panel-right a').on('click', function(e) {
+			console.log('right');
+			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+				e.stopPropagation();
+			}
+			if ($(this).parents('.panel').hasClass('active')) {
+				//do nothing cus its active
+			}
+			//add border bottom to panel if not active
+			if (!$(this).parents('.panel').hasClass('active')) {
+				$("#accordion > div").each(function() {
+					$(this).removeClass("active");
+				});
 
-		$(".shave__card").each(function(item){
-			// console.log($(this).height());
-			arrHeight.push($(this).height());
-			arrClean.push($(this).height());
-		});
+				$(this).parents('.panel').addClass('active');
 
-    	var largest = arrHeight.sort().reverse()[0];
-
-    	var indexOf = $.inArray( largest, arrClean);
-
-    	$('.shave__card').eq(indexOf).addClass('tallest');
-
-    	$(".shave__card").each(function(item){
-			
-			//Set new height of container
-			$(this).children('.content').css('height', largest + 'px');
-		});
-
-		$(".shave__card--img").each(function(item){
-			
-			//Set new height of container
-			$(this).css('height', largest + 'px');
+			}
 		});
 
 
-		function getHeight(){
-			$('.shave__card').children('.content').height('auto');
-			return $('.shave__card.tallest').height();
-		};
+		// ==========================================================================
 
-		$(window).on('resize', function(){
+		// Setup variables
+		$window = $(window);
+		$slide = $('.homeSlide');
+		$slideTall = $('.homeSlideTall');
+		$slideTall2 = $('.homeSlideTall2');
+		$body = $('body');
+		$footer = $('footer');
 
-			var newHeight = getHeight();
-			$(".shave__card--img").css('height', newHeight + 'px');
-			$('.shave__card').children('.content').css('height', newHeight + 'px');
+		//FadeIn all sections
+		$body.imagesLoaded(function() {
+			setTimeout(function() {
 
+				// Resize sections
+				adjustWindow();
+
+				// Fade in sections
+				$body.removeClass('loading').addClass('loaded');
+				$footer.removeClass('loading').addClass('loaded');
+
+			}, 800);
 		});
 
+		function adjustWindow() {
 
-    // ==========================================================================
-    // Team page
-    // ==========================================================================
+			// Init Skrollr
+			var s = skrollr.init({
+				render: function(data) {
 
-    var teamTrigger = $('.open');
+					//Debugging - Log the current scroll position.
+					// console.log(data.curTop);
+				},
+				//disable for smmother effect
+				smoothScrolling: false
+			});
+
+			// Get window size
+			winH = $window.height();
+
+			// Keep minimum height 550
+			if (winH <= 550) {
+				winH = 550;
+			}
+
+			// Resize our slides
+			// $slide.height(winH);
+			$slideTall.height(winH * 2);
+			$slideTall2.height(winH * 3);
+
+			// Refresh Skrollr after resizing our sections
+			s.refresh($('.homeSlide'));
+
+		}
 
 
-    teamTrigger.on('click', function(event){
-    	event.preventDefault();
-    	$(this).toggleClass('active');
-    	// $(this).prev('div').toggleClass('active');
-    	$(this).parent('div').toggleClass('active');
-    });
+	})();
 
-    // ==========================================================================
-    // Gallery page
-    // ==========================================================================
+	// var windowSize = $(window).width();
+	// var tablet = 768;
 
-    $(window).load(function(){
-	    var $container = $('.portfolioContainer');
-	    $container.isotope({
-	        itemSelector: ".gallery-item",
-						 //layoutMode: 'fitRows',
-						 percentPosition: true,
-			masonry: { "columnWidth": ".grid-sizer" }
-	    });
-	});
 
-	// ==========================================================================
-	// Revolution Slider Settings
-	// ==========================================================================
+	// $(window).on('resize', function(){
+	// 	windowSize = $(window).width();
+	// }
 
-   $('.tp-banner').revolution(
-		{
-						dottedOverlay:"none",
-						delay:16000,
-						startwidth:1170,
-						startheight:700,
-						hideThumbs:200,
+	// if(windowSize > tablet){
 
-						thumbWidth:100,
-						thumbHeight:50,
-						thumbAmount:5,
+	// 	if($('section').last().hasClass('footer-push')){
 
-						navigationType:"none",
-						navigationArrows:"solo",
-						navigationStyle:"preview4",
+	// 		var footerHeight = $('footer').height() + 'px';
 
-						touchenabled:"on",
-						onHoverStop:"off",
+	// 		//set footerpush margin to same height as footer
+	// 		$('.footer-push').css('margin-bottom', footerHeight);
 
-						swipe_velocity: 0.7,
-						swipe_min_touches: 1,
-						swipe_max_touches: 1,
-						drag_block_vertical: false,
+	// 		function getfootHeight(){
+	// 			return $('footer').height();
+	// 		};
 
-						parallax:"mouse",
-						parallaxBgFreeze:"on",
-						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+	// 		$(window).on('resize', function(){
 
-						keyboardNavigation:"off",
+	// 			var newHeight = getfootHeight();
+	// 			console.log(newHeight);
+	// 			$('.footer-push').css('margin-bottom', newHeight + 'px');
 
-						navigationHAlign:"center",
-						navigationVAlign:"bottom",
-						navigationHOffset:0,
-						navigationVOffset:0,
+	// 		});
 
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:20,
-						soloArrowLeftVOffset:0,
+	// 	}
+	// }
 
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:20,
-						soloArrowRightVOffset:0,
 
-						shadow:0,
-						fullWidth:"on",
-						fullScreen:"on",
-
-						spinner:"spinner4",
-
-						stopLoop:"off",
-						stopAfterLoops:-1,
-						stopAtSlide:-1,
-
-						shuffle:"off",
-
-						autoHeight:"off",
-						forceFullWidth:"off",
-
-						hideThumbsOnMobile:"off",
-						hideNavDelayOnMobile:1500,
-						hideBulletsOnMobile:"off",
-						hideArrowsOnMobile:"off",
-						hideThumbsUnderResolution:0,
-						hideTimerBar:"on",
-
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						startWithSlide:0,
-						// videoJsPath:"rs-plugin/videojs/",
-						fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old 
-		});
 
 });

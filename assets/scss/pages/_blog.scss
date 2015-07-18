@@ -99,8 +99,8 @@
 		display:table;
 		position: relative;
 		padding:25px;
-		@include transition-property(background-color);
-		@include transition-duration(.2s);
+		@include transition(background-color .2s);
+
 
 		.feature-link{
 			display: block;
@@ -122,8 +122,9 @@
 		  @include transition-duration(.2s);
 		}
 
-		&:hover{
+		.no-touch &:hover {
 			background-color: $gray-lighter;
+
 			h3{
 				color:$primary-color;
 			}

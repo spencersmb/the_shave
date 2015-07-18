@@ -1,0 +1,287 @@
+<div class="cd-dropdown-wrapper">
+  <a href="#" class="cd-dropdown-trigger">Menu</a>
+
+  <nav class="cd-dropdown">
+      <h2>Title</h2>
+      <a href="#0" class="cd-close">Close</a>
+      <ul class="cd-dropdown-content">
+        <li>
+          <form class="cd-search">
+            <input type="search" placeholder="Search...">
+          </form>
+        </li>
+
+        <!-- Services -->
+        <li class="has-children">
+          <a href="/services">What to expect</a>
+
+          <ul class="cd-dropdown-services is-hidden">
+            {% comment %}<li class="go-back"><a href="#0">Menu</a></li>{% endcomment %}
+            <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
+
+            <li class="cd-service-bg">
+
+              <a class="cd-dropdown-item" href="/service-shave">
+                <h3>When you get a shave</h3>
+                <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+              </a>
+
+              <img src="{{'nav-shave-hover.jpg' | asset_url}}" alt="">
+
+              <img class="" src="{{'nav-shave.jpg' | asset_url}}" alt="">
+
+
+
+            </li>
+
+            <li class="cd-service-bg">
+
+              <a class="cd-dropdown-item" href="/service-shave">
+                <h3>When you get a hair cut</h3>
+                <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+              </a>
+
+              <img src="{{'nav-haircuts-hover.jpg' | asset_url}}" alt="">
+
+              <img class="" src="{{'nav-haircuts.jpg' | asset_url}}" alt="">
+
+
+            </li>
+
+          </ul> <!-- .cd-dropdown-gallery -->
+        </li> <!-- .has-children -->
+
+        <!-- Gallery -->
+        <li class="has-children">
+          <a href="/gallery">Gallery</a>
+
+          <ul class="cd-dropdown-gallery is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="/gallery">Browse Full Gallery</a></li>
+
+            <li>
+
+              <a class="cd-dropdown-item" href="/gallery-details">
+                <img src="{{'nav-gallery-1.jpg' | asset_url}}" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+
+              <a class="cd-dropdown-item" href="/gallery-details">
+                <img src="{{'nav-gallery-1.jpg' | asset_url}}" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item" href="/gallery-details">
+                <img src="{{'nav-gallery-1.jpg' | asset_url}}" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item" href="/gallery-details">
+                <img src="{{'nav-gallery-1.jpg' | asset_url}}" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+          </ul> <!-- .cd-dropdown-gallery -->
+        </li> <!-- .has-children -->
+
+        <!-- List items -->
+        <li class="has-children">
+          <a href="/">Our Services</a>
+
+          <ul class="cd-secondary-dropdown is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="/prices">View All Prices</a></li>
+            <li class="has-children">
+              <a href="/service-shave">Get a haircut</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Haircuts</a></li>
+                <li class="see-all"><a href="/full-gallery/#filter=.hair">View Gallery</a></li>
+                <li class="has-children">
+                  <a href="#0">Mens Cuts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Go back</a></li>
+                    <li class="see-all"><a href="/full-gallery/#filter=.hair">View Gallery</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Classic Cut</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Buzz Cut</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Cut &amp; Shave</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Color</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Shampoo</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#0">Kids Cuts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Kids Cuts</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Kids Cut</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Full style</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Shampoo</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://codyhouse.co/?p=748">Book an appointment</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Get a consultation</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Find a barber</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">The Shave</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Shave</a></li>
+                <li class="see-all"><a href="/full-gallery/#filter=.shave">View Gallery</a></li>
+                <li><a href="/prices/#tab=shave">The Signature Shave</a></li>
+                <li><a href="http://codyhouse.co/?p=748">The Royal Shave</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Traditional Shave</a></li>
+                <li><a href="#0">Razor edging</a></li>
+                <li><a href="#0">Head Shave</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">Mustaches</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Mustaches</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+                <li><a href="/prices/#tab=beard-mustache">Mustache Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Mustache Wax</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Stlye the Stash</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">Beards</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="/full-gallery/#filter=.beard">View Gallery</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Waxing</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Goatee Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Sculpt</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Coloring</a></li>
+              </ul>
+            </li>
+          </ul> <!-- .cd-secondary-dropdown -->
+        </li> <!-- .has-children -->
+
+        <!-- elements items with icons -->
+        <li class="has-children">
+          <a href="http://codyhouse.co/?p=748">Elements</a>
+          <ul class="cd-dropdown-icons is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+            <li>
+              <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                <h3>Pricing Tables</h3>
+                <p>Simple way to hold data</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
+                <h3>SVG Icons</h3>
+                <p>1000+ Free Icons included</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
+                <h3>Google Map Service</h3>
+                <p>Add your own location easily</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
+                <h3>Revolution Slider</h3>
+                <p>Plugin Included with purchase</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                <h3>Responsive Site</h3>
+                <p>Looks good on every device</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                <h3>Retina quality</h3>
+                <p>Looks amazing on all devices</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                <h3>Stylish Layouts</h3>
+                <p>Sleek page layouts</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                <h3>Beautiful Gallery</h3>
+                <p>Isotop Gallery plugin setup</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                <h3>Service #9</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
+                <h3>Service #10</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                <h3>Service #11</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                <h3>Service #12</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+          </ul> <!-- .cd-dropdown-icons -->
+        </li> <!-- .has-children -->
+
+        <li><a href="/prices">Prices</a></li>
+
+        <li><a href="/team">Team</a></li>
+
+        <li><a href="/about">About</a></li>
+
+        <li><a href="/blog-index">Blog</a></li>
+
+        <li><a href="/contact">Contact</a></li>
+
+        {% comment %}<li class="cd-divider">Divider</li>{% endcomment %}
+
+      </ul> <!-- .cd-dropdown-content -->
+  </nav> <!-- .cd-dropdown -->
+
+</div>

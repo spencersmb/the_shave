@@ -3,15 +3,18 @@
     <head>
         <!-- Title block allowing child pages to override -->
         <title>Empty</title>
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <!-- Styles -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
-        <link href="/assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
-        
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="assets/scripts/modernizr.min.js"></script>
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         <!-- Style block allowing child pages to inject their own styles -->
         
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/bootstrap.min.js"></script>
     </head>
     <body class="loading">
 
@@ -23,82 +26,308 @@
     <h1>The Shave</h1>
     </a>
 
-    <!--nav hamburger-->
-    <a id="sv__nav--trigger" href="#">
-      <!-- <span class="sb-menu-text">Menu</span> -->
-      <span class="sv__menu--icon"></span>
-    </a>
+    <div class="cd-dropdown-wrapper">
+  <a href="#" class="cd-dropdown-trigger">Menu</a>
+
+  <nav class="cd-dropdown">
+      <h2>Title</h2>
+      <a href="#0" class="cd-close">Close</a>
+      <ul class="cd-dropdown-content">
+        <li>
+          <form class="cd-search">
+            <input type="search" placeholder="Search...">
+          </form>
+        </li>
+
+        <!-- Services -->
+        <li class="has-children">
+          <a href="services.html">What to expect</a>
+
+          <ul class="cd-dropdown-services is-hidden">
+            
+            <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
+
+            <li class="cd-service-bg">
+
+              <a class="cd-dropdown-item" href="service-shave.html">
+                <h3>When you get a shave</h3>
+                <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+              </a>
+
+              <img src="assets/images/dropdown-nav/nav-shave-hover.jpg" alt="">
+
+              <img class="" src="assets/images/dropdown-nav/nav-shave.jpg" alt="">
+
+
+
+            </li>
+
+            <li class="cd-service-bg">
+
+              <a class="cd-dropdown-item" href="service-shave.html">
+                <h3>When you get a hair cut</h3>
+                <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+              </a>
+
+              <img src="assets/images/dropdown-nav/nav-haircuts-hover.jpg" alt="">
+
+              <img class="" src="assets/images/dropdown-nav/nav-haircuts.jpg" alt="">
+
+
+            </li>
+
+          </ul> <!-- .cd-dropdown-gallery -->
+        </li> <!-- .has-children -->
+
+        <!-- Gallery -->
+        <li class="has-children">
+          <a href="gallery.html">Gallery</a>
+
+          <ul class="cd-dropdown-gallery is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="gallery.html">Browse Full Gallery</a></li>
+
+            <li>
+
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item" href="gallery-details.html">
+                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                <h3>Wild Stallion Cut</h3>
+              </a>
+            </li>
+          </ul> <!-- .cd-dropdown-gallery -->
+        </li> <!-- .has-children -->
+
+        <!-- List items -->
+        <li class="has-children">
+          <a href="index.html">Our Services</a>
+
+          <ul class="cd-secondary-dropdown is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="prices.html">View All Prices</a></li>
+            <li class="has-children">
+              <a href="service-shave.html">Get a haircut</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Haircuts</a></li>
+                <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                <li class="has-children">
+                  <a href="#0">Mens Cuts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Go back</a></li>
+                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Classic Cut</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Buzz Cut</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Cut &amp; Shave</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Color</a></li>
+                    <li><a href="/prices.html/#tab=haircuts">Shampoo</a></li>
+                  </ul>
+                </li>
+                <li class="has-children">
+                  <a href="#0">Kids Cuts</a>
+
+                  <ul class="is-hidden">
+                    <li class="go-back"><a href="#0">Kids Cuts</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Kids Cut</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Full style</a></li>
+                    <li><a href="http://codyhouse.co/?p=748">Shampoo</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://codyhouse.co/?p=748">Book an appointment</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Get a consultation</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Find a barber</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">The Shave</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Shave</a></li>
+                <li class="see-all"><a href="full-gallery.html#filter=.shave">View Gallery</a></li>
+                <li><a href="prices.html#tab=shave">The Signature Shave</a></li>
+                <li><a href="http://codyhouse.co/?p=748">The Royal Shave</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Traditional Shave</a></li>
+                <li><a href="#0">Razor edging</a></li>
+                <li><a href="#0">Head Shave</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">Mustaches</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Mustaches</a></li>
+                <li class="see-all"><a href="http://codyhouse.co/?p=748">View Gallery</a></li>
+                <li><a href="prices.html#tab=beard-mustache">Mustache Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Mustache Wax</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Stlye the Stash</a></li>
+              </ul>
+            </li>
+
+            <li class="has-children">
+              <a href="http://codyhouse.co/?p=748">Beards</a>
+
+              <ul class="is-hidden">
+                <li class="go-back"><a href="#0">Clothing</a></li>
+                <li class="see-all"><a href="full-gallery.html#filter=.beard">View Gallery</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Waxing</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Goatee Trim</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Sculpt</a></li>
+                <li><a href="http://codyhouse.co/?p=748">Beard Coloring</a></li>
+              </ul>
+            </li>
+          </ul> <!-- .cd-secondary-dropdown -->
+        </li> <!-- .has-children -->
+
+        <!-- elements items with icons -->
+        <li class="has-children">
+          <a href="http://codyhouse.co/?p=748">Elements</a>
+          <ul class="cd-dropdown-icons is-hidden">
+            <li class="go-back"><a href="#0">Menu</a></li>
+            <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+            <li>
+              <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                <h3>Pricing Tables</h3>
+                <p>Simple way to hold data</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
+                <h3>SVG Icons</h3>
+                <p>1000+ Free Icons included</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
+                <h3>Google Map Service</h3>
+                <p>Add your own location easily</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
+                <h3>Revolution Slider</h3>
+                <p>Plugin Included with purchase</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                <h3>Responsive Site</h3>
+                <p>Looks good on every device</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                <h3>Retina quality</h3>
+                <p>Looks amazing on all devices</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                <h3>Stylish Layouts</h3>
+                <p>Sleek page layouts</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                <h3>Beautiful Gallery</h3>
+                <p>Isotop Gallery plugin setup</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                <h3>Service #9</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
+                <h3>Service #10</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                <h3>Service #11</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+            <li>
+              <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                <h3>Service #12</h3>
+                <p>This is the item description</p>
+              </a>
+            </li>
+
+          </ul> <!-- .cd-dropdown-icons -->
+        </li> <!-- .has-children -->
+
+        <li><a href="prices.html">Prices</a></li>
+
+        <li><a href="team.html">Team</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="blog-index.html">Blog</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        
+
+      </ul> <!-- .cd-dropdown-content -->
+  </nav> <!-- .cd-dropdown -->
+
+</div>
+
+
+  <!-- Book now button -->
+  <div class="nav__book">
+    <a href="#" class="book__nav">Book Now<i class="fa fa-calendar"></i></a>
+  </div>
+
 
 </header>
 
 
-        <!--nav slide out-->
-<nav id="sv__navigation">
-    <ul class="sv_nav--items">
-        <!--item with sub-items-->
-        <li class="item-has-children">
-            <a href="#">CodeDrops</a>
-                <!--sub-items list-->
-            <ul class="sub-menu">
-                <li><a href="sliding-header.html">Sliding Header</a></li>
-                <li><a href="panel-slide.html">Slide-In Panel</a></li>
-                <!--<li><a href="#0">Mobile Apps</a></li>-->
-            </ul>
-        </li> <!-- item-has-children -->
-
-        <li class="item-has-children">
-            <a href="#">Products</a>
-                <!--sub-items list-->
-                <ul class="sub-menu">
-                    <li><a href="#0">Brand</a></li>
-                    <li><a href="#0">Web Apps</a></li>
-                    <li><a href="#0">Mobile Apps</a></li>
-                </ul>
-        </li> <!-- item-has-children -->
-
-        <li class="item-has-children">
-            <a href="#">Wordpress Themes</a>
-                <!--sub-items list-->
-                <ul class="sub-menu">
-                    <li><a href="#0">Brand</a></li>
-                    <li><a href="#0">Web Apps</a></li>
-                    <li><a href="#0">Mobile Apps</a></li>
-                </ul>
-        </li> <!-- item-has-children -->
-
-
-    </ul> <!-- end item with sub-menu -->
-
-    <!--single item element-->
-    <ul class="sb-navigation sb-single-item-wrapper">
-        <li><a href="#0">Info</a></li>
-        <!-- other simple items here -->
-    </ul>
-
-    <!--social items -->
-    <div class="sb-navigation socials">
-        <a class="sb-twitter sb-img-replace" href="#0">Twitter</a>
-        <a class="sb-github sb-img-replace" href="#0">Git Hub</a>
-        <a class="sb-facebook sb-img-replace" href="#0">Facebook</a>
-        <a class="sb-google sb-img-replace" href="#0">Google Plus</a>
-    </div>
-    <!--social items rotate -->
-    <div class="sb-navigation">
-        <ul class="social-rotate">
-            <li class="text-hide" ><a href="#"><img src="images/facebook.png">facebook</a></li>
-            <li class="text-hide" ><a href="#"><img src="images/twitter_bird.png">twitter</a></li>
-            <li class="text-hide" ><a href="#"><img src="images/youtube.png">YouTube</a></li>
-        </ul>
-    </div>
-
-</nav>
-
         <main class="sv__main--content">
 
-            <!--  -->
+            
 
-             
-	
 	<section class="container-fluid no-padding white-bg">
 
 
@@ -113,23 +342,8 @@
 				<!-- SLIDE 1 -->
 				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" data-title="Intro Slide" >
 					<!-- MAIN IMAGE -->
-					<img src="/assets/images/backgrounds/1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+					<img src="assets/images/backgrounds/1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
 					<!-- LAYERS -->
-				
-					<!-- LAYER NR. 2 -->
-					<!-- <div class="tp-caption tp-fade tp-resizeme shave_frame"
-						data-x="center"
-						data-y="center"
-						data-hoffset="0"
-						data-voffset="-50"
-						data-speed="300"
-						data-start="500"
-						data-splitin="none"
-						data-splitout="none"
-						data-elementdelay="0.1"
-						data-endelementdelay="0.1"
-						data-easing="Power3.easeInOut"><img src="/assets/images/feature-slider/logo-icon.png" alt="">
-					</div> -->
 
 					<!-- LAYER NR. 2 -->
 					<div class="tp-caption tp-fade tp-resizeme "
@@ -143,9 +357,9 @@
 						data-splitout="none"
 						data-elementdelay="0.1"
 						data-endelementdelay="0.1"
-						data-easing="Power3.easeInOut"><img src="/assets/images/feature-slider/star-icon.png" alt="">
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/star-icon.png" alt="">
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_small"
 						data-x="center"
@@ -160,7 +374,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">HTML5 theme
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_small"
 						data-x="center"
@@ -175,7 +389,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">Barbershop
 					</div>
-				
+
 					<!-- LAYER NR. 2 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_frame"
 						data-x="center"
@@ -188,9 +402,9 @@
 						data-splitout="none"
 						data-elementdelay="0.1"
 						data-endelementdelay="0.1"
-						data-easing="Power3.easeInOut"><img src="/assets/images/feature-slider/logo-frame.png" alt="">
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/logo-frame.png" alt="">
 					</div>
-				
+
 					<!-- LAYER NR. 2 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_cursive"
 						data-x="center"
@@ -205,7 +419,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">The
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title"
 						data-x="center"
@@ -220,7 +434,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">Shave
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_desc"
 						data-x="center"
@@ -249,7 +463,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">barbershop html5 theme!
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme"
 						data-x="center"
@@ -264,18 +478,18 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">
 							<div class="shave_title_btn">
-								<a href="#" class="book__now--btn">Purchase The Shave</a>
+								<a href="#" class="book__now--btn featured slider-btn">Get it today</a>
 							</div>
 					</div>
-				
+
 				</li>
 
 
 				<!-- SLIDE  2 -->
 				<li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" data-title="Hipster HairCuts">
 					<!-- MAIN IMAGE -->
-					<img src="/assets/images/backgrounds/2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-				
+					<img src="assets/images/backgrounds/2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
 					<!-- LAYER NR. 2 -->
 					<div id="arch" class="tp-caption tp-fade tp-resizeme"
 						data-x="center"
@@ -288,9 +502,9 @@
 						data-splitout="none"
 						data-elementdelay="0.1"
 						data-endelementdelay="0.1"
-						data-easing="Power3.easeInOut"><img src="/assets/images/feature-slider/perfect-icon.png" alt="">
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/perfect-icon.png" alt="">
 					</div>
-				
+
 					<!-- LAYERS -->
 					<!-- LAYER NR. 1 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title lg"
@@ -306,7 +520,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">Barbers
 					</div>
-				
+
 					<!-- LAYER NR. 1 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_cursive and"
 						data-x="center"
@@ -321,7 +535,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">&
 					</div>
-				
+
 					<!-- LAYER NR. 1 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title lg"
 						data-x="center"
@@ -336,7 +550,7 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">Creatives
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_desc lg"
 						data-x="center"
@@ -349,9 +563,9 @@
 						data-splitout="none"
 						data-elementdelay="0.1"
 						data-endelementdelay="0.1"
-						data-easing="Power3.easeInOut">a beautifully hand crafted theme packed 
+						data-easing="Power3.easeInOut">a beautifully hand crafted theme packed
 					</div>
-				
+
 					<!-- LAYER NR. 3 -->
 					<div class="tp-caption tp-fade tp-resizeme shave_title_desc lg"
 						data-x="center"
@@ -366,13 +580,13 @@
 						data-endelementdelay="0.1"
 						data-easing="Power3.easeInOut">with tons of features
 					</div>
-					
+
 				</li>
 
 				<!-- SLIDE  3-->
 				<li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000" data-title="Hipster HairCuts">
 					<!-- MAIN IMAGE -->
-					<img src="/assets/images/backgrounds/3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+					<img src="assets/images/backgrounds/3.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
 
 					<div class="tp-caption tp-fade tp-resizeme shave_title md black"
 						data-x="center"
@@ -385,7 +599,7 @@
 						data-splitout="none"
 						data-elementdelay="0.1"
 						data-endelementdelay="0.1"
-						data-easing="Power3.easeInOut"><img src="/assets/images/feature-slider/razors.png" alt="">
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/razors.png" alt="">
 					</div>
 					<!-- LAYERS
 					LAYER NR. 1 -->
@@ -431,13 +645,83 @@
 						data-easing="Power3.easeInOut">& features
 					</div>
 
-					
-					
+
+
 				</li>
-				
+
 			</ul>
 		</div>
 	</div>
+</section>
+
+
+	<!-- TODO: Comment out page -->
+
+<section class="container-fluid white-bg">
+  <div class="row staggered__container ">
+    <div class="col-sm-12 intro">
+      <h6>We are masters of the blade</h6>
+      <h2>Welcome to our barbershop</h2>
+      <p class="sub-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repellat autem dolor expedita minima quidem vero ipsa ea tempore dolorem nobis eius, modi molestiae dignissimos assumenda aliquid molestias adipisci veritatis!</p>
+    </div>
+
+
+    <div class="box box-sm box-2 card-shadow-dk">
+      <div class="box-overlay"></div>
+      <img src="assets/images/staggered-grid/box-sm.jpg" alt="">
+      <div class="content">
+        <p>View the most popular hair styles</p>
+        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+      </div>
+      <a href="#" class="box-link">View More</a>
+    </div>
+
+    <div class="box box-lg box-1 card-shadow-dk">
+      <div class="content">
+        <h3>First time for a real shave?</h3>
+        <p>Click here to learn about our process.</p>
+        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+      </div>
+      <div class="box-overlay"></div>
+      <img src="assets/images/staggered-grid/box-lg.jpg" alt="BarberShop">
+      <a href="" class="box-link"></a>
+    </div>
+
+    <div class="box box-sm-hours box-4 card-shadow-dk">
+      <div class="content">
+      <i class="fa fa-clock-o fa-lg clock"></i>
+        <p>our weekly shop hours</p>
+        <div class="offset__container">
+          <div class="offset__btn">
+            <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+            <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+          </div>
+        </div>
+      </div>
+      <div class="box-overlay"></div>
+      <img src="assets/images/staggered-grid/box-sm-hours.jpg" alt="BarberShop">
+      <a href="" class="box-link"></a>
+    </div>
+
+    <div class="box box-sm-tall box-3 hidden-xs">
+      <img src="assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop">
+    </div>
+
+    <div class="box box-last box-1 card-shadow-dk">
+      <div class="content">
+        <h3>Meet the staff</h3>
+        <p>Find the right barber expert to clean you up.</p>
+        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+      </div>
+      <div class="box-overlay"></div>
+      <img src="assets/images/staggered-grid/box-last.jpg" alt="BarberShop">
+      <a href="" class="box-link"></a>
+    </div>
+  </div>
+
 </section>
 
 
@@ -449,137 +733,83 @@
 		<p>Followed by a nice sub head descriptor</p>
 	</div>
  -->
+
+ <div class="headline-sm">
+	 <h2>Swank Services</h2>
+ </div>
+
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 feature__box">
-			<figure class="feature__box--effect">
-				<img class="img-responsive" src="/assets/images/feature-boxs/feature-box-1.jpg" alt="img23"/>
+			<figure class="feature__box--effect card-shadow-md">
+				<img class="img-responsive" src="assets/images/feature-boxs/feature-box-1.jpg" alt="img23"/>
 				<figcaption>
 					<div class="content">
 						<h2>Shave</h2>
 						<p>Find out how real men shave.</p>
 					</div>
 					<a href="#">View more</a>
-				</figcaption>			
+				</figcaption>
 			</figure>
 		</div>
 
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 feature__box">
-			<figure class="feature__box--effect">
-				<img class="img-responsive" src="/assets/images/feature-boxs/feature-box-3.jpg" alt="img23"/>
+			<figure class="feature__box--effect card-shadow-md">
+				<img class="img-responsive" src="assets/images/feature-boxs/feature-box-3.jpg" alt="img23"/>
 				<figcaption>
 					<div class="content">
 						<h2>Haircut</h2>
 						<p>Hair cutting at its finest.</p>
 					</div>
 					<a href="#">View more</a>
-				</figcaption>			
+				</figcaption>
 			</figure>
 		</div>
-		
+
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 feature__box">
-			<figure class="feature__box--effect">
-				<img class="img-responsive" src="/assets/images/feature-boxs/feature-box-2.jpg" alt="img23"/>
+			<figure class="feature__box--effect card-shadow-md">
+				<img class="img-responsive" src="assets/images/feature-boxs/feature-box-2.jpg" alt="img23"/>
 				<figcaption>
 					<div class="content">
 						<h2>Gallery</h2>
 						<p>The latest trends and styles.</p>
 					</div>
 					<a href="#">View more</a>
-				</figcaption>			
+				</figcaption>
 			</figure>
 		</div>
-		
+
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 feature__box">
-			<figure class="feature__box--effect">
-				<img class="img-responsive" src="/assets/images/feature-boxs/feature-box-4.jpg" alt="img23"/>
+			<figure class="feature__box--effect card-shadow-md">
+				<img class="img-responsive" src="assets/images/feature-boxs/feature-box-4.jpg" alt="img23"/>
 				<figcaption>
 					<div class="content">
 						<h2>Prices</h2>
 						<p>View the full list of services.</p>
 					</div>
 					<a href="#">View more</a>
-				</figcaption>			
+				</figcaption>
 			</figure>
 		</div>
-		
+
 	</div>
 </section>
 
-	<!-- TODO: Comment out page -->
-
-<section class="container-fluid white-bg">
-  <div class="row staggered__container ">
-    <div class="col-sm-12 intro">
-      <h6>We are masters of the blade</h6>
-      <h2>Welcome to our barbershop</h2>
-      <p class="sub-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repellat autem dolor expedita minima quidem vero ipsa ea tempore dolorem nobis eius, modi molestiae dignissimos assumenda aliquid molestias adipisci veritatis!</p>
-    </div>
-   
-
-    <div class="box box-sm box-2">
-      <img src="/assets/images/staggered-grid/box-sm.jpg" alt="">
-      <div class="content">
-        <p>Find the most popular hair styles</p>
-        <i class="fa fa-long-arrow-right fa-lg"></i>
-      </div>
-      <a href="#" class="box-link">View More</a>
-    </div>
-
-    <div class="box box-lg box-1">
-      <div class="content">
-        <h3>How it all started</h3>
-        <p>A story about passion, adventure, and great haircuts. </p>
-        <i class="fa fa-long-arrow-right fa-lg"></i>
-      </div>
-      <img src="/assets/images/staggered-grid/box-lg.jpg" alt="BarberShop">
-      <a href="" class="box-link"></a>
-    </div>
-
-    <div class="box box-sm-hours box-4">
-      <div class="content">
-      <i class="fa fa-clock-o fa-lg clock"></i>
-        <p>our weekly shop hours</p>
-        <div class="offset__container">
-          <a href="" class="offset__btn"><i class="fa fa-long-arrow-right fa-lg"></i></a>
-        </div>
-          
-      </div>
-      <img src="/assets/images/staggered-grid/box-sm-hours.jpg" alt="BarberShop">
-    </div>
-
-    <div class="box box-sm-tall box-3 hidden-xs">
-      <img src="/assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop">
-      <a href="" class="box-link"></a>
-    </div>
-
-    <div class="box box-last box-1">
-      <div class="content">
-        <h3>Meet the staff</h3>
-        <p>Find the right barber expert to clean you up.</p>
-        <i class="fa fa-long-arrow-right fa-lg"></i>
-      </div>
-      <img src="/assets/images/staggered-grid/box-last.jpg" alt="BarberShop">
-      <a href="" class="box-link"></a>
-    </div>
-  </div>
-
-</section>
 
 	<!-- TODO: Comment out page -->
 <!-- TODO: Create universal parralx background image class for parralax -->
 <section  class="container-fluid pricing__container" >
-	
-		<div id="pricing-tab" class="row pricing__tabs" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#pricing-tab" style="background-image: url(/assets/images/backgrounds/test.jpg);">
+
+		<div id="pricing-tab" class="row parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#pricing-tab" style="background-image: url(/assets/images/backgrounds/test.jpg);">
 
 			<div class="col-xs-12 col-sm-7 col-md-5 no-padding price__overview">
-			  
+
 			</div>
-			
+
 			<div class="col-xs-12 col-sm-10 col-md-9 no-padding has-height ">
 				<div class="pricing__table--wrapper ">
 
-					<div class="title-heading">
-						<h2>Price Overview</h2>
-					</div>
+					<!-- <div class="title-heading">
+						<h2>featured services</h2>
+					</div> -->
 
 					<div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
 
@@ -675,7 +905,7 @@
 					            <div class="panel-heading panel-left" role="tab" id="myheadingThree">
 					              <h4 class="panel-title">
 					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseThree" aria-expanded="false" aria-controls="mycollapseThree" onclick="return false;">
-					                  Beard or Mustache
+					                  Beards & Mustaches
 					                </a>
 					              </h4>
 					            </div>
@@ -716,7 +946,7 @@
 					            <div class="panel-heading panel-left" role="tab" id="myheadingFour">
 					              <h4 class="panel-title">
 					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseFour" aria-expanded="false" aria-controls="mycollapseFour" onclick="return false;">
-					                  Hair Styling
+					                  all prices & services
 					                </a>
 					              </h4>
 					            </div>
@@ -724,28 +954,9 @@
 					              <div class="panel-body price__sheet">
 
 					                <div class="item">
-														<div class="title">
-															<h3>Classic Cut</h3>
-														</div>
-														<div class="price">
-															<p>$25.00</p>
-														</div>
-
 														<div class="desc">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
-														</div>
-													</div>
-
-													<div class="item">
-														<div class="title">
-															<h3>Buzz Cut</h3>
-														</div>
-														<div class="price">
-															<p>$15.00</p>
-														</div>
-
-														<div class="desc">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+															<p>We offer a full service barbershop with the finest craft available.</p>
+															<a class="book__now--btn price-tab" href="#">View all prices</a>
 														</div>
 													</div>
 
@@ -762,22 +973,23 @@
 			      <!-- end tab content -->
 
 			    </div>
-					<!-- end pricing table -->	
+					<!-- end pricing table -->
 
 				</div>
 				<!-- end wrapper -->
-					
+
 			</div>
 			<!-- End pricing tab accordian -->
 
-			
-			
+
+
 		</div>
 		<!-- End row pricing__tabs -->
 	<!-- </div> -->
 
 </section>
 <!-- End pricing container -->
+
 
 	<!-- TODO: Clean markUP -->
 
@@ -797,17 +1009,17 @@
 				<h3>an approach that defines our pursuit of smooth</h3>
 				
 				<div class="col-sm-12 col-md-4">
-					<h5>01</h5>
+					<h5 class="heading-divider">01</h5>
 					<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
 				</div>
 				
 				<div class="col-sm-12 col-md-4">
-					<h5>02</h5>
+					<h5 class="heading-divider">02</h5>
 					<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
 				</div>
 				
 				<div class="col-sm-12 col-md-4">
-					<h5>03</h5>
+					<h5 class="heading-divider">03</h5>
 					<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
 				</div>
 			</div>
@@ -822,10 +1034,10 @@
 <!-- TODO: Create universal parralx background image class for parralax -->
 <section  class="container-fluid pricing__container" >
 
-		<div id="blog" class="row pricing__tabs" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#blog" style="background-image: url(/assets/images/backgrounds/test2.jpg);">	
+		<div id="blog" class="row parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#blog" style="background-image: url(/assets/images/backgrounds/test2.jpg);">
 
 			<div class="col-xs-12 col-sm-7 col-md-5 no-padding blog__overview">
-			  
+
 			</div>
 
 			<div class="col-xs-12 col-sm-10 col-md-9 col-md-offset-3 no-padding has-height ">
@@ -833,43 +1045,106 @@
 
 					<div class="blog__overview--contents">
 
-						<div class="title-heading">
-							<h2>From the blog</h2>
+						<div class="headline-sm">
+							<h2>Featured Posts</h2>
 						</div>
 
-						<div class="feature__post">
-							
+						<div class="feature__post card-shadow-lt">
+
+							<div class="post-img">
+								<a href="#">
+								<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="" />
+								</a>
+							</div>
+
+							<div class="feature-content">
+
+								<h3>A beautifully hand crafted theme packed with tons of features.</h3>
+
+								<div class="details">
+									<div class="author">by <a href="#">Spencer bigum</a></div>
+									<div class="stats">233 views | 20 comments</div>
+								</div>
+
+
+								<!-- <p>Msed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui...</p> -->
+							</div>
+
+							<a class="feature-link" href="#">read more</a>
+
+						</div>
+
+						<div class="feature__post card-shadow-lt">
+
+							<div class="post-img">
+								<a href="#">
+								<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="" />
+								</a>
+							</div>
+
+							<div class="feature-content">
+
+								<h3>A beautifully hand crafted theme packed with tons of features.</h3>
+
+								<div class="details">
+									<div class="author">by <a href="#">Spencer bigum</a></div>
+									<div class="stats">233 views | 20 comments</div>
+								</div>
+
+
+								<!-- <p>Msed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui...</p> -->
+							</div>
+
+							<a class="feature-link" href="#">read more</a>
+
+						</div>
+
+						<div class="feature__post card-shadow-lt">
+
+							<div class="post-img">
+								<a href="#">
+								<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="" />
+								</a>
+							</div>
+
+							<div class="feature-content">
+
+								<h3>A beautifully hand crafted theme packed with tons of features.</h3>
+
+								<div class="details">
+									<div class="author">by <a href="#">Spencer bigum</a></div>
+									<div class="stats">233 views | 20 comments</div>
+								</div>
+
+
+								<!-- <p>Msed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui...</p> -->
+							</div>
+
+							<a class="feature-link" href="#">read more</a>
+
+						</div>
+
+						<!-- <div class="feature__post">
 							<h3>Blog post title here</h3>
 
 							<div class="details">
 								<span>2014 sept | </span>
 								<a href="#">Spencer bigum</a>
 							</div>
-							
-							<p>Msed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum</p>
-						</div>
 
-						<div class="feature__post">
-							<h3>Blog post title here</h3>
-
-							<div class="details">
-								<span>2014 sept | </span>
-								<a href="#">Spencer bigum</a>
-							</div>
-							
 							<p>Msed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum</p>
-						</div>
+						</div> -->
 
 					</div>
 
 				</div>
 				<!-- end wrapper -->
-					
+
 			</div>
 			<!-- End pricing tab accordian -->
 
-			
-			
+
+
 		</div>
 		<!-- End row pricing__tabs -->
 	<!-- </div> -->
@@ -881,7 +1156,7 @@
 <section class="container-fluid no-padding blog">
 
 	<div class="sv__container blog__wrapper">
-		
+
 		feature-blog-entry
 		<article class="card card__feature blog-1">
 		  <div class="content">
@@ -893,14 +1168,14 @@
 		      <a href="" class="offset__btn">Read More</a>
 		    </div>
 		  </div>
-		  <img src="/assets/images/blog/hero-feature.jpg" alt="BarberShop">
+		  <img src="assets/images/blog/hero-feature.jpg" alt="BarberShop">
 		</article>
 
 		<div class="row blog__mod--wrapper">
 
 			<article class="col-xs-12 col-sm-4 blog__mod">
 				<div class="blog__mod--img">
-					<img class="img-responsive" src="/assets/images/pricing-table/header-img.jpg" alt="">
+					<img class="img-responsive" src="assets/images/pricing-table/header-img.jpg" alt="">
 				</div>
 				<div class="blog__mod--text">
 					<ul>
@@ -915,7 +1190,7 @@
 
 			<article class="col-xs-12 col-sm-4 blog__mod">
 				<div class="blog__mod--img">
-					<img class="img-responsive" src="/assets/images/pricing-table/header-img.jpg" alt="">
+					<img class="img-responsive" src="assets/images/pricing-table/header-img.jpg" alt="">
 				</div>
 				<div class="blog__mod--text">
 					<ul>
@@ -927,11 +1202,11 @@
 					</p>
 				</div>
 			</article>
-			
+
 			<article class="col-xs-12 col-sm-4 blog__mod">
 
 					<div class="blog__mod--img">
-						<img class="img-responsive" src="/assets/images/pricing-table/header-img.jpg" alt="">
+						<img class="img-responsive" src="assets/images/pricing-table/header-img.jpg" alt="">
 					</div>
 					<div class="blog__mod--text">
 						<ul>
@@ -953,13 +1228,13 @@
 
 
 	<section class="container-fluid white-bg">
-	
+
 	<div class="row sv__container">
 		<div class="contact__wrapper">
 			<div class="contact__card">
 				<div class="contact__card--left">
-					<img class="img-responsive" src="/assets/images/contact/contact.jpg" alt="">
-					
+					<img class="img-responsive" src="assets/images/contact/contact.jpg" alt="">
+
 				</div>
 				<div class="contact__card--right">
 					<div class="contact__shop">
@@ -970,9 +1245,9 @@
 						</div>
 					</div>
 					<div class="contact__us">
-						<div class="contact__us--content">
+						<div class="contact__us--content card-shadow-lt">
 							<div class="inner__content">
-								<h4>contact us<i class="fa fa-envelope-o fa-lg"></i></h4>
+								<h4>contact us<i class="fa fa-paper-plane-o animate-down-2 top-i"></i><i class="fa fa-envelope-o fa-lg animate-down-1 bottom-i"></i></h4>
 							</div>
 							<a href="#">Email Us</a>
 						</div>
@@ -984,7 +1259,7 @@
 							<p>Saturday to Sunday: 10am - 4pm</p>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -994,6 +1269,7 @@
 </section>
 <!-- End pricing container -->
 
+
 	<!-- TODO: mark-up twitterbox -->
 <section id="twitter" class="container-fluid no-padding">
 
@@ -1001,7 +1277,7 @@
 
 		<div class="row sv__container twitter__wrapper">
 
-			<img src="/assets/images/icons/twitter-badge.png" alt="">
+			<img src="assets/images/icons/twitter-badge.png" alt="">
 			
 			<h2>Latest Tweet</h2>
 
@@ -1035,7 +1311,7 @@
 			<div class="col-sm-12 col-md-4">
 				<div class="icon__box">
 					<div class="icon__wrapper">
-						<img src="/assets/images/feature-slider/gear.png" alt="">
+						<img src="assets/images/feature-slider/gear.png" alt="">
 					</div>
 					<div class="icon__box--content">
 						<h5>Theme options</h5>
@@ -1047,7 +1323,7 @@
 			<div class="col-sm-12 col-md-4">
 				<div class="icon__box">
 					<div class="icon__wrapper">
-						<img src="/assets/images/feature-slider/page.png" alt="">
+						<img src="assets/images/feature-slider/page.png" alt="">
 					</div>
 					<div class="icon__box--content">
 						<h5>Pre-built pages</h5>
@@ -1059,7 +1335,7 @@
 			<div class="col-sm-12 col-md-4">
 				<div class="icon__box">
 					<div class="icon__wrapper">
-						<img src="/assets/images/feature-slider/settings.png" alt="">
+						<img src="assets/images/feature-slider/settings.png" alt="">
 					</div>
 					<div class="icon__box--content">
 						<h5>tons of options</h5>
@@ -1070,7 +1346,7 @@
 		</div>
 
 		<div class="single__image">
-			<img class="img-responsive" src="/assets/images/backgrounds/laptop.jpg" alt="">
+			<img class="img-responsive" src="assets/images/backgrounds/laptop.jpg" alt="">
 		</div>
 
 	</div>
@@ -1082,98 +1358,197 @@
 
             
 
-            
-            
         </main> <!-- end canvas -->
+
         <footer class="container-fluid no-padding loading">
+		
 	<div class="footer__wrapper">
 		
-
-		<!-- footer contact us -->
-		<div class="row ">
-			<!-- Shop vision -->
-			<div class="col-xs-12">
-				<!-- Todo: Change space to match h2 -->
-				<!-- <p class="tagline">We are masters of the blade</p>
-				<p class="sv__spacer red">:::::</p> -->
-
-				<h3><span class="footer__name">The Shave</span> is a modern vintage HTML Barbershop theme designed for its users in mind. This theme comes with free support great stuff.
-				</h3>
-			</div>
-			<!-- end shop vision -->
-			<div class="col-xs-12 col sm-6 col-md-3 location">
-				<h4>Location</h3>
-				<p>Nordhoff st.</p>
-				<p>Northridge, CA 91324</p>
-			</div>
-
-			<div class="col-xs-12 col sm-6 col-md-3 contact">
-				<h4>Contact</h3>
-				<a href="tel:303-333-3333">303-333-3333</a>
-				<a href="info@theshave.com?subject=feedback">info@theshave.com</a>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-6 email">
-				<div class="email__form form-group">
-					<form action="" method="post">
-						<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your e-mail address">
-						<button type="submit" class="sv-btn form-btn">Submit</button>
-					</form>
-				</div>
-				<div class="email__offers">
-					<p class="eamil__offers--connect">Stay Connected to our Shop</p>
+		<div class="row no-margin">
+			<div class="footer__logo no-padding">
+				<div class="logo__container">
+					<h5>The</h5>
+					<h3>Shave</h3>
+					<h4>Mens Barbershop</h4>
 				</div>
 			</div>
 
+			<div class="footer__desc">
+
+				<div class="row no-margin">
+					
+					<!-- email -->
+					<div class="col-xs-12 email__wrapper">
+						<div class="email__form form-group">
+							<form action="" method="post">
+								<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
+								<!-- <button type="submit" class="sv-btn form-btn">Submit</button> -->
+							</form>
+						</div>
+
+						<!-- subtext to email -->
+						<div class="email__offers">
+							<p class="eamil__offers--connect">Get the latest updates, special offers and much more.</p>
+						</div>
+					</div>
+
+					<!-- address -->
+					<div class="col-xs-12 footer__contact">
+						
+						<div class="col-xs-12 col-sm-6 footer__address no-padding">
+							<p>Nordhoff st.</p>
+							<p>NorthRidge, CA 91324</p>
+						</div>
+						<div class="col-xs-12 col-sm-6 contact no-padding">
+							<a href="mailto:info@theshave.com">info@theshave.com</a>
+							<a href="tel:303-313-0303">303-313-0303</a>
+						</div>
+
+					</div>
+
+					<!-- social media -->
+					<div class="col-xs-12 social">
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<ul>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="twitter text-hide"><a href="">Twitter</a></li>
+								<li class="instagram text-hide"><a href="">Instagram</a></li>
+								<li class="linkedin text-hide"><a href="">Linkedin</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+							</ul>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="copyright">
+								<p>2015 The Shave LTD</p>
+							</div>
+						</div>
+						
+					</div>
+					<!-- end social media -->
+
+				</div>
+				<!-- end row -->
+					
+			</div>
+			<!-- end right side -->
 		</div>
 		<!-- end row -->
+
 	</div>
-	<!-- end wrapper -->
-	<div class="col-xs-12 social">
-		<ul>
-			<li class="facebook text-hide"><a href="">Facebook</a></li>
-			<li class="twitter text-hide"><a href="">Twitter</a></li>
-			<li class="instagram text-hide"><a href="">Instagram</a></li>
-			<li class="linkedin text-hide"><a href="">Linkedin</a></li>
-		</ul>
-	</div>
+	<!-- end container -->
+
 </footer>
+
+
+
 <!-- End container -->
 
         <!-- Script block allowing child pages to inject their own scripts -->
         
+    <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
+<script>
 
-        <script src="/assets/scripts/jquery.min.js"></script>
-        <script src="/assets/scripts/bootstrap.min.js"></script>
-        
+$(function() {
+
+
+
+	// Revolution Slider Settings
+	// ==========================================================================
+    $('.tp-banner').revolution(
+ 		{
+			dottedOverlay:"none",
+			delay:16000,
+			startwidth:1170,
+			startheight:700,
+			hideThumbs:200,
+
+			thumbWidth:100,
+			thumbHeight:50,
+			thumbAmount:5,
+
+			navigationType:"none",
+			navigationArrows:"solo",
+			navigationStyle:"preview4",
+
+			touchenabled:"on",
+			onHoverStop:"off",
+
+			swipe_velocity: 0.7,
+			swipe_min_touches: 1,
+			swipe_max_touches: 1,
+			drag_block_vertical: false,
+
+			parallax:"mouse",
+			parallaxBgFreeze:"on",
+			parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+			keyboardNavigation:"off",
+
+			navigationHAlign:"center",
+			navigationVAlign:"bottom",
+			navigationHOffset:0,
+			navigationVOffset:0,
+
+			soloArrowLeftHalign:"left",
+			soloArrowLeftValign:"center",
+			soloArrowLeftHOffset:20,
+			soloArrowLeftVOffset:0,
+
+			soloArrowRightHalign:"right",
+			soloArrowRightValign:"center",
+			soloArrowRightHOffset:20,
+			soloArrowRightVOffset:0,
+
+			shadow:0,
+			fullWidth:"on",
+			fullScreen:"on",
+
+			spinner:"spinner4",
+
+			stopLoop:"off",
+			stopAfterLoops:-1,
+			stopAtSlide:-1,
+
+			shuffle:"off",
+
+			autoHeight:"off",
+			forceFullWidth:"off",
+
+			hideThumbsOnMobile:"off",
+			hideNavDelayOnMobile:1500,
+			hideBulletsOnMobile:"off",
+			hideArrowsOnMobile:"off",
+			hideThumbsUnderResolution:0,
+			hideTimerBar:"on",
+
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			startWithSlide:0,
+			// videoJsPath:"rs-plugin/videojs/",
+			fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old
+	});
+});
+
+</script>
+
+
+
         <!-- Plugins -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
-        <script src="/assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
-        <script src="/assets/scripts/flickity-settings.min.js"></script>
-        <script src="/assets/scripts/skrollr.min.js"></script>
 
-        <script src="/assets/scripts/imagesloaded.min.js"></script>
-        <!-- <script src="/assets/scripts/smooth-scroll.min.js"></script> -->
-        
-        <script src="/assets/scripts/jquery.themepunch.tools.min.js"></script>
-        <script src="/assets/scripts/jquery.themepunch.revolution.min.js"></script>
+        <script src="assets/scripts/jquery.menu-aim.min.js"></script>
+        <script src="assets/scripts/skrollr.min.js"></script>
+
+        <script src="assets/scripts/imagesloaded.min.js"></script>
+        <!-- <script src="assets/scripts/smooth-scroll.min.js"></script> -->
 
         <!-- Settings -->
-        <script src="/assets/scripts/nav-settings.min.js"></script>
-        <script src="/assets/scripts/main-settings.min.js"></script>
-        <script src="/assets/scripts/map-settings.min.js"></script>
-        <script src="/assets/scripts/skrollr-settings.min.js"></script>
-
-        <script src="/assets/scripts/jquery.arctext.min.js"></script>
-
-
-
-        <script>
-       
-        </script>
-
-
-
+        <script src="assets/scripts/nav-settings.min.js"></script>
+        <script src="assets/scripts/main-settings.min.js"></script>
 
     </body>
 </html>
