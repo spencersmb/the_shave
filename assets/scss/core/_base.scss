@@ -358,7 +358,6 @@ blockquote{
 .parallax__background{
   background-size:cover;
   background-position:50% 50%;
-  background-attachment:fixed;
   overflow:hidden;
   width:100%;
   height:100%;
@@ -366,6 +365,45 @@ blockquote{
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
 }
+
+.icon-up-down{
+
+  .animate-down-1{
+    opacity: 1;
+    position: relative;
+    @include transition(transform .2s ease-in-out, opacity 300ms ease-out);
+  }
+
+  .animate-down-2{
+    color:$primary-color;
+    opacity: 0;
+    position: relative;
+    @include transition(transform .2s ease-in-out, opacity 300ms ease-out);
+    @include transform(translateY(-200px));
+  }
+
+  .top-i, .bottom-i{
+    position: absolute;
+    left:70%;
+    top:0;
+  }
+
+  .no-touch &:hover {
+
+    .animate-down-1{
+      opacity: 0;
+      @include transform(translateY(200px));
+    }
+    .animate-down-2{
+      opacity: 1;
+      @include transform(translateY(-10%));
+    }
+
+  }
+
+}
+
+
 
 
 .flip-container{
@@ -424,7 +462,7 @@ blockquote{
 	@include transition(box-shadow .2s);
 
   .no-touch &:hover {
-		box-shadow: 0 5px 15px rgba($black, .4);
+		box-shadow: 0 5px 15px rgba($black, .3);
 	}
 }
 
@@ -484,6 +522,16 @@ blockquote{
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+
+  .parallax__background{
+    background-size:cover;
+    background-position:50% 50%;
+    background-attachment:fixed;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+  }
+
 
 
 

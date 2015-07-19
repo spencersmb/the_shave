@@ -8,26 +8,30 @@
 
 		<div class="container-fluid container__grey">
 			<div class="container sv__container--md ">
-				
+
 				{% comment %}Stats block{% endcomment %}
 				<div class="row stats__container">
-
+					<!-- <div class="blog__content stats__intro">
+						<h4>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</h4>
+					</div> -->
 					{% comment %}Hair desc{% endcomment %}
 				  	<div class="col-xs-12 col-md-5 stats__row--container">
+
 						<div class="stats__row">
 							<h3 class="heading-divider">The Stlye</h3>
-							<p>Apply gel to wet hair. Air dry and finish with a flexible wax or pomade that also adds texture.</p>
+							<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
 						</div>
 						<div class="stats__row">
-							<h3 class="heading-divider">product</h3>
-							<p>Keune Forte Gel, Keune Moulding Paste</p>
+							<h4>product</h3>
+							<p><span class="bold">Use:</span> Keune Forte Gel, Keune Moulding Paste</p>
+							<p><span class="bold">Apply:</span> Firmly add gel to wet hair. Air dry and finish with a flexible wax or pomade that also adds texture.</p>
 						</div>
 						<div class="stats__row">
-							<h3 class="heading-divider">price</h3>
+							<h4>price</h3>
 							<p>$45.00</p>
 						</div>
 				  	</div>
-					
+
 					{% comment %}Hair Stats Grid{% endcomment %}
 					<div class="col-xs-12 col-md-7">
 
@@ -118,90 +122,15 @@
 			</div>
 			{% comment %}
 			<div class="sv__container--sm">
-				
+
 			</div>
 			{% endcomment %}
-			
+
 		</div>
 
 	<!-- Barbers -->
-	<div class="container sv__container--md baber__box--wrapper">
-
-		<div class="headline-set1">
-			<h6>Select the best Barber</h6>
-			<h3>suggested barber</h3>
-		</div>
-
-		<div class="row barber__row">
-			
-			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
-
-				<a href="#" >
-				<div class="barber__profile">
-					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
-				</div>
-						
-					<div class="barber__title">
-						<h6>Adam Henry</h6>
-					</div>
-
-				</a>
-				
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
-
-				<a href="#" >
-				<div class="barber__profile">
-					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
-				</div>
-						
-					<div class="barber__title">
-						<h6>Adam Henry</h6>
-					</div>
-
-				</a>
-				
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
-
-				<a href="#" >
-				<div class="barber__profile">
-					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
-				</div>
-						
-					<div class="barber__title">
-						<h6>Adam Henry</h6>
-					</div>
-
-				</a>
-				
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-3 barber__box">
-
-				<a href="#" >
-				<div class="barber__profile">
-					<img class="img-responsive barber__image" src="{{'barber-1.jpg' | asset_url}}" alt="">
-				</div>
-						
-					<div class="barber__title">
-						<h6>Adam Henry</h6>
-					</div>
-
-				</a>
-				
-			</div>
-			
-		</div>
-		<!-- End row -->
-		<div class="center-block text-center center-btn">
-			<button class="btn btn-gold">Book appointment</button>
-		</div>
-		
-	</div>
-	<!-- End Barber module container-->	
+	{% include "service-shave/suggested-barber" %}
+	<!-- End Barber module container-->
 
 	{% comment %}
 	{% include "blog/blog-related-articles" %}
@@ -243,7 +172,7 @@
 
     	//apply
     	$(window).on('resize', function(){
-			
+
 			$(".gallery-main").find('.flickity-viewport').height(getImgHeightMaster());
 			$('.gallery-nav').height(getThumbnailHeight());
 		});

@@ -10584,12 +10584,53 @@ blockquote.reverse {
 .parallax__background {
   background-size: cover;
   background-position: 50% 50%;
-  background-attachment: fixed;
   overflow: hidden;
   width: 100%;
   height: 100%;
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
+}
+
+.icon-up-down .animate-down-1 {
+  opacity: 1;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 300ms ease-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out, opacity 300ms ease-out;
+  transition: transform 0.2s ease-in-out, opacity 300ms ease-out;
+}
+.icon-up-down .animate-down-2 {
+  color: #af8c45;
+  opacity: 0;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 300ms ease-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out, opacity 300ms ease-out;
+  transition: transform 0.2s ease-in-out, opacity 300ms ease-out;
+  -webkit-transform: translateY(-200px);
+  -moz-transform: translateY(-200px);
+  -ms-transform: translateY(-200px);
+  -o-transform: translateY(-200px);
+  transform: translateY(-200px);
+}
+.icon-up-down .top-i, .icon-up-down .bottom-i {
+  position: absolute;
+  left: 70%;
+  top: 0;
+}
+.no-touch .icon-up-down:hover .animate-down-1 {
+  opacity: 0;
+  -webkit-transform: translateY(200px);
+  -moz-transform: translateY(200px);
+  -ms-transform: translateY(200px);
+  -o-transform: translateY(200px);
+  transform: translateY(200px);
+}
+.no-touch .icon-up-down:hover .animate-down-2 {
+  opacity: 1;
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  -o-transform: translateY(-10%);
+  transform: translateY(-10%);
 }
 
 .flip-container {
@@ -10665,7 +10706,7 @@ blockquote.reverse {
   transition: box-shadow 0.2s;
 }
 .no-touch .card-shadow-md:hover {
-  box-shadow: 0 5px 15px rgba(37, 37, 37, 0.4);
+  box-shadow: 0 5px 15px rgba(37, 37, 37, 0.3);
 }
 
 .card-shadow-dk {
@@ -10710,6 +10751,15 @@ blockquote.reverse {
 }
 
 @media (min-width: 768px) {
+  .parallax__background {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
   .card .content {
     margin: 7.525em 27.5%;
   }
@@ -13452,47 +13502,6 @@ blockquote.reverse {
   overflow: hidden;
   display: inline-block;
 }
-.contact__us--content .animate-down-1 {
-  opacity: 1;
-  position: relative;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 300ms ease-out;
-  -moz-transition: -moz-transform 0.2s ease-in-out, opacity 300ms ease-out;
-  transition: transform 0.2s ease-in-out, opacity 300ms ease-out;
-}
-.contact__us--content .animate-down-2 {
-  color: #af8c45;
-  opacity: 0;
-  position: relative;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 300ms ease-out;
-  -moz-transition: -moz-transform 0.2s ease-in-out, opacity 300ms ease-out;
-  transition: transform 0.2s ease-in-out, opacity 300ms ease-out;
-  -webkit-transform: translateY(-200px);
-  -moz-transform: translateY(-200px);
-  -ms-transform: translateY(-200px);
-  -o-transform: translateY(-200px);
-  transform: translateY(-200px);
-}
-.contact__us--content .top-i, .contact__us--content .bottom-i {
-  position: absolute;
-  left: 70%;
-  top: 0;
-}
-.no-touch .contact__us--content:hover .animate-down-1 {
-  opacity: 0;
-  -webkit-transform: translateY(200px);
-  -moz-transform: translateY(200px);
-  -ms-transform: translateY(200px);
-  -o-transform: translateY(200px);
-  transform: translateY(200px);
-}
-.no-touch .contact__us--content:hover .animate-down-2 {
-  opacity: 1;
-  -webkit-transform: translateY(-10%);
-  -moz-transform: translateY(-10%);
-  -ms-transform: translateY(-10%);
-  -o-transform: translateY(-10%);
-  transform: translateY(-10%);
-}
 .contact__us .inner__content {
   text-align: center;
   top: 40%;
@@ -13569,14 +13578,6 @@ blockquote.reverse {
     width: 35%;
   }
 }
-.twitter__background {
-  background-size: cover;
-  background-position: 50% 70%;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
 .twitter__wrapper {
   text-align: center;
   color: #fff;
@@ -13639,7 +13640,8 @@ blockquote.reverse {
   margin: 0 auto;
 }
 .buy__container .buy__content a {
-  margin-top: 5px;
+  margin-top: 24px;
+  text-align: center;
 }
 
 .buy__now {
@@ -13647,10 +13649,7 @@ blockquote.reverse {
 }
 .buy__now p {
   font-size: 1.125em;
-  text-transform: uppercase;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
 }
 
 footer {
@@ -15257,12 +15256,20 @@ footer.safari {
   float: none;
   margin: 0 auto;
   max-width: 511px;
-  padding-bottom: 25px;
 }
 .barber__box a {
   display: block;
   width: 100%;
   text-align: center;
+  padding-bottom: 25px;
+}
+.barber__box a:hover img {
+  opacity: 1;
+  -webkit-transform: translateX(15px) scale3d(1.2, 1.2, 1);
+  -moz-transform: translateX(15px) scale3d(1.2, 1.2, 1);
+  -ms-transform: translateX(15px) scale3d(1.2, 1.2, 1);
+  -o-transform: translateX(15px) scale3d(1.2, 1.2, 1);
+  transform: translateX(15px) scale3d(1.2, 1.2, 1);
 }
 
 .barber__profile {
@@ -15284,37 +15291,20 @@ footer.safari {
   -o-transform: translateX(0) scale3d(1.2, 1.2, 1);
   transform: translateX(0) scale3d(1.2, 1.2, 1);
 }
-.barber__profile:hover img {
-  opacity: .4;
-  -webkit-transform: translateX(25px) scale3d(1.2, 1.2, 1);
-  -moz-transform: translateX(25px) scale3d(1.2, 1.2, 1);
-  -ms-transform: translateX(25px) scale3d(1.2, 1.2, 1);
-  -o-transform: translateX(25px) scale3d(1.2, 1.2, 1);
-  transform: translateX(25px) scale3d(1.2, 1.2, 1);
-}
 
 .barber__title h6 {
   font-size: 18px;
   font-family: courier;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .barber__box {
     float: left;
   }
-
-  .service__products .product-item:nth-child(2n+1) {
-    clear: both;
-  }
 }
 @media (min-width: 992px) {
-  .service__products .product-item:nth-child(2n+1) {
-    clear: none;
-  }
-  .service__products .product-item:nth-child(3n+1) {
-    clear: both;
-  }
-
   .price__table {
     max-width: 400px;
     padding: 15%;

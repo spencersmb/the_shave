@@ -46,13 +46,21 @@ $(function() {
 	// // ==========================================================================
 	(function() {
 
-		//Add PRELOADER!
-		//establish variables
-		//check if body has class loaded if it does then skip loading screen,
-		//else - run preloader
+		var myWindow = $(window),
+			// $slide = $('.homeSlide'),
+			// $slideTall = $('.homeSlideTall'),
+			// $slideTall2 = $('.homeSlideTall2'),
+			myBody = $('body'),
+			myFooter = $('footer'),
+			tablet = 991,
+			resizedWidth;
 
+		// Init skrollrCheck
+		// ==========================================================================
 		var skrollrCheck = function() {
+
 			var winWidth = window.innerWidth;
+
 			// console.log(winWidth);
 			var winHeight = window.innerHeight;
 
@@ -87,39 +95,57 @@ $(function() {
 				if (document.body.id === 'skrollr-body') {
 					skrollr.init().destroy();
 					document.body.id = '';
+
+					//Find skrollr elements and adjust background sizing
 					findskrollr();
 				}
 
 			}
 		};
 
-		function findskrollr() {
-			var main = $('main');
-			var sectionId;
-			main.children('section').each(function() {
-				sectionId = $(this).attr('id');
-
-				// console.log(sectionId);
-				if (sectionId !== undefined) {
-					var match = sectionId.match(/skr/gi);
-					if (match !== null) {
-						console.log(this.id);
-						// document.getElementById(this.id).style["padding-top"] = "10px";
-						$(this).find('div.skrollable').css('background-position', '50% 70%');
-					}
-				}
-			});
-		}
-
-		var tablet = 991,
-			resizedWidth;
 
 		$(window).on('resize', function() {
 			(!window.requestAnimationFrame) ? setTimeout(specialFooter, 300):
 				window.requestAnimationFrame(specialFooter);
 		});
 
-		specialFooter();
+		//onload check for loaded class
+		if (myBody.hasClass('loaded')) {
+
+			specialFooter();
+
+		} else {
+
+			//FadeIn all sections
+			myBody.imagesLoaded(function() {
+				setTimeout(function() {
+
+					specialFooter();
+
+					// Fade in sections
+					myBody.removeClass('loading').addClass('loaded');
+					myFooter.removeClass('loading').addClass('loaded');
+
+				}, 800);
+			});
+		}
+
+
+		function findskrollr() {
+			var main = $('main');
+			var sectionId;
+
+			main.children('section').each(function() {
+				sectionId = $(this).attr('id');
+
+				if (sectionId !== undefined) {
+					var match = sectionId.match(/skr/gi);
+					if (match !== null) {
+						$(this).find('div.skrollable').css('background-position', '50% 70%');
+					}
+				}
+			});
+		}
 
 		function checkWindowWidth() {
 
@@ -131,10 +157,8 @@ $(function() {
 			});
 
 			if (resizedWidth >= tablet || windowSize >= tablet) {
-				// console.log('true');
 				return true;
 			} else {
-				// console.log('false');
 				return false;
 			}
 		}
@@ -147,7 +171,6 @@ $(function() {
 				$('body').removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
-					console.log('true');
 					var footerHeight = $('footer').height() + 'px';
 
 					//set footerpush margin to same height as footer
@@ -216,68 +239,37 @@ $(function() {
 		});
 
 
-		// ==========================================================================
-
-		// Setup variables
-		$window = $(window);
-		$slide = $('.homeSlide');
-		$slideTall = $('.homeSlideTall');
-		$slideTall2 = $('.homeSlideTall2');
-		$body = $('body');
-		$footer = $('footer');
-
-		//FadeIn all sections
-		$body.imagesLoaded(function() {
-			setTimeout(function() {
-
-				// Resize sections
-				// skrollrCheck();
-
-				// if (checkWindowWidth()) {
-				// 	console.log('ture');
-				// 	adjustWindow();
-				// } else {
-				// 	console.log('false');
-				//
-				// }
-
-				// Fade in sections
-				$body.removeClass('loading').addClass('loaded');
-				$footer.removeClass('loading').addClass('loaded');
-
-			}, 800);
-		});
-
-		function adjustWindow() {
-
-			// Init Skrollr
-			var s = skrollr.init({
-				render: function(data) {
-
-					//Debugging - Log the current scroll position.
-					// console.log(data.curTop);
-				},
-				//disable for smmother effect
-				smoothScrolling: false
-			});
-
-			// Get window size
-			winH = $window.height();
-
-			// Keep minimum height 550
-			if (winH <= 550) {
-				winH = 550;
-			}
-
-			// Resize our slides
-			// $slide.height(winH);
-			$slideTall.height(winH * 2);
-			$slideTall2.height(winH * 3);
-
-			// Refresh Skrollr after resizing our sections
-			s.refresh($('.homeSlide'));
-
-		}
+		//OLD SKROLLER + IMAGE LOAD
+		// function adjustWindow() {
+		//
+		// 	// Init Skrollr
+		// 	var s = skrollr.init({
+		// 		render: function(data) {
+		//
+		// 			//Debugging - Log the current scroll position.
+		// 			// console.log(data.curTop);
+		// 		},
+		// 		//disable for smmother effect
+		// 		smoothScrolling: false
+		// 	});
+		//
+		// 	// Get window size
+		// 	winH = $window.height();
+		//
+		// 	// Keep minimum height 550
+		// 	if (winH <= 550) {
+		// 		winH = 550;
+		// 	}
+		//
+		// 	// Resize our slides
+		// 	// $slide.height(winH);
+		// 	$slideTall.height(winH * 2);
+		// 	$slideTall2.height(winH * 3);
+		//
+		// 	// Refresh Skrollr after resizing our sections
+		// 	s.refresh($('.homeSlide'));
+		//
+		// }
 
 	})();
 

@@ -96,38 +96,7 @@
 		overflow: hidden;
 		display: inline-block;
 
-		.animate-down-1{
-			opacity: 1;
-			position: relative;
-			@include transition(transform .2s ease-in-out, opacity 300ms ease-out);
-		}
-
-		.animate-down-2{
-			color:$primary-color;
-			opacity: 0;
-			position: relative;
-			@include transition(transform .2s ease-in-out, opacity 300ms ease-out);
-			@include transform(translateY(-200px));
-		}
-
-		.top-i, .bottom-i{
-			position: absolute;
-			left:70%;
-			top:0;
-		}
-
-		.no-touch &:hover {
-
-			.animate-down-1{
-				opacity: 0;
-				@include transform(translateY(200px));
-			}
-			.animate-down-2{
-				opacity: 1;
-				@include transform(translateY(-10%));
-			}
-
-		}
+		
 	}
 
 	.inner__content{
