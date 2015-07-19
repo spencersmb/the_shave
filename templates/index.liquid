@@ -110,35 +110,15 @@ $(function() {
 				fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old
 		});
 
-		// event for when slide is changed
-	 api.on('revolution.slide.onchange', function(e, data) {
-
-			 // slider changed
-			 var currentSlideNumber = data.slideIndex;
-			 console.log('currentslide');
-			 console.log(currentSlideNumber);
-
-	 });
-
-		var gridWidth = 0,
-				zoomSelector = '.shave_title',
-				scaleFrom = 'left top',
-
-				// if slider is scaled below "firstScaleCheck" value,
-				// and above "secondScaleCheck" value,
-				// zoom element by "firstScaleAmount" value
-				firstScaleCheck = 0.5,
-				firstScaleAmount = 0.35,
-
-				// if slider is scaled below "secondScaleCheck" number,
-				// zoom element by "secondScaleAmount" value
-				secondScaleCheck = 0.25,
-				secondScaleAmount = 0.75,
-
-				// no need to edit anything below
-				slider = $('.tp-banner');
-				// console.log(slider[0]);
-				if(!slider.length) return;
+	// 	// event for when slide is changed
+	//  api.on('revolution.slide.onchange', function(e, data) {
+	 //
+	// 		 // slider changed
+	// 		 var currentSlideNumber = data.slideIndex;
+	// 		 console.log('currentslide');
+	// 		 console.log(currentSlideNumber);
+	//
+	//  });
 });
 
 </script>

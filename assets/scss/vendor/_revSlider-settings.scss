@@ -1313,7 +1313,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 		color-stop(0.13, rgb(0,0,0)),
 		color-stop(1, rgb(50,50,50))
 	);
-	
+
 	display:table;max-width:100%; overflow:hidden;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;
 }
 
@@ -2341,6 +2341,7 @@ zoom: 1;
 }
 
 
+
 @font-face {
   font-family: 'revicons';
   src: url('../fonts/revicons.eot?5510888');
@@ -2436,3 +2437,18 @@ zoom: 1;
 .revicon-equalizer:before { content: '\e83a'} /* '' */
 .revicon-layers-alt:before { content: '\e804'} /* '' */
 .revicon-popup:before { content: '\e828'} /* '' */
+
+.tp-banner-container {
+    background-color:#fff;
+    width:100%;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.tp-banner{
+    width:100%;    // MUST BE THE SAME AS IN THE OPTIONS <strong>startwidth</strong>
+    height:100%;    // MUST BE THE SAME AS IN THE OPTIONS <strong>startheight</strong>
+    position:relative;
+    // overflow:hidden;
+}
