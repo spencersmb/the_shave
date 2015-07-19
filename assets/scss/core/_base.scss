@@ -184,7 +184,7 @@ footer.loading{
 }
 
 .inner__header--sm{
-  margin:em(40px) auto 4em;
+  margin:em(40px) auto 35px;
 
   h3{
     color:#959595;
@@ -629,9 +629,8 @@ blockquote{
     padding:622.5px 60px 0 60px;
   }
 
-  .container__white{
-    min-height:440px;
-    background:#fff;
+  .container-push{
+    min-height:375px;
   }
 
   .card__feature{

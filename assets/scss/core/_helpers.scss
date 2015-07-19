@@ -51,14 +51,19 @@
     padding:0;
   }
 
+  &--md{
+    margin:0 auto;
+    max-width: 1360px;
+  }
+  
   &--sm{
     margin:0 auto;
     max-width: 1001.72px;
   }
 
-  &--md{
-    margin:0 auto;
-    max-width: 1360px;
+  &--xs{
+    	max-width:756px;
+      margin:0 auto;
   }
 }
 

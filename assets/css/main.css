@@ -10422,7 +10422,7 @@ footer.loading {
 }
 
 .inner__header--sm {
-  margin: 2.5em auto 4em;
+  margin: 2.5em auto 35px;
 }
 .inner__header--sm h3 {
   color: #959595;
@@ -10837,9 +10837,8 @@ blockquote.reverse {
     padding: 622.5px 60px 0 60px;
   }
 
-  .container__white {
-    min-height: 440px;
-    background: #fff;
+  .container-push {
+    min-height: 375px;
   }
 
   .card__feature {
@@ -10909,13 +10908,17 @@ blockquote.reverse {
     padding: 0;
   }
 }
+.sv__container--md {
+  margin: 0 auto;
+  max-width: 1360px;
+}
 .sv__container--sm {
   margin: 0 auto;
   max-width: 1001.72px;
 }
-.sv__container--md {
+.sv__container--xs {
+  max-width: 756px;
   margin: 0 auto;
-  max-width: 1360px;
 }
 
 .clear {
@@ -14653,9 +14656,7 @@ footer.safari {
 }
 
 .blog__content {
-  max-width: 756px;
   position: relative;
-  margin: 0 auto;
 }
 .blog__content--inner {
   padding: 100px 15px 0;
@@ -15805,7 +15806,7 @@ footer.safari {
 }
 
 .stats__container {
-  margin-top: 100px;
+  margin-top: 75px;
   margin-bottom: 100px;
 }
 
@@ -15814,19 +15815,25 @@ footer.safari {
 }
 
 .stats__row {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   position: relative;
 }
 .stats__row h3 {
   margin-bottom: 20px;
   font-size: 1.625em;
   text-align: left;
+  padding-top: 15px;
 }
 .stats__row h3::before {
   left: 0;
   top: -25px;
   font-size: 16px;
   letter-spacing: 2px;
+}
+.stats__row h4 {
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .stats__wrapper {
@@ -15854,6 +15861,27 @@ footer.safari {
 .stat p {
   margin-top: 5px;
   padding-bottom: 40px;
+}
+
+.gallery__controls {
+  display: table;
+  width: 100%;
+}
+.gallery__controls .left, .gallery__controls .center, .gallery__controls .right {
+  display: block;
+  text-align: center;
+}
+.gallery__controls .left a, .gallery__controls .center a, .gallery__controls .right a {
+  background-color: #EDEDED;
+  padding: 15px;
+  display: block;
+  width: 100%;
+}
+.gallery__controls .left {
+  text-align: left;
+}
+.gallery__controls .right {
+  text-align: right;
 }
 
 .quad-box {
