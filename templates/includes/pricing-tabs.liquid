@@ -2,8 +2,10 @@
 <!-- TODO: Create universal parralx background image class for parralax -->
 <section  class="container-fluid pricing__container" >
 
-		<div id="pricing-tab" class="row parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#pricing-tab" style="background-image: url({{'test.jpg' | asset_url}});">
+<div class="row">
+	<div id="pricing-tab" class="parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#pricing-tab" style="background-image: url({{'test.jpg' | asset_url}});">
 
+		<div class="row">
 			<div class="col-xs-12 col-sm-7 col-md-5 no-padding price__overview">
 
 			</div>
@@ -17,26 +19,26 @@
 
 					<div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
 
-					  <!-- tab content -->
+						<!-- tab content -->
 						<div id="myTabContent" class="tab-content">
 								<!-- start breard and mustache -->
-					      <div role="tabpanel" class="tab-pane fade active in" id="beard" aria-labelledby="beard-tab">
+								<div role="tabpanel" class="tab-pane fade active in" id="beard" aria-labelledby="beard-tab">
 
-					      <!-- accordian1 -->
-					        <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-					          <div class="panel panel-default active ">
-					            <div class="panel-heading panel-left" role="tab" id="myheadingOne">
-					              <h4 class="panel-title">
-					                <a class="price__trigger" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseOne" aria-expanded="true" aria-controls="mycollapseOne" onclick="return false;">
-					                  HairCuts
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="mycollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="myheadingOne">
+								<!-- accordian1 -->
+									<div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+										<div class="panel panel-default active ">
+											<div class="panel-heading panel-left" role="tab" id="myheadingOne">
+												<h4 class="panel-title">
+													<a class="price__trigger" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseOne" aria-expanded="true" aria-controls="mycollapseOne" onclick="return false;">
+														HairCuts
+													</a>
+												</h4>
+											</div>
+											<div id="mycollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="myheadingOne">
 
-					              <div class="panel-body price__sheet">
+												<div class="panel-body price__sheet">
 
-					                <div class="item">
+													<div class="item">
 														<div class="title">
 															<h3>Classic Cut</h3>
 														</div>
@@ -62,21 +64,21 @@
 														</div>
 													</div>
 
-					              </div>
-					            </div>
-					          </div>
-					          <div class="panel panel-default">
-					            <div class="panel-heading panel-left" role="tab" id="myheadingTwo">
-					              <h4 class="panel-title">
-					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseTwo" aria-expanded="false" aria-controls="mycollapseTwo" onclick="return false;">
-					                  Shaves
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="mycollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingTwo">
-					              <div class="panel-body price__sheet">
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading panel-left" role="tab" id="myheadingTwo">
+												<h4 class="panel-title">
+													<a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseTwo" aria-expanded="false" aria-controls="mycollapseTwo" onclick="return false;">
+														Shaves
+													</a>
+												</h4>
+											</div>
+											<div id="mycollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingTwo">
+												<div class="panel-body price__sheet">
 
-					               <div class="item">
+												 <div class="item">
 														<div class="title">
 															<h3>Classic Shave</h3>
 														</div>
@@ -102,21 +104,21 @@
 														</div>
 													</div>
 
-					              </div>
-					            </div>
-					          </div>
-					          <div class="panel panel-default">
-					            <div class="panel-heading panel-left" role="tab" id="myheadingThree">
-					              <h4 class="panel-title">
-					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseThree" aria-expanded="false" aria-controls="mycollapseThree" onclick="return false;">
-					                  Beards & Mustaches
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="mycollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingThree">
-					              <div class="panel-body price__sheet">
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading panel-left" role="tab" id="myheadingThree">
+												<h4 class="panel-title">
+													<a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseThree" aria-expanded="false" aria-controls="mycollapseThree" onclick="return false;">
+														Beards & Mustaches
+													</a>
+												</h4>
+											</div>
+											<div id="mycollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingThree">
+												<div class="panel-body price__sheet">
 
-					                <div class="item">
+													<div class="item">
 														<div class="title">
 															<h3>Classic Cut</h3>
 														</div>
@@ -142,41 +144,41 @@
 														</div>
 													</div>
 
-					              </div>
-					            </div>
-					          </div>
+												</div>
+											</div>
+										</div>
 
-					          <div class="panel panel-default">
-					            <div class="panel-heading panel-left" role="tab" id="myheadingFour">
-					              <h4 class="panel-title">
-					                <a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseFour" aria-expanded="false" aria-controls="mycollapseFour" onclick="return false;">
-					                  all prices & services
-					                </a>
-					              </h4>
-					            </div>
-					            <div id="mycollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingFour">
-					              <div class="panel-body price__sheet">
+										<div class="panel panel-default">
+											<div class="panel-heading panel-left" role="tab" id="myheadingFour">
+												<h4 class="panel-title">
+													<a class="price__trigger collapsed" data-toggle="collapse" data-parent="#accordion1" href="#mycollapseFour" aria-expanded="false" aria-controls="mycollapseFour" onclick="return false;">
+														all prices & services
+													</a>
+												</h4>
+											</div>
+											<div id="mycollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="myheadingFour">
+												<div class="panel-body price__sheet">
 
-					                <div class="item">
+													<div class="item">
 														<div class="desc">
 															<p>We offer a full service barbershop with the finest craft available.</p>
 															<a class="book__now--btn price-tab" href="#">View all prices</a>
 														</div>
 													</div>
 
-					              </div>
-					            </div>
-					          </div>
+												</div>
+											</div>
+										</div>
 
-					        </div>
+									</div>
 
-					      </div>
-					      <!-- end breard and mustache -->
+								</div>
+								<!-- end breard and mustache -->
 
-			      </div>
-			      <!-- end tab content -->
+						</div>
+						<!-- end tab content -->
 
-			    </div>
+					</div>
 					<!-- end pricing table -->
 
 				</div>
@@ -184,11 +186,13 @@
 
 			</div>
 			<!-- End pricing tab accordian -->
-
-
-
 		</div>
-		<!-- End row pricing__tabs -->
+
+
+
+	</div>
+	<!-- End row pricing__tabs -->
+</div>
 	<!-- </div> -->
 
 </section>

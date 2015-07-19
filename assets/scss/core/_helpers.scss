@@ -44,7 +44,7 @@
 .sv__container{
   margin:0 auto;
   max-width: 1700px;
-  padding:0 .75rem;
+  padding:0 15px;
 
   @include breakpoint(mobile){
     padding:0;

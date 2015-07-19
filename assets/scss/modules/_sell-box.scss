@@ -35,7 +35,6 @@
 
 .icon__box{
 
-
 	.icon__wrapper{
 		margin:25px 0;
 		max-width: 59px;
@@ -45,6 +44,10 @@
 			display: block;
 			text-align: left;
 		}
+	}
+
+	i{
+		color:$primary-color;
 	}
 
 	&--content{
@@ -63,7 +66,6 @@
 }
 
 .single__image{
-
 	img{
 		margin: 0 auto;
 	}

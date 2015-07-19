@@ -10839,7 +10839,7 @@ blockquote.reverse {
 .sv__container {
   margin: 0 auto;
   max-width: 1700px;
-  padding: 0 .75rem;
+  padding: 0 15px;
 }
 @media (max-width: 480px) {
   .sv__container {
@@ -13569,21 +13569,36 @@ blockquote.reverse {
   text-align: center;
   color: #fff;
   margin: 0 auto;
-  padding: 100px 0;
 }
 .twitter__wrapper blockquote {
   border: 0;
   width: 80%;
   padding: 0;
   margin: 0 auto;
+  color: #fff;
+  font-size: 16px;
+}
+.twitter__wrapper p {
+  line-height: 24px;
+}
+.twitter__wrapper span {
+  font-weight: 600;
 }
 .twitter__wrapper hr {
   width: 15%;
   margin: 20px auto;
 }
-.twitter__wrapper h2 {
+.twitter__wrapper h3 {
   margin-top: 20px;
   margin-bottom: 15px;
+}
+
+#twitter-carousel {
+  padding: 100px 0;
+}
+#twitter-carousel .carousel-inner > .item > img {
+  margin: 0 auto;
+  max-width: 60px;
 }
 
 .buy__container {
@@ -14338,6 +14353,9 @@ footer.safari {
   width: 100%;
   display: block;
   text-align: left;
+}
+.icon__box i {
+  color: #af8c45;
 }
 .icon__box--content {
   clear: both;
