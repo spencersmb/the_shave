@@ -16,7 +16,6 @@ html, body {
 
 body {
   padding: 0;
-  overflow-x: hidden !important;
   overflow: auto !important;
 
   //Special settings for Safari
@@ -138,7 +137,7 @@ footer.loading{
 //  background-color:transparent;
   padding-top: $header-M;
   @include transition(transform .4s);
-  box-shadow: 0 0 30px darken(#5c4b51, 20%);
+  // box-shadow: 0 0 30px darken(#5c4b51, 20%);
 }
 
 .sv__spacer{
@@ -317,7 +316,6 @@ blockquote{
 
   position:absolute;
   top:50%;
-  left:8%;
   width:100%;
   @include transform(translateY(-50%));
 

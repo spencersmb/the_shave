@@ -42,10 +42,74 @@ $(function() {
 
 
 	// // ==========================================================================
-	// // Footer-push resize
+	// // Footer-push resize + sckrollr check
 	// // ==========================================================================
 	(function() {
 
+		//Add PRELOADER!
+		//establish variables
+		//check if body has class loaded if it does then skip loading screen,
+		//else - run preloader
+
+		var skrollrCheck = function() {
+			var winWidth = window.innerWidth;
+			// console.log(winWidth);
+			var winHeight = window.innerHeight;
+
+			if (winWidth >= 600) {
+
+				//check if body has skroller
+				if (document.body.id !== 'skrollr-body') {
+					document.body.id = 'skrollr-body';
+
+					//Init Scrollr
+					var s = skrollr.init({
+						render: function(data) {
+							//Debugging - Log the current scroll position.
+							// console.log(data.curTop);
+						},
+
+						forceHeight: false, //disable setting height on body
+						smoothScrolling: false,
+					});
+
+				}
+				if (winWidth > winHeight) {
+					// console.log('orientation is landscape');
+					skrollr.get().refresh();
+				} else if (winWidth < winHeight) {
+					// console.log('orientation is portrait');
+					skrollr.get().refresh();
+				}
+			} else if (winWidth < 600) {
+
+				// Destroy skrollr for screens less than 600px
+				if (document.body.id === 'skrollr-body') {
+					skrollr.init().destroy();
+					document.body.id = '';
+					findskrollr();
+				}
+
+			}
+		};
+
+		function findskrollr() {
+			var main = $('main');
+			var sectionId;
+			main.children('section').each(function() {
+				sectionId = $(this).attr('id');
+
+				// console.log(sectionId);
+				if (sectionId !== undefined) {
+					var match = sectionId.match(/skr/gi);
+					if (match !== null) {
+						console.log(this.id);
+						// document.getElementById(this.id).style["padding-top"] = "10px";
+						$(this).find('div.skrollable').css('background-position', '50% 70%');
+					}
+				}
+			});
+		}
 
 		var tablet = 991,
 			resizedWidth;
@@ -79,6 +143,7 @@ $(function() {
 			var desktop = checkWindowWidth();
 			if (desktop) {
 
+				skrollrCheck();
 				$('body').removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
@@ -92,7 +157,7 @@ $(function() {
 				}
 
 			} else {
-
+				skrollrCheck();
 				$('main').find('.footer-push').css('margin-bottom', 0);
 				$('body').addClass('footer-mobile');
 			}
@@ -166,7 +231,15 @@ $(function() {
 			setTimeout(function() {
 
 				// Resize sections
-				adjustWindow();
+				// skrollrCheck();
+
+				// if (checkWindowWidth()) {
+				// 	console.log('ture');
+				// 	adjustWindow();
+				// } else {
+				// 	console.log('false');
+				//
+				// }
 
 				// Fade in sections
 				$body.removeClass('loading').addClass('loaded');
@@ -206,40 +279,7 @@ $(function() {
 
 		}
 
-
 	})();
-
-	// var windowSize = $(window).width();
-	// var tablet = 768;
-
-
-	// $(window).on('resize', function(){
-	// 	windowSize = $(window).width();
-	// }
-
-	// if(windowSize > tablet){
-
-	// 	if($('section').last().hasClass('footer-push')){
-
-	// 		var footerHeight = $('footer').height() + 'px';
-
-	// 		//set footerpush margin to same height as footer
-	// 		$('.footer-push').css('margin-bottom', footerHeight);
-
-	// 		function getfootHeight(){
-	// 			return $('footer').height();
-	// 		};
-
-	// 		$(window).on('resize', function(){
-
-	// 			var newHeight = getfootHeight();
-	// 			console.log(newHeight);
-	// 			$('.footer-push').css('margin-bottom', newHeight + 'px');
-
-	// 		});
-
-	// 	}
-	// }
 
 
 

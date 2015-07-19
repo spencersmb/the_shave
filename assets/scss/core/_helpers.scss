@@ -45,6 +45,7 @@
   margin:0 auto;
   max-width: 1700px;
   padding:0 15px;
+  position: relative;
 
   @include breakpoint(mobile){
     padding:0;
