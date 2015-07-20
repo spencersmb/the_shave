@@ -3,10 +3,34 @@
 {% block content %}
 <div class="container-fluid footer-push white-bg no-padding">
 
+	<!-- <div id="gallery-controls" class="gallery__controls">
+		<div class="col-xs-12 col-sm-4 left">
+			<a href="#"><i class="fa fa-chevron-left"></i>Prev Style</a>
+		</div>
+		<div class="col-xs-12 col-sm-4 center">
+			<a href="#">Gallery<i class="fa fa-th-large"></i></a>
+		</div>
+		<div class="col-xs-12 col-sm-4 right">
+			<a href="#">Next Style<i class="fa fa-chevron-right"></i></a>
+		</div>
+	</div> -->
+
+
+		<div id="gallery-controls" class="col-xs-12 col-sm-4 left-control card-shadow-md">
+			<div class="control-wrapper">
+				<div class="icon-box">
+					<i class="fa fa-chevron-left left"></i>
+				</div>
+				<div class="text">
+					<h6>Prev Style</h6>
+				</div>
+				<a href="#">Prev Style</a>
+			</div>
+		</div>
 		<!-- Intro blog -->
 		{% include "gallery/gallery-detail-intro" %}
 
-		<div class="container-fluid container__grey">
+		<div id="sec1" class="container-fluid container__grey">
 			<div class="container sv__container--md ">
 
 				{% comment %}Stats block{% endcomment %}
@@ -143,8 +167,10 @@
 {% block scripts %}
     {{ "flickity.pkgd.min.js" | asset_url | script_tag }}
     {{ "flickity-settings.js" | asset_url | script_tag }}
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script>
-	// ==========================================================================
+		// ==========================================================================
     // Gallery Detail page
     // ==========================================================================
     (function(){
@@ -168,6 +194,8 @@
     		return currHeight;
     	}
 
+			$('.gallery-nav').height(getThumbnailHeight());
+
     	//apply
     	$(window).on('resize', function(){
 
@@ -183,6 +211,46 @@
 			// console.log($(this).height());
 			$(this).height(statBoxHeight);
 		});
+
+		// ==========================================================================
+    // Scroll Magic
+    // ==========================================================================
+		// init controller
+		var controller = new ScrollMagic.Controller({globalSceneOptions: {}});
+
+		function updateBox(){
+			$('#gallery-controls').css({
+				position: 'absolute',
+				opacity: 1,
+				top:'1653px',
+				left:'2%'
+			});
+			console.log($('#gallery-controls').offset());
+			console.log($('#sec1').offset());
+			console.log($('#sec1').height());
+
+			console.log($('#sec2').offset());
+		}
+		// build scenes
+		new ScrollMagic.Scene({triggerElement: "#sec1", duration:250})
+						.setClassToggle("#gallery-controls", "active") // add class toggle
+						.on("leave", updateBox)
+						.addIndicators() // add indicators (requires plugin)
+						.addTo(controller);
+		// var scrollMagic = new ScrollMagic.Scene({triggerElement: "#sec2"})
+		// 				.setPin("#gallery-controls")
+		// 				.setClassToggle("#gallery-controls", "pin") // add class toggle
+		// 				.on("enter leave", updateBox)
+		// 				.addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
+		// 				.addTo(controller);
+		// new ScrollMagic.Scene({triggerElement: "#sec3"})
+		// 				.setClassToggle("#high3", "active") // add class toggle
+		// 				.addIndicators() // add indicators (requires plugin)
+		// 				.addTo(controller);
+		// new ScrollMagic.Scene({triggerElement: "#sec4"})
+		// 				.setClassToggle("#high4", "active") // add class toggle
+		// 				.addIndicators() // add indicators (requires plugin)
+		// 				.addTo(controller);
 
     })();
 </script>

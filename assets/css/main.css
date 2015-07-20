@@ -15863,9 +15863,89 @@ footer.safari {
   padding-bottom: 40px;
 }
 
-.gallery__controls {
-  display: table;
+.control-wrapper {
+  position: absolute;
+  height: 100%;
   width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.left-control {
+  width: 215px;
+  height: 75px;
+  color: #252525;
+  position: fixed;
+  z-index: 1000;
+  bottom: 3%;
+  left: -20%;
+  opacity: 0;
+  display: table;
+  background-color: #fff;
+  -webkit-transition: left 0.5s, opacity 0.3s;
+  -moz-transition: left 0.5s, opacity 0.3s;
+  transition: left 0.5s, opacity 0.3s;
+}
+.left-control:hover {
+  color: #fff;
+  background-color: #af8c45;
+}
+.left-control.active {
+  left: 2%;
+  opacity: 1;
+}
+.left-control a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  text-indent: -9999px;
+}
+.left-control i {
+  color: #fff;
+  top: 50%;
+  position: absolute;
+  left: 30px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.left-control .icon-box {
+  height: 100%;
+  width: 75px;
+  background-color: #af8c45;
+  float: left;
+}
+.left-control .text {
+  position: absolute;
+  top: 50%;
+  left: 114px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.gallery__controls {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  bottom: -10%;
+  left: 0;
+  opacity: 0;
+  display: table;
+  background-color: #252525;
+  -webkit-transition: bottom 0.5s, opacity 0.3s;
+  -moz-transition: bottom 0.5s, opacity 0.3s;
+  transition: bottom 0.5s, opacity 0.3s;
+}
+.gallery__controls.active {
+  bottom: 7%;
+  opacity: 1;
 }
 .gallery__controls .left, .gallery__controls .center, .gallery__controls .right {
   display: block;
