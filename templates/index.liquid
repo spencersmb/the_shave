@@ -22,9 +22,44 @@
 {% block scripts %}
     {{ "jquery.themepunch.tools.min.js" | asset_url | script_tag }}
     {{ "jquery.themepunch.revolution.js" | asset_url | script_tag }}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script>
 
 $(function() {
+
+	// ==========================================================================
+	// Scroll Magic
+	// ==========================================================================
+	var sec1 = $('#sec1');
+	var duration = sec1.height();
+
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
+
+	function cascadeClasses(){
+		var boxArr = [];
+		sec1.find('.feature__box').each(function(index){
+//			console.log(index);
+			$(this).addClass('active' + index);
+		});
+	}
+
+//	function leaveClasses(){
+//		sec1.find('.feature__box').each(function(index){
+////			console.log(index);
+//			$(this).removeClass('active' + index);
+//		});
+//	}
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#sec1"})
+//			.setClassToggle(".feature__box", "active") // add class toggle
+			.offset(100)
+			.on("enter", cascadeClasses)
+//			.on("leave", leaveClasses)
+			.addIndicators() // add indicators (requires plugin)
+			.addTo(controller);
+
+
 
 	// Twitter Carousel
 	// ==========================================================================
