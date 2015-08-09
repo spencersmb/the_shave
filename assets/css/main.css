@@ -15695,17 +15695,103 @@ footer.safari {
   width: 100%;
 }
 
-.gallery-item {
+.full-width-gallery .gallery-item {
   float: none;
   height: 500px;
   overflow: hidden;
+  position: relative;
+}
+
+.gallery-item {
+  float: none;
+  overflow: hidden;
+  position: relative;
+}
+.gallery-item span {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: none;
+  position: absolute;
+  min-height: 100%;
+  z-index: 2;
+}
+.gallery-item h5 {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #fff;
+  z-index: 4;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.gallery-item .subtext {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  z-index: 4;
+  line-height: 22px;
+  padding-right: 20px;
+  -webkit-transition: all 0.3s 0.1s;
+  -moz-transition: all 0.3s 0.1s;
+  transition: all 0.3s 0.1s;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  transform: translateY(100px);
+}
+.gallery-item .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #252525;
+  opacity: 0;
+  z-index: 3;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .gallery-item img {
   width: 100%;
 }
+.gallery-item a:hover h5 {
+  -webkit-transform: translateY(-36px);
+  -moz-transform: translateY(-36px);
+  -ms-transform: translateY(-36px);
+  -o-transform: translateY(-36px);
+  transform: translateY(-36px);
+}
+.gallery-item a:hover .overlay {
+  opacity: .7;
+}
+.gallery-item a:hover .subtext {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
 
 .gallery-item.width2 {
-  width: 50%;
+  width: 100%;
 }
 
 .gallery-item.height2 {
@@ -15758,14 +15844,99 @@ footer.safari {
   border-bottom: 3px solid #af8c45;
 }
 
+.small-gallery .gallery-item {
+  float: left;
+  height: 250px;
+}
+.small-gallery .grid-sizer {
+  width: 50%;
+}
+.small-gallery .gallery-item {
+  width: 50%;
+}
+.small-gallery .gallery-item.width2 {
+  width: 100%;
+}
+.small-gallery .gallery-item.height2 {
+  height: 500px;
+}
+
+.gallery-3-grid {
+  border-bottom: 3px solid #373737;
+}
+.gallery-3-grid .gallery-item {
+  float: left;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+.gallery-3-grid .gallery-item a {
+  display: block;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.gallery-3-grid .gallery-item a img {
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.gallery-3-grid .grid-sizer {
+  width: 100%;
+}
+.gallery-3-grid .gallery-item {
+  width: 100%;
+}
+
+.gallery-4-grid {
+  border-bottom: 3px solid #373737;
+}
+.gallery-4-grid .gallery-item {
+  float: left;
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+.gallery-4-grid .gallery-item a {
+  display: block;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.gallery-4-grid .gallery-item a img {
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.gallery-4-grid .grid-sizer {
+  width: 100%;
+}
+.gallery-4-grid .gallery-item {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
-  .gallery-item {
+  .small-gallery .gallery-item {
     float: left;
     height: 250px;
   }
-
-  .grid-sizer, .gallery-item {
+  .small-gallery .grid-sizer {
     width: 25%;
+  }
+  .small-gallery .gallery-item {
+    width: 25%;
+  }
+  .small-gallery .gallery-item.width2 {
+    width: 50%;
+  }
+  .small-gallery .gallery-item.height2 {
+    height: 500px;
   }
 
   .full-width-gallery .gallery-item {
@@ -15788,6 +15959,13 @@ footer.safari {
   .full-width-gallery .gallery-item.height2 {
     height: 900px;
   }
+
+  .gallery-3-grid .grid-sizer {
+    width: 50%;
+  }
+  .gallery-3-grid .gallery-item {
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
   .full-width-gallery .gallery-item {
@@ -15809,6 +15987,20 @@ footer.safari {
   }
   .full-width-gallery .gallery-item.height2 {
     height: 600px;
+  }
+
+  .gallery-3-grid .grid-sizer {
+    width: 33.33333333333%;
+  }
+  .gallery-3-grid .gallery-item {
+    width: 33.33333333333%;
+  }
+
+  .gallery-4-grid .grid-sizer {
+    width: 25%;
+  }
+  .gallery-4-grid .gallery-item {
+    width: 25%;
   }
 }
 @media (min-width: 1200px) {
@@ -15976,28 +16168,49 @@ footer.safari {
   opacity: 1;
   display: inline-block;
   margin-bottom: 60px;
-  -webkit-transition: bottom 0.5s, opacity 0.3s;
-  -moz-transition: bottom 0.5s, opacity 0.3s;
-  transition: bottom 0.5s, opacity 0.3s;
 }
 .gallery__controls .left, .gallery__controls .center, .gallery__controls .right {
   display: block;
   text-align: center;
   padding: 0;
+  position: relative;
 }
 .gallery__controls .left a, .gallery__controls .center a, .gallery__controls .right a {
   background-color: #fff;
   padding: 15px;
   display: block;
   width: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.gallery__controls .left a:hover, .gallery__controls .center a:hover, .gallery__controls .right a:hover {
+  color: #fff;
+  background-color: #af8c45;
+}
+.gallery__controls .left i, .gallery__controls .center i, .gallery__controls .right i {
+  margin-top: 5px;
+}
+.gallery__controls .left span, .gallery__controls .center span, .gallery__controls .right span {
+  position: relative;
+  top: -2px;
 }
 .gallery__controls .left {
   text-align: left;
   border-right: 2px solid #e8e8e8;
 }
+.gallery__controls .left i {
+  padding-right: 10px;
+}
 .gallery__controls .right {
   text-align: right;
   border-left: 2px solid #e8e8e8;
+}
+.gallery__controls .right i {
+  padding-left: 10px;
+}
+.gallery__controls .center i {
+  padding-right: 10px;
 }
 
 .quad-box {

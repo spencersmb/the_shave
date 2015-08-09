@@ -17,40 +17,80 @@
 
 		{% include "gallery/gallery-filter" %}
 		
-		<div class="col-xs-12">
+		<div class="col-xs-12 small-gallery">
 			<div class="portfolioContainer sv__container--sm">
 
 			 	<div class="grid-sizer"></div>
 			    <div class="gallery-item width2 height2 hair">
-			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>
 			 
 			    <div class="gallery-item width2 beard">
-			        <img class="img-responsive" src="{{ 'iso-2.jpg' | asset_url}}" alt="image">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>    
 			 
 			    <div class="gallery-item width1 mustache">
-			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>
 			     
 			    <div class="gallery-item width1 shave">
-			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>
 			 
 			    <div class="gallery-item width2 beard">
-			        <img class="img-responsive" src="{{ 'iso-2.jpg' | asset_url}}" alt="image">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>
 			 
 			    <div class="gallery-item width2 height2 hair">
-			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			        <a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>
 			 
 			    <div class="gallery-item width1 mustache">
-			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			        <a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>
 			     
 			    <div class="gallery-item width1 shave">
-			        <img class="img-responsive" src="{{ 'iso-1.jpg' | asset_url}}" alt="image">
+			        <a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+					</a>
 			    </div>   
 			 
 			</div>
@@ -99,7 +139,7 @@
 		  		$('body').css('height', updatedHeight + 'px');
 			});
 
-			//Filter
+			//Filter using window location
 			var val = window.location.hash;
 			var hash;
 			// console.log(val);
@@ -119,6 +159,8 @@
 				});
 				
 			}
+
+
 		});
     
 </script>

@@ -10,70 +10,87 @@
 				<h3>The latest hair cuts that made our heads turn.</h3>
 			</div>
 		</div>
-		
+
 	</section>
 
 	<section class="container-fluid footer-push container__white no-padding">
 
 		{% include "gallery/gallery-filter" %}
 		
-		<div class="col-xs-12 full-width-gallery no-padding">
+		<div class="col-xs-12 gallery-3-grid no-padding">
 
 		 	<div class="grid-sizer"></div>
 			
 
 			{% comment %}section1{% endcomment %}
 			<div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
 		    </div>
 
 		    <div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
 		    </div>
 
-		 	<div class="gallery-item width2 height2 beard">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+		 	<div class="gallery-item beard">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
 		    </div>
 
-		    <div class="gallery-item width2 mustache">
-		        <span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
+		    <div class="gallery-item mustache">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
 		    </div> 
 		    
 			<div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
 		    </div>
 
 		    <div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
 		    </div>
 
 		    {% comment %}section2{% endcomment %}
 
-		    <div class="gallery-item width2 height2 beard">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
-		    </div>
-
-		    <div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
-		    </div>
-
-		    <div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
-		    </div>
-
-		    <div class="gallery-item width2 mustache">
-		        <span style="background-image: url({{'iso-2.jpg' | asset_url}});" ></span>
-		    </div>
-
-		    <div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
-		    </div>
-
-		    <div class="gallery-item hair">
-		        <span style="background-image: url({{'iso-1.jpg' | asset_url}});" ></span>
-		    </div>
-
-		 
 		</div>
 
 	</section>
@@ -87,13 +104,20 @@
     // Full gallery Isotope
     // ==========================================================================
     $(window).load(function(){
-	    var $fullGrid = $('.full-width-gallery');
+	    var $fullGrid = $('.gallery-3-grid');
 	    $fullGrid.isotope({
 	        itemSelector: ".gallery-item",
-						 //layoutMode: 'fitRows',
-						 percentPosition: true,
-			masonry: { "columnWidth": ".grid-sizer" }
+			masonry: {
+				"columnWidth": ".grid-sizer"
+			}
 	    });
+
+// trigger isotope again after images have loaded
+		$fullGrid.imagesLoaded( function(){
+//			$(window).smartresize();
+			$fullGrid.isotope('layout');
+
+		});
 
 	    $('.filter-group').on( 'click', 'li', function() {
 

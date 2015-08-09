@@ -7,18 +7,97 @@
 .grid-sizer, .gallery-item{
 	width: 100%;
 }
+.full-width-gallery{
+  .gallery-item {
+	float: none;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+  }
+}
 
 .gallery-item{
 	float: none;
- 	height: 500px;
+// 	height: 500px;
  	overflow:hidden;
+  	position: relative;
+
+	span{
+	  display: block;
+	  background-size:cover;
+	  background-position:center;
+	  background-repeat:no-repeat;
+	  width:100%;
+	  max-width: none;
+	  position:absolute;
+	  min-height: 100%;
+	  z-index: 2;
+	}
+
+  	h5{
+	  position: absolute;
+	  bottom:15px;
+	  left:20px;
+	  margin:0;
+	  font-size:24px;
+	  font-weight: 600;
+	  line-height: 32px;
+	  color:$white;
+	  z-index: 4;
+	  @include transition(all .3s);
+	  @include transform(translateY(0));
+	}
+
+  	.subtext{
+	  position: absolute;
+	  bottom:20px;
+	  left:20px;
+	  font-size:16px;
+	  font-weight: 400;
+	  color:$white;
+	  z-index: 4;
+	  line-height: 22px;
+	  padding-right:20px;
+	  @include transition(all .3s .1s);
+	  @include transform(translateY(100px));
+	}
+
+  	.overlay{
+	  position: absolute;
+	  height: 100%;
+	  width:100%;
+	  top:0;
+	  left:0;
+	  background-color: $black;
+	  opacity: 0;
+	  z-index: 3;
+	  @include transition(all .3s);
+	}
+
 	img{
 		width:100%;
+	}
+
+  	a{
+	  &:hover{
+
+		h5{
+		  @include transform(translateY(-36px));
+		}
+
+		.overlay{
+		  opacity: .7;
+		}
+
+		.subtext{
+		  @include transform(translateY(0));
+		}
+	  }
 	}
 }
 
 // .item.width1{ width: 25%; }
-.gallery-item.width2 { width: 50%; }
+.gallery-item.width2 { width: 100%; }
 .gallery-item.height2 { height: 500px; }
 
 
@@ -73,18 +152,96 @@
 	}
 }
 
+.small-gallery{
+  .gallery-item{
+	float: left;
+	height: 250px;
+  }
+
+  .grid-sizer{ width: 50%; }
+  .gallery-item { width: 50%; }
+  .gallery-item.width2 { width: 100%; }
+  .gallery-item.height2 { height: 500px; }
+}
+
+.gallery-3-grid{
+  border-bottom:3px solid #373737;
+
+  .gallery-item{
+	float: left;
+	position: relative;
+	margin:0;
+	padding-left:0;
+	padding-right:0;
+	overflow:hidden;
+
+	a{
+	  display: block;
+	  position: relative;
+	  //		  padding-bottom:100%;
+	  width:100%;
+	  top:0;
+	  left:0;
+
+	  img{
+		top:0;
+		left:0;
+		height:100%;
+	  }
+	}
+  }
+
+  .grid-sizer{ width: 100%; }
+  .gallery-item { width: 100%; }
+}
+
+.gallery-4-grid{
+  border-bottom:3px solid #373737;
+
+  .gallery-item{
+	float: left;
+	position: relative;
+	margin:0;
+	padding-left:0;
+	padding-right:0;
+	overflow:hidden;
+
+	a{
+	  display: block;
+	  position: relative;
+	  //		  padding-bottom:100%;
+	  width:100%;
+	  top:0;
+	  left:0;
+
+	  img{
+		top:0;
+		left:0;
+		height:100%;
+	  }
+	}
+  }
+
+  .grid-sizer{ width: 100%; }
+  .gallery-item { width: 100%; }
+}
+
 
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
-	.gallery-item{
+	.small-gallery{
+	  .gallery-item{
 		float: left;
-	 	height: 250px;
-	 }
+		height: 250px;
+	  }
 
-	.grid-sizer, .gallery-item{
-		width: 25%;
+	  .grid-sizer{ width: 25%; }
+	  .gallery-item { width: 25%; }
+	  .gallery-item.width2 { width: 50%; }
+	  .gallery-item.height2 { height: 500px; }
 	}
+
 
 	.full-width-gallery{
 		.gallery-item{
@@ -102,10 +259,18 @@
 		.gallery-item.height2 { height: 900px; }
 	}
 
+	.gallery-3-grid{
+
+	  .grid-sizer{ width: 50%; }
+	  .gallery-item { width: 50%; }
+	}
+
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+
 	.full-width-gallery{
 		.gallery-item{
 			float: left;
@@ -122,13 +287,28 @@
 		.gallery-item.height2 { height: 600px; }
 	}
 
+  .gallery-3-grid{
+
+	.grid-sizer{ width: 33.33333333333%; }
+	.gallery-item { width: 33.33333333333%; }
+
+  }
+
+  .gallery-4-grid{
+
+	.grid-sizer{ width: 25%; }
+	.gallery-item { width: 25%; }
+
+  }
+
 
 
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-.full-width-gallery{
+
+	.full-width-gallery{
 		.gallery-item{
 			float: left;
 		 	height: 350px;
@@ -149,6 +329,7 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
+
 	.full-width-gallery{
 		.gallery-item{
 			float: left;
@@ -312,29 +493,59 @@
 	opacity: 1;
 	display: inline-block;
   	margin-bottom: 60px;
-	@include transition(bottom .5s, opacity .3s);
+
 
 	.left, .center, .right{
 		display: block;
 		text-align: center;
 	  	padding:0;
+	  	position: relative;
 
 		a{
 			background-color: $white;
 			padding:15px;
 			display: block;
 			width:100%;
+		  	@include transition(all .3s);
+
+		  &:hover{
+			color:$white;
+			background-color: $primary-color;
+		  }
 		}
+
+	  	i{
+		  margin-top:5px;
+		}
+
+	  	span{
+		  position: relative;
+		  top:-2px;
+	  	}
 	}
 
 	.left{
 		text-align: left;
 	  	border-right:2px solid $grey;
+
+	  i{
+		padding-right:10px;
+	  }
 	}
 
 	.right{
 		text-align: right;
 	  	border-left:2px solid $grey;
+
+	  i{
+		padding-left:10px;
+	  }
+	}
+
+  	.center{
+	  i{
+		padding-right:10px;
+	  }
 	}
 }
 

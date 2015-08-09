@@ -1,0 +1,167 @@
+{% layout "layout" %}
+
+{% block content %}
+<!-- TODO: Comment this section out -->
+	<section class="container-fluid white-bg">
+		<div class="row sv__container--sm">
+
+			<div class="col-xs-12 inner__header--sm">
+				<h1>Trending Cuts</h1>
+				<h3>The latest hair cuts that made our heads turn.</h3>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="container-fluid footer-push container__white no-padding">
+
+		{% include "gallery/gallery-filter" %}
+		
+		<div class="col-xs-12 gallery-4-grid no-padding">
+
+		 	<div class="grid-sizer"></div>
+			
+
+			{% comment %}section1{% endcomment %}
+			<div class="gallery-item hair">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+		    </div>
+
+		    <div class="gallery-item hair">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+		    </div>
+
+		 	<div class="gallery-item beard">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+		    </div>
+
+		    <div class="gallery-item mustache">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+		    </div> 
+		    
+			<div class="gallery-item hair">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+		    </div>
+
+		    <div class="gallery-item hair">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+		    </div>
+
+		    {% comment %}section2{% endcomment %}
+
+		</div>
+
+	</section>
+
+
+{% endblock %}
+{% block scripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+<script>
+	// ==========================================================================
+    // Full gallery Isotope
+    // ==========================================================================
+    $(window).load(function(){
+	    var $fullGrid = $('.gallery-3-grid');
+	    $fullGrid.isotope({
+	        itemSelector: ".gallery-item",
+			masonry: {
+				"columnWidth": ".grid-sizer"
+			}
+	    });
+
+// trigger isotope again after images have loaded
+		$fullGrid.imagesLoaded( function(){
+//			$(window).smartresize();
+			$fullGrid.isotope('layout');
+
+		});
+
+	    $('.filter-group').on( 'click', 'li', function() {
+
+	    	$(this).parent().children('li').each(function(){
+	    		$(this).removeClass('selected');
+	    	});
+	    	
+	    	$(this).addClass('selected');
+
+	    	var galleryPageHeight = $(window).height();
+
+	  		var filterValue = $(this).attr('data-filter');
+
+	  		$fullGrid.isotope({ filter: filterValue });
+
+	  		var filterContentHeight = $('.full-width-gallery').height();
+	  		
+	  		var updatedHeight = galleryPageHeight - filterContentHeight;
+
+	  		$('body').css('height', updatedHeight + 'px');
+		});
+
+		//Filter
+		var val = window.location.hash;
+		var hash;
+		// console.log(val);
+
+		if(val != ''){
+			hash = val.substr(8);
+
+			// console.log(hash)
+			$fullGrid.isotope({ filter: hash });
+
+			$('.filter-group > li').each(function(){
+				var data = $(this).data('filter');
+				if( data === hash){
+					$(this).addClass('selected');
+				}
+				return;
+			});
+			
+		}
+
+	});
+    
+</script>
+{% endblock %}
