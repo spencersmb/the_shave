@@ -1,5 +1,8 @@
 .team__wrapper{
 	margin-top:80px;
+  	cursor:pointer;
+
+
 }
 
 .team{
@@ -21,8 +24,19 @@
 		max-height: 200px;
 		overflow:hidden;
 		img{
-			width:100%;
+		  width:100%;
+		  opacity: 1;
+		  @include transition(opacity .3s);
 		}
+	}
+
+	&:hover{
+
+	  .image{
+		img{
+		}
+	  }
+
 	}
 }
 
@@ -98,6 +112,55 @@
 		}
 	}
 
+	.book__app{
+//	  border-top:1px solid #CACACA;
+	  position:absolute;
+	  bottom:0;
+	  left:0;
+	  width:100%;
+	  background:transparent;
+	  padding:0 20px;
+	  text-align: center;
+	  margin-bottom:20px;
+	  z-index: 5;
+	  @include transform(translate3d(0,100px,0));
+	  @include transition-delay(.2s);
+
+	  &.active{
+
+		@include transition-delay(.4s);
+		@include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+		@include transform(translate3d(0, 0px, 0));
+	  }
+
+	  a{
+		display:block;
+		line-height: 22px;
+		height: 50px;
+		font-size: 14px;
+		padding:15px;
+		font-family: $ubuntu;
+		text-transform: uppercase;
+		background-color: darken($color-3, 8%);
+		@include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+
+		.no-touch &:hover {
+		  color: $white;
+		  background-color: $primary-color;
+		}
+	  }
+
+	  span{
+		padding-top:5px;
+	  }
+
+	  i{
+		padding-right:10px;
+		top:-2px;
+		position: relative;
+	  }
+	}
+
 	.content__wrapper{
 		padding: 1em 2em 2em;
 		-webkit-backface-visibility: hidden;
@@ -133,26 +196,6 @@
 				right:25px;
 			}
 
-
-			&.active{
-
-				background: $primary-color;
-
-				&::before, &::after{
-					width:14px;
-					background:$white;
-				}
-
-				&::after {
-					@include transform(translateX(-5px) translateY(0) rotate(45deg));
-				}
-
-				&::before {
-					@include transform(translateX(0) translateY(0) rotate(-45deg));
-				}
-
-			}
-
 		}
 
 		.title{
@@ -164,38 +207,8 @@
 			@include transition-delay(.2s);
 
 
-			&.active{
-				@include transition-delay(.4s);
-				@include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
-				@include transform(translate3d(0,0px,0));
-
-				h5, h6 {
-					color:$white;
-				}
-				
-				.bio{
-					opacity: 1;
-					@include transition-delay(.3s);
-					@include transform(translate3d(0,82px,0));
-				}
-			}
-
 			h5{
 				margin:18px 0 0;
-			}
-		}
-
-		.social{
-			border-top:1px solid #CACACA;
-			position:absolute;
-			bottom:0;
-			left:0;
-			width:100%;
-			background:transparent;
-			padding:15px 0 10px;
-			text-align: center;
-			a{
-				display: inline-block;
 			}
 		}
 
@@ -207,6 +220,45 @@
 			@include transition-delay(.2s);
 			@include transform(translate3d(0,225px,0));
 
+		}
+
+		&.active{
+
+
+		  .open{
+
+			  background: $primary-color;
+
+			  &::before, &::after{
+				width:14px;
+				background:$white;
+			  }
+
+			  &::after {
+				@include transform(translateX(-5px) translateY(0) rotate(45deg));
+			  }
+
+			  &::before {
+				@include transform(translateX(0) translateY(0) rotate(-45deg));
+			  }
+
+		  }
+
+		  .title{
+			@include transition-delay(.4s);
+			@include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+			@include transform(translate3d(0,0px,0));
+
+			h5, h6 {
+			  color:$white;
+			}
+
+			.bio{
+			  opacity: 1;
+			  @include transition-delay(.3s);
+			  @include transform(translate3d(0,82px,0));
+			}
+		  }
 		}
 
 	}

@@ -1,3 +1,5 @@
+
+
 .split-bg{
 	background-size:cover;
 	background-position: center center;
@@ -48,35 +50,62 @@
 	position:relative;
 }
 
-.grid__inner{
-	text-align:center;
-	padding:25px;
-	background:#f3f3f3;
+.single__image{
+  position: relative;
+  margin-bottom: 168px;
+
+  img{
+	position: absolute;
+	top:-39px;
+	left:50%;
+	@include transform(translateX(-50%));
+  }
 }
 
 .process__grid{
 	padding:100px 0;
 
+
 	i{
 		padding:10px 0;
+	  	position: relative;
+	  	top:85px;
+	  	margin-bottom:60px;
+	  	color:$primary-color;
+	  	@include transition(all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
 	}
 
 	h4{
 		padding-bottom:15px;
+	  	position: relative;
+	  	top:33px;
+	  	font-family: $ubuntu;
+	  	font-size: 21px;
+	  	font-weight: 400;
+	  	@include transition(all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+	}
+
+  	p{
+		position: absolute;
+		padding:0 15px;
+	  	width:90%;
+		left:50%;
+	  	top:50%;
+	  	opacity: 0;
+		font-size: 15px;
+		line-height: 22px;
+	  	@include transition(all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
+	  	@include transition-delay(.2s);
+	  	@include transform(translateY(-50%) translateX(-50%) scale(.5));
 	}
 
 	&--box{
 		
 		padding:0 1.25% 2.5% ;
-		// margin-left: 2.5%;
-		// margin-right: 2.5%;
-		// margin-bottom: 2.5%;
-		// float:right;
-		// width:45%;
 		padding-top:0;
 
-		&:nth-child(odd){
-			// clear:both;
+		&:nth-child(2n+1){
+			clear:both;
 			
 		}
 
@@ -88,10 +117,41 @@
 	}
 
 	&--wrapper{
-		padding:50px 25px;
 		position:relative;
+	  	width:100%;
+	  	max-width: 900px;
+	  	margin:0 auto;
+	}
+
+	.grid__inner{
+	  text-align:center;
+	  position: relative;
+	  padding:25px;
+	  height: 320px;
+	  background:#f3f3f3;
+	  border: 5px solid #f3f3f3;
+
+	  &:hover{
+
+		i{
+		  top:-5px;
+
+		}
+
+		h4{
+		  top:115px;
+		}
+
+		p{
+		  top:50%;
+		  opacity: 1;
+		  @include transform(translateY(-50%) translateX(-50%) scale(1));
+		}
+	  }
 	}
 }
+
+
 .about__process{
 	padding:100px 0;
 	color:$white;
