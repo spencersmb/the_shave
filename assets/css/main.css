@@ -12748,7 +12748,7 @@ blockquote.reverse {
 }
 @media (min-width: 1200px) {
   .feature__box--container {
-    max-width: none;
+    max-width: 1900px;
   }
   .feature__box figure {
     max-width: 445px;
