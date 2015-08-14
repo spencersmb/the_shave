@@ -12478,7 +12478,7 @@ blockquote.reverse {
 }
 .feature__box {
   display: table;
-  padding: 15px;
+  padding: 15px 0;
   margin: 0 auto;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -12546,12 +12546,12 @@ blockquote.reverse {
 }
 .feature__box--container {
   margin: 80px auto;
+  max-width: 1500px;
 }
 .feature__box figure {
   position: relative;
-  float: left;
   overflow: hidden;
-  max-height: 580px;
+  max-height: 430px;
   width: 100%;
   height: auto;
   background: #fff;
@@ -12623,6 +12623,9 @@ blockquote.reverse {
   pointer-events: none;
 }
 
+.feature__box--effect {
+  margin: 0 auto;
+}
 .feature__box--effect h2, .feature__box--effect img {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
@@ -12638,7 +12641,7 @@ blockquote.reverse {
   -o-transform: translate3d(0, -80px, 0);
   transform: translate3d(0, -80px, 0);
 }
-.feature__box--effect .h2 {
+.feature__box--effect h2 {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -12669,8 +12672,8 @@ blockquote.reverse {
 }
 
 @media (min-width: 768px) {
-  .feature__box--container {
-    max-width: 758px;
+  .feature__box {
+    padding: 15px;
   }
   .feature__box figure {
     max-width: 343px;
@@ -12679,12 +12682,8 @@ blockquote.reverse {
   .feature__box figure p {
     padding: 10px 45px 20px;
   }
-
-  .feature__box:nth-child(odd) .feature__box--effect {
-    float: right;
-  }
-  .feature__box:nth-child(even) .feature__box--effect {
-    float: left;
+  .feature__box figure h2 {
+    bottom: 21px;
   }
 }
 @media (min-width: 992px) {
@@ -12698,6 +12697,7 @@ blockquote.reverse {
   .feature__box figure h2 {
     position: absolute;
     padding: 29px 20px;
+    bottom: 0px;
   }
   .feature__box figure p {
     padding: 10px 30px 20px;
@@ -12747,9 +12747,6 @@ blockquote.reverse {
   }
 }
 @media (min-width: 1200px) {
-  .feature__box--container {
-    max-width: 1900px;
-  }
   .feature__box figure {
     max-width: 445px;
     max-height: 580px;
@@ -12760,7 +12757,16 @@ blockquote.reverse {
   .feature__box figure h2 {
     padding: 37px 20px;
   }
+  .feature__box:nth-child(odd) .feature__box--effect {
+    float: none;
+  }
+  .feature__box:nth-child(even) .feature__box--effect {
+    float: none;
+  }
 
+  .feature__box--effect {
+    margin: 0 auto;
+  }
   .feature__box--effect p {
     -webkit-transform: translate3d(0, 80px, 0);
     -moz-transform: translate3d(0, 80px, 0);

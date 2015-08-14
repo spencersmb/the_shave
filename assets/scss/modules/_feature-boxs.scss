@@ -27,7 +27,7 @@
 
 .feature__box{
 	display:table;
-	padding:15px;
+	padding:15px 0;
 	margin:0 auto;
 
 	opacity:0;
@@ -55,16 +55,16 @@
 
 	&--container{
 		margin:80px auto;
+		max-width: 1500px;
 	}
 
 	figure {
 		position: relative;
-		float: left;
 		overflow: hidden;
 		// margin: 10px 1%;
 		// min-width: 320px;
 		// max-width: 480px;
-		max-height: 580px;
+		max-height: 430px;
 		width: 100%;
 		height: auto;
 		background: $white;
@@ -155,14 +155,12 @@
 
 //Hover effects
 .feature__box--effect{
-	// box-shadow: 0 1px 2px rgba(#000, .23);
-	// @include transition(box-shadow .2s);
 
+  margin:0 auto;
 
 	h2,img{
 		@include transition(opacity 0.35s, transform 0.35s);
-		// -webkit-transition: -webkit-transform 0.35s;
-		// transition: transform 0.35s;
+
 	}
 
 	img{
@@ -172,7 +170,7 @@
 		@include transform(translate3d(0,-80px,0));
 	}
 
-	.h2{
+	h2{
 		@include transition(opacity 0.35s, transform 0.35s);
 		@include transform(translate3d(0,0px,0));
 	}
@@ -185,10 +183,6 @@
 		opacity: 1;
 		@include transition(opacity 0.35s, transform 0.35s);
 
-		// -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-		// transition: opacity 0.35s, transform 0.35s;
-		// -webkit-transform: translate3d(0,50px,0);
-		// transform: translate3d(0,50px,0);
 	}
 
 	//moves image up on hover
@@ -198,22 +192,15 @@
 
 	//moves h2 up on hover
 	.no-touch &:hover h2 {
-		// @include transform(translate3d(0,-50px,0));
-		// -webkit-transform: translate3d(0,-70px,0);
-		// transform: translate3d(0,-70px,0);
+
 	}
 
 	//reveal p tag on hover
 	.no-touch &:hover p {
 		opacity: 1;
-	// 	-webkit-transform: translate3d(0,0,0);
-	// 	transform: translate3d(0,0,0);
-		// @include transform(translate3d(0,-15px,0));
+
 	}
 
-	// .no-touch &:hover {
-	// 	box-shadow: 0 5px 15px rgba($black, .4);
-	// }
 
 }
 
@@ -221,10 +208,7 @@
 @include breakpoint(tablet) {
 
 .feature__box{
-
-	&--container{
-		max-width: 758px;
-	}
+  padding:15px;
 
 	figure{
 		max-width: 343px;
@@ -233,19 +217,9 @@
 		p{
 			padding:10px 45px 20px;
 		}
-	}
-}
 
-.feature__box{
-	&:nth-child(odd){
-		.feature__box--effect{
-			float:right;
-		}
-
-	}
-	&:nth-child(even){
-		.feature__box--effect{
-			float:left;
+	  	h2{
+		  bottom:21px;
 		}
 	}
 }
@@ -269,6 +243,7 @@
 		h2{
 			position: absolute;
 			padding: 29px 20px;
+		  	bottom:0px;
 		}
 		p{
 			padding:10px 30px 20px;
@@ -278,10 +253,6 @@
 }
 
 .feature__box--effect{
-
-	// .content{
-	// 	@include transform(translate3d(0,50px,0));
-	// }
 
 	p{
 		padding: 10px 30px 20px;
@@ -319,9 +290,6 @@
 
 	.feature__box{
 
-		&--container{
-			max-width: 1900px;
-		}
 
 		figure{
 
@@ -339,9 +307,25 @@
 
 			}
 		}
+
+	  &:nth-child(odd){
+		.feature__box--effect{
+		  float:none;
+		}
+
+	  }
+	  &:nth-child(even){
+		.feature__box--effect{
+		  float:none;
+
+		}
+	  }
 	}
 
 	.feature__box--effect{
+		margin:0 auto;
+
+
 		p{
 			@include transform(translate3d(0,80px,0));
 		}
