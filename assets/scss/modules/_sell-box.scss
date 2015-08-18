@@ -1,10 +1,30 @@
 .sell__box{
-	padding-top:60px;
+
+  h2{
+	text-align: center;
+	width:100%;
+	font-size: 92px;
+	margin-bottom: 60px;
+	line-height: 1;
+  }
+
+  img{
+	margin:0 auto;
+  }
+
+  .wrapper{
+	margin:0 auto;
+	padding:0 40px;
+  }
+
+  .desc{
+	padding: 0 40px;
+  }
 }
 
 .sell__wrapper{
 
-	margin:60px 0 25px 0;
+	margin:60px 0 0 0;
 
 	h6{
 		font-size: em(18px);

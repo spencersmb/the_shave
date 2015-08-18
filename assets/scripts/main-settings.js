@@ -164,6 +164,11 @@ $(function() {
 		}
 
 		function specialFooter() {
+
+			//Resize angle
+			setAngleWidth();
+
+			//set footer and sckrollrCheck
 			var desktop = checkWindowWidth();
 			if (desktop) {
 
@@ -185,6 +190,22 @@ $(function() {
 				$('body').addClass('footer-mobile');
 			}
 		}
+
+		// ==========================================================================
+		// Angle borders
+		// ==========================================================================
+
+
+		function setAngleWidth(){
+			var windowWidth = $(window).width();
+			$('.angle-top').css('border-right-width', windowWidth);
+			$('.angle-bottom').css('border-left-width', windowWidth);
+			$('.angle-top-bottom').css('border-right-width', windowWidth);
+		}
+
+		setAngleWidth();
+
+
 
 		// ==========================================================================
 		// Accordian Tabs
