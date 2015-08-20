@@ -146,15 +146,14 @@
 
 // ==========================================================================
 // Pricing Tabs
-//
+// TODO: rename to appropriate section
 // ==========================================================================
 .pricing__table{
 	@include transition(all .4s ease-in-out);
 }
 .pricing__table--wrapper{
-
 	margin:0 auto;
-	padding:5em 0;
+	padding:7em 0 7em;
 	max-width:800px;
 	@include transition(all .4s ease-in-out);
 }

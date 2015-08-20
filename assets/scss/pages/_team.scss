@@ -1,15 +1,14 @@
-.team__wrapper{
+.products__wrapper{
 	margin-top:80px;
   	cursor:pointer;
-
-
 }
 
-.team{
+.products{
 	padding:0 0 80px 0;
 	display:table;
 }
-.team__wrapper--effect{
+
+.card__slider{
 	position: relative;
 	overflow: hidden;
 	height: 405px;
@@ -57,8 +56,32 @@
 
 		h5{
 			margin:15px 0 0;
-			font-weight: bold;
+		  	font-size: 15px;
+		  	font-weight: 400;
 		}
+
+		h6{
+		  color:#BDBDBD;
+		  font-size: 15px;
+		  font-weight: 400;
+		}
+
+	  .angle-bottom-card{
+		@extend .angle-bottom;
+		border-left-width:285px;
+		bottom:-20px;
+		border-bottom: 20px solid transparent;
+		opacity: 0;
+		left:-285px;
+		@include transition(all .5s);
+	  }
+
+	  .angle-top-card{
+		@extend .angle-top;
+		border-right-width:285px;
+		top:-20px;
+		border-bottom: 20px solid transparent;
+	  }
 
 		
 	}
@@ -74,14 +97,13 @@
 		top:0;
 		height:auto;
 		@include transition(all .3s);
-
 	}
 
 	
 
 	.bio{
 		text-align: left;
-		font-size: 16px;
+		font-size: 14px;
 		margin-top: 25px;
 		margin-bottom:25px;
 		@include transition(all .3s);
@@ -95,11 +117,11 @@
 //TODO: change all tablets to correct size in comment
 // Displays greater than 768px 
 @include breakpoint(tablet) {
-	.team{
+	.products{
 		max-width:750px;
 	}
 
-	.team__wrapper--effect{
+	.card__slider{
 		height: 473px;
 		max-width:319px;
 
@@ -181,7 +203,7 @@
 				width:9px;
 				background:$primary-color;
 				@include backface-visibility(hidden);
-				@include transition(all .3s);	
+				@include transition(all .3s);
 			}
 
 			&::after {
@@ -213,7 +235,6 @@
 		}
 
 		.bio{
-			font-size: 16px;
 			margin-top: 25px;
 			margin-bottom:25px;
 			opacity: 0;
@@ -259,19 +280,23 @@
 			  @include transform(translate3d(0,82px,0));
 			}
 		  }
+
+		  .angle-bottom-card {
+		  	opacity: 1;
+			left:0;
+		  }
+
 		}
-
 	}
-
 
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-.team{
+.products{
 	max-width:1000px;
 }
-.team__wrapper--effect{
+.card__slider{
 	height: 423px;
 	max-width:285px;
 }  
@@ -289,7 +314,6 @@
 	}
 
 	.bio{
-		font-size: 14px;
 		margin-top: 25px;
 		margin-bottom:25px;
 	}
@@ -299,13 +323,14 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-	.team{
+	.products{
 		max-width:1200px;
 	}
 
-	.team__wrapper--effect{
-		height: 528px;
-		max-width:356px;
+	.card__slider{
+		height: 100%;
+		max-width:285px;
+	  	padding-bottom: 75px;
 	}  
 
 	.content__wrapper{
@@ -316,11 +341,10 @@
 				margin:15px 0 0;
 			}
 
-			@include transform(translate3d(0,455px,0));
+			@include transform(translate3d(0,331px,0));
 		}
 
 		.bio{
-			font-size: 16px;
 			margin-top: 25px;
 			margin-bottom:25px;
 		}

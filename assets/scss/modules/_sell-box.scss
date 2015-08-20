@@ -1,5 +1,5 @@
 .sell__box{
-
+	padding-bottom: 40px;
   h2{
 	text-align: center;
 	width:100%;
@@ -15,6 +15,7 @@
   .wrapper{
 	margin:0 auto;
 	padding:0 40px;
+	max-width: 1200px;
   }
 
   .desc{
@@ -23,8 +24,8 @@
 }
 
 .sell__wrapper{
-
-	margin:60px 0 0 0;
+	text-align: center;
+	margin:125px 0 0 0;
 
 	h6{
 		font-size: em(18px);
@@ -38,25 +39,26 @@
 
 	h3{
 		font-size: em(97px);
-		margin:0;
+		margin:15px 0 0;
 		line-height: 105px;
 		letter-spacing: 5px;
 	}
 
 	h5{
-		font-size: em(38px);
+		font-size: em(36px);
 		font-family: 'courier';
 		color:#aaaaaa;
-		text-transform: uppercase;
+		text-transform: initial;
 		max-width: 800px;
-		margin-top:15px;
+	  	width:100%;
+		margin:15px auto 0;
 	}
 }
 
 .icon__box{
 
 	.icon__wrapper{
-		margin:25px 0;
+		margin:25px auto;
 		max-width: 59px;
 		img{
 			margin:0 auto;
@@ -76,12 +78,13 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			font-size: em(18px);
-			margin: 25px 0;
+			margin: 25px 0 15px;
 		}
 	}
 
 	&--container{
 		margin-bottom: 60px;
+	  	text-align: center;
 	}
 }
 

@@ -10,10 +10,22 @@
   font-weight: 300;
 }
 
+.top-nav{
+  margin-top:110px;
+}
+
 .container-fluid, .container{
   position:relative;
+  z-index: 1;
+}
+.tier3{
+  z-index: 3;
+}
+
+.tier2{
   z-index: 2;
 }
+
 .text-hide{
   font: 0/0 a;
   color: transparent;
