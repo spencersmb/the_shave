@@ -269,6 +269,22 @@
     }
 }
 
+.graphic-headline{
+  width:100%;
+  max-width: 900px;
+  margin:200px auto;
+  text-align: center;
+
+  h2{
+    text-transform: initial;
+    margin:0 auto 60px;
+  }
+
+  p{
+    line-height: 28px;
+  }
+}
+
 .border-bottom{
   border-bottom:1px solid $black;
   padding-bottom:75px !important;
@@ -305,6 +321,12 @@
 
   a{
     display: inline-block;
+  }
+}
+
+.single-image{
+  img{
+    width:100%;
   }
 }
 

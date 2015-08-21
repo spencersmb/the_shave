@@ -11098,6 +11098,20 @@ blockquote.reverse {
   content: ":::";
 }
 
+.graphic-headline {
+  width: 100%;
+  max-width: 900px;
+  margin: 200px auto;
+  text-align: center;
+}
+.graphic-headline h2 {
+  text-transform: initial;
+  margin: 0 auto 60px;
+}
+.graphic-headline p {
+  line-height: 28px;
+}
+
 .border-bottom {
   border-bottom: 1px solid #252525;
   padding-bottom: 75px !important;
@@ -11133,6 +11147,10 @@ blockquote.reverse {
 }
 .social-links a {
   display: inline-block;
+}
+
+.single-image img {
+  width: 100%;
 }
 
 .background-overlay-black {
@@ -15540,12 +15558,11 @@ footer.safari {
   }
 }
 .products__wrapper {
-  margin-top: 80px;
+  margin-bottom: 30px;
   cursor: pointer;
 }
 
 .products {
-  padding: 0 0 80px 0;
   display: table;
 }
 
