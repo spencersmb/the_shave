@@ -1,5 +1,4 @@
 .sell__box{
-	padding-bottom: 80px;
 
   h2{
 	text-align: center;
@@ -14,19 +13,19 @@
   }
 
   .wrapper{
-	margin:0 auto;
+	margin:0 auto 60px;
 	padding:0 40px;
 	max-width: 1200px;
   }
 
   .desc{
-	padding: 0 40px;
+	padding: 0 40px 40px;
   }
 }
 
 .sell__wrapper{
 	text-align: center;
-	margin:125px 0 0 0;
+	margin:80px 0 0 0;
 
 	h6{
 		font-size: em(18px);
@@ -84,7 +83,7 @@
 	}
 
 	&--container{
-		margin-bottom: 60px;
+		margin-bottom: 80px;
 	  	text-align: center;
 	}
 }

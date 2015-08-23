@@ -5,19 +5,19 @@
 	max-width:970px;
 	background:$white;
 	margin:0 auto;
+  	text-align: center;
 
 	h2{
 		font-size: em(97px);
 		line-height: 105px;
-		text-align: left;
 		margin-bottom:16px;
+	  	margin-top: 15px;
 	}
 	h6{
 		font-size: em(18px);
 		color:$primary-color;
 		font-family: 'courier';
 		font-weight: 700;
-		text-align: left;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		margin:0;

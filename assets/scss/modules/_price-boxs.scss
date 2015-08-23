@@ -5,7 +5,8 @@
 .price__table{
   background:$white;
   padding:10%;
-  margin:0 auto 30px;
+  margin:30px auto 60px;
+  position: relative;
 
 
   .price__header{
@@ -67,6 +68,32 @@
   }
 }
 
+.angle-top-price{
+  content:' ';
+  position: absolute;
+  z-index: 1;
+  top:-50px;
+  left:0;
+  width:0;
+  height:0;
+  border-top: 50px solid transparent;
+  border-right:30px solid white;
+  border-right-width:413px;
+}
+
+.angle-bottom-price{
+  content:' ';
+  position: absolute;
+  z-index: 1;
+  bottom:-50px;
+  left:0;
+  width:0;
+  height:0;
+  border-bottom:50px solid transparent;
+  border-left:30px solid white;
+  border-left-width:413px;
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
@@ -77,7 +104,6 @@
 @include breakpoint(laptop) {
 
   .price__table{
-    padding:15%;
   }
 
 

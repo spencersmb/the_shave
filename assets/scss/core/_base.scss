@@ -126,7 +126,7 @@ footer.loading{
   height: auto;
   z-index: $content;
   background-color: $white;
-//  padding-top: $header-M;
+  padding-top: $header-M;
   @include transition(transform .4s);
 }
 

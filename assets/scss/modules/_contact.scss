@@ -127,11 +127,11 @@
 
 }
 
-// Displays greater than 600px
+// Displays greater than 768px
 @include breakpoint(tablet) {
 
 	.contact__wrapper{
-		margin:200px auto 100px;
+		margin:300px auto 30px;
 	}
 
 	.contact__card{

@@ -85,8 +85,19 @@
 
 .section__wrapper{
   margin:40px auto 75px;
-  display: inline-table;
+  display: block;
   width:100%;
+
+  &:after{
+    clear:both;
+    content:" ";
+    display: table;
+  }
+
+  &:before{
+    content:" ";
+    display: table;
+  }
 }
 
 .clear{
@@ -141,8 +152,9 @@
 
 //HEADLINE OPTIONS
 .headline-sm{
-    text-align: center;
-    margin:0 auto;
+  text-align: center;
+  margin:0 auto;
+  display: table;
 
     h2{
         margin:0 auto;
@@ -158,6 +170,7 @@
 .headline-md{
   text-align: center;
   margin:0 auto;
+  display: table;
 
   h2{
     margin:20px auto;
@@ -393,4 +406,28 @@
   height:0;
   border-top: 80px solid transparent;
   border-right:30px solid white;
+}
+
+.angle-bottom-top{
+  content:' ';
+  position: absolute;
+  z-index: 1;
+  top:0;
+  left:0;
+  width:0;
+  height:0;
+  border-bottom: 80px solid transparent;
+  border-left:30px solid white;
+}
+
+.angle-bottom-nav{
+  content:' ';
+  position: absolute;
+  z-index: 100;
+  top:0px;
+  left:0;
+  width:0;
+  height:0;
+  border-bottom:80px solid transparent;
+  border-left:30px solid white;
 }

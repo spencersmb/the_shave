@@ -201,6 +201,23 @@ $(function() {
 			$('.angle-top').css('border-right-width', windowWidth);
 			$('.angle-bottom').css('border-left-width', windowWidth);
 			$('.angle-top-bottom').css('border-right-width', windowWidth);
+			$('.angle-bottom-top').css('border-left-width', windowWidth);
+
+			//Check for angle on homepage
+			if($('.angle-bottom-nav')){
+				$('.angle-bottom-nav').css('border-left-width', windowWidth);
+			}
+			
+			//Check for price angles
+			if($('.price__table')){
+				var priceBox = $('.price__container').width();
+
+				//set box width to remove decimals
+				$('.price__table').css('width', priceBox);
+
+				$('.angle-bottom-price').css('border-left-width', priceBox);
+				$('.angle-top-price').css('border-right-width', priceBox);
+			}
 
 			//Check for product angles
 			if($('.card__slider')){

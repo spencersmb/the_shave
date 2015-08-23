@@ -42,6 +42,16 @@ $(function() {
 		});
 	}
 
+
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#sec1"})
+//			.setClassToggle(".feature__box", "active") // add class toggle
+			.offset(200)
+			.on("enter", cascadeClasses)
+//			.on("leave", leaveClasses)
+			.addIndicators() // add indicators (requires plugin)
+			.addTo(controller);
+
 	// ==========================================================================
 	// Feature Box height
 	// ==========================================================================
@@ -86,15 +96,7 @@ $(function() {
 //	}
 
 	
-	
-	// build scenes
-	new ScrollMagic.Scene({triggerElement: "#sec1"})
-//			.setClassToggle(".feature__box", "active") // add class toggle
-			.offset(-75)
-			.on("enter", cascadeClasses)
-//			.on("leave", leaveClasses)
-			.addIndicators() // add indicators (requires plugin)
-			.addTo(controller);
+
 
 
 
