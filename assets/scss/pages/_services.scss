@@ -171,166 +171,9 @@ padding: 0 60px 90px;
 // pricing boxs
 
 
-.price__wrapper{
-
-}
-
-.price__table{
-	background:$white;
-	padding:10%;
-	margin:0 auto 30px;
-
-
-	.price__header{
-		margin-bottom: 25px;
-
-		h2{
-			margin:0 0 35px 0;
-			font-size: 16px;
-			font-weight: 600;
-			font-family: courier;
-		}
-
-		.price{
-			font-size: em(56px);
-			font-family: $heading-font;
-			font-weight: 500;
-			line-height: 46px;
-			position:relative;
-			display: inline-block;
-			padding-top:20px;
-			color:$primary-color;
-
-			span{
-				font-size: 18px;
-				position:absolute;
-				top:7px;
-				left:-15px;
-			}
-		}
-	}
-
-	.divider__plus{
-
-		text-align: center;
-
-		.middle{
-			color:$black;
-			font-weight: 300;
-		}
-
-		p{
-			border-bottom:1px solid $dark-grey;
-			margin: 0 0 25px 0;
-		}
-
-		span{
-			background:$white;
-			position:relative;
-			left:-2px;
-		}
-	}
-
-	ul{
-		padding:15px 0 45px;
-	}
-
-	li{
-		padding-bottom:15px;
-	}
-}
-
-//Barbers
-// .baber__box--wrapper{
-// 	// max-width:1170px;
-// 	margin:90px auto 60px;
-// }
-
-.barber__row{
-	margin:0 auto;
-}
-
-.barber__box{
-	float:none;
-	margin:0 auto;
-	max-width:511px;
-
-	a{
-		display:block;
-		width:100%;
-		text-align: center;
-		padding-bottom:25px;
-
-		&:hover{
-
-			img{
-				opacity:1;
-				@include transform(translateX(15px) scale3d(1.2, 1.2, 1));
-			}
-
-			// .rotate{
-			// 	opacity: .4;
-			// 	@include transform(translateX(-50%) translateY(-50%) rotate(180deg));
-			// }
-
-		}
-	}
-
-}
-
-.barber__profile{
-	position:relative;
-	display:block;
-	overflow:hidden;
-	height:100%;
-	width:100%;
-	background-color: $black;
-	opacity:1;
-
-	img{
-		@include transition (all .3s ease-in-out);
-		@include transform(translateX(0) scale3d(1.2, 1.2, 1));
-		// transform:translateX(0) scale3d(1.2, 1.2, 1);
-	}
-
-	// .rotate{
-	// 	position: absolute;
-	// 	color:$white;
-	// 	opacity: 0;
-	// 	top:50%;
-	// 	left:50%;
-	// 	z-index: 4;
-	// 	@include transition (all .2s cubic-bezier(0, 2.8, 0, 2.8));
-	// 	@include transform(translateX(-50%) translateY(-50%) rotate(0));
-	// }
-
-}
-
-.barber__title{
-	h6{
-		// position:absolute;
-		// z-index: 3;
-		font-size: 18px;
-		font-family: courier;
-		margin-top:20px;
-		margin-bottom: 0;
-		// text-transform: uppercase;
-		// bottom:0;
-		// color:$white;
-		// margin:0;
-		// @include transition (all .3s ease-in-out);
-		// transform-origin: 50% 100%;
-		// -webkit-transform-origin: 50% 100%;
-		// transform:translate3d(0, -50%, 0) scale3d(.8, .8, 1);
-
-	}
-}
-
 // Displays greater than 768px
 @include breakpoint(tablet) {
-	.barber__box{
-		float:left;
-	}
+
 
 	.service__products{
 
@@ -352,18 +195,11 @@ padding: 0 60px 90px;
 		}
 	}
 
-	.price__table{
-		max-width: 400px;
-		padding:15%;
-	}
-
 	.shave__card{
 
 		overflow:hidden;
 		padding:0;
 	}
-
-
 
 }
 

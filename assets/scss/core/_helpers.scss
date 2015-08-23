@@ -58,25 +58,35 @@
   max-width: 1700px;
   padding:0 15px;
   position: relative;
+  width:100%;
 
   @include breakpoint(mobile){
     padding:0;
   }
 
   &--md{
+    width:100%;
     margin:0 auto;
     max-width: 1360px;
   }
   
   &--sm{
+    width:100%;
     margin:0 auto;
     max-width: 1001.72px;
   }
 
   &--xs{
-    	max-width:756px;
-      margin:0 auto;
+    width:100%;
+    max-width:756px;
+    margin:0 auto;
   }
+}
+
+.section__wrapper{
+  margin:40px auto 75px;
+  display: inline-table;
+  width:100%;
 }
 
 .clear{
@@ -325,6 +335,12 @@
 }
 
 .single-image{
+  img{
+    width:100%;
+  }
+}
+
+.dual-img{
   img{
     width:100%;
   }

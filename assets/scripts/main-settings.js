@@ -201,6 +201,28 @@ $(function() {
 			$('.angle-top').css('border-right-width', windowWidth);
 			$('.angle-bottom').css('border-left-width', windowWidth);
 			$('.angle-top-bottom').css('border-right-width', windowWidth);
+
+			//Check for product angles
+			if($('.card__slider')){
+				//get width
+				var cardWidth = $('.card__slider').width();
+
+				//set width
+				$('.angle-bottom-card').css('border-left-width', cardWidth);
+			}
+
+			//Check for bio angles
+			if($('.barber__box')){
+
+				//get width
+				var boxWidth = $('.barber__box').parent('div').width();
+
+				//set box width to remove decimals
+				$('.barber__box').css('width', boxWidth);
+
+				//set width
+				$('.angle-top-bottom-barber').css('border-right-width', boxWidth);
+			}
 		}
 
 		setAngleWidth();

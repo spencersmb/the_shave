@@ -48,12 +48,13 @@
 .shave__faq--content{
 	display:none;
 	border: 1px solid transparent;
+	text-align: left;
 
 	p {
 		font-size:em(15px);
 		line-height: em(24px);
 		color: $black;
-		padding: 0 24px 30px;
+		padding: 0 30px 30px;
 
 	}
 }

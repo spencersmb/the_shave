@@ -195,7 +195,7 @@ footer.loading{
 	margin:60px auto;
 	text-align:center;
 	position:relative;
-	padding:88px 0 60px;
+	padding:88px 0 0;
 }
 
 //Todo: Add additional SCSS for ELEMEnts AND TYPOGRAPHY
@@ -529,9 +529,6 @@ blockquote{
     height:100%;
   }
 
-
-
-
   .card{
     .content{
       margin:7.525em 27.5%;
@@ -550,8 +547,6 @@ blockquote{
       }
     }
   }
-
-
 
 }
 
