@@ -105,6 +105,7 @@ ul{
 .loading {
   background-color:#fff;
   .load-icon{
+    @include transition(opacity .4s);
     position:absolute;
     top:50%;
     margin:0 auto;
@@ -114,10 +115,13 @@ ul{
   }
 
 }
+footer{
+  opacity: 0;
+  @include transition(opacity 1s .7s ease-out);
+}
 
-footer.loading{
-  opacity:0;
-
+footer.loaded {
+    opacity: 1;
 }
 
 .sv__main--content {
@@ -127,13 +131,13 @@ footer.loading{
   z-index: $content;
   background-color: $white;
   padding-top: $header-M;
-  @include transition(transform .4s);
+
 }
 
 .loaded .sv__main--content,
 .no-js section {
+  @include transition(opacity 1s ease-out);
   opacity: 1;
-  // @include transition(opacity, 300ms, ease-out);
 }
 
 
@@ -277,6 +281,7 @@ blockquote{
 .container__white{
   min-height:100%;
   background:#fff;
+  position:relative;
 }
 
 .container__grey{
@@ -400,50 +405,6 @@ blockquote{
 
 }
 
-
-
-
-.flip-container{
-  // perspective: 1000;
-  @include perspective(1000);
-}
-
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  // transform: rotateY(180deg);
-  @include transform(rotateY(180deg));
-}
-
-.flipper {
-  // transition: 0.6s;
-  @include transition(0.6s);
-  // transform-style: preserve-3d;
-  @include transform-style(preserve-3d);
-  position: relative;
-}
-
-.front, .back {
-  // backface-visibility: hidden;
-  @include backface-visibility(hidden);
-  top: 0;
-  left: 0;
-}
-
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  @include transform(rotateY(0deg));
-  // transform: rotateY(0deg);
-}
-
-.back {
-  // transform: rotateY(180deg);
-  @include transform(rotateY(180deg));
-  color:$white;
-  background:$primary-color;
-  position:absolute;
-  width:100%;
-  height:100%;
-}
 
 .card-shadow-lt{
   box-shadow: 0 1px 2px rgba(#000, .08);

@@ -3,9 +3,6 @@
 {% block content %}
 <div class="container-fluid footer-push white-bg no-padding">
 
-
-
-
 		<!-- Intro blog -->
 		{% include "gallery/gallery-detail-intro" %}
 
@@ -16,138 +13,153 @@
 				<div class="row stats__container">
 
 					{% comment %}Hair desc{% endcomment %}
-				  	<div class="col-xs-12 col-md-5 stats__row--container">
+				  	<div class="col-xs-12">
 
-						<div class="stats__row">
-							<h3 class="heading-divider">The Style</h3>
+						<div class="stats__details">
+							<h3>The Stallion Style</h3>
+							<h4>$45.00</h4>
 							<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
+							<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
 						</div>
-						<div class="stats__row">
-							<h4>Product</h3>
-							<p><span class="bold">Use:</span> Keune Forte Gel, Keune Moulding Paste. <br>
-							<span class="bold">Apply:</span> Firmly add gel to wet hair. Air dry and finish with a flexible wax or pomade that also adds texture.</p>
-						</div>
-						<div class="stats__row">
-							<h4>Price</h3>
-							<p>$45.00</p>
-						</div>
+
+						<a class="btn book-now-btn" href="">Get this style</a>
+
 				  	</div>
 
 					{% comment %}Hair Stats Grid{% endcomment %}
-					<div class="col-xs-12 col-md-7">
 
-					<!-- TODO: figure out touch support for cards? -->
-						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
-							<div class="quad-box flipper">
-								<div class="inner front">
-									<div class="content">
-										<img src="{{ 'stat-1.jpg' | asset_url}}" alt="">
-										<h5>
-											Hair Length
-										</h5>
-										<p>Medium</p>
-									</div>
-								</div>
-								<div class="back">
-									<div class="content">
-										<h5>Style Tip</h5>
-										<p>This hair cut is using the scissor-over-comb technique all the way from the hairline to the corners of the head.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
-							<div class="quad-box flipper">
-								<div class="inner front">
-									<div class="content">
-										<img src="{{ 'stat-2.jpg' | asset_url}}" alt="">
-										<h5>
-											Face Type
-										</h5>
-										<p>Square</p>
-									</div>
-								</div>
-								<div class="back">
-									<div class="content">
-										<h5>Style Tip</h5>
-										<p>Men with square faces should opt for styles that make their faces appear less box-like and more slender.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
-							<div class="quad-box flipper">
-								<div class="inner front">
-									<div class="content">
-										<img src="{{ 'stat-3.jpg' | asset_url}}" alt="">
-										<h5>
-											Hair Type
-										</h5>
-									</div>
-								</div>
-								<div class="back">
-									<div class="content">
-										<h5>Style Tip</h5>
-										<p>Men with square faces should opt for styles that make their faces appear less box-like and more slender.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12 col-sm-6 no-padding flip-container" ontouchstart="this.classList.toggle('hover');">
-							<div class="quad-box flipper">
-								<div class="inner front">
-									<div class="content">
-										<img src="{{ 'stat-4.jpg' | asset_url}}" alt="">
-										<h5>
-											Time to cut
-										</h5>
-										<p>Fast</p>
-									</div>
-								</div>
-								<div class="back">
-									<div class="content">
-										<h5>Style Tip</h5>
-										<p>Men with square faces should opt for styles that make their faces appear less box-like and more slender.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
 				</div>
 
-
-				<div id="gallery-controls" class="gallery__controls">
-                    <div class="col-xs-12 col-sm-4 left">
-                        <a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 center">
-                        <a href="#"><i class="fa fa-th-large"></i><span>Gallery</span></a>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 right">
-                        <a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
-                    </div>
-                </div>
-
-
-
-
 			</div> <!-- end container -->
-			{% comment %}
-			<div class="sv__container--sm">
 
-			</div>
-			{% endcomment %}
 
 		</div>
+
+	{% include "gallery/gallery-product" %}
+
+	{% include "gallery/gallery-social" %}
+
+	{% include "gallery/gallery-details" %}
+
+	<section class="sv__container--fluid dual-img">
+		<div class="row">
+			<div class="col-xs-6 no-padding">
+				<img class="img-responsive" src="{{'left-image.jpg' | asset_url}}" alt=""/>
+			</div>
+			<div class="col-xs-6 no-padding">
+				<img class="img-responsive" src="{{'right-image.jpg' | asset_url}}" alt=""/>
+			</div>
+		</div>
+	</section>
 
 
 
 	<!-- Barbers -->
-	{% include "service-shave/suggested-barber" %}
+	<section class="container__white">
+
+		<div class="angle-top" style="border-right-color: #fff;"></div>
+
+		<div class="container sv__container--md inner-content-module">
+
+			<div class="barbers">
+
+				<div class="headline-sm">
+					<h2>Book with these barbers</h2>
+				</div>
+
+				<div class="section__wrapper">
+
+					<div class="col-xs-12 col-md-4">
+						<div class="barber__box card-shadow-md">
+
+							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
+								<div class="overlay text-center">
+									<!-- <h3 class="white">Master of the blade</h3> -->
+									<img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>
+								</div>
+								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
+							</div>
+							<img class="avatar" src="{{'avatar-1.jpg' | asset_url}}" alt=""/>
+							<div class="title">
+								<h4>Spencer Bigum</h4>
+								<h5>Owner & Master Barber</h5>
+							</div>
+							<a class="btn book-now-btn" href="">Book now</a>
+
+						</div>
+
+					</div>
+
+					<div class="col-xs-12 col-md-4">
+						<div class="barber__box card-shadow-md">
+
+							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
+								<div class="overlay text-center">
+									<!-- <h3 class="white">Master of the blade</h3> -->
+									<img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>
+								</div>
+								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
+							</div>
+							<img class="avatar" src="{{'avatar-1.jpg' | asset_url}}" alt=""/>
+							<div class="title">
+								<h4>Spencer Bigum</h4>
+								<h5>Owner & Master Barber</h5>
+							</div>
+							<a class="btn book-now-btn" href="">Book now</a>
+
+						</div>
+
+					</div>
+
+					<div class="col-xs-12 col-md-4">
+						<div class="barber__box card-shadow-md">
+
+							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
+								<div class="overlay text-center">
+									<!-- <h3 class="white">Master of the blade</h3> -->
+									<img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>
+								</div>
+								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
+							</div>
+							<img class="avatar" src="{{'avatar-1.jpg' | asset_url}}" alt=""/>
+							<div class="title">
+								<h4>Spencer Bigum</h4>
+								<h5>Owner & Master Barber</h5>
+							</div>
+							<a class="btn book-now-btn" href="">Book now</a>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!-- End row -->
+
+			</div>
+
+		</div>
+		<!-- End price module container-->
+	</section>
+	<section class="container__grey">
+		<div class="container sv__container--md">
+
+			<div id="gallery-controls" class="gallery__controls">
+				<div class="col-xs-12 col-sm-4 left">
+					<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
+				</div>
+				<div class="col-xs-12 col-sm-4 center">
+					<a href="#"><i class="fa fa-th-large"></i><span>Gallery</span></a>
+				</div>
+				<div class="col-xs-12 col-sm-4 right">
+					<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+
 	<!-- End Barber module container-->
 
 	{% comment %}
@@ -205,13 +217,37 @@
 		//Set Gallery Main padding-bottom to align subnav
 		$('.gallery-main').css('padding-bottom', getImgHeightMaster());
 
+		// ==========================================================================
+		// Activate Product details
+		// ==========================================================================
 
-		//Grid stats
-		var statBoxHeight = $(".stats__container").find('.quad-box').height();
+		var wrapper = $('.card__slider');
 
-		$(".quad-box").each(function(item){
-			// console.log($(this).height());
-			$(this).height(statBoxHeight);
+		wrapper.on('click', function(event){
+			event.preventDefault();
+
+			//check if element is hovered or not
+			var isHovered = $(this).find(".book__app:hover").length;
+
+			if( $(this).find('.content__wrapper').hasClass('active') && isHovered ){
+				//do nothing because the user is hovering over an item
+			}else{
+//					closeNav();
+				$(this).find('.content__wrapper').toggleClass('active');
+
+				$(this).find('.book__app').toggleClass('active');
+			}
+
+		});
+
+		function openTab(url){
+			window.open(url, '_self');
+		}
+
+		wrapper.find('.book__app').find('a').on('click', function(event){
+
+			var url = $(this).attr('href');
+			openTab(url);
 		});
 
 		// ==========================================================================

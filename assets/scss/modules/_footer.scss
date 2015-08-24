@@ -6,14 +6,13 @@ footer{
 	position:relative !important;
 	bottom:0;
 	left:0;
-	opacity:1;
 	width:100%;
 	z-index: 1 !important;
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 	background:#373737;
 
-	@include transition($pushNav);
+//	@include transition($pushNav);
 
 	&.nav-is-open {
 	  @include transform(translateX($navMove));
@@ -346,20 +345,17 @@ footer{
 
 	footer{
 		position:fixed !important;
-	  position: -webkit-sticky !important;
+	 	 position: -webkit-sticky !important;
 		position: -moz-sticky;
 		position: -ms-sticky;
 		position: -o-sticky;
 		bottom:0;
 		left:0;
-		opacity:1;
 		width:100%;
 		z-index: 1 !important;
 		-webkit-transform: translateZ(0);
 		-webkit-backface-visibility: hidden;
 		background:#373737;
-
-		@include transition($pushNav);
 
 		&.nav-is-open {
 		  @include transform(translateX($navMove));

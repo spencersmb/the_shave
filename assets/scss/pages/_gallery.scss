@@ -400,36 +400,43 @@
 }
 
 .stats__container{
- margin-top:75px;
- margin-bottom:100px;
+ margin:45px auto 100px;
+
+  a{
+	display:table;
+	margin:0 auto;
+  }
 }
 
 .stats__row--container{
-	margin-top:25px;
+
 }
 
-.stats__row{
-	margin-bottom:30px;
+.stats__details{
 	position:relative;
+  	text-align: center;
+	width:100%;
+	max-width: 770px;
+  	margin:0 auto 30px;
 
 	h3{
-		margin-bottom:20px;
-		font-size: em(26px);
-		text-align: left;
-		padding-top:15px;
-
-		&::before{
-			left:0;
-			top:-25px;
-			font-size: 16px;
-			letter-spacing: 2px;
-		}
+		margin-bottom:10px;
+		font-size: em(32px);
+	  	text-transform: none;
 	}
 
 	h4{
-		font-size: 21px;
-		font-weight: 500;
+		font-size: 36px;
+		font-weight: 600;
 		text-transform: none;
+	  	margin-top:0;
+	  	margin-bottom:25px;
+	  	color:$primary-color;
+	  	font-family: $courier;
+	}
+
+	p{
+	  text-align: left;
 	}
 
 }
@@ -476,7 +483,7 @@
 	z-index: 1000;
 	opacity: 1;
 	display: inline-block;
-  	margin-bottom: 60px;
+  	margin: 60px 0;
 
 
 	.left, .center, .right{
@@ -533,59 +540,6 @@
 	}
 }
 
-.quad-box{
-	position:relative;
-	height:299px;
-	text-align:center;
-	width:100%;
-	// background:$white;
-	border: 1px solid #e8e8e8;
-
-	.inner{
-		background:$white;
-		height:100%;
-		width:100%;
-		position:absolute;
-
-		.content{
-			margin:6em 3em;
-		}
-
-		img{
-			display: block;
-			margin:0 auto;
-		}
-	}
-
-	h5{
-		font-size: em(16px);
-		font-weight: bold;
-		font-family:$courier;
-	}
-
-	.back{
-		position:relative;
-		background:$primary-color;
-
-		.content{
-			position:absolute;
-			padding:0 20px;
-			top:50%;
-			@include transform(translateY(-50%));
-		}
-
-		h5{
-			border-bottom:1px solid;
-			max-width: 200px;
-			margin:0 auto;
-			margin-bottom: 10px;
-			padding-bottom:10px;
-		}
-	}
-
-
-}
-
 .barber{
 	max-width:200px;
 	text-align:center;
@@ -601,6 +555,35 @@
 	h5{
 		text-align: center;
 	}
+}
+
+.gallery-details{
+  max-width: 700px;
+  width:100%;
+  margin:0 auto;
+  text-align: left;
+
+  h4{
+	text-align: center;
+	font-size: em(18px);
+	margin:65px auto 30px;
+	letter-spacing: 2px;
+	font-weight: 500;
+  }
+  .table{
+	font-size: em(18px);
+  }
+
+  .table > tbody > tr > th {
+	padding:15px 0;
+	border-top:none;
+	width:160px;
+  }
+
+  .table > tbody > tr > td {
+	border-top:none;
+	padding:15px 0;
+  }
 }
 
 
@@ -620,7 +603,6 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-
 
 
 
