@@ -333,7 +333,7 @@
 .gallery {
   // background: #FAFAFA;
   // height:588px;
-  max-width: 1200px;
+  max-width: 1360px;
   margin:0 auto;
   padding-bottom:49%;
   // padding-bottom: 33.3%; /* gallery height has percentage of width */
@@ -350,6 +350,11 @@
   height: 100%;
   background: transparent;
   counter-increment: gallery-cell;
+
+  img{
+	width:100%;
+	height: initial;
+  }
 }
 
 /* cell number */
@@ -375,7 +380,11 @@
 
 	width: 28%;
 	height: 100%;
-  background: $primary-color;
+  	background: $black;
+
+  img{
+	opacity:.5;
+  }
 
 }
 
@@ -386,7 +395,7 @@
 .gallery-nav .gallery-cell.is-nav-selected {
   // background: #ED2;
   img{
-  	opacity:.5;
+  	opacity:1;
   }
 }
 

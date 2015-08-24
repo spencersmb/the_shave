@@ -10797,7 +10797,7 @@ blockquote.reverse {
   }
 
   .offset__width {
-    max-width: 1200px !important;
+    max-width: 1360px !important;
   }
 
   .card__offset {
@@ -10831,7 +10831,7 @@ blockquote.reverse {
 }
 @media (min-width: 1200px) {
   .offset__content--gallery {
-    padding: 622.5px 60px 0 60px;
+    padding: 720.5px 60px 0;
   }
 
   .container-push {
@@ -14970,6 +14970,9 @@ footer.safari {
 }
 .price__wrapper {
   padding: 0 15px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .price__table {
@@ -15862,6 +15865,9 @@ footer.safari {
 }
 .barbers {
   padding: 0 15px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .barber__row {
@@ -16355,7 +16361,7 @@ footer.safari {
   }
 }
 .gallery {
-  max-width: 1200px;
+  max-width: 1360px;
   margin: 0 auto;
   padding-bottom: 49%;
 }
@@ -16371,6 +16377,10 @@ footer.safari {
   height: 100%;
   background: transparent;
   counter-increment: gallery-cell;
+}
+.gallery-cell img {
+  width: 100%;
+  height: initial;
 }
 
 /* cell number */
@@ -16391,7 +16401,10 @@ footer.safari {
 .gallery-nav .gallery-cell {
   width: 28%;
   height: 100%;
-  background: #af8c45;
+  background: #252525;
+}
+.gallery-nav .gallery-cell img {
+  opacity: .5;
 }
 
 .gallery-nav .gallery-cell:before {
@@ -16399,7 +16412,7 @@ footer.safari {
 }
 
 .gallery-nav .gallery-cell.is-nav-selected img {
-  opacity: .5;
+  opacity: 1;
 }
 
 .stats__container {

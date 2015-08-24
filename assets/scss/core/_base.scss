@@ -579,7 +579,7 @@ blockquote{
   }
 
   .offset__width{
-    max-width:1200px !important;
+    max-width:1360px !important;
   }
 
   .card__offset{
@@ -618,7 +618,7 @@ blockquote{
 @include breakpoint(desktop) {
 
   .offset__content--gallery{
-    padding:622.5px 60px 0 60px;
+    padding:720.5px 60px 0;
   }
 
   .container-push{
