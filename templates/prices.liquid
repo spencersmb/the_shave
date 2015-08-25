@@ -37,69 +37,72 @@
 				  	<!-- tab content -->
 					<div id="myTabContent" class="tab-content">
 
-						<!-- start breard and mustache -->
-						<div role="tabpanel" class="tab-pane fade " id="beard" aria-labelledby="beard-tab">
-							
-							<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
+					<!-- start breard and mustache -->
+					<div role="tabpanel" class="tab-pane fade" id="beard" aria-labelledby="beard-tab">
 
-							<div class="price__sheet">
-							
-							{% comment %}<h2>Prices</h2>{% endcomment %}
+						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
-								<div class="item">
-									<div class="title">
-										<h3>MOUSTACHE TRIM</h3>
-									</div>
-									<div class="price">
-										<p>$15.00</p>
-									</div>
+						<div class="price__sheet">
 
-									<div class="desc">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
+						<div class="angle-top-price" style="color: #fff;"></div>
+
+						{% comment %}<h2>Prices</h2>{% endcomment %}
+
+							<div class="item">
+								<div class="title">
+									<h3>MOUSTACHE TRIM</h3>
+								</div>
+								<div class="price">
+									<p>$15.00</p>
 								</div>
 
-								<div class="item">
-									<div class="title">
-										<h3>Beard Sculpt</h3>
-									</div>
-									<div class="price">
-										<p>$15.00</p>
-									</div>
+								<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
 
-									<div class="desc">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
+							<div class="item">
+								<div class="title">
+									<h3>Beard Sculpt</h3>
+								</div>
+								<div class="price">
+									<p>$15.00</p>
 								</div>
 
-								<div class="item">
-									<div class="title">
-										<h3>BEARD OR GOATEE TRIM WITH SHAVE</h3>
-									</div>
-									<div class="price">
-										<p>$35.00</p>
-									</div>
+								<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
 
-									<div class="desc">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
+							<div class="item">
+								<div class="title">
+									<h3>BEARD OR GOATEE TRIM WITH SHAVE</h3>
+								</div>
+								<div class="price">
+									<p>$35.00</p>
 								</div>
 
-								<div class="price__footer">
-									:::::
+								<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
 								</div>
-								
+							</div>
+
+							<div class="price__footer">
+								:::::
 							</div>
 
 						</div>
-				      <!-- end breard and mustache -->
+
+					</div>
+				  	<!-- end breard and mustache -->
 
 					<!-- start shaving -->
-					<div role="tabpanel" class="tab-pane fade active in" id="shaving" aria-labelledby="shaving-tab">
+					<div role="tabpanel" class="tab-pane fade active" id="shaving" aria-labelledby="shaving-tab">
 						
 						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
 						<div class="price__sheet">
+							<div class="angle-top-price" style="color: #fff;"></div>
 
 							{% comment %}<h2>Prices</h2>{% endcomment %}
 
@@ -194,6 +197,8 @@
 						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
 						<div class="price__sheet">
+
+							<div class="angle-top-price" style="color: #fff;"></div>
 
 							{% comment %}<h2>Prices</h2>{% endcomment %}
 
@@ -311,11 +316,20 @@
 		var hash;
 		console.log(val);
 
+		var animateInDelay = function(e){
+			setTimeout(function(){
+				e.addClass('in');
+			}, 1000);
+		};
+
 		if(val != ''){
+
 			hash = val.substr(5);
 			
 			$('#myTab > li').each(function(){
+
 				$(this).removeClass('active');
+
 				if( hash === this.id ){
 					
 					var panelId = $(this).find('a').attr('href').substr(1);
@@ -325,14 +339,25 @@
 						$(this).removeClass('active').removeClass('in');
 
 						if(panelId === this.id){
-							$(this).addClass('active').addClass('in');
+							var element = $(this);
+							$(this).addClass('active');
+
+							animateInDelay(element);
+
+//							$(this).addClass('active').addClass('in');
 						}
 					});
 
+					//add active class to the tab element
 					$(this).addClass('active');
 
 				}
 			});
+
+		} else{
+			setTimeout(function(){
+				$('#shaving').addClass('active in');
+			}, 1000);
 
 		}
 

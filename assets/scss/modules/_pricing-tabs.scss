@@ -219,7 +219,6 @@
 // ==========================================================================
 .fade{
 	@include transition(all .5s ease-in-out);
-
 }
 
 .pricing__accordian{
@@ -444,6 +443,18 @@
 //
 // ==========================================================================
 
+.tab-pane{
+  margin: 0 auto;
+  @include transition(all .4s .2s ease-in-out);
+  @include transform(translateY(100px));
+
+  &.fade.in{
+	@include transform(translateY(0px));
+  }
+}
+
+
+
 .full__table--wrapper{
 	margin:0 auto;
 	top:-86px;
@@ -474,8 +485,10 @@
 }
 
 .header{
-	width:85%;
-	height:250px;
+//	width:85%;
+  	height: 100%;
+	max-height:425px;
+  	width:100%;
 	overflow:hidden;
 	margin:80px auto 0;
 	img{
@@ -486,8 +499,10 @@
 .price__sheet{
 	padding:3em 3em;
 	background:$white;
-	width:85%;
+//	width:85%;
+  	width:100%;
 	margin:0 auto;
+  	position: relative;
 
 	h2{
 		font-size: em(24px);
@@ -528,4 +543,16 @@
 	color:$primary-color;
 	text-align:center;
 	margin:75px 0 20px;
+}
+
+.angle-top-price{
+  content:' ';
+  position: absolute;
+  z-index: 1;
+  top:-60px;
+  left:0;
+  width:0;
+  height:0;
+  border-top: 60px solid transparent;
+  border-right:30px solid white;
 }

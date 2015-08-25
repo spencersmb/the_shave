@@ -240,6 +240,18 @@ $(function() {
 				//set width
 				$('.angle-top-bottom-barber').css('border-right-width', boxWidth);
 			}
+
+			//Check price sheet
+			if($('.price__sheet')){
+
+				//get width
+				var sheetWidth = $('#myTabContent').find('.active').find('img').width();
+
+				//$('.tab-pane').css('width', sheetWidth);
+
+				//set width
+				$('.angle-top-price').css('border-right-width', sheetWidth);
+			}
 		}
 
 		setAngleWidth();

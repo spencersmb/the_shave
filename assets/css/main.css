@@ -10260,7 +10260,6 @@ html, body {
 
 body {
   padding: 0;
-  overflow: auto !important;
 }
 body.safari {
   height: 100% !important;
@@ -10786,7 +10785,7 @@ blockquote.reverse {
 }
 @media (min-width: 1200px) {
   .offset__content--gallery {
-    padding: 720.5px 60px 0;
+    padding: 790.5px 60px 0;
   }
 
   .container-push {
@@ -10934,7 +10933,7 @@ blockquote.reverse {
   position: absolute;
   right: 0;
   z-index: -1;
-  opacity: .5;
+  opacity: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -11127,6 +11126,7 @@ blockquote.reverse {
 }
 
 .single-image img {
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -13571,6 +13571,25 @@ blockquote.reverse {
     padding: 0.9375em;
   }
 }
+.tab-pane {
+  margin: 0 auto;
+  -webkit-transition: all 0.4s 0.2s ease-in-out;
+  -moz-transition: all 0.4s 0.2s ease-in-out;
+  transition: all 0.4s 0.2s ease-in-out;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  transform: translateY(100px);
+}
+.tab-pane.fade.in {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
 .full__table--wrapper {
   margin: 0 auto;
   top: -86px;
@@ -13600,8 +13619,9 @@ blockquote.reverse {
 }
 
 .header {
-  width: 85%;
-  height: 250px;
+  height: 100%;
+  max-height: 425px;
+  width: 100%;
   overflow: hidden;
   margin: 80px auto 0;
 }
@@ -13612,8 +13632,9 @@ blockquote.reverse {
 .price__sheet {
   padding: 3em 3em;
   background: #fff;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 .price__sheet h2 {
   font-size: 1.5em;
@@ -13649,6 +13670,18 @@ blockquote.reverse {
   color: #af8c45;
   text-align: center;
   margin: 75px 0 20px;
+}
+
+.angle-top-price {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  top: -60px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-right: 30px solid white;
 }
 
 .contact__wrapper {
@@ -15417,7 +15450,7 @@ footer.safari {
 @media (min-width: 1200px) {
   .blog__inner--feature {
     position: absolute;
-    top: -116px;
+    top: -130px;
     width: 100%;
     margin: 0 auto;
   }
@@ -15529,9 +15562,6 @@ footer.safari {
     width: inherit;
     max-width: 150px;
   }
-}
-.contact__form {
-  background: #fff;
 }
 .contact__form--wrapper {
   margin: 100px auto;
@@ -16448,7 +16478,7 @@ footer.safari {
   z-index: 1000;
   opacity: 1;
   display: inline-block;
-  margin: 60px 0;
+  padding-bottom: 20px;
 }
 .gallery__controls .left, .gallery__controls .center, .gallery__controls .right {
   display: block;
@@ -16466,8 +16496,7 @@ footer.safari {
   transition: all 0.3s;
 }
 .gallery__controls .left a:hover, .gallery__controls .center a:hover, .gallery__controls .right a:hover {
-  color: #fff;
-  background-color: #af8c45;
+  color: #af8c45;
 }
 .gallery__controls .left i, .gallery__controls .center i, .gallery__controls .right i {
   margin-top: 5px;
@@ -16536,40 +16565,10 @@ footer.safari {
   padding: 15px 0;
 }
 
-.split-bg {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.about__desc {
+  margin: 70px auto 90px;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: .1;
-}
-
-.split {
-  position: relative;
-  overflow: hidden;
-  background: #F3F3F3;
-}
-.split .content {
-  width: 100%;
-}
-.split .content .about {
-  float: left;
-  padding: 55px;
-  position: relative;
-}
-.split .content .about img {
-  width: 75px;
-}
-.split .content .about a {
-  color: #af8c45;
-  font-weight: Bold;
-}
-.split .content .about a:hover {
-  color: #665128;
+  max-width: 800px;
 }
 
 .process__container {
@@ -16624,9 +16623,9 @@ footer.safari {
   opacity: 0;
   font-size: 15px;
   line-height: 22px;
-  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   transition-delay: 0.2s;

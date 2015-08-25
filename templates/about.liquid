@@ -10,17 +10,27 @@
 			<h3>The Shave theme is a solid HTML/CSS3 template for sale</h3>
 		</div>
 	</div>
-
+	<div class="angle-bottom" style="border-left-color: #fff;"></div>
 </section>
 
-<section class="container-fluid no-padding split">
-
-	<div class="split-bg" style="background-image: url({{'about-2.jpg' | asset_url}});">
-
+<section class="sv__container--fluid dual-img">
+	<div class="row">
+		<div class="col-xs-6 no-padding">
+			<img class="img-responsive" src="{{'left-image.jpg' | asset_url}}" alt=""/>
+		</div>
+		<div class="col-xs-6 no-padding">
+			<img class="img-responsive" src="{{'right-image.jpg' | asset_url}}" alt=""/>
+		</div>
 	</div>
+</section>
 
-	<div class="content">
-		<div class="about">
+
+<section class="container-fluid grey-bg">
+
+	<div class="angle-top" style="border-right-color: #e8e8e8;"></div>
+
+	<div class="about__desc">
+		<div class="content">
 			{% comment %}<h2>About</h2>{% endcomment %}
 
 			<blockquote>Delivering amazing <strong>aerial</strong> shots and footage for virtually <strong>any situation</strong> from virtually <strong>any perspective</strong>.</blockquote>
@@ -34,10 +44,9 @@
 		</div>
 
 	</div>
-
 </section>
 
-<!-- TODO: mark-up twitterbox -->
+<!--
 <section id="services" class="container-fluid no-padding">
 
 	<div class="twitter__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;"  data-anchor-target="#services" style="background-image: url({{'about-bg.jpg' | asset_url}});">
@@ -74,8 +83,29 @@
 
 	</div>
 
-</section>
+</section> -->
 <!-- End container -->
+
+<!-- Barbers -->
+<section class="container__white">
+
+	<!-- <div class="angle-top" style="border-right-color: #e8e8e8;"></div> -->
+
+	<div class="container sv__container--md inner-content-module">
+
+		<div class="barbers">
+
+			<div class="headline-md">
+				<h2>Tools of the trade</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="single-image">
+		<img class="img-responsive" src="{{'tools.jpg' | asset_url}}" alt=""/>
+	</div>
+
+</section>
 
 <section class="container-fluid no-padding white-bg footer-push">
 
@@ -85,25 +115,25 @@
 
 
 			<div class="col-sm-12">
-				<div class="col-sm-12 single__image">
+				<!--<div class="col-sm-12 single__image">
 					<h3 class="text-center" >Our Srevices</h3>
 					<img class="img-responsive" src="{{'razor.png' | asset_url}}" alt="">
-				</div>
+				</div> -->
 
 
 				<div class="process__grid--wrapper">
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-anchor fa-2x"></i>
-							<h4>Clean Shaves</h4>
+							<i class="fa fa-diamond fa-2x"></i>
+							<h4>Top Talent</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-anchor fa-2x"></i>
+							<i class="fa fa-scissors fa-2x"></i>
 							<h4>Hip Haircuts</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 						</div>
@@ -111,8 +141,8 @@
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-anchor fa-2x"></i>
-							<h4>Mustache Styling</h4>
+							<i class="fa fa-cogs fa-2x"></i>
+							<h4>Technical Expertise</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 						</div>
 					</div>
@@ -120,7 +150,7 @@
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
 							<i class="fa fa-anchor fa-2x"></i>
-							<h4>Beard Sculpting</h4>
+							<h4>Modern Design</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 						</div>
 					</div>
@@ -131,6 +161,10 @@
 
 		</div>
 
+	</div>
+
+	<div class="container-fluid no-padding single-image">
+		<img class="img-responsive" src="{{'about-bg-lg.jpg' | asset_url}}" alt=""/>
 	</div>
 
 </section>

@@ -483,7 +483,8 @@
 	z-index: 1000;
 	opacity: 1;
 	display: inline-block;
-  	margin: 60px 0;
+  padding-bottom: 20px;
+//  	margin: 60px 0;
 
 
 	.left, .center, .right{
@@ -500,8 +501,7 @@
 		  	@include transition(all .3s);
 
 		  &:hover{
-			color:$white;
-			background-color: $primary-color;
+			color:$primary-color;
 		  }
 		}
 

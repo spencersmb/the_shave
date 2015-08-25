@@ -16,7 +16,7 @@ html, body {
 
 body {
   padding: 0;
-  overflow: auto !important;
+//  overflow: auto !important;
 
   //Special settings for Safari
   &.safari{
@@ -579,7 +579,7 @@ blockquote{
 @include breakpoint(desktop) {
 
   .offset__content--gallery{
-    padding:720.5px 60px 0;
+    padding:790.5px 60px 0;
   }
 
   .container-push{
