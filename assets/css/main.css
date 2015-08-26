@@ -10399,7 +10399,7 @@ footer.loaded {
 .inner__header h1, .inner__header--sm h1 {
   font-size: 5.25em;
   max-width: 850px;
-  margin: 0 auto 25px;
+  margin: 0 auto;
 }
 .inner__header p, .inner__header--sm p {
   font-size: 1.5em;
@@ -10428,11 +10428,11 @@ footer.loaded {
 }
 
 .inner__header--sm {
-  margin: 2.5em auto 0;
+  margin: 1.5625em auto 0;
 }
 .inner__header--sm h3 {
   color: #959595;
-  margin-top: 1.25em;
+  margin-top: 0.625em;
   font-size: 1.3125em;
   letter-spacing: 0;
 }
@@ -10684,21 +10684,6 @@ blockquote.reverse {
 .divider__plus span {
   background: #eeeeee;
   padding: 0 20px;
-}
-
-.row__three {
-  clear: both;
-  text-align: center;
-}
-.row__three p {
-  margin: 0;
-}
-.row__three a {
-  color: #af8c45;
-  font-weight: bold;
-}
-.row__three > div {
-  padding: 50px 25px 30px 25px;
 }
 
 @media (min-width: 768px) {
@@ -11234,14 +11219,6 @@ blockquote.reverse {
   transition: all 0.35s;
 }
 
-.form-btn {
-  border: 0;
-  padding: 13px;
-  width: 33%;
-  text-align: center;
-  float: left;
-}
-
 .offset__container {
   position: absolute;
   bottom: -12px;
@@ -11411,6 +11388,17 @@ blockquote.reverse {
 
 .center-btn {
   margin-top: 40px;
+}
+
+.form-btn {
+  display: block;
+  background-color: transparent;
+}
+
+.get-directions {
+  font-size: 12px !important;
+  padding: 10px 15px;
+  margin: 15px 0 10px;
 }
 
 @media (min-width: 768px) {
@@ -15578,10 +15566,6 @@ footer.safari {
   overflow: hidden;
 }
 
-.meta-share a {
-  padding: 0 10px;
-}
-
 #google__container {
   position: relative;
   width: 100%;
@@ -15591,20 +15575,26 @@ footer.safari {
 
 #sv-google-map {
   position: relative;
+  height: 600px;
 }
-#sv-google-map address {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  padding: 1em 1em;
-  background-color: #af8c45;
-  color: #fff;
-  font-size: 13px;
-  margin: 0;
+#sv-google-map .gm-style-iw {
   text-align: center;
-  font-weight: bold;
-  font-size: 16px;
+}
+#sv-google-map .firstHeading {
+  font-size: 21px;
+}
+#sv-google-map .tel {
+  display: block;
+  color: #af8c45;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-weight: 600;
+}
+#sv-google-map p {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  margin-bottom: 0;
+}
+#sv-google-map #bodyContent {
+  padding: 5px 0 0;
 }
 
 #sv-zoom-in, #sv-zoom-out {
@@ -15644,6 +15634,22 @@ footer.safari {
   left: 0;
   width: 52px;
   height: 52px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.icon i {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 21px;
+  display: block;
+}
+.icon.focused {
+  background-color: white;
+}
+.icon.focused i {
+  color: #af8c45;
 }
 
 .user-icon {
@@ -15687,10 +15693,15 @@ footer.safari {
   border: 0;
   padding-left: 15px;
   margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .user-name:focus, .user-email:focus, .user-phone:focus {
   box-shadow: none;
   outline: 0;
+  background-color: white;
 }
 
 .user-text {
@@ -15703,24 +15714,63 @@ footer.safari {
   margin-bottom: 30px;
   height: 216px;
   margin-left: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .user-text:focus {
   box-shadow: none;
   outline: 0;
+  background-color: white;
 }
 
 .pencil i, .pencil-contact i {
   position: absolute;
-  top: 10px;
   left: 15px;
   padding-left: 15px;
   margin-bottom: 30px;
   font-size: 25px;
-  color: #af8c45;
+  color: #252525;
 }
 
+.pencil-contact .icon {
+  background-color: transparent;
+}
 .pencil-contact i {
   left: 30px;
+}
+
+.contact__header {
+  clear: both;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact__header h3 {
+  text-transform: none;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+.contact__header p {
+  margin: 0;
+}
+.contact__header a {
+  color: #af8c45;
+  font-weight: bold;
+}
+.contact__header > div {
+  padding: 50px 25px 30px 25px;
+}
+.contact__header i {
+  font-size: 1.5em;
+}
+
+.meta-share a {
+  padding: 0 10px;
+  color: #252525;
+}
+.meta-share a:hover {
+  color: #af8c45;
 }
 
 .shave__works {
@@ -16405,7 +16455,7 @@ footer.safari {
 }
 
 .stats__container {
-  margin: 45px auto 100px;
+  margin: 45px auto 70px;
 }
 .stats__container a {
   display: table;

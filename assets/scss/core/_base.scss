@@ -153,7 +153,7 @@ footer.loaded {
   h1{
     font-size:em(84px);
     max-width:850px;
-    margin:0 auto 25px;
+    margin:0 auto;
     // color:$primary-color;
   }
   p{
@@ -185,11 +185,11 @@ footer.loaded {
 }
 
 .inner__header--sm{
-  margin:em(40px) auto 0;
+  margin:em(25px) auto 0;
 
   h3{
     color:#959595;
-    margin-top: em(20px);
+    margin-top: em(10px);
     font-size:em(21px);
     letter-spacing: 0;
   }
@@ -451,31 +451,6 @@ blockquote{
     padding:0 20px;
   }
 }
-
-//SPECIAL GRIDS & ROWS
-
-.row__three{
-  clear:both;
-  text-align:center;
-
-  p{
-    margin:0;
-  }
-
-  a{
-    color:$primary-color;
-    font-weight: bold;
-  }
-
-  & > div{
-    padding:50px 25px 30px 25px;
-
-    &:first-child{
-    }
-  }
-}
-
-
 
 
 // Displays greater than 768px

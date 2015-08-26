@@ -20,13 +20,6 @@
 	overflow:hidden;
 }
 
-
-.meta-share{
-	a{
-		padding:0 10px;
-	}
-}
-
 #google__container {
     position: relative;
     width: 100%;
@@ -44,26 +37,52 @@
 
 #sv-google-map {
 
-	position: relative;
-
-	address {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		left: 0;
-		padding: 1em 1em;
-		background-color:$primary-color;
-		color: $white;
-		font-size:13px;
-		margin:0;
-		text-align:center;
-		font-weight:bold;
-		font-size:16px;
-		// @include MQ(M) {
-		// 	@include font-size(15px);
-		// 	text-align: center;
-		// }
+	.gm-style-iw{
+	  text-align: center;
 	}
+
+	position: relative;
+  	height: 600px;
+
+  	.firstHeading{
+	  font-size: 21px;
+
+	}
+
+	.tel{
+	  display: block;
+	  color:$primary-color;
+	  font-family: $courier;
+	  font-weight: 600;
+	}
+
+	p{
+	  font-family: $courier;
+	  margin-bottom:0;
+	}
+
+  	#bodyContent{
+	  padding:5px 0 0;
+	}
+
+//	address {
+//		position: absolute;
+//		width: 100%;
+//		bottom: 0;
+//		left: 0;
+//		padding: 1em 1em;
+//		background-color:$primary-color;
+//		color: $white;
+//		font-size:13px;
+//		margin:0;
+//		text-align:center;
+//		font-weight:bold;
+//		font-size:16px;
+//		// @include MQ(M) {
+//		// 	@include font-size(15px);
+//		// 	text-align: center;
+//		// }
+//	}
 }
 
 #sv-zoom-in, #sv-zoom-out {
@@ -112,6 +131,23 @@
 	left:0;
 	width:52px;
 	height:52px;
+	background-color: rgba(255, 255, 255, 0.5);
+	@include transition(all .5s);
+
+  i{
+	text-align: center;
+	padding-top:15px;
+	font-size: 21px;
+	display: block;
+  }
+
+  &.focused{
+	background-color: rgba(255, 255, 255, 1);
+
+	i{
+	  color:$primary-color;
+	}
+  }
 
 }
 
@@ -138,10 +174,13 @@
 	border:0;
 	padding-left:15px;
 	margin-bottom:30px;
+  	background-color: rgba(255, 255, 255, 0.5);
+  	@include transition(all .5s);
 
 	&:focus{
 		box-shadow:none;
 		outline:0;
+	  	background-color: rgba(255, 255, 255, 1);
 	}
 }
 
@@ -155,10 +194,14 @@
 	margin-bottom:30px;
 	height:216px;
 	margin-left:30px;
+	background-color: rgba(255, 255, 255, 0.5);
+	@include transition(all .5s);
 
-	&:focus{
+
+  &:focus{
 		box-shadow:none;
 		outline:0;
+		background-color: rgba(255, 255, 255, 1);
 	}
 }
 
@@ -166,17 +209,65 @@
 
 	i{
 		position:absolute;
-		top:10px;
 		left:15px;
 		padding-left:15px;
 		margin-bottom:30px;
 		font-size:25px;
-		color:$primary-color;
+		color:$black;
 	}
 }
 
 .pencil-contact{
+
+
+	.icon{
+	  background-color: transparent;
+	}
+
 	i{
 		left:30px;
 	}
+}
+
+.contact__header{
+  clear:both;
+  text-align:center;
+  margin-bottom: 40px;
+
+  h3{
+	text-transform: none;
+	font-size: 21px;
+	letter-spacing: 1px;
+  }
+
+  p{
+	margin:0;
+  }
+
+  a{
+	color:$primary-color;
+	font-weight: bold;
+  }
+
+  & > div{
+	padding:50px 25px 30px 25px;
+
+	&:first-child{
+	}
+  }
+
+  i{
+	font-size: 1.5em;
+  }
+}
+
+.meta-share{
+  a{
+	padding:0 10px;
+	color:$black;
+
+	&:hover{
+	  color:$primary-color;
+	}
+  }
 }

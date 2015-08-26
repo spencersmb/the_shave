@@ -9,14 +9,6 @@
   @include transition(all 0.35s);
 }
 
-.form-btn{
-  border:0;
-  padding:13px;
-  width:33%;
-  text-align:center;
-  // margin:5px 0 0 0;
-  float:left;
-}
 
 .offset__container{
   position:absolute;
@@ -207,6 +199,18 @@
 
 .center-btn{
   margin-top: 40px;
+}
+
+
+.form-btn{
+  display: block;
+  background-color: transparent;
+}
+
+.get-directions{
+  font-size: 12px!important;
+  padding:10px 15px;
+  margin:15px 0 10px;
 }
 
 

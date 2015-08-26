@@ -78,7 +78,7 @@ $(function() {
 						},
 
 						forceHeight: false, //disable setting height on body
-						smoothScrolling: false,
+						smoothScrolling: false
 					});
 
 				}
