@@ -30,19 +30,6 @@
   }
 }
 
-.book-now-btn{
-  display: inline-block;
-  padding:15px 30px;
-  border:3px solid $black;
-  font-size: 14px;
-
-  &:hover{
-    color:$white;
-    border:3px solid $primary-color;
-    background-color: $primary-color;
-  }
-}
-
 .btn{
   line-height: 1.4;
   text-align: center;
@@ -53,7 +40,7 @@
   margin:0;
   color: $black;
   font-family: $ubuntu;
-  font-size:16px !important;
+  font-size:16px;
   font-weight: 500;
   text-transform: uppercase;
   @include transition(all 0.2s);
@@ -201,6 +188,19 @@
   margin-top: 40px;
 }
 
+.book-now-btn{
+  display: inline-block;
+  padding:15px 30px;
+  border:3px solid $black;
+  font-size: 14px;
+
+  &:hover{
+    color:$white;
+    border:3px solid $primary-color;
+    background-color: $primary-color;
+  }
+}
+
 
 .form-btn{
   display: block;
@@ -211,6 +211,35 @@
   font-size: 12px!important;
   padding:10px 15px;
   margin:15px 0 10px;
+}
+
+.pagination{
+
+  nav{
+    text-align: center;
+  }
+
+  li{
+    a{
+      background-color: transparent;
+      font-family: $ubuntu;
+      font-weight: 400;
+      color:$black;
+      border:0;
+      padding:6px 15px;
+      @include transition(all .3s);
+
+      &:before{
+        content:none;
+      }
+
+      &:hover{
+        color:$white;
+        background-color: $primary-color;
+      }
+    }
+  }
+
 }
 
 

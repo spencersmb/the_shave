@@ -4,7 +4,7 @@
 <!-- TODO: Add icons for post info -->
 <!-- TODO: Change ::: to be above text -->
 <!-- Intro blog -->
-<section class="container-fluid white-bg">
+<section class="container-fluid tier2 white-bg">
 	<div class="row sv__container--sm">
 
 		<div class="col-xs-12 inner__header--sm">
@@ -12,11 +12,11 @@
 			<h3>Get the latest news on trends, deals, and cool stuff.</h3>
 		</div>
 	</div>
-
+	<div class="angle-bottom" style="border-left-color: #fff;"></div>
 </section>
 
 <!-- Blog Article List begin -->
-<section class="container-fluid white-bg footer-push">
+<section class="container-fluid grey-bg footer-push">
 
 	<div class="container">
 
@@ -26,6 +26,159 @@
 			<article class="blog-post featured-post">
 
 				<div class="content">
+
+
+
+					<div class="post-image">
+						<a href="/blog-details"><img class="img-responsive" src="{{ 'featured-image.jpg' | asset_url}}" alt=""></a>
+					</div>
+					<div class="post-info featured-info">
+
+						<div class="col-xs-12 col-sm-6 comments">
+							<a href="#"><i class="fa fa-comment-o"></i>245 Comments</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-6 time">
+							<ul>
+								<li><i class="fa fa-clock-o"></i>posted March 20th</li>
+								<li><i class="fa fa-eye"></i>345 views</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<div class="post-text featured-text">
+						<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
+
+						<div class="post-tags">
+							<a href="">Fashion</a>
+							<a href="">Hipster</a>
+							<a href="">Single</a>
+						</div>
+
+						<p>It’s time for another Text Drive post! To be honest, there’s nothing I love typing with more than a beautiful script. There’s something about the way all the letters connect so seamlessly, so beautifully, all at the same time.
+						</p>
+
+						<div class="text-center">
+							<a class="btn book-now-btn" href="">Read More</a>
+						</div>
+
+						<!-- <div class="social-container">
+							<a href="">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-pinterest"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-instagram"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-youtube"></i>
+							</a>
+						</div> -->
+
+
+					</div>
+
+				</div>
+
+			</article>
+			<!-- end featured post -->
+
+			<!-- 2 col articles -->
+			<div class="dual-list">
+
+				<!-- Article 1 -->
+				<article class="col-xs-12 col-sm-6 blog-post">
+
+					<div class="content">
+
+						<div class="post-image">
+							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
+						</div>
+
+						<div class="post-text">
+
+							<h4><a href="#">The Finest Shave a Man can get is called a straight shave</a></h4>
+
+							<div class="post-info">
+
+								<div class="col-xs-12 time">
+									<ul>
+										<li>posted March 20th</li>
+										<li>345 views</li>
+										<li><a href="#">245 Comments</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
+							</p>
+
+						</div>
+
+						<div class="text-center">
+							<a class="btn book-now-btn" href="">Read More</a>
+						</div>
+
+					</div>
+
+				</article>
+
+				<!-- Article 2 -->
+				<article class="col-xs-12 col-sm-6 blog-post">
+
+					<div class="content">
+
+						<div class="post-image">
+							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
+						</div>
+
+						<div class="post-text">
+
+							<h4><a href="#">The Finest Shave a Man can get is called a straight shave</a></h4>
+
+							<div class="post-info">
+
+								<div class="col-xs-12 time">
+									<ul>
+										<li>posted March 20th</li>
+										<li>345 views</li>
+										<li><a href="#">245 Comments</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
+							</p>
+
+						</div>
+
+						<div class="text-center">
+							<a class="btn book-now-btn" href="">Read More</a>
+						</div>
+
+					</div>
+
+				</article>
+
+
+			</div>
+
+			<!-- #featured-post# -->
+			<article class="blog-post featured-post">
+
+				<div class="content">
+
+					<div class="post-image">
+						<a href="/blog-details"><img class="img-responsive" src="{{ 'featured-image.jpg' | asset_url}}" alt=""></a>
+					</div>
 
 					<div class="post-info featured-info">
 
@@ -42,10 +195,6 @@
 
 					</div>
 
-					<div class="post-image">
-						<a href="/blog-details"><img class="img-responsive" src="{{ 'featured-image.jpg' | asset_url}}" alt=""></a>
-					</div>
-
 					<div class="post-text featured-text">
 						<h3><a href="#">The Finest Shave a Man can get is called a straight shave</a></h3>
 
@@ -55,31 +204,30 @@
 							<a href="">Single</a>
 						</div>
 
-						<p>It’s time for another Text Drive post! To be honest, there’s nothing I love typing with more than a beautiful script. There’s something about the way all the letters connect so seamlessly, so beautifully, all at the same time. While brush scripts are definitely in the spotlight these days, there’s something to be said for more subtle, personality driven, simple scripts… Scripts that have *just* enough decoration where you scale them up or zoom out a bit and take them in. Bonus points when you’ve got a great quote to typeset :)
+						<p>It’s time for another Text Drive post! To be honest, there’s nothing I love typing with more than a beautiful script. There’s something about the way all the letters connect so seamlessly, so beautifully, all at the same time.
 						</p>
 
 						<div class="text-center">
-							<a class="btn-gold">Read More</a>
+							<a class="btn book-now-btn" href="">Read More</a>
 						</div>
 
-						<div class="social">
-							<a class="facebook-dark text-hide" href="#">
-								<img class="img-responsive" src="{{ 'facebook.png' | asset_url}}" alt="">
-								facebook
+						<!-- <div class="social-container">
+							<a href="">
+								<i class="fa fa-facebook"></i>
 							</a>
-							<a class="twitter-dark text-hide" href="#">
-								<img class="img-responsive" src="{{ 'twitter.png' | asset_url}}" alt="">
-								twitter
+							<a href="">
+								<i class="fa fa-pinterest"></i>
 							</a>
-							<a class="instagram-dark text-hide" href="#">
-								<img class="img-responsive" src="{{ 'instagram.png' | asset_url}}" alt="">
-								instagram
+							<a href="">
+								<i class="fa fa-twitter"></i>
 							</a>
-							<a class="linkedin-dark text-hide" href="#">
-								<img class="img-responsive" src="{{ 'linkedin.png' | asset_url}}" alt="">
-								linkedin
+							<a href="">
+								<i class="fa fa-instagram"></i>
 							</a>
-						</div>
+							<a href="">
+								<i class="fa fa-youtube"></i>
+							</a>
+						</div> -->
 
 
 					</div>
@@ -90,7 +238,7 @@
 			<!-- end featured post -->
 
 			<!-- 2 col articles -->
-			<div class="post-wrapper">
+			<div class="dual-list">
 
 				<!-- Article 1 -->
 				<article class="col-xs-12 col-sm-6 blog-post">
@@ -160,79 +308,30 @@
 
 				</article>
 
-				<!-- Article 1 -->
-				<article class="col-xs-12 col-sm-6 blog-post">
 
-					<div class="content">
-
-						<div class="post-image">
-							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
-						</div>
-
-						<div class="post-text">
-
-
-
-							<h4><a href="#">The Finest Shave a Man can get is called a straight shave</a></h4>
-
-							<div class="post-info">
-
-
-								<div class="col-xs-12 time">
-									<ul>
-										<li>posted March 20th</li>
-										<li>345 views</li>
-										<li><a href="#">245 Comments</a></li>
-									</ul>
-								</div>
-
-							</div>
-
-							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
-							</p>
-
-						</div>
-
-					</div>
-
-				</article>
-
-				<!-- Article 2 -->
-				<article class="col-xs-12 col-sm-6 blog-post">
-
-					<div class="content">
-
-						<div class="post-image">
-							<a href=""><img class="img-responsive" src="{{ 'article-1.jpg' | asset_url}}" alt=""></a>
-						</div>
-
-						<div class="post-text">
-
-							<h4><a href="#">The Finest Shave a Man can get is called a straight shave</a></h4>
-
-							<div class="post-info">
-
-
-								<div class="col-xs-12 time">
-									<ul>
-										<li>posted March 20th</li>
-										<li>345 views</li>
-										<li><a href="#">245 Comments</a></li>
-									</ul>
-								</div>
-
-							</div>
-
-							<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a...
-							</p>
-
-						</div>
-
-					</div>
-
-				</article>
 			</div>
 
+			<div class="pagination__wrapper">
+				<nav>
+					<ul class="pagination">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 
 	</div>

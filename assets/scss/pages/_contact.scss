@@ -1,11 +1,10 @@
 //TODO: Style the map + pin icon + zoom icons
 //
 
-
 .contact__form{
 
 	&--wrapper{
-		margin:100px auto;
+		margin:80px auto;
 	}
 	&--container{
 	margin: 40px auto 0 auto;
@@ -93,7 +92,7 @@
 	background-color: $primary-color;
 	background-repeat: no-repeat;
 	background-size: 32px 64px;
-	background-image: url('../img/cd-icon-controller.svg');
+	background-image: url('../images/icons/cd-icon-controller.svg');
 
 	.no-touch &:hover {
 		background-color: rgba($primary-color, 1);
@@ -174,13 +173,15 @@
 	border:0;
 	padding-left:15px;
 	margin-bottom:30px;
-  	background-color: rgba(255, 255, 255, 0.5);
+  	background-color: #F7F7F7;
+  	border-bottom: 3px solid #E0E0E0;
   	@include transition(all .5s);
 
 	&:focus{
 		box-shadow:none;
 		outline:0;
-	  	background-color: rgba(255, 255, 255, 1);
+	  	background-color: rgba(224, 224, 224, 0.35);
+	  	border-bottom: 3px solid #D0B311;
 	}
 }
 
@@ -194,14 +195,16 @@
 	margin-bottom:30px;
 	height:216px;
 	margin-left:30px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: #F7F7F7;
+	border-bottom: 3px solid #E0E0E0;
 	@include transition(all .5s);
 
 
   &:focus{
-		box-shadow:none;
-		outline:0;
-		background-color: rgba(255, 255, 255, 1);
+	  box-shadow:none;
+	  outline:0;
+	  background-color: rgba(224, 224, 224, 0.35);
+	  border-bottom: 3px solid #D0B311;
 	}
 }
 
@@ -245,8 +248,8 @@
   }
 
   a{
-	color:$primary-color;
 	font-weight: bold;
+	font-weight: 300;
   }
 
   & > div{

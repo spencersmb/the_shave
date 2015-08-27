@@ -263,6 +263,8 @@ function initialize() {
     var zoomInButton = document.createElement('div');
     zoomInButton.style.width = '32px';
     zoomInButton.style.height = '32px';
+    zoomInButton.style.marginTop = '5px';
+    zoomInButton.style.backgroundSize = 'contain';
     /* Change this to be the .png image you want to use */
     zoomInButton.style.backgroundImage = 'url("assets/images/icons/plus.jpg")';
     controlWrapper.appendChild(zoomInButton);
@@ -272,6 +274,7 @@ function initialize() {
     zoomOutButton.style.width = '32px';
     zoomOutButton.style.height = '32px';
     zoomOutButton.style.marginTop = '2px';
+    zoomOutButton.style.backgroundSize = 'contain';
     /* Change this to be the .png image you want to use */
     zoomOutButton.style.backgroundImage = 'url("assets/images/icons/minus.jpg")';
     controlWrapper.appendChild(zoomOutButton);
