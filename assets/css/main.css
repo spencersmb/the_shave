@@ -11401,10 +11401,10 @@ blockquote.reverse {
   margin: 15px 0 10px;
 }
 
-.pagination nav {
+.pagination__wrapper nav {
   text-align: center;
 }
-.pagination li a {
+.pagination__wrapper li a {
   background-color: transparent;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -11415,10 +11415,10 @@ blockquote.reverse {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-.pagination li a:before {
+.pagination__wrapper li a:before {
   content: none;
 }
-.pagination li a:hover {
+.pagination__wrapper li a:hover {
   color: #fff;
   background-color: #af8c45;
 }
@@ -15202,6 +15202,9 @@ footer.safari {
 .blog-post.featured-post:nth-child(1) {
   margin-top: 150px;
 }
+.blog-post.featured-post .blog-more {
+  margin-top: 40px;
+}
 .blog-post .social-container {
   padding-top: 50px;
   border: none;
@@ -15251,7 +15254,7 @@ footer.safari {
   margin-top: 5px;
 }
 .blog-post .post-info.featured-info {
-  margin-bottom: 10px;
+  margin: 0px 0 25px;
 }
 .blog-post .post-info.featured-info .time ul {
   text-align: right;
@@ -15265,9 +15268,13 @@ footer.safari {
 .blog-post .post-info .comments {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 .blog-post .post-info .comments a {
   display: inline;
+  padding: 0 10px;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
   color: #252525;
 }
 .blog-post .post-text {
@@ -15277,7 +15284,7 @@ footer.safari {
 }
 .blog-post .post-text .post-tags {
   text-align: center;
-  margin: 20px 0;
+  margin: 50px 0 30px;
 }
 .blog-post .post-text .post-tags a {
   color: #252525;
@@ -15287,7 +15294,7 @@ footer.safari {
 }
 .blog-post .post-text h4 {
   text-transform: none;
-  margin: 20px 0 15px;
+  margin: 0 0 25px;
   line-height: 29px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -15299,18 +15306,18 @@ footer.safari {
 }
 .blog-post .post-text.featured-text h3 {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 0;
   font-size: 28px;
   line-height: 34px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-weight: 700;
 }
 .blog-post .post-text.featured-text p {
-  margin-top: 35px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .blog-post .post-text.featured-text .post-tags {
-  margin: 0;
+  margin: 50px 0 30px;
 }
 .blog-post .social {
   border: 0;
