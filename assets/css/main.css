@@ -11102,14 +11102,6 @@ blockquote.reverse {
   margin-bottom: 435px;
 }
 
-.social-links {
-  text-align: center;
-  bottom: -25px !important;
-}
-.social-links a {
-  display: inline-block;
-}
-
 .single-image img {
   margin: 0 auto;
   width: 100%;
@@ -11207,7 +11199,7 @@ blockquote.reverse {
   font-weight: normal;
   font-style: normal;
 }
-.sv-btn, .offset__container .offset__btn, .post__more .blog__btn {
+.sv-btn, .post__more .blog__btn {
   margin: 0 auto;
   text-align: center;
   color: #fff;
@@ -11217,21 +11209,6 @@ blockquote.reverse {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-}
-
-.offset__container {
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  margin: 0 auto;
-  width: 100%;
-}
-.offset__container a:hover {
-  color: #fff;
-  background: #5f5134;
-}
-.offset__container .offset__btn {
-  padding: 18px 30px;
 }
 
 .btn {
@@ -15338,6 +15315,9 @@ footer.safari {
 .blog__inner--content {
   margin: 0 auto;
 }
+.blog__inner--content img {
+  margin: 0 auto;
+}
 
 .blog__content {
   position: relative;
@@ -15360,24 +15340,27 @@ footer.safari {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 2.25em;
+  border-left: 5px solid #af8c45;
 }
 .blog__content .pull-quote::before, .blog__content .pull-quote::after {
   content: none;
 }
 .blog__content .pull-quote.right, .blog__content .pull-quote.left {
-  width: 55%;
+  width: 58%;
 }
 .blog__content .pull-quote.right {
   float: right;
   margin: 50px 0 50px 50px;
-  margin-right: -25%;
+  margin-right: -22%;
   text-align: left;
+  padding-left: 20px;
 }
 .blog__content .pull-quote.left {
   float: left;
   margin: 50px 50px 50px 0;
-  margin-left: -25%;
+  margin-left: -22%;
   text-align: right;
+  padding-left: 20px;
 }
 .blog__content q {
   font-size: 1.75em;
@@ -15388,7 +15371,7 @@ footer.safari {
 }
 .blog__content--tags {
   text-align: center;
-  margin: 20px 0 50px;
+  margin: 40px 0 50px;
 }
 .blog__content--tags h5 {
   text-transform: uppercase;
@@ -15396,9 +15379,9 @@ footer.safari {
   margin-bottom: 15px;
 }
 .blog__content--tags a {
-  color: #836934;
+  color: #252525;
   margin: 0 15px;
-  border-bottom: 1px solid #af8c45;
+  border-bottom: 2px solid #af8c45;
   display: inline-block;
 }
 
@@ -15435,47 +15418,77 @@ footer.safari {
 .blog__related {
   position: relative;
   margin: 0 auto;
+  border-bottom: 1px solid #d5d5d5;
 }
 .blog__related--header {
-  margin: 70px 15px 22px;
+  margin: 45px 15px 22px;
   padding: 10px 0 5px;
   text-align: center;
 }
 .blog__related--articles {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 auto;
   padding-bottom: 30px;
 }
-.blog__related--articles .text {
-  padding-right: 20px;
+.blog__related--articles .article .overlay {
+  background-color: #252525;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
-.blog__related--articles .text h4 {
-  text-transform: none;
-  margin: 1.25em auto;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: 1px;
+.blog__related--articles .article:hover h4 {
+  color: #af8c45;
 }
-.blog__related--articles .article:nth-child(odd) {
-  padding-left: 0;
+.blog__related--articles .article:hover img {
+  opacity: .8;
 }
-.blog__related--articles .article:nth-child(even) {
-  padding-right: 0;
+.blog__related--articles .article:hover .overlay {
+  opacity: 1;
+}
+.blog__related--articles div:nth-child(odd) .article {
+  position: relative;
+  margin-right: 15px;
+}
+.blog__related--articles div:nth-child(even) .article {
+  position: relative;
+  margin-left: 15px;
 }
 .blog__related a {
   position: absolute;
   display: block;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 
+.blog__article--title {
+  padding: 0 15px;
+}
 .blog__article--title h4 {
   text-transform: none;
   margin: 1.25em auto;
   line-height: 24px;
   font-weight: 500;
   letter-spacing: 1px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.blog-social {
+  position: relative;
+}
+.blog-social i {
+  display: block;
+}
+.blog-social a {
+  display: inline-block;
+}
+.blog-social .social-container {
+  border-bottom: 1px solid #d5d5d5;
 }
 
 @media (min-width: 1200px) {
@@ -15587,6 +15600,9 @@ footer.safari {
   float: none;
   width: inherit;
 }
+.comment__form .btn {
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
   .comment__form .form-btn {
@@ -15668,7 +15684,6 @@ footer.safari {
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding-left: 58px;
 }
 
 .icon {
@@ -15677,7 +15692,6 @@ footer.safari {
   left: 0;
   width: 52px;
   height: 52px;
-  background-color: rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -15687,9 +15701,7 @@ footer.safari {
   padding-top: 15px;
   font-size: 21px;
   display: block;
-}
-.icon.focused {
-  background-color: white;
+  color: #9A9A9A;
 }
 .icon.focused i {
   color: #af8c45;
@@ -15734,7 +15746,7 @@ footer.safari {
   display: block;
   border-radius: 0;
   border: 0;
-  padding-left: 15px;
+  padding-left: 45px;
   margin-bottom: 30px;
   background-color: #F7F7F7;
   border-bottom: 3px solid #E0E0E0;
@@ -15754,7 +15766,7 @@ footer.safari {
   display: block;
   border-radius: 0;
   border: 0;
-  padding: 0 56px;
+  padding: 0 45px;
   padding-top: 13px;
   margin-bottom: 30px;
   height: 216px;
@@ -15778,7 +15790,7 @@ footer.safari {
   padding-left: 15px;
   margin-bottom: 30px;
   font-size: 25px;
-  color: #252525;
+  color: #9A9A9A;
 }
 
 .pencil-contact .icon {

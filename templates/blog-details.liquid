@@ -50,8 +50,34 @@
 				</div>
 
 			</div>
+			<d>
+				<div class="row">
+					<div class="blog-social">
+						<div class="col-xs-12">
+							<div class="social-container">
+								<a href="">
+									<i class="fa fa-facebook"></i>
+								</a>
+								<a href="">
+									<i class="fa fa-pinterest"></i>
+								</a>
+								<a href="">
+									<i class="fa fa-twitter"></i>
+								</a>
+								<a href="">
+									<i class="fa fa-instagram"></i>
+								</a>
+								<a href="">
+									<i class="fa fa-youtube"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</d>
 			<div class="sv__container--sm">
 				<div class="row">
+
 					<div class="blog__content--tags">
 						<h5>Tags</h5>
 						<a href="">Fashion</a>
@@ -72,12 +98,7 @@
 					</div>
 
 
-					<div class="offset__container social-links">
-						<a class="facebook-black text-hide" href="#">facebook</a>
-						<a class="twitter-black text-hide" href="#">twitter</a>
-						<a class="instagram-black text-hide" href="#">instagram</a>
-						<a class="linkedin-black text-hide" href="#">linkedin</a>
-					</div>
+
 				</div>
 			</div>
 
@@ -92,4 +113,15 @@
 </div>
 
 
+{% endblock %}
+{% block scripts %}
+	<script>
+		$( ".comment__form" ).delegate( "*", "focus blur", function() {
+			var elem = $( this );
+			setTimeout(function() {
+				elem.prev().toggleClass('focused');
+				elem.toggleClass( "focused", elem.is( ":focus" ) );
+			}, 0 );
+		});
+	</script>
 {% endblock %}

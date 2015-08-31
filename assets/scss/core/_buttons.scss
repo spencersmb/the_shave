@@ -10,25 +10,25 @@
 }
 
 
-.offset__container{
-  position:absolute;
-  bottom:-12px;
-  left:0;
-  margin:0 auto;
-  width:100%;
-  a{
-    &:hover{
-      color:$white;
-      background:#5f5134;
-    }
-}
-
-.offset__btn{
-  @extend .sv-btn;
-  padding:18px 30px;
-
-  }
-}
+//.offset__container{
+//  position:absolute;
+//  bottom:-12px;
+//  left:0;
+//  margin:0 auto;
+//  width:100%;
+//  a{
+//    &:hover{
+//      color:$white;
+//      background:#5f5134;
+//    }
+//}
+//
+//.offset__btn{
+//  @extend .sv-btn;
+//  padding:18px 30px;
+//
+//  }
+//}
 
 .btn{
   line-height: 1.4;
