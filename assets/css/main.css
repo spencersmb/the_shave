@@ -10251,7 +10251,6 @@ img.tp-slider-alternative-image {
 }
 
 html, body {
-  height: 100%;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 16px;
   line-height: 24px;
@@ -10260,9 +10259,7 @@ html, body {
 
 body {
   padding: 0;
-}
-body.safari {
-  height: 100% !important;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11413,6 +11410,7 @@ blockquote.reverse {
   left: 0;
   height: 80px;
   width: 100%;
+  width: 100vw;
   background: #fff;
   z-index: 3;
   /* Force Hardware Acceleration in WebKit */
@@ -13949,9 +13947,6 @@ footer.nav-is-open {
   -o-transform: translateX(260px);
   transform: translateX(260px);
 }
-footer.safari {
-  position: relative !important;
-}
 
 .footer-mobile {
   height: 100% !important;
@@ -13961,7 +13956,10 @@ footer.safari {
   margin: 0 auto;
   max-width: 1200px;
   color: #fff;
-  padding: 0 45px;
+}
+
+.footer__row {
+  margin: 0 30px !important;
 }
 
 .footer__logo {
@@ -15032,6 +15030,25 @@ footer.safari {
 }
 .social-container i {
   font-size: 1.5em;
+}
+
+.modal {
+  padding: 0 25px !important;
+}
+
+.fade {
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+
+.modal-backdrop {
+  bottom: 0;
+  position: fixed;
+  z-index: 100;
+}
+.modal-backdrop.in {
+  opacity: .9;
 }
 
 .blog {

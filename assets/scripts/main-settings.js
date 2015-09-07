@@ -170,9 +170,13 @@ $(function() {
 
 			//set footer and sckrollrCheck
 			var desktop = checkWindowWidth();
+			var width = $(window).width();
+
 			if (desktop) {
 
 				skrollrCheck();
+				myFooter.width(width);
+
 				$('body').removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
@@ -181,11 +185,12 @@ $(function() {
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
 
-					$('body').css('height', '100%');
+					//$('body').css('height', '100%');
 				}
 
 			} else {
 				skrollrCheck();
+				myFooter.width(width);
 				$('main').find('.footer-push').css('margin-bottom', 0);
 				$('body').addClass('footer-mobile');
 			}

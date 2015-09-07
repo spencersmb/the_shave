@@ -17,10 +17,10 @@ footer{
 	&.nav-is-open {
 	  @include transform(translateX($navMove));
 	}
-
-	&.safari{
-		position:relative !important;
-	}
+//
+//	&.safari{
+//		position:relative !important;
+//	}
 
 }
 
@@ -32,7 +32,11 @@ footer{
 	margin:0 auto;
 	max-width:1200px;
 	color:#fff;
-	padding: 0 45px;
+//	padding: 0 45px;
+}
+
+.footer__row{
+  margin: 0 30px !important;
 }
 
 .footer__logo{

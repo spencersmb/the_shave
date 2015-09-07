@@ -13,6 +13,7 @@
   left: 0;
   height: $header-M;
   width: 100%;
+  width:100vw;
   background: $white;
   z-index: $above-content; //3
   /* Force Hardware Acceleration in WebKit */

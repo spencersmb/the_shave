@@ -1,0 +1,41 @@
+.modal{
+  padding:0 25px !important;
+}
+
+.fade{
+  @include transition(opacity .15s linear);
+}
+
+.modal-backdrop{
+  bottom:0;
+  position: fixed;
+  z-index: 100;
+  &.in{
+	opacity: .9;
+  }
+
+}
+
+// Displays greater than 600px 
+@include breakpoint(tablet) {
+
+	
+
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {
+
+	
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+
+
+}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {
+	
+}
