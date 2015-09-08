@@ -1,5 +1,22 @@
 //NAV BAR STYLES
 
+$S:     480px;
+$M:     768px;
+$L:     1024px;
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+    @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+    @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+    @media only screen and (min-width: $L) { @content; }
+  }
+}
 @mixin column($percentage, $float-direction:left) {
   width: 100% * $percentage;
   float: $float-direction;
@@ -7,25 +24,28 @@
 
 //Nav A
 #header {
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 0;
-  left: 0;
-  height: $header-M;
-  width: 100%;
+  height:$header-M;
   width:100vw;
   background: $white;
   z-index: $above-content; //3
   /* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
+//  -webkit-transform: translateZ(0);
+//  -webkit-backface-visibility: hidden;
 
   // @include transition-property(transform);
   // @include transition-duration(.4s);
-  @include transition($pushNav);
+//  @include transition($pushNav);
 
   &.is-fixed {
     position: fixed;
+  }
+
+  @include MQ(L) {
+    top: 0;
+    left: 0;
+
   }
 }
 
@@ -95,25 +115,7 @@
 // }
 
 
-// breakpoints
 
-$S:     480px;
-$M:     768px;
-$L:     1024px;
-
-// media queries
-
-@mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; }
-  }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; }
-  }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; }
-  }
-}
 
 // super light grid - it works with the .cd-container class inside style.scss
 
@@ -283,6 +285,8 @@ $primary-font: sans-serif;
     color: tint($color-1, 30%);
     background-color: $color-1;
     border-bottom: 1px solid tint($color-1, 8%);
+    text-align:left;
+    font-size: 18px;
   }
 
   .cd-close {
@@ -290,7 +294,7 @@ $primary-font: sans-serif;
     position: absolute;
     z-index: 1;
     right: 0;
-    top: 0;
+    top: 0px;
     height: 50px;
     width: 50px;
 
@@ -380,14 +384,18 @@ $primary-font: sans-serif;
 
   a {
     display: block;
-    color: $black;
+    color: $white;
+    text-align: left;
 
     /* truncate text with ellipsis if too long */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    border-left:0;
+    border-right:0;
+    border-bottom-width:0;
     border-top-width: 1px;
-    border-color: tint($white, 8%);
+    border-color: #242643;
     border-style: solid;
   }
 
@@ -464,12 +472,13 @@ $primary-font: sans-serif;
     padding-top: 0;
     overflow: visible;
 
+
     a {
-      color: $color-1;
+      text-align: center;
+      color: $black;
       height: 50px;
       line-height: 50px;
       font-size: 16px;
-      // border-color: darken($color-3, 8%);
     }
 
     .cd-divider {
@@ -498,7 +507,7 @@ $primary-font: sans-serif;
 
   .see-all a {
     /* different style for the See all links */
-    color: $black;
+    color: #3f8654;
   }
 
   .cd-dropdown-gallery .cd-dropdown-item, .cd-dropdown-icons .cd-dropdown-item, .cd-dropdown-services .cd-dropdown-item {
@@ -696,6 +705,7 @@ $primary-font: sans-serif;
 
         a {
           margin: 0;
+          color:$black;
           height: 100%;
           line-height: 45px;
           background: darken($color-3, 8%);

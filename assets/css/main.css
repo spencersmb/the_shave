@@ -11416,24 +11416,22 @@ blockquote.reverse {
   }
 }
 #header {
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 0;
-  left: 0;
   height: 80px;
-  width: 100%;
   width: 100vw;
   background: #fff;
   z-index: 3;
   /* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: transform 0.4s ease-in-out, opacity 300ms, ease-out;
-  -moz-transition: transform 0.4s ease-in-out, opacity 300ms, ease-out;
-  transition: transform 0.4s ease-in-out, opacity 300ms, ease-out;
 }
 #header.is-fixed {
   position: fixed;
+}
+@media only screen and (min-width: 1024px) {
+  #header {
+    top: 0;
+    left: 0;
+  }
 }
 
 #sv__logo {
@@ -11638,13 +11636,15 @@ blockquote.reverse {
   color: #585a70;
   background-color: #111433;
   border-bottom: 1px solid #242643;
+  text-align: left;
+  font-size: 18px;
 }
 .cd-dropdown .cd-close {
   /* 'X' close icon - mobile version only */
   position: absolute;
   z-index: 1;
   right: 0;
-  top: 0;
+  top: 0px;
   height: 50px;
   width: 50px;
   /* image replacement */
@@ -11762,13 +11762,17 @@ blockquote.reverse {
 }
 .cd-dropdown-content a, .cd-dropdown-content ul a {
   display: block;
-  color: #252525;
+  color: #fff;
+  text-align: left;
   /* truncate text with ellipsis if too long */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-width: 0;
   border-top-width: 1px;
-  border-color: white;
+  border-color: #242643;
   border-style: solid;
 }
 .cd-dropdown-content li:first-of-type > a, .cd-dropdown-content ul li:first-of-type > a {
@@ -11843,7 +11847,8 @@ blockquote.reverse {
     overflow: visible;
   }
   .cd-dropdown-content a, .cd-dropdown-content ul a {
-    color: #111433;
+    text-align: center;
+    color: #252525;
     height: 50px;
     line-height: 50px;
     font-size: 16px;
@@ -11864,7 +11869,7 @@ blockquote.reverse {
 
 .cd-dropdown-content .see-all a {
   /* different style for the See all links */
-  color: #252525;
+  color: #3f8654;
 }
 .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-services .cd-dropdown-item {
   /* items with picture (or icon) and title */
@@ -12047,6 +12052,7 @@ blockquote.reverse {
   }
   .cd-dropdown-content .cd-secondary-dropdown > .see-all a, .cd-dropdown-content .cd-dropdown-gallery > .see-all a, .cd-dropdown-content .cd-dropdown-icons > .see-all a, .cd-dropdown-content .cd-dropdown-services > .see-all a {
     margin: 0;
+    color: #252525;
     height: 100%;
     line-height: 45px;
     background: #ebebeb;

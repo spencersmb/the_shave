@@ -17,6 +17,12 @@ $(function() {
     	    $menu_trigger.toggleClass('dropdown-is-active');
 	    });
 
+			//close meganavigation
+			$('.cd-dropdown .cd-close').on('click', function(event){
+				event.preventDefault();
+				toggleNav();
+			});
+
 	    //on mobile - open submenu
 	    $('.has-children').children('a').on('click', function(event){
 
@@ -53,6 +59,19 @@ $(function() {
 			visibleNav = $(this).parent('ul').parent('.has-children').parent('ul');
 		selected.parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('move-out');
 	});
+
+	function toggleNav(){
+		var navIsVisible = ( !$('.cd-dropdown').hasClass('dropdown-is-active') ) ? true : false;
+		$('.cd-dropdown').toggleClass('dropdown-is-active', navIsVisible);
+		$('.cd-dropdown-trigger').toggleClass('dropdown-is-active', navIsVisible);
+		if( !navIsVisible ) {
+			$('.cd-dropdown').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('.has-children ul').addClass('is-hidden');
+				$('.move-out').removeClass('move-out');
+				$('.is-active').removeClass('is-active');
+			});
+		}
+	}
 
 	//SUBMENU ITEM IMAGE HOVER
 	$('.cd-service-bg').mouseover( function(){
