@@ -432,3 +432,17 @@
   border-bottom:80px solid transparent;
   border-left:30px solid white;
 }
+
+.angle-top-modal{
+  content:' ';
+  position: absolute;
+  z-index: 1;
+  top:-35px;
+  left:0;
+  width:0;
+  height:0;
+  border-top: 35px solid transparent;
+  border-right:30px solid white;
+}
+
+

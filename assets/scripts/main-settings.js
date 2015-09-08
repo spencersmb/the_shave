@@ -197,6 +197,68 @@ $(function() {
 		}
 
 		// ==========================================================================
+		// Modal config
+		// ==========================================================================
+
+		var modal = $('.modal');
+
+		modal.on('show.bs.modal', centerModal);
+		modal.on('hide.bs.modal', modalOut);
+
+		$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
+			var elem = $( this );
+			setTimeout(function() {
+				elem.prev().toggleClass('focused');
+				elem.toggleClass( "focused", elem.is( ":focus" ) );
+			}, 0 );
+		});
+
+		function centerModal(){
+
+			//add display block to get height of the modal-dialog
+			$(this).css('display', 'block');
+			var dialog = $(this).children('.modal-dialog'),
+
+				//center the object
+					offset = ( $(window).height() - dialog.height() ) / 2,
+
+					// get current bottom margin - set base 10
+					bottomMargin = parseInt(dialog.css('marginBottom'), 10);
+
+			//makes sure you dont have negative margin
+			if(offset < bottomMargin){
+
+				offset = bottomMargin;
+			}
+
+			dialog.css('margin-top', offset);
+
+			//set div heights the same
+			var row = dialog.find('.row');
+			var rowHeight = row.height();
+
+			row.children('div').height(rowHeight);
+
+			angleModal();
+
+			modalIn();
+		}
+
+		function angleModal(){
+				var modalImage = $('.modal-content').find('.row').width();
+				$('.angle-top-modal').css('border-right-width', modalImage / 2);
+		}
+
+		function modalIn(){
+			$('.modal-content').find('.row').children('div').eq(1).addClass('animate-in');
+		}
+
+		function modalOut(){
+			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
+		}
+
+
+		// ==========================================================================
 		// Angle borders
 		// ==========================================================================
 
@@ -257,6 +319,7 @@ $(function() {
 				//set width
 				$('.angle-top-price').css('border-right-width', sheetWidth);
 			}
+
 		}
 
 		setAngleWidth();

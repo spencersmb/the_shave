@@ -28,7 +28,65 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="row">
+                        <div class="col-sm-6 no-padding">
+                            <img class="img-responsive" src="{{'modal-header.jpg' | asset_url}}" alt=""/>
+                            <div class="modal-bookNow">
+                                <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
+                                <h3>Book today</h3>
+                                <h5>We are masters of the blade</h4>
+                                <ul class="book-list">
+                                    <li>
+                                        <i class="fa fa-mobile"></i>
+                                        <span>Call ahead</span>
+                                        <a href="">444-444-444</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>walk-ins welcome</span>
+                                        <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 no-padding">
+                            <div class="modal-form">
+                                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                                </button>
+                                <h4>email us</h4>
+
+                                <div class="row contact__form--container">
+                                    <form action="" method="post">
+
+                                        <div class="col-xs-12 no-padding">
+                                            <div class="input__container">
+                                                <span class="icon"><i class="fa fa-user"></i></span>
+                                                <input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
+                                            </div>
+
+                                            <div class="input__container">
+                                                <span class="icon"><i class="fa fa-envelope"></i></span>
+                                                <input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
+                                            </div>
+
+                                            <div class="input__container pencil-contact">
+                                                <span class="icon"><i class="fa fa-pencil "></i></span>
+                                                <textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 no-padding">
+                                            <button type="submit" class="btn book-now-btn form-btn">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                     </div>
@@ -38,7 +96,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -53,9 +111,6 @@
 
         {% include "footer" %}
 
-        <!-- Script block allowing child pages to inject their own scripts -->
-        {% block scripts %} {% endblock %}
-
         <!-- Plugins -->
 
         {{ "jquery.menu-aim.js" | asset_url | script_tag }}
@@ -67,6 +122,11 @@
         <!-- Settings -->
         {{ "nav-settings.js" | asset_url | script_tag }}
         {{ "main-settings.js" | asset_url | script_tag }}
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        {% block scripts %}
+
+        {% endblock %}
 
     </body>
 </html>

@@ -105,12 +105,12 @@
     {{ "map2.js" | asset_url | script_tag }}
 
 	<script>
-		$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
-			var elem = $( this );
-			setTimeout(function() {
-				elem.prev().toggleClass('focused');
-				elem.toggleClass( "focused", elem.is( ":focus" ) );
-			}, 0 );
-		});
+//		$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
+//			var elem = $( this );
+//			setTimeout(function() {
+//				elem.prev().toggleClass('focused');
+//				elem.toggleClass( "focused", elem.is( ":focus" ) );
+//			}, 0 );
+//		});
 	</script>
 {% endblock %}
