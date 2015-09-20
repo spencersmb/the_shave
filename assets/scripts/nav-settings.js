@@ -73,18 +73,6 @@ $(function() {
 		}
 	}
 
-	//SUBMENU ITEM IMAGE HOVER
-	$('.cd-service-bg').mouseover( function(){
-		console.log('hover');
-		$(this).children('img').last().css('opacity', 0);
-	});
-	$('.cd-service-bg').mouseout( function(){
-		console.log('out');
-		$(this).children('img').last().css('opacity', 1);
-	});
- 
-    //ON SCROLL Add shadow
-
     //Get current position of Nav element
     var currentPosition = $(window).scrollTop();
 

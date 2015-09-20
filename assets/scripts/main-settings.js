@@ -274,7 +274,7 @@ $(function() {
 			if($('.angle-bottom-nav')){
 				$('.angle-bottom-nav').css('border-left-width', windowWidth);
 			}
-			
+
 			//Check for price angles
 			if($('.price__table')){
 				var priceBox = $('.price__container').width();
@@ -324,6 +324,22 @@ $(function() {
 
 		setAngleWidth();
 
+		// ==========================================================================
+		// Nav image hovers
+		// ==========================================================================
+
+		//SUBMENU ITEM IMAGE HOVER
+		$('.cd-service-bg').mouseover( function(){
+			if(checkWindowWidth() === true){
+				$(this).children('img').last().css('opacity', 0);
+			}
+		});
+
+		$('.cd-service-bg').mouseout( function(){
+			if(checkWindowWidth() === true){
+				$(this).children('img').last().css('opacity', 1);
+			}
+		});
 
 
 		// ==========================================================================
