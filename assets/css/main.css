@@ -13058,9 +13058,6 @@ blockquote.reverse {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.no-touch .box:hover .offset__btn > .animate-on {
-  color: #fff;
-}
 .box i {
   padding-top: 20px;
   margin: 0;
@@ -13127,7 +13124,6 @@ blockquote.reverse {
   position: relative;
   padding: 20px 8% 60px;
   font-size: 1em;
-  overflow: visible;
 }
 .box-sm-hours img {
   display: block;
@@ -13576,6 +13572,7 @@ blockquote.reverse {
 }
 .tab-pane {
   margin: 0 auto;
+  opacity: 0;
   -webkit-transition: all 0.4s 0.2s ease-in-out;
   -moz-transition: all 0.4s 0.2s ease-in-out;
   transition: all 0.4s 0.2s ease-in-out;
@@ -13585,7 +13582,8 @@ blockquote.reverse {
   -o-transform: translateY(100px);
   transform: translateY(100px);
 }
-.tab-pane.fade.in {
+.tab-pane.tab-fade.in {
+  opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   -ms-transform: translateY(0px);

@@ -123,10 +123,10 @@
 			right:3px;
 			@include transform(translateX(-50%));
 		}
-
-		.offset__btn > .animate-on{
-				color:$white;
-		}
+//
+//		.offset__btn > .animate-on{
+//				color:$white;
+//		}
 	}
 
 	i{
@@ -134,6 +134,7 @@
 		margin:0;
 		width:auto;
 	}
+
 
 	.offset__container{
 		bottom:-25px;
@@ -212,7 +213,6 @@
 		position:relative;
 		padding:20px 8% 60px;
 		font-size: em(16px);
-		overflow: visible;
 	}
 
 	img{

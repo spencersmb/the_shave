@@ -445,10 +445,12 @@
 
 .tab-pane{
   margin: 0 auto;
+  opacity:0;
   @include transition(all .4s .2s ease-in-out);
   @include transform(translateY(100px));
 
-  &.fade.in{
+  &.tab-fade.in{
+	opacity: 1;
 	@include transform(translateY(0px));
   }
 }

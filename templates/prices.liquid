@@ -38,7 +38,7 @@
 					<div id="myTabContent" class="tab-content">
 
 					<!-- start breard and mustache -->
-					<div role="tabpanel" class="tab-pane fade" id="beard" aria-labelledby="beard-tab">
+					<div role="tabpanel" class="tab-pane tab-fade" id="beard" aria-labelledby="beard-tab">
 
 						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
@@ -97,7 +97,7 @@
 				  	<!-- end breard and mustache -->
 
 					<!-- start shaving -->
-					<div role="tabpanel" class="tab-pane fade active" id="shaving" aria-labelledby="shaving-tab">
+					<div role="tabpanel" class="tab-pane tab-fade active" id="shaving" aria-labelledby="shaving-tab">
 						
 						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
@@ -192,7 +192,7 @@
 					<!-- end shaving -->
 
 					<!-- start haircut -->
-					<div role="tabpanel" class="tab-pane fade" id="hair-cuts" aria-labelledby="haircuts-tab">
+					<div role="tabpanel" class="tab-pane tab-fade" id="hair-cuts" aria-labelledby="haircuts-tab">
 						
 						<div class="header"><img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt=""></div>
 
@@ -322,16 +322,22 @@
 			}, 1000);
 		};
 
+		var animateInShort = function(e){
+			setTimeout(function(){
+				e.addClass('in');
+			}, 300);
+		};
+
 		if(val != ''){
 
 			hash = val.substr(5);
-			
+
 			$('#myTab > li').each(function(){
 
 				$(this).removeClass('active');
 
 				if( hash === this.id ){
-					
+
 					var panelId = $(this).find('a').attr('href').substr(1);
 
 					//show correct matching content with active Tab
@@ -340,7 +346,7 @@
 
 						if(panelId === this.id){
 							var element = $(this);
-							$(this).addClass('active');
+							$(this).addClass('active in');
 
 							animateInDelay(element);
 
@@ -355,6 +361,7 @@
 			});
 
 		} else{
+			//show default
 			setTimeout(function(){
 				$('#shaving').addClass('active in');
 			}, 1000);
@@ -362,13 +369,29 @@
 		}
 
 		//Change size of body depending on content in tabs
-
 			$('#myTab').on('click', 'li', function(){
 				var galleryPageHeight = $(window).height();
 		  		var tabContentHeight = $('.sv__container--sm').height();
 		  		var updatedHeight = galleryPageHeight - tabContentHeight;
-
+				var panelId = $(this).find('a').attr('href').substr(1);
 		  		$('body').css('height', updatedHeight + 'px');
+
+				$('#myTabContent > div').each( function() {
+					$(this).removeClass('active').removeClass('in');
+
+					if(panelId === this.id){
+
+						var element = $(this);
+						console.log(this);
+
+						setTimeout(function(){
+							element.addClass('in');
+						}, 200);
+
+					}
+
+				});
+
 			})
 			
 	});
