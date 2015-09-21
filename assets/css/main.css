@@ -11833,12 +11833,9 @@ blockquote.reverse {
 @media only screen and (min-width: 768px) {
   .cd-dropdown-content, .cd-dropdown-content ul {
     padding-top: 60px;
-    border: 0;
   }
   .cd-dropdown-content a, .cd-dropdown-content ul a {
     font-size: 18px;
-    border: 0;
-    border-top: 1px solid #ebebeb;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -11848,6 +11845,7 @@ blockquote.reverse {
   }
   .cd-dropdown-content a, .cd-dropdown-content ul a {
     text-align: center;
+    border: 0;
     color: #252525;
     height: 50px;
     line-height: 50px;
@@ -11891,7 +11889,6 @@ blockquote.reverse {
   letter-spacing: 0;
   text-transform: none;
   font-weight: 300;
-  margin-top: 16px;
 }
 .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item p, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item p, .cd-dropdown-content .cd-dropdown-services .cd-dropdown-item p {
   text-align: left;
@@ -11911,9 +11908,6 @@ blockquote.reverse {
 .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item h3 {
   margin-top: 16px;
 }
-.cd-dropdown-content .cd-dropdown-services .cd-dropdown-item {
-  padding-left: 90px;
-}
 .cd-dropdown-content .cd-dropdown-services p {
   white-space: normal;
   /* hide description on small devices */
@@ -11928,6 +11922,9 @@ blockquote.reverse {
   top: 50%;
   margin-top: -20px;
 }
+.cd-dropdown-content .cd-dropdown-services .cd-dropdown-item {
+  padding-left: 90px;
+}
 .cd-dropdown-content .cd-dropdown-services .cd-dropdown-item h3 {
   margin-top: 16px;
   font-size: 16px;
@@ -11940,11 +11937,27 @@ blockquote.reverse {
   background-position: center center;
   background-size: 40px 40px;
 }
+.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item h3 {
+  margin-top: 33px;
+}
 .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item p {
   color: #111433;
   font-size: 14px;
   /* hide description on small devices */
   display: none;
+}
+.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item i {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item .icon-wrapper {
+  height: 40px;
+  width: 40px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 25px;
 }
 .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item::before {
   /* item icon */
@@ -11960,41 +11973,22 @@ blockquote.reverse {
   background-position: center center;
   background-size: 40px 40px;
 }
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-1::before {
-  background-image: url("../images/icons/svg/ecommerce_diamond.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-2::before {
-  background-image: url("../images/icons/svg/basic_pencil_ruler_pen.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-3::before {
-  background-image: url("../images/icons/svg/basic_paperplane.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-4::before {
-  background-image: url("../images/icons/svg/basic_geolocalize-05.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-5::before {
-  background-image: url("../images/icons/svg/basic_home.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-6::before {
-  background-image: url("../images/icons/svg/basic_message_multiple.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-7::before {
-  background-image: url("../images/icons/svg/basic_settings.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-8::before {
-  background-image: url("../images/icons/svg/basic_share.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-9::before {
-  background-image: url("../images/icons/svg/ecommerce_graph1.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-10::before {
-  background-image: url("../images/icons/svg/basic_gear.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-11::before {
-  background-image: url("../images/icons/svg/basic_paperplane.svg");
-}
-.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-12::before {
-  background-image: url("../images/icons/svg/ecommerce_graph_increase.svg");
+@media only screen and (min-width: 768px) {
+  .cd-dropdown-content .cd-dropdown-gallery img {
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: auto;
+    left: 20px;
+    top: 0;
+    margin-top: 12px;
+  }
+  .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item {
+    padding-left: 115px;
+  }
+  .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item h3 {
+    margin-top: 11px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .cd-dropdown-content {
@@ -12218,10 +12212,6 @@ blockquote.reverse {
   .cd-dropdown-content .cd-dropdown-gallery > li:nth-of-type(2n+1) {
     clear: both;
   }
-  .cd-dropdown-content .cd-dropdown-gallery > li h3 {
-    font-weight: 300;
-    font-size: 14px;
-  }
   .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item {
     padding: 0;
     height: auto;
@@ -12231,6 +12221,7 @@ blockquote.reverse {
   }
   .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item h3 {
     margin-top: 0;
+    font-weight: 600;
   }
   .cd-dropdown-content .cd-dropdown-gallery > li:nth-last-of-type(2) a,
   .cd-dropdown-content .cd-dropdown-gallery > li:last-of-type a {
@@ -12306,8 +12297,8 @@ blockquote.reverse {
     top: 0;
   }
   .cd-dropdown-content .cd-dropdown-services .cd-dropdown-item h3 {
-    letter-spacing: 2px;
     font-weight: 600;
+    font-size: 16px;
     margin-top: 0;
   }
   .cd-dropdown-content .cd-dropdown-services > li:nth-last-of-type(2) a,
@@ -12337,8 +12328,8 @@ blockquote.reverse {
     background: #ebebeb;
   }
   .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item h3 {
+    margin-top: 0;
     color: #af8c45;
-    font-weight: bold;
     font-size: 16px;
     text-transform: none;
     font-family: courier;
@@ -12353,6 +12344,9 @@ blockquote.reverse {
     font-weight: 300;
   }
   .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item::before {
+    left: 25px;
+  }
+  .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item .icon-wrapper {
     left: 25px;
   }
   .cd-dropdown-content > .has-children > ul {
