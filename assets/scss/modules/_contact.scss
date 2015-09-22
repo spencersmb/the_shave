@@ -1,6 +1,6 @@
 .contact__wrapper{
 	overflow:hidden;
-	margin:0 auto 100px;
+	margin:0 auto;
 	max-width:1200px;
 }
 .contact__card{
@@ -42,17 +42,18 @@
 	}
 
 	&--content{
-		// height: 100%;
 		position:relative;
-		@include transform(translateY(-47%));
-		top:47%;
+		@include transform(translateY(-40%));
+		top:40%;
 
 		h3{
 			margin-top: 0;
-			margin-bottom:20px;
+			margin-bottom:10px;
 			font-weight: 500;
 			font-size: em(18px);
+		  	line-height: 24px;
 		}
+
 		p{
 			margin:0;
 		}
@@ -62,7 +63,7 @@
 .contact__shop{
 	color:$white;
 	height:50%;
-	padding:2em;
+	padding:1em;
 	background:$primary-color;
 	position:relative;
 }
@@ -72,9 +73,9 @@
 	height:50%;
 
 	.contact__card--content{
-		@include transform(translateY(-55%));
-		top:62%;
-		padding:5px 56px;
+		@include transform(translateY(-60%));
+		top:60%;
+		padding:5px 20px;
 		word-break:break-word;
 	}
 }
@@ -95,8 +96,6 @@
 		top:0px;
 		overflow: hidden;
 		display: inline-block;
-
-		
 	}
 
 	.inner__content{
@@ -108,10 +107,11 @@
 	}
 
 	h4{
-		padding-left:0px;
+		padding-left:25px;
 		margin-top: 0;
 		font-size: em(15px);
 		font-weight:500;
+	  	text-align: left;
 	}
 
 	i{
@@ -131,7 +131,7 @@
 @include breakpoint(tablet) {
 
 	.contact__wrapper{
-		margin:300px auto 30px;
+	  margin:200px auto 30px;
 	}
 
 	.contact__card{
@@ -141,7 +141,8 @@
 		&--content{
 
 			h3{
-				font-size: em(24px);
+			  font-size: em(24px);
+			  margin-bottom:10px;
 			}
 		}
 
@@ -150,10 +151,7 @@
 			height:50%;
 
 			.contact__card--content{
-				@include transform(translateY(-55%));
-				top:55%;
 				padding:0;
-				word-break:break-word;
 			}
 		}
 
@@ -178,9 +176,8 @@
 		}
 
 		h4{
-			padding-left:47px;
 			text-align: left;
-			font-size: em(18px);
+			font-size: em(16px);
 		}
 
 		i{
@@ -188,30 +185,40 @@
 		}
 	}
 
+	.contact__shop{
+	  padding:2em;
+	}
+
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-	.contact__card{
-		// height:36.5em;
-		height:em(576px);
 
-		&--left{
-			width:65%;
+  .contact__card{
+	  // height:36.5em;
+	  height:em(576px);
 
-			img{
-				left:0px;
-			}
+	  &--left{
+		  width:65%;
+
+		  img{
+			  left:0px;
+		  }
+	  }
+
+	  &--right{
+		  width:35%;
+	  }
+
+	  .contact__us{
+
+		h4{
+		  padding-left:47px;
+		  font-size: em(18px);
 		}
 
-		&--right{
-			width:35%;
-		}
-
-		.contact__us{
-
-		}
-	}
+	  }
+  }
 
 
 }

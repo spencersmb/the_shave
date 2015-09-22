@@ -131,8 +131,7 @@ footer.loaded {
   height: auto;
   z-index: $content;
   background-color: $white;
-  padding-top: $header-M;
-
+  padding-top: $header-S;
 }
 
 .loaded .sv__main--content,
@@ -291,7 +290,7 @@ blockquote{
 }
 
 .intro{
-  margin: 30px auto 80px;
+  margin: 30px auto 40px;
   text-align: center;
   font-family: $heading-font;
   h2{
@@ -310,7 +309,7 @@ blockquote{
   .sub-copy{
     font-family:$courier;
     text-transform:initial;
-    font-size: em(18px);
+    font-size: em(16px);
     color:darken($white, 80%);
   }
 }
@@ -387,7 +386,7 @@ blockquote{
 
   .top-i, .bottom-i{
     position: absolute;
-    left:70%;
+    left:68%;
     top:0;
   }
 
@@ -466,6 +465,15 @@ blockquote{
     height:100%;
   }
 
+  .intro{
+    margin: 30px auto 45px;
+    padding:0 10%;
+
+    .sub-copy{
+      font-size: em(18px);
+    }
+  }
+
   .card{
     .content{
       margin:7.525em 27.5%;
@@ -490,6 +498,10 @@ blockquote{
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+  .sv__main--content {
+    padding-top: $header-M;
+  }
+
   blockquote{
     border-left:5px solid $primary-color;
     font-size:24.5px;
@@ -499,7 +511,10 @@ blockquote{
     color:$black;
   }
 
-
+  .intro{
+    margin: 30px auto 80px;
+    padding:0;
+  }
 
   .card{
     .content{

@@ -3,9 +3,9 @@
   h2{
 	text-align: center;
 	width:100%;
-	font-size: 92px;
-	margin-bottom: 60px;
-	line-height: 1;
+	font-size: 49px;
+	margin-bottom: 40px;
+	line-height: 55px;
   }
 
   img{
@@ -13,13 +13,14 @@
   }
 
   .wrapper{
-	margin:0 auto 60px;
-	padding:0 40px;
+	margin:0 auto 20px;
+	padding:0;
 	max-width: 1200px;
   }
 
   .desc{
-	padding: 0 40px 40px;
+	padding: 0 15px 10px;
+	text-align: center;
   }
 }
 
@@ -97,11 +98,45 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
+  .sell__box {
+
+	h2 {
+	  font-size: 92px;
+	  margin-bottom: 22px;
+	  line-height: 100px;
+	}
+
+	.wrapper{
+	  margin:0 auto 30px;
+	  padding:0 40px;
+	}
+
+	.desc{
+	  padding: 0 40px;
+	  text-align: center;
+	}
+  }
+
 
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+  .sell__box{
+
+	h2 {
+	  margin-bottom: 60px;
+	}
+
+	.wrapper{
+	  margin:0 auto 60px;
+	}
+
+	.desc{
+	  text-align: left;
+	}
+  }
 
 
 }

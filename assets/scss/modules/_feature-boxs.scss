@@ -27,7 +27,7 @@
 
 .feature__box{
 	display:table;
-	padding:15px 0;
+	padding:15px 30px;
 	margin:0 auto;
 	opacity:0;
   	@include transition(all .3s);
@@ -56,10 +56,11 @@
 
 	&--container{
 		margin:0 auto;
-		max-width: 1200px;
+		max-width: 750px;
 	  	position:relative;
 		z-index: 2;
-	  	padding-bottom: 425px;
+	  	padding-bottom: 30px;
+	  	padding-top: 15px;
 	}
 
 	figure {
@@ -92,7 +93,7 @@
 			display: block;
 			width:100%;
 			text-transform: uppercase;
-			font-size: em(18px);
+			font-size: em(16px);
 			padding: 23px 20px 6px;
 			color:$black;
 			letter-spacing: 3px;
@@ -164,7 +165,6 @@
 
 	h2,img{
 		@include transition(opacity 0.35s, transform 0.35s);
-
 	}
 
 	img{
@@ -209,8 +209,8 @@
 }
 
 .feature-offset{
-  position:absolute;
-  bottom:-175px;
+  position:relative;
+  bottom:0;
   left:0;
   width:100%;
 }
@@ -218,22 +218,34 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
-.feature__box{
-  padding:15px;
+  .feature__box{
+	padding:15px;
 
-	figure{
-		max-width: 343px;
-		max-height: 390px;
+	  figure{
+		  max-width: 343px;
+		  max-height: 390px;
 
-		p{
-			padding:10px 45px 20px;
-		}
+		  p{
+			  padding:10px 45px 20px;
+		  }
 
-	  	h2{
-		  bottom:21px;
-		}
+		  h2{
+			bottom:21px;
+		  }
+	  }
+
+	&--container{
+	  padding-top: 40px;
+	  padding-bottom: 235px;
 	}
-}
+  }
+
+  .feature-offset{
+	position:absolute;
+	bottom:-175px;
+	left:0;
+	width:100%;
+  }
 
 
 }
@@ -242,6 +254,12 @@
 @include breakpoint(laptop) {
 
 .feature__box{
+
+	&--container{
+	  padding-bottom: 375px;
+	  max-width: 1200px;
+	}
+
 	figure{
 
 		.content{
@@ -254,7 +272,9 @@
 		h2{
 			position: absolute;
 			padding: 29px 20px;
-		  	bottom:0px;
+		  	bottom:0;
+		  	font-size: em(18px);
+
 		}
 		p{
 			padding:10px 30px 20px;
@@ -300,7 +320,6 @@
 @include breakpoint(desktop) {
 
 	.feature__box{
-
 
 		figure{
 

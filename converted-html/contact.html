@@ -8,10 +8,15 @@
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
 
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <!-- Style block allowing child pages to inject their own styles -->
         
+
+	<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHjfEAx3kun_6_SvIHIdSl04ayMBuRRi0">
+	</script>
+
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/bootstrap.min.js"></script>
         <script src="assets/scripts/modernizr.min.js"></script>
@@ -32,7 +37,7 @@
   <a href="#" class="cd-dropdown-trigger">Menu</a>
 
   <nav class="cd-dropdown">
-      <h2>Title</h2>
+      <h2>The Shave</h2>
       <a href="#0" class="cd-close">Close</a>
       <ul class="cd-dropdown-content">
         <li>
@@ -46,19 +51,20 @@
           <a href="services.html">What to expect</a>
 
           <ul class="cd-dropdown-services is-hidden">
-            
+            <li class="go-back"><a href="#0">Menu</a></li>
             <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
 
             <li class="cd-service-bg">
 
               <a class="cd-dropdown-item" href="service-shave.html">
+                <img class="visible-xs visible-sm" src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="">
                 <h3>When you get a shave</h3>
                 <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
               </a>
 
-              <img src="assets/images/dropdown-nav/nav-shave-hover.jpg" alt="">
+              <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-shave-hover.jpg" alt="">
 
-              <img class="" src="assets/images/dropdown-nav/nav-shave.jpg" alt="">
+              <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-shave.jpg" alt="">
 
 
 
@@ -67,13 +73,14 @@
             <li class="cd-service-bg">
 
               <a class="cd-dropdown-item" href="service-shave.html">
+                <img class="visible-xs visible-sm" src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="">
                 <h3>When you get a hair cut</h3>
                 <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
               </a>
 
-              <img src="assets/images/dropdown-nav/nav-haircuts-hover.jpg" alt="">
+              <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-haircuts-hover.jpg" alt="">
 
-              <img class="" src="assets/images/dropdown-nav/nav-haircuts.jpg" alt="">
+              <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-haircuts.jpg" alt="">
 
 
             </li>
@@ -87,13 +94,12 @@
 
           <ul class="cd-dropdown-gallery is-hidden">
             <li class="go-back"><a href="#0">Menu</a></li>
-            <li class="see-all"><a href="gallery.html">Browse Full Gallery</a></li>
+            <li class="see-all"><a href="gallery.html">View all gallery options</a></li>
 
             <li>
-
               <a class="cd-dropdown-item" href="gallery-details.html">
                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
-                <h3>Wild Stallion Cut</h3>
+                <h3>Masonry Gallery Full width</h3>
               </a>
             </li>
 
@@ -101,23 +107,24 @@
 
               <a class="cd-dropdown-item" href="gallery-details.html">
                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
-                <h3>Wild Stallion Cut</h3>
+                <h3>Masonry Gallery Boxed</h3>
               </a>
             </li>
 
             <li>
               <a class="cd-dropdown-item" href="gallery-details.html">
                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
-                <h3>Wild Stallion Cut</h3>
+                <h3>3 Grid Gallery</h3>
               </a>
             </li>
 
             <li>
               <a class="cd-dropdown-item" href="gallery-details.html">
                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
-                <h3>Wild Stallion Cut</h3>
+                <h3>4 Grid Gallery</h3>
               </a>
             </li>
+
           </ul> <!-- .cd-dropdown-gallery -->
         </li> <!-- .has-children -->
 
@@ -208,33 +215,45 @@
 
         <!-- elements items with icons -->
         <li class="has-children">
-          <a href="http://codyhouse.co/?p=748">Elements</a>
+          <a href="http://codyhouse.co/?p=748">Features & options</a>
           <ul class="cd-dropdown-icons is-hidden">
             <li class="go-back"><a href="#0">Menu</a></li>
             <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
             <li>
               <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
-                <h3>Pricing Tables</h3>
+                <div class="icon-wrapper">
+                  <i class="fa fa-diamond"></i>
+                </div>
+                  <h3>Pricing Tables</h3>
                 <p>Simple way to hold data</p>
               </a>
             </li>
 
             <li>
               <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
-                <h3>SVG Icons</h3>
+                <div class="icon-wrapper">
+                  <i class="fa fa-flag-o"></i>
+                </div>
+                  <h3>SVG Icons</h3>
                 <p>1000+ Free Icons included</p>
               </a>
             </li>
 
             <li>
               <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
-                <h3>Google Map Service</h3>
+                <div class="icon-wrapper">
+                  <i class="fa fa-paper-plane-o"></i>
+                </div>
+                  <h3>Google Map Service</h3>
                 <p>Add your own location easily</p>
               </a>
             </li>
 
             <li>
               <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-map-marker"></i>
+                </div>
                 <h3>Revolution Slider</h3>
                 <p>Plugin Included with purchase</p>
               </a>
@@ -242,6 +261,9 @@
 
             <li>
               <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-home"></i>
+                </div>
                 <h3>Responsive Site</h3>
                 <p>Looks good on every device</p>
               </a>
@@ -249,6 +271,9 @@
 
             <li>
               <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-object-ungroup"></i>
+                </div>
                 <h3>Retina quality</h3>
                 <p>Looks amazing on all devices</p>
               </a>
@@ -256,6 +281,9 @@
 
             <li>
               <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-camera-retro"></i>
+                </div>
                 <h3>Stylish Layouts</h3>
                 <p>Sleek page layouts</p>
               </a>
@@ -263,6 +291,9 @@
 
             <li>
               <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-picture-o"></i>
+                </div>
                 <h3>Beautiful Gallery</h3>
                 <p>Isotop Gallery plugin setup</p>
               </a>
@@ -270,6 +301,9 @@
 
             <li>
               <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-object-ungroup"></i>
+                </div>
                 <h3>Service #9</h3>
                 <p>This is the item description</p>
               </a>
@@ -277,6 +311,9 @@
 
             <li>
               <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-object-ungroup"></i>
+                </div>
                 <h3>Service #10</h3>
                 <p>This is the item description</p>
               </a>
@@ -284,6 +321,9 @@
 
             <li>
               <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-object-ungroup"></i>
+                </div>
                 <h3>Service #11</h3>
                 <p>This is the item description</p>
               </a>
@@ -291,6 +331,9 @@
 
             <li>
               <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                <div class="icon-wrapper">
+                  <i class="fa fa-object-ungroup"></i>
+                </div>
                 <h3>Service #12</h3>
                 <p>This is the item description</p>
               </a>
@@ -317,14 +360,92 @@
 </div>
 
 
-  <!-- Book now button -->
-  <div class="nav__book">
-    <a href="#" class="book__nav">Book Now<i class="fa fa-calendar"></i></a>
-  </div>
+    <!-- Book now button -->
+    <div class="nav__book">
+    <a href="#" class="book__nav" data-toggle="modal" data-target="#myModal">Book Now</a>
+    </div>
 
 
 </header>
 
+
+        <!-- Book now modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="col-sm-6 no-padding">
+                            <img class="img-responsive" src="assets/images/contact/modal-header.jpg" alt=""/>
+                            <div class="modal-bookNow">
+                                <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
+                                <h3>Book today</h3>
+                                <h5>We are masters of the blade</h4>
+                                <ul class="book-list">
+                                    <li>
+                                        <i class="fa fa-mobile"></i>
+                                        <span>Call ahead</span>
+                                        <a href="">444-444-444</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>walk-ins welcome</span>
+                                        <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 no-padding">
+                            <div class="modal-form">
+                                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                                </button>
+                                <h4>email us</h4>
+
+                                <div class="row contact__form--container">
+                                    <form action="" method="post">
+
+                                        <div class="col-xs-12 no-padding">
+                                            <div class="input__container">
+                                                <span class="icon"><i class="fa fa-user"></i></span>
+                                                <input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
+                                            </div>
+
+                                            <div class="input__container">
+                                                <span class="icon"><i class="fa fa-envelope"></i></span>
+                                                <input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
+                                            </div>
+
+                                            <div class="input__container pencil-contact">
+                                                <span class="icon"><i class="fa fa-pencil "></i></span>
+                                                <textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 no-padding">
+                                            <button type="submit" class="btn book-now-btn form-btn">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
 
         <main class="sv__main--content">
 
@@ -341,21 +462,21 @@
 			</div>
 		</div>
 
-		<div class="row sv__container">
-			<div class="col-xs-12 row__three ">
+		<div class="row sv__container--sm">
+			<div class="col-xs-12 contact__header">
 
-				<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h3>Walk in.</h3>
 					<p>273 S. Lincoln ave,</p>
 					<p>Louisville, Co 80027</p>
 				</div>
 
-				<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h3>Make an appointment.</h3>
 					<a href="tel:333-333-3333">333-333-3333</a>
 				</div>
 
-				<div class="col-xs-12 col-sm-12 col-md-4 meta-share">
+				<div class="col-xs-12 col-sm-4 col-md-4 meta-share">
 					<h3>Get Connected.</h3>
 					<a href=""><i class="fa fa-facebook"></i></a>
 					<a href=""><i class="fa fa-twitter"></i></a>
@@ -366,7 +487,7 @@
 			</div>
 
 		</div>
-
+		<!-- <div class="angle-bottom" style="border-left-color: #fff;"></div> -->
 	</section>
 
 	<section id="sv-google-map">
@@ -376,8 +497,8 @@
 		<address>86-90 Paul Street, London, EC2A 4NE</address>
 	</section>
 
-	<section class="container-fluid contact__form footer-push">
-		<div class="transparent__background" style="background-image: url(/assets/images/pricing-table/background-shave.jpg);"></div>
+	<section class="container-fluid white-bg contact__form footer-push">
+		<!--<div class="transparent__background" style="background-image: url(/assets/images/contact/form-bg.jpg);"></div> -->
 
 		<!-- contact form block -->
 		<div class="row sv__container--sm contact__form--wrapper ">
@@ -388,33 +509,32 @@
 				<form action="" method="post">
 					<div class="col-xs-12 col-md-6 form__left">
 						<div class="input__container">
-							<span class="text-hide icon user-icon">User Name</span>
+							<span class="icon"><i class="fa fa-user"></i></span>
 							<input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
 						</div>
 
 						<div class="input__container">
-							<span class="text-hide icon email-icon">User Email</span>
+							<span class="icon"><i class="fa fa-envelope"></i></span>
 							<input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
 						</div>
 
 						<div class="input__container">
-							<span class="text-hide icon phone-icon">User Phone</span>
+							<span class="icon"><i class="fa fa-phone"></i></span>
 							<input type="text" class="user-phone" id="contact-phone" name="PHONE" required placeholder="Phone">
 						</div>
 
 					</div>
 					<div class="col-xs-12 col-md-6 form__right pencil-contact">
-						<i class="fa fa-pencil "></i>
+						<span class="icon"><i class="fa fa-pencil "></i></span>
 						<textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
 					</div>
-					<div class="col-xs-12 col-md-6 col-md-offset-6 form__right">
-					<button type="submit" class="sv-btn form-btn pull-right">Submit</button>
+					<div class="col-xs-12 no-padding">
+					<button type="submit" class="btn book-now-btn form-btn">Submit</button>
 					</div>
 				</form>
 			</div>
 
 		</div>
-
 
 	</section>
 
@@ -428,7 +548,7 @@
 		
 	<div class="footer__wrapper">
 		
-		<div class="row no-margin">
+		<div class="row footer__row">
 			<div class="footer__logo no-padding">
 				<div class="logo__container">
 					<h5>The</h5>
@@ -510,12 +630,6 @@
 
 <!-- End container -->
 
-        <!-- Script block allowing child pages to inject their own scripts -->
-        
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="assets/scripts/map-settings.min.js"></script>
-
-
         <!-- Plugins -->
 
         <script src="assets/scripts/jquery.menu-aim.min.js"></script>
@@ -527,6 +641,22 @@
         <!-- Settings -->
         <script src="assets/scripts/nav-settings.min.js"></script>
         <script src="assets/scripts/main-settings.min.js"></script>
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        
+	
+    <script src="assets/scripts/map2.min.js"></script>
+
+	<script>
+//		$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
+//			var elem = $( this );
+//			setTimeout(function() {
+//				elem.prev().toggleClass('focused');
+//				elem.toggleClass( "focused", elem.is( ":focus" ) );
+//			}, 0 );
+//		});
+	</script>
+
 
     </body>
 </html>

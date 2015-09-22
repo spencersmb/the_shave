@@ -26,7 +26,7 @@ $L:     1024px;
 #header {
   position: relative;
   text-align: center;
-  height:$header-M;
+  height:$header-S;
   width:100vw;
   background: $white;
   z-index: $above-content; //3
@@ -42,29 +42,46 @@ $L:     1024px;
     position: fixed;
   }
 
-  @include MQ(L) {
+  @include MQ(M) {
     top: 0;
     left: 0;
-
+    height:$header-M;
   }
 }
 
 #sv__logo {
   height:100%;
   display: inline-block;
-  left:-5px;
+  left:0;
   position:relative;
+  float:right;
+  right:10px;
+  padding-right:12px;
 
   h1{
     font-weight: 700;
-    font-size: em(24px);
+    font-size: em(16px);
     text-transform: uppercase;
-    margin-top: 28px;
+    margin-top: 12px;
   }
 
   img {
     display: block;
   }
+
+  @include MQ(M) {
+    left:-5px;
+    float:none;
+    right:0;
+    padding-right:0;
+
+    h1{
+      font-size: em(24px);
+      margin-top: 28px;
+    }
+  }
+
+
 }
 
 
@@ -81,8 +98,15 @@ $L:     1024px;
 .cd-dropdown-wrapper{
   display: inline-block;
   position:absolute;
-  top:19px;
-  left:5%;
+  top:4px;
+  left:1.5%;
+
+  @include MQ(M) {
+    top:19px;
+    left:5%;
+  }
+
+
 }
 
 // .cd-dropdown-trigger{
@@ -150,8 +174,8 @@ $primary-font: sans-serif;
 .cd-dropdown-trigger {
   display: block;
   position: relative;
-  padding: 0 36px 0 20px;
-  line-height: 40px;
+  padding: 0 15px;
+  line-height: 25px;
   background-color: $white;
   color: $black;
   border:3px solid $black;
@@ -180,7 +204,7 @@ $primary-font: sans-serif;
     margin-top: -1px;
     height: 2px;
     width: 9px;
-    background: $black;
+    background: transparent;
     @include backface-visibility(hidden);
 
     @include transition(width .3s, transform .3s, background-color 0.2s);
@@ -197,7 +221,9 @@ $primary-font: sans-serif;
     @include transform(rotate(-45deg));
   }
 
-  @include MQ(L) {
+  @include MQ(M) {
+    padding: 0 36px 0 20px;
+    line-height: 40px;
     font-size: 18px;
     font-weight: bold;
 
@@ -231,6 +257,10 @@ $primary-font: sans-serif;
         /* transform the arrow into a 'X' */
         @include transform(rotate(45deg));
       }
+    }
+
+    &::before, &::after {
+      background: $black;
     }
   }
 }

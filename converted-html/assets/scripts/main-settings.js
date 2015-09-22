@@ -78,7 +78,7 @@ $(function() {
 						},
 
 						forceHeight: false, //disable setting height on body
-						smoothScrolling: false,
+						smoothScrolling: false
 					});
 
 				}
@@ -164,10 +164,19 @@ $(function() {
 		}
 
 		function specialFooter() {
+
+			//Resize angle
+			setAngleWidth();
+
+			//set footer and sckrollrCheck
 			var desktop = checkWindowWidth();
+			var width = $(window).width();
+
 			if (desktop) {
 
 				skrollrCheck();
+				myFooter.width(width);
+
 				$('body').removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
@@ -176,15 +185,162 @@ $(function() {
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
 
-					$('body').css('height', '100%');
+					//$('body').css('height', '100%');
 				}
 
 			} else {
 				skrollrCheck();
+				myFooter.width(width);
 				$('main').find('.footer-push').css('margin-bottom', 0);
 				$('body').addClass('footer-mobile');
 			}
 		}
+
+		// ==========================================================================
+		// Modal config
+		// ==========================================================================
+
+		var modal = $('.modal');
+
+		modal.on('show.bs.modal', centerModal);
+		modal.on('hide.bs.modal', modalOut);
+
+		$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
+			var elem = $( this );
+			setTimeout(function() {
+				elem.prev().toggleClass('focused');
+				elem.toggleClass( "focused", elem.is( ":focus" ) );
+			}, 0 );
+		});
+
+		function centerModal(){
+
+			//add display block to get height of the modal-dialog
+			$(this).css('display', 'block');
+			var dialog = $(this).children('.modal-dialog'),
+
+				//center the object
+					offset = ( $(window).height() - dialog.height() ) / 2,
+
+					// get current bottom margin - set base 10
+					bottomMargin = parseInt(dialog.css('marginBottom'), 10);
+
+			//makes sure you dont have negative margin
+			if(offset < bottomMargin){
+
+				offset = bottomMargin;
+			}
+
+			dialog.css('margin-top', offset);
+
+			//set div heights the same
+			var row = dialog.find('.row');
+			var rowHeight = row.height();
+
+			row.children('div').height(rowHeight);
+
+			angleModal();
+
+			modalIn();
+		}
+
+		function angleModal(){
+				var modalImage = $('.modal-content').find('.row').width();
+				$('.angle-top-modal').css('border-right-width', modalImage / 2);
+		}
+
+		function modalIn(){
+			$('.modal-content').find('.row').children('div').eq(1).addClass('animate-in');
+		}
+
+		function modalOut(){
+			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
+		}
+
+
+		// ==========================================================================
+		// Angle borders
+		// ==========================================================================
+
+
+		function setAngleWidth(){
+			var windowWidth = $(window).width();
+			$('.angle-top').css('border-right-width', windowWidth);
+			$('.angle-bottom').css('border-left-width', windowWidth);
+			$('.angle-top-bottom').css('border-right-width', windowWidth);
+			$('.angle-bottom-top').css('border-left-width', windowWidth);
+
+			//Check for angle on homepage
+			if($('.angle-bottom-nav')){
+				$('.angle-bottom-nav').css('border-left-width', windowWidth);
+			}
+
+			//Check for price angles
+			if($('.price__table')){
+				var priceBox = $('.price__container').width();
+
+				//set box width to remove decimals
+				$('.price__table').css('width', priceBox);
+
+				$('.angle-bottom-price').css('border-left-width', priceBox);
+				$('.angle-top-price').css('border-right-width', priceBox);
+			}
+
+			//Check for product angles
+			if($('.card__slider')){
+				//get width
+				var cardWidth = $('.card__slider').width();
+
+				//set width
+				$('.angle-bottom-card').css('border-left-width', cardWidth);
+			}
+
+			//Check for bio angles
+			if($('.barber__box')){
+
+				//get width
+				var boxWidth = $('.barber__box').parent('div').width();
+
+				//set box width to remove decimals
+				$('.barber__box').css('width', boxWidth);
+
+				//set width
+				$('.angle-top-bottom-barber').css('border-right-width', boxWidth);
+			}
+
+			//Check price sheet
+			if($('.price__sheet')){
+
+				//get width
+				var sheetWidth = $('#myTabContent').find('.active').find('img').width();
+
+				//$('.tab-pane').css('width', sheetWidth);
+
+				//set width
+				$('.angle-top-price').css('border-right-width', sheetWidth);
+			}
+
+		}
+
+		setAngleWidth();
+
+		// ==========================================================================
+		// Nav image hovers
+		// ==========================================================================
+
+		//SUBMENU ITEM IMAGE HOVER
+		$('.cd-service-bg').mouseover( function(){
+			if(checkWindowWidth() === true){
+				$(this).children('img').last().css('opacity', 0);
+			}
+		});
+
+		$('.cd-service-bg').mouseout( function(){
+			if(checkWindowWidth() === true){
+				$(this).children('img').last().css('opacity', 1);
+			}
+		});
+
 
 		// ==========================================================================
 		// Accordian Tabs

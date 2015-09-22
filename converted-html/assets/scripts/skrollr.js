@@ -632,7 +632,7 @@
 			_reset(_skrollables[skrollableIndex].element);
 		}
 
-		documentElement.style.overflow = body.style.overflow = 'auto';
+		//documentElement.style.overflow = body.style.overflow = 'auto';
 		documentElement.style.height = body.style.height = 'auto';
 
 		if(_skrollrBody) {
