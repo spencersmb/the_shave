@@ -131,11 +131,10 @@
 @include breakpoint(tablet) {
 
 	.contact__wrapper{
-	  margin:200px auto 30px;
+	  margin:200px auto 0;
 	}
 
 	.contact__card{
-		// height:31.5em;
 		height:em(505px);
 
 		&--content{
@@ -172,7 +171,6 @@
 
 		&--content{
 			height:80px;
-
 		}
 
 		h4{
@@ -193,6 +191,10 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+  .contact__wrapper{
+	margin:200px auto 30px;
+  }
 
   .contact__card{
 	  // height:36.5em;

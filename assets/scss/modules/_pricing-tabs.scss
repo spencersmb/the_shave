@@ -143,76 +143,6 @@
 }
 
 
-
-// ==========================================================================
-// Pricing Tabs
-// TODO: rename to appropriate section
-// ==========================================================================
-.pricing__table{
-	@include transition(all .4s ease-in-out);
-}
-.pricing__table--wrapper{
-	margin:0 auto;
-	padding:7em 0 7em;
-	max-width:800px;
-	@include transition(all .4s ease-in-out);
-}
-
-
-.tab-control{
-	@include transition(all .2s);
-}
-.nav-tabs>li>a{
-	padding-top:30px;
-	padding-bottom:30px;
-	border:0;
-	background:#ddd;
-	border-top:4px solid #ddd;
-	@include transition(background-color .4s ease-in-out, color .4s ease-in-out, border-color .4s);
-	color:$black;
-}
-
-
-.nav-tabs>li.active>a{
-	color:$black;
-}
-
-.nav-tabs.nav-justified>li>a{
-	border-radius:0;
-	border-bottom:0;
-	font-family:$heading-font;
-	font-size:em(16px);
-	font-weight:300;
-}
-
-.nav-tabs.nav-justified>.active>a,
-.nav-tabs.nav-justified>.active>a:focus{
-	border:none;
-	border-top:4px solid $primary-color;
-}
-
-.nav-tabs>li.active>a,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover{
-	border:0;
-}
-
-
-.nav-tabs.nav-justified>.active>a:hover{
-	border:0;
-	border-top:4px solid $primary-color;
-}
-
-.nav-tabs>li>a:hover{
-	border-top:4px solid #eee;
-}
-
-.nav-justified>li>a, .nav-tabs.nav-justified>li>a{
-	// margin-bottom:-1px;
-}
-
-
-
 // ==========================================================================
 // Accordian
 //
@@ -442,6 +372,59 @@
 // Pricing page full tab accordian
 //
 // ==========================================================================
+
+.tab-control{
+  @include transition(all .2s);
+}
+
+.nav-tabs>li>a{
+  padding-top:30px;
+  padding-bottom:30px;
+  border:0;
+  background:#ddd;
+  border-top:4px solid #ddd;
+  @include transition(background-color .4s ease-in-out, color .4s ease-in-out, border-color .4s);
+  color:$black;
+}
+
+
+.nav-tabs>li.active>a{
+  color:$black;
+}
+
+.nav-tabs.nav-justified>li>a{
+  border-radius:0;
+  border-bottom:0;
+  font-family:$heading-font;
+  font-size:em(16px);
+  font-weight:300;
+}
+
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:focus{
+  border:none;
+  border-top:4px solid $primary-color;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover{
+  border:0;
+}
+
+
+.nav-tabs.nav-justified>.active>a:hover{
+  border:0;
+  border-top:4px solid $primary-color;
+}
+
+.nav-tabs>li>a:hover{
+  border-top:4px solid #eee;
+}
+
+.nav-justified>li>a, .nav-tabs.nav-justified>li>a{
+  // margin-bottom:-1px;
+}
 
 .tab-pane{
   margin: 0 auto;
