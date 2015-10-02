@@ -1,59 +1,114 @@
 $(function() {
 
-	// // ==========================================================================
-	// // Safari special footer settings
-	// // ==========================================================================
-	function WhichBrowser() {
-		//IE
-		if (navigator.appName == "Microsoft Internet Explorer") {
-			return "msie";
-		}
+		var myWindow = $(window),
+		myBody = $('body'),
+		myFooter = $('footer'),
+		tablet = 768,
+		resizedWidth;
 
-		//Chrome
-		if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
+		// // ==========================================================================
+		// // Safari special footer settings
+		// // ==========================================================================
+		function WhichBrowser() {
+			//IE
+			if (navigator.appName == "Microsoft Internet Explorer") {
+				return "msie";
+			}
+
+			//Chrome
+			if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
 				navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
 				"Netscape")) {
-			return "chrome";
-		}
-		//Firefox
-		if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
+				return "chrome";
+			}
+			//Firefox
+			if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
 				navigator.appName == "Netscape")) {
-			return "firefox";
-		}
-		//Safari
-		if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
+				return "firefox";
+			}
+			//Safari
+			if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
 				navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
 				"Netscape")) {
 
-			$('body, footer').addClass('safari');
+				$('body, footer').addClass('safari');
 
-			$('section').last().removeClass('footer-push');
+				$('section').last().removeClass('footer-push');
 
-			return "safari";
+				return "safari";
+			}
+
+			//Opera
+			if (navigator.appName == "Opera") {
+				return "opera";
+			}
 		}
 
-		//Opera
-		if (navigator.appName == "Opera") {
-			return "opera";
+		function browserJs( browserID ){
+			var uA = navigator.userAgent;
+			var browser = null;
+			var ieVersion = null;
+
+			if(browserID == 'msie' && document.documentMode == 9){
+
+				//ADD CSS style opactiy 1
+				var sec1 = $('#sec1');
+				sec1.find('.feature__box').each(function(index){
+					$(this).css('opacity', 1);
+
+				});
+			}else{
+
+				ScrollCascade();
+
+			}
+
 		}
-	}
 
-	WhichBrowser();
+		// ==========================================================================
+		// Scroll Magic Cascading fade in
+		// ==========================================================================
+
+		function ScrollCascade(){
+			console.log(checkWindowWidth());
+			var sec1 = $('#sec1');
+			var duration = sec1.height();
+
+			var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
+
+			function cascadeClasses(){
+				var boxArr = [];
+				sec1.find('.feature__box').each(function(index){
+//			console.log(index);
+					$(this).addClass('active' + index);
+				});
+			}
+
+			if(checkWindowWidth() === true){
+				
+				// build scenes
+				new ScrollMagic.Scene({triggerElement: "#sec1"})
+//			.setClassToggle(".feature__box", "active") // add class toggle
+					.offset(150)
+					.on("enter", cascadeClasses)
+//			.on("leave", leaveClasses)
+//			.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+			}else{
+				cascadeClasses();
+			}
+
+		}
 
 
-	// // ==========================================================================
-	// // Footer-push resize + sckrollr check
-	// // ==========================================================================
-	(function() {
+		browserJs(WhichBrowser());
 
-		var myWindow = $(window),
-			// $slide = $('.homeSlide'),
-			// $slideTall = $('.homeSlideTall'),
-			// $slideTall2 = $('.homeSlideTall2'),
-			myBody = $('body'),
-			myFooter = $('footer'),
-			tablet = 991,
-			resizedWidth;
+
+		// // ==========================================================================
+		// // Footer-push resize + sckrollr check
+		// // ==========================================================================
+
+
 
 		// Init skrollrCheck
 		// ==========================================================================
@@ -156,6 +211,7 @@ $(function() {
 				// console.log(resizedWidth);
 			});
 
+			console.log(tablet);
 			if (resizedWidth >= tablet || windowSize >= tablet) {
 				return true;
 			} else {
@@ -233,13 +289,20 @@ $(function() {
 
 			dialog.css('margin-top', offset);
 
-			//set div heights the same
-			var row = dialog.find('.row');
-			var rowHeight = row.height();
+			if(checkWindowWidth() === true){
+				//set div heights the same
+				var row = dialog.find('.row');
+				var rowHeight = row.height();
 
-			row.children('div').height(rowHeight);
+				row.children('div').height(rowHeight);
 
-			angleModal();
+				angleModal();
+
+			}
+
+			//full width
+			var modalImage = $('.modal-content').find('.row').width();
+			$('.angle-top-modal').css('border-right-width', modalImage);
 
 			modalIn();
 		}
@@ -346,53 +409,53 @@ $(function() {
 		// Accordian Tabs
 		// ==========================================================================
 
-		$('.panel-left a').on('click', function(e) {
-			console.log('left');
-			getFh = $('.has-height').height();
-			// console.log(getFh);
-
-
-			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
-				e.stopPropagation();
-			}
-			if ($(this).parents('.panel').hasClass('active')) {
-				//do nothing cus its active
-			}
-			//add border bottom to panel if not active
-			if (!$(this).parents('.panel').hasClass('active')) {
-				$("#accordion1 > div").each(function() {
-					$(this).removeClass("active");
-				});
-
-				$(this).parents('.panel').addClass('active');
-
-				adjustWindow();
-
-				specialFooter();
-			}
-		});
+		//$('.panel-left a').on('click', function(e) {
+		//	console.log('left');
+		//	getFh = $('.has-height').height();
+		//	// console.log(getFh);
+    //
+    //
+		//	if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+		//		e.stopPropagation();
+		//	}
+		//	if ($(this).parents('.panel').hasClass('active')) {
+		//		//do nothing cus its active
+		//	}
+		//	//add border bottom to panel if not active
+		//	if (!$(this).parents('.panel').hasClass('active')) {
+		//		$("#accordion1 > div").each(function() {
+		//			$(this).removeClass("active");
+		//		});
+    //
+		//		$(this).parents('.panel').addClass('active');
+    //
+		//		adjustWindow();
+    //
+		//		specialFooter();
+		//	}
+		//});
 
 		//TODO: Check to remove right side JS
 		//Accordian Right side
 		//Disable pricing table Tabs all being closed at once.
-		$('.panel-right a').on('click', function(e) {
-			console.log('right');
-			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
-				e.stopPropagation();
-			}
-			if ($(this).parents('.panel').hasClass('active')) {
-				//do nothing cus its active
-			}
-			//add border bottom to panel if not active
-			if (!$(this).parents('.panel').hasClass('active')) {
-				$("#accordion > div").each(function() {
-					$(this).removeClass("active");
-				});
-
-				$(this).parents('.panel').addClass('active');
-
-			}
-		});
+		//$('.panel-right a').on('click', function(e) {
+		//	console.log('right');
+		//	if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+		//		e.stopPropagation();
+		//	}
+		//	if ($(this).parents('.panel').hasClass('active')) {
+		//		//do nothing cus its active
+		//	}
+		//	//add border bottom to panel if not active
+		//	if (!$(this).parents('.panel').hasClass('active')) {
+		//		$("#accordion > div").each(function() {
+		//			$(this).removeClass("active");
+		//		});
+    //
+		//		$(this).parents('.panel').addClass('active');
+    //
+		//	}
+		//});
 
 
 		//OLD SKROLLER + IMAGE LOAD
@@ -426,9 +489,5 @@ $(function() {
 		// 	s.refresh($('.homeSlide'));
 		//
 		// }
-
-	})();
-
-
 
 });

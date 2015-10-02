@@ -1,67 +1,116 @@
 $(function() {
 
-	// // ==========================================================================
-	// // Safari special footer settings
-	// // ==========================================================================
-	function WhichBrowser() {
-		//IE
-		if (navigator.appName == "Microsoft Internet Explorer") {
-			return "msie";
-		}
+		//Global Variables
+		var myWindow = $(window),
+		myBody = $('body'),
+		myFooter = $('footer'),
+		desktop = 993,
+		tablet = 768,
+		windowSize = myWindow.width() + 15,
+		resizedWidth;
 
-		//Chrome
-		if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
+		// ==========================================================================
+		// Master Resize
+		// ==========================================================================
+		$(window).on('resize', function() {
+			(!window.requestAnimationFrame) ? setTimeout(specialFooter, 300):
+				window.requestAnimationFrame(specialFooter);
+		});
+
+		// ==========================================================================
+		// Browser Check
+		// ==========================================================================
+		function WhichBrowser() {
+			//IE
+			if (navigator.appName == "Microsoft Internet Explorer") {
+				return "msie";
+			}
+
+			//Chrome
+			if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
 				navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
 				"Netscape")) {
-			return "chrome";
-		}
-		//Firefox
-		if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
+				return "chrome";
+			}
+			//Firefox
+			if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
 				navigator.appName == "Netscape")) {
-			return "firefox";
-		}
-		//Safari
-		if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
+				return "firefox";
+			}
+			//Safari
+			if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
 				navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
 				"Netscape")) {
 
-			$('body, footer').addClass('safari');
+				$('body, footer').addClass('safari');
 
-			$('section').last().removeClass('footer-push');
+				$('section').last().removeClass('footer-push');
 
-			return "safari";
+				return "safari";
+			}
+
+			//Opera
+			if (navigator.appName == "Opera") {
+				return "opera";
+			}
 		}
 
-		//Opera
-		if (navigator.appName == "Opera") {
-			return "opera";
+		function browserJs( browserID ){
+
+			//IE9 fix for cascading animation
+			if(browserID == 'msie' && document.documentMode == 9){
+
+				//ADD CSS style opactiy 1
+				var cascadeFeature = $('#cascadeFeature');
+				cascadeFeature.find('.feature__box').each(function(index){
+					$(this).css('opacity', 1);
+
+				});
+
+			}else{
+				//Run if any other browser
+				ScrollCascade();
+			}
+
 		}
-	}
 
-	WhichBrowser();
-
-
-	// // ==========================================================================
-	// // Footer-push resize + sckrollr check
-	// // ==========================================================================
-	(function() {
-
-		var myWindow = $(window),
-			// $slide = $('.homeSlide'),
-			// $slideTall = $('.homeSlideTall'),
-			// $slideTall2 = $('.homeSlideTall2'),
-			myBody = $('body'),
-			myFooter = $('footer'),
-			tablet = 991,
-			resizedWidth;
-
-		// Init skrollrCheck
 		// ==========================================================================
-		var skrollrCheck = function() {
+		// Scroll Magic Cascading fade in
+		// ==========================================================================
+		function ScrollCascade(){
+			var cascadeFeature = $('#cascadeFeature');
+			var duration = cascadeFeature.height();
+
+			var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
+
+			function cascadeClasses(){
+				cascadeFeature.find('.feature__box').each(function(index){
+					$(this).addClass('active' + index);
+				});
+			}
+
+			if(checkWindowWidth() === true){
+				// build scenes
+				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
+					.offset(150)
+					.on("enter", cascadeClasses)
+			    //.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+			}else{
+				cascadeClasses();
+			}
+
+		}
+
+		// ==========================================================================
+		// Skrollr checks + preloader
+		// ==========================================================================
+		function skrollrCheck() {
+
+			//check if skrollr is enabled or not
 
 			var winWidth = window.innerWidth;
 
-			// console.log(winWidth);
 			var winHeight = window.innerHeight;
 
 			if (winWidth >= 600) {
@@ -82,6 +131,7 @@ $(function() {
 					});
 
 				}
+
 				if (winWidth > winHeight) {
 					// console.log('orientation is landscape');
 					skrollr.get().refresh();
@@ -91,7 +141,7 @@ $(function() {
 				}
 			} else if (winWidth < 600) {
 
-				// Destroy skrollr for screens less than 600px
+				// Destroy skrollr for screens less than 600px for mobile
 				if (document.body.id === 'skrollr-body') {
 					skrollr.init().destroy();
 					document.body.id = '';
@@ -101,44 +151,42 @@ $(function() {
 				}
 
 			}
-		};
-
-
-		$(window).on('resize', function() {
-			(!window.requestAnimationFrame) ? setTimeout(specialFooter, 300):
-				window.requestAnimationFrame(specialFooter);
-		});
-
-		//onload check for loaded class
-		if (myBody.hasClass('loaded')) {
-
-			specialFooter();
-
-		} else {
-
-			//FadeIn all sections
-			myBody.imagesLoaded(function() {
-				setTimeout(function() {
-
-					specialFooter();
-
-					// Fade in sections
-					myBody.removeClass('loading').addClass('loaded');
-					myFooter.removeClass('loading').addClass('loaded');
-
-				}, 800);
-			});
 		}
 
+		function shavePreloader(){
+			//onload check for loaded class
+			if (myBody.hasClass('loaded')) {
+
+				specialFooter();
+
+			} else {
+
+				//FadeIn all sections
+				myBody.imagesLoaded(function() {
+					setTimeout(function() {
+
+						specialFooter();
+
+						// Fade in sections
+						myBody.removeClass('loading').addClass('loaded');
+						myFooter.removeClass('loading').addClass('loaded');
+
+					}, 800);
+				});
+			}
+		}
 
 		function findskrollr() {
 			var main = $('main');
 			var sectionId;
 
+			//For each section adjust background sizing for mobile devices
 			main.children('section').each(function() {
 				sectionId = $(this).attr('id');
 
 				if (sectionId !== undefined) {
+
+					//see if the section has skr in it
 					var match = sectionId.match(/skr/gi);
 					if (match !== null) {
 						$(this).find('div.skrollable').css('background-position', '50% 70%');
@@ -147,32 +195,19 @@ $(function() {
 			});
 		}
 
-		function checkWindowWidth() {
-
-			var windowSize = $(window).width() + 15;
-
-			$(window).on('resize', function() {
-				resizedWidth = $(window).width() + 15;
-				// console.log(resizedWidth);
-			});
-
-			if (resizedWidth >= tablet || windowSize >= tablet) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-
+		// ==========================================================================
+		// Footer adjustment
+		// ==========================================================================
 		function specialFooter() {
 
-			//Resize angle
-			setAngleWidth();
+			//Footer-push resize + sckrollr check
 
-			//set footer and sckrollrCheck
-			var desktop = checkWindowWidth();
 			var width = $(window).width();
 
-			if (desktop) {
+			//Resize angle
+			setAngleWidth(width);
+
+			if (width >= desktop) {
 
 				skrollrCheck();
 				myFooter.width(width);
@@ -184,11 +219,9 @@ $(function() {
 
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
-
-					//$('body').css('height', '100%');
 				}
 
-			} else {
+			} else if( width <= desktop){
 				skrollrCheck();
 				myFooter.width(width);
 				$('main').find('.footer-push').css('margin-bottom', 0);
@@ -199,19 +232,22 @@ $(function() {
 		// ==========================================================================
 		// Modal config
 		// ==========================================================================
+		(function() {
 
-		var modal = $('.modal');
+			var modal = $('.modal');
 
-		modal.on('show.bs.modal', centerModal);
-		modal.on('hide.bs.modal', modalOut);
+			modal.on('show.bs.modal', centerModal);
+			modal.on('hide.bs.modal', modalOut);
 
-		$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
-			var elem = $( this );
-			setTimeout(function() {
-				elem.prev().toggleClass('focused');
-				elem.toggleClass( "focused", elem.is( ":focus" ) );
-			}, 0 );
-		});
+			$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
+				var elem = $( this );
+				setTimeout(function() {
+					elem.prev().toggleClass('focused');
+					elem.toggleClass( "focused", elem.is( ":focus" ) );
+				}, 0 );
+			});
+
+		})();
 
 		function centerModal(){
 
@@ -264,64 +300,65 @@ $(function() {
 			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
 		}
 
-
 		// ==========================================================================
 		// Angle borders
 		// ==========================================================================
+		function setAngleWidth(width){
 
+			var angleBottomNav = $('.angle-bottom-nav'),
+					priceTable = $('.price__table'),
+					cardSlider = $('.card__slider'),
+					barberBox = $('.barber__box'),
+					priceSheet = $('.price__sheet');
 
-		function setAngleWidth(){
-			var windowWidth = $(window).width();
-			$('.angle-top').css('border-right-width', windowWidth);
-			$('.angle-bottom').css('border-left-width', windowWidth);
-			$('.angle-top-bottom').css('border-right-width', windowWidth);
-			$('.angle-bottom-top').css('border-left-width', windowWidth);
+			$('.angle-top').css('border-right-width', width);
+			$('.angle-bottom').css('border-left-width', width);
+			$('.angle-top-bottom').css('border-right-width', width);
+			$('.angle-bottom-top').css('border-left-width', width);
 
-			//Check for angle on homepage
-			if($('.angle-bottom-nav')){
-				$('.angle-bottom-nav').css('border-left-width', windowWidth);
+			//Check for angle on homepage nav
+			if(angleBottomNav){
+				angleBottomNav.css('border-left-width', width);
 			}
 
 			//Check for price angles
-			if($('.price__table')){
+			if(priceTable){
 				var priceBox = $('.price__container').width();
 
 				//set box width to remove decimals
-				$('.price__table').css('width', priceBox);
+				priceTable.css('width', priceBox);
 
 				$('.angle-bottom-price').css('border-left-width', priceBox);
 				$('.angle-top-price').css('border-right-width', priceBox);
 			}
 
 			//Check for product angles
-			if($('.card__slider')){
+			if(cardSlider){
 				//get width
-				var cardWidth = $('.card__slider').width();
+				var cardWidth = cardSlider.width();
 
 				//set width
 				$('.angle-bottom-card').css('border-left-width', cardWidth);
 			}
 
 			//Check for bio angles
-			if($('.barber__box')){
+			if(barberBox){
 
 				//get width
-				var boxWidth = $('.barber__box').parent('div').width();
+				var boxWidth = barberBox.parent('div').width();
 
 				//set box width to remove decimals
-				$('.barber__box').css('width', boxWidth);
+				barberBox.css('width', boxWidth);
 
 				//set width
 				$('.angle-top-bottom-barber').css('border-right-width', boxWidth);
 			}
 
 			//Check price sheet
-			if($('.price__sheet')){
+			if(priceSheet){
 
 				//get width
 				var sheetWidth = $('#myTabContent').find('.active').find('img').width();
-
-				//$('.tab-pane').css('width', sheetWidth);
 
 				//set width
 				$('.angle-top-price').css('border-right-width', sheetWidth);
@@ -329,113 +366,57 @@ $(function() {
 
 		}
 
-		setAngleWidth();
-
 		// ==========================================================================
-		// Nav image hovers
+		// Helper functions
 		// ==========================================================================
+		function checkWindowWidth() {
 
-		//SUBMENU ITEM IMAGE HOVER
-		$('.cd-service-bg').mouseover( function(){
-			if(checkWindowWidth() === true){
-				$(this).children('img').last().css('opacity', 0);
+			var windowSize = $(window).width() + 15;
+
+			$(window).on('resize', function() {
+				resizedWidth = $(window).width() + 15;
+				// console.log(resizedWidth);
+			});
+
+			if (resizedWidth >= tablet || windowSize >= tablet) {
+				return true;
+			} else {
+				return false;
 			}
-		});
-
-		$('.cd-service-bg').mouseout( function(){
-			if(checkWindowWidth() === true){
-				$(this).children('img').last().css('opacity', 1);
-			}
-		});
-
+		}
 
 		// ==========================================================================
-		// Accordian Tabs
+		// Sub-menu item hover
+		// ==========================================================================
+		(function() {
+
+			var serviceBg = $('.cd-service-bg');
+
+			serviceBg.mouseover( function(){
+				if(checkWindowWidth() === true){
+					$(this).children('img').last().css('opacity', 0);
+				}
+			});
+
+			serviceBg.mouseout( function(){
+				if(checkWindowWidth() === true){
+					$(this).children('img').last().css('opacity', 1);
+				}
+			});
+
+		})();
+
+		// ==========================================================================
+		// Run on First Load
 		// ==========================================================================
 
-		//$('.panel-left a').on('click', function(e) {
-		//	console.log('left');
-		//	getFh = $('.has-height').height();
-		//	// console.log(getFh);
-    //
-    //
-		//	if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
-		//		e.stopPropagation();
-		//	}
-		//	if ($(this).parents('.panel').hasClass('active')) {
-		//		//do nothing cus its active
-		//	}
-		//	//add border bottom to panel if not active
-		//	if (!$(this).parents('.panel').hasClass('active')) {
-		//		$("#accordion1 > div").each(function() {
-		//			$(this).removeClass("active");
-		//		});
-    //
-		//		$(this).parents('.panel').addClass('active');
-    //
-		//		adjustWindow();
-    //
-		//		specialFooter();
-		//	}
-		//});
+		//browser check
+		browserJs(WhichBrowser());
 
-		//TODO: Check to remove right side JS
-		//Accordian Right side
-		//Disable pricing table Tabs all being closed at once.
-		//$('.panel-right a').on('click', function(e) {
-		//	console.log('right');
-		//	if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
-		//		e.stopPropagation();
-		//	}
-		//	if ($(this).parents('.panel').hasClass('active')) {
-		//		//do nothing cus its active
-		//	}
-		//	//add border bottom to panel if not active
-		//	if (!$(this).parents('.panel').hasClass('active')) {
-		//		$("#accordion > div").each(function() {
-		//			$(this).removeClass("active");
-		//		});
-    //
-		//		$(this).parents('.panel').addClass('active');
-    //
-		//	}
-		//});
+		//Image Preloader check
+		shavePreloader();
 
-
-		//OLD SKROLLER + IMAGE LOAD
-		// function adjustWindow() {
-		//
-		// 	// Init Skrollr
-		// 	var s = skrollr.init({
-		// 		render: function(data) {
-		//
-		// 			//Debugging - Log the current scroll position.
-		// 			// console.log(data.curTop);
-		// 		},
-		// 		//disable for smmother effect
-		// 		smoothScrolling: false
-		// 	});
-		//
-		// 	// Get window size
-		// 	winH = $window.height();
-		//
-		// 	// Keep minimum height 550
-		// 	if (winH <= 550) {
-		// 		winH = 550;
-		// 	}
-		//
-		// 	// Resize our slides
-		// 	// $slide.height(winH);
-		// 	$slideTall.height(winH * 2);
-		// 	$slideTall2.height(winH * 3);
-		//
-		// 	// Refresh Skrollr after resizing our sections
-		// 	s.refresh($('.homeSlide'));
-		//
-		// }
-
-	})();
-
-
+		//angled boarders
+		setAngleWidth(windowSize);
 
 });

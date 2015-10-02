@@ -1,20 +1,32 @@
 <!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <html lang="en">
     <head>
         <!-- Title block allowing child pages to override -->
         <title>Empty</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- Styles -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
 
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+        <!--[if IE 9]>
+        <link href="assets/css/shave-ie9-styles.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+
         <!-- Style block allowing child pages to inject their own styles -->
         
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/bootstrap.min.js"></script>
         <script src="assets/scripts/modernizr.min.js"></script>
+        <script src="assets/scripts/jquery-placeholder.min.js"></script>
 
 
     </head>
@@ -40,6 +52,8 @@
             <input type="search" placeholder="Search...">
           </form>
         </li>
+
+        <li class="book-now-m" ><a data-toggle="modal" data-target="#myModal">Book Today</a></li>
 
         <!-- Services -->
         <li class="has-children">
@@ -357,7 +371,7 @@
 
     <!-- Book now button -->
     <div class="nav__book">
-    <a href="#" class="book__nav" data-toggle="modal" data-target="#myModal">Book Now</a>
+    <a href="#" class="book__nav hidden-xs" data-toggle="modal" data-target="#myModal">Book Now</a>
     </div>
 
 
@@ -370,7 +384,9 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="row">
-                        <div class="col-sm-6 no-padding">
+                        <div class="col-xs-12 col-md-6 no-padding modal-info">
+                            <button type="button" class="visible-xs visible-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                            </button>
                             <img class="img-responsive" src="assets/images/contact/modal-header.jpg" alt=""/>
                             <div class="modal-bookNow">
                                 <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
@@ -390,9 +406,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-6 no-padding">
+                        <div class="col-xs-12 col-md-6 no-padding">
                             <div class="modal-form">
-                                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                                <button type="button" class="hidden-xs hidden-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
                                 </button>
                                 <h4>email us</h4>
 

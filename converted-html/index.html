@@ -1,20 +1,32 @@
 <!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <html lang="en">
     <head>
         <!-- Title block allowing child pages to override -->
         <title>Empty</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- Styles -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
 
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+        <!--[if IE 9]>
+        <link href="assets/css/shave-ie9-styles.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+
         <!-- Style block allowing child pages to inject their own styles -->
         
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/bootstrap.min.js"></script>
         <script src="assets/scripts/modernizr.min.js"></script>
+        <script src="assets/scripts/jquery-placeholder.min.js"></script>
 
 
     </head>
@@ -40,6 +52,8 @@
             <input type="search" placeholder="Search...">
           </form>
         </li>
+
+        <li class="book-now-m" ><a data-toggle="modal" data-target="#myModal">Book Today</a></li>
 
         <!-- Services -->
         <li class="has-children">
@@ -357,7 +371,7 @@
 
     <!-- Book now button -->
     <div class="nav__book">
-    <a href="#" class="book__nav" data-toggle="modal" data-target="#myModal">Book Now</a>
+    <a href="#" class="book__nav hidden-xs" data-toggle="modal" data-target="#myModal">Book Now</a>
     </div>
 
 
@@ -370,7 +384,9 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="row">
-                        <div class="col-sm-6 no-padding">
+                        <div class="col-xs-12 col-md-6 no-padding modal-info">
+                            <button type="button" class="visible-xs visible-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                            </button>
                             <img class="img-responsive" src="assets/images/contact/modal-header.jpg" alt=""/>
                             <div class="modal-bookNow">
                                 <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
@@ -390,9 +406,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-6 no-padding">
+                        <div class="col-xs-12 col-md-6 no-padding">
                             <div class="modal-form">
-                                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                                <button type="button" class="hidden-xs hidden-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
                                 </button>
                                 <h4>email us</h4>
 
@@ -798,7 +814,7 @@
 
     <div class="box box-lg box-1 card-shadow-dk">
       <div class="content">
-        <h3>First time for a real shave?</h3>
+        <h3>First time shave?</h3>
         <p>Click here to learn about our process.</p>
         <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
         <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
@@ -954,13 +970,13 @@
 </section>
 
 
-	<section class="container-fluid white-bg tier2">
-	<div class="row sv__container">
+	<section class="container-fluid white-bg tier2 no-padding">
+	<div class="row sv__container--fluid">
 		<div class="contact__wrapper">
 
-			<div class="headline-md">
-				<h2>MAKE AN APPOINTMENT</h2>
-			</div>
+			<!--<div class="headline-md">
+				 <h2>Visit our shop</h2>
+			</div>-->
 			<div class="section__wrapper">
 
 				<div class="contact__card">
@@ -970,7 +986,7 @@
 					<div class="contact__card--right">
 						<div class="contact__shop">
 							<div class="contact__card--content">
-								<h3>Location</h2>
+								<h3>Location</h3>
 									<p>Nordhoff st. , Northridge, CA 91324</p>
 									<p>303-333-3333</p>
 							</div>
@@ -985,9 +1001,11 @@
 						</div>
 						<div class="contact__hours">
 							<div class="contact__card--content">
-								<h3>Opening Hours</h2>
-									<p>Monday to Friday: 9am - 6pm</p>
-									<p>Saturday to Sunday: 10am - 4pm</p>
+								<h3>Opening Hours</h3>
+									<p>Monday to Friday</p>
+									<p>9am - 6pm</p>
+									<p>Saturday to Sunday</p>
+									<p>10am - 4pm</p>
 							</div>
 						</div>
 
@@ -1009,25 +1027,23 @@
 
 			<div class="parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#blog-skr" style="background-image: url(/assets/images/backgrounds/test.jpg);">
 
-				<div class="col-xs-12 col-sm-7 col-md-5 no-padding blog__overview">
+				<div class="col-xs-12 col-md-5 no-padding blog__overview">
 
 				</div>
 
-				<div class="col-xs-12 col-sm-10 col-md-9 col-md-offset-3 no-padding has-height ">
-					<div class="pricing__table--wrapper ">
+				<div class="col-xs-12 col-md-9 col-md-offset-3 no-padding has-height ">
+					<div class="blog__mod--wrapper">
 
 						<div class="blog__overview--contents">
 
-							<div class="headline-sm">
+							<div class="headline-md">
 								<h2>Featured Posts</h2>
 							</div>
 
 							<div class="feature__post card-shadow-lt">
 
 								<div class="post-img">
-									<a href="#">
 									<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="" />
-									</a>
 								</div>
 
 								<div class="feature-content">
@@ -1050,9 +1066,7 @@
 							<div class="feature__post card-shadow-lt">
 
 								<div class="post-img">
-									<a href="#">
 									<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="" />
-									</a>
 								</div>
 
 								<div class="feature-content">
@@ -1075,9 +1089,7 @@
 							<div class="feature__post card-shadow-lt">
 
 								<div class="post-img">
-									<a href="#">
 									<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="" />
-									</a>
 								</div>
 
 								<div class="feature-content">
@@ -1232,32 +1244,26 @@
 				<div class="carousel-inner" role="listbox">
 
 					<div class="item active">
-						<img src="assets/images/icons/twitter-badge.png" alt="">
+						<!-- <img src="assets/images/icons/twitter-badge.png" alt=""> -->
 
 						<h3>Latest Tweet</h3>
 
 						<blockquote>
 							<p>Sed ullamcorper efficitur tortor eu consectetur. Etiam tincidunt nisi quis ex convallis, vitae accumsan massa aliquam. Sed</p>
-							<p>
-								<span class="red">#Cleancut #Theshave</span>
-							</p>
 							<hr>
-							<cite>birdeman228 </cite>
+							<cite>birdeman228</cite>
 						</blockquote>
 					</div>
 
 					<div class="item">
-						<img src="assets/images/icons/twitter-badge.png" alt="">
+						<!--  <img src="assets/images/icons/twitter-badge.png" alt=""> -->
 
 						<h3>Latest Tweet</h3>
 
 						<blockquote>
 							<p>2nd quote Sed ullamcorper efficitur tortor eu consectetur. Etiam tincidunt nisi quis ex convallis, vitae accumsan massa aliquam. Sed</p>
-							<p>
-								<span class="red">#Cleancut #Theshave</span>
-							</p>
 							<hr>
-							<cite>birdeman228 </cite>
+							<cite>birdeman228</cite>
 						</blockquote>
 					</div>
 				</div>
@@ -1288,13 +1294,13 @@
 
 	<div class="row sv__container--sm sell__box">
 
-		<div class="sell__wrapper">
+		<div class="col-sm-12 intro">
 			<h6>Introducing</h6>
-			<h3>Modern Design + Cool Features</h3>
+			<h2>Modern Design + Cool Features</h2>
 			<h5>A niche theme fit for all your barber ideas and designs.</h5>
 		</div>
 
-		<div class="">
+		<div class="col-sm-12 no-padding">
 			<img class="img-responsive" src="assets/images/feature-boxs/sell-box.jpg" alt="">
 		</div>
 
@@ -1460,32 +1466,6 @@
 $(function() {
 
 	// ==========================================================================
-	// Scroll Magic Cascading fade in
-	// ==========================================================================
-	var sec1 = $('#sec1');
-	var duration = sec1.height();
-
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
-
-	function cascadeClasses(){
-		var boxArr = [];
-		sec1.find('.feature__box').each(function(index){
-//			console.log(index);
-			$(this).addClass('active' + index);
-		});
-	}
-
-
-	// build scenes
-	new ScrollMagic.Scene({triggerElement: "#sec1"})
-//			.setClassToggle(".feature__box", "active") // add class toggle
-			.offset(200)
-			.on("enter", cascadeClasses)
-//			.on("leave", leaveClasses)
-//			.addIndicators() // add indicators (requires plugin)
-			.addTo(controller);
-
-	// ==========================================================================
 	// Feature Box height
 	// ==========================================================================
 
@@ -1600,7 +1580,7 @@ $(function() {
 				shuffle:"off",
 
 				autoHeight:"off",
-				forceFullWidth:"off",
+				forceFullWidth:"on",
 
 				hideThumbsOnMobile:"off",
 				hideNavDelayOnMobile:1500,

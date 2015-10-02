@@ -20,64 +20,9 @@
 {% block scripts %}
     {{ "jquery.themepunch.tools.min.js" | asset_url | script_tag }}
     {{ "jquery.themepunch.revolution.js" | asset_url | script_tag }}
-	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script>
 
 $(function() {
-
-	// ==========================================================================
-	// Scroll Magic Cascading fade in
-	// ==========================================================================
-	var sec1 = $('#sec1');
-	var duration = sec1.height();
-
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
-
-	function cascadeClasses(){
-		var boxArr = [];
-		sec1.find('.feature__box').each(function(index){
-//			console.log(index);
-			$(this).addClass('active' + index);
-		});
-	}
-
-	var myWindow = $(window),
-			tablet = 768,
-			resizedWidth;
-
-	function checkWindowWidth() {
-
-		var windowSize = $(window).width() + 15;
-
-		$(window).on('resize', function() {
-			resizedWidth = $(window).width() + 15;
-			// console.log(resizedWidth);
-		});
-
-		if (resizedWidth >= tablet || windowSize >= tablet) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-
-	if(checkWindowWidth() === true){
-		// build scenes
-		new ScrollMagic.Scene({triggerElement: "#sec1"})
-//			.setClassToggle(".feature__box", "active") // add class toggle
-				.offset(150)
-				.on("enter", cascadeClasses)
-//			.on("leave", leaveClasses)
-//			.addIndicators() // add indicators (requires plugin)
-				.addTo(controller);
-	}else{
-		cascadeClasses();
-	}
-
-
-
 
 	// ==========================================================================
 	// Feature Box height

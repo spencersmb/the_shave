@@ -1,0 +1,108 @@
+//Feature box Fix
+
+.feature__box{
+  display:table;
+  padding:15px;
+  margin:0 auto;
+  opacity:0;
+
+
+  &--fluid{
+    z-index: 3;
+    background-size:cover;
+    background-position: center center;
+  }
+
+  figure {
+
+    .content{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      margin:0 auto;
+      left:0;
+      background:#fff;
+      height: auto;
+    }
+
+    h2{
+      word-spacing: -0.15em;
+      font-weight: 700;
+      margin: 0;
+      background:#fff;
+      display: block;
+      width:100%;
+      text-transform: uppercase;
+      font-size: em(16px);
+      padding: 23px 20px 6px;
+      color:#0f0f0f;
+      letter-spacing: 3px;
+      position: relative;
+      bottom: 0;
+      left: 0;
+    }
+
+
+    p{
+      // letter-spacing: 1px;
+      // font-size: 68.5%;
+      text-align: center;
+      margin: 0;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width:100%;
+    }
+
+  }
+
+}
+
+//Hover effects
+.feature__box--effect{
+
+  margin:0 auto;
+
+  h2,img{
+  }
+
+  img{
+    width:100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  //secondary text animation setup
+  p{
+    padding: 10px 30px 20px;
+    text-transform: none;
+    font-size: em(16px);
+    opacity: 1;
+
+  }
+
+  //moves image up on hover
+  .no-touch &:hover img {
+  }
+
+  //moves h2 up on hover
+  .no-touch &:hover h2 {
+
+  }
+
+  //reveal p tag on hover
+  .no-touch &:hover p {
+    opacity: 1;
+
+  }
+
+}
+
+//Nav Search fix
+.cd-search{
+  input[type=search]{
+    display: block;
+    color:#0f0f0f;
+  }
+}
