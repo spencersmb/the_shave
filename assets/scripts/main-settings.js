@@ -233,13 +233,20 @@ $(function() {
 
 			dialog.css('margin-top', offset);
 
-			//set div heights the same
-			var row = dialog.find('.row');
-			var rowHeight = row.height();
+			if(checkWindowWidth() === true){
+				//set div heights the same
+				var row = dialog.find('.row');
+				var rowHeight = row.height();
 
-			row.children('div').height(rowHeight);
+				row.children('div').height(rowHeight);
 
-			angleModal();
+				angleModal();
+
+			}
+
+			//full width
+			var modalImage = $('.modal-content').find('.row').width();
+			$('.angle-top-modal').css('border-right-width', modalImage);
 
 			modalIn();
 		}

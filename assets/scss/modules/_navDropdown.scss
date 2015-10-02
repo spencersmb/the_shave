@@ -106,6 +106,15 @@ $L:     1024px;
     left:5%;
   }
 
+  .book-now-m{
+    display: block;
+    background-color: $primary-color;
+    cursor: pointer;
+
+    @include MQ(L) {
+      display: none;
+    }
+  }
 
 }
 
@@ -203,12 +212,10 @@ $primary-font: sans-serif;
     top: 50%;
     margin-top: -1px;
     height: 2px;
-    width: 9px;
+    width: 0;
     background: transparent;
     @include backface-visibility(hidden);
-
     @include transition(width .3s, transform .3s, background-color 0.2s);
-
   }
 
   &::before {
@@ -261,6 +268,7 @@ $primary-font: sans-serif;
 
     &::before, &::after {
       background: $black;
+      width: 9px;
     }
   }
 }

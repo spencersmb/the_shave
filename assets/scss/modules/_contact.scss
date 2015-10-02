@@ -1,7 +1,6 @@
 .contact__wrapper{
 	overflow:hidden;
 	margin:0 auto;
-	max-width:800px;
   	padding:0;
 
 	.section__wrapper{
@@ -107,7 +106,7 @@
 		text-align: center;
 		top:40%;
 		position:relative;
-		width:80%;
+		width:174px;
 		margin:0 auto;
 	}
 
@@ -140,7 +139,7 @@
 	  padding:0;
 
 	  .section__wrapper{
-		margin:0 auto 25px;
+		margin:40px auto 0;
 	  }
 
 	}
@@ -210,10 +209,11 @@
 
   .contact__wrapper{
 	max-width: 1200px;
+	margin:200px auto 80px;
 
 
 	.section__wrapper{
-	  margin:40px auto 75px;
+	  margin:40px auto 0;
 	}
 
   }
@@ -248,10 +248,6 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-
-  .contact__wrapper{
-	margin:200px auto 30px;
-  }
 
   .contact__card{
 
