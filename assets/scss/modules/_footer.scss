@@ -61,7 +61,7 @@ footer{
 		}
 
 		h3{
-			font-size: em(63px);
+			font-size: em(48px);
 			margin:0;
 			letter-spacing: 7px;
 		}
@@ -71,6 +71,7 @@ footer{
 			font-size: em(18px);
 			font-family: $courier;
 			text-transform: none;
+		  	font-weight: 400;
 		}
 	}
 }
@@ -101,7 +102,7 @@ footer{
 	input{
 		background:transparent;
 		float:left;
-		font-size: em(26px);
+		font-size: em(18px);
 		padding: 0;
 		border-radius: 0;
 		height:50px;

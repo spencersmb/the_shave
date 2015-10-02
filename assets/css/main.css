@@ -11143,11 +11143,11 @@ blockquote.reverse {
   content: ' ';
   position: absolute;
   z-index: 1;
-  top: -80px;
+  top: -35px;
   left: 0;
   width: 0;
   height: 0;
-  border-top: 80px solid transparent;
+  border-top: 35px solid transparent;
   border-right: 30px solid white;
 }
 
@@ -11195,7 +11195,7 @@ blockquote.reverse {
   left: 0;
   width: 0;
   height: 0;
-  border-bottom: 80px solid transparent;
+  border-bottom: 35px solid transparent;
   border-left: 30px solid white;
 }
 
@@ -11220,6 +11220,16 @@ blockquote.reverse {
   .section__wrapper {
     margin: 40px auto 25px;
   }
+
+  .angle-bottom-nav {
+    top: 40px;
+    border-bottom: 60px solid transparent;
+  }
+
+  .angle-top, .content__wrapper .title .angle-top-card {
+    top: -60px;
+    border-top: 60px solid transparent;
+  }
 }
 @media (min-width: 992px) {
   .headline-md p {
@@ -11230,6 +11240,16 @@ blockquote.reverse {
 
   .section__wrapper {
     margin: 40px auto 75px;
+  }
+
+  .angle-bottom-nav {
+    top: 0;
+    border-bottom: 80px solid transparent;
+  }
+
+  .angle-top, .content__wrapper .title .angle-top-card {
+    top: -80px;
+    border-top: 80px solid transparent;
   }
 }
 @media (min-width: 1200px) {
@@ -12927,7 +12947,8 @@ blockquote.reverse {
   }
   .feature__box--container {
     padding-top: 40px;
-    padding-bottom: 235px;
+    padding-bottom: 260px;
+    max-width: 800px;
   }
 
   .feature-offset {
@@ -13005,6 +13026,7 @@ blockquote.reverse {
 @media (min-width: 1200px) {
   .feature__box--container {
     padding-bottom: 375px;
+    max-width: 1230px;
   }
   .feature__box figure {
     max-width: 445px;
@@ -13073,7 +13095,7 @@ blockquote.reverse {
   margin: 0;
 }
 .staggered__container .sub-copy {
-  text-align: left;
+  text-align: center;
 }
 
 .box-link, .contact__us a {
@@ -13818,7 +13840,8 @@ blockquote.reverse {
 .contact__wrapper {
   overflow: hidden;
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 800px;
+  padding: 0;
 }
 .contact__wrapper .section__wrapper {
   margin: 0 auto;
@@ -13929,7 +13952,7 @@ blockquote.reverse {
   margin: 0 auto;
 }
 .contact__us h4 {
-  padding-left: 25px;
+  padding-left: 0;
   margin-top: 0;
   font-size: 0.9375em;
   font-weight: 500;
@@ -13942,6 +13965,7 @@ blockquote.reverse {
 @media (min-width: 768px) {
   .contact__wrapper {
     margin: 200px auto 0;
+    padding: 0;
   }
   .contact__wrapper .section__wrapper {
     margin: 0 auto 25px;
@@ -13980,6 +14004,7 @@ blockquote.reverse {
   .contact__us h4 {
     text-align: left;
     font-size: 1em;
+    padding-left: 24px;
   }
   .contact__us i {
     padding-left: 20px;
@@ -14010,7 +14035,6 @@ blockquote.reverse {
     width: 35%;
   }
   .contact__card .contact__us h4 {
-    padding-left: 24px;
     font-size: 1.125em;
   }
 }
@@ -14178,7 +14202,7 @@ footer.nav-is-open {
   font-weight: 500;
 }
 .footer__logo .logo__container h3 {
-  font-size: 3.9375em;
+  font-size: 3em;
   margin: 0;
   letter-spacing: 7px;
 }
@@ -14187,6 +14211,7 @@ footer.nav-is-open {
   font-size: 1.125em;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-transform: none;
+  font-weight: 400;
 }
 
 .footer__desc {
@@ -14214,7 +14239,7 @@ footer.nav-is-open {
 .email__form input {
   background: transparent;
   float: left;
-  font-size: 1.625em;
+  font-size: 1.125em;
   padding: 0;
   border-radius: 0;
   height: 50px;
@@ -14799,9 +14824,9 @@ footer.nav-is-open {
 }
 
 .sell__box h2 {
-  font-size: 3.0625em;
+  font-size: 2.75em;
   line-height: 55px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   margin-top: 15px;
   text-align: center;
 }
@@ -14832,13 +14857,15 @@ footer.nav-is-open {
   max-width: 1200px;
 }
 .sell__box .desc {
-  padding: 0 15px 10px;
   text-align: center;
 }
 .sell__box .intro {
   margin: 30px auto 15px;
 }
 
+.icon__box {
+  padding-bottom: 15px;
+}
 .icon__box .icon__wrapper {
   margin: 0 auto;
   max-width: 59px;
@@ -14862,7 +14889,7 @@ footer.nav-is-open {
   margin: 25px 0 15px;
 }
 .icon__box--container {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -14874,21 +14901,25 @@ footer.nav-is-open {
   .sell__box h2 {
     font-size: 4.5em;
     line-height: 80px;
+    margin-bottom: 16px;
   }
   .sell__box h5 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .sell__box .wrapper {
     margin: 0 auto 30px;
     padding: 0 40px;
   }
   .sell__box .desc {
-    padding: 0 40px;
     text-align: center;
   }
   .sell__box .intro {
     margin: 55px auto 15px;
     padding: 0 2%;
+  }
+
+  .icon__box--container {
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 992px) {
@@ -14896,11 +14927,18 @@ footer.nav-is-open {
     font-size: 5.9375em;
     line-height: 105px;
   }
+  .sell__box h5 {
+    font-size: 1.5em;
+  }
   .sell__box .wrapper {
     margin: 0 auto 60px;
   }
   .sell__box .desc {
     text-align: left;
+  }
+
+  .icon__box--container {
+    margin-bottom: 80px;
   }
 }
 .products {
@@ -15485,6 +15523,9 @@ footer.nav-is-open {
   position: relative;
   margin: 20px auto 0;
 }
+.blog__overview--contents .post-img .img-responsive {
+  width: 100%;
+}
 .blog__overview--contents .feature-content {
   margin-left: 0;
   margin-top: 15px;
@@ -15509,7 +15550,7 @@ footer.nav-is-open {
   }
 
   .blog__overview--contents .feature__post {
-    padding: 22px;
+    padding: 15px;
   }
   .blog__overview--contents .post-img {
     overflow: hidden;

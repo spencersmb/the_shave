@@ -1,9 +1,9 @@
 .sell__box{
 
   h2{
-	font-size: em(49px);
+	font-size: em(44px);
 	line-height: 55px;
-	margin-bottom:16px;
+	margin-bottom:10px;
 	margin-top: 15px;
 	text-align: center;
   }
@@ -39,7 +39,6 @@
   }
 
   .desc{
-	padding: 0 15px 10px;
 	text-align: center;
   }
 
@@ -82,6 +81,8 @@
 
 .icon__box{
 
+  padding-bottom: 15px;
+
 	.icon__wrapper{
 		margin:0 auto;
 		max-width: 59px;
@@ -99,6 +100,7 @@
 
 	&--content{
 		clear:both;
+
 		h5{
 			font-weight: 700;
 			text-transform: uppercase;
@@ -108,7 +110,7 @@
 	}
 
 	&--container{
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 	  	text-align: center;
 	}
 }
@@ -127,10 +129,11 @@
 	h2{
 	  font-size: em(72px);
 	  line-height: 80px;
+	  margin-bottom:16px;
 	}
 
 	h5{
-	  font-size: em(32px);
+	  font-size: em(24px);
 	}
 
 	.wrapper{
@@ -139,13 +142,19 @@
 	}
 
 	.desc{
-	  padding: 0 40px;
 	  text-align: center;
 	}
 
 	.intro{
 	  margin:55px auto 15px;
 	  padding:0 2%;
+	}
+  }
+
+  .icon__box{
+
+	&--container{
+	  margin-bottom: 40px;
 	}
   }
 
@@ -162,12 +171,22 @@
 	  line-height: 105px;
 	}
 
+	h5{
+	  font-size: em(24px);
+	}
+
 	.wrapper{
 	  margin:0 auto 60px;
 	}
 
 	.desc{
 	  text-align: left;
+	}
+  }
+
+  .icon__box{
+	&--container{
+	  margin-bottom: 80px;
 	}
   }
 

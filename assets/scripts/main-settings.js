@@ -346,53 +346,53 @@ $(function() {
 		// Accordian Tabs
 		// ==========================================================================
 
-		$('.panel-left a').on('click', function(e) {
-			console.log('left');
-			getFh = $('.has-height').height();
-			// console.log(getFh);
-
-
-			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
-				e.stopPropagation();
-			}
-			if ($(this).parents('.panel').hasClass('active')) {
-				//do nothing cus its active
-			}
-			//add border bottom to panel if not active
-			if (!$(this).parents('.panel').hasClass('active')) {
-				$("#accordion1 > div").each(function() {
-					$(this).removeClass("active");
-				});
-
-				$(this).parents('.panel').addClass('active');
-
-				adjustWindow();
-
-				specialFooter();
-			}
-		});
+		//$('.panel-left a').on('click', function(e) {
+		//	console.log('left');
+		//	getFh = $('.has-height').height();
+		//	// console.log(getFh);
+    //
+    //
+		//	if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+		//		e.stopPropagation();
+		//	}
+		//	if ($(this).parents('.panel').hasClass('active')) {
+		//		//do nothing cus its active
+		//	}
+		//	//add border bottom to panel if not active
+		//	if (!$(this).parents('.panel').hasClass('active')) {
+		//		$("#accordion1 > div").each(function() {
+		//			$(this).removeClass("active");
+		//		});
+    //
+		//		$(this).parents('.panel').addClass('active');
+    //
+		//		adjustWindow();
+    //
+		//		specialFooter();
+		//	}
+		//});
 
 		//TODO: Check to remove right side JS
 		//Accordian Right side
 		//Disable pricing table Tabs all being closed at once.
-		$('.panel-right a').on('click', function(e) {
-			console.log('right');
-			if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
-				e.stopPropagation();
-			}
-			if ($(this).parents('.panel').hasClass('active')) {
-				//do nothing cus its active
-			}
-			//add border bottom to panel if not active
-			if (!$(this).parents('.panel').hasClass('active')) {
-				$("#accordion > div").each(function() {
-					$(this).removeClass("active");
-				});
-
-				$(this).parents('.panel').addClass('active');
-
-			}
-		});
+		//$('.panel-right a').on('click', function(e) {
+		//	console.log('right');
+		//	if ($(this).parents('.panel').children('.panel-collapse').hasClass('in')) {
+		//		e.stopPropagation();
+		//	}
+		//	if ($(this).parents('.panel').hasClass('active')) {
+		//		//do nothing cus its active
+		//	}
+		//	//add border bottom to panel if not active
+		//	if (!$(this).parents('.panel').hasClass('active')) {
+		//		$("#accordion > div").each(function() {
+		//			$(this).removeClass("active");
+		//		});
+    //
+		//		$(this).parents('.panel').addClass('active');
+    //
+		//	}
+		//});
 
 
 		//OLD SKROLLER + IMAGE LOAD

@@ -376,11 +376,11 @@
   content:' ';
   position: absolute;
   z-index: 1;
-  top:-80px;
+  top:-35px;
   left:0;
   width:0;
   height:0;
-  border-top: 80px solid transparent;
+  border-top: 35px solid transparent;
   border-right:30px solid white;
 }
 
@@ -428,7 +428,7 @@
   left:0;
   width:0;
   height:0;
-  border-bottom:80px solid transparent;
+  border-bottom:35px solid transparent;
   border-left:30px solid white;
 }
 
@@ -459,6 +459,16 @@
     margin: 40px auto 25px;
   }
 
+  .angle-bottom-nav{
+    top:40px;
+    border-bottom:60px solid transparent;
+  }
+
+  .angle-top{
+    top:-60px;
+    border-top: 60px solid transparent;
+  }
+
 
 }
 
@@ -476,6 +486,16 @@
 
   .section__wrapper {
     margin: 40px auto 75px;
+  }
+
+  .angle-bottom-nav{
+    top:0;
+    border-bottom:80px solid transparent;
+  }
+
+  .angle-top{
+    top:-80px;
+    border-top: 80px solid transparent;
   }
 
 }

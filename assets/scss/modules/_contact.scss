@@ -1,7 +1,8 @@
 .contact__wrapper{
 	overflow:hidden;
 	margin:0 auto;
-	max-width:720px;
+	max-width:800px;
+  	padding:0;
 
 	.section__wrapper{
 	  margin:0 auto;
@@ -111,7 +112,7 @@
 	}
 
 	h4{
-		padding-left:25px;
+		padding-left:0;
 		margin-top: 0;
 		font-size: em(15px);
 		font-weight:500;
@@ -136,6 +137,7 @@
 
 	.contact__wrapper{
 	  margin:200px auto 0;
+	  padding:0;
 
 	  .section__wrapper{
 		margin:0 auto 25px;
@@ -189,6 +191,7 @@
 		h4{
 			text-align: left;
 			font-size: em(16px);
+		  	padding-left: 24px;
 		}
 
 		i{
@@ -207,6 +210,7 @@
 
   .contact__wrapper{
 	max-width: 1200px;
+
 
 	.section__wrapper{
 	  margin:40px auto 75px;
@@ -233,7 +237,6 @@
 	  .contact__us{
 
 		h4{
-		  padding-left:24px;
 		  font-size: em(18px);
 		}
 
