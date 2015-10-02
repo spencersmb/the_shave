@@ -23,7 +23,7 @@
   &--wrapper{
     width:100%;
     margin:0 auto;
-    padding:1em 0 1em;
+    padding:1em 0 0;
     max-width:800px;
     @include transition(all .4s ease-in-out);
   }
@@ -67,9 +67,23 @@
   }
 }
 
+.blog__overview{
+  position:absolute;
+  height:100%;
+  background:rgba(255,255,255,0.6);
+  top:0;
+  right:0;
+  @include transition(all .4s ease-in-out);
+}
+
 .blog__overview--contents{
-  background:#fff;
+  background:transparent;
   padding:0 0 0;
+
+
+  .card-shadow-lt{
+    box-shadow: none;
+  }
 
   h2{
     margin-bottom: 20px;
@@ -91,7 +105,7 @@
   .feature__post{
     display:table;
     position: relative;
-    padding:0 15px;
+    padding:0 30px;
     @include transition(background-color .2s);
 
 
@@ -126,9 +140,9 @@
 
   .post-img{
     overflow: hidden;
-    width:200px;
+    width:100%;
     position:relative;
-    margin-top: 20px;
+    margin:20px auto 0;
   }
 
   .feature-content{
@@ -155,22 +169,27 @@
 
 }
 
-
-
-// Displays greater than 600px
+// Displays greater than 768px
 @include breakpoint(tablet) {
 
   .blog__mod {
 
     &--wrapper {
-      padding: 1em 0 0;
+      padding:0;
     }
   }
 
   .blog__overview--contents{
 
     .feature__post {
-      padding: 25px;
+      padding: 22px;
+    }
+
+    .post-img{
+      overflow: hidden;
+      width:200px;
+      position:relative;
+      margin: 20px 0 0;
     }
 
     .post-img{
@@ -186,6 +205,7 @@
     .details{
       margin-bottom:20px;
     }
+
   }
 
 }
@@ -194,7 +214,10 @@
 @include breakpoint(laptop) {
 
   .blog__overview--contents {
+    background:#fff;
     padding: 2em 0 0;
+
+
   }
 
   .blog__feature{

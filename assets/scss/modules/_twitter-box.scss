@@ -5,15 +5,17 @@
 
 	blockquote{
 		border:0;
-		width:80%;
+		width:65%;
 		padding:0;
 		margin:0 auto;
 		color:$white;
 		font-size: 16px;
+	  	line-height: 12px;
 	}
 
 	p{
 		line-height: 24px;
+	  	display: block;
 	}
 
 	span{
@@ -26,33 +28,42 @@
 	}
 
 	h3{
-		margin-top:20px;
+		margin-top:0;
 		margin-bottom:15px;
+	}
+
+	cite{
+	  padding-top: 5px;
+	  display: block;
 	}
 }
 
 #twitter-carousel{
 		padding:50px 0;
 
+	.carousel-inner{
+	  margin-bottom: 20px;
+	}
+
 	.carousel-inner>.item>img{
 		margin:0 auto;
 		max-width: 60px;
 	}
 
-  .carousel-control{
+	.carousel-control{
 
-	&:focus{
-	  opacity: .5;
-	}
+	  &:focus{
+		opacity: .5;
+	  }
 
-	&:hover{
-	  opacity: .9 !important;
-	}
+	  &:hover{
+		opacity: .9 !important;
+	  }
 
-	&.right, &.left{
-	  background-image: none;
+	  &.right, &.left{
+		background-image: none;
+	  }
 	}
-  }
 }
 // Displays greater than 768px
 @include breakpoint(tablet) {
@@ -61,6 +72,24 @@
 		background-size:cover;
 		background-position:50% 70%;
 		background-attachment:fixed;
+	}
+
+	.twitter__wrapper {
+
+	  blockquote {
+		width: 80%;
+	  }
+
+	  cite{
+		display: block;
+	  }
+	}
+
+	#twitter-carousel {
+
+	  .carousel-inner {
+		margin-bottom: 30px;
+	  }
 	}
 
 

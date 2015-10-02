@@ -238,6 +238,7 @@
 	  padding-top: 40px;
 	  padding-bottom: 235px;
 	}
+
   }
 
   .feature-offset{
@@ -254,11 +255,6 @@
 @include breakpoint(laptop) {
 
 .feature__box{
-
-	&--container{
-	  padding-bottom: 375px;
-	  max-width: 1200px;
-	}
 
 	figure{
 
@@ -281,6 +277,13 @@
 			position: absolute;
 		}
 	}
+
+
+	&--container{
+	  padding-bottom: 270px;
+	  max-width: 1200px;
+	}
+
 }
 
 .feature__box--effect{
@@ -320,6 +323,10 @@
 @include breakpoint(desktop) {
 
 	.feature__box{
+
+	  &--container{
+		padding-bottom: 375px;
+	  }
 
 		figure{
 

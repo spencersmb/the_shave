@@ -175,8 +175,7 @@
 
   h2{
     margin:20px auto;
-
-    font-size: 32px;
+    font-size: 20px;
   }
 
   p{
@@ -468,14 +467,29 @@
   .headline-md{
 
     p{
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 825px;
     }
 
   }
 
   .section__wrapper {
     margin: 40px auto 75px;
+  }
+
+}
+
+@include breakpoint(desktop) {
+
+  .headline-md{
+
+    p{
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 1000px;
+    }
+
   }
 
 }
