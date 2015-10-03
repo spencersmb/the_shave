@@ -64,6 +64,10 @@
 		background-image: none;
 	  }
 	}
+
+	.carousel-indicators{
+	  margin-left:-30.5%;
+	}
 }
 // Displays greater than 768px
 @include breakpoint(tablet) {

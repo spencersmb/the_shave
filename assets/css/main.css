@@ -13952,11 +13952,11 @@ blockquote.reverse {
   margin: 0 auto;
   top: 0px;
   overflow: hidden;
-  display: inline-block;
+  display: block;
 }
 .contact__us .inner__content {
   text-align: center;
-  top: 40%;
+  top: 38%;
   position: relative;
   width: 174px;
   margin: 0 auto;
@@ -14106,6 +14106,9 @@ blockquote.reverse {
 }
 #twitter-carousel .carousel-control.right, #twitter-carousel .carousel-control.left {
   background-image: none;
+}
+#twitter-carousel .carousel-indicators {
+  margin-left: -30.5%;
 }
 
 @media (min-width: 768px) {
@@ -14271,6 +14274,12 @@ footer.nav-is-open {
 }
 .email__form input:-ms-input-placeholder {
   color: #af8c45;
+}
+.email__form .form-btn {
+  color: #fff;
+  border: 3px solid #fff;
+  margin: 20px auto 0;
+  width: 60%;
 }
 
 .email__offers {
@@ -14560,6 +14569,10 @@ footer.nav-is-open {
 
   .email__form input {
     text-align: left;
+  }
+  .email__form .form-btn {
+    margin: 20px 0 0;
+    width: auto;
   }
 
   .email__offers {

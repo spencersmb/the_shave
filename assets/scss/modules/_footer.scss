@@ -131,6 +131,13 @@ footer{
 		}
 	}
 
+  	.form-btn{
+	  color:$white;
+	  border:3px solid $white;
+	  margin:20px auto 0;
+	  width:60%;
+	}
+
 }
 
 .email__offers{
@@ -399,6 +406,11 @@ footer{
 		input{
 			text-align:left;
 		}
+
+	  .form-btn{
+		margin:20px 0 0;
+		width:auto;
+	  }
 	}
 
 	.email__offers{

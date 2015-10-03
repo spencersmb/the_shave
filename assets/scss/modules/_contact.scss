@@ -99,12 +99,12 @@
 		margin:0 auto;
 		top:0px;
 		overflow: hidden;
-		display: inline-block;
+		display: block;
 	}
 
 	.inner__content{
 		text-align: center;
-		top:40%;
+		top:38%;
 		position:relative;
 		width:174px;
 		margin:0 auto;
@@ -119,9 +119,6 @@
 	}
 
 	i{
-		// position:absolute;
-		// top:-1px;
-		// right:17px;
 		padding-left:20px;
 	}
 
