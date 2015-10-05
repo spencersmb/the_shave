@@ -17,7 +17,6 @@
   margin:0 auto;
 
   .image{
-    max-height: 200px;
     overflow:hidden;
     img{
       width:100%;
@@ -101,6 +100,28 @@
     top:0;
     height:75px;
     @include transition(all .6s);
+
+    &::before, &::after{
+      content: '';
+      position:absolute;
+      height:2px;
+      width:9px;
+      background:$primary-color;
+      @include backface-visibility(hidden);
+      @include transition(all .3s);
+    }
+
+    &::after {
+      @include transform(translateX(0) translateY(0) rotate(-45deg));
+      top:21px;
+      right:20px;
+    }
+
+    &::before {
+      @include transform(translateX(0) translateY(0) rotate(45deg));
+      top:21px;
+      right:25px;
+    }
   }
 
   .bio{
@@ -110,6 +131,59 @@
     margin-bottom:25px;
     @include transition(all .3s);
 
+    margin-top: 25px;
+    margin-bottom:25px;
+    opacity: 0;
+    @include transition-delay(.2s);
+    @include transform(translate3d(0,225px,0));
+  }
+
+  &.active{
+
+
+    .open{
+
+      background: $primary-color;
+
+      &::before, &::after{
+        width:14px;
+        background:$white;
+      }
+
+      &::after {
+        @include transform(translateX(-5px) translateY(0) rotate(45deg));
+      }
+
+      &::before {
+        @include transform(translateX(0) translateY(0) rotate(-45deg));
+      }
+
+    }
+
+    .title{
+      top:0;
+      @include transition-delay(.4s);
+      @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+      @include transform(translate3d(0,0px,0));
+
+      h5, h6 {
+        color:$white;
+      }
+
+      .bio{
+        opacity: 1;
+        @include transition-delay(.3s);
+        @include transform(translate3d(0,82px,0));
+      }
+    }
+
+    .angle-bottom-card {
+      opacity: 1;
+      border-left:30px solid #fff;
+      border-left-width:285px;
+      left:0;
+    }
+
   }
 
 }
@@ -117,13 +191,11 @@
 
 @include breakpoint(tablet) {
 
-
   .card__slider{
 //    height: 473px;
 //    max-width:319px;
 
     .image{
-      max-height: none;
       overflow:visible;
       img{
         width:100%;
@@ -139,28 +211,6 @@
     .open{
       position: absolute;
       padding-left:25px;
-
-      &::before, &::after{
-        content: '';
-        position:absolute;
-        height:2px;
-        width:9px;
-        background:$primary-color;
-        @include backface-visibility(hidden);
-        @include transition(all .3s);
-      }
-
-      &::after {
-        @include transform(translateX(0) translateY(0) rotate(-45deg));
-        top:21px;
-        right:20px;
-      }
-
-      &::before {
-        @include transform(translateX(0) translateY(0) rotate(45deg));
-        top:21px;
-        right:25px;
-      }
 
     }
 
@@ -180,7 +230,6 @@
       opacity: 0;
       @include transition-delay(.2s);
       @include transform(translate3d(0,225px,0));
-
     }
 
     &.active{

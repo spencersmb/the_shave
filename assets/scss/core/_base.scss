@@ -154,11 +154,12 @@ footer.loaded {
     font-size:em(84px);
     max-width:850px;
     margin:0 auto;
-    // color:$primary-color;
   }
+
   p{
     font-size: em(24px);
   }
+
   h3{
     color:#959595;
     max-width: 39.375em;
@@ -171,6 +172,7 @@ footer.loaded {
     font-size:em(24px);
     text-transform: none;
   }
+
   h4{
     text-transform: none;
     font-weight:300;
@@ -185,12 +187,16 @@ footer.loaded {
 }
 
 .inner__header--sm{
-  margin:em(25px) auto 0;
+  margin:25px auto 0;
+
+  h1{
+    font-size:28px;
+  }
 
   h3{
     color:#959595;
-    margin-top: em(10px);
-    font-size:em(21px);
+    margin-top: 10px;
+    font-size:16px;
     letter-spacing: 0;
   }
 }
@@ -199,7 +205,7 @@ footer.loaded {
 	margin:60px auto;
 	text-align:center;
 	position:relative;
-	padding:88px 0 0;
+	padding:44px 0 0;
 }
 
 //Todo: Add additional SCSS for ELEMEnts AND TYPOGRAPHY
@@ -456,6 +462,15 @@ blockquote{
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
+  .sv__main--content {
+    padding-top: $header-M;
+  }
+
+  .inner-content-module{
+    margin:60px auto;
+    padding:88px 0 0;
+  }
+
   .parallax__background{
     background-size:cover;
     background-position:50% 50%;
@@ -490,6 +505,18 @@ blockquote{
         @include transform(translateY(-50%));
         top:50%;
       }
+    }
+  }
+
+  .inner__header--sm{
+
+    h1{
+      font-size: 56px;
+    }
+
+    h3{
+      font-size:21px;
+      max-width: 600px;
     }
   }
 
@@ -541,9 +568,6 @@ blockquote{
     margin:0 auto;
   }
 
-  // body {
-  //   padding: 0;
-  // }
   .main{
     margin-top: 80px;
   }
@@ -561,6 +585,17 @@ blockquote{
     .content{
       margin: em(210px) 30%;
       height:em(315px);
+    }
+  }
+
+  .inner__header--sm{
+
+    h1{
+      font-size: 84px;
+    }
+
+    h3{
+      font-size:21px;
     }
   }
 

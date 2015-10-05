@@ -1,20 +1,17 @@
 {% layout "layout" %}
 
 {% block content %}
-<!-- TODO: Comment this section out -->
-<!-- TODO: Add Shaving Cream icons -->
-
-	<!-- Offset header -->
+	<!--
+    #################################
+        - Service Section -
+    #################################
+    -->
 	{% include "service-shave/service-intro-shave" %}
-	<!-- End offset header -->
 
 	<section class="sv__container--fluid dual-img">
 		<div class="row no-margin">
-			<div class="col-xs-6 no-padding">
-				<img class="img-responsive" src="{{'left-image.jpg' | asset_url}}" alt=""/>
-			</div>
-			<div class="col-xs-6 no-padding">
-				<img class="img-responsive" src="{{'right-image.jpg' | asset_url}}" alt=""/>
+			<div class="col-xs-12 no no-padding">
+				<img class="img-responsive" src="{{'service-full.jpg' | asset_url}}" alt="full service barbershop"/>
 			</div>
 		</div>
 	</section>

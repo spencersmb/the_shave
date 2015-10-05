@@ -155,16 +155,16 @@
   text-align: center;
   margin:0 auto;
   display: table;
+  max-width: 250px;
 
     h2{
         margin:0 auto;
         margin-bottom: 45px;
-        font-size: 21px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 3px;
     }
-//
-    // .desc{
-    // 	text-transform: inherit;
-    // }
+
 }
 
 .headline-md{
@@ -294,12 +294,13 @@
 .graphic-headline{
   width:100%;
   max-width: 900px;
-  margin:200px auto;
+  margin:50px auto;
   text-align: center;
+  padding:0 15px;
 
   h2{
     text-transform: initial;
-    margin:0 auto 60px;
+    margin:0 auto 30px;
   }
 
   p{
@@ -388,11 +389,11 @@
   content:' ';
   position: absolute;
   z-index: 1;
-  bottom:-80px;
+  bottom:-30px;
   left:0;
   width:0;
   height:0;
-  border-bottom:80px solid transparent;
+  border-bottom:30px solid transparent;
   border-left:30px solid white;
 }
 
@@ -428,7 +429,7 @@
   left:0;
   width:0;
   height:0;
-  border-bottom:35px solid transparent;
+  border-bottom:30px solid transparent;
   border-left:30px solid white;
 }
 
@@ -436,15 +437,27 @@
   content:' ';
   position: absolute;
   z-index: 1;
-  top:-35px;
+  top:-30px;
   left:0;
   width:0;
   height:0;
-  border-top: 35px solid transparent;
+  border-top: 30px solid transparent;
   border-right:30px solid white;
 }
 
 @include breakpoint(tablet) {
+
+  .headline-sm{
+    max-width: none;
+
+    h2{
+      margin-bottom: 45px;
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 5px;
+    }
+
+  }
 
   .headline-md{
 
@@ -459,6 +472,18 @@
     margin: 40px auto 25px;
   }
 
+  .graphic-headline{
+    max-width: 900px;
+    margin:75px auto;
+    padding:0 50px;
+
+    h2{
+      text-transform: initial;
+      margin:0 auto 60px;
+    }
+
+  }
+
   .angle-bottom-nav{
     top:40px;
     border-bottom:60px solid transparent;
@@ -469,10 +494,24 @@
     border-top: 60px solid transparent;
   }
 
+  .angle-bottom{
+    bottom:-60px;
+    border-bottom: 60px solid transparent;
+  }
+
 
 }
 
 @include breakpoint(laptop) {
+
+  .headline-sm{
+
+    h2{
+      margin-bottom: 45px;
+      font-size: 21px;
+    }
+
+  }
 
   .headline-md{
 
@@ -488,6 +527,18 @@
     margin: 40px auto 75px;
   }
 
+  .graphic-headline{
+    max-width: 850px;
+    margin:200px auto;
+    padding:0;
+
+    h2{
+      text-transform: initial;
+      margin:0 auto 60px;
+    }
+
+  }
+
   .angle-bottom-nav{
     top:0;
     border-bottom:80px solid transparent;
@@ -496,6 +547,11 @@
   .angle-top{
     top:-80px;
     border-top: 80px solid transparent;
+  }
+
+  .angle-bottom{
+    bottom:-80px;
+    border-bottom: 80px solid transparent;
   }
 
 }
@@ -508,6 +564,16 @@
       font-size: 24px;
       line-height: 32px;
       max-width: 1000px;
+    }
+
+  }
+
+  .graphic-headline{
+    margin:200px auto;
+
+    h2{
+      text-transform: initial;
+      margin:0 auto 60px;
     }
 
   }

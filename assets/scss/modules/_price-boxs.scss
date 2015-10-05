@@ -1,3 +1,8 @@
+.price__container{
+  float:none;
+  margin:0 auto;
+}
+
 .price__wrapper{
   padding:0 15px;
   max-width: 1200px;
@@ -13,10 +18,10 @@
 
 
   .price__header{
-    margin-bottom: 25px;
+    margin-bottom: 0;
 
     h2{
-      margin:0 0 35px 0;
+      margin:0 0 25px;
       font-size: 16px;
       font-weight: 600;
       font-family: courier;
@@ -29,13 +34,12 @@
       line-height: 46px;
       position:relative;
       display: inline-block;
-      padding-top:20px;
       color:$primary-color;
 
       span{
         font-size: 18px;
         position:absolute;
-        top:7px;
+        top:-10px;
         left:-15px;
       }
     }
@@ -58,16 +62,16 @@
     span{
       background:$white;
       position:relative;
-      left:-2px;
+      left:-6px;
     }
   }
 
   ul{
-    padding:15px 0 20px;
+    padding:10px 0;
   }
 
   li{
-    padding-bottom:15px;
+    padding-bottom:10px;
   }
 }
 
@@ -75,24 +79,24 @@
   content:' ';
   position: absolute;
   z-index: 1;
-  top:-50px;
+  top:-30px;
   left:0;
   width:0;
   height:0;
-  border-top: 50px solid transparent;
+  border-top: 30px solid transparent;
   border-right:30px solid white;
-  border-right-width:413px;
+  //  border-right-width:413px;
 }
 
 .angle-bottom-price{
   content:' ';
   position: absolute;
   z-index: 1;
-  bottom:-50px;
+  bottom:-30px;
   left:0;
   width:0;
   height:0;
-  border-bottom:50px solid transparent;
+  border-bottom:30px solid transparent;
   border-left:30px solid white;
   border-left-width:413px;
 }
@@ -100,13 +104,73 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
+  .price__container{
+    max-width: 500px;
+    float:none;
+    margin:0 auto;
+  }
+
+  .price__table{
+
+    .price__header {
+      margin-bottom: 25px;
+
+      h2 {
+        margin: 0 0 35px 0;
+        font-size: 16px;
+      }
+
+      .price {
+        padding-top: 10px;
+
+        span{
+
+        }
+
+      }
+
+    }
+
+    ul{
+      padding:15px 0 20px;
+    }
+
+    li{
+      padding-bottom:15px;
+    }
+
+  }
 
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+  .price__container{
+    float:left;
+    margin:0 auto;
+  }
+
   .price__table{
+    max-width: none;
+
+    .price__header {
+      margin-bottom: 25px;
+
+      h2 {
+        margin: 0 0 35px 0;
+        font-size: 16px;
+      }
+
+      .price {
+
+        span{
+          top:7px;
+        }
+      }
+
+    }
+
   }
 
 
