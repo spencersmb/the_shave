@@ -278,7 +278,6 @@ $(function() {
 			dialog.css('margin-top', offset);
 
 			if(checkWindowWidth() === true){
-				console.log(checkWindowWidth());
 
 				//set div heights the same for laptop/desktop
 				var row = dialog.find('.row');
@@ -392,7 +391,6 @@ $(function() {
 			});
 
 			if (resizedWidth >= tablet || windowSize >= tablet) {
-				console.log(windowSize);
 				return true;
 			} else {
 				return false;

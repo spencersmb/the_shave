@@ -242,6 +242,28 @@
 
 }
 
+.btn-group{
+
+  .book-now-btn{
+      background-color: transparent;
+
+      &:nth-child(1){
+        border-right-width:2px;
+      }
+
+      &:nth-last-child(1){
+       border-left-width:2px;
+      }
+
+    &:hover{
+      border-color:$black;
+      background: $black;
+      color:$white;
+    }
+  }
+}
+
+
 
 // Displays greater than 768px
 @include breakpoint(tablet) {

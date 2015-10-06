@@ -31,6 +31,10 @@
 	@include transition (opacity .3s ease);
 
 	h3{
+	  font-family: $courier;
+	  text-transform: none;
+	  letter-spacing: 1px;
+	  font-size: 16px;
 	  padding:0 20px;
 	  @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
 	  @include transform(translate3d(0,90px,0));

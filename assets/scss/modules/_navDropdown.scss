@@ -30,13 +30,6 @@ $L:     1024px;
   width:100vw;
   background: $white;
   z-index: $above-content; //3
-  /* Force Hardware Acceleration in WebKit */
-//  -webkit-transform: translateZ(0);
-//  -webkit-backface-visibility: hidden;
-
-  // @include transition-property(transform);
-  // @include transition-duration(.4s);
-//  @include transition($pushNav);
 
   &.is-fixed {
     position: fixed;
@@ -579,6 +572,19 @@ $primary-font: sans-serif;
 
   .cd-dropdown-gallery{
 
+    .hover-container{
+      position: relative;
+    }
+
+    .plus-hover{
+      @include transition(opacity .3s);
+      background: rgba(15, 15, 15, 0);
+    }
+
+    a{
+      position: relative;
+    }
+
     img{
       position: absolute;
       display: block;
@@ -587,6 +593,11 @@ $primary-font: sans-serif;
       left: 20px;
       top: 50%;
       margin-top: -20px;
+      @include transition(opacity .3s, transform .3s);
+    }
+
+    i{
+      @include transition(all .3s);
     }
 
     .cd-dropdown-item{
@@ -739,6 +750,39 @@ $primary-font: sans-serif;
         left: 20px;
         top: 0;
         margin-top: 12px;
+      }
+
+      li{
+
+        i{
+          top:50%;
+          left:25%;
+          @include transform(translateX(-25%) translateY(-50%));
+          font-size: 60px;
+          position: absolute;
+          opacity: 0;
+        }
+
+        &:hover{
+
+          i{
+            top: 50%;
+            left: 50%;
+            @include transform(translateX(-50%) translateY(-50%));
+            opacity: 1;
+          }
+
+          .plus-hover{
+            background: rgba(15, 15, 15, .65);
+          }
+
+        }
+      }
+
+      .plus-hover{
+        position: absolute;
+        width:100%;
+        height: 100%;
       }
 
     }
