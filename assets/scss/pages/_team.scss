@@ -14,7 +14,7 @@
   max-width: 500px;
   margin:0 auto 30px;
   background-color: $white;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   text-align: center;
 
   .barber__image{
@@ -24,8 +24,8 @@
   }
 
   .overlay{
-	height:250px;
-	padding-top: 80px;
+	height:150px;
+	padding-top: 0;
 	opacity: 0;
 	background-color: rgba(175, 140, 69, 0.8);
 	@include transition (opacity .3s ease);
@@ -51,32 +51,20 @@
 	margin-top:-60px;
 	z-index: 2;
 	position: relative;
+	width: 35%;
   }
 
   .title{
-	margin:50px auto;
+	margin:25px auto;
   }
 
   h4{
-	font-size: 21px;
-  }
-  h5{
-	font-family:$courier;
 	font-size: 16px;
   }
 
-  &:hover{
-	.overlay{
-	  opacity: 1;
-
-	  h3{
-		@include transform(translate3d(0,0,0));
-	  }
-
-	  img{
-		@include transform(translate3d(0,0,0));
-	  }
-	}
+  h5{
+	font-family:$courier;
+	font-size: 16px;
   }
 
 }
@@ -100,7 +88,44 @@
 // Displays greater than 768px 
 @include breakpoint(tablet) {
 
+  .barber__wrapper{
+	max-width:500px;
+	float:left;
+	margin:0 auto;
+  }
+
   .barber__box{
+	max-width: 500px;
+	padding-bottom: 30px;
+
+
+	.overlay {
+	  height: 130px;
+	  padding-top: 20px;
+	}
+
+	.avatar{
+	  width:45%;
+	}
+
+	.title{
+	  margin:25px auto;
+	}
+
+	&:hover{
+	  .overlay{
+		opacity: 1;
+
+		h3{
+		  @include transform(translate3d(0,0,0));
+		}
+
+		img{
+		  @include transform(translate3d(0,0,0));
+		}
+	  }
+	}
+
   }
 
 	.book__app{
@@ -158,6 +183,28 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+  .barber__box{
+	max-width: 500px;
+	padding-bottom: 40px;
+
+	.overlay {
+	  height: 250px;
+	  padding-top: 80px;
+	}
+
+	.avatar{
+	  width:auto;
+	}
+
+	.title{
+	  margin:50px auto;
+	}
+
+	h4{
+	  font-size: 21px;
+	}
+
+  }
 
 
 }

@@ -89,21 +89,28 @@
 
   i{
 	font-size:28px;
-    display: block;
+    position: absolute;
+    padding-top: 5px;
+    top:-7px;
+    left:-20px;
+    display: none;
   }
 
   li{
-	padding: 20px 15px;
+	padding: 0 15px 15px;
     display: block;
   }
 
   span{
-	display:block;
+    position: relative;
+	display:inline-block;
   }
 
   a{
 	font-family: $ubuntu;
 	font-size: 16px;
+    display: block;
+    padding-top: 5px;
   }
 }
 

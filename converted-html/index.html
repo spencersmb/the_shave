@@ -1,0 +1,1599 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <!-- Title block allowing child pages to override -->
+        <title>Empty</title>
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+        <!--[if IE 9]>
+        <link href="assets/css/shave-ie9-styles.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+
+        <!-- Style block allowing child pages to inject their own styles -->
+        
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/modernizr.min.js"></script>
+
+    </head>
+    <body class="loading">
+
+        <div class="load-icon"></div>
+        <!--
+#################################
+	- Header Section -
+#################################
+-->
+<header id="header" class="is-fixed nav-shadow">
+
+    <!--company name-->
+    <a id="sv__logo" href="index.html">
+    <h1>The Shave</h1>
+    </a>
+
+    <!--
+#################################
+	- Dropdown Nav -
+	Code Credit: codyhouse.co
+#################################
+-->
+<div class="cd-dropdown-wrapper">
+
+    <!-- Menu -->
+    <a href="#" class="cd-dropdown-trigger">Menu</a>
+    <nav class="cd-dropdown">
+
+        <!-- Barbershop name -->
+        <h2>The Shave</h2>
+        <a href="#0" class="cd-close">Close</a>
+
+        <!-- Nav content -->
+        <ul class="cd-dropdown-content">
+
+            <!-- Search input -->
+            <li>
+                <form class="cd-search">
+                  <input type="search" placeholder="Search...">
+                </form>
+            </li>
+
+            <!-- Book now btn for mobile -->
+            <li class="book-now-m" >
+                <a data-toggle="modal" data-target="#myModal">Book Today</a>
+            </li>
+
+            <!-- Why The Shave -->
+            <li class="has-children">
+
+                <!-- Nav title -->
+                <a href="services.html">Why The Shave?</a>
+
+                <ul class="cd-dropdown-services is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
+
+                    <!-- Service 1 -->
+                    <li class="cd-service-bg">
+                        <a class="cd-dropdown-item" href="service-shave.html">
+                            <img class="visible-xs visible-sm" src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="service 1">
+                            <h3>When you get a shave</h3>
+                            <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+                        </a>
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-shave-hover.jpg" alt="service 1">
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-shave.jpg" alt="service 1">
+                    </li>
+
+                    <!-- Service 2 -->
+                    <li class="cd-service-bg">
+                        <a class="cd-dropdown-item" href="service-shave.html">
+                            <img class="visible-xs visible-sm" src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="service 2">
+                            <h3>When you get a hair cut</h3>
+                            <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+                        </a>
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-haircuts-hover.jpg" alt="service 2">
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-haircuts.jpg" alt="service 2">
+                    </li>
+                </ul> <!-- .cd-dropdown-content -->
+            </li> <!-- end why us -->
+
+            <!-- Gallery -->
+            <li class="has-children">
+
+                <!-- Nav title -->
+                <a href="gallery.html">Gallery</a>
+                <ul class="cd-dropdown-gallery is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="gallery.html">View all gallery options</a></li>
+
+                    <!-- Gallery Item 1 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>Masonry Gallery Full width</h3>
+                        </a>
+                    </li>
+
+                    <!-- Gallery Item 2 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>Masonry Gallery Boxed</h3>
+                        </a>
+                    </li>
+
+                    <!-- Gallery Item 3 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>3 Grid Gallery</h3>
+                        </a>
+                    </li>
+
+                    <!-- Gallery Item 4 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>4 Grid Gallery</h3>
+                        </a>
+                    </li>
+                </ul> <!-- end .cd-dropdown-gallery -->
+            </li> <!-- end gallery -->
+
+            <!-- Services -->
+            <li class="has-children">
+
+                <!-- Nav title -->
+                <a href="index.html">Our Services</a>
+                <ul class="cd-secondary-dropdown is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="prices.html">View All Prices</a></li>
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+
+                        <!-- Sub-item title -->
+                        <a href="service-shave.html">Get a haircut</a>
+
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+
+                            <li class="go-back"><a href="#0">Get a haircut</a></li>
+
+                            <li class="see-all">
+                                <a href="full-gallery.html#filter=.hair">View Gallery</a>
+                            </li>
+
+                            <li class="has-children">
+
+                                <a href="#0">Mens Cuts</a>
+
+                                <ul class="is-hidden">
+                                    <li class="go-back"><a href="#0">Go back</a></li>
+                                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Classic Cut</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Buzz Cut</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Cut &amp; Shave</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Color</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Shampoo</a></li>
+                                </ul>
+
+                            </li>
+
+                            <li class="has-children">
+
+                                <a href="#0">Kids Cuts</a>
+
+                                <ul class="is-hidden">
+                                    <li class="go-back"><a href="#0">Kids Cuts</a></li>
+                                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Kids Cut</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Full style</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Shampoo</a></li>
+                                </ul>
+
+                            </li>
+
+                            <li><a href="contact.html">Get a consultation</a></li>
+
+                            <li><a href="team.html">Find a barber</a></li>
+
+                        </ul><!-- end Sub-item contents -->
+
+                    </li><!-- end sub-item -->
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+                        <!-- Sub-item title -->
+                        <a href="service-shave.html">The Shave</a>
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+                            <li class="go-back"><a href="#0">Shave</a></li>
+                            <li class="see-all">
+                              <a href="full-gallery.html#filter=.shave">View Gallery</a>
+                            </li>
+                            <li><a href="prices.html#tab=shave">The Signature Shave</a></li>
+                            <li><a href="prices.html#tab=shave">The Royal Shave</a></li>
+                            <li><a href="prices.html#tab=shave">Traditional Shave</a></li>
+                            <li><a href="prices.html#tab=shave">Razor edging</a></li>
+                            <li><a href="prices.html#tab=shave">Head Shave</a></li>
+                        </ul><!-- end sub-item contents -->
+                    </li><!-- end sub-item -->
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+                        <!-- Sub-item title -->
+                        <a href="service-shave.html">Mustaches</a>
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+                            <li class="go-back"><a href="#0">Mustaches</a></li>
+                            <li class="see-all">
+                                <a href="full-gallery.html#filter=.mustache">View Gallery</a>
+                            </li>
+                            <li><a href="prices.html#tab=beard-mustache">Mustache Trim</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Mustache Wax</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Style the Stash</a></li>
+                        </ul><!-- end sub-item contents -->
+                    </li><!-- end sub-item -->
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+                       <!-- Sub-item title -->
+                        <a href="http://codyhouse.co/?p=748">Beards</a>
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+                            <li class="go-back"><a href="#0">Clothing</a></li>
+                            <li class="see-all">
+                                <a href="full-gallery.html#filter=.beard">View Gallery</a>
+                            </li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Trim</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Waxing</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Goatee Trim</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Sculpt</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Coloring</a></li>
+                        </ul><!-- end sub-item contents -->
+                    </li><!-- end sub-item -->
+
+                </ul> <!-- end .cd-secondary-dropdown -->
+
+            </li><!-- end services -->
+
+            <!-- Theme Features + Icons -->
+            <li class="has-children">
+                <!-- Nav title -->
+                <a href="http://codyhouse.co/?p=748">Features & options</a>
+                <ul class="cd-dropdown-icons is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-diamond"></i>
+                            </div>
+                            <h3>Pricing Tables</h3>
+                            <p>Simple way to hold data</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-flag-o"></i>
+                            </div>
+                            <h3>SVG Icons</h3>
+                            <p>1000+ Free Icons included</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-paper-plane-o"></i>
+                            </div>
+                            <h3>Google Map Service</h3>
+                            <p>Add your own location easily</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <h3>Revolution Slider</h3>
+                            <p>Plugin Included with purchase</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <h3>Responsive Site</h3>
+                            <p>Looks good on every device</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Retina quality</h3>
+                            <p>Looks amazing on all devices</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-camera-retro"></i>
+                            </div>
+                            <h3>Stylish Layouts</h3>
+                            <p>Sleek page layouts</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-picture-o"></i>
+                            </div>
+                            <h3>Beautiful Gallery</h3>
+                            <p>Isotop Gallery plugin setup</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #9</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #10</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #11</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #12</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                </ul> <!-- .cd-dropdown-icons -->
+            </li><!-- end theme features + icons -->
+
+            <li><a href="prices.html">Prices</a></li>
+
+            <li><a href="team.html">Team</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="blog-index.html">Blog</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul> <!-- .cd-dropdown-content -->
+
+    </nav> <!-- end nav -->
+
+</div><!-- end cd-wrapper -->
+
+    <!-- Book now button -->
+    <div class="nav__book">
+    <a href="#" class="book__nav hidden-xs" data-toggle="modal" data-target="#myModal">Book Now</a>
+    </div>
+
+</header>
+
+        <!--
+        #################################
+            - The Shave Content -
+        #################################
+        -->
+        <main class="sv__main--content">
+
+            
+
+	<!--
+#################################
+	- THEMEPUNCH BANNER -
+#################################
+-->
+<section class="container-fluid no-padding white-bg">
+	<div class="angle-bottom-nav" style="border-left-color: #fff;"></div>
+
+	<div class="tp-banner-container">
+		<div class="tp-banner" >
+			<ul>
+				<!-- SLIDE 1 -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" data-title="Barbershop HTML Theme" >
+					<!-- MAIN IMAGE -->
+					<img src="assets/images/backgrounds/1.jpg"  alt="Shave Featured Image 1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+
+					<!-- LAYER NR. 2 -->
+					<div class="tp-caption tp-fade tp-resizeme "
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="-60"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/star-icon.png" alt="Star Icon">
+					</div>
+
+					<!-- LAYER NR. 3 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_small"
+						data-x="center"
+						data-y="center"
+						data-hoffset="85"
+						data-voffset="-60"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">HTML5 theme
+					</div>
+
+					<!-- LAYER NR. 3 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_small"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-85"
+						data-voffset="-60"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">Barbershop
+					</div>
+
+					<!-- LAYER NR. 4 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_frame"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="50"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/logo-frame.png" alt="Logo Frame">
+					</div>
+
+					<!-- LAYER NR. 5 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_cursive"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-160"
+						data-voffset="53"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">The
+					</div>
+
+					<!-- LAYER NR. 6 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title"
+						data-x="center"
+						data-y="center"
+						data-hoffset="70"
+						data-voffset="50"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">Shave
+					</div>
+
+					<!-- LAYER NR. 7 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_desc"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="160"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">presenting a fully featured
+					</div>
+					<!-- LAYER NR. 8 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_desc"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="190"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">barbershop html5 theme!
+					</div>
+
+					<!-- LAYER NR. 9 -->
+					<div class="tp-caption tp-fade tp-resizeme"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="260"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">
+							<div class="shave_title_btn">
+								<a href="#" class="book__now--btn featured slider-btn">Get it today</a>
+							</div>
+					</div>
+
+				</li>
+
+				<!-- SLIDE  2 -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-title="Hipster HairCuts">
+					<!-- MAIN IMAGE -->
+					<img src="assets/images/backgrounds/2.jpg"  alt="Shave Featured Image 2"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+
+					<!-- LAYERS -->
+					<!-- LAYER NR. 1 -->
+					<div id="arch" class="tp-caption tp-fade tp-resizeme"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="-90"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/perfect-icon.png" alt="Perfect Icon">
+					</div>
+
+					<!-- LAYER NR. 2 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title lg"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-300"
+						data-voffset="50"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">Barbers
+					</div>
+
+					<!-- LAYER NR. 3 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_cursive and"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-35"
+						data-voffset="50"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">&
+					</div>
+
+					<!-- LAYER NR. 4 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title lg"
+						data-x="center"
+						data-y="center"
+						data-hoffset="300"
+						data-voffset="50"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">Creatives
+					</div>
+
+					<!-- LAYER NR. 5 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_desc lg"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="160"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">a beautifully hand crafted theme packed
+					</div>
+
+					<!-- LAYER NR. 6 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_desc lg"
+						data-x="center"
+						data-y="center"
+						data-hoffset="0"
+						data-voffset="195"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">with tons of features
+					</div>
+
+				</li>
+
+				<!-- SLIDE  3-->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-title="Explore Features">
+					<!-- MAIN IMAGE -->
+					<img src="assets/images/backgrounds/3.jpg"  alt="Shave Featured Image 3"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+
+					<div class="tp-caption tp-fade tp-resizeme shave_title md black"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-250"
+						data-voffset="-270"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut"><img src="assets/images/feature-slider/razors.png" alt="Razor logo">
+					</div>
+					<!-- LAYERS
+					LAYER NR. 1 -->
+					<div class="tp-caption tp-fade tp-resizeme shave_title_cursive gold lg"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-230"
+						data-voffset="-100"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">Explore
+					</div>
+
+					<div class="tp-caption tp-fade tp-resizeme shave_title md black"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-250"
+						data-voffset="45"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">pre-built pages
+					</div>
+
+					<div class="tp-caption tp-fade shave_title md black"
+						data-x="center"
+						data-y="center"
+						data-hoffset="-250"
+						data-voffset="125"
+						data-speed="300"
+						data-start="500"
+						data-splitin="none"
+						data-splitout="none"
+						data-elementdelay="0.1"
+						data-endelementdelay="0.1"
+						data-easing="Power3.easeInOut">& features
+					</div>
+
+
+
+				</li>
+
+			</ul>
+		</div><!-- End Banner -->
+	</div><!-- End Container -->
+</section><!-- End Section -->
+
+
+	<!--
+#################################
+	- Staggered Grid Section -
+#################################
+-->
+<section class="container-fluid white-bg">
+    <div class="angle-top" style="color: #fff;"></div>
+    <div class="row staggered__container ">
+
+        <!-- Intro -->
+        <div class="col-sm-12 intro">
+            <h6>Welcome to our barbershop</h6>
+            <h2>We are masters of the blade</h2>
+            <p class="sub-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repellat autem dolor expedita minima quidem vero ipsa ea tempore dolorem nobis eius, modi molestiae dignissimos assumenda aliquid molestias adipisci veritatis!</p>
+        </div> <!-- End Intro -->
+
+        <!-- Box -->
+        <div class="box box-sm box-2 card-shadow-dk">
+            <div class="box-overlay"></div>
+            <img src="assets/images/staggered-grid/box-sm.jpg" alt="Popular Hair Styles">
+            <div class="content">
+                <p>View the most popular hair styles</p>
+                <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+            </div>
+            <a href="#" class="box-link">View More</a>
+        </div><!-- End Box -->
+
+        <!-- Box -->
+        <div class="box box-lg box-1 card-shadow-dk">
+            <div class="content">
+                <h3>First time shave?</h3>
+                <p>Click here to learn about our process.</p>
+                <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+            </div>
+            <div class="box-overlay"></div>
+            <img src="assets/images/staggered-grid/box-lg.jpg" alt="First Visit">
+            <a href="" class="box-link"></a>
+        </div><!-- End Box -->
+
+        <!-- Box -->
+        <div class="box box-sm-hours box-4 card-shadow-dk">
+          <div class="content">
+              <i class="fa fa-clock-o fa-lg clock"></i>
+              <p>our weekly shop hours</p>
+              <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+              <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+          </div>
+          <div class="box-overlay"></div>
+          <img src="assets/images/staggered-grid/box-sm-hours.jpg" alt="Barbershop Hours">
+          <a href="" class="box-link"></a>
+        </div><!-- End Box -->
+
+        <!-- Tall Image  -->
+        <div class="box box-sm-tall box-3 hidden-xs">
+            <img src="assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop Tools">
+        </div><!-- End Tall Image -->
+
+        <!-- Box -->
+        <div class="box box-last box-1 card-shadow-dk">
+            <div class="content">
+                <h3>Meet the staff</h3>
+                <p>Find the right barber expert to clean you up.</p>
+                <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+            </div>
+          <div class="box-overlay"></div>
+          <img src="assets/images/staggered-grid/box-last.jpg" alt="Meet the staff">
+          <a href="" class="box-link"></a>
+        </div><!-- Box -->
+
+    </div><!-- end row -->
+
+</section><!-- end section -->
+
+
+	<!--
+#################################
+	- Service Section -
+#################################
+-->
+<section class="container-fluid grey-bg reverse-angle">
+
+	<div class="sv__container--md sell__box">
+
+		<!-- Service Feature Image -->
+		<img class="img-responsive" src="assets/images/dual-blades.jpg" alt="">
+
+		<div class="row wrapper">
+			<h2>Clean Cut</h2>
+
+			<!-- Service Feature -->
+			<div class="col-sm-12 col-md-4 desc">
+				<div class="icon__box">
+					<div class="icon__box--content">
+						<h5>Great Features</h5>
+						<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service Feature -->
+			<div class="col-sm-12 col-md-4 desc">
+				<div class="icon__box">
+					<div class="icon__box--content">
+						<h5>Unique Page design</h5>
+						<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Service Feature -->
+			<div class="col-sm-12 col-md-4 desc">
+				<div class="icon__box">
+					<div class="icon__box--content">
+						<h5>tons of options</h5>
+						<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- End Row -->
+
+	</div><!-- End Container -->
+
+</section><!-- End Section -->
+
+
+	<!--
+#################################
+	- Featured Services -
+#################################
+-->
+<section id="cascadeFeature" class="container-fluid feature__box--fluid no-padding" style="background-image: url(/assets/images/feature-boxs/feature-background.jpg)">
+	<div class="background-overlay-black"></div>
+	<div class="container sv__container--md inner-content-module feature__box--container">
+
+		<!-- section header -->
+		<div class="headline-md white">
+			 <h2>Swank Services</h2>
+			 <p>It is my goal to provide a first-class barber shop experience at a reasonable price. If we do our job right then you too will get more than a hair cut and a shave—the experience will be memorable. </p>
+		</div><!-- end header -->
+
+		<!-- offset content -->
+		<div class="feature-offset">
+
+			<!-- feature 1 -->
+			<div class="col-xs-12 col-sm-4 col-md-4 feature__box">
+				<figure class="feature__box--effect card-shadow-md">
+					<img class="img-responsive" src="assets/images/feature-boxs/feature-box-1.jpg" alt="feature 1"/>
+					<figcaption>
+						<div class="content">
+							<h2>Truly unique</h2>
+							<p class="hidden-sm">We are more than just a barbershop</p>
+						</div>
+						<a href="#">View more</a>
+					</figcaption><!-- end figcaption -->
+				</figure><!-- end figure -->
+			</div><!-- end feature 1 -->
+
+			<!-- feature 2 -->
+			<div class="col-xs-12 col-sm-4 col-md-4 feature__box">
+				<figure class="feature__box--effect card-shadow-md">
+					<img class="img-responsive" src="assets/images/feature-boxs/feature-box-3.jpg" alt="feature 2"/>
+					<figcaption>
+						<div class="content">
+							<h2>Services</h2>
+							<p class="hidden-sm">View the full list </p>
+						</div>
+						<a href="#">View more</a>
+					</figcaption><!-- end figcaption -->
+				</figure><!-- end figure -->
+			</div><!-- end feature 2 -->
+
+			<!-- feature 3 -->
+			<div class="col-xs-12 col-sm-4 col-md-4 feature__box">
+				<figure class="feature__box--effect card-shadow-md">
+					<img class="img-responsive" src="assets/images/feature-boxs/feature-box-2.jpg" alt="feature 3"/>
+					<figcaption>
+						<div class="content">
+							<h2>Gallery</h2>
+							<p class="hidden-sm">The latest trends and styles.</p>
+						</div>
+						<a href="#">View more</a>
+					</figcaption><!-- end figcaption -->
+				</figure><!-- end figure -->
+			</div><!-- end feature 3 -->
+
+		</div><!-- end offset content -->
+
+	</div><!-- end container -->
+
+</section><!-- end section -->
+
+	<!--
+#################################
+	- Contact Section -
+#################################
+-->
+<section class="container-fluid white-bg no-padding">
+
+		<div class="sv__container--fluid">
+
+			<div class="contact__wrapper">
+
+				<div class="section__wrapper">
+
+					<!-- Contact Overview -->
+					<div class="contact__card">
+
+						<!-- Contact Image Left -->
+						<div class="contact__card--left">
+							<img class="img-responsive" src="assets/images/contact/contact.jpg" alt="">
+						</div><!-- end content left -->
+
+						<!-- Contact Content Right -->
+						<div class="contact__card--right">
+
+							<!-- Barbershop Location & Phone -->
+							<div class="contact__shop">
+								<div class="contact__card--content">
+									<h3>Location</h3>
+									<p>Nordhoff st. , Northridge, CA 91324</p>
+									<p>303-333-3333</p>
+								</div>
+							</div>
+
+							<!-- Barbershop Email -->
+							<div class="contact__us">
+								<div class="contact__us--content card-shadow-lt icon-up-down">
+									<div class="inner__content">
+										<h4>contact us<i class="fa fa-paper-plane-o animate-down-2 top-i"></i><i class="fa fa-envelope-o fa-lg animate-down-1 bottom-i"></i></h4>
+									</div>
+									<a href="#">Email Us</a>
+								</div>
+							</div>
+
+							<!-- Barbershop Hours -->
+							<div class="contact__hours">
+								<div class="contact__card--content">
+									<h3>Opening Hours</h3>
+									<p>Monday to Friday</p>
+									<p>9am - 6pm</p>
+									<p>Saturday to Sunday</p>
+									<p>10am - 4pm</p>
+								</div>
+							</div>
+
+						</div><!-- end content right -->
+
+					</div><!-- end contact card -->
+
+				</div><!-- end section wrapper -->
+
+			</div><!-- end contact wrapper -->
+
+		</div><!-- end container -->
+
+</section><!-- end section -->
+
+
+	<!--
+#################################
+	- Blog Overview Section -
+#################################
+-->
+<section  id="blog-skr" class="container-fluid pricing__container no-padding" >
+
+	<div class="parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;" data-anchor-target="#blog-skr" style="background-image: url(/assets/images/backgrounds/test.jpg);">
+
+		<!-- Blog transparent Bg -->
+		<div class="col-xs-12 col-md-5 no-padding blog__overview">
+
+		</div>
+
+		<!-- Blog Overview Container -->
+		<div class="col-xs-12 col-md-9 col-md-offset-3 no-padding has-height ">
+
+			<div class="blog__mod--wrapper">
+
+				<!-- Blog Overview Contents-->
+				<div class="blog__overview--contents">
+
+					<!-- Blog Headline -->
+					<div class="headline-md">
+						<h2>Featured Posts</h2>
+					</div>
+
+					<!-- Blog Feature post 1 -->
+					<div class="feature__post card-shadow-lt">
+
+						<div class="post-img">
+							<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="Blog Feature post 1" />
+						</div>
+
+						<div class="feature-content">
+
+							<h3>A beautifully hand crafted theme packed with tons of features.</h3>
+
+							<div class="details">
+								<div class="author">by <a href="#">Spencer bigum</a></div>
+								<div class="stats">233 views | 20 comments</div>
+							</div>
+
+						</div>
+
+						<a class="feature-link" href="#">read more</a>
+
+					</div>
+
+					<!-- Blog Feature post 2 -->
+					<div class="feature__post card-shadow-lt">
+
+						<div class="post-img">
+							<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="Blog Feature post 2" />
+						</div>
+
+						<div class="feature-content">
+
+							<h3>A beautifully hand crafted theme packed with tons of features.</h3>
+
+							<div class="details">
+								<div class="author">by <a href="#">Spencer bigum</a></div>
+								<div class="stats">233 views | 20 comments</div>
+							</div>
+
+						</div>
+
+						<a class="feature-link" href="#">read more</a>
+
+					</div>
+
+					<!-- Blog Feature post 3 -->
+					<div class="feature__post card-shadow-lt">
+
+						<div class="post-img">
+							<img class="img-responsive" src="assets/images/blog/blog-feature-thumb.jpg" alt="Blog Feature post 3" />
+						</div>
+
+						<div class="feature-content">
+
+							<h3>A beautifully hand crafted theme packed with tons of features.</h3>
+
+							<div class="details">
+								<div class="author">by <a href="#">Spencer bigum</a></div>
+								<div class="stats">233 views | 20 comments</div>
+							</div>
+
+						</div>
+
+						<a class="feature-link" href="#">read more</a>
+
+					</div>
+
+				</div><!-- end blog overview contents -->
+
+			</div><!-- end wrapper -->
+
+		</div><!-- end blog content -->
+
+	</div><!-- end parallax -->
+
+</section><!-- end section -->
+
+
+
+
+	<!--
+#################################
+ - Twitter/Testimonial Section -
+#################################
+-->
+<section class="container-fluid no-padding tier3">
+
+	<div class="gold-bg">
+
+		<!-- Twitter wrapper -->
+		<div class="twitter__wrapper">
+
+				<div id="twitter-carousel" class="carousel slide">
+
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#twitter-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#twitter-carousel" data-slide-to="1"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+						<!-- tweet -->
+						<div class="item active">
+
+							<h3>Latest Tweet</h3>
+
+							<!-- tweet content -->
+							<blockquote>
+
+								<p>Sed ullamcorper efficitur tortor eu consectetur. Etiam tincidunt nisi quis ex convallis, vitae accumsan massa aliquam. Sed</p>
+								<hr>
+
+								<!-- twitter user -->
+								<cite>birdeman228</cite>
+
+							</blockquote>
+
+						</div><!-- end tweet -->
+
+						<!-- tweet -->
+						<div class="item">
+
+							<h3>Latest Tweet</h3>
+
+							<!-- tweet content -->
+							<blockquote>
+
+								<p>Sed ullamcorper efficitur tortor eu consectetur. Etiam tincidunt nisi quis ex convallis, vitae accumsan massa aliquam. Sed</p>
+								<hr>
+
+								<!-- twitter user -->
+								<cite>birdeman228</cite>
+
+							</blockquote>
+
+						</div><!-- end tweet -->
+
+					</div><!-- end carousel-inner -->
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#twitter-carousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#twitter-carousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+
+				</div><!-- end twitter-carousel -->
+
+		</div><!-- end twitter wrapper -->
+
+	</div><!-- end gold bg -->
+
+</section><!-- end section -->
+
+	<!--
+#################################
+	- Featured Sell Box -
+#################################
+-->
+<!-- Footer push class added to last section -->
+<section class="container-fluid white-bg footer-push">
+
+	<!-- Sell Box -->
+	<div class="sv__container--sm sell__box">
+
+		<!-- Sell box intro -->
+		<div class="col-sm-12 intro">
+			<h6>Introducing</h6>
+			<h2>Modern Design + Cool Features</h2>
+			<h5>A niche theme fit for all your barber ideas and designs.</h5>
+		</div>
+
+		<!-- Sell box featured image -->
+		<div class="col-sm-12 no-padding">
+			<img class="img-responsive" src="assets/images/feature-boxs/sell-box.jpg" alt="featured barber products">
+		</div>
+
+		<!-- Icon grid container -->
+		<div class="icon__box--container">
+
+			<div class="row">
+
+				<!-- Item 1 -->
+				<div class="col-sm-12 col-md-4">
+					<div class="icon__box">
+						<div class="icon__wrapper">
+							<i class="fa fa-cogs fa-4x"></i>
+						</div>
+						<div class="icon__box--content">
+							<h5>Great Features</h5>
+							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 2 -->
+				<div class="col-sm-12 col-md-4">
+					<div class="icon__box">
+						<div class="icon__wrapper">
+							<i class="fa fa-file-text fa-4x"></i>
+						</div>
+						<div class="icon__box--content">
+							<h5>Unique Page design</h5>
+							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Item 3 -->
+				<div class="col-sm-12 col-md-4">
+					<div class="icon__box">
+						<div class="icon__wrapper">
+							<i class="fa fa-sliders fa-4x"></i>
+						</div>
+						<div class="icon__box--content">
+							<h5>tons of options</h5>
+							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- end row -->
+
+		</div><!-- end icon container-->
+
+	</div><!-- end sell-box -->
+
+</section><!-- end section -->
+
+
+
+
+            
+
+        </main><!-- end main -->
+
+        <!--
+#################################
+	- Footer -
+#################################
+-->
+<footer class="container-fluid no-padding loading">
+
+	<!-- Footer Wrapper -->
+	<div class="footer__wrapper">
+		
+		<div class="row footer__row">
+
+			<!-- Footer Logo -->
+			<div class="footer__logo no-padding">
+				<div class="logo__container">
+					<h5>The</h5>
+					<h3>Shave</h3>
+					<h4>Mens Barbershop</h4>
+				</div>
+			</div>
+
+			<!-- Footer Description -->
+			<div class="footer__desc">
+
+				<div class="row no-margin">
+					
+					<!-- email container -->
+					<div class="col-xs-12 email__wrapper">
+
+						<!-- email form -->
+						<div class="email__form form-group">
+
+							<form action="" method="post">
+
+								<!-- email input -->
+								<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
+
+								<!-- subtext to email -->
+								<div class="email__offers">
+									<p class="eamil__offers--connect">Get the latest updates, special offers and much more.</p>
+								</div><!-- end sub-text -->
+
+								<button type="submit" class="btn book-now-btn form-btn">Submit</button>
+
+							</form>
+
+						</div><!-- end email form -->
+
+					</div><!-- end email container -->
+
+					<!-- address container -->
+					<div class="col-xs-12 footer__contact">
+
+						<!-- address -->
+						<div class="col-xs-12 col-sm-6 footer__address no-padding">
+							<p>Nordhoff st.</p>
+							<p>NorthRidge, CA 91324</p>
+						</div>
+
+						<!-- email -->
+						<div class="col-xs-12 col-sm-6 contact no-padding">
+							<a href="mailto:info@theshave.com">info@theshave.com</a>
+							<a href="tel:303-313-0303">303-313-0303</a>
+						</div>
+
+					</div><!-- end address container -->
+
+					<!-- social media -->
+					<div class="col-xs-12 social">
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<ul>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="twitter text-hide"><a href="">Twitter</a></li>
+								<li class="instagram text-hide"><a href="">Instagram</a></li>
+								<li class="linkedin text-hide"><a href="">Linkedin</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+							</ul>
+						</div><!-- end col -->
+
+						<!-- copyright -->
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="copyright">
+								<p>2015 The Shave LTD</p>
+							</div>
+						</div><!-- end col -->
+						
+					</div><!-- end social media -->
+
+				</div><!-- end row -->
+
+			</div><!-- end right side -->
+
+		</div><!-- end row -->
+
+	</div><!-- end container -->
+
+</footer>
+
+        <!-- Book now modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="row">
+
+                        <!-- Modal Section 1 -->
+                        <div class="col-xs-12 col-md-6 no-padding modal-info">
+
+                            <!-- Mobile close btn (hidden on larger screens) -->
+                            <button type="button" class="visible-xs visible-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                            </button>
+
+                            <img class="img-responsive" src="assets/images/contact/modal-header.jpg" alt="Book Today"/>
+
+                            <!-- Section 1 content -->
+                            <div class="modal-bookNow">
+                                <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
+                                <h3>Book today</h3>
+                                <h5>We are masters of the blade</h5>
+                                    <ul class="book-list">
+                                        <li>
+                                            <i class="fa fa-mobile"></i>
+                                            <span>Call ahead</span>
+                                            <a href="">444-444-444</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>walk-ins welcome</span>
+                                            <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
+                                        </li>
+                                    </ul>
+                            </div><!-- end modal content -->
+                        </div><!-- end modal section 1 -->
+
+                        <!-- Modal Section 2 -->
+                        <div class="col-xs-12 col-md-6 no-padding">
+                            <div class="modal-form">
+                                <button type="button" class="hidden-xs hidden-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                                </button>
+                                <h4>email us</h4>
+
+                                <!-- Form Container -->
+                                <div class="contact__form--container">
+                                    <div class="row">
+
+                                        <!-- Contact form -->
+                                        <form action="" method="post">
+                                            <div class="col-xs-12 no-padding">
+
+                                                <!-- User Name -->
+                                                <div class="input__container">
+                                                    <span class="icon"><i class="fa fa-user"></i></span>
+                                                    <input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
+                                                </div>
+
+                                                <!-- User Email -->
+                                                <div class="input__container">
+                                                    <span class="icon"><i class="fa fa-envelope"></i></span>
+                                                    <input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
+                                                </div>
+
+                                                <!-- User Message -->
+                                                <div class="input__container pencil-contact">
+                                                    <span class="icon"><i class="fa fa-pencil "></i></span>
+                                                    <textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
+                                                </div>
+
+                                            </div><!-- end col-xs-12 -->
+
+                                            <!-- Submit Btn -->
+                                            <div class="col-xs-12 no-padding">
+                                                <button type="submit" class="btn book-now-btn form-btn">Submit</button>
+                                            </div><!-- End Submit -->
+
+                                        </form><!-- End Form -->
+
+                                    </div><!-- end row -->
+                                </div><!-- end container -->
+
+                            </div><!-- end modal-form -->
+                        </div><!-- end modal section 2 -->
+                    </div><!-- end row -->
+                </div><!-- end modal-content -->
+            </div><!-- end modal-dialog -->
+        </div><!-- End Modal -->
+
+        <!-- Plugins -->
+        <script src="assets/scripts/bootstrap.min.js"></script>
+        <script src="assets/scripts/jquery.menu-aim.min.js"></script>
+        <script src="assets/scripts/skrollr.min.js"></script>
+        <script src="assets/scripts/imagesloaded.min.js"></script>
+        <!-- <script src="assets/scripts/smooth-scroll.min.js"></script> -->
+        <script src="assets/scripts/jquery-placeholder.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+        <!-- Settings -->
+        <script src="assets/scripts/nav-settings.min.js"></script>
+        <script src="assets/scripts/main-settings.min.js"></script>
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        
+    <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
+<script>
+
+$(function() {
+
+	// Twitter Carousel
+	// ==========================================================================
+	$('#twitter-carousel').carousel({
+		interval: 0
+	});
+
+	// Revolution Slider Settings
+	// ==========================================================================
+	var api = $('.tp-banner').revolution(
+		{
+			dottedOverlay:"none",
+			delay:16000,
+			startwidth:1170,
+			startheight:700,
+			hideThumbs:200,
+
+			thumbWidth:100,
+			thumbHeight:50,
+			thumbAmount:5,
+
+			navigationType:"none",
+			navigationArrows:"solo",
+			navigationStyle:"preview4",
+
+			touchenabled:"on",
+			onHoverStop:"off",
+
+			swipe_velocity: 0.7,
+			swipe_min_touches: 1,
+			swipe_max_touches: 1,
+			drag_block_vertical: false,
+
+			parallax:"mouse",
+			parallaxBgFreeze:"off",
+			parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+			keyboardNavigation:"off",
+
+			navigationHAlign:"center",
+			navigationVAlign:"bottom",
+			navigationHOffset:0,
+			navigationVOffset:0,
+
+			soloArrowLeftHalign:"left",
+			soloArrowLeftValign:"center",
+			soloArrowLeftHOffset:20,
+			soloArrowLeftVOffset:0,
+
+			soloArrowRightHalign:"right",
+			soloArrowRightValign:"center",
+			soloArrowRightHOffset:20,
+			soloArrowRightVOffset:0,
+
+			shadow:0,
+			fullWidth:"on",
+			fullScreen:"on",
+
+			spinner:"spinner4",
+
+			stopLoop:"off",
+			stopAfterLoops:-1,
+			stopAtSlide:-1,
+
+			shuffle:"off",
+
+			autoHeight:"off",
+			forceFullWidth:"on",
+
+			hideThumbsOnMobile:"off",
+			hideNavDelayOnMobile:1500,
+			hideBulletsOnMobile:"off",
+			hideArrowsOnMobile:"off",
+			hideThumbsUnderResolution:0,
+			hideTimerBar:"on",
+
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			startWithSlide:0,
+			// videoJsPath:"rs-plugin/videojs/",
+			fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old
+		});
+
+});
+
+</script>
+
+
+
+    </body>
+</html>

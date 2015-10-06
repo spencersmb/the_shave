@@ -105,15 +105,14 @@
 @include breakpoint(tablet) {
 
   .price__container{
-    max-width: 500px;
-    float:none;
+    float:left;
     margin:0 auto;
   }
 
   .price__table{
 
     .price__header {
-      margin-bottom: 25px;
+      margin-bottom: 0;
 
       h2 {
         margin: 0 0 35px 0;
@@ -136,7 +135,8 @@
     }
 
     li{
-      padding-bottom:15px;
+      padding-bottom:10px;
+      font-size: 14px;
     }
 
   }
@@ -145,11 +145,6 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-
-  .price__container{
-    float:left;
-    margin:0 auto;
-  }
 
   .price__table{
     max-width: none;
@@ -169,6 +164,11 @@
         }
       }
 
+    }
+
+    li{
+      padding-bottom:15px;
+      font-size: 16px;
     }
 
   }

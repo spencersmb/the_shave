@@ -1,0 +1,826 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <!-- Title block allowing child pages to override -->
+        <title>Empty</title>
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+        <!--[if IE 9]>
+        <link href="assets/css/shave-ie9-styles.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <![endif]-->
+
+        <!-- Style block allowing child pages to inject their own styles -->
+        
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/modernizr.min.js"></script>
+
+    </head>
+    <body class="loading">
+
+        <div class="load-icon"></div>
+        <!--
+#################################
+	- Header Section -
+#################################
+-->
+<header id="header" class="is-fixed nav-shadow">
+
+    <!--company name-->
+    <a id="sv__logo" href="index.html">
+    <h1>The Shave</h1>
+    </a>
+
+    <!--
+#################################
+	- Dropdown Nav -
+	Code Credit: codyhouse.co
+#################################
+-->
+<div class="cd-dropdown-wrapper">
+
+    <!-- Menu -->
+    <a href="#" class="cd-dropdown-trigger">Menu</a>
+    <nav class="cd-dropdown">
+
+        <!-- Barbershop name -->
+        <h2>The Shave</h2>
+        <a href="#0" class="cd-close">Close</a>
+
+        <!-- Nav content -->
+        <ul class="cd-dropdown-content">
+
+            <!-- Search input -->
+            <li>
+                <form class="cd-search">
+                  <input type="search" placeholder="Search...">
+                </form>
+            </li>
+
+            <!-- Book now btn for mobile -->
+            <li class="book-now-m" >
+                <a data-toggle="modal" data-target="#myModal">Book Today</a>
+            </li>
+
+            <!-- Why The Shave -->
+            <li class="has-children">
+
+                <!-- Nav title -->
+                <a href="services.html">Why The Shave?</a>
+
+                <ul class="cd-dropdown-services is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
+
+                    <!-- Service 1 -->
+                    <li class="cd-service-bg">
+                        <a class="cd-dropdown-item" href="service-shave.html">
+                            <img class="visible-xs visible-sm" src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="service 1">
+                            <h3>When you get a shave</h3>
+                            <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+                        </a>
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-shave-hover.jpg" alt="service 1">
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-shave.jpg" alt="service 1">
+                    </li>
+
+                    <!-- Service 2 -->
+                    <li class="cd-service-bg">
+                        <a class="cd-dropdown-item" href="service-shave.html">
+                            <img class="visible-xs visible-sm" src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="service 2">
+                            <h3>When you get a hair cut</h3>
+                            <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
+                        </a>
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-haircuts-hover.jpg" alt="service 2">
+                        <img class="hidden-xs hidden-sm" src="assets/images/dropdown-nav/nav-haircuts.jpg" alt="service 2">
+                    </li>
+                </ul> <!-- .cd-dropdown-content -->
+            </li> <!-- end why us -->
+
+            <!-- Gallery -->
+            <li class="has-children">
+
+                <!-- Nav title -->
+                <a href="gallery.html">Gallery</a>
+                <ul class="cd-dropdown-gallery is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="gallery.html">View all gallery options</a></li>
+
+                    <!-- Gallery Item 1 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>Masonry Gallery Full width</h3>
+                        </a>
+                    </li>
+
+                    <!-- Gallery Item 2 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>Masonry Gallery Boxed</h3>
+                        </a>
+                    </li>
+
+                    <!-- Gallery Item 3 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>3 Grid Gallery</h3>
+                        </a>
+                    </li>
+
+                    <!-- Gallery Item 4 -->
+                    <li>
+                        <a class="cd-dropdown-item" href="gallery-details.html">
+                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <h3>4 Grid Gallery</h3>
+                        </a>
+                    </li>
+                </ul> <!-- end .cd-dropdown-gallery -->
+            </li> <!-- end gallery -->
+
+            <!-- Services -->
+            <li class="has-children">
+
+                <!-- Nav title -->
+                <a href="index.html">Our Services</a>
+                <ul class="cd-secondary-dropdown is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="prices.html">View All Prices</a></li>
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+
+                        <!-- Sub-item title -->
+                        <a href="service-shave.html">Get a haircut</a>
+
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+
+                            <li class="go-back"><a href="#0">Get a haircut</a></li>
+
+                            <li class="see-all">
+                                <a href="full-gallery.html#filter=.hair">View Gallery</a>
+                            </li>
+
+                            <li class="has-children">
+
+                                <a href="#0">Mens Cuts</a>
+
+                                <ul class="is-hidden">
+                                    <li class="go-back"><a href="#0">Go back</a></li>
+                                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Classic Cut</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Buzz Cut</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Cut &amp; Shave</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Color</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Shampoo</a></li>
+                                </ul>
+
+                            </li>
+
+                            <li class="has-children">
+
+                                <a href="#0">Kids Cuts</a>
+
+                                <ul class="is-hidden">
+                                    <li class="go-back"><a href="#0">Kids Cuts</a></li>
+                                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Kids Cut</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Full style</a></li>
+                                    <li><a href="prices.html#tab=haircuts">Shampoo</a></li>
+                                </ul>
+
+                            </li>
+
+                            <li><a href="contact.html">Get a consultation</a></li>
+
+                            <li><a href="team.html">Find a barber</a></li>
+
+                        </ul><!-- end Sub-item contents -->
+
+                    </li><!-- end sub-item -->
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+                        <!-- Sub-item title -->
+                        <a href="service-shave.html">The Shave</a>
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+                            <li class="go-back"><a href="#0">Shave</a></li>
+                            <li class="see-all">
+                              <a href="full-gallery.html#filter=.shave">View Gallery</a>
+                            </li>
+                            <li><a href="prices.html#tab=shave">The Signature Shave</a></li>
+                            <li><a href="prices.html#tab=shave">The Royal Shave</a></li>
+                            <li><a href="prices.html#tab=shave">Traditional Shave</a></li>
+                            <li><a href="prices.html#tab=shave">Razor edging</a></li>
+                            <li><a href="prices.html#tab=shave">Head Shave</a></li>
+                        </ul><!-- end sub-item contents -->
+                    </li><!-- end sub-item -->
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+                        <!-- Sub-item title -->
+                        <a href="service-shave.html">Mustaches</a>
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+                            <li class="go-back"><a href="#0">Mustaches</a></li>
+                            <li class="see-all">
+                                <a href="full-gallery.html#filter=.mustache">View Gallery</a>
+                            </li>
+                            <li><a href="prices.html#tab=beard-mustache">Mustache Trim</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Mustache Wax</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Style the Stash</a></li>
+                        </ul><!-- end sub-item contents -->
+                    </li><!-- end sub-item -->
+
+                    <!-- Sub-item -->
+                    <li class="has-children">
+                       <!-- Sub-item title -->
+                        <a href="http://codyhouse.co/?p=748">Beards</a>
+                        <!-- Sub-item contents -->
+                        <ul class="is-hidden">
+                            <li class="go-back"><a href="#0">Clothing</a></li>
+                            <li class="see-all">
+                                <a href="full-gallery.html#filter=.beard">View Gallery</a>
+                            </li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Trim</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Waxing</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Goatee Trim</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Sculpt</a></li>
+                            <li><a href="prices.html#tab=beard-mustache">Beard Coloring</a></li>
+                        </ul><!-- end sub-item contents -->
+                    </li><!-- end sub-item -->
+
+                </ul> <!-- end .cd-secondary-dropdown -->
+
+            </li><!-- end services -->
+
+            <!-- Theme Features + Icons -->
+            <li class="has-children">
+                <!-- Nav title -->
+                <a href="http://codyhouse.co/?p=748">Features & options</a>
+                <ul class="cd-dropdown-icons is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a></li>
+                    <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-diamond"></i>
+                            </div>
+                            <h3>Pricing Tables</h3>
+                            <p>Simple way to hold data</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-flag-o"></i>
+                            </div>
+                            <h3>SVG Icons</h3>
+                            <p>1000+ Free Icons included</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-paper-plane-o"></i>
+                            </div>
+                            <h3>Google Map Service</h3>
+                            <p>Add your own location easily</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <h3>Revolution Slider</h3>
+                            <p>Plugin Included with purchase</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <h3>Responsive Site</h3>
+                            <p>Looks good on every device</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Retina quality</h3>
+                            <p>Looks amazing on all devices</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-camera-retro"></i>
+                            </div>
+                            <h3>Stylish Layouts</h3>
+                            <p>Sleek page layouts</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-picture-o"></i>
+                            </div>
+                            <h3>Beautiful Gallery</h3>
+                            <p>Isotop Gallery plugin setup</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #9</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #10</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #11</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-object-ungroup"></i>
+                            </div>
+                            <h3>Service #12</h3>
+                            <p>This is the item description</p>
+                        </a>
+                    </li>
+
+                </ul> <!-- .cd-dropdown-icons -->
+            </li><!-- end theme features + icons -->
+
+            <li><a href="prices.html">Prices</a></li>
+
+            <li><a href="team.html">Team</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="blog-index.html">Blog</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul> <!-- .cd-dropdown-content -->
+
+    </nav> <!-- end nav -->
+
+</div><!-- end cd-wrapper -->
+
+    <!-- Book now button -->
+    <div class="nav__book">
+    <a href="#" class="book__nav hidden-xs" data-toggle="modal" data-target="#myModal">Book Now</a>
+    </div>
+
+</header>
+
+        <!--
+        #################################
+            - The Shave Content -
+        #################################
+        -->
+        <main class="sv__main--content">
+
+            
+<!-- TODO: Comment this section out -->
+	<section class="container-fluid white-bg">
+		<div class="row sv__container--sm">
+
+			<div class="col-xs-12 inner__header--sm">
+				<h1>Trending Cuts</h1>
+				<h3>The latest hair cuts that made our heads turn.</h3>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="container-fluid footer-push container__white no-padding">
+
+		<div class="col-xs-12 gallery-filters">
+	<ul class="filter-group">
+		<li class="filter-item" data-filter="*">Show All</li>
+		<li class="filter-item" data-filter=".hair">Hair Styles</li>
+		<li class="filter-item" data-filter=".beard">Beard Sculpts</li>
+		<li class="filter-item" data-filter=".mustache">Mustache twirls</li>
+		<li class="filter-item" data-filter=".shave">Clean Shave</li>
+	</ul>
+</div>
+		
+		<div class="col-xs-12 small-gallery">
+			<div class="portfolioContainer sv__container--sm">
+
+			 	<div class="grid-sizer"></div>
+			    <div class="gallery-item width2 height2 hair">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-1.jpg);" ></span>
+					</a>
+			    </div>
+			 
+			    <div class="gallery-item width2 beard">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-2.jpg);" ></span>
+					</a>
+			    </div>    
+			 
+			    <div class="gallery-item width1 mustache">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-1.jpg);" ></span>
+					</a>
+			    </div>
+			     
+			    <div class="gallery-item width1 shave">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-1.jpg);" ></span>
+					</a>
+			    </div>
+			 
+			    <div class="gallery-item width2 beard">
+					<a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-2.jpg);" ></span>
+					</a>
+			    </div>
+			 
+			    <div class="gallery-item width2 height2 hair">
+			        <a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-1.jpg);" ></span>
+					</a>
+			    </div>
+			 
+			    <div class="gallery-item width1 mustache">
+			        <a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-1.jpg);" ></span>
+					</a>
+			    </div>
+			     
+			    <div class="gallery-item width1 shave">
+			        <a href="">
+						<h5>Wild Stallion</h5>
+						<div class="subtext">Trendy, Hipster</div>
+						<div class="overlay"></div>
+						<span style="background-image: url(/assets/images/gallery/iso-1.jpg);" ></span>
+					</a>
+			    </div>   
+			 
+			</div>
+		</div>
+		
+
+	</section>
+
+
+
+
+            
+
+        </main><!-- end main -->
+
+        <!--
+#################################
+	- Footer -
+#################################
+-->
+<footer class="container-fluid no-padding loading">
+
+	<!-- Footer Wrapper -->
+	<div class="footer__wrapper">
+		
+		<div class="row footer__row">
+
+			<!-- Footer Logo -->
+			<div class="footer__logo no-padding">
+				<div class="logo__container">
+					<h5>The</h5>
+					<h3>Shave</h3>
+					<h4>Mens Barbershop</h4>
+				</div>
+			</div>
+
+			<!-- Footer Description -->
+			<div class="footer__desc">
+
+				<div class="row no-margin">
+					
+					<!-- email container -->
+					<div class="col-xs-12 email__wrapper">
+
+						<!-- email form -->
+						<div class="email__form form-group">
+
+							<form action="" method="post">
+
+								<!-- email input -->
+								<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
+
+								<!-- subtext to email -->
+								<div class="email__offers">
+									<p class="eamil__offers--connect">Get the latest updates, special offers and much more.</p>
+								</div><!-- end sub-text -->
+
+								<button type="submit" class="btn book-now-btn form-btn">Submit</button>
+
+							</form>
+
+						</div><!-- end email form -->
+
+					</div><!-- end email container -->
+
+					<!-- address container -->
+					<div class="col-xs-12 footer__contact">
+
+						<!-- address -->
+						<div class="col-xs-12 col-sm-6 footer__address no-padding">
+							<p>Nordhoff st.</p>
+							<p>NorthRidge, CA 91324</p>
+						</div>
+
+						<!-- email -->
+						<div class="col-xs-12 col-sm-6 contact no-padding">
+							<a href="mailto:info@theshave.com">info@theshave.com</a>
+							<a href="tel:303-313-0303">303-313-0303</a>
+						</div>
+
+					</div><!-- end address container -->
+
+					<!-- social media -->
+					<div class="col-xs-12 social">
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<ul>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="twitter text-hide"><a href="">Twitter</a></li>
+								<li class="instagram text-hide"><a href="">Instagram</a></li>
+								<li class="linkedin text-hide"><a href="">Linkedin</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li class="facebook text-hide"><a href="">Facebook</a></li>
+							</ul>
+						</div><!-- end col -->
+
+						<!-- copyright -->
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="copyright">
+								<p>2015 The Shave LTD</p>
+							</div>
+						</div><!-- end col -->
+						
+					</div><!-- end social media -->
+
+				</div><!-- end row -->
+
+			</div><!-- end right side -->
+
+		</div><!-- end row -->
+
+	</div><!-- end container -->
+
+</footer>
+
+        <!-- Book now modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="row">
+
+                        <!-- Modal Section 1 -->
+                        <div class="col-xs-12 col-md-6 no-padding modal-info">
+
+                            <!-- Mobile close btn (hidden on larger screens) -->
+                            <button type="button" class="visible-xs visible-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                            </button>
+
+                            <img class="img-responsive" src="assets/images/contact/modal-header.jpg" alt="Book Today"/>
+
+                            <!-- Section 1 content -->
+                            <div class="modal-bookNow">
+                                <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
+                                <h3>Book today</h3>
+                                <h5>We are masters of the blade</h5>
+                                    <ul class="book-list">
+                                        <li>
+                                            <i class="fa fa-mobile"></i>
+                                            <span>Call ahead</span>
+                                            <a href="">444-444-444</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-map-marker"></i>
+                                            <span>walk-ins welcome</span>
+                                            <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
+                                        </li>
+                                    </ul>
+                            </div><!-- end modal content -->
+                        </div><!-- end modal section 1 -->
+
+                        <!-- Modal Section 2 -->
+                        <div class="col-xs-12 col-md-6 no-padding">
+                            <div class="modal-form">
+                                <button type="button" class="hidden-xs hidden-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                                </button>
+                                <h4>email us</h4>
+
+                                <!-- Form Container -->
+                                <div class="contact__form--container">
+                                    <div class="row">
+
+                                        <!-- Contact form -->
+                                        <form action="" method="post">
+                                            <div class="col-xs-12 no-padding">
+
+                                                <!-- User Name -->
+                                                <div class="input__container">
+                                                    <span class="icon"><i class="fa fa-user"></i></span>
+                                                    <input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
+                                                </div>
+
+                                                <!-- User Email -->
+                                                <div class="input__container">
+                                                    <span class="icon"><i class="fa fa-envelope"></i></span>
+                                                    <input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
+                                                </div>
+
+                                                <!-- User Message -->
+                                                <div class="input__container pencil-contact">
+                                                    <span class="icon"><i class="fa fa-pencil "></i></span>
+                                                    <textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
+                                                </div>
+
+                                            </div><!-- end col-xs-12 -->
+
+                                            <!-- Submit Btn -->
+                                            <div class="col-xs-12 no-padding">
+                                                <button type="submit" class="btn book-now-btn form-btn">Submit</button>
+                                            </div><!-- End Submit -->
+
+                                        </form><!-- End Form -->
+
+                                    </div><!-- end row -->
+                                </div><!-- end container -->
+
+                            </div><!-- end modal-form -->
+                        </div><!-- end modal section 2 -->
+                    </div><!-- end row -->
+                </div><!-- end modal-content -->
+            </div><!-- end modal-dialog -->
+        </div><!-- End Modal -->
+
+        <!-- Plugins -->
+        <script src="assets/scripts/bootstrap.min.js"></script>
+        <script src="assets/scripts/jquery.menu-aim.min.js"></script>
+        <script src="assets/scripts/skrollr.min.js"></script>
+        <script src="assets/scripts/imagesloaded.min.js"></script>
+        <!-- <script src="assets/scripts/smooth-scroll.min.js"></script> -->
+        <script src="assets/scripts/jquery-placeholder.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+        <!-- Settings -->
+        <script src="assets/scripts/nav-settings.min.js"></script>
+        <script src="assets/scripts/main-settings.min.js"></script>
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+<script>
+// ==========================================================================
+// Gallery Index page
+// ==========================================================================
+
+	    $(window).load(function(){
+		    var $container = $('.portfolioContainer');
+		    $container.isotope({
+		        itemSelector: ".gallery-item",
+							 //layoutMode: 'fitRows',
+							 percentPosition: true,
+				masonry: { "columnWidth": ".grid-sizer" }
+		    }); 
+
+		    //filter isotop + window height
+		    $('.filter-group').on( 'click', 'li', function() {
+
+		    	$(this).parent().children('li').each(function(){
+		    		$(this).removeClass('selected');
+		    	});
+		    	
+		    	$(this).addClass('selected');
+
+		    	var galleryPageHeight = $(window).height();
+
+		  		var filterValue = $(this).attr('data-filter');
+
+		  		$container.isotope({ filter: filterValue });
+
+		  		var filterContentHeight = $('.portfolioContainer').height();
+		  		
+		  		var updatedHeight = galleryPageHeight - filterContentHeight;
+
+		  		$('body').css('height', updatedHeight + 'px');
+			});
+
+			//Filter using window location
+			var val = window.location.hash;
+			var hash;
+			// console.log(val);
+
+			if(val != ''){
+				hash = val.substr(8);
+				
+				// console.log(hash)
+				$container.isotope({ filter: hash });
+
+				$('.filter-group > li').each(function(){
+					var data = $(this).data('filter');
+					if( data === hash){
+						$(this).addClass('selected');
+					}
+					return;
+				});
+				
+			}
+
+
+		});
+    
+</script>
+
+
+    </body>
+</html>

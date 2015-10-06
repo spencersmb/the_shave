@@ -62,7 +62,7 @@ $L:     1024px;
     font-weight: 700;
     font-size: em(16px);
     text-transform: uppercase;
-    margin-top: 12px;
+    margin-top: 21px;
   }
 
   img {
@@ -98,8 +98,8 @@ $L:     1024px;
 .cd-dropdown-wrapper{
   display: inline-block;
   position:absolute;
-  top:4px;
-  left:1.5%;
+  top:14px;
+  left:4.5%;
 
   @include MQ(M) {
     top:19px;

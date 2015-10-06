@@ -58,7 +58,7 @@
 
 
     h5{
-      margin:15px 0 0;
+      margin:18px 0 0;
       font-size: 15px;
       font-weight: 400;
     }
@@ -67,6 +67,7 @@
       color:#9A9A9A;
       font-size: 15px;
       font-weight: 400;
+      margin-top: 5px;
     }
 
     .angle-bottom-card{
@@ -129,10 +130,6 @@
     font-size: 14px;
     margin-top: 25px;
     margin-bottom:25px;
-    @include transition(all .3s);
-
-    margin-top: 25px;
-    margin-bottom:25px;
     opacity: 0;
     @include transition-delay(.2s);
     @include transform(translate3d(0,225px,0));
@@ -156,6 +153,10 @@
 
       &::before {
         @include transform(translateX(0) translateY(0) rotate(-45deg));
+      }
+
+      h5{
+        margin:15px 0 0;
       }
 
     }
@@ -211,23 +212,18 @@
     .open{
       position: absolute;
       padding-left:25px;
-
+      height:55px;
     }
 
     .title{
       text-align: left;
       @include transition-delay(.2s);
-
-
-      h5{
-        margin:18px 0 0;
-      }
     }
 
     .bio{
-      margin-top: 25px;
-      margin-bottom:25px;
+      margin:0;
       opacity: 0;
+      line-height: 18px;
       @include transition-delay(.2s);
       @include transform(translate3d(0,225px,0));
     }
@@ -292,9 +288,14 @@
 
   .content__wrapper{
 
+    .open{
+      height:75px;
+    }
+
     .bio{
       margin-top: 25px;
       margin-bottom:25px;
+      line-height: 24px;
     }
   }
 

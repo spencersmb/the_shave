@@ -5,10 +5,12 @@ $(function() {
 		myBody = $('body'),
 		myFooter = $('footer'),
 		desktop = 993,
-		tablet = 768,
+		tablet = 784,
 		windowSize = myWindow.width() + 15,
+		browserID = WhichBrowser(),
 		resizedWidth;
-
+	
+		//console.log(browserID);
 		// ==========================================================================
 		// Master Resize
 		// ==========================================================================
@@ -42,11 +44,17 @@ $(function() {
 				navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
 				"Netscape")) {
 
-				$('body, footer').addClass('safari');
+				if(navigator.userAgent.match(/iPad/i) != null){
+					return "ipad";
+				}else{
+					$('body, footer').addClass('safari');
 
-				$('section').last().removeClass('footer-push');
+					$('section').last().removeClass('footer-push');
 
-				return "safari";
+					return "safari";
+				}
+
+
 			}
 
 			//Opera
@@ -113,7 +121,7 @@ $(function() {
 
 			var winHeight = window.innerHeight;
 
-			if (winWidth >= 600) {
+			if (winWidth >= 769 && browserID != 'ipad') {
 
 				//check if body has skroller
 				if (document.body.id !== 'skrollr-body') {
@@ -139,7 +147,7 @@ $(function() {
 					// console.log('orientation is portrait');
 					skrollr.get().refresh();
 				}
-			} else if (winWidth < 600) {
+			} else if (winWidth < 769) {
 
 				// Destroy skrollr for screens less than 600px for mobile
 				if (document.body.id === 'skrollr-body') {
@@ -270,7 +278,9 @@ $(function() {
 			dialog.css('margin-top', offset);
 
 			if(checkWindowWidth() === true){
-				//set div heights the same
+				console.log(checkWindowWidth());
+
+				//set div heights the same for laptop/desktop
 				var row = dialog.find('.row');
 				var rowHeight = row.height();
 
@@ -278,6 +288,9 @@ $(function() {
 
 				angleModal();
 
+			}else{
+
+				angleModal();
 			}
 
 			//full width
@@ -379,6 +392,7 @@ $(function() {
 			});
 
 			if (resizedWidth >= tablet || windowSize >= tablet) {
+				console.log(windowSize);
 				return true;
 			} else {
 				return false;
@@ -411,7 +425,7 @@ $(function() {
 		// ==========================================================================
 
 		//browser check
-		browserJs(WhichBrowser());
+		browserJs(browserID);
 
 		//Image Preloader check
 		shavePreloader();
