@@ -243,16 +243,21 @@
 }
 
 .btn-group{
+  margin:0 auto;
 
   .book-now-btn{
       background-color: transparent;
+      padding-bottom: 15px;
+      float:none;
+      display: block;
+      margin:0 auto 15px !Important;
 
       &:nth-child(1){
-        border-right-width:2px;
+        border-right-width:3px;
       }
 
       &:nth-last-child(1){
-       border-left-width:2px;
+       border-left-width:3px;
       }
 
     &:hover{
@@ -260,17 +265,42 @@
       background: $black;
       color:$white;
     }
-  }
-}
 
+  }
+
+}
 
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+
   .book__now--btn{
     width:100%;
     max-width: 105px;
   }
+
+  .btn-group {
+    padding:0;
+
+    .book-now-btn {
+      display: inline-block;
+      float:left;
+
+      &:first-child(1){
+        margin-left:0;
+      }
+
+      &:nth-child(1) {
+        border-right-width: 2px;
+      }
+
+      &:nth-last-child(1) {
+        border-left-width: 2px;
+      }
+    }
+  }
+
+
 
 }
 

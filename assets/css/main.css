@@ -11562,14 +11562,21 @@ blockquote.reverse {
   background-color: #af8c45;
 }
 
+.btn-group {
+  margin: 0 auto;
+}
 .btn-group .book-now-btn {
   background-color: transparent;
+  padding-bottom: 15px;
+  float: none;
+  display: block;
+  margin: 0 auto 15px !Important;
 }
 .btn-group .book-now-btn:nth-child(1) {
-  border-right-width: 2px;
+  border-right-width: 3px;
 }
 .btn-group .book-now-btn:nth-last-child(1) {
-  border-left-width: 2px;
+  border-left-width: 3px;
 }
 .btn-group .book-now-btn:hover {
   border-color: #252525;
@@ -11581,6 +11588,23 @@ blockquote.reverse {
   .book__now--btn {
     width: 100%;
     max-width: 105px;
+  }
+
+  .btn-group {
+    padding: 0;
+  }
+  .btn-group .book-now-btn {
+    display: inline-block;
+    float: left;
+  }
+  .btn-group .book-now-btn:first-child(1) {
+    margin-left: 0;
+  }
+  .btn-group .book-now-btn:nth-child(1) {
+    border-right-width: 2px;
+  }
+  .btn-group .book-now-btn:nth-last-child(1) {
+    border-left-width: 2px;
   }
 }
 #header {
@@ -17398,7 +17422,7 @@ footer.nav-is-open {
 }
 
 .stats__container {
-  margin: 0 auto 70px;
+  margin: 0 auto 35px;
 }
 .stats__container a {
   display: table;
@@ -17415,11 +17439,11 @@ footer.nav-is-open {
 .stats__details h3 {
   max-width: 450px;
   margin: 35px auto 10px;
-  font-size: 2em;
+  font-size: 24px;
   text-transform: none;
 }
 .stats__details h4 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   text-transform: none;
   margin-top: 0;
@@ -17470,21 +17494,20 @@ footer.nav-is-open {
   max-width: 1360px;
   margin: 0 auto;
   width: 100%;
-  position: absolute;
-  top: 35px;
+  position: relative;
   z-index: 1000;
-  opacity: 1;
-  display: block;
-  padding-bottom: 20px;
+  display: inline-table;
+  padding: 20px 0;
 }
 .gallery__controls .left, .gallery__controls .center, .gallery__controls .right {
-  display: block;
+  display: inline-table;
   text-align: center;
   padding: 0;
   position: relative;
+  width: auto;
 }
 .gallery__controls .left a, .gallery__controls .center a, .gallery__controls .right a {
-  display: block;
+  display: inline;
   width: 100%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -17570,11 +17593,39 @@ footer.nav-is-open {
 }
 
 @media (min-width: 768px) {
+  .stats__container {
+    margin: 0 auto 55px;
+  }
+
+  .stats__details h3 {
+    font-size: 32px;
+  }
+  .stats__details h4 {
+    font-size: 36px;
+  }
+
+  .gallery__controls {
+    display: block;
+    padding: 0 0 20px;
+    position: absolute;
+    top: 35px;
+  }
+  .gallery__controls .left, .gallery__controls .center, .gallery__controls .right {
+    display: block;
+  }
+  .gallery__controls .left a, .gallery__controls .center a, .gallery__controls .right a {
+    display: block;
+  }
+
   .stats__details h3 {
     margin: 70px auto 10px;
   }
 }
 @media (min-width: 992px) {
+  .stats__container {
+    margin: 0 auto 70px;
+  }
+
   .stats__details h3 {
     margin: 70px auto 10px;
   }
