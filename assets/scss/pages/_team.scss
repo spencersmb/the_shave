@@ -81,9 +81,8 @@
   left:0;
   width:0;
   height:0;
-  border-top: 30px solid transparent;
+  border-top: 20px solid transparent;
   border-right:30px solid white;
-  border-right-width:414px;
 }
 
 
@@ -190,6 +189,10 @@
   .barber__box{
 	max-width: 500px;
 	padding-bottom: 40px;
+
+	.barber__image{
+	  overflow: hidden;
+	}
 
 	.overlay {
 	  height: 250px;

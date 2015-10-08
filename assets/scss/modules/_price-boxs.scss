@@ -79,26 +79,24 @@
   content:' ';
   position: absolute;
   z-index: 1;
-  top:-30px;
+  top:-20px;
   left:0;
   width:0;
   height:0;
-  border-top: 30px solid transparent;
+  border-top: 20px solid transparent;
   border-right:30px solid white;
-  //  border-right-width:413px;
 }
 
 .angle-bottom-price{
   content:' ';
   position: absolute;
   z-index: 1;
-  bottom:-30px;
+  bottom:-20px;
   left:0;
   width:0;
   height:0;
-  border-bottom:30px solid transparent;
+  border-bottom:20px solid transparent;
   border-left:30px solid white;
-  border-left-width:413px;
 }
 
 // Displays greater than 768px

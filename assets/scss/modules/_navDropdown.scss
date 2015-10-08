@@ -572,10 +572,6 @@ $primary-font: sans-serif;
 
   .cd-dropdown-gallery{
 
-    .hover-container{
-      position: relative;
-    }
-
     .plus-hover{
       @include transition(opacity .3s);
       background: rgba(15, 15, 15, 0);
@@ -1017,6 +1013,10 @@ $primary-font: sans-serif;
     .cd-dropdown-gallery {
       width: 600px;
       padding-bottom: 100px;
+
+      .hover-container{
+        position: relative;
+      }
 
       > li {
         @include column(0.48);

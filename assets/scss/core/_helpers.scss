@@ -377,11 +377,11 @@
   content:' ';
   position: absolute;
   z-index: 1;
-  top:-35px;
+  top:-30px;
   left:0;
   width:0;
   height:0;
-  border-top: 35px solid transparent;
+  border-top: 30px solid transparent;
   border-right:30px solid white;
 }
 
@@ -433,18 +433,6 @@
   border-left:30px solid white;
 }
 
-.angle-top-modal{
-  content:' ';
-  position: absolute;
-  z-index: 1;
-  top:-30px;
-  left:0;
-  width:0;
-  height:0;
-  border-top: 30px solid transparent;
-  border-right:30px solid white;
-}
-
 @include breakpoint(tablet) {
 
   .headline-sm{
@@ -490,13 +478,13 @@
   }
 
   .angle-top{
-    top:-60px;
-    border-top: 60px solid transparent;
+    top:-35px;
+    border-top: 35px solid transparent;
   }
 
   .angle-bottom{
-    bottom:-60px;
-    border-bottom: 60px solid transparent;
+    bottom:-35px;
+    border-bottom: 35px solid transparent;
   }
 
 
@@ -545,13 +533,13 @@
   }
 
   .angle-top{
-    top:-80px;
-    border-top: 80px solid transparent;
+    top:-60px;
+    border-top: 60px solid transparent;
   }
 
   .angle-bottom{
-    bottom:-80px;
-    border-bottom: 80px solid transparent;
+    bottom:-60px;
+    border-bottom: 60px solid transparent;
   }
 
 }
@@ -576,6 +564,16 @@
       margin:0 auto 60px;
     }
 
+  }
+
+  .angle-top{
+    top:-80px;
+    border-top: 80px solid transparent;
+  }
+
+  .angle-bottom{
+    bottom:-80px;
+    border-bottom: 80px solid transparent;
   }
 
 }

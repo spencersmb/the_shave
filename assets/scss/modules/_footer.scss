@@ -361,17 +361,7 @@ footer{
 		position: -moz-sticky;
 		position: -ms-sticky;
 		position: -o-sticky;
-		bottom:0;
-		left:0;
-		width:100%;
-		z-index: 1 !important;
-		-webkit-transform: translateZ(0);
-		-webkit-backface-visibility: hidden;
-		background:#373737;
-
-		&.nav-is-open {
-		  @include transform(translateX($navMove));
-		}
+		z-index: -1 !important;
 
 	}
 

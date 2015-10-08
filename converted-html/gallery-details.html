@@ -119,7 +119,12 @@
                     <!-- Gallery Item 1 -->
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
-                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <div class="hover-container">
+                                <div class="plus-hover">
+                                    <i class="fa fa-plus-circle"></i>
+                                </div>
+                                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            </div>
                             <h3>Masonry Gallery Full width</h3>
                         </a>
                     </li>
@@ -127,7 +132,12 @@
                     <!-- Gallery Item 2 -->
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
-                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <div class="hover-container">
+                                <div class="plus-hover">
+                                    <i class="fa fa-plus-circle"></i>
+                                </div>
+                                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            </div>
                             <h3>Masonry Gallery Boxed</h3>
                         </a>
                     </li>
@@ -135,7 +145,12 @@
                     <!-- Gallery Item 3 -->
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
-                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <div class="hover-container">
+                                <div class="plus-hover">
+                                    <i class="fa fa-plus-circle"></i>
+                                </div>
+                                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            </div>
                             <h3>3 Grid Gallery</h3>
                         </a>
                     </li>
@@ -143,7 +158,12 @@
                     <!-- Gallery Item 4 -->
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
-                            <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            <div class="hover-container">
+                                <div class="plus-hover">
+                                    <i class="fa fa-plus-circle"></i>
+                                </div>
+                                <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
+                            </div>
                             <h3>4 Grid Gallery</h3>
                         </a>
                     </li>
@@ -447,21 +467,21 @@
 		<!-- Intro blog -->
 		
 <!-- TODO: insert images into blog text and if time - add paralaax image/slider. -->
-<div class="container-fluid container__white container-push">
+<section class="container-fluid container__white container-push">
 	<div class="row sv__container--sm">
 		<div class="col-xs-12 inner__header--sm">
 			<h1>Wild Stallion</h1>
 			<h3>A strong and bold cut for free spirits.</h3>
 		</div>
 	</div>
-</div>
+</section>
 
 <section class="container-fluid container__grey no-padding ">
 	<div class="angle-bottom-top" style="color: #fff;"></div>
 	<!-- feature-service-card -->
 	<div class="blog__inner--feature gallery__slider">
 
-			<div class="container sv__container--md no-padding">
+			<!-- <div class="container sv__container--md no-padding">
 
 				<div id="gallery-controls" class="gallery__controls">
 					<div class="col-xs-12 col-sm-4 left">
@@ -475,7 +495,7 @@
 					</div>
 				</div>
 
-			</div>
+			</div> -->
 
 		<div class="blog__inner--content offset__width">
 
@@ -514,27 +534,60 @@
 				<div class="row stats__container">
 
 					
-				  	<div class="col-xs-12">
+				  	<div class="col-xs-12 no-padding">
 
 						<div class="stats__details">
 							<h3>The Stallion Style</h3>
+							<div id="gallery-controls" class="gallery__controls">
+								<div class="col-xs-12 col-sm-3 left">
+									<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
+								</div>
+								<div class="col-xs-12 col-sm-3 right">
+									<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
+								</div>
+							</div>
 							<h4>$45.00</h4>
 							<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
 							<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
 						</div>
 
-						<a class="btn book-now-btn" href="">Get this style</a>
+						<div class="style__btn">
+							<div class="btn-group" role="group" aria-label="Styles">
+								<button type="button" class="btn book-now-btn">Get this style</button>
+								<button type="button" class="btn book-now-btn">View All styles</button>
+							</div>
+						</div>
+
+						<!-- <div class="style__btn">
+							<a class="btn book-now-btn gold" href="">Get this style</a>
+							<a class="btn book-now-btn" href="">View All styles</a>
+						</div> -->
+
+
 
 				  	</div>
-
-					
 
 				</div>
 
 			</div> <!-- end container -->
 
-
 		</div>
+
+	<!-- <div class="container-fluid container__grey no-padding">
+
+		<div id="gallery-controls" class="gallery__controls">
+			<div class="col-xs-12 col-sm-4 left">
+				<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
+			</div>
+			<div class="col-xs-12 col-sm-4 center">
+				<a href="#"><i class="fa fa-th-large"></i><span>Gallery</span></a>
+			</div>
+			<div class="col-xs-12 col-sm-4 right">
+				<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
+			</div>
+		</div>
+
+	</div> -->
 
 	<section class="container sv__container--md inner-content-module">
 
@@ -730,13 +783,13 @@
 
 				<div class="section__wrapper">
 
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-sm-4 col-md-4 barber__wrapper">
 						<div class="barber__box card-shadow-md">
 
 							<div class="barber__image" style="background-image: url(/assets/images/barbers/barber-cover-1.jpg);">
 								<div class="overlay text-center">
-									<!-- <h3 class="white">Master of the blade</h3> -->
-									<img class="img-responsive" src="assets/images/barbers/barber-icon.png" alt=""/>
+									<h3 class="white">I'm a master of the blade</h3>
+									<!-- <img class="img-responsive" src="assets/images/barbers/barber-icon.png" alt=""/>-->
 								</div>
 								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
 							</div>
@@ -751,13 +804,13 @@
 
 					</div>
 
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-sm-4 col-md-4 barber__wrapper">
 						<div class="barber__box card-shadow-md">
 
 							<div class="barber__image" style="background-image: url(/assets/images/barbers/barber-cover-1.jpg);">
 								<div class="overlay text-center">
-									<!-- <h3 class="white">Master of the blade</h3> -->
-									<img class="img-responsive" src="assets/images/barbers/barber-icon.png" alt=""/>
+									<h3 class="white">Cutting hair is a passion of mine since I was 9.</h3>
+									<!-- <img class="img-responsive" src="assets/images/barbers/barber-icon.png" alt=""/>-->
 								</div>
 								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
 							</div>
@@ -772,13 +825,13 @@
 
 					</div>
 
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-sm-4 col-md-4 barber__wrapper">
 						<div class="barber__box card-shadow-md">
 
 							<div class="barber__image" style="background-image: url(/assets/images/barbers/barber-cover-1.jpg);">
 								<div class="overlay text-center">
-									<!-- <h3 class="white">Master of the blade</h3> -->
-									<img class="img-responsive" src="assets/images/barbers/barber-icon.png" alt=""/>
+									<h3 class="white">I love the true craftsmenship of the retro barber and want to bring that experience to a new generation.</h3>
+									<!-- <img class="img-responsive" src="assets/images/barbers/barber-icon.png" alt=""/>-->
 								</div>
 								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
 							</div>
@@ -939,13 +992,11 @@
                                 <h5>We are masters of the blade</h5>
                                     <ul class="book-list">
                                         <li>
-                                            <i class="fa fa-mobile"></i>
-                                            <span>Call ahead</span>
+                                            <span><i class="fa fa-mobile"></i>Call ahead</span>
                                             <a href="">444-444-444</a>
                                         </li>
                                         <li>
-                                            <i class="fa fa-map-marker"></i>
-                                            <span>walk-ins welcome</span>
+                                            <span><i class="fa fa-map-marker"></i>walk-ins welcome</span>
                                             <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
                                         </li>
                                     </ul>
@@ -1034,35 +1085,50 @@
 		var imgHeight;
 
 		//get height of image on window resize
-    	function getImgHeightMaster(){
-    		var myImg = document.querySelector("#myImg");
-    		var currHeight = myImg.clientHeight;
+		function getImgHeightMaster(){
+			var myImg = document.querySelector("#myImg");
+			var currHeight = myImg.clientHeight;
 
-    		return currHeight;
-    	}
+			return currHeight;
+		}
 
     	//get height of thumbnail on window resize
-    	function getThumbnailHeight(){
-    		var myImg = document.querySelector("#myThumb");
-    		var currHeight = myImg.clientHeight;
+		function getThumbnailHeight(){
+			var myImg = document.querySelector("#myThumb");
+			var currThumbHeight = myImg.clientHeight;
 
-    		return currHeight;
-    	}
+			return currThumbHeight;
+		}
 
-			$('.gallery-nav').height(getThumbnailHeight());
-
-    	//apply
-    	$(window).on('resize', function(){
-
+		function resizeFlickity(){
 			var gallery = $(".gallery-main");
 
 			gallery.find('.flickity-viewport').height(getImgHeightMaster());
 			$('.gallery-nav').height(getThumbnailHeight());
 			gallery.css('padding-bottom', getImgHeightMaster());
-		});
+		}
+
+		$('.gallery-nav').height(getThumbnailHeight());
 
 		//Set Gallery Main padding-bottom to align subnav
 		$('.gallery-main').css('padding-bottom', getImgHeightMaster());
+
+		//apply
+		$(window).on('resize', function(){
+
+			resizeFlickity();
+		});
+
+		$(window).on('load', function(){
+			console.log('window loaded');
+			resizeFlickity();
+		});
+
+//		if($("body").hasClass("loaded")){
+//			console.log('true');
+//			resizeFlickity();
+//		}
+
 
 		// ==========================================================================
 		// Activate Product details

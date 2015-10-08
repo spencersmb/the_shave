@@ -5,7 +5,7 @@ $(function() {
 		myBody = $('body'),
 		myFooter = $('footer'),
 		desktop = 993,
-		tablet = 768,
+		tablet = 784,
 		windowSize = myWindow.width() + 15,
 		browserID = WhichBrowser(),
 		resizedWidth;
@@ -278,7 +278,8 @@ $(function() {
 			dialog.css('margin-top', offset);
 
 			if(checkWindowWidth() === true){
-				//set div heights the same
+
+				//set div heights the same for laptop/desktop
 				var row = dialog.find('.row');
 				var rowHeight = row.height();
 
@@ -286,6 +287,9 @@ $(function() {
 
 				angleModal();
 
+			}else{
+
+				angleModal();
 			}
 
 			//full width

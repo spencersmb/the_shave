@@ -20,6 +20,7 @@
 
 .modal-info{
   background-color: #d7d7d7;
+  overflow: hidden;
 }
 
 .modal-content{
@@ -58,10 +59,15 @@
     right:15px;
     border:none;
     background-color: transparent;
+    z-index: 1;
 
     i{
       color:$white;
       font-size: 28px;
+    }
+
+    &:focus{
+      outline:none;
     }
   }
 
@@ -70,57 +76,88 @@
 .modal-bookNow{
   position: relative;
   background-color: #d7d7d7;
-  padding:20px 20px 0;
+  padding:20px;
   text-align: center;
+  background-position: center center;
+  background-size: cover;
+  color:#fff;
 
   h3{
 	margin-bottom: 10px;
 	font-weight: 600;
 	font-size: 18px;
 	letter-spacing: 2px;
+    padding-top:30px;
   }
 
   h5{
-	margin-bottom: 15px;
+	margin-bottom: 10px;
     font-size: 16px;
   }
 
 }
 
 .book-list{
-
-  i{
-	font-size:28px;
-    position: absolute;
-    padding-top: 5px;
-    top:-7px;
-    left:-20px;
-    display: none;
-  }
+  padding:0;
+  margin:0;
 
   li{
-	padding: 0 15px 15px;
+	padding: 20px 0 20px;
     display: block;
-  }
+    text-align: center;
+    border-bottom: 1px solid #DCDCDC;
 
-  span{
-    position: relative;
-	display:inline-block;
+    &:hover{
+      cursor: pointer;
+      background-color: #E8E8E8;
+      a{
+        color:$primary-color;
+      }
+    }
   }
 
   a{
-	font-family: $ubuntu;
-	font-size: 16px;
+    position: relative;
+    font-family: $ubuntu;
+    font-size: 16px;
     display: block;
-    padding-top: 5px;
   }
+
+  .list-content{
+    display: block;
+    position: relative;
+    text-align: center;
+    padding:0 40px;
+  }
+
+  i{
+    text-align: center;
+    padding-bottom: 10px;
+    display: block;
+    font-size: 1.5em;
+  }
+
+  span{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    display: none;
+  }
+
+  p{
+    position: relative;
+	display:block;
+    margin:0;
+    line-height: 1.5;
+  }
+
 }
 
 .modal-form{
   position:relative;
   height:100%;
   width:100%;
-  padding:30px 20px;
+  padding:0;
   background-color: #fff;
 
   h4{
@@ -145,6 +182,27 @@
   }
 }
 
+.modal-angle-container{
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  height:30px;
+  top:-30px;
+  width:100%;
+  left:0;
+}
+.angle-top-modal{
+  content:' ';
+  position: absolute;
+  z-index: 1;
+  top:0;
+  left:0;
+  width:0;
+  height:0;
+  border-top: 30px solid transparent;
+  border-right:30px solid white;
+}
+
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
@@ -156,26 +214,31 @@
     padding:20px 20px;
 
     h3 {
-      font-size: 1.7em;
+      font-size: 38px;
+      padding-top:90px;
     }
 
     h5{
       font-size: 1em;
-      margin-bottom: 25px;
+      margin-bottom: 75px;
     }
   }
 
   .book-list{
 
-    li{
-      padding:0 0 20px;
+    i{
       display: inline-block;
+      font-size: 2em;
+    }
+
+    span{
+      display: block;
     }
 
   }
 
   .modal-form {
-    padding: 30px 40px 20px;
+
   }
 
 
@@ -184,77 +247,31 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
   .modal-dialog{
-	width:940px;
+
   }
 
   .modal-content{
-    .modal-close{
-      top:35px;
-      right:34px;
 
-      i{
-        color:$black;
-        font-size: 18px;
-      }
-    }
   }
 
   .modal-bookNow{
-    padding:20px 40px 60px;
-    text-align: left;
 
-    h5{
-      margin-bottom: 45px;
-    }
 
   }
 
   .book-list{
 
-    i{
-      float:left;
-      margin-right: 15px;
-      display: inline-block;
-    }
-
-    li{
-      padding:0 0 20px;
-      display: block;
-    }
-
-    span{
-      display:block;
-    }
-
-    a{
-      font-family: $ubuntu;
-      font-size: 21px;
-    }
-
   }
 
   .modal-form{
 
-    h4{
-      text-align: left;
-    }
-
-    .contact__form--container{
-      padding-top:0;
-    }
-
-    .form-btn{
-      margin:0;
-    }
   }
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
 
-  .modal-dialog{
-    width:983px;
-  }
+
 
 }
 
