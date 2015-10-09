@@ -17,7 +17,7 @@
 	</section>
 
 	<!-- Service Section -->
-	<section class="container-fluid grey-bg reverse-angle">
+	<section id="content" class="container-fluid grey-bg reverse-angle">
 		<div class="angle-top" style="border-right-color: #e8e8e8;"></div>
 
 		<div class="row sv__container--md sell__box">
@@ -69,30 +69,7 @@
 	<!-- End Products Section -->
 
 	<!-- Start Style full bleed -->
-	<section id="service-skr" class="sv__container--fluid">
-
-		<div class="parallax__background" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -250px;" data-bottom-top="background-position: 50% 300px;"  data-anchor-target="#service-skr" style="background-image: url({{'service-shave-bg.jpg' | asset_url}});">
-
-		<div class="sv__container--md graphic-headline">
-
-			<div class="headline-md white">
-				<h2>Change the way you see style</h2>
-			</div>
-
-			<div class="row">
-
-				<div class="col-xs-12">
-					<p class="white">Meh distillery whatever, squid craft beer kitsch bicycle rights organic scenester disrupt. Fanny pack wayfarers sustainable 8-bit Cosby sweater, street art freegan leggings. Roof party Wes Anderson selfies semiotics Helvetica taxidermy. Echo Park deep v fingerstache authentic fixie slow-carb Portland Etsy 8-bit PBR Neutra, narwhal bicycle rights kale chips. Truffaut four loko wolf forage Marfa, shabby chic gastropub. High Life fashion axe photo booth gentrify.
-					</p>
-				</div>
-
-			</div>
-
-			</div>
-
-		</div><!-- end parralax bg -->
-
-	</section>
+	{% include "service-shave/service-parallax" %}
 	<!-- End Style full bleed -->
 
 	<!-- Start Price module -->

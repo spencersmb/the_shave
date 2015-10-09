@@ -8,7 +8,6 @@ $(function() {
 		tablet = 784,
 		windowSize = myWindow.width() + 15,
 		browserID = WhichBrowser(),
-		modalOpen = false,
 		resizedWidth;
 	
 		//console.log(browserID);
@@ -71,24 +70,13 @@ $(function() {
 				if(browserID == 'msie' && document.documentMode == 9){
 
 						//ADD CSS style opactiy 1
-						var cascadeFeature = $('#cascadeFeature'),
-								productsContainer = $('.products');
+						var cascadeFeature = $('#cascadeFeature');
 
 						//IE9 fix for cascading animation
 						cascadeFeature.find('.feature__box').each(function(index){
 								$(this).css('opacity', 1);
 						});
 
-						//products html order
-						if(productsContainer){
-								productsContainer.find('.card__slider').each(function(i, v){
-										var $this = $(this);
-										var bio = $this.find(".bio");
-										console.log(bio);
-										bio.detach();
-										bio.insertAfter($this);
-								});
-						}
 
 				}else{
 						//Run if any other browser
@@ -146,7 +134,7 @@ $(function() {
 					var s = skrollr.init({
 						render: function(data) {
 							//Debugging - Log the current scroll position.
-							// console.log(data.curTop);
+							console.log(data.curTop);
 						},
 
 						forceHeight: false, //disable setting height on body
@@ -252,10 +240,10 @@ $(function() {
 			}
 
 			//modal check
-			if(modalOpen && checkLaptopWidth() == false){
-				var modalImage = $('.modal-content').find('.row').width();
-				$('.angle-top-modal').css('border-right-width', modalImage);
-			}
+			//if(modalOpen && checkLaptopWidth() == false){
+			//	var modalImage = $('.modal-content').find('.row').width();
+			//	$('.angle-top-modal').css('border-right-width', modalImage);
+			//}
 		}
 
 		// ==========================================================================
@@ -280,7 +268,6 @@ $(function() {
 
 		function centerModal(){
 
-			modalOpen = true;
 
 			//add display block to get height of the modal-dialog
 			$(this).css('display', 'block');
@@ -487,14 +474,6 @@ $(function() {
 
 		})();
 
-		// ==========================================================================
-		// Products check for ie9
-		// ==========================================================================
-		(function() {
-
-
-
-		})();
 		// ==========================================================================
 		// Run on First Load
 		// ==========================================================================

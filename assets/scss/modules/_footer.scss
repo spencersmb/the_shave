@@ -3,13 +3,13 @@
 
 //footer navA
 footer{
-	position:relative !important;
+	position:relative;
 	bottom:0;
 	left:0;
 	width:100%;
-	z-index: 1 !important;
-	-webkit-transform: translateZ(0);
-	-webkit-backface-visibility: hidden;
+	z-index: 1;
+//	-webkit-transform: translateZ(0);
+//	-webkit-backface-visibility: hidden;
 	background:#373737;
 
 //	@include transition($pushNav);
@@ -356,12 +356,12 @@ footer{
 @include breakpoint(laptop) {
 
 	footer{
-		position:fixed !important;
-	 	 position: -webkit-sticky !important;
+		position:fixed;
+	  	position: -webkit-sticky !important;
 		position: -moz-sticky;
 		position: -ms-sticky;
 		position: -o-sticky;
-		z-index: -1 !important;
+		z-index: -1;
 
 	}
 
@@ -370,8 +370,8 @@ footer{
 	}
 
 	.footer__wrapper{
-		margin:em(40px) auto;
-		padding:0;
+//		margin:em(40px) auto;
+		padding:em(40px) 0;
 	}
 
 	.footer__logo{
