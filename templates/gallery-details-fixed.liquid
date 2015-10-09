@@ -183,7 +183,6 @@
 
             //apply
             $(window).on('resize', function(){
-
                 resizeFlickity();
             });
 
@@ -192,38 +191,108 @@
             });
 
 
-            // ==========================================================================
-            // Activate Product details
-            // ==========================================================================
-
-            var wrapper = $('.card__slider');
-
-            wrapper.on('click', function(event){
-                event.preventDefault();
-
-                //check if element is hovered or not
-                var isHovered = $(this).find(".book__app:hover").length;
-
-                if( $(this).find('.content__wrapper').hasClass('active') && isHovered ){
-                    //do nothing because the user is hovering over an item
-                }else{
-//					closeNav();
-                    $(this).find('.content__wrapper').toggleClass('active');
-
-                    $(this).find('.book__app').toggleClass('active');
+            function WhichBrowser() {
+                //IE
+                if (navigator.appName == "Microsoft Internet Explorer") {
+                    return "msie";
                 }
 
-            });
+                //Chrome
+                if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
+                        navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
+                        "Netscape")) {
+                    return "chrome";
+                }
+                //Firefox
+                if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
+                        navigator.appName == "Netscape")) {
+                    return "firefox";
+                }
+                //Safari
+                if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
+                        navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
+                        "Netscape")) {
 
-            function openTab(url){
-                window.open(url, '_self');
+                    if(navigator.userAgent.match(/iPad/i) != null){
+                        return "ipad";
+                    }else{
+                        $('body, footer').addClass('safari');
+
+                        $('section').last().removeClass('footer-push');
+
+                        return "safari";
+                    }
+
+                }
+
+                //Opera
+                if (navigator.appName == "Opera") {
+                    return "opera";
+                }
             }
 
-            wrapper.find('.book__app').find('a').on('click', function(event){
+            //IE9 fixs
+            function browserJs( browserID ){
 
-                var url = $(this).attr('href');
-                openTab(url);
-            });
+                if(browserID == 'msie' && document.documentMode == 9){
+
+                    ie9ProductsEvent();
+
+                }else{
+                    //Run if any other browser
+                    modernProductsEvent();
+                }
+
+            }
+
+            // ==========================================================================
+            // Activate Product details modern browser
+            // ==========================================================================
+            function modernProductsEvent(){
+                var wrapper = $('.card__slider');
+
+                wrapper.on('click', function(event){
+                    event.preventDefault();
+                    $(this).find('.content__wrapper').toggleClass('active');
+                });
+            }
+
+
+            // ==========================================================================
+            // Rearrange copy for IE9
+            // ==========================================================================
+            function ie9ProductsEvent(){
+                var productsContainer = $('.products');
+
+                //click event
+                var wrapper = $('.card__slider');
+
+                wrapper.on('click', function(event){
+                    event.preventDefault();
+                    $(this).toggleClass('active');
+                });
+
+                //move elements
+
+                if(productsContainer){
+                    productsContainer.find('.card__slider').each(function(i, v){
+
+                        var $this = $(this);
+                        var bio = $this.find(".bio"),
+                                title = $this.find('.title'),
+                                contentWrapper = $this.find('.content__wrapper');
+
+                        bio.detach();
+                        bio.insertBefore(contentWrapper);
+
+                        var newBio = $this.find('.bio').children('p');
+                        title.clone().insertBefore(newBio);
+                    });
+                }
+            }
+
+
+            browserJs(WhichBrowser());
 
         })();
     </script>

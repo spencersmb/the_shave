@@ -64,22 +64,36 @@ $(function() {
 			}
 		}
 
+		//IE9 fixs
 		function browserJs( browserID ){
 
-			//IE9 fix for cascading animation
-			if(browserID == 'msie' && document.documentMode == 9){
 
-				//ADD CSS style opactiy 1
-				var cascadeFeature = $('#cascadeFeature');
-				cascadeFeature.find('.feature__box').each(function(index){
-					$(this).css('opacity', 1);
+				if(browserID == 'msie' && document.documentMode == 9){
 
-				});
+						//ADD CSS style opactiy 1
+						var cascadeFeature = $('#cascadeFeature'),
+								productsContainer = $('.products');
 
-			}else{
-				//Run if any other browser
-				ScrollCascade();
-			}
+						//IE9 fix for cascading animation
+						cascadeFeature.find('.feature__box').each(function(index){
+								$(this).css('opacity', 1);
+						});
+
+						//products html order
+						if(productsContainer){
+								productsContainer.find('.card__slider').each(function(i, v){
+										var $this = $(this);
+										var bio = $this.find(".bio");
+										console.log(bio);
+										bio.detach();
+										bio.insertAfter($this);
+								});
+						}
+
+				}else{
+						//Run if any other browser
+						ScrollCascade();
+				}
 
 		}
 
@@ -471,10 +485,16 @@ $(function() {
 				window.location = link;
 			});
 
+		})();
+
+		// ==========================================================================
+		// Products check for ie9
+		// ==========================================================================
+		(function() {
+
 
 
 		})();
-
 		// ==========================================================================
 		// Run on First Load
 		// ==========================================================================

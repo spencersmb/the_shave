@@ -10686,7 +10686,7 @@ blockquote.reverse {
   padding: 0 20px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .sv__main--content {
     padding-top: 80px;
   }
@@ -10737,7 +10737,7 @@ blockquote.reverse {
     max-width: 600px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .sv__main--content {
     padding-top: 80px;
   }
@@ -10812,7 +10812,7 @@ blockquote.reverse {
     background-attachment: fixed;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .offset__content--gallery {
     padding: 700px 60px 0;
   }
@@ -11233,7 +11233,7 @@ blockquote.reverse {
   border-left: 30px solid white;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .headline-sm {
     max-width: none;
   }
@@ -11278,7 +11278,7 @@ blockquote.reverse {
     border-bottom: 35px solid transparent;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .headline-sm h2 {
     margin-bottom: 45px;
     font-size: 21px;
@@ -11319,7 +11319,7 @@ blockquote.reverse {
     border-bottom: 60px solid transparent;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .headline-md p {
     font-size: 24px;
     line-height: 32px;
@@ -11582,7 +11582,7 @@ blockquote.reverse {
   color: #fff;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .book__now--btn {
     width: 100%;
     max-width: 105px;
@@ -13115,7 +13115,7 @@ blockquote.reverse {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .feature__box {
     padding: 15px;
   }
@@ -13142,7 +13142,7 @@ blockquote.reverse {
     width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .feature__box figure {
     max-width: 343px;
     max-height: 390px;
@@ -13207,7 +13207,7 @@ blockquote.reverse {
     transform: translate3d(0, -15px, 0);
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .feature__box--container {
     padding-bottom: 375px;
     max-width: 1230px;
@@ -13247,7 +13247,7 @@ blockquote.reverse {
     transform: translate3d(0, -70px, 0);
   }
 }
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
   .feature__box--effect:hover h2 {
     -webkit-transform: translate3d(0, -50px, 0);
     -moz-transform: translate3d(0, -50px, 0);
@@ -13495,7 +13495,7 @@ blockquote.reverse {
   min-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .staggered__container h2 {
     font-size: 4.5em;
     line-height: 80px;
@@ -13576,7 +13576,7 @@ blockquote.reverse {
     line-height: 28px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .staggered__container {
     margin: 0 auto 40px;
   }
@@ -13665,7 +13665,7 @@ blockquote.reverse {
   min-width: 100%;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .price__overview {
     background: rgba(255, 255, 255, 0.8);
   }
@@ -13843,7 +13843,7 @@ blockquote.reverse {
   background: #af8c45;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .panel-default .price__sheet {
     padding: 0 3.4375em;
   }
@@ -14145,7 +14145,7 @@ blockquote.reverse {
   padding-left: 20px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .contact__wrapper {
     margin: 200px auto 0;
     padding: 0;
@@ -14197,7 +14197,7 @@ blockquote.reverse {
     padding: 2em;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .contact__wrapper {
     max-width: 1200px;
     margin: 200px auto 80px;
@@ -14222,7 +14222,7 @@ blockquote.reverse {
     font-size: 1.125em;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .contact__card .contact__us h4 {
     padding-left: 47px;
   }
@@ -14284,7 +14284,7 @@ blockquote.reverse {
   margin-left: -30.5%;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .twitter__background {
     background-size: cover;
     background-position: 50% 70%;
@@ -14649,7 +14649,7 @@ footer.nav-is-open {
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .footer__logo .logo__container {
     margin: 5em 19% 1em;
   }
@@ -14691,7 +14691,7 @@ footer.nav-is-open {
     padding-right: 15px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   footer {
     position: fixed !important;
     position: -webkit-sticky !important;
@@ -14819,7 +14819,7 @@ footer.nav-is-open {
   padding: 0 30px 30px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .shave__faq--group {
     display: block;
   }
@@ -15077,7 +15077,7 @@ footer.nav-is-open {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .sell__box h2 {
     font-size: 4.5em;
     line-height: 80px;
@@ -15102,7 +15102,7 @@ footer.nav-is-open {
     margin-bottom: 40px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .sell__box h2 {
     font-size: 5.9375em;
     line-height: 105px;
@@ -15321,7 +15321,7 @@ footer.nav-is-open {
   left: 0;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .card__slider .image {
     overflow: visible;
   }
@@ -15418,7 +15418,7 @@ footer.nav-is-open {
     line-height: 24px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .content__wrapper .open {
     height: 70px;
   }
@@ -15437,7 +15437,7 @@ footer.nav-is-open {
     line-height: 18px;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .card__slider {
     height: 100%;
   }
@@ -15549,7 +15549,7 @@ footer.nav-is-open {
   border-left: 30px solid white;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .price__container {
     float: left;
     margin: 0 auto;
@@ -15573,7 +15573,7 @@ footer.nav-is-open {
     font-size: 14px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .price__table {
     max-width: none;
   }
@@ -15798,7 +15798,7 @@ footer.nav-is-open {
   border-right: 30px solid white;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .modal {
     padding: 0 25px !important;
   }
@@ -15962,7 +15962,7 @@ footer.nav-is-open {
   float: left;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .blog__mod--wrapper {
     padding: 0;
   }
@@ -15991,7 +15991,7 @@ footer.nav-is-open {
     margin-bottom: 20px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .blog__overview--contents {
     background: #fff;
     padding: 2em 0 0;
@@ -16343,7 +16343,7 @@ footer.nav-is-open {
   border-bottom: 1px solid #d5d5d5;
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .blog__inner--feature {
     position: absolute;
     top: -130px;
@@ -16456,7 +16456,7 @@ footer.nav-is-open {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .comment__form .form-btn {
     width: inherit;
     max-width: 150px;
@@ -16831,7 +16831,7 @@ footer.nav-is-open {
   font-size: 1.125em;
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .shave__card {
     overflow: hidden;
     padding: 0;
@@ -16929,7 +16929,7 @@ footer.nav-is-open {
   border-right: 30px solid white;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .barber__wrapper {
     max-width: 500px;
     float: left;
@@ -16945,6 +16945,7 @@ footer.nav-is-open {
     padding-top: 20px;
   }
   .barber__box .avatar {
+    border-radius: 60px;
     width: 45%;
   }
   .barber__box .title {
@@ -17026,7 +17027,7 @@ footer.nav-is-open {
     position: relative;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .barber__box {
     max-width: 500px;
     padding-bottom: 40px;
@@ -17248,7 +17249,7 @@ footer.nav-is-open {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .small-gallery .gallery-item {
     float: left;
     height: 250px;
@@ -17294,7 +17295,7 @@ footer.nav-is-open {
     width: 50%;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .full-width-gallery .gallery-item {
     float: left;
     height: 300px;
@@ -17323,7 +17324,7 @@ footer.nav-is-open {
     width: 33.33333333333%;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .full-width-gallery .gallery-item {
     float: left;
     height: 350px;
@@ -17352,7 +17353,7 @@ footer.nav-is-open {
     width: 25%;
   }
 }
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1600px) {
   .full-width-gallery .gallery-item {
     float: left;
     height: 450px;
@@ -17617,7 +17618,7 @@ footer.nav-is-open {
   white-space: normal;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .gallery-details h4 {
     font-size: 1.125em;
     margin: 65px auto 30px;
@@ -17658,7 +17659,7 @@ footer.nav-is-open {
     margin: 70px auto 10px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .stats__container {
     margin: 0 auto 70px;
   }
@@ -17799,7 +17800,7 @@ footer.nav-is-open {
   font-size: 1.125em;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .about__process {
     padding: 70px 0;
     color: #fff;
@@ -17824,7 +17825,7 @@ footer.nav-is-open {
     width: 75px;
   }
 }
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .about__process {
     padding: 100px 0;
   }

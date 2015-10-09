@@ -86,9 +86,7 @@
 }
 
 
-
-//TODO: change all tablets to correct size in comment
-// Displays greater than 768px 
+// Displays greater than 768px
 @include breakpoint(tablet) {
 
   .barber__wrapper{
@@ -108,6 +106,7 @@
 	}
 
 	.avatar{
+	  border-radius: 60px;
 	  width:45%;
 	}
 

@@ -9,6 +9,7 @@
         <!-- Title block allowing child pages to override -->
         <title>Empty</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -25,6 +26,7 @@
         
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/modernizr.min.js"></script>
+
 
     </head>
     <body class="loading">
@@ -120,7 +122,7 @@
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
-                                <div class="plus-hover">
+                                <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
                                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
@@ -133,7 +135,7 @@
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
-                                <div class="plus-hover">
+                                <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
                                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
@@ -146,7 +148,7 @@
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
-                                <div class="plus-hover">
+                                <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
                                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
@@ -159,7 +161,7 @@
                     <li>
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
-                                <div class="plus-hover">
+                                <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
                                 <img src="assets/images/dropdown-nav/nav-gallery-1.jpg" alt="Product Image">
@@ -478,24 +480,9 @@
 
 <section class="container-fluid container__grey no-padding ">
 	<div class="angle-bottom-top" style="color: #fff;"></div>
+
 	<!-- feature-service-card -->
 	<div class="blog__inner--feature gallery__slider">
-
-			<!-- <div class="container sv__container--md no-padding">
-
-				<div id="gallery-controls" class="gallery__controls">
-					<div class="col-xs-12 col-sm-4 left">
-						<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
-					</div>
-					<div class="col-xs-12 col-sm-4 center">
-						<a href="#"><i class="fa fa-th-large"></i><span>Gallery</span></a>
-					</div>
-					<div class="col-xs-12 col-sm-4 right">
-						<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
-					</div>
-				</div>
-
-			</div> -->
 
 		<div class="blog__inner--content offset__width">
 
@@ -623,7 +610,7 @@
 
                                     <h5>Sandal Wood</h5>
                                     <h6>Aftershave</h6>
-                                    <div class="angle-bottom-card" style="border-left-color: rgb(175, 140, 69);"></div>
+                                    <!-- <div class="angle-bottom-card" style="border-left-color: rgb(175, 140, 69);"></div> -->
                                 </a>
 
                                 <div class="bio">
@@ -665,7 +652,7 @@
 
                                     <h5>Sandal Wood</h5>
                                     <h6>Aftershave</h6>
-                                    <div class="angle-bottom-card" style="border-left-color: rgb(175, 140, 69);"></div>
+                                    <!-- <div class="angle-bottom-card" style="border-left-color: rgb(175, 140, 69);"></div> -->
                                 </a>
 
                                 <div class="bio">
@@ -695,61 +682,52 @@
 </section>
 
 	<section>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="social-container">
-                <a href="">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-pinterest"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-youtube"></i>
-                </a>
-            </div>
-        </div>
+    <div class="social-container">
+        <a href="">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="">
+            <i class="fa fa-pinterest"></i>
+        </a>
+        <a href="">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a href="">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+            <i class="fa fa-youtube"></i>
+        </a>
     </div>
 </section>
 
 	<section class="container-fluid container__grey no-padding ">
-    <div class="row">
 
-        <div class="col-xs-12">
+    <div class="gallery-details">
 
-            <div class="gallery-details">
+        <h4>Style details</h4>
 
-                <h4>Style details</h4>
-
-                <div class="table-responsive">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <th>Hair Type</th>
-                                <td>Curly or wavy hair preferred</td>
-                            </tr>
-                            <tr>
-                                <th>Time to cut</th>
-                                <td>45 min</td>
-                            </tr>
-                            <tr>
-                                <th>Face Type</th>
-                                <td>For pear or diamond shaped faces with a prominent chin.</td>
-                            </tr>
-                            <tr>
-                                <th>The Style</th>
-                                <td>Maintain length and add layers all over the head, not shorter than 3 inches.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Hair Type</th>
+                        <td>Curly or wavy hair preferred</td>
+                    </tr>
+                    <tr>
+                        <th>Time to cut</th>
+                        <td>45 min</td>
+                    </tr>
+                    <tr>
+                        <th>Face Type</th>
+                        <td>For pear or diamond shaped faces with a prominent chin.</td>
+                    </tr>
+                    <tr>
+                        <th>The Style</th>
+                        <td>Maintain length and add layers all over the head, not shorter than 3 inches.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <!-- <div class="angle-bottom" style="border-left-color: #e8e8e8;"></div> -->
@@ -977,20 +955,22 @@
                     <div class="row">
 
                         <!-- Modal Section 1 -->
-                        <div class="col-xs-12 col-md-6 no-padding modal-info">
+                        <div class="col-xs-12 no-padding modal-info">
 
                             <!-- Mobile close btn (hidden on larger screens) -->
-                            <button type="button" class="visible-xs visible-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
+                            <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
                             </button>
 
-                            <img class="img-responsive" src="assets/images/contact/modal-header.jpg" alt="Book Today"/>
+                            <!--<img class="img-responsive hidden-xs hidden-sm" src="assets/images/contact/modal-header.jpg" alt="Book Today"/>-->
 
                             <!-- Section 1 content -->
-                            <div class="modal-bookNow">
-                                <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
+                            <div class="modal-bookNow" style="background-image: url(/assets/images/contact/modal-header.jpg);">
+                                <!-- <div class="modal-angle-container">
+                                    <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
+                                </div> -->
                                 <h3>Book today</h3>
                                 <h5>We are masters of the blade</h5>
-                                    <ul class="book-list">
+                                    <!-- <ul class="book-list">
                                         <li>
                                             <span><i class="fa fa-mobile"></i>Call ahead</span>
                                             <a href="">444-444-444</a>
@@ -999,57 +979,47 @@
                                             <span><i class="fa fa-map-marker"></i>walk-ins welcome</span>
                                             <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
                                         </li>
-                                    </ul>
+                                    </ul>-->
                             </div><!-- end modal content -->
                         </div><!-- end modal section 1 -->
 
-                        <!-- Modal Section 2 -->
-                        <div class="col-xs-12 col-md-6 no-padding">
+                        <!-- Modal Section 2 new -->
+                        <div class="col-xs-12 no-padding">
                             <div class="modal-form">
-                                <button type="button" class="hidden-xs hidden-sm modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
-                                </button>
-                                <h4>email us</h4>
 
-                                <!-- Form Container -->
-                                <div class="contact__form--container">
-                                    <div class="row">
-
-                                        <!-- Contact form -->
-                                        <form action="" method="post">
-                                            <div class="col-xs-12 no-padding">
-
-                                                <!-- User Name -->
-                                                <div class="input__container">
-                                                    <span class="icon"><i class="fa fa-user"></i></span>
-                                                    <input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
-                                                </div>
-
-                                                <!-- User Email -->
-                                                <div class="input__container">
-                                                    <span class="icon"><i class="fa fa-envelope"></i></span>
-                                                    <input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
-                                                </div>
-
-                                                <!-- User Message -->
-                                                <div class="input__container pencil-contact">
-                                                    <span class="icon"><i class="fa fa-pencil "></i></span>
-                                                    <textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
-                                                </div>
-
-                                            </div><!-- end col-xs-12 -->
-
-                                            <!-- Submit Btn -->
-                                            <div class="col-xs-12 no-padding">
-                                                <button type="submit" class="btn book-now-btn form-btn">Submit</button>
-                                            </div><!-- End Submit -->
-
-                                        </form><!-- End Form -->
-
-                                    </div><!-- end row -->
-                                </div><!-- end container -->
+                                <ul class="book-list">
+                                    <li>
+                                        <a href="">
+                                            <div class="list-content">
+                                                 <i class="fa fa-mobile fa-2x"></i>
+                                                <span>Call ahead</span>
+                                                <p>444-444-444</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+                                            <div class="list-content">
+                                                 <i class="fa fa-map-marker fa-2x"></i>
+                                                <span>Walk-ins welcome</span>
+                                                <p>2020 Wilabee way, Atlanta Ga 30030</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="list-content">
+                                                 <i class="fa fa-envelope-o fa-2x"></i>
+                                                <p>Contact us online</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
 
                             </div><!-- end modal-form -->
                         </div><!-- end modal section 2 -->
+
+
                     </div><!-- end row -->
                 </div><!-- end modal-content -->
             </div><!-- end modal-dialog -->

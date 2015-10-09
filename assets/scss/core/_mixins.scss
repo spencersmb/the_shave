@@ -74,16 +74,16 @@
 //TODO update breakpoints for Bootstrap
 @mixin breakpoint($point) {
   @if $point == desktopXL {
-    @media (min-width: 1600px) { @content ; }
+    @media only screen and (min-width: 1600px) { @content ; }
   }
   @else if $point == desktop {
-    @media (min-width: 1200px) { @content ; }
+    @media only screen and (min-width: 1200px) { @content ; }
   }
   @else if $point == laptop {
-    @media (min-width: 992px) { @content ; }
+    @media only screen and (min-width: 992px) { @content ; }
   }
   @else if $point == tablet {
-    @media (min-width: 768px) { @content ; }
+    @media only screen and (min-width: 768px) { @content ; }
   }
     //  @else if $point == phablet {
     //    @media (min-width: $small-screen-up)  { @content ; }

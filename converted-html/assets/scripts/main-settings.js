@@ -8,6 +8,7 @@ $(function() {
 		tablet = 784,
 		windowSize = myWindow.width() + 15,
 		browserID = WhichBrowser(),
+		modalOpen = false,
 		resizedWidth;
 	
 		//console.log(browserID);
@@ -63,22 +64,36 @@ $(function() {
 			}
 		}
 
+		//IE9 fixs
 		function browserJs( browserID ){
 
-			//IE9 fix for cascading animation
-			if(browserID == 'msie' && document.documentMode == 9){
 
-				//ADD CSS style opactiy 1
-				var cascadeFeature = $('#cascadeFeature');
-				cascadeFeature.find('.feature__box').each(function(index){
-					$(this).css('opacity', 1);
+				if(browserID == 'msie' && document.documentMode == 9){
 
-				});
+						//ADD CSS style opactiy 1
+						var cascadeFeature = $('#cascadeFeature'),
+								productsContainer = $('.products');
 
-			}else{
-				//Run if any other browser
-				ScrollCascade();
-			}
+						//IE9 fix for cascading animation
+						cascadeFeature.find('.feature__box').each(function(index){
+								$(this).css('opacity', 1);
+						});
+
+						//products html order
+						if(productsContainer){
+								productsContainer.find('.card__slider').each(function(i, v){
+										var $this = $(this);
+										var bio = $this.find(".bio");
+										console.log(bio);
+										bio.detach();
+										bio.insertAfter($this);
+								});
+						}
+
+				}else{
+						//Run if any other browser
+						ScrollCascade();
+				}
 
 		}
 
@@ -235,6 +250,12 @@ $(function() {
 				$('main').find('.footer-push').css('margin-bottom', 0);
 				$('body').addClass('footer-mobile');
 			}
+
+			//modal check
+			if(modalOpen && checkLaptopWidth() == false){
+				var modalImage = $('.modal-content').find('.row').width();
+				$('.angle-top-modal').css('border-right-width', modalImage);
+			}
 		}
 
 		// ==========================================================================
@@ -259,8 +280,11 @@ $(function() {
 
 		function centerModal(){
 
+			modalOpen = true;
+
 			//add display block to get height of the modal-dialog
 			$(this).css('display', 'block');
+
 			var dialog = $(this).children('.modal-dialog'),
 
 				//center the object
@@ -277,31 +301,29 @@ $(function() {
 
 			dialog.css('margin-top', offset);
 
-			if(checkWindowWidth() === true){
+			//if(checkLaptopWidth() === true){
 
-				//set div heights the same for laptop/desktop
-				var row = dialog.find('.row');
-				var rowHeight = row.height();
+				//setModalHeight(dialog);
 
-				row.children('div').height(rowHeight);
+				//angleModal();
 
-				angleModal();
+			//}else{
 
-			}else{
+				//console.log('modal mobile');
+				//reset styles from desktop if already set
+				//resetModalHeight(dialog);
 
-				angleModal();
-			}
-
-			//full width
-			var modalImage = $('.modal-content').find('.row').width();
-			$('.angle-top-modal').css('border-right-width', modalImage);
+				//full width
+				//var modalImage = $('.modal-content').find('.row').width();
+				//$('.angle-top-modal').css('border-right-width', modalImage);
+			//}
 
 			modalIn();
 		}
 
 		function angleModal(){
 				var modalImage = $('.modal-content').find('.row').width();
-				$('.angle-top-modal').css('border-right-width', modalImage / 2);
+				$('.angle-top-modal').css('border-right-width', (modalImage / 2) + 1);
 		}
 
 		function modalIn(){
@@ -310,7 +332,25 @@ $(function() {
 
 		function modalOut(){
 			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
+			modalOpen = false;
 		}
+
+		function setModalHeight(object){
+
+			//set div heights the same for laptop/desktop
+			var row = object.find('.row');
+			var rowHeight = row.height();
+
+			row.children('modal-bookNow').height(rowHeight);
+		}
+
+		function resetModalHeight(object){
+
+		//set div heights the same for laptop/desktop
+		var row = object.find('.row');
+
+		row.children('modal-bookNow').css('height', "");
+	}
 
 		// ==========================================================================
 		// Angle borders
@@ -397,6 +437,22 @@ $(function() {
 			}
 		}
 
+		function checkLaptopWidth() {
+
+		var windowSize = $(window).width();
+
+		$(window).on('resize', function() {
+			resizedWidth = $(window).width();
+			console.log(resizedWidth);
+		});
+
+		if (resizedWidth >= desktop || windowSize >= desktop) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 		// ==========================================================================
 		// Sub-menu item hover
 		// ==========================================================================
@@ -418,6 +474,27 @@ $(function() {
 
 		})();
 
+		// ==========================================================================
+		// Modal click functions
+		// ==========================================================================
+		(function() {
+
+			$('.modal-form').find('li').click(function (e) {
+				e.preventDefault();
+				var link = $(this).children('a').attr('href');
+				window.location = link;
+			});
+
+		})();
+
+		// ==========================================================================
+		// Products check for ie9
+		// ==========================================================================
+		(function() {
+
+
+
+		})();
 		// ==========================================================================
 		// Run on First Load
 		// ==========================================================================
