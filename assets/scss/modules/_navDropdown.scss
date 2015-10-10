@@ -550,7 +550,7 @@ $primary-font: sans-serif;
       /* truncate text with ellipsis if too long */
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
+      white-space: normal;
       margin-bottom:0;
       font-size:16px;
       text-align: left;
