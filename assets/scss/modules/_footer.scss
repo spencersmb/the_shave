@@ -136,6 +136,10 @@ footer{
 	  border:3px solid $white;
 	  margin:20px auto 0;
 	  width:60%;
+
+	  &:hover{
+		border:3px solid $primary-color;
+	  }
 	}
 
 }
@@ -145,7 +149,6 @@ footer{
 	font-size:em(14px);
 	text-align:center;
 }
-
 
 .footer__contact{
 	text-align:center;
@@ -179,114 +182,28 @@ footer{
 .social{
 	width:100%;
 	margin:0 auto;
-	padding:20px 0;
+	padding:0 0 20px 0;
   	border-top:none;
 
 	ul{
 		text-align:center;
+	  	margin: 0;
 	}
 
 	li{
 		display: inline-block;
 		background-size:contain;
-
+	  	margin:0 8px 0 0;
+	  	text-align: center;
 	}
-}
 
-.facebook, .twitter, .instagram, .linkedin,{
-	margin:0 8px;
-
-	a{
+  	a{
 		width:23px;
 		height:23px;
 		display:block;
+		color:#fff;
 	}
 }
-
-.social-lg{
-	margin:0 8px;
-	width:51px;
-	height:51px;
-	display:block;
-}
-
-.social-md{
-	margin:0 8px;
-	width:30px;
-	height:30px;
-	display:block;
-}
-
-.facebook{
-  	background: url("../images/icons/social-white/facebook.png") no-repeat;
-  	@include image-2x("../images/icons/social-white/facebook@2x.png", 38px, 38px);
-}
-
-.twitter{
-	background: url("../images/icons/social-white/twitter.png") no-repeat;
-	@include image-2x("../images/icons/social-white/twitter@2x.png", 38px, 38px);
-}
-//TODO: find retina version of instagram
-.instagram{
-	background: url("../images/icons/social-white/instagram.png") no-repeat;
-	@include image-2x("../images/icons/social-white/instagram@2x.png", 38px, 38px);
-}
-//TODO: make linkedin logo
-.linkedin{
-	background: url("../images/icons/social-white/instagram.png") no-repeat;
-	@include image-2x("../images/icons/social-white/instagram@2x.png", 38px, 38px);
-}
-
-//TODO: make sure retina icons are grey
-.linkedin-grey{
-	@extend .social-lg;
-	background: url("../images/icons/social-grey/linkedin-grey.jpg") no-repeat;
-	@include image-2x("../images/icons/social-grey/linkedin@2x.jpg", 51px, 51px);
-}
-
-.facebook-grey{
-	@extend .social-lg;
-  	background: url("../images/icons/social-grey/facebook-grey.jpg") no-repeat;
-  	@include image-2x("../images/icons/social-grey/facebook@2x.jpg", 51px, 51px);
-}
-
-.twitter-grey{
-	@extend .social-lg;
-	background: url("../images/icons/social-grey/twitter-grey.jpg") no-repeat;
-	@include image-2x("../images/icons/social-grey/twitter@2x.jpg", 51px, 51px);
-}
-//TODO: find retina version of instagram
-.instagram-grey{
-	@extend .social-lg;
-	background: url("../images/icons/social-grey/instagram-grey.jpg") no-repeat;
-	@include image-2x("../images/icons/social-grey/instagram@2x.jpg", 51px, 51px);
-}
-
-
-.linkedin-black{
-	@extend .social-lg;
-	background: url("../images/icons/social-black/linkedin-black.png") no-repeat;
-	@include image-2x("../images/icons/social-black/linkedin-black@2x.png", 51px, 51px);
-}
-
-.facebook-black{
-	@extend .social-lg;
-  	background: url("../images/icons/social-black/facebook-black.png") no-repeat;
-  	@include image-2x("../images/icons/social-black/facebook-black@2x.png", 51px, 51px);
-}
-
-.twitter-black{
-	@extend .social-lg;
-	background: url("../images/icons/social-black/twitter-black.png") no-repeat;
-	@include image-2x("../images/icons/social-black/twitter@2x.png", 51px, 51px);
-}
-//TODO: find retina version of instagram
-.instagram-black{
-	@extend .social-lg;
-	background: url("../images/icons/social-black/instagram-black.png") no-repeat;
-	@include image-2x("../images/icons/social-black/instagram-black@2x.png", 51px, 51px);
-}
-
 
 // Displays greater than 600px
 @include breakpoint(tablet) {
@@ -331,6 +248,7 @@ footer{
 	}
 
 	.social{
+	  padding: 20px 0;
 
 		ul{
 			text-align:left;
@@ -347,6 +265,7 @@ footer{
 		padding:0;
 		text-align:right;
 		padding-right:15px;
+	  	margin-top: 0;
 	}
 
 
@@ -365,12 +284,12 @@ footer{
 
 	}
 
+
 	.facebook, .twitter, .instagram, .linkedin,{
 		margin:0 8px 0 0;
 	}
 
 	.footer__wrapper{
-//		margin:em(40px) auto;
 		padding:em(40px) 0;
 	}
 
@@ -386,6 +305,10 @@ footer{
 
 	.footer__desc{
 		width:50%;
+	}
+
+	.social {
+	  padding:0;
 	}
 
 	.email__wrapper{

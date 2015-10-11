@@ -1237,6 +1237,13 @@ $primary-font: sans-serif;
       }
     }
 
+    > .single-item > a.is-active {
+      /* hover effect for .cd-dropdown-content items with no subnavigation */
+      box-shadow: inset 2px 0 0 $primary-color;
+      color: $primary-color;
+
+    }
+
     .open-to-left & > .has-children > a.is-active {
       box-shadow: inset -2px 0 0 $primary-color;
     }

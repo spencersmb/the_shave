@@ -8,13 +8,22 @@
     -->
 	{% include "service-shave/service-intro-shave" %}
 
-	<section class="sv__container--fluid dual-img">
+	<section id="service2-skr" class="sv__container--fluid">
+
+		<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url({{'service-bg-lg.jpg' | asset_url}});">
+
+		</div><!-- end parralax bg -->
+
+	</section>
+
+	<!-- static -->
+	<!--<section class="sv__container--fluid dual-img">
 		<div class="row no-margin">
 			<div class="col-xs-12 no no-padding">
 				<img class="img-responsive" src="{{'service-full.jpg' | asset_url}}" alt="full service barbershop"/>
 			</div>
 		</div>
-	</section>
+	</section>-->
 
 	<!-- Service Section -->
 	<section id="content" class="container-fluid grey-bg reverse-angle">
@@ -76,10 +85,6 @@
 	{% include "service-shave/price-boxs-shave" %}
 	<!-- End Section price module -->
 
-	<div class="container-fluid no-padding single-image">
-		<img class="img-responsive" src="{{'service-bg-lg.jpg' | asset_url}}" alt=""/>
-	</div>
-
 	<!-- Start bio module -->
 	{% include "service-shave/suggested-barber" %}
 	<!-- End bio module -->
@@ -87,6 +92,46 @@
 	<!-- FAQ -->
 	{% include "service-shave/faq-shave" %}
 	<!-- End Faq -->
+
+	<div class="container-fluid no-padding footer-push">
+		<div class="discover__wrapper">
+			<div class="discover__image active" style="background-image: url({{'feature-background2.jpg' | asset_url}});">
+
+			</div>
+			<div class="discover__image" style="background-image: url({{'feature-background_3.jpg' | asset_url}});">
+
+			</div>
+			<div class="discover__image" style="background-image: url({{'feature-background_4.jpg' | asset_url}});">
+
+			</div>
+			<div class="discover__title">
+				<h3>Get inspired by our work</h3>
+				<p></p>
+				<div class="discover__module">
+					<div class="discover__module--wrapper">
+						<div class="master__icon">
+							<img class="img-responsive disc-1 active" data-title="Shave" src="{{'noun_163738_cc.png' | asset_url}}" alt=""/>
+							<img class="img-responsive disc-2" data-title="Mustaches" src="{{'noun_140468_cc.png' | asset_url}}" alt=""/>
+							<img class="img-responsive disc-3" data-title="HairCuts" src="{{'noun_22509_cc.png' | asset_url}}" alt=""/>
+							<a class="disc__top" href=""><i class="fa fa-chevron-up"></i></a>
+							<a class="disc__bottom" href=""><i class="fa fa-chevron-down"></i></a>
+						</div>
+
+						<div class="master__title">
+							<h4>Shave</h4>
+						</div>
+						<div class="discover__link">
+							<a href="">
+								<span>View Gallery</span>
+								<i class="fa fa-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 
 {% endblock %}
@@ -206,8 +251,83 @@
 			}
 		}
 
-
 		browserJs(WhichBrowser());
+
+		// ==========================================================================
+		// Get inspired Module
+		// ==========================================================================
+		var master = $('.master__icon');
+		var masterTitle = $('.master__title');
+		var discoverWrapper = $('.discover__wrapper');
+		var count = 0;
+		var position = 1;
+		var arr = master.children('img').get().reverse();
+		var arrImages = discoverWrapper.children('.discover__image').get().reverse();
+		
+		console.log(arrImages);
+
+		//get total icons and fade out all but the first
+		master.children('img').each(function(index){
+			count ++;
+			if(index == 0){
+				masterTitle.html('<h4>' + $(this).data('title') + '</h4>');
+			}else{
+				$(this).fadeOut();
+			}
+		});
+
+		discoverWrapper.children('.discover__image').each(function(index){
+
+			if(index == 0){
+				
+			}else{
+				$(this).fadeOut();
+			}
+		});
+
+
+		$(".disc__top").click( function(event){
+			event.preventDefault();
+			var current = master.find('.active'),
+				currentImage = discoverWrapper.find('.active');
+
+			if(count == arr.length){
+				//do nothing cus you are at the top
+			}else{
+				count++;
+				console.log(count);
+				current.fadeOut().removeClass('active').prev().addClass('active').fadeIn();
+				currentImage.fadeOut().removeClass('active').prev().addClass('active').fadeIn();
+				var title = $(arr[count - 1]).data('title');
+
+
+				console.log(arr[count - 1]);
+				//change title
+				masterTitle.html('<h4>' + title + '</h4>');
+			}
+		});
+
+		//down
+		$(".disc__bottom").click( function(event){
+			event.preventDefault();
+			var current = master.find('.active'),
+				currentImage = discoverWrapper.find('.active');
+
+			if(count == 1){
+				//do nothing cus you are at the end
+			}else{
+				count--;
+				console.log(count);
+				current.fadeOut().removeClass('active').next().addClass('active').fadeIn();
+				currentImage.fadeOut('slow').removeClass('active').next().addClass('active').fadeIn('slow');
+				console.log(arr[count - 1]);
+				var title = $(arr[count - 1]).data('title');
+				//change title
+				masterTitle.html('<h4>' + title + '</h4>');
+
+			}
+
+		});
 
 	});
 

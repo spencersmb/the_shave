@@ -165,6 +165,158 @@ padding: 0 60px 90px;
 
 }
 
+.discover__wrapper{
+  position: relative;
+  height: 100%;
+  padding:300px 0;
+  margin:0 auto;
+  background-position: center center;
+  background-size: cover;
+
+  .discover__title{
+	position: relative;
+	text-align:left;
+	color:#fff;
+	width:40%;
+//	top:50%;
+	margin-left:60%;
+
+//	@include transform(translateY(-50%));
+
+	h3{
+	  width:80%;
+	  margin-bottom: 90px;
+	}
+  }
+
+  .discover__module{
+
+	&--wrapper{
+	  width:100%;
+	  height:100%;
+	  clear: both;
+	  display: table;
+	  position: relative;
+	}
+  }
+
+  .master__icon{
+	width:115px;
+	height:115px;
+	position:relative;
+	border: 3px solid #fff;
+	float:left;
+  }
+
+  .master__title{
+	display: table;
+	float: left;
+	height:115px;
+	width: 228px;
+	border-top:3px solid #fff;
+	border-bottom:3px solid #fff;
+
+	h4{
+	  display:table-cell;
+	  text-align: center;
+	  vertical-align: middle;
+
+	}
+  }
+
+  .disc__top, .disc__bottom{
+	position: absolute;
+	border:3px solid #fff;
+	color:#fff;
+	padding:1em;
+	left:50%;
+	@include transform(translateX(-50%));
+
+	&:hover{
+	  @include transition(all .3s);
+	  background-color: rgba(255, 255, 255, 0.27);
+	}
+  }
+  .disc__top{
+	top:-62px;
+  }
+
+  .disc__bottom{
+	bottom:-62px;
+  }
+
+  .discover__link{
+	display:inline-block;
+	border: 3px solid #fff;
+	height:115px;
+	width: 50px;
+	@include transition(width .3s);
+	overflow: hidden;
+	position: relative;
+
+	i{
+	  position: absolute;
+	  top:50%;
+	  left:15px;
+	  @include transform(translateY(-50%));
+	}
+
+	span{
+	  position: absolute;
+	  @include transform(translate3d(-80px,-50%,0));
+	  font-size: 12px;
+	  top:50%;
+	  @include transition(all .3s);
+	}
+
+	a{
+	  @include transition(all .3s 0s);
+	}
+
+	&:hover{
+	  color:#fff;
+	  background-color: $black;
+	  border-color:$black;
+	  width:175px;
+
+	  span{
+		@include transform(translate3d(50px,-50%,0));
+	  }
+
+	  a{
+		color:#fff;
+	  }
+	}
+  }
+
+  .discover__icon{
+	display: block;
+	position: absolute;
+	bottom:0;
+	left:0;
+	border:3px solid #fff;
+	@include transition(all .3s);
+  }
+
+  img{
+	position: absolute;
+
+
+	&.active{
+	}
+  }
+
+  .discover__image{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-position: center center;
+	background-size: cover;
+  }
+}
+
 // pricing boxs
 
 

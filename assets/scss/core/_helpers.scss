@@ -296,15 +296,19 @@
   max-width: 900px;
   margin:50px auto;
   text-align: center;
-  padding:0 15px;
+  padding:0 20px;
 
   h2{
-    text-transform: initial;
     margin:0 auto 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 18px;
   }
 
   p{
-    line-height: 28px;
+    line-height: 24px;
+    font-family: "courier";
   }
 }
 
@@ -461,13 +465,18 @@
   }
 
   .graphic-headline{
+    font-weight: 500;
     max-width: 900px;
-    margin:75px auto;
+    margin:105px auto;
     padding:0 50px;
 
     h2{
-      text-transform: initial;
+      font-size: 24px;
       margin:0 auto 60px;
+    }
+
+    p{
+      line-height: 28px;
     }
 
   }
@@ -516,13 +525,13 @@
   }
 
   .graphic-headline{
-    max-width: 850px;
+    max-width: 950px;
     margin:200px auto;
     padding:0;
 
     h2{
-      text-transform: initial;
       margin:0 auto 60px;
+      font-size: 28px;
     }
 
   }
@@ -552,16 +561,6 @@
       font-size: 24px;
       line-height: 32px;
       max-width: 1000px;
-    }
-
-  }
-
-  .graphic-headline{
-    margin:200px auto;
-
-    h2{
-      text-transform: initial;
-      margin:0 auto 60px;
     }
 
   }
