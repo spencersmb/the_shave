@@ -10089,137 +10089,110 @@ footer.nav-is-open {
 .discover__wrapper {
   position: relative;
   height: 100%;
-  padding: 300px 0;
+  padding: 0;
   margin: 0 auto;
   background-position: center center;
   background-size: cover;
 }
-.discover__wrapper .discover__title {
+.discover__wrapper .disc__container--image {
+  height: 190px;
+}
+.discover__wrapper .discover__module {
   position: relative;
   text-align: left;
-  color: #fff;
-  width: 40%;
-  margin-left: 60%;
-}
-.discover__wrapper .discover__title h3 {
-  width: 80%;
-  margin-bottom: 90px;
-}
-.discover__wrapper .discover__module--wrapper {
   width: 100%;
-  height: 100%;
-  clear: both;
-  display: table;
-  position: relative;
 }
-.discover__wrapper .master__icon {
-  width: 115px;
-  height: 115px;
-  position: relative;
-  border: 3px solid #fff;
-  float: left;
-}
-.discover__wrapper .master__title {
-  display: table;
-  float: left;
-  height: 115px;
-  width: 228px;
-  border-top: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-}
-.discover__wrapper .master__title h4 {
-  display: table-cell;
+.discover__wrapper .disc__header {
   text-align: center;
+  border-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 115px;
+  display: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.discover__wrapper .disc__header h3 {
+  color: #fff;
+  padding: 1.5em 1.5em;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: table-cell;
   vertical-align: middle;
 }
-.discover__wrapper .disc__top, .discover__wrapper .disc__bottom {
-  position: absolute;
-  border: 3px solid #fff;
-  color: #fff;
-  padding: 1em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+.discover__wrapper .disc__header .headline-container {
+  height: 100%;
+  width: 100%;
+  display: table;
 }
-.discover__wrapper .disc__top:hover, .discover__wrapper .disc__bottom:hover {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(255, 255, 255, 0.27);
+.discover__wrapper .tab-pane.tab-fade.in {
+  z-index: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
 }
-.discover__wrapper .disc__top {
-  top: -62px;
-}
-.discover__wrapper .disc__bottom {
-  bottom: -62px;
-}
-.discover__wrapper .discover__link {
-  display: inline-block;
-  border: 3px solid #fff;
-  height: 115px;
-  width: 50px;
-  -webkit-transition: width 0.3s;
-  -moz-transition: width 0.3s;
-  transition: width 0.3s;
-  overflow: hidden;
+.discover__wrapper .tab-content {
   position: relative;
-}
-.discover__wrapper .discover__link i {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.discover__wrapper .discover__link span {
-  position: absolute;
-  -webkit-transform: translate3d(-80px, -50%, 0);
-  -moz-transform: translate3d(-80px, -50%, 0);
-  -ms-transform: translate3d(-80px, -50%, 0);
-  -o-transform: translate3d(-80px, -50%, 0);
-  transform: translate3d(-80px, -50%, 0);
-  font-size: 12px;
-  top: 50%;
+  width: 100%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-.discover__wrapper .discover__link a {
-  -webkit-transition: all 0.3s 0s;
-  -moz-transition: all 0.3s 0s;
-  transition: all 0.3s 0s;
+.discover__wrapper .tab-pane {
+  position: absolute;
+  display: block !important;
+  z-index: 0;
+  -webkit-transform: translateX(-200px);
+  -moz-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  -o-transform: translateX(-200px);
+  transform: translateX(-200px);
 }
-.discover__wrapper .discover__link:hover {
-  color: #fff;
-  background-color: #252525;
-  border-color: #252525;
-  width: 175px;
-}
-.discover__wrapper .discover__link:hover span {
-  -webkit-transform: translate3d(50px, -50%, 0);
-  -moz-transform: translate3d(50px, -50%, 0);
-  -ms-transform: translate3d(50px, -50%, 0);
-  -o-transform: translate3d(50px, -50%, 0);
-  transform: translate3d(50px, -50%, 0);
-}
-.discover__wrapper .discover__link:hover a {
-  color: #fff;
-}
-.discover__wrapper .discover__icon {
+.discover__wrapper .tab-icon {
   display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border: 3px solid #fff;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+}
+.discover__wrapper .text {
+  display: none !Important;
+}
+.discover__wrapper .price__sheet {
+  padding: 1em;
+}
+.discover__wrapper .price__sheet .item {
+  margin: 0;
+  padding-bottom: 5px;
+}
+.discover__wrapper .price__sheet .title {
+  margin: 0 auto;
+  width: 100%;
+}
+.discover__wrapper .price__sheet .title h3 {
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+.discover__wrapper .price__sheet .desc {
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+}
+.discover__wrapper .price__sheet .item__link {
+  position: relative;
+  display: block;
+}
+.discover__wrapper .price__sheet .item__link a {
+  padding-top: 15px;
+  text-align: left;
+  margin: 0;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+}
+.discover__wrapper .price__sheet .item__link i {
+  float: right;
+  margin-top: 6px;
 }
 .discover__wrapper img {
   position: absolute;
@@ -10228,16 +10201,85 @@ footer.nav-is-open {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 190px;
   width: 100%;
   background-position: center center;
   background-size: cover;
 }
 
+@media only screen and (min-width: 768px) {
+  .discover__wrapper {
+    padding: 50px 0 60px;
+  }
+  .discover__wrapper .disc__container--image {
+    height: 100%;
+  }
+  .discover__wrapper .discover__module {
+    width: 320px;
+    margin-left: 45%;
+  }
+  .discover__wrapper .disc__header h3 {
+    padding: 1.5em 1.5em;
+  }
+  .discover__wrapper .tab-pane.tab-fade.in {
+    z-index: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  .discover__wrapper .tab-content {
+    width: 320px;
+    height: 334px !important;
+  }
+  .discover__wrapper .tab-pane {
+    position: absolute;
+    display: block !important;
+    z-index: 0;
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    -ms-transform: translateY(80px);
+    -o-transform: translateY(80px);
+    transform: translateY(80px);
+  }
+  .discover__wrapper .price__sheet {
+    padding: 2em 2em 1.5em;
+  }
+  .discover__wrapper .price__sheet .item {
+    padding-bottom: 20px;
+  }
+  .discover__wrapper .discover__image {
+    height: 100%;
+  }
+}
 @media only screen and (min-width: 992px) {
   .shave__card {
     overflow: hidden;
     padding: 0;
+  }
+
+  .discover__wrapper {
+    padding: 75px 0;
+  }
+  .discover__wrapper .discover__module {
+    margin-left: 65%;
+  }
+  .discover__wrapper .disc__header {
+    display: block;
+  }
+  .discover__wrapper .disc__header h3 {
+    padding: 1.5em 1.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .discover__wrapper {
+    padding: 100px 0 130px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .discover__wrapper {
+    padding: 140px 0px;
   }
 }
 .barbers {

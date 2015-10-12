@@ -215,6 +215,7 @@ $(function() {
 
 			var width = $(window).width();
 
+
 			//Resize angle
 			setAngleWidth(width);
 
@@ -414,7 +415,7 @@ $(function() {
 
 			$(window).on('resize', function() {
 				resizedWidth = $(window).width() + 15;
-				// console.log(resizedWidth);
+				console.log(resizedWidth);
 			});
 
 			if (resizedWidth >= tablet || windowSize >= tablet) {
