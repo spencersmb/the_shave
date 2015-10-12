@@ -1,91 +1,53 @@
 {% layout "layout" %}
 
 {% block content %}
-<div class="container-fluid footer-push white-bg no-padding">
+	<!-- Intro blog -->
+	{% include "gallery/gallery-detail-intro" %}
 
-		<!-- Intro blog -->
-		{% include "gallery/gallery-detail-intro" %}
+	<div class="container-fluid container__grey">
+		<div class="container sv__container--md ">
 
-		<div class="container-fluid container__grey">
-			<div class="container sv__container--md ">
+			{% comment %}Stats block{% endcomment %}
+			<div class="row stats__container">
 
-				{% comment %}Stats block{% endcomment %}
-				<div class="row stats__container">
+				{% comment %}Hair desc{% endcomment %}
+				<div class="col-xs-12 no-padding">
 
-					{% comment %}Hair desc{% endcomment %}
-				  	<div class="col-xs-12 no-padding">
-
-						<div class="stats__details">
-							<h3>The Stallion Style</h3>
-							<div id="gallery-controls" class="gallery__controls">
-								<div class="col-xs-12 col-sm-3 left">
-									<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
-								</div>
-								<div class="col-xs-12 col-sm-3 right">
-									<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
-								</div>
+					<div class="stats__details">
+						<h3>The Stallion Style</h3>
+						<div id="gallery-controls" class="gallery__controls">
+							<div class="col-xs-12 col-sm-3 left">
+								<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
 							</div>
-							<h4>$45.00</h4>
-							<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
-							<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
-						</div>
-
-						<div class="style__btn">
-							<div class="btn-group" role="group" aria-label="Styles">
-								<button type="button" class="btn book-now-btn">Get this style</button>
-								<button type="button" class="btn book-now-btn">View All styles</button>
+							<div class="col-xs-12 col-sm-3 right">
+								<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
 							</div>
 						</div>
+						<h4>$45.00</h4>
+						<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
+						<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
+					</div>
 
-						<!-- <div class="style__btn">
-							<a class="btn book-now-btn gold" href="">Get this style</a>
-							<a class="btn book-now-btn" href="">View All styles</a>
-						</div> -->
-
-
-
-				  	</div>
+					<div class="style__btn">
+						<div class="btn-group" role="group" aria-label="Styles">
+							<button type="button" class="btn book-now-btn">Get this style</button>
+							<button type="button" class="btn book-now-btn">View All styles</button>
+						</div>
+					</div>
 
 				</div>
 
-			</div> <!-- end container -->
-
-		</div>
-
-	<!-- <div class="container-fluid container__grey no-padding">
-
-		<div id="gallery-controls" class="gallery__controls">
-			<div class="col-xs-12 col-sm-4 left">
-				<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
 			</div>
-			<div class="col-xs-12 col-sm-4 center">
-				<a href="#"><i class="fa fa-th-large"></i><span>Gallery</span></a>
-			</div>
-			<div class="col-xs-12 col-sm-4 right">
-				<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
-			</div>
-		</div>
 
-	</div> -->
+		</div> <!-- end container -->
+
+	</div>
 
 	{% include "gallery/gallery-product" %}
 
 	{% include "gallery/gallery-social" %}
 
 	{% include "gallery/gallery-details" %}
-
-	<!-- <section class="sv__container--fluid dual-img">
-		<div class="row">
-			<div class="col-xs-6 no-padding">
-				<img class="img-responsive" src="{{'left-image.jpg' | asset_url}}" alt=""/>
-			</div>
-			<div class="col-xs-6 no-padding">
-				<img class="img-responsive" src="{{'right-image.jpg' | asset_url}}" alt=""/>
-			</div>
-		</div>
-	</section> -->
-
-
 
 	<!-- Barbers -->
 	<section class="container__white">
@@ -108,6 +70,7 @@
 							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
 								<div class="overlay text-center">
 									<h3 class="white">I'm a master of the blade</h3>
+									<!-- <img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>-->
 								</div>
 								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
 							</div>
@@ -128,6 +91,7 @@
 							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
 								<div class="overlay text-center">
 									<h3 class="white">Cutting hair is a passion of mine since I was 9.</h3>
+									<!-- <img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>-->
 								</div>
 								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
 							</div>
@@ -148,6 +112,7 @@
 							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
 								<div class="overlay text-center">
 									<h3 class="white">I love the true craftsmenship of the retro barber and want to bring that experience to a new generation.</h3>
+									<!-- <img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>-->
 								</div>
 								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
 							</div>
@@ -172,159 +137,160 @@
 	</section>
 
 
-
-	<!-- End Barber module container-->
-
-	{% comment %}
-	{% include "blog/blog-related-articles" %}
-
-	{% include "blog/blog-comments" %}
-	{% endcomment %}
-
-</div>
-
-
 {% endblock %}
 {% block scripts %}
-    {{ "flickity.pkgd.min.js" | asset_url | script_tag }}
-    {{ "flickity-settings.js" | asset_url | script_tag }}
-		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-<script>
-	// ==========================================================================
-    // Gallery Detail page
-    // ==========================================================================
-    (function(){
-
-    	//Special gallery settings for responsiveness
-		var imgHeight;
-
-		//get height of image on window resize
-		function getImgHeightMaster(){
-			var myImg = document.querySelector("#myImg");
-			var currHeight = myImg.clientHeight;
-
-			return currHeight;
-		}
-
-    	//get height of thumbnail on window resize
-		function getThumbnailHeight(){
-			var myImg = document.querySelector("#myThumb");
-			var currThumbHeight = myImg.clientHeight;
-
-			return currThumbHeight;
-		}
-
-		function resizeFlickity(){
-			var gallery = $(".gallery-main");
-
-			gallery.find('.flickity-viewport').height(getImgHeightMaster());
-			$('.gallery-nav').height(getThumbnailHeight());
-			gallery.css('padding-bottom', getImgHeightMaster());
-		}
-
-		$('.gallery-nav').height(getThumbnailHeight());
-
-		//Set Gallery Main padding-bottom to align subnav
-		$('.gallery-main').css('padding-bottom', getImgHeightMaster());
-
-		//apply
-		$(window).on('resize', function(){
-
-			resizeFlickity();
-		});
-
-		$(window).on('load', function(){
-			console.log('window loaded');
-			resizeFlickity();
-		});
-
-//		if($("body").hasClass("loaded")){
-//			console.log('true');
-//			resizeFlickity();
-//		}
-
-
+	{{ "flickity.pkgd.min.js" | asset_url | script_tag }}
+	{{ "flickity-settings.js" | asset_url | script_tag }}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+	<script>
 		// ==========================================================================
-		// Activate Product details
+		// Gallery Detail page
 		// ==========================================================================
+		(function(){
 
-		var wrapper = $('.card__slider');
+			//Special gallery settings for responsiveness
+			var imgHeight;
 
-		wrapper.on('click', function(event){
-			event.preventDefault();
+			//get height of image on window resize
+			function getImgHeightMaster(){
+				var myImg = document.querySelector("#myImg");
+				var currHeight = myImg.clientHeight;
 
-			//check if element is hovered or not
-			var isHovered = $(this).find(".book__app:hover").length;
-
-			if( $(this).find('.content__wrapper').hasClass('active') && isHovered ){
-				//do nothing because the user is hovering over an item
-			}else{
-//					closeNav();
-				$(this).find('.content__wrapper').toggleClass('active');
-
-				$(this).find('.book__app').toggleClass('active');
+				return currHeight;
 			}
 
-		});
+			//get height of thumbnail on window resize
+			function getThumbnailHeight(){
+				var myImg = document.querySelector("#myThumb");
+				var currThumbHeight = myImg.clientHeight;
 
-		function openTab(url){
-			window.open(url, '_self');
-		}
+				return currThumbHeight;
+			}
 
-		wrapper.find('.book__app').find('a').on('click', function(event){
+			function resizeFlickity(){
+				var gallery = $(".gallery-main");
 
-			var url = $(this).attr('href');
-			openTab(url);
-		});
+				gallery.find('.flickity-viewport').height(getImgHeightMaster());
+				$('.gallery-nav').height(getThumbnailHeight());
+				gallery.css('padding-bottom', getImgHeightMaster());
+			}
 
-		// ==========================================================================
-		// Scroll Magic
-		// ==========================================================================
-		// init controller
-//		var controller = new ScrollMagic.Controller({globalSceneOptions: {}});
-//
-//		function updateBox(){
-//			$('#gallery-controls').css({
-//				position: 'fixed',
-//				opacity: 1,
-////				top:'1653px',
-//				left:'2%'
-//			});
-////			console.log($('#gallery-controls').offset());
-////			console.log($('#sec1').offset());
-////			console.log($('#sec1').height());
-////
-////			console.log($('#sec2').offset());
-//		}
-//
-//		function removeBox(){
-//			$('#gallery-controls').css({
-//				left:'-20%'
-//			});
-//		}
-//		// build scenes
-//		new ScrollMagic.Scene({triggerElement: "#sec1"})
-//						.setClassToggle("#gallery-controls", "active") // add class toggle
-////						.on("start", updateBox)
-////						.on("leave", removeBox)
-//						.addIndicators() // add indicators (requires plugin)
-//						.addTo(controller);
-//		// var scrollMagic = new ScrollMagic.Scene({triggerElement: "#sec2"})
-//		// 				.setPin("#gallery-controls")
-//		// 				.setClassToggle("#gallery-controls", "pin") // add class toggle
-//		// 				.on("enter leave", updateBox)
-//		// 				.addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-//		// 				.addTo(controller);
-//		// new ScrollMagic.Scene({triggerElement: "#sec3"})
-//		// 				.setClassToggle("#high3", "active") // add class toggle
-//		// 				.addIndicators() // add indicators (requires plugin)
-//		// 				.addTo(controller);
-//		// new ScrollMagic.Scene({triggerElement: "#sec4"})
-//		// 				.setClassToggle("#high4", "active") // add class toggle
-//		// 				.addIndicators() // add indicators (requires plugin)
-//		// 				.addTo(controller);
+			$('.gallery-nav').height(getThumbnailHeight());
 
-    })();
-</script>
+			//Set Gallery Main padding-bottom to align subnav
+			$('.gallery-main').css('padding-bottom', getImgHeightMaster());
+
+			//apply
+			$(window).on('resize', function(){
+				resizeFlickity();
+			});
+
+			$(window).on('load', function(){
+				resizeFlickity();
+			});
+
+			function WhichBrowser() {
+				//IE
+				if (navigator.appName == "Microsoft Internet Explorer") {
+					return "msie";
+				}
+
+				//Chrome
+				if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
+						navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
+						"Netscape")) {
+					return "chrome";
+				}
+				//Firefox
+				if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
+						navigator.appName == "Netscape")) {
+					return "firefox";
+				}
+				//Safari
+				if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
+						navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
+						"Netscape")) {
+
+					if(navigator.userAgent.match(/iPad/i) != null){
+						return "ipad";
+					}else{
+						$('body, footer').addClass('safari');
+
+						$('section').last().removeClass('footer-push');
+
+						return "safari";
+					}
+
+				}
+
+				//Opera
+				if (navigator.appName == "Opera") {
+					return "opera";
+				}
+			}
+
+			//IE9 fixs
+			function browserJs( browserID ){
+
+				if(browserID == 'msie' && document.documentMode == 9){
+
+					ie9ProductsEvent();
+
+				}else{
+					//Run if any other browser
+					modernProductsEvent();
+				}
+
+			}
+
+			// ==========================================================================
+			// Activate Product details modern browser
+			// ==========================================================================
+			function modernProductsEvent(){
+				var wrapper = $('.card__slider');
+
+				wrapper.on('click', function(event){
+					event.preventDefault();
+					$(this).find('.content__wrapper').toggleClass('active');
+				});
+			}
+
+			// ==========================================================================
+			// Rearrange copy for IE9
+			// ==========================================================================
+			function ie9ProductsEvent(){
+				var productsContainer = $('.products');
+
+				//click event
+				var wrapper = $('.card__slider');
+
+				wrapper.on('click', function(event){
+					event.preventDefault();
+					$(this).toggleClass('active');
+				});
+
+				//move elements
+
+				if(productsContainer){
+					productsContainer.find('.card__slider').each(function(i, v){
+
+						var $this = $(this);
+						var bio = $this.find(".bio"),
+								title = $this.find('.title'),
+								contentWrapper = $this.find('.content__wrapper');
+
+						bio.detach();
+						bio.insertBefore(contentWrapper);
+
+						var newBio = $this.find('.bio').children('p');
+						title.clone().insertBefore(newBio);
+					});
+				}
+			}
+
+			browserJs(WhichBrowser());
+
+		})();
+	</script>
 {% endblock %}

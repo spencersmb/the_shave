@@ -151,8 +151,8 @@ footer{
 }
 
 .footer__contact{
+  	margin:0 0 30px;
 	text-align:center;
-	margin-bottom:30px;
 
 	.footer__address{
 		p{
@@ -174,7 +174,6 @@ footer{
 .copyright{
 	font-size:em(14px);
 	margin-top:15px;
-	padding:0 15px;
 	text-align:center;
 }
 
@@ -193,7 +192,7 @@ footer{
 	li{
 		display: inline-block;
 		background-size:contain;
-	  	margin:0 8px 0 0;
+	  	margin:0 10px;
 	  	text-align: center;
 	}
 
@@ -226,7 +225,7 @@ footer{
 	}
 
 	.footer__contact{
-		margin-bottom:40px;
+	  	margin:0 0 40px;
 
 		.footer__address{
 			text-align:right;
@@ -258,13 +257,17 @@ footer{
 			padding:0 !important;
 		}
 
+		li{
+		  margin:0 0 0 20px;
+		  float: right;
+		}
+
 	}
 
 
 	.copyright{
-		padding:0;
-		text-align:right;
-		padding-right:15px;
+		padding:0 0 0 15px;
+		text-align:left;
 	  	margin-top: 0;
 	}
 
@@ -284,11 +287,6 @@ footer{
 
 	}
 
-
-	.facebook, .twitter, .instagram, .linkedin,{
-		margin:0 8px 0 0;
-	}
-
 	.footer__wrapper{
 		padding:em(40px) 0;
 	}
@@ -296,6 +294,7 @@ footer{
 	.footer__logo{
 		width:50%;
 		float:left;
+	  	display: inline-block;
 
 		.logo__container{
 			padding: 2em;
@@ -304,11 +303,18 @@ footer{
 	}
 
 	.footer__desc{
+	  	display: inline-block;
 		width:50%;
+	  	padding-left: 20px;
 	}
 
 	.social {
 	  padding:0;
+
+	  li{
+		margin:0 20px 0 0;
+		float: left;
+	  }
 	}
 
 	.email__wrapper{
@@ -335,7 +341,7 @@ footer{
 	}
 
 	.footer__contact{
-		margin-bottom:70px;
+	  	margin:0 0 70px;
 
 		.footer__address{
 			text-align:left;
@@ -347,11 +353,17 @@ footer{
 
 		.contact{
 			text-align: right;
+
 			a{
 				padding-left:0;
 			}
 		}
 
+	}
+
+	.copyright{
+	  padding:0;
+	  text-align:right;
 	}
 
 }

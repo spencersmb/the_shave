@@ -3601,7 +3601,7 @@ footer.loaded {
 }
 .inner__header h1, .inner__header--sm h1 {
   font-size: 5.25em;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .inner__header p, .inner__header--sm p {
@@ -3939,7 +3939,7 @@ blockquote.reverse {
   }
   .inner__header--sm h3 {
     font-size: 21px;
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -7856,8 +7856,8 @@ footer.nav-is-open {
 }
 
 .footer__contact {
+  margin: 0 0 30px;
   text-align: center;
-  margin-bottom: 30px;
 }
 .footer__contact .footer__address p {
   margin-bottom: 0;
@@ -7870,7 +7870,6 @@ footer.nav-is-open {
 .copyright {
   font-size: 0.875em;
   margin-top: 15px;
-  padding: 0 15px;
   text-align: center;
 }
 
@@ -7887,7 +7886,7 @@ footer.nav-is-open {
 .social li {
   display: inline-block;
   background-size: contain;
-  margin: 0 8px 0 0;
+  margin: 0 10px;
   text-align: center;
 }
 .social a {
@@ -7911,7 +7910,7 @@ footer.nav-is-open {
   }
 
   .footer__contact {
-    margin-bottom: 40px;
+    margin: 0 0 40px;
   }
   .footer__contact .footer__address {
     text-align: right;
@@ -7935,11 +7934,14 @@ footer.nav-is-open {
   .social > div {
     padding: 0 !important;
   }
+  .social li {
+    margin: 0 0 0 20px;
+    float: right;
+  }
 
   .copyright {
-    padding: 0;
-    text-align: right;
-    padding-right: 15px;
+    padding: 0 0 0 15px;
+    text-align: left;
     margin-top: 0;
   }
 }
@@ -7953,10 +7955,6 @@ footer.nav-is-open {
     z-index: -1;
   }
 
-  .facebook, .twitter, .instagram, .linkedin {
-    margin: 0 8px 0 0;
-  }
-
   .footer__wrapper {
     padding: 2.5em 0;
   }
@@ -7964,6 +7962,7 @@ footer.nav-is-open {
   .footer__logo {
     width: 50%;
     float: left;
+    display: inline-block;
   }
   .footer__logo .logo__container {
     padding: 2em;
@@ -7971,11 +7970,17 @@ footer.nav-is-open {
   }
 
   .footer__desc {
+    display: inline-block;
     width: 50%;
+    padding-left: 20px;
   }
 
   .social {
     padding: 0;
+  }
+  .social li {
+    margin: 0 20px 0 0;
+    float: left;
   }
 
   .email__wrapper {
@@ -7999,7 +8004,7 @@ footer.nav-is-open {
   }
 
   .footer__contact {
-    margin-bottom: 70px;
+    margin: 0 0 70px;
   }
   .footer__contact .footer__address {
     text-align: left;
@@ -8012,6 +8017,11 @@ footer.nav-is-open {
   }
   .footer__contact .contact a {
     padding-left: 0;
+  }
+
+  .copyright {
+    padding: 0;
+    text-align: right;
   }
 }
 .shave__faq {

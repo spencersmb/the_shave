@@ -2,13 +2,12 @@
 
 {% block content %}
 
-<div class="container-fluid footer-push white-bg no-padding">
+<section class="container-fluid white-bg no-padding">
 	<article>
-
 		<!-- Intro blog -->
 		{% include "blog/blog-inner-intro" %}
 
-		<section class="container-fluid container__grey">
+		<div class="container-fluid container__grey">
 			<div class="sv__container--xs blog__content">
 				<div class="blog__content--inner">
 					<h3>Reinventing on-demand entertainment.</h3>
@@ -50,7 +49,6 @@
 				</div>
 
 			</div>
-			<d>
 				<div class="row">
 					<div class="blog-social">
 						<div class="col-xs-12">
@@ -74,7 +72,6 @@
 						</div>
 					</div>
 				</div>
-			</d>
 			<div class="sv__container--sm">
 				<div class="row">
 
@@ -101,16 +98,16 @@
 
 				</div>
 			</div>
-
-		</section>
+		</div>
 
 	</article>
+</section>
 
-	{% include "blog/blog-related-articles" %}
+{% include "blog/blog-related-articles" %}
 
-	{% include "blog/blog-comments" %}
+{% include "blog/blog-comments" %}
 
-</div>
+
 
 
 {% endblock %}
