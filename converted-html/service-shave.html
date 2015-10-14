@@ -432,15 +432,15 @@
                 </ul> <!-- .cd-dropdown-icons -->
             </li><!-- end theme features + icons -->
 
-            <li><a href="prices.html">Prices</a></li>
+            <li class="single-item"><a href="prices.html">Prices</a></li>
 
-            <li><a href="team.html">Team</a></li>
+            <li class="single-item"><a href="team.html">Team</a></li>
 
-            <li><a href="about.html">About</a></li>
+            <li class="single-item"><a href="about.html">About</a></li>
 
-            <li><a href="blog-index.html">Blog</a></li>
+            <li class="single-item"><a href="blog-index.html">Blog</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+            <li class="single-item"><a href="contact.html">Contact</a></li>
 
         </ul> <!-- .cd-dropdown-content -->
 
@@ -479,13 +479,22 @@
 	<div class="angle-bottom" style="border-left-color: #fff;"></div>
 </section><!-- end Service Header -->
 
-	<section class="sv__container--fluid dual-img">
+	<section id="service2-skr" class="sv__container--fluid">
+
+		<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url(/assets/images/backgrounds/service-bg-lg.jpg);">
+
+		</div><!-- end parralax bg -->
+
+	</section>
+
+	<!-- static -->
+	<!--<section class="sv__container--fluid dual-img">
 		<div class="row no-margin">
 			<div class="col-xs-12 no no-padding">
 				<img class="img-responsive" src="assets/images/Services/service-full.jpg" alt="full service barbershop"/>
 			</div>
 		</div>
-	</section>
+	</section>-->
 
 	<!-- Service Section -->
 	<section id="content" class="container-fluid grey-bg reverse-angle">
@@ -895,7 +904,7 @@
 
         <div class="sv__container--md graphic-headline">
 
-            <div class="headline-md white">
+            <div class="white">
                 <h2>Change the way you see style</h2>
             </div>
 
@@ -1030,10 +1039,6 @@
 </section>
 	<!-- End Section price module -->
 
-	<div class="container-fluid no-padding single-image">
-		<img class="img-responsive" src="assets/images/backgrounds/service-bg-lg.jpg" alt=""/>
-	</div>
-
 	<!-- Start bio module -->
 	<section id="sec2" class="container__white">
 
@@ -1122,7 +1127,7 @@
 	<!-- End bio module -->
 
 	<!-- FAQ -->
-	<section class="container__grey footer-push">
+	<section class="container__grey">
 
 	<div class="container sv__container--sm inner-content-module">
 
@@ -1197,6 +1202,136 @@
 </section>
 	<!-- End Faq -->
 
+	<section class="container-fluid no-padding">
+    <div class="discover__wrapper">
+
+        <div class="disc__container--image">
+            <div class="discover__image active" data-title="beard" style="background-image: url(/assets/images/feature-boxs/feature-background_3.jpg);">
+            </div>
+            <div class="discover__image" data-title="shaving" style="background-image: url(/assets/images/feature-boxs/feature-background2.jpg);">
+            </div>
+            <div class="discover__image" data-title="hair-cuts" style="background-image: url(/assets/images/feature-boxs/feature-background_4.jpg);">
+            </div>
+        </div>
+
+        <div class="discover__module">
+
+            <div class="disc__header">
+                <div class="headline-container">
+                    <h3>Beard & Mustache</h3>
+                </div>
+            </div>
+
+            <div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
+
+                <ul id="myTab" class="nav nav-tabs nav-justified white-tabs" role="tablist">
+                    <li id="beard-mustache" role="presentation" class="tab__control active" data-title="Beard & Mustache">
+                        <a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="false">
+                            <div class="tab-wrapper-icons">
+                                <span class="tab-icon"><img class="img-responsive" src="assets/icons/noun_140468_cc.png" alt=""/></span>
+                                <span class="text">Beard & Mustache</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li id="shave" role="presentation" class="tab__control" data-title="Shave">
+                        <a href="#shaving" role="tab" id="shaving-tab" data-toggle="tab" aria-controls="shaving" aria-expanded="false">
+                            <div class="tab-wrapper-icons">
+                                <span class="tab-icon"><img class="img-responsive" src="assets/icons/noun_163738_cc.png" alt=""/></span>
+                                <span class="text">Shaving</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li id="haircuts" role="presentation" class="tab__control" data-title="Hair Cuts">
+                        <a href="#hair-cuts" role="tab" id="haircuts-tab" data-toggle="tab" aria-controls="hair-cuts" aria-expanded="false">
+                            <div class="tab-wrapper-icons">
+                                <span class="tab-icon"><img class="img-responsive" src="assets/icons/noun_22509_cc.png" alt=""/></span>
+                                <span class="text">Hair Cuts</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- tab content -->
+                <div id="myTabContent" class="tab-content">
+
+                    <!-- start breard and mustache -->
+                    <div role="tabpanel" class="tab-pane tab-fade active in" id="beard" aria-labelledby="beard-tab">
+
+                        <div class="price__sheet">
+
+                            <div class="item">
+                                <div class="title">
+                                    <h3>Stash craft</h3>
+                                </div>
+                                <!--<div class="price">
+                                    <p>$15.00</p>
+                                </div>-->
+                                <div class="desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+                                </div>
+                            </div>
+                            <div class="item__link">
+                                <a href="#">Show me the gallery<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end breard and mustache -->
+
+                    <!-- start shaving -->
+                    <div role="tabpanel" class="tab-pane tab-fade" id="shaving" aria-labelledby="shaving-tab">
+                        <div class="price__sheet">
+
+                            <div class="item">
+                                <div class="title">
+                                    <h3>The Shave</h3>
+                                </div>
+                                <!--<div class="price">
+                                    <p>$15.00</p>
+                                </div>-->
+                                <div class="desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+                                </div>
+                            </div>
+                            <div class="item__link">
+                                <a href="#">Show me the gallery<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- start haircut -->
+                    <div role="tabpanel" class="tab-pane tab-fade" id="hair-cuts" aria-labelledby="haircuts-tab">
+
+                        <div class="price__sheet">
+
+                            <div class="item">
+                                <div class="title">
+                                    <h3>A real hair cut</h3>
+                                </div>
+                                <!--<div class="price">
+                                    <p>$15.00</p>
+                                </div>-->
+                                <div class="desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
+                                </div>
+                            </div>
+                            <div class="item__link">
+                                <a href="#">Show me the gallery<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end haircut -->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 
 
 
@@ -1228,10 +1363,8 @@
 			<!-- Footer Description -->
 			<div class="footer__desc">
 
-				<div class="row no-margin">
-					
 					<!-- email container -->
-					<div class="col-xs-12 email__wrapper">
+					<div class="email__wrapper">
 
 						<!-- email form -->
 						<div class="email__form form-group">
@@ -1255,7 +1388,7 @@
 					</div><!-- end email container -->
 
 					<!-- address container -->
-					<div class="col-xs-12 footer__contact">
+					<div class="row footer__contact">
 
 						<!-- address -->
 						<div class="col-xs-12 col-sm-6 footer__address no-padding">
@@ -1272,16 +1405,16 @@
 					</div><!-- end address container -->
 
 					<!-- social media -->
-					<div class="col-xs-12 social">
+					<div class="row social">
 						<div class="col-xs-12 col-sm-6 col-md-8">
 							<ul>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
-								<li class="twitter text-hide"><a href="">Twitter</a></li>
-								<li class="instagram text-hide"><a href="">Instagram</a></li>
-								<li class="linkedin text-hide"><a href="">Linkedin</a></li>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-instagram"></i></a></li>
+								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+
 							</ul>
 						</div><!-- end col -->
 
@@ -1293,8 +1426,6 @@
 						</div><!-- end col -->
 						
 					</div><!-- end social media -->
-
-				</div><!-- end row -->
 
 			</div><!-- end right side -->
 
@@ -1511,8 +1642,105 @@
 			}
 		}
 
-
 		browserJs(WhichBrowser());
+
+		// ==========================================================================
+		// Get inspired Module
+		// ==========================================================================
+
+		var myTab = $('#myTab'),
+			myTabContent = myTab.next(),
+			discoverWrapper = $('.discover__wrapper'),
+			tabTitle = myTab.find('li.active').data('title'),
+			headline = discoverWrapper.find('.headline-container').children('h3'),
+			width = $(window).width();
+		
+			discoverWrapper.children('.disc__container--image').children('.discover__image').each(function(index){
+				if(index == 0){
+
+				}else{
+					$(this).fadeOut();
+				}
+			});
+		
+		//Change tab content
+		myTab.on('click', 'li', function(){
+			console.log('click');
+			//check width before starting
+			width = $(window).width();
+
+			var tab = $(this);
+
+			//get panel ID that was clicked and remove the hash
+			var panelId = tab.find('a').attr('href').substr(1);
+
+			//get the data-attrb for the current clicked tab
+			tabTitle = tab.data('title');
+
+			$('#myTabContent > div').each( function() {
+
+				//first chck if the tab has active that was clicked
+				if(!$(this).hasClass('active')){
+
+					$(this).removeClass('active').removeClass('in');
+
+					if(panelId === this.id){
+
+						var element = $(this),
+							currentImage = discoverWrapper.children('.disc__container--image').children('.active');
+						
+						//get heigh of clicked content
+						var panelHeight = element.height(),
+							imageTitle = discoverWrapper.children('.disc__container--image').children('.discover__image').get();
+
+							//loop through the images and match the title to the tab title
+							for( var i=0; i < imageTitle.length; i++){
+
+								if($(imageTitle[i]).data('title') === panelId){
+
+									$(imageTitle[i]).addClass('active').fadeIn(750);
+								}
+							}
+						//add hight to adj the for new content
+						if(width <= 600){
+							//slide content out and then add the content back in
+							setTimeout(function(){
+								myTabContent.height(panelHeight);
+							}, 400);
+
+						}
+
+						currentImage.fadeOut(750).removeClass('active');
+
+						//change title
+						headline.fadeTo( "slow", 0, function(){
+							headline.text(tabTitle).fadeTo('fast', 1);
+						});
+
+
+						setTimeout(function(){
+							element.addClass('in');
+						}, 400);
+
+					}
+				}
+
+			});
+
+		});
+
+
+		//change title on page load
+		headline.text(tabTitle);
+
+		//sett height for phones on load
+		if(width <= 600){
+
+			var mobilePanelHeight = $('#myTabContent').find('.active').height();
+
+			$('#myTabContent').height(mobilePanelHeight);
+
+		}
 
 	});
 

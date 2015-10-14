@@ -188,6 +188,7 @@ footer.loaded {
 
 .inner__header--sm{
   margin:25px auto 0;
+  padding:0;
 
   h1{
     font-size:28px;
@@ -212,11 +213,12 @@ footer.loaded {
 
 blockquote{
   border-left:5px solid $primary-color;
-  font-size:21.5px;
+  font-size:18px;
   line-height: 30px;
   font-family: $ubuntu;
   font-weight:300;
   color:$black;
+  padding-right: 0;
 
   &.reverse{
     color:$white;
@@ -376,6 +378,7 @@ blockquote{
   &.image__content{
     height:200px;
   }
+
 }
 
 .icon-up-down{
@@ -466,6 +469,11 @@ blockquote{
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
+  blockquote{
+    font-size:21.5px;
+    padding:10px 20px;
+  }
+
   .sv__main--content {
     padding-top: $header-M;
   }
@@ -478,7 +486,7 @@ blockquote{
   .parallax__background{
 
     &.image__content{
-      height:400px;
+      height:350px;
     }
   }
 
@@ -511,6 +519,8 @@ blockquote{
   }
 
   .inner__header--sm{
+
+    padding:0 15px;
 
     h1{
       font-size: 56px;

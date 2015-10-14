@@ -10,6 +10,8 @@
 
 	{% include "contact-box" %}
 
+	{% include "service-slider" %}
+
 	{% include "blog-overview" %}
 
 	{% include "twitter-box" %}
@@ -105,7 +107,105 @@ $(function() {
 			startWithSlide:0,
 			// videoJsPath:"rs-plugin/videojs/",
 			fullScreenOffsetContainer: ""     // round, square, navbar, round-old, square-old, navbar-old
+	});
+
+	// ==========================================================================
+	// Get inspired Module
+	// ==========================================================================
+
+	var myTab = $('#myTab'),
+			myTabContent = myTab.next(),
+			discoverWrapper = $('.discover__wrapper'),
+			tabTitle = myTab.find('li.active').data('title'),
+			headline = discoverWrapper.find('.headline-container').children('h3'),
+			width = $(window).width();
+
+	discoverWrapper.children('.disc__container--image').children('.discover__image').each(function(index){
+		if(index == 0){
+
+		}else{
+			$(this).fadeOut();
+		}
+	});
+
+	//Change tab content
+	myTab.on('click', 'li', function(){
+		console.log('click');
+		//check width before starting
+		width = $(window).width();
+
+		var tab = $(this);
+
+		//get panel ID that was clicked and remove the hash
+		var panelId = tab.find('a').attr('href').substr(1);
+
+		//get the data-attrb for the current clicked tab
+		tabTitle = tab.data('title');
+
+		$('#myTabContent > div').each( function() {
+
+			//first chck if the tab has active that was clicked
+			if(!$(this).hasClass('active')){
+
+				$(this).removeClass('active').removeClass('in');
+
+				if(panelId === this.id){
+
+					var element = $(this),
+							currentImage = discoverWrapper.children('.disc__container--image').children('.active');
+
+					//get heigh of clicked content
+					var panelHeight = element.height(),
+							imageTitle = discoverWrapper.children('.disc__container--image').children('.discover__image').get();
+
+					//loop through the images and match the title to the tab title
+					for( var i=0; i < imageTitle.length; i++){
+
+						if($(imageTitle[i]).data('title') === panelId){
+
+							$(imageTitle[i]).addClass('active').fadeIn(750);
+						}
+					}
+					//add hight to adj the for new content
+					if(width <= 600){
+						//slide content out and then add the content back in
+						setTimeout(function(){
+							myTabContent.height(panelHeight);
+						}, 400);
+
+					}
+
+					currentImage.fadeOut(750).removeClass('active');
+
+					//change title
+					headline.fadeTo( "slow", 0, function(){
+						headline.text(tabTitle).fadeTo('fast', 1);
+					});
+
+
+					setTimeout(function(){
+						element.addClass('in');
+					}, 400);
+
+				}
+			}
+
 		});
+
+	});
+
+
+	//change title on page load
+	headline.text(tabTitle);
+
+	//sett height for phones on load
+	if(width <= 600){
+
+		var mobilePanelHeight = $('#myTabContent').find('.active').height();
+
+		$('#myTabContent').height(mobilePanelHeight);
+
+	}
 
 });
 

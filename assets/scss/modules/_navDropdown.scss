@@ -28,7 +28,7 @@ $L:     1024px;
   text-align: center;
   height:$header-S;
   width:100vw;
-  background: $white;
+  background: rgba(255, 255, 255, 0.84);
   z-index: $above-content; //3
 
   &.is-fixed {
@@ -100,9 +100,11 @@ $L:     1024px;
   }
 
   .book-now-m{
-    display: block;
-    background-color: $primary-color;
     cursor: pointer;
+    a{
+      color:$primary-color;
+      font-weight: bold;
+    }
 
     @include MQ(L) {
       display: none;
@@ -178,7 +180,7 @@ $primary-font: sans-serif;
   position: relative;
   padding: 0 15px;
   line-height: 25px;
-  background-color: $white;
+  background-color: transparent;
   color: $black;
   border:3px solid $black;
   @include transition(all 0.2s);

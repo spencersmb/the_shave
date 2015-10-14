@@ -432,15 +432,15 @@
                 </ul> <!-- .cd-dropdown-icons -->
             </li><!-- end theme features + icons -->
 
-            <li><a href="prices.html">Prices</a></li>
+            <li class="single-item"><a href="prices.html">Prices</a></li>
 
-            <li><a href="team.html">Team</a></li>
+            <li class="single-item"><a href="team.html">Team</a></li>
 
-            <li><a href="about.html">About</a></li>
+            <li class="single-item"><a href="about.html">About</a></li>
 
-            <li><a href="blog-index.html">Blog</a></li>
+            <li class="single-item"><a href="blog-index.html">Blog</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+            <li class="single-item"><a href="contact.html">Contact</a></li>
 
         </ul> <!-- .cd-dropdown-content -->
 
@@ -477,6 +477,15 @@
 	<div class="angle-bottom" style="border-left-color: #fff;"></div>
 </section>
 
+<section id="about-skr" class="sv__container--fluid">
+
+	<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url(/assets/images/about/about-header.jpg);">
+
+	</div><!-- end parralax bg -->
+
+</section>
+
+<!-- dual image
 <section class="sv__container--fluid dual-img">
 	<div class="row">
 		<div class="col-xs-6 no-padding">
@@ -487,7 +496,7 @@
 		</div>
 	</div>
 </section>
-
+-->
 
 <section class="container-fluid grey-bg">
 
@@ -495,7 +504,6 @@
 
 	<div class="about__desc">
 		<div class="content">
-			
 
 			<blockquote>Delivering amazing <strong>aerial</strong> shots and footage for virtually <strong>any situation</strong> from virtually <strong>any perspective</strong>.</blockquote>
 
@@ -538,25 +546,26 @@
 <!-- Barbers -->
 <section class="container__white">
 
-	<!-- <div class="angle-top" style="border-right-color: #e8e8e8;"></div> -->
+	<div class="about__sell">
+		<div class="container-fluid no-padding">
 
-	<div class="container sv__container--md inner-content-module">
+			<div class="section__wrapper">
 
-		<div class="barbers">
+				<div class="image-bg-cover no-content" data-title="beard" style="background-image: url(/assets/images/about/tools.jpg);">
+				</div>
 
-			<div class="headline-md">
-				<h2>Tools of the trade</h2>
+				<div class="headline-md">
+					<h2>Tools & Tricks of the trade</h2>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="single-image">
-		<img class="img-responsive" src="assets/images/about/tools.jpg" alt=""/>
-	</div>
+
 
 </section>
 
-<section class="container-fluid no-padding white-bg footer-push">
+<section class="container-fluid no-padding white-bg">
 
 	<div class="sv__container--md process__grid">
 
@@ -574,33 +583,37 @@
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-diamond fa-2x"></i>
+							<i class="fa fa-diamond fa-2x fa-icon"></i>
 							<h4>Top Talent</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
+							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-scissors fa-2x"></i>
+							<i class="fa fa-scissors fa-2x fa-icon"></i>
 							<h4>Hip Haircuts</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
+							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-cogs fa-2x"></i>
+							<i class="fa fa-cogs fa-2x fa-icon"></i>
 							<h4>Technical Expertise</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
+							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
 					</div>
 
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
-							<i class="fa fa-anchor fa-2x"></i>
+							<i class="fa fa-anchor fa-2x fa-icon"></i>
 							<h4>Modern Design</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
+							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
 					</div>
 
@@ -649,10 +662,8 @@
 			<!-- Footer Description -->
 			<div class="footer__desc">
 
-				<div class="row no-margin">
-					
 					<!-- email container -->
-					<div class="col-xs-12 email__wrapper">
+					<div class="email__wrapper">
 
 						<!-- email form -->
 						<div class="email__form form-group">
@@ -676,7 +687,7 @@
 					</div><!-- end email container -->
 
 					<!-- address container -->
-					<div class="col-xs-12 footer__contact">
+					<div class="row footer__contact">
 
 						<!-- address -->
 						<div class="col-xs-12 col-sm-6 footer__address no-padding">
@@ -693,16 +704,16 @@
 					</div><!-- end address container -->
 
 					<!-- social media -->
-					<div class="col-xs-12 social">
+					<div class="row social">
 						<div class="col-xs-12 col-sm-6 col-md-8">
 							<ul>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
-								<li class="twitter text-hide"><a href="">Twitter</a></li>
-								<li class="instagram text-hide"><a href="">Instagram</a></li>
-								<li class="linkedin text-hide"><a href="">Linkedin</a></li>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
-								<li class="facebook text-hide"><a href="">Facebook</a></li>
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-instagram"></i></a></li>
+								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+
 							</ul>
 						</div><!-- end col -->
 
@@ -714,8 +725,6 @@
 						</div><!-- end col -->
 						
 					</div><!-- end social media -->
-
-				</div><!-- end row -->
 
 			</div><!-- end right side -->
 

@@ -3,11 +3,15 @@
 
 //footer navA
 footer{
-	position:relative;
+	position:fixed;
+	position: -webkit-sticky !important;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	z-index: -1;
 	bottom:0;
 	left:0;
 	width:100%;
-	z-index: 1;
 //	-webkit-transform: translateZ(0);
 //	-webkit-backface-visibility: hidden;
 	background:#373737;
@@ -23,6 +27,7 @@ footer{
 //	}
 
 }
+
 
 .footer-mobile{
 	height:100% !important;
@@ -49,7 +54,7 @@ footer{
 		text-align: center;
 		padding: 2em;
 		position:relative;
-		margin:3em auto 1em;
+//		margin:3em auto 1em;
 		z-index: 100;
 		font-family: $heading-font;
 
@@ -89,8 +94,8 @@ footer{
 }
 
 .email__wrapper{
-	margin-top:20px;
-	margin-bottom:50px;
+//	margin-top:20px;
+	margin-bottom:25px;
 }
 
 .email__form{
@@ -151,7 +156,7 @@ footer{
 }
 
 .footer__contact{
-  	margin:0 0 30px;
+  	margin:0 0 15px;
 	text-align:center;
 
 	.footer__address{
@@ -181,7 +186,7 @@ footer{
 .social{
 	width:100%;
 	margin:0 auto;
-	padding:0 0 20px 0;
+	padding:0;
   	border-top:none;
 
 	ul{
@@ -276,16 +281,6 @@ footer{
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-
-	footer{
-		position:fixed;
-	  	position: -webkit-sticky !important;
-		position: -moz-sticky;
-		position: -ms-sticky;
-		position: -o-sticky;
-		z-index: -1;
-
-	}
 
 	.footer__wrapper{
 		padding:em(40px) 0;

@@ -435,7 +435,14 @@
   font-weight:300;
   padding: 10px 0;
   margin-bottom: 0;
-  background-color: #fff;
+  border-top-color: rgb(208, 208, 208);
+  background-color: #F3F3F3;
+
+  &:hover{
+	border-top-color: #B5B5B5;
+	background-color: #D4D4D4;
+  }
+
 }
 
 .nav-tabs.nav-justified>.active>a,
@@ -691,13 +698,6 @@
 
   .nav-tabs.nav-justified>li>a{
 	padding: 30px 0;
-	border-top-color: rgb(208, 208, 208);
-	background-color: #F3F3F3;
-
-	  &:hover{
-		border-top-color: #B5B5B5;
-		background-color: #D4D4D4;
-	  }
   }
 
   .nav-tabs.nav-justified>li{

@@ -92,8 +92,15 @@
 	#twitter-carousel {
 
 	  .carousel-inner {
-		margin-bottom: 30px;
+		max-width: 700px;
+		margin:0 auto 30px;
 	  }
+
+	  .carousel-indicators{
+		margin-left:-30.5%;
+		bottom:0;
+	  }
+
 	}
 
 
@@ -102,16 +109,40 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+  #twitter-carousel {
+
+	.carousel-inner {
+	  max-width: 700px;
+	}
+
+  }
+
 
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
 
+  #twitter-carousel {
+
+	.carousel-inner {
+	  max-width: 900px;
+	}
+
+  }
+
 
 }
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
+
+  #twitter-carousel {
+
+	.carousel-inner {
+	  max-width: 1200px;
+	}
+
+  }
 
 }

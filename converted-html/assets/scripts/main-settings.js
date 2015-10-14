@@ -22,9 +22,17 @@ $(function() {
 		// ==========================================================================
 		// Browser Check
 		// ==========================================================================
+
+		//add footer class no matter what browser
+		function addFooterPush(){
+			$('section').last().addClass('footer-push');
+		}
+
 		function WhichBrowser() {
+
 			//IE
 			if (navigator.appName == "Microsoft Internet Explorer") {
+				addFooterPush();
 				return "msie";
 			}
 
@@ -32,11 +40,13 @@ $(function() {
 			if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
 				navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
 				"Netscape")) {
+				addFooterPush();
 				return "chrome";
 			}
 			//Firefox
 			if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
 				navigator.appName == "Netscape")) {
+				addFooterPush();
 				return "firefox";
 			}
 			//Safari
@@ -45,8 +55,13 @@ $(function() {
 				"Netscape")) {
 
 				if(navigator.userAgent.match(/iPad/i) != null){
+					$('body, footer').addClass('ipad');
+
+					$('section').last().removeClass('footer-push');
 					return "ipad";
+
 				}else{
+
 					$('body, footer').addClass('safari');
 
 					$('section').last().removeClass('footer-push');
@@ -59,6 +74,7 @@ $(function() {
 
 			//Opera
 			if (navigator.appName == "Opera") {
+				addFooterPush();
 				return "opera";
 			}
 		}
@@ -134,7 +150,7 @@ $(function() {
 					var s = skrollr.init({
 						render: function(data) {
 							//Debugging - Log the current scroll position.
-							console.log(data.curTop);
+							//console.log(data.curTop);
 						},
 
 						forceHeight: false, //disable setting height on body
@@ -213,15 +229,19 @@ $(function() {
 
 			//Footer-push resize + sckrollr check
 
-			var width = $(window).width();
+			var width = $(window).width() + 15;
+
 
 			//Resize angle
-			setAngleWidth(width);
+			setAngleWidth(width - 15);
 
 			if (width >= desktop) {
 
+				console.log('footer' + width);
+				console.log('desktop');
+
 				skrollrCheck();
-				myFooter.width(width);
+				myFooter.width(width - 15);
 
 				$('body').removeClass('footer-mobile');
 
@@ -233,9 +253,12 @@ $(function() {
 				}
 
 			} else if( width <= desktop){
+				console.log('footer' + width);
+				console.log('mobile');
 				skrollrCheck();
-				myFooter.width(width);
-				$('main').find('.footer-push').css('margin-bottom', 0);
+				myFooter.width(width - 15);
+				var footerHeight = $('footer').height() + 'px';
+				$('.footer-push').css('margin-bottom', footerHeight);
 				$('body').addClass('footer-mobile');
 			}
 
@@ -414,7 +437,7 @@ $(function() {
 
 			$(window).on('resize', function() {
 				resizedWidth = $(window).width() + 15;
-				// console.log(resizedWidth);
+				console.log(resizedWidth);
 			});
 
 			if (resizedWidth >= tablet || windowSize >= tablet) {

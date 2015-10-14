@@ -81,7 +81,7 @@
 
 .icon__box{
 
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 
 	.icon__wrapper{
 		margin:0 auto;
@@ -95,6 +95,7 @@
 	}
 
 	i{
+	  	display: block;
 		color:$primary-color;
 	}
 
@@ -105,12 +106,15 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			font-size: em(18px);
-			margin: 25px 0 15px;
+			margin: 25px auto 15px;
+		}
+
+	  	p{
+		  margin:0;
 		}
 	}
 
 	&--container{
-		margin-bottom: 40px;
 	  	text-align: center;
 	}
 }
@@ -130,6 +134,7 @@
 	  font-size: em(72px);
 	  line-height: 80px;
 	  margin-bottom:16px;
+	  letter-spacing: 3px;
 	}
 
 	h5{
@@ -137,8 +142,8 @@
 	}
 
 	.wrapper{
-	  margin:0 auto 30px;
-	  padding:0 40px;
+	  margin:0 auto;
+	  padding:0 15px;
 	}
 
 	.desc{
@@ -147,14 +152,14 @@
 
 	.intro{
 	  margin:55px auto 15px;
-	  padding:0 2%;
+	  padding:0 3.5%;
 	}
   }
 
   .icon__box{
 
 	&--container{
-	  margin-bottom: 40px;
+	  margin-bottom:0;
 	}
   }
 
@@ -176,7 +181,7 @@
 	}
 
 	.wrapper{
-	  margin:0 auto 60px;
+	  margin:20px auto 20px;
 	}
 
 	.desc{
@@ -186,7 +191,7 @@
 
   .icon__box{
 	&--container{
-	  margin-bottom: 80px;
+	  margin-bottom: 0;
 	}
   }
 
