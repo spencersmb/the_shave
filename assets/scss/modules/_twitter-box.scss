@@ -1,148 +1,108 @@
-.twitter__wrapper{
-	text-align:center;
-	color:$white;
-	margin:0 auto;
-
-	blockquote{
-		border:0;
-		width:65%;
-		padding:0;
-		margin:0 auto;
-		color:$white;
-		font-size: 16px;
-	  	line-height: 12px;
-	}
-
-	p{
-		line-height: 24px;
-	  	display: block;
-	}
-
-	span{
-		font-weight: 600;
-	}
-
-	hr{
-		width:15%;
-		margin:20px auto;
-	}
-
-	h3{
-		margin-top:0;
-		margin-bottom:15px;
-	}
-
-	cite{
-	  padding-top: 5px;
-	  display: block;
-	}
+.twitter__wrapper {
+    text-align: center;
+    color: $white;
+    margin: 0 auto;
+    blockquote {
+        border: 0;
+        width: 65%;
+        padding: 0;
+        margin: 0 auto;
+        color: $white;
+        font-size: 16px;
+        line-height: 12px;
+    }
+    p {
+        line-height: 24px;
+        display: block;
+    }
+    span {
+        font-weight: 600;
+    }
+    hr {
+        width: 15%;
+        margin: 20px auto;
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    cite {
+        padding-top: 5px;
+        display: block;
+    }
 }
 
-#twitter-carousel{
-		padding:50px 0;
-
-	.carousel-inner{
-	  margin-bottom: 20px;
-	}
-
-	.carousel-inner>.item>img{
-		margin:0 auto;
-		max-width: 60px;
-	}
-
-	.carousel-control{
-
-	  &:focus{
-		opacity: .5;
-	  }
-
-	  &:hover{
-		opacity: .9 !important;
-	  }
-
-	  &.right, &.left{
-		background-image: none;
-	  }
-	}
-
-	.carousel-indicators{
-	  margin-left:-30.5%;
-	}
+#twitter-carousel {
+    padding: 50px 0;
+    .carousel-inner {
+        margin-bottom: 20px;
+    }
+    .carousel-inner>.item>img {
+        margin: 0 auto;
+        max-width: 60px;
+    }
+    .carousel-control {
+        &:focus {
+            opacity: .5;
+        }
+        &:hover {
+            opacity: .9 !important;
+        }
+        &.right,
+        &.left {
+            background-image: none;
+        }
+    }
+    .carousel-indicators {
+        margin-left: -30.5%;
+    }
 }
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
-
-	.twitter__background{
-		background-size:cover;
-		background-position:50% 70%;
-		background-attachment:fixed;
-	}
-
-	.twitter__wrapper {
-
-	  blockquote {
-		width: 80%;
-	  }
-
-	  cite{
-		display: block;
-	  }
-	}
-
-	#twitter-carousel {
-
-	  .carousel-inner {
-		max-width: 700px;
-		margin:0 auto 30px;
-	  }
-
-	  .carousel-indicators{
-		margin-left:-30.5%;
-		bottom:0;
-	  }
-
-	}
-
-
+    .twitter__wrapper {
+        blockquote {
+            width: 80%;
+        }
+        cite {
+            display: block;
+        }
+    }
+    #twitter-carousel {
+        .carousel-inner {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .carousel-indicators {
+            margin-left: -30.5%;
+            bottom: 0;
+        }
+    }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-
-  #twitter-carousel {
-
-	.carousel-inner {
-	  max-width: 700px;
-	}
-
-  }
-
-
+    #twitter-carousel {
+        .carousel-inner {
+            max-width: 700px;
+        }
+    }
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-
-  #twitter-carousel {
-
-	.carousel-inner {
-	  max-width: 900px;
-	}
-
-  }
-
-
+    #twitter-carousel {
+        .carousel-inner {
+            max-width: 900px;
+        }
+    }
 }
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-
-  #twitter-carousel {
-
-	.carousel-inner {
-	  max-width: 1200px;
-	}
-
-  }
-
+    #twitter-carousel {
+        .carousel-inner {
+            max-width: 1200px;
+        }
+    }
 }

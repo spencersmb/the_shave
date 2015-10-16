@@ -70,7 +70,6 @@ padding: 0 60px 90px;
 }
 
 //Shaving Cream
-
 .service__products{
 	color:$black;
 	padding:0 0 30px;
@@ -165,141 +164,6 @@ padding: 0 60px 90px;
 
 }
 
-.discover__wrapper{
-  position: relative;
-  height: 100%;
-  padding:0;
-  margin:0 auto;
-  background-position: center center;
-  background-size: cover;
-
-  .disc__container--image{
-	height: 190px;
-  }
-
-  .discover__module{
-	  position: relative;
-	  text-align:left;
-	  width:100%;
-  }
-
-  .disc__header{
-	text-align: center;
-	border-bottom: 0;
-	background-color: rgba(0, 0, 0, 0.35);
-	height:115px;
-	display: none;
-	@include transition(all .3s);
-
-	h3{
-	  color:#fff;
-	  padding:1.5em 1.5em;
-	  margin:0;
-	  height:100%;
-	  width: 100%;
-	  display: table-cell;
-	  vertical-align: middle;
-	}
-
-	.headline-container{
-	  height:100%;
-	  width:100%;
-	  display: table;
-	}
-  }
-
-  .tab-pane.tab-fade.in{
-  	z-index: 1;
-	@include transform(translateX(0px));
-  }
-
-  .tab-content{
-	position: relative;
-	width:100%;
-	@include transition(all .3s);
-  }
-
-  .tab-pane{
-	position: absolute;
-	display: block !important;
-	z-index: 0;
-	@include transform(translateX(-200px));
-  }
-
-  .tab-icon{
-	display: block;
-  }
-
-  .text{
-	display: none !Important;
-  }
-
-  .price__sheet{
-	padding:1em;
-
-	.item{
-	  margin:0;
-	  padding-bottom: 5px;
-	}
-
-	.title{
-	  margin: 0 auto;
-	  width:100%;
-
-	  h3{
-		letter-spacing: 2px;
-		font-size: 16px;
-	  }
-	}
-
-	.desc{
-	  width:100%;
-	  font-size: 14px;
-	  line-height: 22px;
-	}
-	
-	.item__link{
-	  position: relative;
-	  display: block;
-	  
-	  a{
-		padding-top:15px;
-		text-align: left;
-		margin:0;
-		display: block;
-		font-size: 14px;
-		text-transform: uppercase;
-		font-family:$ubuntu;
-	  }
-
-	  i{
-		float: right;
-		margin-top:6px;
-	  }
-	}
-
-  }
-
-  img{
-	position: absolute;
-
-
-	&.active{
-	}
-  }
-
-  .discover__image{
-	position: absolute;
-	top:0;
-	left:0;
-	height:190px;
-	width:100%;
-	background-position: center center;
-	background-size: cover;
-  }
-}
-
-// pricing boxs
 
 
 // Displays greater than 768px
@@ -313,60 +177,6 @@ padding: 0 60px 90px;
 		}
 	}
 
-	.discover__wrapper {
-	  padding: 50px 0 60px;
-
-	  .disc__container--image{
-		height: 100%;
-	  }
-
-	  .discover__module {
-		width:320px;
-		margin-left: 50%;
-	  }
-
-	  .disc__header{
-
-		h3{
-		  padding:1.5em 1.5em;
-		}
-	  }
-
-	  .tab-pane.tab-fade.in{
-		z-index: 1;
-		@include transform(translateY(0px));
-	  }
-
-	  .tab-content{
-		width:320px;
-		height: 334px !important;
-	  }
-
-	  .tab-pane{
-		position: absolute;
-		display: block !important;
-		z-index: 0;
-		@include transform(translateY(80px));
-	  }
-
-	  .price__sheet {
-		padding: 2em 2em 1.5em;
-
-		.item{
-		  padding-bottom: 20px;
-		  .title{
-			margin-top: 0;
-		  }
-		  .desc{
-			width:100%;
-		  }
-		}
-	  }
-
-	  .discover__image{
-		height:100%;
-	  }
-	}
 
 
 }
@@ -387,36 +197,13 @@ padding: 0 60px 90px;
 		padding:0;
 	}
 
-	.discover__wrapper {
-	  padding: 75px 0;
-
-	  .discover__module {
-		margin-left: 65%;
-	  }
-
-	  .disc__header{
-		display: block;
-
-		h3{
-		  padding:1.5em 1.5em;
-		}
-
-	  }
-
-	}
 
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-	.discover__wrapper {
-	  padding: 100px 0 130px;
-	}
 }
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-	.discover__wrapper {
-	  padding: 140px 0px;
-	}
 }

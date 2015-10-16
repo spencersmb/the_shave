@@ -16,7 +16,7 @@
 
 	{% include "contact-box" %}
 
-	{% include "service-slider" %}
+	{% include "feature-module-2" %}
 
 	{% include "blog-overview" %}
 
@@ -150,12 +150,14 @@ $(function() {
 
 	var myTab = $('#myTab'),
 			myTabContent = myTab.next(),
-			discoverWrapper = $('.discover__wrapper'),
+			svfm2Wrapper = $('.svfm2__wrapper'),
+			svfm2ImageContainer = $('.svfm2__wrapper--images'),
+			svfm2Image = '.svfm2__image',
 			tabTitle = myTab.find('li.active').data('title'),
-			headline = discoverWrapper.find('.headline-container').children('h3'),
+			headline = svfm2Wrapper.find('.headline-container').children('h3'),
 			width = $(window).width();
 
-	discoverWrapper.children('.disc__container--image').children('.discover__image').each(function(index){
+	svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).each(function(index){
 		if(index == 0){
 
 		}else{
@@ -187,11 +189,11 @@ $(function() {
 				if(panelId === this.id){
 
 					var element = $(this),
-							currentImage = discoverWrapper.children('.disc__container--image').children('.active');
+							currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
 
 					//get heigh of clicked content
 					var panelHeight = element.height(),
-							imageTitle = discoverWrapper.children('.disc__container--image').children('.discover__image').get();
+							imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
 
 					//loop through the images and match the title to the tab title
 					for( var i=0; i < imageTitle.length; i++){
