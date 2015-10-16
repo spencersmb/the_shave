@@ -7,14 +7,24 @@
 <html lang="en">
     <head>
         <!-- Title block allowing child pages to override -->
-        <title>Empty</title>
+        <title>The Shave</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Slider Revolution Example" />
+        <meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+        <meta name="author" content="ThemePunch" />
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        
+	<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHjfEAx3kun_6_SvIHIdSl04ayMBuRRi0">
+	</script>
+
+
         <!-- Styles -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
 
@@ -23,13 +33,12 @@
         <![endif]-->
 
         <!-- Style block allowing child pages to inject their own styles -->
-        
-	<script type="text/javascript"
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHjfEAx3kun_6_SvIHIdSl04ayMBuRRi0">
-	</script>
 
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/modernizr.min.js"></script>
+
+        <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
+        <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
 
     </head>
     <body class="loading">
@@ -74,7 +83,7 @@
             </li>
 
             <!-- Book now btn for mobile -->
-            <li class="book-now-m" >
+            <li class="has-children book-now-m" >
                 <a data-toggle="modal" data-target="#myModal">Book Today</a>
             </li>
 

@@ -358,6 +358,12 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
+  .gallery-details{
+    .table-responsive{
+      margin-bottom:25px;
+    }
+  }
+
   .stats__container{
     margin:0 auto 70px;
   }

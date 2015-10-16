@@ -1,5 +1,5 @@
 .social-container{
-  padding:45px 0 40px;
+  padding:30px 0 25px;
   text-align: center;
   border-top:1px solid lighten($dark-grey, 25%);
   display: table;
@@ -20,7 +20,7 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
   .social-container{
-
+    padding:45px 0 40px;
   }
 
 }

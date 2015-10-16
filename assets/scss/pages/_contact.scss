@@ -2,12 +2,20 @@
 //
 
 .contact__form{
+  	padding:0 30px;
 
 	&--wrapper{
-		margin:80px auto;
+		margin:80px auto 30px;
 	}
+
 	&--container{
 	margin: 40px auto 0 auto;
+	}
+
+  	&--title{
+	  h3{
+		text-align: center;
+	  }
 	}
 }
 .form__left, .form__right{
@@ -19,25 +27,19 @@
 	overflow:hidden;
 }
 
-#google__container {
-    position: relative;
-    width: 100%;
-    height: 650px;
-    background-color: $grey;
-
-    // @include MQ(M) {
-    // 	height: 300px;
-    // }
-
-    // @include MQ(L) {
-    // 	height: 600px;
-    // }
+.google-container{
+  margin:0 auto;
+  padding:0 30px;
+  width:100%;
 }
 
 #sv-google-map {
 
 	.gm-style-iw{
 	  text-align: center;
+	  display: inline-block;
+	  margin:0 auto;
+	  position: relative;
 	}
 
 	position: relative;
@@ -64,58 +66,8 @@
 	  padding:5px 0 0;
 	}
 
-//	address {
-//		position: absolute;
-//		width: 100%;
-//		bottom: 0;
-//		left: 0;
-//		padding: 1em 1em;
-//		background-color:$primary-color;
-//		color: $white;
-//		font-size:13px;
-//		margin:0;
-//		text-align:center;
-//		font-weight:bold;
-//		font-size:16px;
-//		// @include MQ(M) {
-//		// 	@include font-size(15px);
-//		// 	text-align: center;
-//		// }
-//	}
 }
 
-#sv-zoom-in, #sv-zoom-out {
-	height: 32px;
-	width: 32px;
-	cursor: pointer;
-	margin-left: 10px;
-	background-color: $primary-color;
-	background-repeat: no-repeat;
-	background-size: 32px 64px;
-	background-image: url('../images/icons/cd-icon-controller.svg');
-
-	.no-touch &:hover {
-		background-color: rgba($primary-color, 1);
-	}
-
-	// @include MQ(M) {
-	// 	margin-left: 50px;
-	// }
-}
-
-#sv-zoom-in {
-	background-position: 50% 0;
-	margin-top: 10px;
-	margin-bottom: 1px;
-
-	// @include MQ(M) {
-	// 	margin-top: 50px;
-	// }
-}
-
-#sv-zoom-out {
-	background-position: 50% -32px;
-}
 
 .input__container{
 	width:100%;
@@ -208,7 +160,7 @@
 	padding-top:13px;
 	margin-bottom:30px;
 	height:216px;
-	margin-left:30px;
+
 	background-color: #EAEAEA;
 	border-bottom: 3px solid #C3C3C3;
 	@include transition(all .5s);
@@ -235,17 +187,6 @@
   }
 }
 
-.pencil, .pencil-contact{
-
-	i{
-		position:absolute;
-		left:15px;
-		padding-left:15px;
-		margin-bottom:30px;
-		font-size:25px;
-	  	color:#9A9A9A;
-	}
-}
 
 .pencil-contact{
 
@@ -254,7 +195,11 @@
 	}
 
 	i{
-		left:30px;
+	  position:absolute;
+	  padding-left:15px;
+	  margin-bottom:30px;
+	  font-size:25px;
+	  color:#9A9A9A;
 	}
 }
 
@@ -267,6 +212,8 @@
 	text-transform: none;
 	font-size: 21px;
 	letter-spacing: 1px;
+	margin-bottom: 8px;
+	font-weight: 400;
   }
 
   p{
@@ -274,15 +221,13 @@
   }
 
   a{
-	font-weight: bold;
 	font-weight: 300;
   }
 
   & > div{
-	padding:50px 25px 30px 25px;
-
-	&:first-child{
-	}
+	padding:25px 25px 0;
+	margin-top:25px;
+	border-top:1px solid $dark-grey;
   }
 
   i{
@@ -291,12 +236,115 @@
 }
 
 .meta-share{
+  padding: 25px 0 25px!important;
+  border-bottom:1px solid $dark-grey;
+
   a{
-	padding:0 10px;
+	padding:15px 10px 0;
 	color:$black;
+	display: inline-block;
 
 	&:hover{
 	  color:$primary-color;
 	}
   }
+}
+
+.directions{
+  margin: 20px auto 0;
+  position: relative;
+  display: table;
+
+  a{
+	font-weight: bold;
+	color:$primary-color;
+  }
+}
+
+@include breakpoint(tablet) {
+
+  .contact__header{
+	padding:0;
+  }
+
+  .contact__form{
+
+	&--title{
+	  h3{
+		text-align: left;
+	  }
+	}
+
+	&--wrapper{
+	  margin:80px auto;
+	}
+  }
+
+  .contact__header{
+	& > div{
+	  padding:50px 25px 30px 25px;
+	  margin-top:0;
+	  border-top:0;
+	}
+
+	h3{
+	  text-transform: none;
+	  font-size: 21px;
+	  letter-spacing: 1px;
+	  margin-bottom: 1.5em;
+	  font-weight: 600;
+	}
+  }
+
+  .meta-share {
+	padding:50px 25px 30px!important;
+	border-bottom: 0;
+  }
+
+  .directions {
+	display: none;
+  }
+
+}
+
+@include breakpoint(laptop) {
+
+  .contact__header{
+	padding:0 15px;
+  }
+
+  .google-container{
+	margin:0 auto;
+	padding:0;
+	width:100%;
+  }
+
+  .contact__form{
+	padding:0 30px;
+  }
+
+  .user-text {
+	margin-left:30px;
+  }
+
+  .pencil-contact{
+
+	i{
+	  left:30px;
+	}
+  }
+
+  .meta-share {
+	a {
+	  padding: 0 10px 0;
+	}
+  }
+
+
+}
+
+@include breakpoint(desktop) {
+
+
+
 }

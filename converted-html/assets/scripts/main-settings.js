@@ -96,7 +96,7 @@ $(function() {
 
 				}else{
 						//Run if any other browser
-						ScrollCascade();
+						ScrollCascade(windowSize);
 				}
 
 		}
@@ -104,7 +104,9 @@ $(function() {
 		// ==========================================================================
 		// Scroll Magic Cascading fade in
 		// ==========================================================================
-		function ScrollCascade(){
+		function ScrollCascade(windowWidthX){
+
+
 			var cascadeFeature = $('#cascadeFeature');
 			var duration = cascadeFeature.height();
 
@@ -116,17 +118,16 @@ $(function() {
 				});
 			}
 
-			if(checkWindowWidth() === true){
+			if(windowWidthX >= 600){
 				// build scenes
 				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
 					.offset(150)
 					.on("enter", cascadeClasses)
 			    //.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
-			}else{
+			}else {
 				cascadeClasses();
 			}
-
 		}
 
 		// ==========================================================================
@@ -237,8 +238,7 @@ $(function() {
 
 			if (width >= desktop) {
 
-				console.log('footer' + width);
-				console.log('desktop');
+
 
 				skrollrCheck();
 				myFooter.width(width - 15);
@@ -253,13 +253,12 @@ $(function() {
 				}
 
 			} else if( width <= desktop){
-				console.log('footer' + width);
-				console.log('mobile');
+
 				skrollrCheck();
 				myFooter.width(width - 15);
 				var footerHeight = $('footer').height() + 'px';
 				$('.footer-push').css('margin-bottom', footerHeight);
-				$('body').addClass('footer-mobile');
+				//$('body').addClass('footer-mobile');
 			}
 
 			//modal check

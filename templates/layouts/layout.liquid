@@ -7,14 +7,20 @@
 <html lang="en">
     <head>
         <!-- Title block allowing child pages to override -->
-        <title>{% block title %}Empty{% endblock %}</title>
+        <title>{% block title %}The Shave{% endblock %}</title>
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Slider Revolution Example" />
+        <meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+        <meta name="author" content="ThemePunch" />
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        {% block styles %}{% endblock %}
+
         <!-- Styles -->
         {{ "bootstrap.min.css" | asset_url | stylesheet_tag }}
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         {{ "main.css" | asset_url | stylesheet_tag }}
 
@@ -23,9 +29,12 @@
         <![endif]-->
 
         <!-- Style block allowing child pages to inject their own styles -->
-        {% block styles %}{% endblock %}
+
         {{ "jquery.min.js" | asset_url | script_tag }}
         {{ "modernizr.js" | asset_url | script_tag }}
+
+        <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
+        <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
 
     </head>
     <body class="loading">

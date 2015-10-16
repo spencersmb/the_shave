@@ -215,7 +215,7 @@ footer{
 	.footer__logo{
 
 		.logo__container{
-			margin:5em 19% 1em;
+			margin:3em 19% 1em;
 		}
 	}
 
@@ -265,6 +265,7 @@ footer{
 		li{
 		  margin:0 0 0 20px;
 		  float: right;
+		  text-align: left;
 		}
 
 	}
@@ -283,7 +284,7 @@ footer{
 @include breakpoint(laptop) {
 
 	.footer__wrapper{
-		padding:em(40px) 0;
+		padding:em(40px) 0 0;
 	}
 
 	.footer__logo{
@@ -293,7 +294,7 @@ footer{
 
 		.logo__container{
 			padding: 2em;
-			margin:7em 19%;
+			margin:6em 19%;
 		}
 	}
 
@@ -309,6 +310,7 @@ footer{
 	  li{
 		margin:0 20px 0 0;
 		float: left;
+		text-align: center;
 	  }
 	}
 
