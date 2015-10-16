@@ -159,7 +159,7 @@
 		padding:15px;
 		font-family: $ubuntu;
 		text-transform: uppercase;
-		background-color: darken($color-3, 8%);
+		background-color: darken($white, 8%);
 		@include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
 
 		.no-touch &:hover {

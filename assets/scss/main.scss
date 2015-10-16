@@ -1,23 +1,48 @@
-/*********************************************************
-
-Project Name: Website Bootstrap boilerplate
-Project Description:
-File Name: Master Sass file
+/*
+Theme Name: TheShave
+Theme URI: http://underscores.me/
 Author: Spencer Bigum
-Author URL:
+Author URI: http://www.spencerbigum.com
+Description: Description
 Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:
+Tags:
+*/
 
-*********************************************************/
-// ==========================================================================
-// Vendor - framework libraries
-// Boostrap
-// ==========================================================================
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Vendor Frameworks
+# Base Settings
+# Effects
+# Headlines
+# Helper Classes
+# Typography?
+# Buttons
+# Navigation
+# Forms
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
 @import "vendor/index";
 
-// ==========================================================================
-// Flickity plug-in Css
-// http://flickity.metafizzy.co/
-// ==========================================================================
+/***************************************************************************/
+/* Flickity plug-in Css ****************************************************/
+/* http://flickity.metafizzy.co/ *******************************************/
+/***************************************************************************/
 @import "../bower_components/flickity/dist/flickity.min.css";
 
 // ==========================================================================

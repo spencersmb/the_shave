@@ -181,8 +181,6 @@ padding: 0 60px 90px;
 	  position: relative;
 	  text-align:left;
 	  width:100%;
-  //	top:50%;
-  //	@include transform(translateY(-50%));
   }
 
   .disc__header{
@@ -356,6 +354,12 @@ padding: 0 60px 90px;
 
 		.item{
 		  padding-bottom: 20px;
+		  .title{
+			margin-top: 0;
+		  }
+		  .desc{
+			width:100%;
+		  }
 		}
 	  }
 

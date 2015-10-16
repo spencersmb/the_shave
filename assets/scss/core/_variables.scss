@@ -4,9 +4,13 @@
 
 // Font Stacks
 $font-url--ubuntu: 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,400italic';
+
 $ubuntu: 'Ubuntu', sans-serif;
+
 $font-url--yellowtail: 'http://fonts.googleapis.com/css?family=Yellowtail';
+
 $courier   : 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+
 $heading-font: $ubuntu;
 $yellowtail: 'Yellowtail', cursive;
 
@@ -21,7 +25,6 @@ $letter-space: 1px;
 
 
 // Descriptive Base Colors
-
 $white     : #fff;
 $black     : #252525;
 $grey      : #e8e8e8;
@@ -29,7 +32,6 @@ $dark-grey : #959595;
 $light-grey: #EDEDED;
 
 //## Gray and brand colors for use across Bootstrap.
-
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
@@ -112,6 +114,11 @@ $desktop:                 1200px !default;
 $laptop:                  992px !default;
 $tablet:                  768px !default;
 $mobile:                  480px !default;
+
+//NAV BAR STYLES
+$S:     $mobile;
+$M:     $tablet;
+$L:     $laptop;
 
 // So media queries don't overlap when required, provide a maximum
 $mobile-max:              ($tablet - 1) !default;

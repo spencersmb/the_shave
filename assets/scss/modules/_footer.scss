@@ -1,7 +1,13 @@
-// TODO: Add 15px padding left and right of main container - match blog inner
-//TODO: fix input spaceing
 
-//footer navA
+footer{
+  opacity: 0;
+  @include transition(opacity 1s .7s ease-out);
+}
+
+footer.loaded {
+  opacity: 1;
+}
+
 footer{
 	position:fixed;
 	position: -webkit-sticky !important;
@@ -17,15 +23,20 @@ footer{
 	background:#373737;
 
 //	@include transition($pushNav);
-
-	&.nav-is-open {
-	  @include transform(translateX($navMove));
-	}
 //
-//	&.safari{
-//		position:relative !important;
+//	&.nav-is-open {
+//	  @include transform(translateX($navMove));
 //	}
+//
+	&.safari{
+		z-index: 0;
+	}
 
+}
+
+//make space for footer
+.footer-push{
+  margin-bottom:$footerPush;
 }
 
 

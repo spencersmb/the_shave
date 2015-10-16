@@ -110,3 +110,41 @@
   -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
   box-shadow: $shadow;
 }
+
+//Codyhouse Nav MQ settings
+@mixin MQ($canvas) {
+  @if $canvas == S {
+    @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+    @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+    @media only screen and (min-width: $L) { @content; }
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin animation--fadedown($delay) {
+  // Apply the fadeIn keyframes. Each animation
+  // will take 0.3s and have an ease-in-out
+  @include animation(fadeIn 0.3s ease-in-out);
+  // This animation should only play once
+  @include animation-iteration-count(1);
+  // Make sure the element maintains it's
+  // final visual state (i.e. 100% opacity)
+  @include animation-fill-mode(forwards);
+  // Delay - don't start the animation until we say so
+  @include animation-delay(#{$delay}s);
+}
