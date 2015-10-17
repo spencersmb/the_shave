@@ -117,14 +117,10 @@
   position: relative;
 }
 
-.full__table--wrapper{
+.tabs__wrapper{
   margin:0 auto;
   top:0;
   position:relative;
-}
-
-.full__prices{
-  padding-bottom:25px;
 }
 
 .white-tabs>li>a{
@@ -143,7 +139,7 @@
   }
 }
 
-.header{
+.tab-header{
   height: 100%;
   max-height:235px;
   width:100%;
@@ -185,7 +181,7 @@
   }
 }
 
-.price__sheet{
+.tab__panel{
   padding:2em;
   background:$white;
   width:100%;
@@ -239,12 +235,6 @@
   }
 }
 
-.price__footer{
-  color:$primary-color;
-  text-align:center;
-  margin:75px 0 20px;
-}
-
 .angle-top-price{
   content:' ';
   position: absolute;
@@ -260,37 +250,7 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
-  .price__sheet {
-    padding: 3em;
-
-    h3{
-      font-size: 18px;
-      letter-spacing: 5px;
-    }
-
-    .item{
-      margin-bottom: 20px;
-
-      .title{
-        margin-top: 30px;
-        width:60%;
-      }
-
-      .price{
-        margin-top: 29px;
-      }
-
-      .desc{
-        width:90%;
-      }
-    }
-  }
-
-  .full__prices{
-    padding-bottom:50px;
-  }
-
-  .header{
+  .tab-header{
     max-height:300px;
 
     .headline-container{
@@ -316,7 +276,7 @@
 
   }
 
-  .full__table--wrapper{
+  .tabs__wrapper{
     top:0;
   }
 
@@ -343,12 +303,48 @@
 
   }
 
+  .tab__panel {
+    padding: 3em;
+
+    h3{
+      font-size: 18px;
+      letter-spacing: 5px;
+    }
+
+    .item{
+      margin-bottom: 20px;
+
+      .title{
+        margin-top: 30px;
+        width:60%;
+      }
+
+      .price{
+        margin-top: 29px;
+      }
+
+      .desc{
+        width:90%;
+      }
+    }
+  }
+
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
-  .price__sheet {
+  .tab-header {
+    max-height:330px;
+    margin: 0;
+  }
+
+  .tabs__wrapper{
+    top:0;
+    margin-bottom: 80px;
+  }
+
+  .tab__panel {
 
     .item{
 
@@ -365,25 +361,15 @@
     }
   }
 
-  .full__prices{
-    padding-bottom:50px;
-  }
-
-  .header {
-    max-height:330px;
-    margin: 0;
-  }
-
-  .full__table--wrapper{
-    top:0;
-    margin-bottom: 80px;
-  }
-
-
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+
+  .tabs__wrapper{
+    top:-150px;
+    margin-bottom: 0;
+  }
 
 }
 

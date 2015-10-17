@@ -16,56 +16,49 @@
 
 	</section>
 
-	<!-- static -->
-	<!--<section class="sv__container--fluid dual-img">
-		<div class="row no-margin">
-			<div class="col-xs-12 no no-padding">
-				<img class="img-responsive" src="{{'service-full.jpg' | asset_url}}" alt="full service barbershop"/>
-			</div>
-		</div>
-	</section>-->
-
 	<!-- Service Section -->
 	<section id="content" class="container-fluid grey-bg reverse-angle">
 		<div class="angle-top" style="border-right-color: #e8e8e8;"></div>
 
-		<div class="row sv__container--md sell__box">
+		<div class="row sv__container--md col3__module">
 
-			<div class="">
+			<div>
 				<img class="img-responsive" src="{{'3-blades.jpg' | asset_url}}" alt="">
 			</div>
 
-			<div class="row wrapper">
+			<!-- Icon grid container -->
+			<div class="col3__container">
 
-				<div class="col-sm-12 col-md-4 desc">
-					<div class="icon__box">
+				<div class="row wrapper">
 
-						<div class="icon__box--content">
-							<h5>Great Features</h5>
-							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+					<div class="col-sm-12 col-md-4">
+						<div class="col3__item">
+							<div class="col3__item--content">
+								<h5>Great Features</h5>
+								<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-4">
+						<div class="col3__item">
+							<div class="col3__item--content">
+								<h5>Unique Page design</h5>
+								<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-4">
+						<div class="col3__item">
+							<div class="col3__item--content">
+								<h5>tons of options</h5>
+								<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-sm-12 col-md-4 desc">
-					<div class="icon__box">
-
-						<div class="icon__box--content">
-							<h5>Unique Page design</h5>
-							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-sm-12 col-md-4 desc">
-					<div class="icon__box">
-
-						<div class="icon__box--content">
-							<h5>tons of options</h5>
-							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
-						</div>
-					</div>
-				</div>
 			</div>
 
 		</div>
@@ -219,21 +212,24 @@
 		// Feature Module 2
 		// ==========================================================================
 
-		var myTab = $('#myTab'),
-			myTabContent = myTab.next(),
-			discoverWrapper = $('.svfm2__wrapper'),
-			tabTitle = myTab.find('li.active').data('title'),
-			headline = discoverWrapper.find('.headline-container').children('h3'),
-			width = $(window).width();
-		
-			discoverWrapper.children('.disc__container--image').children('.discover__image').each(function(index){
-				if(index == 0){
+		//TODO: organize JS
+		var myTab = $('#svfm2Tab'),
+				myTabContent = myTab.next(),
+				svfm2Wrapper = $('.svfm2__wrapper'),
+				svfm2ImageContainer = $('.svfm2__wrapper--images'),
+				svfm2Image = '.svfm2__image',
+				tabTitle = myTab.find('li.active').data('title'),
+				headline = svfm2Wrapper.find('.headline-container').children('h3'),
+				width = $(window).width();
 
-				}else{
-					$(this).fadeOut();
-				}
-			});
-		
+		svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).each(function(index){
+			if(index == 0){
+
+			}else{
+				$(this).fadeOut();
+			}
+		});
+
 		//Change tab content
 		myTab.on('click', 'li', function(){
 			console.log('click');
@@ -258,20 +254,20 @@
 					if(panelId === this.id){
 
 						var element = $(this),
-							currentImage = discoverWrapper.children('.disc__container--image').children('.active');
-						
+								currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
+
 						//get heigh of clicked content
 						var panelHeight = element.height(),
-							imageTitle = discoverWrapper.children('.disc__container--image').children('.discover__image').get();
+								imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
 
-							//loop through the images and match the title to the tab title
-							for( var i=0; i < imageTitle.length; i++){
+						//loop through the images and match the title to the tab title
+						for( var i=0; i < imageTitle.length; i++){
 
-								if($(imageTitle[i]).data('title') === panelId){
+							if($(imageTitle[i]).data('title') === panelId){
 
-									$(imageTitle[i]).addClass('active').fadeIn(750);
-								}
+								$(imageTitle[i]).addClass('active').fadeIn(750);
 							}
+						}
 						//add hight to adj the for new content
 						if(width <= 600){
 							//slide content out and then add the content back in

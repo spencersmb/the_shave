@@ -30,6 +30,8 @@ Tags:
 	# Twitter Box
 	# Footer
 	# Faq
+	# Col-3 Module
+	# Products
 # Forms
 # Accessibility
 # Alignments
@@ -445,6 +447,9 @@ blockquote.reverse {
     color: #252525;
   }
 
+  .inner__header--sm {
+    margin: 25px auto 25px;
+  }
   .inner__header--sm h1 {
     font-size: 84px;
   }
@@ -907,6 +912,7 @@ blockquote.reverse {
 
 .tier2 {
   z-index: 2;
+  position: relative;
 }
 
 .text-hide {
@@ -1042,6 +1048,12 @@ blockquote.reverse {
   height: 0;
   border-bottom: 30px solid transparent;
   border-left: 30px solid white;
+}
+
+.footer__dots {
+  color: #af8c45;
+  text-align: center;
+  margin: 75px 0 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2589,7 +2601,28 @@ blockquote.reverse {
     opacity: 1;
   }
 }
-.feature__box {
+.svfm1__container {
+  z-index: 3;
+  background-size: cover;
+  background-position: center center;
+}
+
+.svfm1__content {
+  margin: 0 auto;
+  max-width: 750px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+.svfm1__content--offset {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.svfm1__card {
   display: table;
   padding: 15px 30px;
   margin: 0 auto;
@@ -2598,7 +2631,7 @@ blockquote.reverse {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-.feature__box.active0 {
+.svfm1__card.active0 {
   -webkit-animation: fadeIn 0.3s ease-in-out;
   -moz-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -2612,7 +2645,7 @@ blockquote.reverse {
   -moz-animation-delay: 0s;
   animation-delay: 0s;
 }
-.feature__box.active1 {
+.svfm1__card.active1 {
   -webkit-animation: fadeIn 0.3s ease-in-out;
   -moz-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -2626,7 +2659,7 @@ blockquote.reverse {
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-.feature__box.active2 {
+.svfm1__card.active2 {
   -webkit-animation: fadeIn 0.3s ease-in-out;
   -moz-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -2640,7 +2673,7 @@ blockquote.reverse {
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-.feature__box.active3 {
+.svfm1__card.active3 {
   -webkit-animation: fadeIn 0.3s ease-in-out;
   -moz-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -2654,20 +2687,7 @@ blockquote.reverse {
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
-.feature__box--fluid {
-  z-index: 3;
-  background-size: cover;
-  background-position: center center;
-}
-.feature__box--container {
-  margin: 0 auto;
-  max-width: 750px;
-  position: relative;
-  z-index: 2;
-  padding-bottom: 30px;
-  padding-top: 15px;
-}
-.feature__box figure {
+.svfm1__card figure {
   position: relative;
   overflow: hidden;
   max-height: 430px;
@@ -2676,7 +2696,7 @@ blockquote.reverse {
   text-align: center;
   cursor: pointer;
 }
-.feature__box figure .content {
+.svfm1__card figure .content {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -2684,7 +2704,7 @@ blockquote.reverse {
   left: 0;
   background: #fff;
 }
-.feature__box figure h2 {
+.svfm1__card figure h2 {
   word-spacing: -0.15em;
   font-weight: 700;
   margin: 0;
@@ -2700,7 +2720,7 @@ blockquote.reverse {
   bottom: 0;
   left: 0;
 }
-.feature__box figure p {
+.svfm1__card figure p {
   text-align: center;
   margin: 0;
   position: relative;
@@ -2709,13 +2729,13 @@ blockquote.reverse {
   display: block;
   width: 100%;
 }
-.feature__box figure img {
+.svfm1__card figure img {
   position: relative;
   display: block;
   height: 100%;
   max-width: 100%;
 }
-.feature__box figure figcaption {
+.svfm1__card figure figcaption {
   padding: 2em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -2725,7 +2745,7 @@ blockquote.reverse {
   width: 100%;
   height: 100%;
 }
-.feature__box figure figcaption > a {
+.svfm1__card figure figcaption > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -2737,20 +2757,20 @@ blockquote.reverse {
   font-size: 0;
   opacity: 0;
 }
-.feature__box figure figcaption::before, .feature__box figure figcaption::after {
+.svfm1__card figure figcaption::before, .svfm1__card figure figcaption::after {
   pointer-events: none;
 }
 
-.feature__box--effect {
+.svfm1__card--effect {
   margin: 0 auto;
 }
-.feature__box--effect h2,
-.feature__box--effect img {
+.svfm1__card--effect h2,
+.svfm1__card--effect img {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
-.feature__box--effect img {
+.svfm1__card--effect img {
   width: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -2760,7 +2780,7 @@ blockquote.reverse {
   -o-transform: translate3d(0, -80px, 0);
   transform: translate3d(0, -80px, 0);
 }
-.feature__box--effect h2 {
+.svfm1__card--effect h2 {
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -2770,7 +2790,7 @@ blockquote.reverse {
   -o-transform: translate3d(0, 0px, 0);
   transform: translate3d(0, 0px, 0);
 }
-.feature__box--effect p {
+.svfm1__card--effect p {
   padding: 10px 30px 20px;
   text-transform: none;
   font-size: 1em;
@@ -2779,75 +2799,69 @@ blockquote.reverse {
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
 }
-.no-touch .feature__box--effect:hover img {
+.no-touch .svfm1__card--effect:hover img {
   -webkit-transform: translate3d(0, -80px, 0);
   -moz-transform: translate3d(0, -80px, 0);
   -ms-transform: translate3d(0, -80px, 0);
   -o-transform: translate3d(0, -80px, 0);
   transform: translate3d(0, -80px, 0);
 }
-.no-touch .feature__box--effect:hover p {
+.no-touch .svfm1__card--effect:hover p {
   opacity: 1;
 }
 
-.feature-offset {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
 @media only screen and (min-width: 768px) {
-  .feature__box {
-    padding: 15px;
-  }
-  .feature__box figure {
-    max-width: 343px;
-    max-height: 390px;
-  }
-  .feature__box figure p {
-    padding: 10px 45px 20px;
-  }
-  .feature__box figure h2 {
-    bottom: 21px;
-  }
-  .feature__box--container {
+  .svfm1__content {
     padding-top: 40px;
     padding-bottom: 260px;
     max-width: 800px;
   }
-
-  .feature-offset {
+  .svfm1__content--offset {
     position: absolute;
     bottom: -175px;
     left: 0;
     width: 100%;
   }
-}
-@media only screen and (min-width: 992px) {
-  .feature__box figure {
+
+  .svfm1__card {
+    padding: 15px;
+  }
+  .svfm1__card figure {
     max-width: 343px;
     max-height: 390px;
   }
-  .feature__box figure .content {
+  .svfm1__card figure p {
+    padding: 10px 45px 20px;
+  }
+  .svfm1__card figure h2 {
+    bottom: 21px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .svfm1__content {
+    padding-bottom: 270px;
+    max-width: 1200px;
+  }
+
+  .svfm1__card figure {
+    max-width: 343px;
+    max-height: 390px;
+  }
+  .svfm1__card figure .content {
     height: 85px;
   }
-  .feature__box figure h2 {
+  .svfm1__card figure h2 {
     position: absolute;
     padding: 29px 20px;
     bottom: 0;
     font-size: 1.125em;
   }
-  .feature__box figure p {
+  .svfm1__card figure p {
     padding: 10px 30px 20px;
     position: absolute;
   }
-  .feature__box--container {
-    padding-bottom: 270px;
-    max-width: 1200px;
-  }
 
-  .feature__box--effect p {
+  .svfm1__card--effect p {
     padding: 10px 30px 20px;
     opacity: 0;
     -webkit-transform: translate3d(0, 80px, 0);
@@ -2856,7 +2870,7 @@ blockquote.reverse {
     -o-transform: translate3d(0, 80px, 0);
     transform: translate3d(0, 80px, 0);
   }
-  .feature__box--effect img {
+  .svfm1__card--effect img {
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -2866,21 +2880,21 @@ blockquote.reverse {
     -o-transform: translate3d(0, 0px, 0);
     transform: translate3d(0, 0px, 0);
   }
-  .feature__box--effect:hover img {
+  .svfm1__card--effect:hover img {
     -webkit-transform: translate3d(0, -80px, 0);
     -moz-transform: translate3d(0, -80px, 0);
     -ms-transform: translate3d(0, -80px, 0);
     -o-transform: translate3d(0, -80px, 0);
     transform: translate3d(0, -80px, 0);
   }
-  .feature__box--effect:hover h2 {
+  .svfm1__card--effect:hover h2 {
     -webkit-transform: translate3d(0, -70px, 0);
     -moz-transform: translate3d(0, -70px, 0);
     -ms-transform: translate3d(0, -70px, 0);
     -o-transform: translate3d(0, -70px, 0);
     transform: translate3d(0, -70px, 0);
   }
-  .feature__box--effect:hover p {
+  .svfm1__card--effect:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0, -15px, 0);
     -moz-transform: translate3d(0, -15px, 0);
@@ -2890,38 +2904,39 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .feature__box--container {
+  .svfm1__content {
     padding-bottom: 375px;
     max-width: 1230px;
   }
-  .feature__box figure {
+
+  .svfm1__card figure {
     max-width: 445px;
     max-height: 480px;
   }
-  .feature__box figure .content {
+  .svfm1__card figure .content {
     height: 100px;
   }
-  .feature__box figure h2 {
+  .svfm1__card figure h2 {
     padding: 37px 20px;
   }
-  .feature__box:nth-child(odd) .feature__box--effect {
+  .svfm1__card:nth-child(odd) .svfm1__card--effect {
     float: none;
   }
-  .feature__box:nth-child(even) .feature__box--effect {
+  .svfm1__card:nth-child(even) .svfm1__card--effect {
     float: none;
   }
 
-  .feature__box--effect {
+  .svfm1__card--effect {
     margin: 0 auto;
   }
-  .feature__box--effect p {
+  .svfm1__card--effect p {
     -webkit-transform: translate3d(0, 80px, 0);
     -moz-transform: translate3d(0, 80px, 0);
     -ms-transform: translate3d(0, 80px, 0);
     -o-transform: translate3d(0, 80px, 0);
     transform: translate3d(0, 80px, 0);
   }
-  .feature__box--effect:hover h2 {
+  .svfm1__card--effect:hover h2 {
     -webkit-transform: translate3d(0, -70px, 0);
     -moz-transform: translate3d(0, -70px, 0);
     -ms-transform: translate3d(0, -70px, 0);
@@ -2930,7 +2945,7 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 1600px) {
-  .feature__box--effect:hover h2 {
+  .svfm1__card--effect:hover h2 {
     -webkit-transform: translate3d(0, -50px, 0);
     -moz-transform: translate3d(0, -50px, 0);
     -ms-transform: translate3d(0, -50px, 0);
@@ -3012,31 +3027,31 @@ blockquote.reverse {
 .svfm2__wrapper .text {
   display: none !Important;
 }
-.svfm2__wrapper .price__sheet {
+.svfm2__wrapper .tab__panel {
   padding: 1em;
 }
-.svfm2__wrapper .price__sheet .item {
+.svfm2__wrapper .tab__panel .item {
   margin: 0;
   padding-bottom: 5px;
 }
-.svfm2__wrapper .price__sheet .title {
+.svfm2__wrapper .tab__panel .title {
   margin: 0 auto;
   width: 100%;
 }
-.svfm2__wrapper .price__sheet .title h3 {
+.svfm2__wrapper .tab__panel .title h3 {
   letter-spacing: 2px;
   font-size: 16px;
 }
-.svfm2__wrapper .price__sheet .desc {
+.svfm2__wrapper .tab__panel .desc {
   width: 100%;
   font-size: 14px;
   line-height: 22px;
 }
-.svfm2__wrapper .price__sheet .item__link {
+.svfm2__wrapper .tab__panel .item__link {
   position: relative;
   display: block;
 }
-.svfm2__wrapper .price__sheet .item__link a {
+.svfm2__wrapper .tab__panel .item__link a {
   padding-top: 15px;
   text-align: left;
   margin: 0;
@@ -3045,7 +3060,7 @@ blockquote.reverse {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
 }
-.svfm2__wrapper .price__sheet .item__link i {
+.svfm2__wrapper .tab__panel .item__link i {
   float: right;
   margin-top: 6px;
 }
@@ -3098,16 +3113,16 @@ blockquote.reverse {
     -o-transform: translateY(80px);
     transform: translateY(80px);
   }
-  .svfm2__wrapper .price__sheet {
+  .svfm2__wrapper .tab__panel {
     padding: 2em 2em 1.5em;
   }
-  .svfm2__wrapper .price__sheet .item {
+  .svfm2__wrapper .tab__panel .item {
     padding-bottom: 20px;
   }
-  .svfm2__wrapper .price__sheet .item .title {
+  .svfm2__wrapper .tab__panel .item .title {
     margin-top: 0;
   }
-  .svfm2__wrapper .price__sheet .item .desc {
+  .svfm2__wrapper .tab__panel .item .desc {
     width: 100%;
   }
   .svfm2__wrapper .svfm2__image {
@@ -3135,7 +3150,7 @@ blockquote.reverse {
 }
 @media only screen and (min-width: 1600px) {
   .svfm2__wrapper {
-    padding: 140px 0px;
+    padding: 140px 0;
   }
 }
 /***************************************************************************/
@@ -3470,6 +3485,9 @@ blockquote.reverse {
     line-height: 105px;
   }
 }
+/***************************************************************************/
+/* Contact Module ****************************************************/
+/***************************************************************************/
 .contact__wrapper {
   overflow: hidden;
   margin: 0 auto;
@@ -3676,6 +3694,9 @@ blockquote.reverse {
     padding-left: 47px;
   }
 }
+/***************************************************************************/
+/* Twitter Module ****************************************************/
+/***************************************************************************/
 .twitter__wrapper {
   text-align: center;
   color: #fff;
@@ -3765,6 +3786,9 @@ blockquote.reverse {
     max-width: 1200px;
   }
 }
+/***************************************************************************/
+/* Footer ****************************************************/
+/***************************************************************************/
 footer {
   position: fixed;
   position: -webkit-sticky !important;
@@ -4056,6 +4080,9 @@ footer.loaded {
     text-align: right;
   }
 }
+/***************************************************************************/
+/* Faq Module ****************************************************/
+/***************************************************************************/
 .shave__faq {
   margin: 90px auto;
 }
@@ -4203,111 +4230,17 @@ footer.loaded {
     padding: 0 24px 30px;
   }
 }
-.tp-caption.shave_title {
-  font-size: 5.625em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
-  letter-spacing: 4px;
-  font-weight: 700;
-}
-.tp-caption.shave_title.lg {
-  font-size: 6.25em;
-}
-.tp-caption.shave_title.md {
-  font-size: 3.4375em;
-}
-.tp-caption.shave_title.sm {
-  font-size: 2.5em;
-}
-
-.tp-caption.black {
-  color: #252525;
-}
-
-.tp-caption.gold {
-  color: #af8c45;
-}
-
-.tp-caption.shave_title_cursive {
-  font-size: 5.625em;
-  color: white;
-  font-family: "Yellowtail", cursive;
-  min-width: 145px;
-}
-.tp-caption.shave_title_cursive.and {
-  text-align: center;
-  font-size: 7.5em;
-}
-.tp-caption.shave_title_cursive.sm {
-  min-width: 200px;
-  font-size: 3.75em;
-}
-.tp-caption.shave_title_cursive.lg {
-  font-size: 10em;
-  min-width: 490px;
-}
-.tp-caption.shave_title_cursive.lg.gold {
-  color: #af8c45;
-}
-
-.tp-caption.shave_title_small {
-  font-size: 1em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-}
-
-.tp-caption.shave_title_desc {
-  font-size: 1.3125em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-}
-.tp-caption.shave_title_desc.lg {
-  font-size: 1.75em;
-}
-
-.tp-caption.shave_frame img {
-  width: 80%;
-}
-
-.shave_title_btn a {
-  display: table;
-  color: #fff;
-}
-
-.tp-caption a:hover {
-  color: #fff;
-}
-
-.faded__headline {
-  text-align: left;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 3% 0;
-}
-.faded__headline h2 {
-  margin: 0 auto;
-  padding: 0;
-  color: rgba(143, 121, 75, 0.3);
-  font-style: italic;
-  font-weight: 700;
-  font-size: 14.375em;
-  line-height: 215px;
-  letter-spacing: 10px;
-}
-
-.sell__box h2 {
+/***************************************************************************/
+/* 3 Col Module ************************************************/
+/***************************************************************************/
+.col3__module h2 {
   font-size: 2.75em;
   line-height: 55px;
   margin-bottom: 10px;
   margin-top: 15px;
   text-align: center;
 }
-.sell__box h5 {
+.col3__module h5 {
   font-size: 1.375em;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   color: #909090;
@@ -4316,7 +4249,7 @@ footer.loaded {
   width: 100%;
   margin: 15px auto 0;
 }
-.sell__box h6 {
+.col3__module h6 {
   font-size: 1.125em;
   color: #af8c45;
   font-family: 'courier';
@@ -4325,103 +4258,104 @@ footer.loaded {
   letter-spacing: 2px;
   margin: 0;
 }
-.sell__box img {
+.col3__module img {
   margin: 0 auto;
 }
-.sell__box .wrapper {
+.col3__module .wrapper {
   margin: 0 auto 20px;
   padding: 0;
   max-width: 1200px;
 }
-.sell__box .desc {
+.col3__module .desc {
   text-align: center;
 }
-.sell__box .intro {
+.col3__module .intro {
   margin: 30px auto 15px;
 }
 
-.icon__box {
+.col3__container {
+  text-align: center;
+}
+
+.col3__item {
   padding-bottom: 30px;
 }
-.icon__box .icon__wrapper {
+.col3__item .icon__wrapper {
   margin: 0 auto;
   max-width: 59px;
 }
-.icon__box .icon__wrapper img {
+.col3__item .icon__wrapper img {
   margin: 0 auto;
   width: 100%;
   display: block;
   text-align: left;
 }
-.icon__box i {
+.col3__item i {
   display: block;
   color: #af8c45;
 }
-.icon__box--content {
+.col3__item--content {
   clear: both;
 }
-.icon__box--content h5 {
+.col3__item--content h5 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.125em;
   margin: 25px auto 15px;
 }
-.icon__box--content p {
+.col3__item--content p {
   margin: 0;
-}
-.icon__box--container {
-  text-align: center;
-}
-
-.single__image img {
-  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
-  .sell__box h2 {
+  .col3__module h2 {
     font-size: 4.5em;
     line-height: 80px;
     margin-bottom: 16px;
     letter-spacing: 3px;
   }
-  .sell__box h5 {
-    font-size: 1.5em;
+  .col3__module h5 {
+    font-size: 20px;
   }
-  .sell__box .wrapper {
+  .col3__module .wrapper {
     margin: 0 auto;
     padding: 0 15px;
+    display: inline-block;
   }
-  .sell__box .desc {
+  .col3__module .desc {
     text-align: center;
   }
-  .sell__box .intro {
+  .col3__module .intro {
     margin: 55px auto 15px;
     padding: 0 3.5%;
   }
 
-  .icon__box--container {
-    margin-bottom: 0;
+  .col3__container {
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .sell__box h2 {
+  .col3__module h2 {
     font-size: 5.9375em;
     line-height: 105px;
   }
-  .sell__box h5 {
+  .col3__module h5 {
     font-size: 1.5em;
   }
-  .sell__box .wrapper {
+  .col3__module .wrapper {
     margin: 20px auto 20px;
   }
-  .sell__box .desc {
+  .col3__module .desc {
     text-align: left;
   }
 
-  .icon__box--container {
-    margin-bottom: 0;
+  .col3__container {
+    margin-bottom: 30px;
   }
 }
+/***************************************************************************/
+/* Products ****************************************************/
+/***************************************************************************/
 .products {
   padding: 0 15px;
 }
@@ -5323,6 +5257,89 @@ footer.loaded {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+/***************************************************************************/
+/* Revolution Slider Customizations ****************************************/
+/***************************************************************************/
+.tp-caption.shave_title {
+  font-size: 5.625em;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.tp-caption.shave_title.lg {
+  font-size: 6.25em;
+}
+.tp-caption.shave_title.md {
+  font-size: 3.4375em;
+}
+.tp-caption.shave_title.sm {
+  font-size: 2.5em;
+}
+
+.tp-caption.black {
+  color: #252525;
+}
+
+.tp-caption.gold {
+  color: #af8c45;
+}
+
+.tp-caption.shave_title_cursive {
+  font-size: 5.625em;
+  color: white;
+  font-family: "Yellowtail", cursive;
+  min-width: 145px;
+}
+.tp-caption.shave_title_cursive.and {
+  text-align: center;
+  font-size: 7.5em;
+}
+.tp-caption.shave_title_cursive.sm {
+  min-width: 200px;
+  font-size: 3.75em;
+}
+.tp-caption.shave_title_cursive.lg {
+  font-size: 10em;
+  min-width: 490px;
+}
+.tp-caption.shave_title_cursive.lg.gold {
+  color: #af8c45;
+}
+
+.tp-caption.shave_title_small {
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+.tp-caption.shave_title_desc {
+  font-size: 1.3125em;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+.tp-caption.shave_title_desc.lg {
+  font-size: 1.75em;
+}
+
+.tp-caption.shave_frame img {
+  width: 80%;
+}
+
+.shave_title_btn a {
+  display: table;
+  color: #fff;
+}
+
+.tp-caption a:hover {
+  color: #fff;
 }
 
 .dual-list {
@@ -7650,14 +7667,10 @@ footer.loaded {
   position: relative;
 }
 
-.full__table--wrapper {
+.tabs__wrapper {
   margin: 0 auto;
   top: 0;
   position: relative;
-}
-
-.full__prices {
-  padding-bottom: 25px;
 }
 
 .white-tabs > li > a {
@@ -7675,7 +7688,7 @@ footer.loaded {
   border-top: 4px solid #af8c45;
 }
 
-.header {
+.tab-header {
   height: 100%;
   max-height: 235px;
   width: 100%;
@@ -7683,7 +7696,7 @@ footer.loaded {
   margin: 0;
   position: relative;
 }
-.header .headline-container {
+.tab-header .headline-container {
   color: #fff;
   text-align: center;
   position: absolute;
@@ -7699,10 +7712,10 @@ footer.loaded {
   background-color: rgba(0, 0, 0, 0.45);
   padding: 15px;
 }
-.header h3 {
+.tab-header h3 {
   margin-bottom: 0;
 }
-.header h4 {
+.tab-header h4 {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 18px;
   font-weight: 500;
@@ -7713,62 +7726,56 @@ footer.loaded {
   display: block;
   position: absolute;
 }
-.header img {
+.tab-header img {
   width: 100%;
 }
 
-.price__sheet {
+.tab__panel {
   padding: 2em;
   background: #fff;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
-.price__sheet h2 {
+.tab__panel h2 {
   font-size: 1.5em;
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
 }
-.price__sheet h3 {
+.tab__panel h3 {
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 24px;
 }
-.price__sheet .item {
+.tab__panel .item {
   padding-bottom: 20px;
   border-bottom: 1px solid #CACACA;
   margin-bottom: 20px;
 }
-.price__sheet .item .item__header {
+.tab__panel .item .item__header {
   display: table;
   position: relative;
   width: 100%;
   height: 100%;
 }
-.price__sheet .item .title {
+.tab__panel .item .title {
   margin-top: 10px;
   float: left;
   width: 70%;
 }
-.price__sheet .item .price {
+.tab__panel .item .price {
   margin-top: 10px;
   float: right;
   font-weight: bold;
   color: #af8c45;
 }
-.price__sheet .item .desc {
+.tab__panel .item .desc {
   width: 100%;
   text-align: left;
   clear: both;
-}
-
-.price__footer {
-  color: #af8c45;
-  text-align: center;
-  margin: 75px 0 20px;
 }
 
 .angle-top-price {
@@ -7784,42 +7791,17 @@ footer.loaded {
 }
 
 @media only screen and (min-width: 768px) {
-  .price__sheet {
-    padding: 3em;
-  }
-  .price__sheet h3 {
-    font-size: 18px;
-    letter-spacing: 5px;
-  }
-  .price__sheet .item {
-    margin-bottom: 20px;
-  }
-  .price__sheet .item .title {
-    margin-top: 30px;
-    width: 60%;
-  }
-  .price__sheet .item .price {
-    margin-top: 29px;
-  }
-  .price__sheet .item .desc {
-    width: 90%;
-  }
-
-  .full__prices {
-    padding-bottom: 50px;
-  }
-
-  .header {
+  .tab-header {
     max-height: 300px;
   }
-  .header .headline-container {
+  .tab-header .headline-container {
     padding: 25px;
   }
-  .header h3 {
+  .tab-header h3 {
     font-size: 30px;
     margin-bottom: 15px;
   }
-  .header h4 {
+  .tab-header h4 {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: 18px;
     font-weight: 500;
@@ -7830,7 +7812,7 @@ footer.loaded {
     position: relative;
   }
 
-  .full__table--wrapper {
+  .tabs__wrapper {
     top: 0;
   }
 
@@ -7850,26 +7832,49 @@ footer.loaded {
   .nav-tabs.nav-justified > li .text {
     display: inline-block;
   }
+
+  .tab__panel {
+    padding: 3em;
+  }
+  .tab__panel h3 {
+    font-size: 18px;
+    letter-spacing: 5px;
+  }
+  .tab__panel .item {
+    margin-bottom: 20px;
+  }
+  .tab__panel .item .title {
+    margin-top: 30px;
+    width: 60%;
+  }
+  .tab__panel .item .price {
+    margin-top: 29px;
+  }
+  .tab__panel .item .desc {
+    width: 90%;
+  }
 }
 @media only screen and (min-width: 992px) {
-  .price__sheet .item .title {
-    width: 70%;
-  }
-  .price__sheet .item .desc {
-    width: 70%;
-  }
-
-  .full__prices {
-    padding-bottom: 50px;
-  }
-
-  .header {
+  .tab-header {
     max-height: 330px;
     margin: 0;
   }
 
-  .full__table--wrapper {
+  .tabs__wrapper {
     top: 0;
     margin-bottom: 80px;
+  }
+
+  .tab__panel .item .title {
+    width: 70%;
+  }
+  .tab__panel .item .desc {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .tabs__wrapper {
+    top: -150px;
+    margin-bottom: 0;
   }
 }

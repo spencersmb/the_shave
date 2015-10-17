@@ -10,19 +10,19 @@
 
 	{% include "staggered-grid" %}
 
-	{% include "service-box" %}
+	{% include "col-3-module-1" %}
 
 	{% include "feature-module-1" %}
 
-	{% include "contact-box" %}
+	{% include "contact-module" %}
 
 	{% include "feature-module-2" %}
 
 	{% include "blog-overview" %}
 
-	{% include "twitter-box" %}
+	{% include "twitter-module" %}
 
-	{% include "sellbox" %}
+	{% include "col-3-module-2" %}
 
 {% endblock %}
 {% block scripts %}
@@ -144,11 +144,12 @@ $(function() {
 			});
 		}
 	}); /*ready*/
-	// ==========================================================================
-	// Get inspired Module
-	// ==========================================================================
 
-	var myTab = $('#myTab'),
+	// ==========================================================================
+	// Feature Module 2
+	// ==========================================================================
+	//TODO: organize JS
+	var myTab = $('#svfm2Tab'),
 			myTabContent = myTab.next(),
 			svfm2Wrapper = $('.svfm2__wrapper'),
 			svfm2ImageContainer = $('.svfm2__wrapper--images'),

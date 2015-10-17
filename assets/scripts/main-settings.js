@@ -82,21 +82,20 @@ $(function() {
 		//IE9 fixs
 		function browserJs( browserID ){
 
+			var cascadeFeature = $('#cascadeFeature');
 
 				if(browserID == 'msie' && document.documentMode == 9){
 
-						//ADD CSS style opactiy 1
-						var cascadeFeature = $('#cascadeFeature');
-
 						//IE9 fix for cascading animation
-						cascadeFeature.find('.feature__box').each(function(index){
+						cascadeFeature.find('.svfm1__card').each(function(index){
 								$(this).css('opacity', 1);
 						});
 
-
 				}else{
 						//Run if any other browser
-						ScrollCascade(windowSize);
+						if(cascadeFeature){
+							ScrollCascade(windowSize, cascadeFeature);
+						}
 				}
 
 		}
@@ -104,16 +103,16 @@ $(function() {
 		// ==========================================================================
 		// Scroll Magic Cascading fade in
 		// ==========================================================================
-		function ScrollCascade(windowWidthX){
+		function ScrollCascade(windowWidthX, object){
 
+			var cascadeFeature = object;
 
-			var cascadeFeature = $('#cascadeFeature');
 			var duration = cascadeFeature.height();
 
 			var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
 
 			function cascadeClasses(){
-				cascadeFeature.find('.feature__box').each(function(index){
+				cascadeFeature.find('.svfm1__card').each(function(index){
 					$(this).addClass('active' + index);
 				});
 			}

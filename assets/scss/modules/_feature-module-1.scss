@@ -13,7 +13,28 @@
     }
 }
 
-.feature__box {
+.svfm1__container {
+    z-index: 3;
+    background-size: cover;
+    background-position: center center;
+}
+
+.svfm1__content {
+    margin: 0 auto;
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    &--offset {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.svfm1__card {
     display: table;
     padding: 15px 30px;
     margin: 0 auto;
@@ -30,19 +51,6 @@
     }
     &.active3 {
         @include animation--fadedown(.6);
-    }
-    &--fluid {
-        z-index: 3;
-        background-size: cover;
-        background-position: center center;
-    }
-    &--container {
-        margin: 0 auto;
-        max-width: 750px;
-        position: relative;
-        z-index: 2;
-        padding-bottom: 30px;
-        padding-top: 15px;
     }
     figure {
         position: relative;
@@ -121,7 +129,7 @@
 }
 
 //Hover effects
-.feature__box--effect {
+.svfm1__card--effect {
     margin: 0 auto;
     h2,
     img {
@@ -155,16 +163,20 @@
     }
 }
 
-.feature-offset {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
 // Displays greater than 768px
 @include breakpoint(tablet) {
-    .feature__box {
+    .svfm1__content {
+        padding-top: 40px;
+        padding-bottom: 260px;
+        max-width: 800px;
+        &--offset {
+            position: absolute;
+            bottom: -175px;
+            left: 0;
+            width: 100%;
+        }
+    }
+    .svfm1__card {
         padding: 15px;
         figure {
             max-width: 343px;
@@ -176,23 +188,16 @@
                 bottom: 21px;
             }
         }
-        &--container {
-            padding-top: 40px;
-            padding-bottom: 260px;
-            max-width: 800px;
-        }
-    }
-    .feature-offset {
-        position: absolute;
-        bottom: -175px;
-        left: 0;
-        width: 100%;
     }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-    .feature__box {
+    .svfm1__content {
+        padding-bottom: 270px;
+        max-width: 1200px;
+    }
+    .svfm1__card {
         figure {
             max-width: 343px;
             max-height: 390px;
@@ -210,12 +215,8 @@
                 position: absolute;
             }
         }
-        &--container {
-            padding-bottom: 270px;
-            max-width: 1200px;
-        }
     }
-    .feature__box--effect {
+    .svfm1__card--effect {
         p {
             padding: 10px 30px 20px;
             opacity: 0;
@@ -243,11 +244,11 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-    .feature__box {
-        &--container {
-            padding-bottom: 375px;
-            max-width: 1230px;
-        }
+    .svfm1__content {
+        padding-bottom: 375px;
+        max-width: 1230px;
+    }
+    .svfm1__card {
         figure {
             max-width: 445px;
             max-height: 480px;
@@ -259,17 +260,17 @@
             }
         }
         &:nth-child(odd) {
-            .feature__box--effect {
+            .svfm1__card--effect {
                 float: none;
             }
         }
         &:nth-child(even) {
-            .feature__box--effect {
+            .svfm1__card--effect {
                 float: none;
             }
         }
     }
-    .feature__box--effect {
+    .svfm1__card--effect {
         margin: 0 auto;
         p {
             @include transform(translate3d(0, 80px, 0));
@@ -282,7 +283,7 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-    .feature__box--effect {
+    .svfm1__card--effect {
         &:hover h2 {
             @include transform(translate3d(0, -50px, 0));
         }

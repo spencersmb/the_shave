@@ -60,7 +60,7 @@
     .text {
         display: none !Important;
     }
-    .price__sheet {
+    .tab__panel {
         padding: 1em;
         .item {
             margin: 0;
@@ -142,7 +142,7 @@
             z-index: 0;
             @include transform(translateY(80px));
         }
-        .price__sheet {
+        .tab__panel {
             padding: 2em 2em 1.5em;
             .item {
                 padding-bottom: 20px;
@@ -186,6 +186,6 @@
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
     .svfm2__wrapper {
-        padding: 140px 0px;
+        padding: 140px 0;
     }
 }

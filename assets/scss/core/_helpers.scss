@@ -78,6 +78,7 @@
 
 .tier2 {
     z-index: 2;
+    position: relative;
 }
 
 .text-hide {
@@ -217,6 +218,12 @@
     height: 0;
     border-bottom: 30px solid transparent;
     border-left: 30px solid white;
+}
+
+.footer__dots{
+    color:$primary-color;
+    text-align:center;
+    margin:75px 0 20px;
 }
 
 @include breakpoint(tablet) {
