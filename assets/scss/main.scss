@@ -15,33 +15,38 @@ Tags:
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Base Settings
-	# Vendor Frameworks
-	# Base Settings
-	# Effects
-	# Headlines
-	# Helper Classes
-	# Typography?
-	# Buttons
+	## Vendor Frameworks
+	## Base Settings
+	## Effects
+	## Headlines
+	## Helper Classes
+	## Typography?
+	## Buttons
+	## Forms
 # Modules
-	# Navigation
-	# Feature Module 1
-	# Feature Module 2
-	# Staggered Grid
-	# Contact Box
-	# Twitter Box
-	# Footer
-	# Faq
-	# Col-3 Module
-	# Products
-# Forms
-# Accessibility
-# Alignments
-# Clearings
+	## Navigation
+	## Feature Module 1
+	## Feature Module 2
+	## Staggered Grid
+	## Contact Box
+	## Twitter Box
+	## Footer
+	## Faq
+	## Col-3 Module
+	## Products
+	## Book Now Modal
+	## Blog Overview Module
+	## Barber Team Card
+	## Revolution Slider Settings
+	## Revolution Slides
 # Widgets
-# Content
-    ## Posts and pages
-	## Asides
+# Pages
+	## Contact Us
+# Blog
+	## Blog Index
+    ## Posts
 	## Comments
+
 # Infinite scroll
 # Media
 	## Captions
@@ -57,14 +62,14 @@ Tags:
 @import "../bower_components/flickity/dist/flickity.min.css";
 
 // ==========================================================================
-// Utilities
-// Config, Helpers, Mixins, fonts
+// Base Settings
+//
 // ==========================================================================
 @import "core/index";
 
 // ==========================================================================
 // Modules
-// Navigation, Header, Footer, Sliders
+//
 // ==========================================================================
 @import "modules/index";
 
@@ -73,3 +78,14 @@ Tags:
 // 
 // ==========================================================================
 @import "pages/index";
+
+// ==========================================================================
+// Blog
+//
+// ==========================================================================
+@import "blog/index";
+
+
+//TODO:Buy theme module
+//TODO:Style the map + pin icon + zoom icons
+//TODO:Add flickity css based on page

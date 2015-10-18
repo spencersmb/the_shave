@@ -1,404 +1,303 @@
 /***************************************************************************/
+
+
 /* Products ****************************************************/
+
+
 /***************************************************************************/
 
-.products{
-  padding:0 15px;
+.products {
+    padding: 0 15px;
 }
 
-.products__wrapper{
-  margin-bottom:30px;
-  cursor:pointer;
+.products__wrapper {
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
-.card__slider{
-  position: relative;
-  overflow: hidden;
-  max-width:392px;
-  width: 100%;
-  height: auto;
-  background: $white;
-  text-align: center;
-  margin:0 auto;
-
-  .image{
-    overflow:hidden;
-    img{
-      width:100%;
-      opacity: 1;
-      @include transition(opacity .3s);
-    }
-  }
-
-  &:hover{
-
-    .image{
-      img{
-      }
-    }
-
-  }
+.card__slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 392px;
+    width: 100%;
+    height: auto;
+    background: $white;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.content__wrapper{
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  width: 100%;
-  height: 100%;
-
-  .title__wrapper{
-    height:75px;
-  }
-
-  .title{
-    text-align: left;
-    position: absolute;
-    top:-75px;
-    background:#fff;
-    width:100%;
-    height:100%;
-    padding:.5em 1.5em 0;
-    @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
-    @include transform(translate3d(0,100%,0));
-
-
-    h5{
-      margin:18px 0 0;
-      font-size: 15px;
-      font-weight: 400;
-    }
-
-    h6{
-      color:#9A9A9A;
-      font-size: 15px;
-      font-weight: 400;
-      margin-top: 5px;
-    }
-
-    .angle-bottom-card{
-      @extend .angle-bottom;
-      border-left:0 solid #fff;
-      bottom:-15px;
-      border-bottom: 15px solid transparent;
-      opacity: 0;
-      left:-285px;
-      @include transition(all .5s);
-    }
-
-    .angle-top-card{
-      @extend .angle-top;
-      border-right-width:285px;
-      top:-20px;
-      border-bottom: 20px solid transparent;
-    }
-
-  }
-
-  .open{
-    position: absolute;
-    left:0;
-    display: block;
-    z-index: 1000;
-    right:0;
-    background: transparent;
-    width:100%;
-    top:0;
-    height:75px;
-    padding-left:25px;
-    @include transition(all .6s);
-
-    &::before, &::after{
-      content: '';
-      position:absolute;
-      height:2px;
-      width:9px;
-      background:$primary-color;
-      @include backface-visibility(hidden);
-      @include transition(all .3s);
-    }
-
-    &::after {
-      @include transform(translateX(0) translateY(0) rotate(-45deg));
-      top:21px;
-      right:20px;
-    }
-
-    &::before {
-      @include transform(translateX(0) translateY(0) rotate(45deg));
-      top:21px;
-      right:25px;
-    }
-  }
-
-  .bio{
-    text-align: left;
-    font-size: 14px;
-    margin-top: 25px;
-    margin-bottom:25px;
-    opacity: 0;
-    @include transition-delay(.2s);
-    @include transform(translate3d(0,225px,0));
-  }
-
-  &.active{
-
-
-    .open{
-
-      background: $primary-color;
-
-      &::before, &::after{
-        width:14px;
-        background:$white;
-      }
-
-      &::after {
-        @include transform(translateX(-5px) translateY(0) rotate(45deg));
-      }
-
-      &::before {
-        @include transform(translateX(0) translateY(0) rotate(-45deg));
-      }
-
-      h5{
-        margin:15px 0 0;
-      }
-
-    }
-
-    .title{
-      top:0;
-      @include transition-delay(.4s);
-      @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
-      @include transform(translate3d(0,0px,0));
-
-      h5, h6 {
-        color:$white;
-      }
-
-      .bio{
-        opacity: 1;
-        @include transition-delay(.3s);
-        @include transform(translate3d(0,82px,0));
-      }
-    }
-
-    .angle-bottom-card {
-      opacity: 1;
-      border-left:30px solid #fff;
-      left:0;
-    }
-
-  }
-
-}
-
-
-@include breakpoint(tablet) {
-
-  .card__slider{
-//    height: 473px;
-//    max-width:319px;
-
-    .image{
-      overflow:visible;
-      img{
-        width:100%;
-      }
-    }
-  }
-
-  .content__wrapper{
+.content__wrapper {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: relative;
-
-    .open{
-      position: absolute;
-      height:70px;
-    }
-
-    .title{
-      @include transition-delay(.2s);
-    }
-
-    .bio{
-      margin:0;
-      opacity: 0;
-      line-height: 18px;
-      @include transition-delay(.2s);
-      @include transform(translate3d(0,225px,0));
-    }
-
-    &.active{
-
-
-      .open{
-
-        background: $primary-color;
-
-        &::before, &::after{
-          width:14px;
-          background:$white;
+    width: 100%;
+    height: 100%;
+    .image {
+        overflow: hidden;
+        img {
+            width: 100%;
+            opacity: 1;
+            @include transition(opacity .3s);
         }
-
-        &::after {
-          @include transform(translateX(-5px) translateY(0) rotate(45deg));
-        }
-
-        &::before {
-          @include transform(translateX(0) translateY(0) rotate(-45deg));
-        }
-
-      }
-
-      .title{
-        top:0;
-        @include transition-delay(.4s);
+    }
+    .title__wrapper {
+        height: 75px;
+    }
+    .title {
+        text-align: left;
+        position: absolute;
+        top: -75px;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        padding: .5em 1.5em 0;
         @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
-        @include transform(translate3d(0,0px,0));
-
-        h5, h6 {
-          color:$white;
+        @include transform(translate3d(0, 100%, 0));
+        h5 {
+            margin: 18px 0 0;
+            font-size: 15px;
+            font-weight: 400;
         }
-
-        .bio{
-          opacity: 1;
-          @include transition-delay(.3s);
-          @include transform(translate3d(0,82px,0));
+        h6 {
+            color: #9A9A9A;
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 5px;
         }
-      }
-
-      .angle-bottom-card {
-        opacity: 1;
-        bottom:-15px;
-        border-bottom: 15px solid transparent;
-        border-left:30px solid #fff;
-        left:0;
-      }
-
+        .angle-bottom-card {
+            @extend .angle-bottom;
+            border-left: 0 solid #fff;
+            bottom: -15px;
+            border-bottom: 15px solid transparent;
+            opacity: 0;
+            left: -285px;
+            @include transition(all .5s);
+        }
+        .angle-top-card {
+            @extend .angle-top;
+            border-right-width: 285px;
+            top: -20px;
+            border-bottom: 20px solid transparent;
+        }
     }
-  }
-
-
-  //options for col-sm-6
-  .products{
-
-    .col-sm-6{
-
-      .content__wrapper{
-
-        .bio{
-          font-size: 16px;
-          line-height: 24px;
+    .open {
+        position: absolute;
+        left: 0;
+        display: block;
+        z-index: 1000;
+        right: 0;
+        background: transparent;
+        width: 100%;
+        top: 0;
+        height: 75px;
+        padding-left: 25px;
+        @include transition(all .6s);
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 9px;
+            background: $primary-color;
+            @include backface-visibility(hidden);
+            @include transition(all .3s);
         }
-
-      }
-
+        &::after {
+            @include transform(translateX(0) translateY(0) rotate(-45deg));
+            top: 21px;
+            right: 20px;
+        }
+        &::before {
+            @include transform(translateX(0) translateY(0) rotate(45deg));
+            top: 21px;
+            right: 25px;
+        }
     }
+    .bio {
+        text-align: left;
+        font-size: 14px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        opacity: 0;
+        @include transition-delay(.2s);
+        @include transform(translate3d(0, 225px, 0));
+    }
+    &.active {
+        .open {
+            background: $primary-color;
+            &::before,
+            &::after {
+                width: 14px;
+                background: $white;
+            }
+            &::after {
+                @include transform(translateX(-5px) translateY(0) rotate(45deg));
+            }
+            &::before {
+                @include transform(translateX(0) translateY(0) rotate(-45deg));
+            }
+            h5 {
+                margin: 15px 0 0;
+            }
+        }
+        .title {
+            top: 0;
+            @include transition-delay(.4s);
+            @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+            @include transform(translate3d(0, 0px, 0));
+            h5,
+            h6 {
+                color: $white;
+            }
+            .bio {
+                opacity: 1;
+                @include transition-delay(.3s);
+                @include transform(translate3d(0, 82px, 0));
+            }
+        }
+        .angle-bottom-card {
+            opacity: 1;
+            border-left: 30px solid #fff;
+            left: 0;
+        }
+    }
+}
 
-  }
-
+@include breakpoint(tablet) {
+    .content__wrapper {
+        .image {
+            overflow: visible;
+            img {
+                width: 100%;
+            }
+        }
+        .open {
+            position: absolute;
+            height: 70px;
+        }
+        .title {
+            @include transition-delay(.2s);
+        }
+        .bio {
+            margin: 0;
+            opacity: 0;
+            line-height: 18px;
+            @include transition-delay(.2s);
+            @include transform(translate3d(0, 225px, 0));
+        }
+        &.active {
+            .open {
+                background: $primary-color;
+                &::before,
+                &::after {
+                    width: 14px;
+                    background: $white;
+                }
+                &::after {
+                    @include transform(translateX(-5px) translateY(0) rotate(45deg));
+                }
+                &::before {
+                    @include transform(translateX(0) translateY(0) rotate(-45deg));
+                }
+            }
+            .title {
+                top: 0;
+                @include transition-delay(.4s);
+                @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+                @include transform(translate3d(0, 0px, 0));
+                h5,
+                h6 {
+                    color: $white;
+                }
+                .bio {
+                    opacity: 1;
+                    @include transition-delay(.3s);
+                    @include transform(translate3d(0, 82px, 0));
+                }
+            }
+            .angle-bottom-card {
+                opacity: 1;
+                bottom: -15px;
+                border-bottom: 15px solid transparent;
+                border-left: 30px solid #fff;
+                left: 0;
+            }
+        }
+    }
+    //options for col-sm-6
+    .products {
+        .col-sm-6 {
+            .content__wrapper {
+                .bio {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
 }
 
 @include breakpoint(laptop) {
-
-  .card__slider{
-//    height: 423px;
-//    max-width:285px;
-  }
-
-  .content__wrapper{
-
-    .open{
-      height:70px;
-    }
-
-    .bio{
-      margin-top: 0;
-      margin-bottom:25px;
-      line-height: 18px;
-    }
-  }
-
-  //options for col-sm-6
-  .products{
-
-    .col-sm-6{
-
-      .content__wrapper{
-
-        .bio{
-          font-size: 14px;
-          line-height: 24px;
+    .content__wrapper {
+        .open {
+            height: 70px;
         }
-
-      }
-
-      &.col-md-3{
-        .content__wrapper .bio{
-
-            font-size: 14px;
+        .bio {
+            margin-top: 0;
+            margin-bottom: 25px;
             line-height: 18px;
-
         }
-      }
-
     }
-
-  }
-
+    //options for col-sm-6
+    .products {
+        .col-sm-6 {
+            .content__wrapper {
+                .bio {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+            &.col-md-3 {
+                .content__wrapper .bio {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
 }
 
 @include breakpoint(desktop) {
-
-
-  .card__slider{
-    height: 100%;
-//    max-width:285px;
-  }
-
-  .content__wrapper{
-
-    .title{
-
-      h5{
-        margin:15px 0 0;
-      }
-
+    .card__slider {
+        height: 100%;
     }
-
-    .bio{
-      margin-top: 25px;
-      margin-bottom:25px;
-      line-height: 24px;
-    }
-  }
-
-  //options for col-sm-6
-  .products{
-
-    .col-sm-6{
-
-      .content__wrapper{
-
-        .bio{
-          font-size: 16px;
-          line-height: 24px;
+    .content__wrapper {
+        .title {
+            h5 {
+                margin: 15px 0 0;
+            }
         }
-
-      }
-
-      &.col-md-3{
-        .content__wrapper .bio{
-
-          font-size: 16px;
-          line-height: 24px;
-
+        .bio {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            line-height: 24px;
         }
-      }
-
     }
-
-  }
+    //options for col-sm-6
+    .products {
+        .col-sm-6 {
+            .content__wrapper {
+                .bio {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            &.col-md-3 {
+                .content__wrapper .bio {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,172 @@
+/***************************************************************************/
+/* Book Now Modal ****************************************************/
+/***************************************************************************/
+
+.modal {
+    padding: 0 15px !important;
+}
+
+.fade {
+    @include transition(opacity .15s linear);
+}
+
+.modal-backdrop {
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+    &.in {
+        opacity: .9;
+    }
+}
+
+.modal-info {
+    background-color: #d7d7d7;
+    overflow: hidden;
+}
+
+.modal-content {
+    background-color: transparent;
+    position: relative;
+    @include box-shadow(none);
+    border: 0;
+    img {
+        width: 100%;
+    }
+    .row {
+        margin: 0;
+        & > div {
+            overflow-x: hidden;
+            @include transition(all .3s .3s cubic-bezier(0.4, 0, 0.2, 1));
+            z-index: 1;
+            &:nth-last-child(1) {
+                z-index: 0;
+                opacity: 0;
+                @include transform(translateX(-100%));
+            }
+        }
+        & > div.animate-in {
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+    }
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border: none;
+        background-color: transparent;
+        z-index: 1;
+        i {
+            color: $white;
+            font-size: 28px;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.modal-bookNow {
+    position: relative;
+    background-color: #d7d7d7;
+    padding: 20px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    h3 {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 2px;
+        padding-top: 30px;
+    }
+    h5 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
+.book-list {
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 20px 0 20px;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #DCDCDC;
+        &:hover {
+            cursor: pointer;
+            background-color: #E8E8E8;
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+    a {
+        position: relative;
+        font-family: $ubuntu;
+        font-size: 16px;
+        display: block;
+    }
+    .list-content {
+        display: block;
+        position: relative;
+        text-align: center;
+        padding: 0 40px;
+    }
+    i {
+        text-align: center;
+        padding-bottom: 10px;
+        display: block;
+        font-size: 1.5em;
+    }
+    span {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+        display: none;
+    }
+    p {
+        position: relative;
+        display: block;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+// Displays greater than 768px
+@include breakpoint(tablet) {
+    .modal {
+        padding: 0 25px !important;
+    }
+    .modal-bookNow {
+        padding: 20px 20px;
+        h3 {
+            font-size: 38px;
+            padding-top: 90px;
+        }
+        h5 {
+            font-size: 1em;
+            margin-bottom: 75px;
+        }
+    }
+    .book-list {
+        i {
+            display: inline-block;
+            font-size: 2em;
+        }
+        span {
+            display: block;
+        }
+    }
+}
+
+// Displays greater than 992px
+@include breakpoint(laptop) {}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {}
+
+// Displays greater than 1600px
+@include breakpoint(desktopXL) {}
