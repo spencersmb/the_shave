@@ -56,8 +56,8 @@
             <file leaf-file-name="_gallery.scss" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/assets/scss/pages/_gallery.scss">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.15653965" vertical-offset="304" max-vertical-offset="7315">
-                    <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.66632336" vertical-offset="4255" max-vertical-offset="7638">
+                    <caret line="258" column="29" selection-start-line="258" selection-start-column="29" selection-end-line="258" selection-end-column="29" />
                     <folding />
                   </state>
                 </provider>
@@ -155,8 +155,8 @@
       <file leaf-file-name="full-gallery-test.liquid" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/full-gallery-test.liquid">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4275996" vertical-offset="4044" max-vertical-offset="5567">
-              <caret line="338" column="49" selection-start-line="338" selection-start-column="49" selection-end-line="338" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.3877551" vertical-offset="1748" max-vertical-offset="5567">
+              <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
               <folding>
                 <element signature="e#345#377#0#HTML" expanded="true" />
                 <element signature="e#882#941#0#HTML" expanded="true" />
@@ -168,7 +168,7 @@
                 <element signature="e#2554#2613#0#HTML" expanded="true" />
                 <element signature="e#2829#2888#0#HTML" expanded="true" />
                 <element signature="e#3104#3163#0#HTML" expanded="true" />
-                <element signature="e#3379#3438#0#HTML" expanded="true" />
+                <element signature="e#3383#3442#0#HTML" expanded="true" />
                 <element signature="e#3658#3717#0#HTML" expanded="true" />
                 <element signature="e#3933#3992#0#HTML" expanded="true" />
                 <element signature="e#4650#5507#0#HTML" expanded="false" />
@@ -278,8 +278,8 @@
         <option value="$PROJECT_DIR$/assets/scripts/isotop-local.js" />
         <option value="$PROJECT_DIR$/templates/gallery-5-grid.liquid" />
         <option value="$PROJECT_DIR$/templates/gallery-4-grid.liquid" />
-        <option value="$PROJECT_DIR$/assets/scss/pages/_gallery.scss" />
         <option value="$PROJECT_DIR$/templates/full-gallery.liquid" />
+        <option value="$PROJECT_DIR$/assets/scss/pages/_gallery.scss" />
         <option value="$PROJECT_DIR$/templates/full-gallery-test.liquid" />
       </list>
     </option>
@@ -1123,16 +1123,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/pages/_gallery.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15653965" vertical-offset="304" max-vertical-offset="7315">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.66632336" vertical-offset="4255" max-vertical-offset="7638">
+          <caret line="258" column="29" selection-start-line="258" selection-start-column="29" selection-end-line="258" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/full-gallery-test.liquid">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4275996" vertical-offset="4044" max-vertical-offset="5567">
-          <caret line="338" column="49" selection-start-line="338" selection-start-column="49" selection-end-line="338" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.3877551" vertical-offset="1748" max-vertical-offset="5567">
+          <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
           <folding>
             <element signature="e#345#377#0#HTML" expanded="true" />
             <element signature="e#882#941#0#HTML" expanded="true" />
@@ -1144,7 +1144,7 @@
             <element signature="e#2554#2613#0#HTML" expanded="true" />
             <element signature="e#2829#2888#0#HTML" expanded="true" />
             <element signature="e#3104#3163#0#HTML" expanded="true" />
-            <element signature="e#3379#3438#0#HTML" expanded="true" />
+            <element signature="e#3383#3442#0#HTML" expanded="true" />
             <element signature="e#3658#3717#0#HTML" expanded="true" />
             <element signature="e#3933#3992#0#HTML" expanded="true" />
             <element signature="e#4650#5507#0#HTML" expanded="false" />

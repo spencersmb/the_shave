@@ -253,13 +253,13 @@
 			}
 		}
 
-		.grid-sizer{ width: 33.3333333333%; }
+		.grid-sizer{ width: 50%; }
 		.gallery-item {
-		  width: 33.3333333333%;
-		  padding-bottom:33.3333333333%;
+		  width: 50%;
+		  padding-bottom:50%;
 		}
-		.gallery-item.width2 { width: 66.6666666666%; }
-		.gallery-item.height2 { padding-bottom: 66.6666666666%; }
+		.gallery-item.width2 { width: 100%; }
+		.gallery-item.height2 { padding-bottom: 100%; }
 	}
 
 	.gallery-3-grid, .gallery-4-grid, .gallery-5-grid{
@@ -272,25 +272,42 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
 
-
-	.full-width-gallery{
-		.gallery-item{
-			float: left;
-//		 	height: 300px;
-		 	overflow:hidden;
-			img{
-				width:100%;
-			}
-		}
-
-		.grid-sizer{ width: 25%; }
-		.gallery-item {
-		  width: 25%;
-		  padding-bottom:25%;
-		}
-		.gallery-item.width2 { width: 50%; }
-		.gallery-item.height2 { padding-bottom: 50%; }
+  .full-width-gallery{
+	.gallery-item{
+	  float: left;
+	  //		 	height: 450px;
+	  overflow:hidden;
+	  img{
+		width:100%;
+	  }
 	}
+
+	.grid-sizer{ width: 33.3333333333%; }
+	.gallery-item {
+	  width: 33.3333333333%;
+	  padding-bottom:33.3333333333%;
+	}
+	.gallery-item.width2 { width: 66.6666666666%; }
+	.gallery-item.height2 { padding-bottom: 66.6666666666%; }
+  }
+//	.full-width-gallery{
+//		.gallery-item{
+//			float: left;
+////		 	height: 300px;
+//		 	overflow:hidden;
+//			img{
+//				width:100%;
+//			}
+//		}
+//
+//		.grid-sizer{ width: 25%; }
+//		.gallery-item {
+//		  width: 25%;
+//		  padding-bottom:25%;
+//		}
+//		.gallery-item.width2 { width: 50%; }
+//		.gallery-item.height2 { padding-bottom: 50%; }
+//	}
 
   .gallery-3-grid, .gallery-4-grid, .gallery-5-grid{
 	.grid-sizer{ width: 33.33333333333%; }
@@ -308,24 +325,24 @@
 	padding-top: 60px;
   }
 
-//	.full-width-gallery{
-//		.gallery-item{
-//			float: left;
-////		 	height: 350px;
-//		 	overflow:hidden;
-//			img{
-//				width:100%;
-//			}
-//		}
-//
-//		.grid-sizer{ width: 20%; }
-//		.gallery-item {
-//		  width: 20%;
-//		  padding-bottom:20%;
-//		}
-//		.gallery-item.width2 { width: 40%; }
-//		.gallery-item.height2 { padding-bottom: 40%; }
-//	}
+	.full-width-gallery{
+		.gallery-item{
+			float: left;
+//		 	height: 350px;
+		 	overflow:hidden;
+			img{
+				width:100%;
+			}
+		}
+
+		.grid-sizer{ width: 25%; }
+		.gallery-item {
+		  width: 25%;
+		  padding-bottom:25%;
+		}
+		.gallery-item.width2 { width: 50%; }
+		.gallery-item.height2 { padding-bottom: 50%; }
+	}
 
   .gallery-3-grid, .gallery-4-grid, .gallery-5-grid {
   }
