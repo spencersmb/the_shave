@@ -1,13 +1,13 @@
 function initialize() {
 
+  var mobile = 320;
+
+  var windowWidth = window.innerWidth;
+
   var latitude = 33.9195276,
     longitude = -84.3493754;
 
   var loc1 = new google.maps.LatLng(latitude,longitude);
-
-  //google map custom marker icon - .png fallback for IE11
-  var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  var marker_url = ( is_internetExplorer11 ) ? 'assets/images/icons/cd-icon-location.png' : 'assets/images/icons/cd-icon-location.svg';
 
   //define the basic color of your map, plus a value for saturation and brightness
   var main_color = '#453600',
@@ -193,7 +193,7 @@ function initialize() {
     scrollwheel: false,
     panControl: false,
     streetViewControl: true,
-    zoomControl: false,
+    zoomControl: true,
     minZoom: 10,
     styles: styles
   };
@@ -221,112 +221,60 @@ function initialize() {
     }
   }
 
-  //Set active on load
-  function activeLoad(){
+  if(windowWidth <= mobile){
+    //no modal popup on mobile
 
-    setTimeout(function(){
-      //toggleBounce();
+  }else{
+
+    //Set active on load
+    function activeLoad(){
+
+      setTimeout(function(){
+        //toggleBounce();
+        atlanta.open(map,marker1);
+        map.panTo(loc1);
+      }, 1800);
+
+    }
+
+    function buildLat( location ){
+      var myLocation = location.G;
+      myLocation += "," + location.K;
+
+      var myLink = "https://maps.google.com?saddr=Current+Location&daddr=" + myLocation;
+
+      return myLink;
+    }
+
+    // INFO WINDOWS - POPUP MODAL
+    // Atlanta Office Details
+    var atlantaDetails = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">The Shave</h1>'+
+      '<div id="bodyContent">'+
+      '<p>1150E Hammond Drive' +
+      '<br>Atlanta, GA 30328'+
+      '<br>Suites 400, 600 & 650</p>'+
+      '<a class="tel" href="tel:333-333-3333">333-333-3333</a>'+
+      '<a class="btn book-now-btn get-directions" href="' + buildLat(loc1) + '" target="_blank">Get Directions</a>'+
+      '</div>'+
+      '</div>';
+
+
+    var atlanta = new google.maps.InfoWindow({
+      content: atlantaDetails
+    });
+
+    google.maps.event.addListener(marker1, 'click', function() {
+      toggleBounce();
       atlanta.open(map,marker1);
-      map.panTo(loc1);
-    }, 1800);
-
-  }
-
-
-  function buildLat( location ){
-    var myLocation = location.G;
-    myLocation += "," + location.K;
-
-    var myLink = "https://maps.google.com?saddr=Current+Location&daddr=" + myLocation;
-
-    return myLink;
-  }
-
-  function ZoomControl(controlDiv, map) {
-
-    // Creating divs & styles for custom zoom control
-    controlDiv.style.padding = '5px';
-
-    // Set CSS for the control wrapper
-    var controlWrapper = document.createElement('div');
-    controlWrapper.style.backgroundColor = 'transparent';
-    controlWrapper.style.borderStyle = 'solid';
-    controlWrapper.style.borderColor = 'gray';
-    controlWrapper.style.borderWidth = '0px';
-    controlWrapper.style.cursor = 'pointer';
-    controlWrapper.style.textAlign = 'center';
-    controlWrapper.style.width = '32px';
-    controlWrapper.style.height = '64px';
-    controlDiv.appendChild(controlWrapper);
-
-    // Set CSS for the zoomIn
-    var zoomInButton = document.createElement('div');
-    zoomInButton.style.width = '32px';
-    zoomInButton.style.height = '32px';
-    zoomInButton.style.marginTop = '5px';
-    zoomInButton.style.backgroundSize = 'contain';
-    /* Change this to be the .png image you want to use */
-    zoomInButton.style.backgroundImage = 'url("assets/images/icons/plus.jpg")';
-    controlWrapper.appendChild(zoomInButton);
-
-    // Set CSS for the zoomOut
-    var zoomOutButton = document.createElement('div');
-    zoomOutButton.style.width = '32px';
-    zoomOutButton.style.height = '32px';
-    zoomOutButton.style.marginTop = '2px';
-    zoomOutButton.style.backgroundSize = 'contain';
-    /* Change this to be the .png image you want to use */
-    zoomOutButton.style.backgroundImage = 'url("assets/images/icons/minus.jpg")';
-    controlWrapper.appendChild(zoomOutButton);
-
-    // Setup the click event listener - zoomIn
-    google.maps.event.addDomListener(zoomInButton, 'click', function() {
-      map.setZoom(map.getZoom() + 1);
     });
 
-    // Setup the click event listener - zoomOut
-    google.maps.event.addDomListener(zoomOutButton, 'click', function() {
-      map.setZoom(map.getZoom() - 1);
-    });
+    //atlanta.open(map,marker1);
+    activeLoad();
 
   }
-
-  // Create the DIV to hold the control and call the ZoomControl() constructor
-  // passing in this DIV.
-  var zoomControlDiv = document.createElement('div');
-  var zoomControl = new ZoomControl(zoomControlDiv, map);
-
-  zoomControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(zoomControlDiv);
-
-  // INFO WINDOWS - POPUP MODAL
-  // Atlanta Office Details
-  var atlantaDetails = '<div id="content">'+
-    '<div id="siteNotice">'+
-    '</div>'+
-    '<h1 id="firstHeading" class="firstHeading">The Shave</h1>'+
-    '<div id="bodyContent">'+
-    '<p>1150E Hammond Drive' +
-    '<br>Atlanta, GA 30328'+
-    '<br>Suites 400, 600 & 650</p>'+
-    '<a class="tel" href="tel:333-333-3333">333-333-3333</a>'+
-    '<a class="btn book-now-btn get-directions" href="' + buildLat(loc1) + '" target="_blank">Get Directions</a>'+
-    '</div>'+
-    '</div>';
-
-
-  var atlanta = new google.maps.InfoWindow({
-    content: atlantaDetails
-  });
-
-  google.maps.event.addListener(marker1, 'click', function() {
-    toggleBounce();
-    atlanta.open(map,marker1);
-
-  });
-
-  //atlanta.open(map,marker1);
-  activeLoad();
 
 }
 

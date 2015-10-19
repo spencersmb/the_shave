@@ -55,7 +55,6 @@
     <!--
 #################################
 	- Dropdown Nav -
-	Code Credit: codyhouse.co
 #################################
 -->
 <div class="cd-dropdown-wrapper">
@@ -127,7 +126,7 @@
                     <li class="see-all"><a href="gallery.html">View all gallery options</a></li>
 
                     <!-- Gallery Item 1 -->
-                    <li>
+                    <li class="plus-effect">
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
                                 <div class="plus-hover hidden-xs hidden-sm">
@@ -140,7 +139,7 @@
                     </li>
 
                     <!-- Gallery Item 2 -->
-                    <li>
+                    <li class="plus-effect">
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
                                 <div class="plus-hover hidden-xs hidden-sm">
@@ -153,7 +152,7 @@
                     </li>
 
                     <!-- Gallery Item 3 -->
-                    <li>
+                    <li class="plus-effect">
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
                                 <div class="plus-hover hidden-xs hidden-sm">
@@ -166,7 +165,7 @@
                     </li>
 
                     <!-- Gallery Item 4 -->
-                    <li>
+                    <li class="plus-effect">
                         <a class="cd-dropdown-item" href="gallery-details.html">
                             <div class="hover-container">
                                 <div class="plus-hover hidden-xs hidden-sm">
@@ -476,7 +475,7 @@
 	<section class="container-fluid white-bg">
 		<div class="row sv__container--sm">
 
-			<div class="col-xs-12 inner__header--sm full__prices">
+			<div class="col-xs-12 inner__header--sm container-push">
 				<h1>Let's talk prices.</h1>
 				<h3>Here is a full list of all our services.</h3>
 			</div>
@@ -487,13 +486,13 @@
 	<section class="container-fluid container__grey no-padding">
 		<div class="angle-bottom-top" style="color: #fff;"></div>
 		<!-- pricing tab accordian -->
-		<div class="sv__container--sm no-padding page__container">
+		<div class="sv__container--sm no-padding tier2">
 
-			<div class="full__table--wrapper">
+			<div class="tabs__wrapper">
 
-				<div class="pricing__table" role="tabpanel" data-pricing-id="pricing-toggle">
+				<div class="tabs__content" role="tabpanel" data-tab-id="tab-content-toggle">
 
-				<ul id="myTab" class="nav nav-tabs nav-justified white-tabs" role="tablist">
+				<ul id="priceTabs" class="nav nav-tabs nav-justified white-tabs" role="tablist">
 					<li id="beard-mustache" role="presentation" class="tab__control ">
 						<a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="false">
 							<div class="tab-wrapper-icons">
@@ -527,7 +526,7 @@
 					<!-- start breard and mustache -->
 					<div role="tabpanel" class="tab-pane tab-fade" id="beard" aria-labelledby="beard-tab">
 
-						<div class="header">
+						<div class="tab-header">
 							<div class="headline-container">
 								<h3>Beard & Mustache</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
@@ -535,7 +534,7 @@
 							<img class="img-responsive" src="assets/images/pricing-table/header-img.jpg" alt="">
 						</div>
 
-						<div class="price__sheet">
+						<div class="tab__panel">
 
 							<div class="item">
 								<div class="title">
@@ -576,7 +575,7 @@
 								</div>
 							</div>
 
-							<div class="price__footer">
+							<div class="footer__dots">
 								:::::
 							</div>
 
@@ -588,7 +587,7 @@
 					<!-- start shaving -->
 					<div role="tabpanel" class="tab-pane tab-fade active" id="shaving" aria-labelledby="shaving-tab">
 						
-						<div class="header">
+						<div class="tab-header">
 							<div class="headline-container">
 								<h3>Shaving</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
@@ -596,7 +595,7 @@
 							<img class="img-responsive" src="assets/images/pricing-table/header-img.jpg" alt="">
 						</div>
 
-						<div class="price__sheet">
+						<div class="tab__panel">
 
 								<div class="item">
 									<div class="item__header">
@@ -686,7 +685,7 @@
 									</div>
 								</div>
 
-								<div class="price__footer">
+								<div class="footer__dots">
 									:::::
 								</div>
 							</div>
@@ -697,7 +696,7 @@
 					<!-- start haircut -->
 					<div role="tabpanel" class="tab-pane tab-fade" id="hair-cuts" aria-labelledby="haircuts-tab">
 						
-						<div class="header">
+						<div class="tab-header">
 							<div class="headline-container">
 								<h3>Hair Cuts</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
@@ -705,7 +704,7 @@
 							<img class="img-responsive" src="assets/images/pricing-table/header-img.jpg" alt="">
 						</div>
 
-						<div class="price__sheet">
+						<div class="tab__panel">
 
 								<div class="item">
 									<div class="title">
@@ -784,7 +783,7 @@
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
 									</div>
 								</div>
-								<div class="price__footer">
+								<div class="footer__dots">
 									:::::
 								</div>
 							</div>
@@ -851,7 +850,7 @@
 
 								<!-- subtext to email -->
 								<div class="email__offers">
-									<p class="eamil__offers--connect">Get the latest updates, special offers and much more.</p>
+									<p>Get the latest updates, special offers and much more.</p>
 								</div><!-- end sub-text -->
 
 								<button type="submit" class="btn book-now-btn form-btn">Submit</button>
@@ -873,14 +872,14 @@
 
 						<!-- email -->
 						<div class="col-xs-12 col-sm-6 contact no-padding">
-							<a href="mailto:info@theshave.com">info@theshave.com</a>
-							<a href="tel:303-313-0303">303-313-0303</a>
+							<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
+							<a class="phone" href="tel:303-313-0303">303-313-0303</a>
 						</div>
 
 					</div><!-- end address container -->
 
 					<!-- social media -->
-					<div class="row social">
+					<div class="row social-footer">
 						<div class="col-xs-12 col-sm-6 col-md-8">
 							<ul>
 								<li><a href=""><i class="fa fa-facebook"></i></a></li>
@@ -889,7 +888,6 @@
 								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
 								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
 								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-
 							</ul>
 						</div><!-- end col -->
 
@@ -923,25 +921,12 @@
                             <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i>
                             </button>
 
-                            <!--<img class="img-responsive hidden-xs hidden-sm" src="assets/images/contact/modal-header.jpg" alt="Book Today"/>-->
-
                             <!-- Section 1 content -->
                             <div class="modal-bookNow" style="background-image: url(/assets/images/contact/modal-header.jpg);">
-                                <!-- <div class="modal-angle-container">
-                                    <div class="angle-top-modal" style="border-right-color: #d7d7d7;"></div>
-                                </div> -->
+
                                 <h3>Book today</h3>
                                 <h5>We are masters of the blade</h5>
-                                    <!-- <ul class="book-list">
-                                        <li>
-                                            <span><i class="fa fa-mobile"></i>Call ahead</span>
-                                            <a href="">444-444-444</a>
-                                        </li>
-                                        <li>
-                                            <span><i class="fa fa-map-marker"></i>walk-ins welcome</span>
-                                            <a href="">2020 Wilabee way, Atlanta Ga 30030</a>
-                                        </li>
-                                    </ul>-->
+
                             </div><!-- end modal content -->
                         </div><!-- end modal section 1 -->
 
@@ -1007,6 +992,7 @@
 	// ==========================================================================
     // Set tab active based on URL
     // ==========================================================================
+	//TODO: organize JS
 	$(function() {
 
 		//Filter
@@ -1030,7 +1016,7 @@
 
 			hash = val.substr(5);
 
-			$('#myTab > li').each(function(){
+			$('#priceTabs > li').each(function(){
 
 				$(this).removeClass('active');
 
@@ -1067,7 +1053,7 @@
 		}
 
 		//Change size of body depending on content in tabs
-		$('#myTab').on('click', 'li', function(){
+		$('#priceTabs').on('click', 'li', function(){
 			var galleryPageHeight = $(window).height();
 			var tabContentHeight = $('.sv__container--sm').height();
 			var updatedHeight = galleryPageHeight - tabContentHeight;

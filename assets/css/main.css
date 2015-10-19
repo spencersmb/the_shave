@@ -5731,23 +5731,45 @@ footer.loaded {
   margin: 0 auto;
 }
 
+.portfolio-container {
+  width: 100%;
+}
+
 .portfolio-isotope {
-  -webkit-transition: height 0.3s ease-out;
-  -moz-transition: height 0.3s ease-out;
-  transition: height 0.3s ease-out;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .full-width-gallery .gallery-item {
   float: none;
-  height: 500px;
   overflow: hidden;
   position: relative;
+}
+.full-width-gallery .gallery-item img {
+  width: 100%;
+}
+.full-width-gallery .grid-sizer {
+  width: 100%;
+}
+.full-width-gallery .gallery-item {
+  width: 100%;
+  padding-bottom: 100%;
+}
+.full-width-gallery .gallery-item.width2 {
+  width: 100%;
+}
+.full-width-gallery .gallery-item.height2 {
+  padding-bottom: 100%;
 }
 
 .gallery-item {
   float: none;
   overflow: hidden;
   position: relative;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .gallery-item span {
   display: block;
@@ -5837,7 +5859,7 @@ footer.loaded {
 }
 
 .gallery-item.height2 {
-  height: 500px;
+  padding-bottom: 100%;
 }
 
 .portfolioContainer {
@@ -5901,7 +5923,7 @@ footer.loaded {
   width: 100%;
 }
 .small-gallery .gallery-item.height2 {
-  height: 500px;
+  padding-bottom: 100%;
 }
 
 .gallery-3-grid .gallery-item, .gallery-4-grid .gallery-item, .gallery-5-grid .gallery-item {
@@ -5938,40 +5960,40 @@ footer.loaded {
 
   .small-gallery .gallery-item {
     float: left;
-    height: 250px;
   }
   .small-gallery .grid-sizer {
     width: 25%;
   }
   .small-gallery .gallery-item {
     width: 25%;
+    padding-bottom: 25%;
   }
   .small-gallery .gallery-item.width2 {
     width: 50%;
   }
   .small-gallery .gallery-item.height2 {
-    height: 500px;
+    padding-bottom: 50%;
   }
 
   .full-width-gallery .gallery-item {
     float: left;
-    height: 450px;
     overflow: hidden;
   }
   .full-width-gallery .gallery-item img {
     width: 100%;
   }
   .full-width-gallery .grid-sizer {
-    width: 50%;
+    width: 33.3333333333%;
   }
   .full-width-gallery .gallery-item {
-    width: 50%;
+    width: 33.3333333333%;
+    padding-bottom: 33.3333333333%;
   }
   .full-width-gallery .gallery-item.width2 {
-    width: 100%;
+    width: 66.6666666666%;
   }
   .full-width-gallery .gallery-item.height2 {
-    height: 900px;
+    padding-bottom: 66.6666666666%;
   }
 
   .gallery-3-grid .grid-sizer, .gallery-4-grid .grid-sizer, .gallery-5-grid .grid-sizer {
@@ -5984,7 +6006,6 @@ footer.loaded {
 @media only screen and (min-width: 992px) {
   .full-width-gallery .gallery-item {
     float: left;
-    height: 300px;
     overflow: hidden;
   }
   .full-width-gallery .gallery-item img {
@@ -5995,12 +6016,13 @@ footer.loaded {
   }
   .full-width-gallery .gallery-item {
     width: 25%;
+    padding-bottom: 25%;
   }
   .full-width-gallery .gallery-item.width2 {
     width: 50%;
   }
   .full-width-gallery .gallery-item.height2 {
-    height: 600px;
+    padding-bottom: 50%;
   }
 
   .gallery-3-grid .grid-sizer, .gallery-4-grid .grid-sizer, .gallery-5-grid .grid-sizer {
@@ -6015,27 +6037,6 @@ footer.loaded {
     padding-top: 60px;
   }
 
-  .full-width-gallery .gallery-item {
-    float: left;
-    height: 350px;
-    overflow: hidden;
-  }
-  .full-width-gallery .gallery-item img {
-    width: 100%;
-  }
-  .full-width-gallery .grid-sizer {
-    width: 25%;
-  }
-  .full-width-gallery .gallery-item {
-    width: 25%;
-  }
-  .full-width-gallery .gallery-item.width2 {
-    width: 50%;
-  }
-  .full-width-gallery .gallery-item.height2 {
-    height: 700px;
-  }
-
   .gallery-4-grid .grid-sizer, .gallery-5-grid .grid-sizer {
     width: 25%;
   }
@@ -6046,7 +6047,6 @@ footer.loaded {
 @media only screen and (min-width: 1600px) {
   .full-width-gallery .gallery-item {
     float: left;
-    height: 450px;
     overflow: hidden;
   }
   .full-width-gallery .gallery-item img {
@@ -6057,12 +6057,13 @@ footer.loaded {
   }
   .full-width-gallery .gallery-item {
     width: 20%;
+    padding-bottom: 20%;
   }
   .full-width-gallery .gallery-item.width2 {
     width: 40%;
   }
   .full-width-gallery .gallery-item.height2 {
-    height: 900px;
+    padding-bottom: 40%;
   }
 
   .gallery-5-grid .grid-sizer {

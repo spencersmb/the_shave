@@ -131,7 +131,6 @@
 					</a>
 				</div>
 
-
 			</div>
 
 		</div>
@@ -152,6 +151,11 @@
 
 		var doit;
 		var $fullGrid = $('.full-width-gallery');
+		var $grid = $fullGrid.isotope({
+			itemSelector: '.gallery-item',
+			isInitLayout: false,
+			masonry: { "columnWidth": ".grid-sizer" }
+		});
 
 		function WhichBrowser() {
 			//IE
@@ -220,15 +224,7 @@
 
 		}
 
-		browserJs(WhichBrowser());
-
-		var window_resizeTo = this.resizeTO;
-		function resizeIsotopeEnd() {
-			if(window_resizeTo) clearTimeout(window_resizeTo);
-			window_resizeTo = setTimeout(function() {
-				$(this).trigger('onEndResizingIsotope');
-			}, 100);
-		}
+//		browserJs(WhichBrowser());
 
 
 		var galleryItems = $('.gallery-item').get();
@@ -315,13 +311,13 @@
 		} // end portfolioIsotopeWrapper
 
 		portfolioIsotopeWrapper();
-
-		setTimeout(resizedw, 500);
+		$grid.isotope('layout');
+//		setTimeout(resizedw, 500);
 
 		function resizedw(){
-			setImageHeight();
+//			setImageHeight();
 //			reFilter('*');
-			setMinHeight();
+//			setMinHeight();
 //			$fullGrid.isotope('layout');
 			$fullGrid.isotope('layout');
 //			$fullGrid.isotope( 'on', 'layoutComplete', function() {
@@ -329,18 +325,21 @@
 //			})
 		}
 
+//		$grid.on( 'layoutComplete', function( event, filteredItems ) {
+//			console.log( 'test' );
+//		});
+
 		window.onresize = function(){
 
 				clearTimeout(doit);
-				doit = setTimeout(resizedw, 200);
 
 				//portfolio isotope
 				if ( $('.portfolio-container').size() ) {
 					portfolioIsotopeWrapper();
+					doit = setTimeout(resizedw, 500);
 				}
 
 		};
-
 
 		$('.filter-group').on( 'click', 'li', function() {
 
