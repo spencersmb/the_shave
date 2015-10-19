@@ -13,17 +13,17 @@
 		<div class="angle-bottom" style="border-left-color: #fff;"></div>
 	</section>
 
-	<section class="container__grey">
+	<section class="container__grey portfolio-container">
 
-		<div class="container-fluid sv__container--md inner-content-module">
+		<div class="container-fluid inner-content-module full-width-container">
 
 			{% include "gallery/gallery-filter" %}
 
-			<div class="col-xs-12 full-width-gallery no-padding">
+			<div class="col-xs-12 full-width-gallery no-padding portfolio-isotope">
 
 				<div class="grid-sizer"></div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -32,7 +32,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -59,7 +59,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -68,7 +68,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -86,7 +86,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -95,7 +95,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -113,7 +113,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -122,7 +122,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item hair">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -149,6 +149,7 @@
     // Full gallery Isotope
     // ==========================================================================
     $(window).load(function(){
+		var doit;
 	    var $fullGrid = $('.full-width-gallery');
 	    $fullGrid.isotope({
 	        itemSelector: ".gallery-item",
@@ -157,25 +158,135 @@
 			masonry: { "columnWidth": ".grid-sizer" }
 	    });
 
-	    $('.filter-group').on( 'click', 'li', function() {
+		var galleryItems = $('.gallery-item').get();
 
-	    	$(this).parent().children('li').each(function(){
-	    		$(this).removeClass('selected');
-	    	});
-	    	
-	    	$(this).addClass('selected');
 
-	    	var galleryPageHeight = $(window).height();
+		// trigger isotope again after images have loaded
+//		$fullGrid.imagesLoaded( function(){
+//			$fullGrid.isotope({
+//				filter: '*'
+//			});
+//		});
 
-	  		var filterValue = $(this).attr('data-filter');
+		function reFilter(item){
+			$fullGrid.isotope({
+				filter: item
+			});
+		}
 
-	  		$fullGrid.isotope({ filter: filterValue });
+		function setImageHeight(){
+			var itemWidth = $('.gallery-item.square').width();
 
-	  		var filterContentHeight = $('.full-width-gallery').height();
-	  		
-	  		var updatedHeight = galleryPageHeight - filterContentHeight;
+			for(var i=0; i < galleryItems.length; i++){
 
-	  		$('body').css('height', updatedHeight + 'px');
+				if($(galleryItems[i]).hasClass('width2') && $(galleryItems[i]).hasClass('height2')){
+					//set height as widthx2
+					var double = itemWidth * 2;
+					$(galleryItems[i]).height(double);
+				}
+				if($(galleryItems[i]).hasClass('width2') & !$(galleryItems[i]).hasClass('height2')|| $(galleryItems[i]).hasClass('square') ){
+					//set height with width
+					$(galleryItems[i]).height(itemWidth);
+				}
+			}
+
+//			$('.gallery-item').each(function(){
+//				if($(this).hasClass('width2') && $(this).hasClass('height2')){
+//					//set height as widthx2
+//					var double = itemWidth * 2;
+//					$(this).height(double);
+//				}
+//				if($(this).hasClass('width2') & !$(this).hasClass('height2')|| $(this).hasClass('square') ){
+//					//set height with width
+//					$(this).height(itemWidth);
+//				}
+//			});
+		}
+
+		function setMinHeight(){
+			var currentHeight = $('.gallery-item.square').width();
+			$('.portfolio-isotope').css('min-height', currentHeight);
+		}
+
+		function portfolioIsotopeWrapper () {
+
+			if ( $(window).innerWidth() > 1584 ) {
+				$portfolio_grid = 5;
+			} else if ( $(window).innerWidth() <= 600 ) {
+				$portfolio_grid = 1;
+			} else if ( $(window).innerWidth() <= 991 ) {
+				$portfolio_grid = 2;
+			} else if ( $(window).innerWidth() <= 1199 ) {
+				$portfolio_grid = 3;
+			} else {
+				$portfolio_grid = 4;
+			}
+
+			if ( $('.gallery-3-grid').length > 0 && $(window).innerWidth() > 1248 )
+			{
+				$portfolio_grid = 3;
+			}
+
+			if ( $('.gallery-4-grid').length > 0 && $(window).innerWidth() > 1584 )
+			{
+				$portfolio_grid = 4;
+			}
+
+			$portfolio_wrapper_width = $('.portfolio-container').width();
+
+			if ( $portfolio_wrapper_width % $portfolio_grid > 0 ) {
+				$portfolio_wrapper_width = $portfolio_wrapper_width + ( $portfolio_grid - $portfolio_wrapper_width%$portfolio_grid);
+			}
+
+			$('.portfolio-isotope').css('width',$portfolio_wrapper_width);
+
+			return $portfolio_grid;
+		} // end portfolioIsotopeWrapper
+
+		portfolioIsotopeWrapper();
+
+		setTimeout(resizedw, 500);
+
+		function resizedw(){
+			setImageHeight();
+			reFilter('*');
+			setMinHeight();
+//			$fullGrid.isotope('layout');
+		}
+
+		window.onresize = function(){
+
+				clearTimeout(doit);
+				doit = setTimeout(resizedw, 300);
+
+				//portfolio isotope
+				if ( $('.portfolio-container').size() ) {
+					portfolioIsotopeWrapper();
+				}
+
+		};
+
+
+		$('.filter-group').on( 'click', 'li', function() {
+
+
+			$(this).parent().children('li').each(function(){
+				$(this).removeClass('selected');
+			});
+
+			$(this).addClass('selected');
+
+			var galleryPageHeight = $(window).height();
+
+			var filterValue = $(this).attr('data-filter');
+
+			reFilter(filterValue);
+
+			var filterContentHeight = $('.full-width-gallery').height();
+
+			var updatedHeight = galleryPageHeight - filterContentHeight;
+
+			$('body').css('height', updatedHeight + 'px');
 		});
 
 		//Filter

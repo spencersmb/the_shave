@@ -7,6 +7,15 @@
 .grid-sizer, .gallery-item{
 	width: 100%;
 }
+
+.full-width-container{
+  margin:0 auto;
+}
+
+.portfolio-isotope{
+  @include transition(height .3s ease-out);
+}
+
 .full-width-gallery{
   .gallery-item {
 	float: none;
@@ -131,6 +140,7 @@
 	margin:0 auto;
 	padding-bottom:60px;
 	text-align:center;
+  	padding-top:40px;
 
 	.filter-item{
 		display: inline-block;
@@ -165,7 +175,6 @@
 }
 
 .gallery-3-grid, .gallery-4-grid, .gallery-5-grid{
-  border-bottom:3px solid #373737;
 
   .gallery-item{
 	float: left;
@@ -196,6 +205,10 @@
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+
+  	.filter-group{
+	  padding-top: 80px;
+	}
 	.small-gallery{
 	  .gallery-item{
 		float: left;
@@ -226,7 +239,6 @@
 	}
 
 	.gallery-3-grid, .gallery-4-grid, .gallery-5-grid{
-
 	  .grid-sizer{ width: 50%; }
 	  .gallery-item { width: 50%; }
 	}
@@ -254,7 +266,6 @@
 	}
 
   .gallery-3-grid, .gallery-4-grid, .gallery-5-grid{
-
 	.grid-sizer{ width: 33.33333333333%; }
 	.gallery-item { width: 33.33333333333%; }
 
@@ -266,6 +277,9 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+  .filter-group{
+	padding-top: 60px;
+  }
 
 	.full-width-gallery{
 		.gallery-item{
@@ -282,6 +296,12 @@
 		.gallery-item.width2 { width: 50%; }
 		.gallery-item.height2 { height: 700px; }
 	}
+
+  .gallery-3-grid, .gallery-4-grid, .gallery-5-grid {
+  }
+
+  .gallery-4-grid{
+  }
 
 	.gallery-4-grid, .gallery-5-grid{
 
@@ -310,6 +330,9 @@
 		.gallery-item.width2 { width: 40%; }
 		.gallery-item.height2 { height: 900px; }
 	}
+
+  .gallery-3-grid, .gallery-5-grid {
+  }
 
   .gallery-5-grid{
 
