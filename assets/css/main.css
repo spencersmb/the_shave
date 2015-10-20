@@ -5731,11 +5731,11 @@ footer.loaded {
   margin: 0 auto;
 }
 
-.portfolio-container {
+.gallery-container {
   width: 100%;
 }
 
-.portfolio-isotope {
+.gallery-isotope {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
