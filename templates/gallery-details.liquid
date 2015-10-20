@@ -1,5 +1,6 @@
-{% layout "layout" %}
-
+{% block styles %}
+	{{ "flickity.min.css" | asset_url | stylesheet_tag }}
+{% endblock %}
 {% block content %}
 	<!-- Intro blog -->
 	{% include "gallery/gallery-detail-intro" %}

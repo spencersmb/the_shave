@@ -1,7 +1,7 @@
 {% layout "layout" %}
 
 {% block content %}
-<!-- TODO: Comment this section out -->
+	<!-- TODO: Comment this section out -->
 	<section class="container-fluid white-bg">
 		<div class="row sv__container--sm">
 
@@ -13,13 +13,13 @@
 		<div class="angle-bottom" style="border-left-color: #fff;"></div>
 	</section>
 
-	<section class="container__grey portfolio-container">
+	<section class="container__grey gallery-container">
 
 		<div class="container-fluid inner-content-module full-width-container">
 
 			{% include "gallery/gallery-filter" %}
 
-			<div class="col-xs-12 full-width-gallery no-padding portfolio-isotope">
+			<div class="col-xs-12 full-width-gallery no-padding gallery-isotope">
 
 				<div class="grid-sizer"></div>
 
@@ -104,7 +104,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item square hair">
+				<div class="gallery-item width2 mustache">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -113,7 +113,7 @@
 					</a>
 				</div>
 
-				<div class="gallery-item width2 mustache">
+				<div class="gallery-item square hair">
 					<a href="">
 						<h5>Wild Stallion</h5>
 						<div class="subtext">Trendy, Hipster</div>
@@ -131,7 +131,6 @@
 					</a>
 				</div>
 
-
 			</div>
 
 		</div>
@@ -143,249 +142,138 @@
 
 {% endblock %}
 {% block scripts %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
-<script>
-	// ==========================================================================
-    // Full gallery Isotope
-    // ==========================================================================
-    $(window).load(function(){
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.min.js"></script>
+	<script>
+		// ==========================================================================
+		// Full gallery Isotope
+		// ==========================================================================
+		$(window).load(function(){
 
-		var doit;
-		var $fullGrid = $('.full-width-gallery');
-
-		function WhichBrowser() {
-			//IE
-			if (navigator.appName == "Microsoft Internet Explorer") {
-				return "msie";
-			}
-
-			//Chrome
-			if ((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (
-					navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.appName ==
-					"Netscape")) {
-				return "chrome";
-			}
-			//Firefox
-			if ((navigator.userAgent.toLowerCase().indexOf('firefox') > -1) && (
-					navigator.appName == "Netscape")) {
-				return "firefox";
-			}
-			//Safari
-			if ((navigator.userAgent.toLowerCase().indexOf('safari') > -1) && !(
-					navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (navigator.appName ==
-					"Netscape")) {
-
-				if(navigator.userAgent.match(/iPad/i) != null){
-					return "ipad";
-				}else{
-
-
-					return "safari";
-				}
-
-			}
-
-			//Opera
-			if (navigator.appName == "Opera") {
-				return "opera";
-			}
-		}
-
-		//IE9 fixs
-		function browserJs( browserID ){
-
-			if(browserID == "safari"){
-				$fullGrid.isotope({
-					itemSelector: ".gallery-item",
-//						 layoutMode: 'fitRows',
-					transitionDuration: '.5s',
-					percentPosition: true,
-//					isResizeBound: false,
-					isInitLayout: false,
-					masonry: { "columnWidth": ".grid-sizer" }
-				});
-
-			}else{
-				//Run if any other browser
-				$fullGrid.isotope({
-					itemSelector: ".gallery-item",
-//						 layoutMode: 'fitRows',
-					transitionDuration: '.5s',
-					percentPosition: true,
-					isResizeBound: false,
-					isInitLayout: false,
-					masonry: { "columnWidth": ".grid-sizer" }
-				});
-			}
-
-		}
-
-		browserJs(WhichBrowser());
-
-		var window_resizeTo = this.resizeTO;
-		function resizeIsotopeEnd() {
-			if(window_resizeTo) clearTimeout(window_resizeTo);
-			window_resizeTo = setTimeout(function() {
-				$(this).trigger('onEndResizingIsotope');
-			}, 100);
-		}
-
-
-		var galleryItems = $('.gallery-item').get();
-
-
-		// trigger isotope again after images have loaded
-//		$fullGrid.imagesLoaded( function(){
-//			$fullGrid.isotope('layout');
-//		});
-
-		function reFilter(item){
-			$fullGrid.isotope({
-				filter: item
+			var reIso;
+			var $fullGrid = $('.full-width-gallery');
+			var $grid = $fullGrid.isotope({
+				itemSelector: '.gallery-item',
+				isInitLayout: false,
+				masonry: { "columnWidth": ".grid-sizer" }
 			});
-		}
 
-		function setImageHeight(){
-			var itemWidth = $('.gallery-item.square').innerWidth();
+			function pxConvert(string){
+				return parseInt(string.slice(0, -2));
+			}
 
-			for(var i=0; i < galleryItems.length; i++){
+			function reFilter(item){
+				$fullGrid.isotope({
+					filter: item
+				});
+			}
 
-				if($(galleryItems[i]).hasClass('width2') && $(galleryItems[i]).hasClass('height2')){
-					//set height as widthx2
-					var double = itemWidth * 2;
-					$(galleryItems[i]).innerHeight(double);
+			function reSized(){
+				$fullGrid.isotope('layout');
+				setMinHeight();
+			}
+
+			function galleryIsotopeWrapper () {
+
+				if ( $(window).innerWidth() > 1600 ) {
+					$gallery_grid = 5;
+				} else if ( $(window).innerWidth() <= 600 ) {
+					$gallery_grid = 1;
+				} else if ( $(window).innerWidth() <= 991 ) {
+					$gallery_grid = 2;
+				} else if ( $(window).innerWidth() <= 1199 ) {
+					$gallery_grid = 3;
+				} else {
+					$gallery_grid = 4;
 				}
-				if($(galleryItems[i]).hasClass('width2') & !$(galleryItems[i]).hasClass('height2')|| $(galleryItems[i]).hasClass('square') ){
-					//set height with width
-					$(galleryItems[i]).innerHeight(itemWidth);
+
+				if ( $('.gallery-3-grid').length > 0 && $(window).innerWidth() > 1248 )
+				{
+					$gallery_grid = 3;
+				}
+
+				if ( $('.gallery-4-grid').length > 0 && $(window).innerWidth() > 1584 )
+				{
+					$gallery_grid = 4;
+				}
+
+				$gallery_wrapper_width = $('.gallery-container').width();
+
+				if ( $gallery_wrapper_width % $gallery_grid > 0 ) {
+					$gallery_wrapper_width = $gallery_wrapper_width + ( $gallery_grid - $gallery_wrapper_width%$gallery_grid);
+				}
+
+				$('.gallery-isotope').css('width',$gallery_wrapper_width);
+
+				return $gallery_grid;
+			} // end galleryIsotopeWrapper
+
+			function setMinHeight(){
+				var currentHeight = $('.gallery-item.square').css('padding-bottom');
+				currentHeight = pxConvert(currentHeight);
+
+				if(currentHeight != 0){
+					$('.gallery-isotope').css('min-height', currentHeight);
+				} else{
+					currentHeight = $('.gallery-item.square').height();
+					$('.gallery-isotope').css('min-height', currentHeight);
 				}
 			}
 
-//			$('.gallery-item').each(function(){
-//				if($(this).hasClass('width2') && $(this).hasClass('height2')){
-//					//set height as widthx2
-//					var double = itemWidth * 2;
-//					$(this).height(double);
-//				}
-//				if($(this).hasClass('width2') & !$(this).hasClass('height2')|| $(this).hasClass('square') ){
-//					//set height with width
-//					$(this).height(itemWidth);
-//				}
-//			});
-		}
-
-		function setMinHeight(){
-			var currentHeight = $('.gallery-item.square').width();
-			$('.portfolio-isotope').css('min-height', currentHeight);
-		}
-
-		function portfolioIsotopeWrapper () {
-
-			if ( $(window).innerWidth() > 1584 ) {
-				$portfolio_grid = 5;
-			} else if ( $(window).innerWidth() <= 600 ) {
-				$portfolio_grid = 1;
-			} else if ( $(window).innerWidth() <= 991 ) {
-				$portfolio_grid = 2;
-			} else if ( $(window).innerWidth() <= 1199 ) {
-				$portfolio_grid = 3;
-			} else {
-				$portfolio_grid = 4;
-			}
-
-			if ( $('.gallery-3-grid').length > 0 && $(window).innerWidth() > 1248 )
-			{
-				$portfolio_grid = 3;
-			}
-
-			if ( $('.gallery-4-grid').length > 0 && $(window).innerWidth() > 1584 )
-			{
-				$portfolio_grid = 4;
-			}
-
-			$portfolio_wrapper_width = $('.portfolio-container').width();
-
-			if ( $portfolio_wrapper_width % $portfolio_grid > 0 ) {
-				$portfolio_wrapper_width = $portfolio_wrapper_width + ( $portfolio_grid - $portfolio_wrapper_width%$portfolio_grid);
-			}
-
-			$('.portfolio-isotope').css('width',$portfolio_wrapper_width);
-
-			return $portfolio_grid;
-		} // end portfolioIsotopeWrapper
-
-		portfolioIsotopeWrapper();
-
-		setTimeout(resizedw, 500);
-
-		function resizedw(){
-			setImageHeight();
-//			reFilter('*');
-			setMinHeight();
-//			$fullGrid.isotope('layout');
+			galleryIsotopeWrapper();
 			$fullGrid.isotope('layout');
-//			$fullGrid.isotope( 'on', 'layoutComplete', function() {
-//				console.log('arrange is complete, just once')
-//			})
-		}
+			setMinHeight();
 
-		window.onresize = function(){
+			window.onresize = function(){
 
-				clearTimeout(doit);
-				doit = setTimeout(resizedw, 200);
+				clearTimeout(reIso);
 
-				//portfolio isotope
-				if ( $('.portfolio-container').size() ) {
-					portfolioIsotopeWrapper();
+				//gallery isotope
+				if ( $('.gallery-container').size() ) {
+					galleryIsotopeWrapper();
+
+					//on resize complete, readjust grid
+					reIso = setTimeout(reSized, 500);
 				}
 
-		};
+			};
 
+			//Filter on click
+			$('.filter-group').on( 'click', 'li', function() {
 
-		$('.filter-group').on( 'click', 'li', function() {
+				$this = $(this);
 
+				$this.parent().children('li').each(function(){
+					$(this).removeClass('selected');
+				});
 
-			$(this).parent().children('li').each(function(){
-				$(this).removeClass('selected');
+				$this.addClass('selected');
+
+				var filterValue = $this.attr('data-filter');
+
+				reFilter(filterValue);
+
 			});
 
-			$(this).addClass('selected');
+			//Filter URL
+			var val = window.location.hash;
+			var hash;
 
-//			var galleryPageHeight = $(window).height();
+			if(val != ''){
+				hash = val.substr(8);
 
-			var filterValue = $(this).attr('data-filter');
+				// console.log(hash)
+				reFilter(hash);
 
-			reFilter(filterValue);
+				$('.filter-group > li').each(function(){
+					var data = $(this).data('filter');
+					if( data === hash){
+						$(this).addClass('selected');
+					}
+					return;
+				});
+			}
 
-//			var filterContentHeight = $('.full-width-gallery').height();
-
-//			var updatedHeight = galleryPageHeight - filterContentHeight;
-
-//			$('body').css('height', updatedHeight + 'px');
 		});
 
-		//Filter
-		var val = window.location.hash;
-		var hash;
-		// console.log(val);
-
-		if(val != ''){
-			hash = val.substr(8);
-
-			// console.log(hash)
-			$fullGrid.isotope({ filter: hash });
-
-			$('.filter-group > li').each(function(){
-				var data = $(this).data('filter');
-				if( data === hash){
-					$(this).addClass('selected');
-				}
-				return;
-			});
-			
-		}
-
-	});
-    
-</script>
+	</script>
 {% endblock %}

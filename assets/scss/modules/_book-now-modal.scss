@@ -92,9 +92,10 @@
     margin: 0;
     li {
         padding: 20px 0 20px;
+        background-color: #DCDCDC;
         display: block;
         text-align: center;
-        border-bottom: 1px solid #DCDCDC;
+        border-bottom: 1px solid #cbcbcb;
         &:hover {
             cursor: pointer;
             background-color: #E8E8E8;
