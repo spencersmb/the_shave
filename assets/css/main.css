@@ -232,17 +232,18 @@ ul {
 }
 
 .inner__header--sm {
-  margin: 25px auto 0;
-  padding: 0 15px;
+  margin: 75px auto 25px;
+  padding: 0 25px;
 }
 .inner__header--sm h1 {
   font-size: 28px;
 }
 .inner__header--sm h3 {
   color: #959595;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 16px;
   letter-spacing: 0;
+  margin-bottom: 0;
 }
 
 .inner-content-module {
@@ -250,6 +251,13 @@ ul {
   text-align: center;
   position: relative;
   padding: 44px 0 0;
+}
+
+.content-wrapper {
+  margin: 60px auto;
+  text-align: center;
+  position: relative;
+  padding: 50px 0 0;
 }
 
 blockquote {
@@ -425,12 +433,18 @@ blockquote.reverse {
     top: 50%;
   }
 
+  .inner__header--sm {
+    margin: 110px auto 35px;
+    padding: 0 35px;
+  }
   .inner__header--sm h1 {
     font-size: 56px;
   }
   .inner__header--sm h3 {
+    margin-top: 25px;
     font-size: 21px;
     max-width: 700px;
+    margin-bottom: 15px;
   }
 
   .section__wrapper {
@@ -452,13 +466,16 @@ blockquote.reverse {
   }
 
   .inner__header--sm {
-    margin: 25px auto 25px;
+    margin: 130px auto 50px;
   }
   .inner__header--sm h1 {
     font-size: 84px;
+    line-height: 1.13;
   }
   .inner__header--sm h3 {
+    margin-top: 35px;
     font-size: 21px;
+    margin-bottom: 32px;
   }
 
   .offset__content {
@@ -499,6 +516,10 @@ blockquote.reverse {
   .section__wrapper {
     margin: 40px auto 75px;
   }
+
+  .content-wrapper {
+    padding: 100px 0 0;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .offset__content {
@@ -510,7 +531,7 @@ blockquote.reverse {
   }
 
   .container-push {
-    min-height: 375px;
+    min-height: 500px;
   }
 
   .card__feature {
@@ -619,7 +640,7 @@ blockquote.reverse {
 
 @media only screen and (min-width: 768px) {
   .parallax__background.image__content {
-    height: 350px;
+    height: 500px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -784,6 +805,7 @@ blockquote.reverse {
     max-width: none;
   }
   .headline-sm h2 {
+    margin-top: 45px;
     margin-bottom: 45px;
     font-size: 21px;
     font-weight: 700;
@@ -792,7 +814,7 @@ blockquote.reverse {
 
   .headline-md p {
     font-size: 18px;
-    line-height: 28px;
+    line-height: 24px;
   }
 
   .single-headline {
@@ -815,14 +837,7 @@ blockquote.reverse {
     padding: 0;
   }
 
-  .headline-sm h2 {
-    margin-bottom: 45px;
-    font-size: 21px;
-  }
-
   .headline-md p {
-    font-size: 18px;
-    line-height: 24px;
     max-width: 825px;
   }
 
@@ -832,7 +847,6 @@ blockquote.reverse {
     padding: 0;
   }
   .single-headline h2 {
-    margin: 0 auto 60px;
     font-size: 28px;
   }
 }
@@ -2638,10 +2652,13 @@ blockquote.reverse {
 }
 
 .has-children > a,
+.mobile-modal > a,
 .go-back a {
   position: relative;
 }
 .has-children > a::before, .has-children > a::after,
+.mobile-modal > a::before,
+.mobile-modal > a::after,
 .go-back a::before,
 .go-back a::after {
   /* arrow icon in CSS - for element with nested unordered lists */
@@ -2657,6 +2674,7 @@ blockquote.reverse {
   backface-visibility: hidden;
 }
 .has-children > a::before,
+.mobile-modal > a::before,
 .go-back a::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -2665,6 +2683,7 @@ blockquote.reverse {
   transform: rotate(45deg);
 }
 .has-children > a::after,
+.mobile-modal > a::after,
 .go-back a::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -2674,16 +2693,21 @@ blockquote.reverse {
 }
 @media only screen and (min-width: 992px) {
   .has-children > a::before, .has-children > a::after,
+  .mobile-modal > a::before,
+  .mobile-modal > a::after,
   .go-back a::before,
   .go-back a::after {
     background: #b3b3b3;
   }
 }
 
-.has-children > a {
+.has-children > a,
+.mobile-modal > a {
   padding-right: 40px;
 }
-.has-children > a::before, .has-children > a::after {
+.has-children > a::before, .has-children > a::after,
+.mobile-modal > a::before,
+.mobile-modal > a::after {
   /* arrow goes on the right side - children navigation */
   right: 20px;
   -webkit-transform-origin: 9px 50%;
@@ -2694,11 +2718,14 @@ blockquote.reverse {
 }
 
 @media only screen and (min-width: 992px) {
-  .open-to-left .cd-dropdown-content > .has-children > a {
+  .open-to-left .cd-dropdown-content > .has-children > a,
+  .open-to-left .cd-dropdown-content > .mobile-modal > a {
     padding-left: 40px;
     padding-right: 20px;
   }
-  .open-to-left .cd-dropdown-content > .has-children > a::before, .open-to-left .cd-dropdown-content > .has-children > a::after {
+  .open-to-left .cd-dropdown-content > .has-children > a::before, .open-to-left .cd-dropdown-content > .has-children > a::after,
+  .open-to-left .cd-dropdown-content > .mobile-modal > a::before,
+  .open-to-left .cd-dropdown-content > .mobile-modal > a::after {
     right: auto;
     left: 20px;
     -webkit-transform-origin: 1px 50%;
@@ -5687,7 +5714,7 @@ footer.loaded {
   }
 
   .contact__header > div {
-    padding: 50px 25px 30px 25px;
+    padding: 0 25px 30px 25px;
     margin-top: 0;
     border-top: 0;
   }
@@ -5700,7 +5727,7 @@ footer.loaded {
   }
 
   .meta-share {
-    padding: 50px 25px 30px !important;
+    padding: 0 25px 30px !important;
     border-bottom: 0;
   }
 
@@ -5729,6 +5756,7 @@ footer.loaded {
 
 .full-width-container {
   margin: 0 auto;
+  padding: 30px 0 0;
 }
 
 .gallery-isotope {
@@ -5888,7 +5916,6 @@ footer.loaded {
 
 .filter-group {
   margin: 0 auto;
-  padding-bottom: 60px;
   text-align: center;
   padding-top: 40px;
 }
@@ -6034,7 +6061,7 @@ footer.loaded {
 }
 @media only screen and (min-width: 1200px) {
   .filter-group {
-    padding-top: 60px;
+    padding-top: 10px;
   }
 
   .full-width-gallery .gallery-item {
@@ -6332,8 +6359,8 @@ footer.loaded {
 
 @media only screen and (min-width: 768px) {
   .gallery-details h4 {
-    font-size: 1.125em;
-    margin: 65px auto 30px;
+    font-size: 20px;
+    margin: 45px auto 30px;
   }
   .gallery-details .table > tbody > tr > th {
     font-size: 18px;
@@ -6971,7 +6998,6 @@ footer.loaded {
 
   .tabs__wrapper {
     top: 0;
-    margin-bottom: 80px;
   }
 
   .tab__panel .item .title {
@@ -7450,6 +7476,10 @@ footer.loaded {
   }
 }
 @media only screen and (min-width: 992px) {
+  .blog__offset {
+    margin-top: 85px;
+  }
+
   .blog__content--inner {
     padding: 90px 15px 0;
   }

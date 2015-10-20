@@ -140,7 +140,8 @@ $(function() {
 
 			var winHeight = window.innerHeight;
 
-			if (winWidth >= 769 && browserID != 'ipad') {
+			//if its not an ipad and window is larger than 769 enable skrollr
+			if (winWidth >= 992 && browserID != 'ipad') {
 
 				//check if body has skroller
 				if (document.body.id !== 'skrollr-body') {
@@ -166,7 +167,7 @@ $(function() {
 					// console.log('orientation is portrait');
 					skrollr.get().refresh();
 				}
-			} else if (winWidth < 769) {
+			} else if (winWidth < 991) {
 
 				// Destroy skrollr for screens less than 600px for mobile
 				if (document.body.id === 'skrollr-body') {

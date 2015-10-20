@@ -1003,6 +1003,7 @@
 }
 
 .has-children > a,
+.mobile-modal > a,
 .go-back a {
     position: relative;
     &::before,
@@ -1032,7 +1033,8 @@
     }
 }
 
-.has-children > a {
+.has-children > a,
+.mobile-modal > a{
     padding-right: 40px;
     &::before,
     &::after {
@@ -1043,7 +1045,8 @@
 }
 
 @include MQ(L) {
-    .open-to-left .cd-dropdown-content > .has-children > a {
+    .open-to-left .cd-dropdown-content > .has-children > a,
+    .open-to-left .cd-dropdown-content > .mobile-modal > a {
         padding-left: 40px;
         padding-right: 20px;
         &::before,

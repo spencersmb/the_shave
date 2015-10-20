@@ -1,7 +1,6 @@
 // ==========================================================================
 // Master Sass file for Blog
 
-
 .blog__inner{
   	&--feature{
 		position:relative;
@@ -301,6 +300,10 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+
+  .blog__offset{
+	margin-top:85px;
+  }
 
   .blog__content {
 
