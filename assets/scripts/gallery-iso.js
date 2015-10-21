@@ -3,8 +3,12 @@
 // ==========================================================================
 $(window).load(function(){
 
+  //Get grid to assign dynamically
+  var gridId = $('.inner-content-module').children('div').attr('id');
+  console.log(gridId);
+
   var reIso;
-  var $fullGrid = $('.gallery-5-grid');
+  var $fullGrid = $('#' + gridId);
   var $grid = $fullGrid.isotope({
     itemSelector: '.gallery-item',
     isInitLayout: false,
@@ -62,21 +66,20 @@ $(window).load(function(){
   } // end galleryIsotopeWrapper
 
   function setMinHeight(){
-    var currentHeight = $('.gallery-item.square').css('padding-bottom');
+    var currentHeight = $('.gallery-item.width1').css('padding-bottom');
     currentHeight = pxConvert(currentHeight);
 
     if(currentHeight != 0){
       $('.gallery-isotope').css('min-height', currentHeight);
     } else{
-      currentHeight = $('.gallery-item.square').height();
+      currentHeight = $('.gallery-item.width1').height();
       $('.gallery-isotope').css('min-height', currentHeight);
     }
 
   }
 
   galleryIsotopeWrapper();
-  $fullGrid.isotope('layout');
-  setMinHeight();
+  setTimeout(reSized, 500);
 
   window.onresize = function(){
 

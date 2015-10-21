@@ -234,6 +234,19 @@
     margin:75px 0 20px;
 }
 
+
+.single__image{
+    position: relative;
+    margin-bottom: 168px;
+
+    img{
+        position: absolute;
+        top:-39px;
+        left:50%;
+        @include transform(translateX(-50%));
+    }
+}
+
 @include breakpoint(tablet) {
     .angle-bottom-nav {
         top: 0px;

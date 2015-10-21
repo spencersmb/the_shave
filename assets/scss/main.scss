@@ -42,6 +42,10 @@ Tags:
 # Widgets
 # Pages
 	## Contact Us
+	## Gallery Girds
+	## Gallery Details
+	## About Us
+	## Prices
 # Blog
 	## Blog Index
     ## Posts
@@ -52,14 +56,7 @@ Tags:
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-
 @import "vendor/index";
-
-/***************************************************************************/
-/* Flickity plug-in Css ****************************************************/
-/* http://flickity.metafizzy.co/ *******************************************/
-/***************************************************************************/
-//@import "../bower_components/flickity/dist/flickity.min.css";
 
 // ==========================================================================
 // Base Settings
@@ -88,7 +85,12 @@ Tags:
 
 //TODO:Buy theme module
 //TODO:Style the map + pin icon + zoom icons
-//TODO:Add blog detail info to header on post page
-//TODO:Clean up rest of CSS
 //TODO:add 3 dots to footers of pages??
 //TODO: Design alternate scroll header with revslider plugin
+//TODO:Video option for blog
+//TODO:Video option for index background
+//TODO: change square to width1 on galleries
+//TODO: go through HTML for all files
+//TODO: add padding to blog desc for 2 up
+//TODO: Load correct images sizes for each block
+//TODO: Add heights and widths to image tags on entire site

@@ -12,6 +12,7 @@ $font-url--yellowtail: 'http://fonts.googleapis.com/css?family=Yellowtail';
 $courier   : 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 
 $heading-font: $ubuntu;
+
 $yellowtail: 'Yellowtail', cursive;
 
 
@@ -20,9 +21,7 @@ $font-weight--thin: 100;
 $font-weight--light: 300;
 $font-weight--medium: 400;
 $font-weight--bold: 700;
-$font-weight--ultra-bold: 900;
 $letter-space: 1px;
-
 
 // Descriptive Base Colors
 $white     : #fff;
@@ -40,44 +39,11 @@ $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
 
-//color palette modifiers
-//dual Nested array
-$palettes: (
-
-        grey: (
-                xx-light: lighten($grey,43%),
-                x-light: lighten($grey,35%),
-                light: lighten($grey,12%),
-                base: $grey,
-                dark: darken($grey, 8%),
-                x-dark: darken($grey, 16%)
-        ),
-        black:(
-                light: lighten($black, 10%),
-                base: $black,
-                dark: darken($black, 10%)
-        )
-
-);
-
 // BRAND COLOR
-$cinnabar          : #af8c45;//standard
-$boston-blue       : #3694b7;//success
-$curious-blue      : #2894d8;//erros
-$fiord             : #3b5568;//warnings
-$hippie-blue       : #6694b4;//info
-$elephant		   : #143446;
+$gold              : #af8c45;//standard
 
-$primary-color     : $cinnabar;
-$secondary-color   : $fiord;
-$third-color       : $boston-blue;
-$quote-color       : $curious-blue;
-$h2-blue		   : $hippie-blue;
-$link-hover        : palettes(grey);
-
+$primary-color     : $gold;
 $shadow-color      : rgba($black, .2);
-
-
 
 $brand-primary:         darken(#428bca, 6.5%) !default;
 $brand-success:         #5cb85c !default;
@@ -89,22 +55,10 @@ $brand-danger:          #d9534f !default;
 $text-color:            $dark-grey !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $primary-color !default;
 
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
-
-
-// //color map
-// //single nested array
-// $ui-colors:(
-// 	default: $fountain-blue,
-// 	success: $emerald,
-// 	error: $sunglo,
-// 	warning: $coral,
-// 	info: $purple
-// 	);
-
 
 $base__font-size: 16px; //was 16
 $base__line: 24px; //was 24
@@ -115,7 +69,7 @@ $laptop:                  992px !default;
 $tablet:                  768px !default;
 $mobile:                  480px !default;
 
-//NAV BAR STYLES
+//SCREEN SIZES FOR CODYHOUSE NAV
 $S:     $mobile;
 $M:     $tablet;
 $L:     $laptop;
@@ -133,10 +87,6 @@ $above-content: 3;
 //Header Sizes
 $header-S: 60px;
 $header-M: 80px;
-
-//Change nav slideout amount here
-$navWidth: 260px;
-$navMove: $navWidth;
 
 //Change nav slideout animation
 $pushNav: transform .4s ease-in-out, opacity 300ms, ease-out;
