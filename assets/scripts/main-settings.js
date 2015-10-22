@@ -355,11 +355,11 @@ $(function() {
 
 		function resetModalHeight(object){
 
-		//set div heights the same for laptop/desktop
-		var row = object.find('.row');
+			//set div heights the same for laptop/desktop
+			var row = object.find('.row');
 
-		row.children('modal-bookNow').css('height', "");
-	}
+			row.children('modal-bookNow').css('height', "");
+		}
 
 		// ==========================================================================
 		// Angle borders
@@ -492,6 +492,21 @@ $(function() {
 				e.preventDefault();
 				var link = $(this).children('a').attr('href');
 				window.location = link;
+			});
+
+		})();
+
+		// ==========================================================================
+		// Form focus for comments
+		// ==========================================================================
+		(function() {
+
+			$( ".comment__form" ).delegate( "*", "focus blur", function() {
+				var elem = $( this );
+				setTimeout(function() {
+					elem.prev().toggleClass('focused');
+					elem.toggleClass( "focused", elem.is( ":focus" ) );
+				}, 0 );
 			});
 
 		})();

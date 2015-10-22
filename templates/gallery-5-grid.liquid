@@ -1,165 +1,145 @@
-{% layout "layout" %}
-
+<!--
+#################################
+ 	    - Col-5 Gallery -
+#################################
+-->
 {% block content %}
-<!-- TODO: Comment this section out -->
-	<section class="container-fluid white-bg">
-		<div class="row sv__container--sm">
-
-			<div class="col-xs-12 inner__header--sm">
-				<h1>Trending Cuts</h1>
-				<h3>The latest hair cuts that made our heads turn.</h3>
-				{% include "gallery/gallery-filter" %}
-			</div>
+<section class="container-fluid white-bg">
+	<div class="row sv__container--sm">
+		<div class="col-xs-12 inner__header--sm">
+			<h1>Trending Cuts</h1>
+			<h3>The latest hair cuts that made our heads turn.</h3>
+			{% include "gallery/gallery-filter" %}
 		</div>
-	</section>
+	</div>
+</section><!-- end gallery header -->
 
-	<section class="container__white">
+<!-- gallery -->
+<section class="container__white">
 
-		<div class="container-fluid inner-content-module full-width-container gallery-container">
+	<div class="container-fluid inner-content-module full-width-container gallery-container">
 
-			<div id="gallery-5" class="col-xs-12 gallery-5-grid no-padding gallery-isotope">
+		<div id="gallery-5" class="col-xs-12 gallery-5-grid no-padding gallery-isotope">
 
-				<div class="grid-sizer"></div>
+			<div class="grid-sizer"></div>
 
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 beard">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 mustache">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
-				<div class="gallery-item width1 hair">
-					<a href="">
-
-						<h5>Wild Stallion</h5>
-						<div class="subtext">Trendy, Hipster</div>
-						<div class="overlay"></div>
-						<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
-					</a>
-				</div>
-
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
 			</div>
 
-		</div>
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
 
-	</section>
+			<div class="gallery-item width1 beard">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
 
+			<div class="gallery-item width1 mustache">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
 
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
+
+			<div class="gallery-item width1 hair">
+				<a href="">
+					<h5>Wild Stallion</h5>
+					<div class="subtext">Trendy, Hipster</div>
+					<div class="overlay"></div>
+					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
+				</a>
+			</div>
+
+		</div><!-- end isotope wrapper -->
+
+	</div><!-- end container -->
+
+</section><!-- end gallery section -->
 
 {% endblock %}
 {% block scripts %}

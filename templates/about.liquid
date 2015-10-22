@@ -1,39 +1,28 @@
 {% block content %}
-
+<!--
+#################################
+ - About Us -
+#################################
+-->
 <section class="container-fluid white-bg">
+	<!-- Header -->
 	<div class="row">
-
 		<div class="col-xs-12 inner__header--sm">
-			<h1>
-				About Us.
-			</h1>
+			<h1>About Us.</h1>
 			<h3>The Shave theme is a solid HTML/CSS3 template for sale</h3>
 		</div>
 	</div>
 	<div class="angle-bottom" style="border-left-color: #fff;"></div>
-</section>
+</section><!-- end header -->
 
+<!-- parallax background -->
 <section id="about-skr" class="sv__container--fluid">
 
-	<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url({{'about-header.jpg' | asset_url}});">
+	<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url({{'about-header.jpg' | asset_url}});"></div>
 
-	</div><!-- end parralax bg -->
+</section><!-- end parallax background -->
 
-</section>
-
-<!-- dual image
-<section class="sv__container--fluid dual-img">
-	<div class="row">
-		<div class="col-xs-6 no-padding">
-			<img class="img-responsive" src="{{'left-image.jpg' | asset_url}}" alt=""/>
-		</div>
-		<div class="col-xs-6 no-padding">
-			<img class="img-responsive" src="{{'right-image.jpg' | asset_url}}" alt=""/>
-		</div>
-	</div>
-</section>
--->
-
+<!-- About Description -->
 <section class="container-fluid grey-bg">
 
 	<div class="angle-top" style="border-right-color: #e8e8e8;"></div>
@@ -45,17 +34,12 @@
 
 			<p>Ever since I can remember, I've had passions for photography, architecture, nature and adventure. Advanced radio controlled drone technology has enabled me to take these passions to the next level. I’m <a href="http://twitter.com/jschuller" target="_blank">Jason Schuller</a>, and I’ve created <strong>Atmospheric</strong> and have assembled a small like-minded team to deliver aerial photography and videography services for you or your business including <strong>architectural</strong>, <strong>biological</strong> or <strong>geological</strong> settings. Read more about our <a href="#services">services</a> below.</p>
 
-			<!-- Todo: Inline link with services and smooth scroll -->
-
-			{% comment %}<img src="{{'about-signature.png' | asset_url}}" alt="">{% endcomment %}
-
 		</div>
-
 	</div>
 </section>
-<!-- End container -->
+<!-- end about container -->
 
-<!-- Barbers -->
+<!-- About Skill-Set -->
 <section class="container__white">
 
 	<div class="about__sell">
@@ -73,10 +57,9 @@
 		</div>
 	</div>
 
+</section><!-- end about skill-set -->
 
-
-</section>
-
+<!-- About Process Grid -->
 <section class="container-fluid no-padding white-bg">
 
 	<div class="sv__container--md process__grid">
@@ -87,6 +70,7 @@
 
 				<div class="process__grid--wrapper">
 
+					<!-- process item -->
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
 							<i class="fa fa-diamond fa-2x fa-icon"></i>
@@ -94,8 +78,9 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
-					</div>
+					</div><!-- end item -->
 
+					<!-- process item -->
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
 							<i class="fa fa-scissors fa-2x fa-icon"></i>
@@ -103,8 +88,9 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
-					</div>
+					</div><!-- end item -->
 
+					<!-- process item -->
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
 							<i class="fa fa-cogs fa-2x fa-icon"></i>
@@ -112,8 +98,9 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
-					</div>
+					</div><!-- end item -->
 
+					<!-- process item -->
 					<div class="col-xs-12 col-sm-6 process__grid--box">
 						<div class="grid__inner card-shadow-md">
 							<i class="fa fa-anchor fa-2x fa-icon"></i>
@@ -121,23 +108,22 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quibusdam autem quae atque illo neque, libero delectus v</p>
 							<i class="fa fa-chevron-down fa-down"></i>
 						</div>
-					</div>
+					</div><!-- end item -->
 
-				</div>
+				</div><!-- end wrapper -->
 
-			</div>
+			</div><!-- end col-12 -->
 
-		</div>
+		</div><!-- end row -->
 
-	</div>
+	</div><!-- end grid container -->
 
+	<!-- single image container -->
 	<div class="container-fluid no-padding single-image">
 		<img class="img-responsive" src="{{'about-bg-lg.jpg' | asset_url}}" alt=""/>
-	</div>
+	</div><!-- end single image -->
 
-</section>
-
-
+</section><!-- end process grid -->
 {% endblock %}
 
 {% block scripts %}

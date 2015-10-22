@@ -1,36 +1,16 @@
-<!-- Comments -->
-<!-- TODO: ADD 3 comments -->
-<!-- TODO: Comment out -->
+<!-- Blog Comments -->
 <section class="container-fluid no-padding light-grey-bg">
 
 	<div class="sv__container--sm">
 
-	<div class="col-xs-12 comments__wrapper">
+		<div class="col-xs-12 comments__wrapper">
 
-		<div class="comments__header">
-			<h4>3 Comments</h4>
-		</div>
+			<div class="comments__header">
+				<h4>3 Comments</h4>
+			</div>
 
-		<div class="comments">
+			<div class="comments">
 
-			<li class="comment">
-				<div class="user">
-					<div class="author__img">
-						<img src="{{ 'user.png' | asset_url }}" alt="" />
-					</div>
-					<div class="comment__text">
-						<span class="reply">
-							<a href="#"><i class="fa fa-reply"></i>reply</a>
-						</span>
-						<span class="author">Solar Juna</span>
-						<span class="date">March 31, 2015 at 8:46 PM</span>
-						<p>I’d really like to purchase this, but where can I add in the code to get 20% off? I can’t see where to put it in the checkout process</p>
-
-					</div>
-				</div>
-			</li>
-
-			<ul class="children">
 				<li class="comment">
 					<div class="user">
 						<div class="author__img">
@@ -48,6 +28,7 @@
 					</div>
 				</li>
 
+				<!-- comment reply -->
 				<ul class="children">
 					<li class="comment">
 						<div class="user">
@@ -65,38 +46,49 @@
 							</div>
 						</div>
 					</li>
-				</ul>
 
-			</ul>
+					<!-- comment reply -->
+					<ul class="children">
 
-			<!-- <div class="user">
-				<h4>Solara Juna</h4>
-				<div class="post__info">
-					<ul><li>Mens Stlye</li>
-						<li>04.10.2013</li>
-						<li>345 views</li>
-					</ul>
-				</div>
-				<div class="text">
-					<p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat.</p>
-				</div>
-				<div class="reply">
-					<a class="reply-btn" role="button" href="">Reply</a>
-				</div>
-			</div> -->
+						<li class="comment">
+							<div class="user">
+								<div class="author__img">
+									<img src="{{ 'user.png' | asset_url }}" alt="" />
+								</div>
+								<div class="comment__text">
+									<span class="reply">
+										<a href="#"><i class="fa fa-reply"></i>reply</a>
+									</span>
+									<span class="author">Solar Juna</span>
+									<span class="date">March 31, 2015 at 8:46 PM</span>
+									<p>I’d really like to purchase this, but where can I add in the code to get 20% off? I can’t see where to put it in the checkout process</p>
 
-		</div>
+								</div>
+							</div>
+						</li>
 
-	</div>
+					</ul><!-- end comment reply -->
 
-	</div>
+				</ul><!-- end comment reply -->
 
-</section>
+			</div><!-- end comments -->
+
+		</div><!-- end comments wrapper -->
+
+	</div><!-- end container -->
+
+</section> <!-- end comments -->
+
+<!-- Leave comment section -->
 <section class="container-fluid no-padding container__white">
+
 	<div class="row sv__container--sm comment__respond">
+
 		<div class="col-xs-12 comment__respond--title">
 			<h4>Leave a Comment</h4>
 		</div>
+
+		<!-- comment form -->
 		<div class="comment__form">
 			<form action="" method="post">
 				<div class="col-xs-12 col-md-6">
@@ -115,12 +107,13 @@
 					<span class="icon"><i class="fa fa-pencil "></i></span>
 					<textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
 				</div>
-
 				<div class="col-xs-12">
 					<button type="submit" class="btn book-now-btn form-btn">Submit</button>
 				</div>
 			</form>
-		</div>
-	</div>
+		</div><!-- end comment form -->
+
+	</div><!-- end container -->
+
 </section>
-<!-- End Comments -->
+<!-- End comment form -->

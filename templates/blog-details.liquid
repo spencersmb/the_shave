@@ -1,22 +1,28 @@
-{% layout "layout" %}
-
 {% block content %}
-
+<!--
+#################################
+ - About Us -
+#################################
+-->
 <section class="container-fluid white-bg no-padding">
+
 	<article>
-		<!-- Intro blog -->
+		<!-- Blog Intro -->
 		{% include "blog/blog-inner-intro" %}
+		<!-- end blog featured intro -->
 
 		<div class="container-fluid container__grey">
+
+			<!-- Blog container -->
 			<div class="sv__container--xs blog__content">
 				<div class="blog__content--inner">
 					<h3>Reinventing on-demand entertainment.</h3>
 					<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.</p>
 
 					<p>
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HpUScva_osE"></iframe>
-						</div>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HpUScva_osE"></iframe>
+					</div>
 					</p>
 
 					<p>on, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.</p>
@@ -44,35 +50,40 @@
 
 					<p>TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.TouchTunes Music Corporation, a producer of digital jukebox and entertainment products, provides digital entertainment platforms to over 70,000 venues. The company is second only to iTunes in paid music plays. TouchTunes recognized that the way we dine out is changing, and restaurant patrons are ready for a new way to access entertainment and service at their favorite venues — without sacrificing familiar favorites like the jukebox, still the gold standard for on-demand music.
 					</p>
-				</div>
+				</div><!-- end content inner -->
 
-			</div>
-				<div class="row">
-					<div class="blog-social">
-						<div class="col-xs-12">
-							<div class="social-container">
-								<a href="">
-									<i class="fa fa-facebook"></i>
-								</a>
-								<a href="">
-									<i class="fa fa-pinterest"></i>
-								</a>
-								<a href="">
-									<i class="fa fa-twitter"></i>
-								</a>
-								<a href="">
-									<i class="fa fa-instagram"></i>
-								</a>
-								<a href="">
-									<i class="fa fa-youtube"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+			</div><!-- end blog container -->
+
+			<!-- blog social bar -->
+			<div class="row">
+				<div class="blog-social">
+					<div class="col-xs-12">
+						<div class="social-container">
+							<a href="">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-pinterest"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-instagram"></i>
+							</a>
+							<a href="">
+								<i class="fa fa-youtube"></i>
+							</a>
+						</div><!-- end container -->
+					</div><!-- end col-12 -->
+				</div><!-- end social -->
+			</div><!-- end row -->
+
+
 			<div class="sv__container--sm">
 				<div class="row">
 
+					<!-- Tags -->
 					<div class="blog__content--tags">
 						<h5>Tags</h5>
 						<a href="">Fashion</a>
@@ -80,6 +91,7 @@
 						<a href="">Premium</a>
 						<a href="#">Hair Cuts</a>
 					</div>
+					<!-- end tags -->
 
 					<!-- Author -->
 					<div class="blog__content--author">
@@ -90,33 +102,22 @@
 							<h4>Jacob Holiday</h4>
 							<p>With what mingled joy  and sorrow do I take up the pen to write to my dearest friend! Oh, what a change between to-day and yesterday!</p>
 						</div>
-					</div>
+					</div> <!-- end author -->
 
+				</div><!-- end row -->
 
+			</div><!-- end container -->
 
-				</div>
-			</div>
-		</div>
+		</div><!-- end fluid container -->
 
-	</article>
-</section>
+	</article><!-- end article -->
+
+</section><!-- end section -->
 
 {% include "blog/blog-related-articles" %}
 
 {% include "blog/blog-comments" %}
 
-
-
-
 {% endblock %}
 {% block scripts %}
-	<script>
-		$( ".comment__form" ).delegate( "*", "focus blur", function() {
-			var elem = $( this );
-			setTimeout(function() {
-				elem.prev().toggleClass('focused');
-				elem.toggleClass( "focused", elem.is( ":focus" ) );
-			}, 0 );
-		});
-	</script>
 {% endblock %}
