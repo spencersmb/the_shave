@@ -155,7 +155,8 @@
 
 			}else{
 				//Run if any other browser
-				modernProductsEvent();
+//				modernProductsEvent();
+				ie9ProductsEvent();
 			}
 
 		}
@@ -200,7 +201,7 @@
 					bio.detach();
 					bio.insertBefore(contentWrapper);
 
-					var newBio = $this.find('.bio').children('p');
+					var newBio = $this.find('.bio').children('h6');
 					title.clone().insertBefore(newBio);
 				});
 			}

@@ -4688,6 +4688,7 @@ footer.loaded {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 1;
 }
 .content__wrapper .open::after {
   -webkit-transform: translateX(0) translateY(0) rotate(-45deg);
@@ -4722,8 +4723,10 @@ footer.loaded {
   -o-transform: translate3d(0, 225px, 0);
   transform: translate3d(0, 225px, 0);
 }
-.content__wrapper.active .open {
-  background: #af8c45;
+.content__wrapper .bio h6 {
+  color: #252525;
+  font-size: 18px;
+  font-weight: 500;
 }
 .content__wrapper.active .open::before, .content__wrapper.active .open::after {
   width: 14px;
@@ -4763,6 +4766,11 @@ footer.loaded {
 .content__wrapper.active .title h5,
 .content__wrapper.active .title h6 {
   color: #fff;
+  margin-top: 0;
+  padding-top: 15px;
+}
+.content__wrapper.active .title h6 {
+  padding-top: 5px;
 }
 .content__wrapper.active .title .bio {
   opacity: 1;
@@ -4780,6 +4788,9 @@ footer.loaded {
   border-left: 30px solid #fff;
   left: 0;
 }
+.content__wrapper p {
+  line-height: 1.5;
+}
 
 @media only screen and (min-width: 768px) {
   .content__wrapper .image {
@@ -4789,18 +4800,35 @@ footer.loaded {
     width: 100%;
   }
   .content__wrapper .open {
-    position: absolute;
     height: 70px;
+    position: relative;
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    -webkit-transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
   }
   .content__wrapper .title {
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     transition-delay: 0.2s;
+    padding: 0;
+  }
+  .content__wrapper .title h5, .content__wrapper .title h6 {
+    margin-top: 0;
+    padding-top: 18px;
+    padding-left: 25px;
+    z-index: 1;
+    position: relative;
+  }
+  .content__wrapper .title h6 {
+    padding-top: 5px;
   }
   .content__wrapper .bio {
-    margin: 0;
+    padding: 0 20px;
     opacity: 0;
-    line-height: 18px;
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     transition-delay: 0.2s;
@@ -4809,9 +4837,31 @@ footer.loaded {
     -ms-transform: translate3d(0, 225px, 0);
     -o-transform: translate3d(0, 225px, 0);
     transform: translate3d(0, 225px, 0);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 24px;
+  }
+  .content__wrapper .bio h6 {
+    color: #252525;
+    padding: 0;
+  }
+  .content__wrapper .product__bg {
+    background: url("https://codyhouse.co/demo/project-cards-template/img/img-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
   }
   .content__wrapper.active .open {
-    background: #af8c45;
+    height: 50%;
   }
   .content__wrapper.active .open::before, .content__wrapper.active .open::after {
     width: 14px;
@@ -4854,11 +4904,18 @@ footer.loaded {
     -webkit-transition-delay: 0.3s;
     -moz-transition-delay: 0.3s;
     transition-delay: 0.3s;
-    -webkit-transform: translate3d(0, 82px, 0);
-    -moz-transform: translate3d(0, 82px, 0);
-    -ms-transform: translate3d(0, 82px, 0);
-    -o-transform: translate3d(0, 82px, 0);
-    transform: translate3d(0, 82px, 0);
+    -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .content__wrapper.active .title .bio h6 {
+    color: #252525;
+    padding: 0;
   }
   .content__wrapper.active .angle-bottom-card {
     opacity: 1;
@@ -4867,6 +4924,9 @@ footer.loaded {
     border-left: 30px solid #fff;
     left: 0;
   }
+  .content__wrapper.active .product__bg {
+    opacity: 1;
+  }
 
   .products .col-sm-6 .content__wrapper .bio {
     font-size: 16px;
@@ -4874,13 +4934,10 @@ footer.loaded {
   }
 }
 @media only screen and (min-width: 992px) {
-  .content__wrapper .open {
-    height: 70px;
-  }
   .content__wrapper .bio {
-    margin-top: 0;
+    margin-top: 25px;
     margin-bottom: 25px;
-    line-height: 18px;
+    line-height: 24px;
   }
 
   .products .col-sm-6 .content__wrapper .bio {
@@ -4895,15 +4952,6 @@ footer.loaded {
 @media only screen and (min-width: 1200px) {
   .card__slider {
     height: 100%;
-  }
-
-  .content__wrapper .title h5 {
-    margin: 15px 0 0;
-  }
-  .content__wrapper .bio {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    line-height: 24px;
   }
 
   .products .col-sm-6 .content__wrapper .bio {

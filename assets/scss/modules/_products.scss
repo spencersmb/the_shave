@@ -1,9 +1,5 @@
 /***************************************************************************/
-
-
 /* Products ****************************************************/
-
-
 /***************************************************************************/
 
 .products {
@@ -53,6 +49,7 @@
         padding: .5em 1.5em 0;
         @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
         @include transform(translate3d(0, 100%, 0));
+
         h5 {
             margin: 18px 0 0;
             font-size: 15px;
@@ -101,6 +98,7 @@
             background: $primary-color;
             @include backface-visibility(hidden);
             @include transition(all .3s);
+            z-index: 1;
         }
         &::after {
             @include transform(translateX(0) translateY(0) rotate(-45deg));
@@ -121,10 +119,14 @@
         opacity: 0;
         @include transition-delay(.2s);
         @include transform(translate3d(0, 225px, 0));
+        h6{
+            color:$black;
+            font-size:18px;
+            font-weight: 500;
+        }
     }
     &.active {
         .open {
-            background: $primary-color;
             &::before,
             &::after {
                 width: 14px;
@@ -148,6 +150,11 @@
             h5,
             h6 {
                 color: $white;
+                margin-top:0;
+                padding-top: 15px;
+            }
+            h6{
+                padding-top:5px;
             }
             .bio {
                 opacity: 1;
@@ -161,6 +168,10 @@
             left: 0;
         }
     }
+    p{
+        line-height: 1.5;
+    }
+
 }
 
 @include breakpoint(tablet) {
@@ -172,22 +183,58 @@
             }
         }
         .open {
-            position: absolute;
             height: 70px;
+            position: relative;
+            @include transition-delay(.4s);
+            @include transition(height .3s cubic-bezier(0.4, 0, 0.2, 1));
+            padding:0;
         }
         .title {
             @include transition-delay(.2s);
+            padding:0;
+
+            h5,h6{
+                margin-top:0;
+                padding-top: 18px;
+                padding-left:25px;
+                z-index: 1;
+                position: relative;
+            }
+
+            h6{
+                padding-top: 5px;
+            }
         }
         .bio {
-            margin: 0;
+            padding:0 20px;
             opacity: 0;
-            line-height: 18px;
             @include transition-delay(.2s);
             @include transform(translate3d(0, 225px, 0));
+            margin-top: 25px;
+            margin-bottom: 25px;
+            line-height: 24px;
+
+            h6{
+                color:$black;
+                padding:0;
+            }
+        }
+        .product__bg{
+            background:url('https://codyhouse.co/demo/project-cards-template/img/img-2.jpg');
+            background-size:cover;
+            background-position: center center;
+            position: absolute;
+            height:100%;
+            width:100%;
+            top:0;
+            left:0;
+            z-index: 0;
+            opacity: 0;
+            @include transition(opacity .2s ease-out);
         }
         &.active {
             .open {
-                background: $primary-color;
+                height:50%;
                 &::before,
                 &::after {
                     width: 14px;
@@ -212,7 +259,12 @@
                 .bio {
                     opacity: 1;
                     @include transition-delay(.3s);
-                    @include transform(translate3d(0, 82px, 0));
+                    @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
+                    @include transform(translate3d(0, 0, 0));
+                    h6{
+                        color:$black;
+                        padding:0;
+                    }
                 }
             }
             .angle-bottom-card {
@@ -221,6 +273,9 @@
                 border-bottom: 15px solid transparent;
                 border-left: 30px solid #fff;
                 left: 0;
+            }
+            .product__bg{
+               opacity: 1;
             }
         }
     }
@@ -240,13 +295,18 @@
 @include breakpoint(laptop) {
     .content__wrapper {
         .open {
-            height: 70px;
+
         }
         .bio {
-            margin-top: 0;
+            margin-top: 25px;
             margin-bottom: 25px;
-            line-height: 18px;
+            line-height: 24px;
         }
+
+        &.active{
+
+        }
+
     }
     //options for col-sm-6
     .products {
@@ -271,18 +331,7 @@
     .card__slider {
         height: 100%;
     }
-    .content__wrapper {
-        .title {
-            h5 {
-                margin: 15px 0 0;
-            }
-        }
-        .bio {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            line-height: 24px;
-        }
-    }
+
     //options for col-sm-6
     .products {
         .col-sm-6 {
