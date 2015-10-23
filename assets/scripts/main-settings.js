@@ -425,6 +425,7 @@ $(function() {
 				$('.angle-top-price').css('border-right-width', sheetWidth);
 			}
 
+
 		}
 
 		// ==========================================================================
@@ -522,6 +523,6 @@ $(function() {
 		shavePreloader();
 
 		//angled boarders
-		setAngleWidth(windowSize);
+		//setAngleWidth(windowSize);
 
 });

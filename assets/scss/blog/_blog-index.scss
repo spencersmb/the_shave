@@ -1,265 +1,159 @@
 /***************************************************************************/
 /* Blog Index ****************************************************/
 /***************************************************************************/
+.post-thumb{
+  height:300px;
+  position: relative;
+  overflow: hidden;
+  background-color: $black;
 
-.dual-list {
-    display: table;
+
+  > a{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    @include transition(all .3s);
+  }
+
+  &-img{
+    position: absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .7;
+    @include transition(opacity .3s);
+  }
+
+  &-content{
+    position: absolute;
+    top:50%;
+    @include transform(translateY(-50%));
+    left:30px;
+    margin-right:45px;
+    color:$white;
+  }
+
+  &-meta{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    a{
+      color:$black;
+      font-size: 16px;
+      @include transition(all .3s);
+    }
+  }
+
+  &-category{
+    margin-right:25px;
     position: relative;
-    clear: both;
+    display: table;
+
+    a{
+      position: relative;
+      display: block;
+//      border:3px solid $white;
+      text-align: center;
+      background: $white;
+      padding:5px 10px;
+//      left:-8px;
+
+      &:hover{
+        background-color: $primary-color;
+        border-color:$primary-color;
+      }
+    }
+  }
+
+  &-time{
+    display: block;
+    font-size: 16px;
+    margin-top:5px;
+    i{
+      margin-right:10px;
+    }
+  }
 }
 
-.blog-container {
-    padding: 0;
-    margin: 0 auto;
+.angle-top-post {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  top: -9px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 30px solid white;
 }
 
-.blog-post {
-    margin: 0 auto 40px;
-    padding: 0;
-    .post-image {
-        img {
-            width: 100%;
-        }
-    }
-    &.featured-post {
-        margin-bottom: 15px;
-        overflow: hidden;
-        .post-image {
-            height: 227px;
-            position: relative;
-            display: block;
-            img {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                width: 538px;
-                transform: translateX(-50%);
-                max-width: none;
-            }
-        }
-        .blog-desc {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        &:nth-child(odd) {
-            padding-right: 0;
-        }
-        //first post
-        &:nth-child(1) {
-            margin-top: 70px;
-        }
-    }
-    .blog-more {
-        margin: 30px 0;
-    }
-    .content {
-        position: relative;
-        width: 100%;
-        display: table;
-    }
-    .post-info {
-        font-size: 14px;
-        display: table;
-        width: 100%;
-        margin-bottom: 15px;
-        a {
-            display: inline-block;
-            font-family: $ubuntu;
-            i {
-                color: $black;
-                @include transition(all .3s);
-            }
-            &:hover {
-                i {
-                    color: $primary-color;
-                }
-            }
-        }
-        .comments {
-            i {
-                margin-right: 10px;
-            }
-        }
-        .views {
-            text-align: right;
-            i {
-                margin-left: 10px;
-            }
-        }
-    } //end post info
-    .post-text {
-        max-width: 800px;
-        width: 100%;
-        margin: 20px auto 0;
-        padding: 0 20px;
-        .post-tags {
-            text-align: center;
-            display: none;
-            margin: 0 0 20px;
-            a {
-                color: $primary-color;
-                margin: 0 15px 10px;
-                border-bottom: 2px solid $primary-color;
-                display: inline-block;
-                font-family: $ubuntu;
-                text-transform: uppercase;
-                font-size: 13px;
-            }
-        }
-        .date {
-            margin: 20px 0 5px;
-            display: table;
-            font-size: 14px;
-            width: 100%;
-            padding: 0;
-            text-align: center;
-            span {
-                color: $primary-color;
-                font-weight: 700;
-                margin-right: 2px;
-                text-transform: uppercase;
-            }
-            a {
-                display: inline-block;
-                padding: 0;
-                font-weight: 300;
-                font-family: $ubuntu;
-                color: $black;
-            }
-        }
-        h3 {
-            text-align: center;
-            margin-top: 0;
-            font-size: 28px;
-            line-height: 34px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: none;
-        }
-        p {
-            text-align: center;
-            font-size: 18px;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        &.featured-text {
-            padding: 0 20px;
-            max-width: none;
-            margin: 0;
-        }
-    } //end post-text
-    .social {
-        border: 0;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        a {
-            padding: 0 5px;
-        }
-    }
-} //End blog post class
+.angle-bottom-post {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  bottom: 60px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-left: 30px solid white;
+}
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
-    .blog-container {
-        padding: 0 30px;
+  .post-thumb {
+    height: 500px;
+
+    &:hover{
+
+      .post-thumb-img{
+        opacity: .4;
+      }
     }
-    .dual-list {
-        margin-top: 40px;
+
+    &-content{
+      margin-right:35px;
     }
-    .blog-post {
-        margin: 0 auto 20px;
-        &:nth-child(odd) {
-            padding-right: 15px;
-        }
-        &:nth-child(even) {
-            padding-left: 15px;
-        }
-        &.featured-post {
-            margin-bottom: 50px;
-            .post-image {
-                height: auto;
-                position: relative;
-                display: block;
-                img {
-                    position: relative;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    transform: translateX(0);
-                    max-width: 100%;
-                }
-            }
-        }
-        .post-text {
-            &.featured-text {
-                border-bottom: 1px solid #909090;
-            }
-        }
+
+    &-category{
+      float:left;
+      display: inline-block;
+      a{
+        display: inline-block;
+      }
     }
-    .comment__form {
-        .form-btn {
-            width: inherit;
-            max-width: 150px;
-        }
+    &-time {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 16px;
+      position:relative;
     }
+    &-meta{
+      display: block;
+    }
+  }
+
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-    .blog-post {
-        &.featured-post {
-            &:nth-child(1) {
-                margin-top: 150px;
-            }
-            .blog-more {
-                margin-top: 40px;
-            }
-        }
-        .post-info {
-            &.featured-info {
-                margin: 30px 0 10px;
-                display: table;
-            }
-        }
-        .post-text {
-            margin: 15px auto 0;
-            padding: 0;
-            .post-tags {
-                text-align: center;
-                margin: 0 0 20px;
-                display: block;
-                a {
-                    margin: 0 15px;
-                }
-            }
-            .date {
-                margin: 0 0 5px;
-            }
-            h3 {
-                text-align: center;
-                font-size: 32px;
-                line-height: 40px;
-                margin-bottom: 15px;
-                letter-spacing: 2px;
-            }
-            p {
-                margin-top: 10px;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-            &.featured-text {
-                padding: 0;
-                .date {
-                    margin: 40px 0 5px;
-                }
-            }
-        }
-    }
+
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {}
 
 // Displays greater than 1600px
-@include breakpoint(desktopXL) {}
+@include breakpoint(desktopXL) {
+  .post-thumb {
+    height: 600px;
+  }
+}

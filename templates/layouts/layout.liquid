@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
 
         <!-- Styles -->
@@ -23,12 +24,9 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         {{ "main.css" | asset_url | stylesheet_tag }}
-        {{ "shave-ie9-styles.css" | asset_url | stylesheet_tag }}
         <!--[if IE 9]>
         {{ "shave-ie9-styles.css" | asset_url | stylesheet_tag }}
         <![endif]-->
-
-        <!-- Style block allowing child pages to inject their own styles -->
 
         {{ "jquery.min.js" | asset_url | script_tag }}
         {{ "modernizr.js" | asset_url | script_tag }}
