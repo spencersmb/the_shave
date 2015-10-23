@@ -85,7 +85,7 @@
         font-weight: 600;
         text-transform: none;
         margin-top: 0;
-        margin-bottom: 25px;
+        margin-bottom: 0;
         color: $primary-color;
         font-family: $courier;
     }
@@ -191,22 +191,6 @@
     }
 }
 
-.barber {
-    max-width: 200px;
-    text-align: center;
-    margin: 0 auto;
-    margin-right: 80px;
-    float: left;
-    padding-bottom: 40px;
-    img {
-        max-width: 150px;
-        max-height: 150px;
-    }
-    h5 {
-        text-align: center;
-    }
-}
-
 .gallery-details {
     max-width: 700px;
     width: 100%;
@@ -271,6 +255,7 @@
         }
         h4 {
             font-size: 36px;
+            margin-bottom: 25px;
         }
     }
     .gallery__controls {

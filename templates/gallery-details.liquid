@@ -2,141 +2,54 @@
 	{{ "flickity.min.css" | asset_url | stylesheet_tag }}
 {% endblock %}
 {% block content %}
-	<!-- Intro blog -->
-	{% include "gallery/gallery-detail-intro" %}
+<!--
+#################################
+	   - Gallery-Details -
+#################################
+-->
+{% include "gallery/gallery-detail-intro" %}
 
-	<div class="container-fluid container__grey">
-		<div class="container sv__container--md ">
+<!-- Gallery Stats/Content -->
+<section class="container-fluid container__grey">
+	<div class="container sv__container--md ">
 
-			{% comment %}Stats block{% endcomment %}
-			<div class="row stats__container">
+		<div class="stats__container">
 
-				{% comment %}Hair desc{% endcomment %}
-				<div class="col-xs-12 no-padding">
-
-					<div class="stats__details">
-						<h3>The Stallion Style</h3>
-						<div id="gallery-controls" class="gallery__controls">
-							<div class="col-xs-12 col-sm-3 left">
-								<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
-							</div>
-							<div class="col-xs-12 col-sm-3 right">
-								<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
-							</div>
+				<div class="stats__details">
+					<h3>The Stallion Style</h3>
+					<h4>$45.00</h4>
+					<div id="gallery-controls" class="gallery__controls">
+						<div class="col-xs-12 col-sm-3 left">
+							<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
 						</div>
-						<h4>$45.00</h4>
-						<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
-						<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
-					</div>
-
-					<div class="style__btn">
-						<div class="btn-group" role="group" aria-label="Styles">
-							<button type="button" class="btn book-now-btn">Get this style</button>
-							<button type="button" class="btn book-now-btn">View All styles</button>
+						<div class="col-xs-12 col-sm-3 right">
+							<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
 						</div>
 					</div>
-
+					<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
+					<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
 				</div>
 
-			</div>
-
-		</div> <!-- end container -->
-
-	</div>
-
-	{% include "gallery/gallery-product" %}
-
-	{% include "gallery/gallery-social" %}
-
-	{% include "gallery/gallery-details" %}
-
-	<!-- Barbers -->
-	<section class="container__white">
-
-		<!-- <div class="angle-top" style="border-right-color: #e8e8e8;"></div> -->
-
-		<div class="container sv__container--md inner-content-module">
-
-			<div class="barbers">
-
-				<div class="headline-sm">
-					<h2>Book with these barbers</h2>
+				<div class="style__btn">
+					<div class="btn-group" role="group" aria-label="Styles">
+						<button type="button" class="btn book-now-btn">Get this style</button>
+						<button type="button" class="btn book-now-btn">View All styles</button>
+					</div>
 				</div>
 
-				<div class="section__wrapper">
+		</div><!-- end stats container -->
 
-					<div class="col-xs-12 col-sm-4 col-md-4 barber__wrapper">
-						<div class="barber__box card-shadow-md">
+	</div> <!-- end container -->
 
-							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
-								<div class="overlay text-center">
-									<h3 class="white">I'm a master of the blade</h3>
-									<!-- <img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>-->
-								</div>
-								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
-							</div>
-							<img class="avatar" src="{{'avatar-1.jpg' | asset_url}}" alt=""/>
-							<div class="title">
-								<h4>Spencer Bigum</h4>
-								<h5>Owner & Master Barber</h5>
-							</div>
-							<a class="btn book-now-btn" href="">Book now</a>
+</section><!-- end section -->
 
-						</div>
+{% include "gallery/gallery-product" %}
 
-					</div>
+{% include "gallery/gallery-social" %}
 
-					<div class="col-xs-12 col-sm-4 col-md-4 barber__wrapper">
-						<div class="barber__box card-shadow-md">
+{% include "gallery/gallery-details" %}
 
-							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
-								<div class="overlay text-center">
-									<h3 class="white">Cutting hair is a passion of mine since I was 9.</h3>
-									<!-- <img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>-->
-								</div>
-								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
-							</div>
-							<img class="avatar" src="{{'avatar-1.jpg' | asset_url}}" alt=""/>
-							<div class="title">
-								<h4>Spencer Bigum</h4>
-								<h5>Owner & Master Barber</h5>
-							</div>
-							<a class="btn book-now-btn" href="">Book now</a>
-
-						</div>
-
-					</div>
-
-					<div class="col-xs-12 col-sm-4 col-md-4 barber__wrapper">
-						<div class="barber__box card-shadow-md">
-
-							<div class="barber__image" style="background-image: url({{'barber-cover-1.jpg' | asset_url}});">
-								<div class="overlay text-center">
-									<h3 class="white">I love the true craftsmenship of the retro barber and want to bring that experience to a new generation.</h3>
-									<!-- <img class="img-responsive" src="{{'barber-icon.png' | asset_url}}" alt=""/>-->
-								</div>
-								<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
-							</div>
-							<img class="avatar" src="{{'avatar-1.jpg' | asset_url}}" alt=""/>
-							<div class="title">
-								<h4>Spencer Bigum</h4>
-								<h5>Owner & Master Barber</h5>
-							</div>
-							<a class="btn book-now-btn" href="">Book now</a>
-
-						</div>
-
-					</div>
-
-				</div>
-				<!-- End row -->
-
-			</div>
-
-		</div>
-		<!-- End price module container-->
-	</section>
-
+{% include "service-shave/suggested-barber" %}
 
 {% endblock %}
 {% block scripts %}

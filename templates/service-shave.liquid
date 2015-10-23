@@ -1,93 +1,93 @@
-{% layout "layout" %}
-
 {% block content %}
-	<!--
-    #################################
-        - Service Section -
-    #################################
-    -->
-	{% include "service-shave/service-intro-shave" %}
+<!--
+#################################
+	- Service Section -
+#################################
+-->
+{% include "service-shave/service-intro-shave" %}
 
-	<section id="service2-skr" class="sv__container--fluid">
+<section id="service2-skr" class="sv__container--fluid">
 
-		<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url({{'service-bg-lg.jpg' | asset_url}});">
+	<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url({{'service-bg-lg.jpg' | asset_url}});">
 
-		</div><!-- end parralax bg -->
+	</div>
 
-	</section>
+</section><!-- end parralax bg -->
 
-	<!-- Col-3 Service Section -->
-	<section id="content" class="container-fluid grey-bg reverse-angle">
-		<div class="angle-top" style="border-right-color: #e8e8e8;"></div>
+<!-- Col-3 Service Section -->
+<section id="content" class="container-fluid grey-bg reverse-angle">
+	<div class="angle-top" style="border-right-color: #e8e8e8;"></div>
 
-		<div class="row sv__container--md col3__module">
+	<div class="row sv__container--md col3__module">
 
-			<div>
-				<img class="img-responsive" src="{{'3-blades.jpg' | asset_url}}" alt="">
-			</div>
+		<div>
+			<img class="img-responsive" src="{{'3-blades.jpg' | asset_url}}" alt="">
+		</div>
 
-			<!-- Icon grid container -->
-			<div class="col3__container">
+		<!-- Icon grid container -->
+		<div class="col3__container">
 
-				<div class="row wrapper">
+			<div class="row wrapper">
 
-					<div class="col-sm-12 col-md-4">
-						<div class="col3__item">
-							<div class="col3__item--content">
-								<h5>Great Features</h5>
-								<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-12 col-md-4">
-						<div class="col3__item">
-							<div class="col3__item--content">
-								<h5>Unique Page design</h5>
-								<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-12 col-md-4">
-						<div class="col3__item">
-							<div class="col3__item--content">
-								<h5>tons of options</h5>
-								<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
-							</div>
+				<!-- item -->
+				<div class="col-sm-12 col-md-4">
+					<div class="col3__item">
+						<div class="col3__item--content">
+							<h5>Great Features</h5>
+							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
 						</div>
 					</div>
 				</div>
 
-			</div>
+				<!-- item -->
+				<div class="col-sm-12 col-md-4">
+					<div class="col3__item">
+						<div class="col3__item--content">
+							<h5>Unique Page design</h5>
+							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div>
+					</div>
+				</div>
 
-		</div>
-		<!-- <div class="angle-bottom" style="border-left-color: #e8e8e8;"></div> -->
-	</section>
-	<!-- End service section -->
+				<!-- item -->
+				<div class="col-sm-12 col-md-4">
+					<div class="col3__item">
+						<div class="col3__item--content">
+							<h5>tons of options</h5>
+							<p>We opened our boutique to provide men with top-notch grooming through traditional barber practices.</p>
+						</div>
+					</div>
+				</div>
 
-	<!-- Products Section -->
-	{% include "service-shave/products" %}
-	<!-- End Products Section -->
+			</div><!-- end row -->
 
-	<!-- Start Style full bleed -->
-	{% include "service-shave/service-parallax" %}
-	<!-- End Style full bleed -->
+		</div><!-- end grid container -->
 
-	<!-- Start Price module -->
-	{% include "service-shave/price-boxs-shave" %}
-	<!-- End Section price module -->
+	</div><!-- end col3 module -->
 
-	<!-- Start bio module -->
-	{% include "service-shave/suggested-barber" %}
-	<!-- End bio module -->
+</section><!-- End service section -->
 
-	<!-- FAQ -->
-	{% include "service-shave/faq-shave" %}
-	<!-- End Faq -->
+<!-- Products Section -->
+{% include "service-shave/products" %}
+<!-- End Products Section -->
 
-	{% include "feature-module-2" %}
+<!-- Start Style full bleed -->
+{% include "service-shave/service-parallax" %}
+<!-- End Style full bleed -->
 
+<!-- Start Price module -->
+{% include "service-shave/price-boxs-shave" %}
+<!-- End Section price module -->
+
+<!-- Start bio module -->
+{% include "service-shave/suggested-barber" %}
+<!-- End bio module -->
+
+<!-- FAQ -->
+{% include "service-shave/faq-shave" %}
+<!-- End Faq -->
+
+{% include "feature-module-2" %}
 
 {% endblock %}
 

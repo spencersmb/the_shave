@@ -1,28 +1,34 @@
-{% layout "layout" %}
-
 {% block content %}
-<!-- TODO: Comment this section out -->
-	<section class="container-fluid white-bg container-push">
-		<div class="row sv__container--sm">
+<!--
+#################################
+	       - Prices -
+#################################
+-->
+<section class="container-fluid white-bg container-push">
+	<div class="row sv__container--sm">
 
-			<div class="col-xs-12 inner__header--sm">
-				<h1>Let's talk prices.</h1>
-				<h3>Here is a full list of all our services.</h3>
-			</div>
+		<div class="col-xs-12 inner__header--sm">
+			<h1>Let's talk prices.</h1>
+			<h3>Here is a full list of all our services.</h3>
 		</div>
 
-	</section>
+	</div>
 
-	<section class="container-fluid container__grey no-padding">
-		<div class="angle-bottom-top" style="color: #fff;"></div>
-		<!-- pricing tab accordian -->
-		<div class="sv__container--sm no-padding tier2">
+</section><!-- end header -->
 
-			<div class="tabs__wrapper">
+<!-- price section -->
+<section class="container-fluid container__grey no-padding">
+	<div class="angle-bottom-top" style="color: #fff;"></div>
 
-				<div class="tabs__content" role="tabpanel" data-tab-id="tab-content-toggle">
+	<!-- pricing tab accordion -->
+	<div class="sv__container--sm no-padding tier2">
+
+		<div class="tabs__wrapper">
+
+			<div class="tabs__content" role="tabpanel" data-tab-id="tab-content-toggle">
 
 				<ul id="priceTabs" class="nav nav-tabs nav-justified white-tabs" role="tablist">
+
 					<li id="beard-mustache" role="presentation" class="tab__control ">
 						<a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="false">
 							<div class="tab-wrapper-icons">
@@ -48,14 +54,16 @@
 							</div>
 						</a>
 					</li>
-			    </ul>
 
-				  	<!-- tab content -->
-					<div id="myTabContent" class="tab-content">
+				</ul>
+
+				<!-- tab content -->
+				<div id="myTabContent" class="tab-content">
 
 					<!-- start breard and mustache -->
 					<div role="tabpanel" class="tab-pane tab-fade" id="beard" aria-labelledby="beard-tab">
 
+						<!-- tab header -->
 						<div class="tab-header">
 							<div class="headline-container">
 								<h3>Beard & Mustache</h3>
@@ -64,6 +72,7 @@
 							<img class="img-responsive" src="{{ 'header-img.jpg' | asset_url}}" alt="">
 						</div>
 
+						<!-- tab panel -->
 						<div class="tab__panel">
 
 							<div class="item">
@@ -105,18 +114,15 @@
 								</div>
 							</div>
 
-							<div class="footer__dots">
-								:::::
-							</div>
+							<div class="footer__dots">:::::</div>
 
-						</div>
+						</div><!-- end tab panel -->
 
-					</div>
-				  	<!-- end breard and mustache -->
+					</div><!-- end breard and mustache -->
 
 					<!-- start shaving -->
 					<div role="tabpanel" class="tab-pane tab-fade active" id="shaving" aria-labelledby="shaving-tab">
-						
+
 						<div class="tab-header">
 							<div class="headline-container">
 								<h3>Shaving</h3>
@@ -127,105 +133,104 @@
 
 						<div class="tab__panel">
 
-								<div class="item">
-									<div class="item__header">
-										<div class="title">
-											<h3>Classic Shave</h3>
-										</div>
-										<div class="price">
-											<p>$35</p>
-										</div>
+							<div class="item">
+								<div class="item__header">
+									<div class="title">
+										<h3>Classic Shave</h3>
 									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+									<div class="price">
+										<p>$35</p>
 									</div>
 								</div>
 
-								<div class="item">
-									<div class="item__header">
-										<div class="title">
-											<h3>Full Shave with a longer title example</h3>
-										</div>
-										<div class="price">
-											<p>$55</p>
-										</div>
-									</div>
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="item__header">
-										<div class="title">
-											<h3>Head Shave</h3>
-										</div>
-										<div class="price">
-											<p>$35</p>
-										</div>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="item__header">
-										<div class="title">
-											<h3>Classic Shave</h3>
-										</div>
-										<div class="price">
-											<p>$35</p>
-										</div>
-									</div>
-
-									<div class="desc">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="item__header">
-										<div class="title">
-											<h3>Full Shave with a longer title example</h3>
-										</div>
-										<div class="price">
-											<p>$55</p>
-										</div>
-									</div>
-									<div class="desc">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="item__header">
-										<div class="title">
-											<h3>Head Shave</h3>
-										</div>
-										<div class="price">
-											<p>$35</p>
-										</div>
-									</div>
-
-									<div class="desc">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="footer__dots">
-									:::::
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
 								</div>
 							</div>
 
-					</div>
-					<!-- end shaving -->
+							<div class="item">
+								<div class="item__header">
+									<div class="title">
+										<h3>Full Shave with a longer title example</h3>
+									</div>
+									<div class="price">
+										<p>$55</p>
+									</div>
+								</div>
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="item__header">
+									<div class="title">
+										<h3>Head Shave</h3>
+									</div>
+									<div class="price">
+										<p>$35</p>
+									</div>
+								</div>
+
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="item__header">
+									<div class="title">
+										<h3>Classic Shave</h3>
+									</div>
+									<div class="price">
+										<p>$35</p>
+									</div>
+								</div>
+
+								<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="item__header">
+									<div class="title">
+										<h3>Full Shave with a longer title example</h3>
+									</div>
+									<div class="price">
+										<p>$55</p>
+									</div>
+								</div>
+								<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="item__header">
+									<div class="title">
+										<h3>Head Shave</h3>
+									</div>
+									<div class="price">
+										<p>$35</p>
+									</div>
+								</div>
+
+								<div class="desc">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="footer__dots">:::::</div>
+
+						</div><!-- end tab panel -->
+
+					</div><!-- end shaving -->
+
 
 					<!-- start haircut -->
 					<div role="tabpanel" class="tab-pane tab-fade" id="hair-cuts" aria-labelledby="haircuts-tab">
-						
+
 						<div class="tab-header">
 							<div class="headline-container">
 								<h3>Hair Cuts</h3>
@@ -236,205 +241,198 @@
 
 						<div class="tab__panel">
 
-								<div class="item">
-									<div class="title">
-										<h3>Full hair cut tab</h3>
-									</div>
-									<div class="price">
-										<p>$35.00</p>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
+							<div class="item">
+								<div class="title">
+									<h3>Full hair cut tab</h3>
+								</div>
+								<div class="price">
+									<p>$35.00</p>
 								</div>
 
-								<div class="item">
-									<div class="title">
-										<h3>Full Shave</h3>
-									</div>
-									<div class="price">
-										<p>$55.00</p>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="title">
-										<h3>Head Shave</h3>
-									</div>
-									<div class="price">
-										<p>$35.00</p>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="title">
-										<h3>Classic Shave</h3>
-									</div>
-									<div class="price">
-										<p>$35.00</p>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="title">
-										<h3>Classic Shave</h3>
-									</div>
-									<div class="price">
-										<p>$35.00</p>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-
-								<div class="item">
-									<div class="title">
-										<h3>Classic Shave</h3>
-									</div>
-									<div class="price">
-										<p>$35.00</p>
-									</div>
-
-									<div class="desc">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
-									</div>
-								</div>
-								<div class="footer__dots">
-									:::::
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
 								</div>
 							</div>
 
-					</div>
-					<!-- end haircut -->
+							<div class="item">
+								<div class="title">
+									<h3>Full Shave</h3>
+								</div>
+								<div class="price">
+									<p>$55.00</p>
+								</div>
 
-		      </div>
-		      <!-- end tab content -->
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
 
-		    </div>
-			<!-- end pricing table -->	
+							<div class="item">
+								<div class="title">
+									<h3>Head Shave</h3>
+								</div>
+								<div class="price">
+									<p>$35.00</p>
+								</div>
 
-			</div>
-			<!-- end wrapper -->
-				
-		</div>
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
 
-		
-		<!-- End pricing tab accordian -->
-	</section>
+							<div class="item">
+								<div class="title">
+									<h3>Classic Shave</h3>
+								</div>
+								<div class="price">
+									<p>$35.00</p>
+								</div>
 
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="title">
+									<h3>Classic Shave</h3>
+								</div>
+								<div class="price">
+									<p>$35.00</p>
+								</div>
+
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="title">
+									<h3>Classic Shave</h3>
+								</div>
+								<div class="price">
+									<p>$35.00</p>
+								</div>
+
+								<div class="desc">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi. Fuga quaerat architecto aliquid sed. Modi architecto, quidem omnis quis aperiam.</p>
+								</div>
+							</div>
+
+							<div class="footer__dots">:::::</div>
+
+						</div><!-- end tab panel -->
+
+					</div><!-- end haircut -->
+
+			    </div><!-- end tab content -->
+
+			</div><!-- end pricing table -->
+
+		</div><!-- end wrapper -->
+
+	</div><!-- end tab accordion -->
+
+</section><!-- end price section -->
 
 {% endblock %}
 {% block scripts %}
 <script>
-	// ==========================================================================
-    // Set tab active based on URL
-    // ==========================================================================
-	//TODO: organize JS
-	$(function() {
+// ==========================================================================
+// Set tab active based on URL
+// ==========================================================================
+//TODO: organize JS
+$(function() {
 
-		//Filter
-		var val = window.location.hash;
-		var hash;
-		console.log(val);
+	//Filter
+	var val = window.location.hash;
+	var hash;
+	console.log(val);
 
-		var animateInDelay = function(e){
-			setTimeout(function(){
-				e.addClass('in');
-			}, 1000);
-		};
+	var animateInDelay = function(e){
+		setTimeout(function(){
+			e.addClass('in');
+		}, 1000);
+	};
 
-		var animateInShort = function(e){
-			setTimeout(function(){
-				e.addClass('in');
-			}, 300);
-		};
+	var animateInShort = function(e){
+		setTimeout(function(){
+			e.addClass('in');
+		}, 300);
+	};
 
-		if(val != ''){
+	if(val != ''){
 
-			hash = val.substr(5);
+		hash = val.substr(5);
 
-			$('#priceTabs > li').each(function(){
+		$('#priceTabs > li').each(function(){
 
-				$(this).removeClass('active');
+			$(this).removeClass('active');
 
-				if( hash === this.id ){
+			if( hash === this.id ){
 
-					var panelId = $(this).find('a').attr('href').substr(1);
+				var panelId = $(this).find('a').attr('href').substr(1);
 
-					//show correct matching content with active Tab
-					$('#myTabContent > div').each( function(){
-						$(this).removeClass('active').removeClass('in');
-
-						if(panelId === this.id){
-							var element = $(this);
-							$(this).addClass('active in');
-
-							animateInDelay(element);
-
-//							$(this).addClass('active').addClass('in');
-						}
-					});
-
-					//add active class to the tab element
-					$(this).addClass('active');
-
-				}
-			});
-
-		} else{
-			//show default
-			setTimeout(function(){
-				$('#shaving').addClass('active in');
-			}, 1000);
-
-		}
-
-		//Change size of body depending on content in tabs
-		$('#priceTabs').on('click', 'li', function(){
-			var galleryPageHeight = $(window).height();
-			var tabContentHeight = $('.sv__container--sm').height();
-			var updatedHeight = galleryPageHeight - tabContentHeight;
-			var panelId = $(this).find('a').attr('href').substr(1);
-			$('body').css('height', updatedHeight + 'px');
-
-			$('#myTabContent > div').each( function() {
-
-				//first chck if the tab has active that was clicked
-				if(!$(this).hasClass('active')){
-
+				//show correct matching content with active Tab
+				$('#myTabContent > div').each( function(){
 					$(this).removeClass('active').removeClass('in');
 
 					if(panelId === this.id){
-
 						var element = $(this);
-						console.log(this);
+						$(this).addClass('active in');
 
-						setTimeout(function(){
-							element.addClass('in');
-						}, 200);
+						animateInDelay(element);
 
+//							$(this).addClass('active').addClass('in');
 					}
+				});
+
+				//add active class to the tab element
+				$(this).addClass('active');
+
+			}
+		});
+
+	} else{
+		//show default
+		setTimeout(function(){
+			$('#shaving').addClass('active in');
+		}, 1000);
+
+	}
+
+	//Change size of body depending on content in tabs
+	$('#priceTabs').on('click', 'li', function(){
+		var galleryPageHeight = $(window).height();
+		var tabContentHeight = $('.sv__container--sm').height();
+		var updatedHeight = galleryPageHeight - tabContentHeight;
+		var panelId = $(this).find('a').attr('href').substr(1);
+		$('body').css('height', updatedHeight + 'px');
+
+		$('#myTabContent > div').each( function() {
+
+			//first chck if the tab has active that was clicked
+			if(!$(this).hasClass('active')){
+
+				$(this).removeClass('active').removeClass('in');
+
+				if(panelId === this.id){
+
+					var element = $(this);
+					console.log(this);
+
+					setTimeout(function(){
+						element.addClass('in');
+					}, 200);
+
 				}
+			}
 
-			});
+		});
 
-		})
-			
-	});
+	})
+
+});
     
 </script>
 {% endblock %}

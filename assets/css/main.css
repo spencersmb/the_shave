@@ -6186,7 +6186,7 @@ footer.loaded {
   font-weight: 600;
   text-transform: none;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   color: #af8c45;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
@@ -6299,22 +6299,6 @@ footer.loaded {
   display: inline-block;
 }
 
-.barber {
-  max-width: 200px;
-  text-align: center;
-  margin: 0 auto;
-  margin-right: 80px;
-  float: left;
-  padding-bottom: 40px;
-}
-.barber img {
-  max-width: 150px;
-  max-height: 150px;
-}
-.barber h5 {
-  text-align: center;
-}
-
 .gallery-details {
   max-width: 700px;
   width: 100%;
@@ -6373,6 +6357,7 @@ footer.loaded {
   }
   .stats__details h4 {
     font-size: 36px;
+    margin-bottom: 25px;
   }
 
   .gallery__controls {
