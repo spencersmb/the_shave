@@ -302,6 +302,8 @@ $(function() {
 					// get current bottom margin - set base 10
 					bottomMargin = parseInt(dialog.css('marginBottom'), 10);
 
+
+
 			//makes sure you dont have negative margin
 			if(offset < bottomMargin){
 
@@ -341,6 +343,9 @@ $(function() {
 
 		function modalOut(){
 			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
+			$(window).on("mousewheel", function(e){
+
+			});
 			modalOpen = false;
 		}
 
@@ -482,26 +487,20 @@ $(function() {
 				}
 			});
 
-		})();
 
-		// ==========================================================================
-		// Modal click functions
-		// ==========================================================================
-		(function() {
-
+			// ==========================================================================
+			// Modal click functions
+			// ==========================================================================
 			$('.modal-form').find('li').click(function (e) {
 				e.preventDefault();
 				var link = $(this).children('a').attr('href');
 				window.location = link;
 			});
 
-		})();
 
-		// ==========================================================================
-		// Form focus for comments
-		// ==========================================================================
-		(function() {
-
+			// ==========================================================================
+			// Form focus for comments
+			// ==========================================================================
 			$( ".comment__form" ).delegate( "*", "focus blur", function() {
 				var elem = $( this );
 				setTimeout(function() {
@@ -509,6 +508,33 @@ $(function() {
 					elem.toggleClass( "focused", elem.is( ":focus" ) );
 				}, 0 );
 			});
+
+			// ==========================================================================
+			// Hero hover
+			// ==========================================================================
+			$('#header').hover(function(){
+				$('.hero-hover').addClass('active');
+			}, function(){
+				$('.hero-hover').removeClass('active');
+			});
+
+			$('.hero-container').hover(function(){
+				$('.hero-hover').addClass('active');
+			}, function(){
+				$('.hero-hover').removeClass('active');
+			});
+		})();
+
+
+		(function() {
+
+
+
+		})();
+
+
+		(function() {
+
 
 		})();
 

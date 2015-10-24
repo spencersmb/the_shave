@@ -17,7 +17,6 @@ body {
 }
 
 body {
-    padding: 0;
     overflow-x: hidden;
 }
 
@@ -116,7 +115,7 @@ ul {
     height: auto;
     z-index: $content;
     background-color: $white;
-    padding-top: $header-S;
+//    padding-top: $header-S;
 }
 
 .loaded .sv__main--content,
@@ -139,7 +138,7 @@ ul {
         font-size: em(24px);
     }
     h3 {
-        color: #959595;
+        color: $white;
         max-width: 39.375em;
         margin-left: auto;
         margin-right: auto;
@@ -170,7 +169,6 @@ ul {
         font-size: 28px;
     }
     h3 {
-        color: #959595;
         margin-top: 20px;
         font-size: 16px;
         letter-spacing: 0;
@@ -337,7 +335,7 @@ blockquote {
         padding: 10px 20px;
     }
     .sv__main--content {
-        padding-top: $header-M;
+//        padding-top: $header-M;
     }
     .card {
         .content {
@@ -376,7 +374,7 @@ blockquote {
 // Displays greater than 992px
 @include breakpoint(laptop) {
     .sv__main--content {
-        padding-top: $header-M;
+//        padding-top: $header-M;
     }
     blockquote {
         border-left: 5px solid $primary-color;

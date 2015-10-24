@@ -4,15 +4,7 @@
 	- Service Section -
 #################################
 -->
-{% include "service-shave/service-intro-shave" %}
-
-<section id="service2-skr" class="sv__container--fluid">
-
-	<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url({{'service-bg-lg.jpg' | asset_url}});">
-
-	</div>
-
-</section><!-- end parralax bg -->
+{% include "service-shave/service-intro-parallax" %}
 
 <!-- Col-3 Service Section -->
 <section id="content" class="container-fluid grey-bg reverse-angle">
@@ -155,8 +147,7 @@
 
 			}else{
 				//Run if any other browser
-//				modernProductsEvent();
-				ie9ProductsEvent();
+				modernProductsEvent();
 			}
 
 		}
