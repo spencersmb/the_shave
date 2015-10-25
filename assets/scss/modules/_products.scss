@@ -137,8 +137,7 @@
             padding:0;
         }
     }
-    .product__bg{
-        background:url('https://codyhouse.co/demo/project-cards-template/img/img-2.jpg');
+    div[class^="product__bg"]{
         background-size:cover;
         background-position: center center;
         position: absolute;
@@ -192,7 +191,7 @@
                 }
             }
         }
-        .product__bg{
+        div[class^="product__bg"]{
             opacity: 1;
         }
     }

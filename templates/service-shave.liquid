@@ -5,6 +5,7 @@
 #################################
 -->
 {% include "service-shave/service-intro-parallax" %}
+<!-- end service featured intro -->
 
 <!-- Col-3 Service Section -->
 <section id="content" class="container-fluid grey-bg reverse-angle">
@@ -200,6 +201,30 @@
 
 		browserJs(WhichBrowser());
 
+		// ==========================================================================
+		// Preload Images
+		// ==========================================================================
+		//create array of images links
+		var imageArray =[],
+			bgItem = 0,
+			imageElements = $('.open').children('div').get();
+
+		for( var i=0; i < imageElements.length; i++){
+			imageArray.push($(imageElements[i]).css('background-image'));
+		}
+		
+		$.preloadProductImages = function (arr) {
+			for (var i = 0; i < arr.length; i++) {
+				bgItem += 1;
+				$('.product__bg--' + bgItem).css('background-image', arr[i]);
+			}
+		};
+
+		$.preloadProductImages(imageArray);
+
+		$('.product__bg--8').attr('src', "https://codyhouse.co/demo/project-cards-template/img/img-2.jpg").load(function () {
+			console.log('image load successful');
+		});
 		// ==========================================================================
 		// Feature Module 2
 		// ==========================================================================

@@ -7,6 +7,9 @@
   overflow: hidden;
   background-color: $black;
 
+  &:hover{
+    cursor:pointer;
+  }
 
   > a{
     position: absolute;
@@ -15,6 +18,7 @@
     top:0;
     left:0;
     @include transition(all .3s);
+    z-index: 2;
   }
 
   &-img{
@@ -60,11 +64,9 @@
     a{
       position: relative;
       display: block;
-//      border:3px solid $white;
       text-align: center;
       background: $white;
       padding:5px 10px;
-//      left:-8px;
 
       &:hover{
         background-color: $primary-color;
@@ -81,30 +83,12 @@
       margin-right:10px;
     }
   }
-}
 
-.angle-top-post {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  top: -9px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-right: 30px solid white;
-}
-
-.angle-bottom-post {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  bottom: 60px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 10px solid transparent;
-  border-left: 30px solid white;
+  &-title{
+    > a{
+      color:#fff;
+    }
+  }
 }
 
 // Displays greater than 768px

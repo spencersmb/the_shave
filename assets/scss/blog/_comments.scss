@@ -32,7 +32,7 @@
 }
 
 .comment {
-    padding: 20px 15px 15px;
+    padding: 20px 30px 15px;
     *::after,
     *::before {
         content: none;
@@ -87,6 +87,7 @@
 
 .comment__form {
     display: table;
+    padding:0 15px;
     .pencil {
         .icon {
             left: 15px;
@@ -113,7 +114,7 @@
     }
     .comment {
         margin: 25px auto;
-        padding: 0;
+        padding:0 15px;
         .author__img {
             float: left;
             margin: 0 20px 10px 0;

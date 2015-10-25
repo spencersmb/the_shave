@@ -75,7 +75,7 @@ $(function() {
 
 	var main = $('main'),
 			isHero = true,
-			firstSection = main.children('section').first();
+			firstSection = main.children().first();
     //Get current position of Nav element
     var currentPosition = $(window).scrollTop();
 

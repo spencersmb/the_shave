@@ -60,6 +60,22 @@
     }
 }
 
+.gallery__inner {
+    &--feature {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 2;
+    }
+    &--content {
+        margin: 0 auto;
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
 .stats__container {
     margin: 0 auto 35px;
     a {
@@ -297,7 +313,19 @@
 }
 
 // Displays greater than 1200px
-@include breakpoint(desktop) {}
+@include breakpoint(desktop) {
+    .gallery__inner {
+        &--feature {
+            position: absolute;
+            top: -130px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &--content {
+            margin: 0 auto;
+        }
+    }
+}
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {}

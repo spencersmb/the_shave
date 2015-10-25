@@ -512,21 +512,6 @@ $(function() {
 				}, 0 );
 			});
 
-			// ==========================================================================
-			// Hero hover
-			// ==========================================================================
-			//header.hover(function(){
-			//	$('.hero-hover').addClass('active');
-			//}, function(){
-			//	$('.hero-hover').removeClass('active');
-			//});
-      //
-			//$('.hero-container').hover(function(){
-			//	$('.hero-hover').addClass('active');
-			//}, function(){
-			//	$('.hero-hover').removeClass('active');
-			//});
-
 
 			// ==========================================================================
 			// Global Nav check

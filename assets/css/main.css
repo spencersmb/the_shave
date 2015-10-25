@@ -231,7 +231,7 @@ ul {
 }
 
 .inner__header--sm {
-  margin: 75px auto 25px;
+  margin: 50px auto 25px;
   padding: 0 25px;
 }
 .inner__header--sm h1 {
@@ -5028,8 +5028,7 @@ footer.loaded {
   font-weight: 500;
   padding: 0;
 }
-.content__wrapper .product__bg {
-  background: url("https://codyhouse.co/demo/project-cards-template/img/img-2.jpg");
+.content__wrapper div[class^="product__bg"] {
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -5105,7 +5104,7 @@ footer.loaded {
   color: #252525;
   padding: 0;
 }
-.content__wrapper.active .product__bg {
+.content__wrapper.active div[class^="product__bg"] {
   opacity: 1;
 }
 .content__wrapper p {
@@ -5280,6 +5279,10 @@ footer.loaded {
     font-size: 16px;
   }
 }
+.blog-social {
+  padding: 0 15px;
+}
+
 .social-container {
   padding: 30px 0 25px;
   text-align: center;
@@ -5298,6 +5301,13 @@ footer.loaded {
 }
 
 @media only screen and (min-width: 768px) {
+  .blog-social {
+    padding: 0;
+  }
+  .blog-social > div {
+    padding: 0;
+  }
+
   .social-container {
     padding: 45px 0 40px;
   }
@@ -6443,6 +6453,20 @@ footer.loaded {
   opacity: 1;
 }
 
+.gallery__inner--feature {
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+.gallery__inner--content {
+  margin: 0 auto;
+}
+.gallery__inner--content img {
+  margin: 0 auto;
+}
+
 .stats__container {
   margin: 0 auto 35px;
 }
@@ -6677,6 +6701,17 @@ footer.loaded {
     margin: 70px auto 10px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .gallery__inner--feature {
+    position: absolute;
+    top: -130px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .gallery__inner--content {
+    margin: 0 auto;
+  }
+}
 /***************************************************************************/
 /* About page ****************************************************/
 /***************************************************************************/
@@ -6695,7 +6730,7 @@ footer.loaded {
 }
 
 .process__grid {
-  padding: 0 20px;
+  padding: 0 25px;
 }
 .process__grid i {
   -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -7255,6 +7290,9 @@ footer.loaded {
   overflow: hidden;
   background-color: #252525;
 }
+.post-thumb:hover {
+  cursor: pointer;
+}
 .post-thumb > a {
   position: absolute;
   width: 100%;
@@ -7264,6 +7302,7 @@ footer.loaded {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 2;
 }
 .post-thumb-img {
   position: absolute;
@@ -7328,29 +7367,8 @@ footer.loaded {
 .post-thumb-time i {
   margin-right: 10px;
 }
-
-.angle-top-post {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  top: -9px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-right: 30px solid white;
-}
-
-.angle-bottom-post {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  bottom: 60px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 10px solid transparent;
-  border-left: 30px solid white;
+.post-thumb-title > a {
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7388,25 +7406,12 @@ footer.loaded {
 /***************************************************************************/
 /* Blog details ****************************************************/
 /***************************************************************************/
-.blog__inner--feature {
-  position: relative;
-  top: 0;
-  width: 100%;
-  margin: 0 auto;
-  z-index: 2;
-}
-.blog__inner--content {
-  margin: 0 auto;
-}
-.blog__inner--content img {
-  margin: 0 auto;
-}
-
 .blog__content {
   position: relative;
+  max-width: 900px;
 }
 .blog__content--inner {
-  padding: 40px 0 0;
+  padding: 40px 15px 0;
   margin: 0 auto;
 }
 .blog__content h3 {
@@ -7426,7 +7431,7 @@ footer.loaded {
   border-left: 5px solid #af8c45;
   margin: 0 auto 24px;
   padding: 0 15px;
-  text-align: left;
+  text-align: center;
 }
 .blog__content .pull-quote::before, .blog__content .pull-quote::after {
   content: none;
@@ -7458,12 +7463,11 @@ footer.loaded {
 }
 
 .blog__content--author {
+  margin: 0 30px 45px;
   padding: 20px;
   display: table;
   max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #fff;
+  background-color: #EAEAEA;
 }
 .blog__content--author .image {
   margin: 0 auto;
@@ -7477,63 +7481,14 @@ footer.loaded {
   vertical-align: super;
 }
 .blog__content--author .text {
-  text-align: left;
+  text-align: center;
   margin-top: 18px;
-  padding-left: 0;
+  padding: 0;
 }
 .blog__content--author .text p {
   word-wrap: break-word;
   font-size: 0.9375em;
   line-height: 1.3125em;
-}
-
-.blog__related {
-  position: relative;
-  margin: 0 auto;
-  border-bottom: 1px solid #d5d5d5;
-}
-.blog__related--header {
-  margin: 22px 15px;
-  padding: 10px 0 5px;
-  text-align: center;
-}
-.blog__related--articles {
-  display: inline-block;
-  margin: 0 auto;
-}
-.blog__related--articles .article {
-  display: block;
-  margin-bottom: 40px;
-}
-.blog__related--articles .article:hover h4 {
-  color: #af8c45;
-}
-.blog__related a {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.blog__article--title {
-  padding: 0 15px;
-  display: table;
-}
-.blog__article--title h4 {
-  text-transform: none;
-  margin: 22px auto 15px;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-align: center;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.blog__article--title p {
-  text-align: center;
 }
 
 .blog-social {
@@ -7549,51 +7504,77 @@ footer.loaded {
   border-bottom: 1px solid #d5d5d5;
 }
 
-.blog-info {
+.post-nav .next-post,
+.post-nav .prev-post {
+  height: auto;
+  cursor: pointer;
   position: relative;
-  display: block;
+  padding: 0;
+  background: #252525;
+  color: #fff;
+}
+.post-nav .next-post a,
+.post-nav .prev-post a {
+  color: #fff;
+  position: absolute;
+  top: 0;
   width: 100%;
+  left: 0;
+  height: 100%;
 }
-.blog-info .date {
-  display: inline-block;
-  margin-top: 12px;
-  margin-right: 5px;
+.post-nav .next-post:hover .post-nav-thumb,
+.post-nav .prev-post:hover .post-nav-thumb {
+  opacity: .4;
 }
-.blog-info .date i {
-  margin-right: 10px;
+.post-nav-thumb {
+  height: 300px;
+  opacity: .7;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
-.blog-info .blog-share {
-  display: inline-block;
-  border-left: 1px solid #252525;
-  padding: 18px 20px;
-  margin-right: 5px;
+.post-nav-content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 40px;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
 }
-.blog-info .blog-share i {
+.post-nav-subtitle {
+  font-family: courier;
+  font-weight: 700;
   display: block;
+  position: relative;
 }
-.blog-info .comments {
-  display: inline-block;
-  padding: 2px 15px;
-  border-left: 1px solid #252525;
-  line-height: .7;
-}
-.blog-info .comments i {
-  margin-right: 10px;
+.post-nav-title {
+  margin-top: 5px;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
   .blog__content--inner {
-    padding: 50px 15px 0;
+    padding: 50px 20px 0;
     margin-bottom: 50px;
   }
   .blog__content--tags {
     margin: 40px 0 40px;
   }
   .blog__content--author {
-    margin: 0 auto;
+    margin: 0 30px 45px;
   }
   .blog__content--author .text {
     padding-left: 36px;
+    text-align: left;
   }
   .blog__content .pull-quote {
     width: 60%;
@@ -7627,19 +7608,8 @@ footer.loaded {
     font-size: 24px;
   }
 
-  .blog__related--header {
-    margin: 45px 15px 22px;
-  }
-  .blog__related--articles {
-    padding-bottom: 30px;
-  }
-  .blog__related--articles div:nth-child(odd) .article {
-    position: relative;
-    margin-right: 15px;
-  }
-  .blog__related--articles div:nth-child(even) .article {
-    position: relative;
-    margin-left: 15px;
+  .post-nav .prev-post {
+    text-align: right;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -7648,29 +7618,29 @@ footer.loaded {
   }
 
   .blog__content--inner {
-    padding: 90px 15px 0;
+    padding: 90px 0 0;
   }
   .blog__content p {
     line-height: 32px;
     margin-bottom: 36px;
   }
   .blog__content .pull-quote {
-    width: 90%;
+    width: 50%;
   }
   .blog__content .pull-quote.right, .blog__content .pull-quote.left {
-    width: 58%;
+    width: 50%;
   }
   .blog__content .pull-quote.right {
     float: right;
     margin: 50px 0 50px 50px;
-    margin-right: -15%;
+    margin-right: -5%;
     text-align: left;
     padding-left: 20px;
   }
   .blog__content .pull-quote.left {
     float: left;
     margin: 50px 10px 50px 0;
-    margin-left: -10%;
+    margin-left: 0%;
     padding-left: 20px;
   }
   .blog__content q {
@@ -7682,10 +7652,14 @@ footer.loaded {
   .blog__content--author .text {
     padding-left: 36px;
   }
+
+  .post-nav-thumb {
+    height: 400px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .blog__content .pull-quote.right, .blog__content .pull-quote.left {
-    width: 58%;
+    width: 50%;
   }
   .blog__content .pull-quote.right {
     float: right;
@@ -7697,22 +7671,8 @@ footer.loaded {
   .blog__content .pull-quote.left {
     float: left;
     margin: 50px 50px 50px 0;
-    margin-left: -22%;
+    margin-left: -10%;
     padding-left: 20px;
-  }
-
-  .blog__inner--feature {
-    position: absolute;
-    top: -130px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .blog__inner--content {
-    margin: 0 auto;
-  }
-
-  .blog__article--title {
-    padding: 0;
   }
 }
 /***************************************************************************/
@@ -7748,7 +7708,7 @@ footer.loaded {
 }
 
 .comment {
-  padding: 20px 15px 15px;
+  padding: 20px 30px 15px;
 }
 .comment *::after,
 .comment *::before {
@@ -7803,6 +7763,7 @@ footer.loaded {
 
 .comment__form {
   display: table;
+  padding: 0 15px;
 }
 .comment__form .pencil .icon {
   left: 15px;
@@ -7827,7 +7788,7 @@ footer.loaded {
 
   .comment {
     margin: 25px auto;
-    padding: 0;
+    padding: 0 15px;
   }
   .comment .author__img {
     float: left;

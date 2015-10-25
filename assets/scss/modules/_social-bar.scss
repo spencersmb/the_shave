@@ -1,3 +1,7 @@
+.blog-social{
+    padding:0 15px;
+}
+
 .social-container {
     padding: 30px 0 25px;
     text-align: center;
@@ -17,13 +21,22 @@
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+    .blog-social{
+        padding:0;
+
+        > div{
+            padding:0;
+        }
+    }
     .social-container {
         padding: 45px 0 40px;
     }
 }
 
 // Displays greater than 992px
-@include breakpoint(laptop) {}
+@include breakpoint(laptop) {
+
+}
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {}
