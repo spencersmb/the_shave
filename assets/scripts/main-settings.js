@@ -62,7 +62,7 @@ $(function() {
 
 				}else{
 
-					$('body, footer').addClass('safari');
+					//$('body, footer').addClass('safari').addClass('safari-modal');
 
 					$('section').last().removeClass('footer-push');
 
@@ -230,33 +230,34 @@ $(function() {
 
 			//Footer-push resize + sckrollr check
 
-			var width = $(window).width() + 15;
-
+			var width = $(window).width(),
+					footerHeight,
+					body = $('body');
 
 			//Resize angle
-			setAngleWidth(width - 15);
+			setAngleWidth(width);
 
-			if (width >= desktop) {
+			if (width + 15 >= desktop) {
 
 
 
 				skrollrCheck();
-				myFooter.width(width - 15);
+				myFooter.width(width);
 
-				$('body').removeClass('footer-mobile');
+				body.removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
-					var footerHeight = $('footer').height() + 'px';
+					footerHeight = $('footer').height() + 'px';
 
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
 				}
 
-			} else if( width <= desktop){
+			} else if( width - 15 <= desktop){
 
 				skrollrCheck();
-				myFooter.width(width - 15);
-				var footerHeight = $('footer').height() + 'px';
+				myFooter.width(width);
+				footerHeight = $('footer').height() + 'px';
 				$('.footer-push').css('margin-bottom', footerHeight);
 				//$('body').addClass('footer-mobile');
 			}
@@ -277,6 +278,9 @@ $(function() {
 
 			modal.on('show.bs.modal', centerModal);
 			modal.on('hide.bs.modal', modalOut);
+			modal.click(function () {
+				$('.modal').modal('toggle');
+			});
 
 			$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
 				var elem = $( this );
@@ -289,7 +293,6 @@ $(function() {
 		})();
 
 		function centerModal(){
-
 
 			//add display block to get height of the modal-dialog
 			$(this).css('display', 'block');
@@ -343,9 +346,7 @@ $(function() {
 
 		function modalOut(){
 			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
-			$(window).on("mousewheel", function(e){
-
-			});
+			//$('body').css('max-width', '100%');
 			modalOpen = false;
 		}
 
@@ -468,11 +469,13 @@ $(function() {
 		}
 	}
 
-		// ==========================================================================
-		// Sub-menu item hover
-		// ==========================================================================
+
 		(function() {
 
+			var header = $('#header');
+			// ==========================================================================
+			// Sub-menu item hover
+			// ==========================================================================
 			var serviceBg = $('.cd-service-bg');
 
 			serviceBg.mouseover( function(){
@@ -512,31 +515,26 @@ $(function() {
 			// ==========================================================================
 			// Hero hover
 			// ==========================================================================
-			$('#header').hover(function(){
-				$('.hero-hover').addClass('active');
-			}, function(){
-				$('.hero-hover').removeClass('active');
-			});
-
-			$('.hero-container').hover(function(){
-				$('.hero-hover').addClass('active');
-			}, function(){
-				$('.hero-hover').removeClass('active');
-			});
-		})();
-
-
-		(function() {
+			//header.hover(function(){
+			//	$('.hero-hover').addClass('active');
+			//}, function(){
+			//	$('.hero-hover').removeClass('active');
+			//});
+      //
+			//$('.hero-container').hover(function(){
+			//	$('.hero-hover').addClass('active');
+			//}, function(){
+			//	$('.hero-hover').removeClass('active');
+			//});
 
 
-
-		})();
-
-
-		(function() {
+			// ==========================================================================
+			// Global Nav check
+			// ==========================================================================
 
 
 		})();
+
 
 		// ==========================================================================
 		// Run on First Load

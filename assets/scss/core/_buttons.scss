@@ -21,12 +21,17 @@
 .nav__book {
     position: absolute;
     top: 26px;
-    right: 5%;
+    right: 4%;
     width: 20%;
     a {
         display: inline-block;
         float: right;
+
+        &:focus{
+            color:$white;
+        }
     }
+
 }
 
 .book__nav {
@@ -145,7 +150,11 @@
 }
 
 // Displays greater than 992px
-@include breakpoint(laptop) {}
+@include breakpoint(laptop) {
+    .nav__book {
+        right: 45px;
+    }
+}
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {}

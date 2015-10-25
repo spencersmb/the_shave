@@ -82,28 +82,62 @@
         float: left;
         margin: 0 auto;
     }
-    .barber__box {
-        max-width: 500px;
-        padding-bottom: 30px;
-        .overlay {
-            height: 130px;
-            padding-top: 20px;
-        }
-        .avatar {
-            border-radius: 60px;
-            width: 45%;
-        }
-        .title {
-            margin: 25px auto;
-        }
-        &:hover {
+
+    //3 col
+    .col-sm-4.barber__wrapper{
+        .barber__box {
+            max-width: 500px;
+            padding-bottom: 30px;
             .overlay {
-                opacity: 1;
-                h3 {
-                    @include transform(translate3d(0, 0, 0));
+                height: 130px;
+                padding-top: 20px;
+            }
+            .avatar {
+                border-radius: 50%;
+                width: 45%;
+            }
+            .title {
+                margin: 25px auto;
+                padding:0 15px;
+            }
+            &:hover {
+                .overlay {
+                    opacity: 1;
+                    h3 {
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                    img {
+                        @include transform(translate3d(0, 0, 0));
+                    }
                 }
-                img {
-                    @include transform(translate3d(0, 0, 0));
+            }
+        }
+    }
+
+    //2 col
+    .col-sm-6.barber__wrapper{
+        .barber__box {
+            max-width: 500px;
+            padding-bottom: 30px;
+            .overlay {
+                height: 205px;
+                padding-top: 20px;
+            }
+            .avatar {
+                width: 35%;
+            }
+            .title {
+                margin: 25px auto;
+            }
+            &:hover {
+                .overlay {
+                    opacity: 1;
+                    h3 {
+                        @include transform(translate3d(0, 0, 0));
+                    }
+                    img {
+                        @include transform(translate3d(0, 0, 0));
+                    }
                 }
             }
         }

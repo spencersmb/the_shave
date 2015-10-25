@@ -109,6 +109,12 @@
         width: 100%;
         background-position: center center;
         background-size: cover;
+        @include transition(all 1s);
+        opacity: 0;
+
+        &.active{
+            opacity: 1;
+        }
     }
 }
 

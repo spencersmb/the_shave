@@ -16,6 +16,7 @@
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <!-- Style block allowing child pages to inject their own styles -->
         
 
         <!-- Styles -->
@@ -27,8 +28,6 @@
         <!--[if IE 9]>
         <link href="assets/css/shave-ie9-styles.min.css" rel="stylesheet" type="text/css" media="all"/>
         <![endif]-->
-
-        <!-- Style block allowing child pages to inject their own styles -->
 
         <script src="assets/scripts/jquery.min.js"></script>
         <script src="assets/scripts/modernizr.min.js"></script>
@@ -471,24 +470,22 @@
 	- Service Section -
 #################################
 -->
-<!-- Service Header -->
-<section class="container-fluid white-bg">
-	<div class="row">
-		<div class="col-xs-12 inner__header--sm">
-			<h1>The Smoothest Shave You’ll Ever Get</h1>
-			<h3>Get the best shave through our unique experience</h3>
-		</div>
-	</div>
-	<div class="angle-bottom" style="border-left-color: #fff;"></div>
-</section><!-- end Service Header -->
+<!-- parallax section -->
+<section id="header-skr" class="sv__container--fluid hero-container">
 
-<section id="service2-skr" class="sv__container--fluid">
+    <div class="hero-background hero-parallax" data-center="background-position: 50% -1px;" data-top-bottom="background-position: 50% 1px;" data-anchor-target="#header-skr" style="background-image: url(/assets/images/backgrounds/service-bg-lg.jpg);">
+        <div class="hero-spacer"></div>
+    </div><!-- end parallax bg -->
+    <div class="hero-hover"></div>
 
-	<div class="parallax__background image__content" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url(/assets/images/backgrounds/service-bg-lg.jpg);">
+    <div class="hero-wrapper">
+        <div class="hero-content header">
+            <h1 class="hero-title">The Smoothest Shave You’ll Ever Get</h1>
+            <h3>Get the best shave through our unique experience</h3>
+        </div>
+    </div>
 
-	</div>
-
-</section><!-- end parralax bg -->
+</section><!-- end parallax section -->
 
 <!-- Col-3 Service Section -->
 <section id="content" class="container-fluid grey-bg reverse-angle">
@@ -1099,79 +1096,58 @@
 <!-- End bio module -->
 
 <!-- FAQ -->
+<!-- faq section -->
 <section class="container__grey">
 
 	<div class="container sv__container--sm inner-content-module">
-
 
 		<div class="headline-sm">
 			<h2>Freaquently Asked Questions</h2>
 		</div>
 
-			<div class="section__wrapper">
+		<div class="section__wrapper">
 
-				<div class="shave__faq--items">
+			<div class="shave__faq--items">
 
-					<ul id="basics" class="shave__faq--group">
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">How do I find the right barber?</a>
-							<div class="shave__faq--content">
-								<p>To change your password you need to do the following steps.</p>
-							</div>
-						</li>
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">That blade near my neck looks dangerous?</a>
-							<div class="shave__faq--content">
-								<p>And you call yourself a man. Of course it's dangerous, and its completly safe. Our staff of highly trained barbers are like highly skilled ninjas with years of practice.</p>
-							</div>
-						</li>
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">What is a straight shave?</a>
-							<div class="shave__faq--content">
-								<p>To change your password you need to do the following steps.</p>
-							</div>
-						</li>
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">Can I try this at home?</a>
-							<div class="shave__faq--content">
-								<p>To change your password you need to do the following steps.</p>
-							</div>
-						</li>
-					</ul>
+				<ul id="basics" class="shave__faq--group">
 
-					<!-- <ul class="shave__faq--group">
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">That blade near my neck looks dangerous?</a>
-							<div class="shave__faq--content">
-								<p>And you call yourself a man. Of course it's dangerous, and its completly safe. Our staff of highly trained barbers are like highly skilled ninjas with years of practice.</p>
-							</div>
-						</li>
-					</ul>
+					<li class="card-shadow-lt">
+						<a class="shave__faq--trigger" href="#">How do I find the right barber?</a>
+						<div class="shave__faq--content">
+							<p>To change your password you need to do the following steps.</p>
+						</div>
+					</li>
 
-					<ul class="shave__faq--group">
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">What is a straight shave?</a>
-							<div class="shave__faq--content">
-								<p>To change your password you need to do the following steps.</p>
-							</div>
-						</li>
-					</ul>
+					<li class="card-shadow-lt">
+						<a class="shave__faq--trigger" href="#">That blade near my neck looks dangerous?</a>
+						<div class="shave__faq--content">
+							<p>And you call yourself a man. Of course it's dangerous, and its completly safe. Our staff of highly trained barbers are like highly skilled ninjas with years of practice.</p>
+						</div>
+					</li>
 
-					<ul class="shave__faq--group">
-						<li class="card-shadow-lt">
-							<a class="shave__faq--trigger" href="#" onclick="return false;">Can I try this at home?</a>
-							<div class="shave__faq--content">
-								<p>To change your password you need to do the following steps.</p>
-							</div>
-						</li>
-					</ul> -->
-				</div>
+					<li class="card-shadow-lt">
+						<a class="shave__faq--trigger" href="#">What is a straight shave?</a>
+						<div class="shave__faq--content">
+							<p>To change your password you need to do the following steps.</p>
+						</div>
+					</li>
 
-			</div>
+					<li class="card-shadow-lt">
+						<a class="shave__faq--trigger" href="#">Can I try this at home?</a>
+						<div class="shave__faq--content">
+							<p>To change your password you need to do the following steps.</p>
+						</div>
+					</li>
 
-		</div>
+				</ul>
 
-</section>
+			</div><!-- end faq items -->
+
+		</div><!-- end section wrapper -->
+
+	</div><!-- end container -->
+
+</section><!-- end faq section -->
 <!-- End Faq -->
 
 <!--
@@ -1626,7 +1602,7 @@
 			if(index == 0){
 
 			}else{
-				$(this).fadeOut();
+//				$(this).fadeOut();
 			}
 		});
 
@@ -1665,7 +1641,7 @@
 
 							if($(imageTitle[i]).data('title') === panelId){
 
-								$(imageTitle[i]).addClass('active').fadeIn(750);
+								$(imageTitle[i]).addClass('active');
 							}
 						}
 						//add hight to adj the for new content
@@ -1677,7 +1653,7 @@
 
 						}
 
-						currentImage.fadeOut(750).removeClass('active');
+						currentImage.removeClass('active');
 
 						//change title
 						headline.fadeTo( "slow", 0, function(){

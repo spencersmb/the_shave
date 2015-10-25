@@ -218,7 +218,7 @@
 			if(index == 0){
 
 			}else{
-				$(this).fadeOut();
+//				$(this).fadeOut();
 			}
 		});
 
@@ -257,7 +257,7 @@
 
 							if($(imageTitle[i]).data('title') === panelId){
 
-								$(imageTitle[i]).addClass('active').fadeIn(750);
+								$(imageTitle[i]).addClass('active');
 							}
 						}
 						//add hight to adj the for new content
@@ -269,7 +269,7 @@
 
 						}
 
-						currentImage.fadeOut(750).removeClass('active');
+						currentImage.removeClass('active');
 
 						//change title
 						headline.fadeTo( "slow", 0, function(){

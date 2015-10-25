@@ -73,29 +73,50 @@ $(function() {
 		}
 	}
 
+	var main = $('main'),
+			isHero = true,
+			firstSection = main.children('section').first();
     //Get current position of Nav element
     var currentPosition = $(window).scrollTop();
 
-	if(currentPosition > 50){
-		$navigation.addClass('shadow-on');
-	}else{
-		if($navigation.hasClass('shadow-on')){
+		if(!firstSection.hasClass('hero-container') && !firstSection.hasClass('hero')){
+			isHero = false;
+		}
+
+
+		//if is Hero
+		if(currentPosition > 50 && isHero){
+			$navigation.addClass('shadow-on');
+		}else{
 			$navigation.removeClass('shadow-on');
 		}
-	}
+
+		if(currentPosition > 50 && !isHero){
+			$navigation.addClass('shadow-on');
+			$navigation.removeClass('no-hero');
+		}else if(currentPosition < 50 && !isHero){
+			$navigation.removeClass('shadow-on');
+			$navigation.addClass('no-hero');
+		}
+
 
     function addShadow(){
 
     	currentPosition = $(window).scrollTop();
 
-    	if(currentPosition > 50){
-    		$navigation.addClass('shadow-on');
-    	}else{
-    		if($navigation.hasClass('shadow-on')){
-    			$navigation.removeClass('shadow-on');
-    		}
-    	}
+			if(currentPosition > 50 && isHero){
+				$navigation.addClass('shadow-on');
+			}else{
+				$navigation.removeClass('shadow-on');
+			}
 
+			if(currentPosition > 50 && !isHero){
+				$navigation.addClass('shadow-on');
+				$navigation.removeClass('no-hero');
+			}else if(currentPosition < 50 && !isHero){
+				$navigation.removeClass('shadow-on');
+				$navigation.addClass('no-hero');
+			}
 
     }
 

@@ -170,11 +170,12 @@
 }
 
 .tab__panel {
-    padding: 2em;
+    padding: 2em 2em 0;
     background: $white;
     width: 100%;
     margin: 0 auto;
     position: relative;
+    text-align: center;
     h2 {
         font-size: em(24px);
         text-align: center;
@@ -192,6 +193,7 @@
         padding-bottom: 20px;
         border-bottom: 1px solid #CACACA;
         margin-bottom: 20px;
+        text-align: left;
         .item__header {
             display: table;
             position: relative;
@@ -272,7 +274,7 @@
         }
     }
     .tab__panel {
-        padding: 3em;
+        padding: 3em 3em 0;
         h3 {
             font-size: 18px;
             letter-spacing: 5px;
@@ -303,6 +305,7 @@
         top: 0;
     }
     .tab__panel {
+        padding: 3em;
         .item {
             .title {
                 width: 70%;

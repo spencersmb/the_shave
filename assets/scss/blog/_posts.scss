@@ -198,133 +198,9 @@
     }
 }
 
-//NEW SHIT
-.hero-container{
-    background: $black;
-    @include calc(height, "100vh * 0.65");
-}
-
-.hero-background{
-    overflow: hidden;
-    opacity:.6;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width:100%;
-    height:100%;
-    @include transition(all .3s);
-}
-
-.hero-hover{
-    background: $black;
-    opacity: 0;
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    @include transition(opacity .3s);
-
-    &.active{
-        opacity: .4;
-    }
-}
-
-.hero-wrapper{
-    position: absolute;
-    top:50%;
-    @include transform(translateY(-50%));
-    color:$white;
-    width:100%;
-    margin:0 auto;
-    height:50%;
-}
-
-.hero-content{
-    position: relative;
-    top:50%;
-    @include transform(translateY(-50%));
-    color:$white;
-    width:100%;
-    margin:0 auto;
-    padding:0 25px;
-
-    .hero-title{
-        font-size: 32px;
-        line-height: 32px;
-    }
-
-    .hero-meta{
-        margin-bottom: 10px;
-        font-size: 14px;
-        font-weight: bold;
-        text-transform: uppercase;
-
-        a{
-            color:$black;
-            font-size: 16px;
-            @include transition(all .3s);
-        }
-    }
-
-    .post-category {
-        margin-right: 20px;
-        position: relative;
-        display: table;
-
-        a {
-            position: relative;
-            display: block;
-            //      border:3px solid $white;
-            text-align: center;
-            background: $white;
-            padding: 5px 10px;
-            //      left:-8px;
-
-            &:hover {
-                background-color: $primary-color;
-                border-color: $primary-color;
-            }
-        }
-    }
-
-    .post-time{
-        display: block;
-        font-size: 16px;
-        margin-top:5px;
-
-        i{
-            margin-right:10px;
-        }
-    }
-}
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
-
-    .hero-content{
-        width:100%;
-
-        .hero-title{
-            font-size: 66px;
-            line-height: 66px;
-        }
-
-        .post-category{
-            float:left;
-            display: inline-block;
-            a{
-                display: inline-block;
-            }
-        }
-        .post-time {
-            display: inline-block;
-            margin-top: 30px;
-            font-size: 16px;
-            position:relative;
-        }
-
-    }
 
     .blog__content {
         &--inner {
@@ -402,17 +278,6 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-
-    .hero-content {
-        width: 900px;
-    }
-
-    .hero-background{
-
-        &.hero-parallax{
-            background-attachment: fixed;
-        }
-    }
 
     .blog__offset {
         margin-top: 75px;

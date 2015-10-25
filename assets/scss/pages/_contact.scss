@@ -92,11 +92,16 @@
 .directions{
   margin: 20px auto 0;
   position: relative;
-  display: table;
 
   a{
 	font-weight: bold;
 	color:$primary-color;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .directions{
+	display: none;
   }
 }
 
@@ -138,10 +143,6 @@
   .meta-share {
 	padding:0 25px 30px!important;
 	border-bottom: 0;
-  }
-
-  .directions {
-	display: none;
   }
 
 }

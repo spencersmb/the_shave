@@ -200,7 +200,7 @@
     left: 0;
     width: 0;
     height: 0;
-    border-top: 80px solid transparent;
+    border-top: 30px solid transparent;
     border-right: 30px solid white;
 }
 
@@ -212,7 +212,7 @@
     left: 0;
     width: 0;
     height: 0;
-    border-bottom: 80px solid transparent;
+    border-bottom: 30px solid transparent;
     border-left: 30px solid white;
 }
 
@@ -231,7 +231,8 @@
 .footer__dots{
     color:$primary-color;
     text-align:center;
-    margin:75px 0 20px;
+    margin:0 0 20px;
+    display: inline-block;
 }
 
 
@@ -248,9 +249,19 @@
 }
 
 @include breakpoint(tablet) {
+    .angle-top-bottom {
+        bottom: 0;
+        border-top: 35px solid transparent;
+    }
+
+    .angle-bottom-top {
+        top: 0;
+        border-bottom: 35px solid transparent;
+    }
+
     .angle-bottom-nav {
         top: 0px;
-        border-bottom: 60px solid transparent;
+        border-bottom: 35px solid transparent;
     }
     .angle-top {
         top: -35px;
@@ -260,12 +271,25 @@
         bottom: -35px;
         border-bottom: 35px solid transparent;
     }
+    .footer__dots{
+        margin:50px 0;
+    }
 }
 
 @include breakpoint(laptop) {
+    .angle-top-bottom {
+        bottom: 0;
+        border-top: 60px solid transparent;
+    }
+
+    .angle-bottom-top {
+        top: 0;
+        border-bottom: 60px solid transparent;
+    }
+
     .angle-bottom-nav {
         top: 0;
-        border-bottom: 80px solid transparent;
+        border-bottom: 60px solid transparent;
     }
     .angle-top {
         top: -60px;
@@ -275,9 +299,21 @@
         bottom: -60px;
         border-bottom: 60px solid transparent;
     }
+    .footer__dots{
+        margin:55px 0 20px;
+    }
 }
 
 @include breakpoint(desktop) {
+    .angle-top-bottom {
+        bottom: 0;
+        border-top: 80px solid transparent;
+    }
+
+    .angle-bottom-top {
+        top: 0;
+        border-bottom: 80px solid transparent;
+    }
     .angle-top {
         top: -80px;
         border-top: 80px solid transparent;

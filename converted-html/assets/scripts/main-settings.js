@@ -62,7 +62,7 @@ $(function() {
 
 				}else{
 
-					$('body, footer').addClass('safari');
+					//$('body, footer').addClass('safari').addClass('safari-modal');
 
 					$('section').last().removeClass('footer-push');
 
@@ -230,33 +230,38 @@ $(function() {
 
 			//Footer-push resize + sckrollr check
 
-			var width = $(window).width() + 15;
+			var width = $(window).width(),
+					footerHeight,
+					body = $('body');
+
+			//body.css('max-width', width);
+
 
 
 			//Resize angle
-			setAngleWidth(width - 15);
+			setAngleWidth(width);
 
-			if (width >= desktop) {
+			if (width + 15 >= desktop) {
 
 
 
 				skrollrCheck();
-				myFooter.width(width - 15);
+				myFooter.width(width);
 
-				$('body').removeClass('footer-mobile');
+				body.removeClass('footer-mobile');
 
 				if ($('main').find('.footer-push')) {
-					var footerHeight = $('footer').height() + 'px';
+					footerHeight = $('footer').height() + 'px';
 
 					//set footerpush margin to same height as footer
 					$('.footer-push').css('margin-bottom', footerHeight);
 				}
 
-			} else if( width <= desktop){
+			} else if( width - 15 <= desktop){
 
 				skrollrCheck();
-				myFooter.width(width - 15);
-				var footerHeight = $('footer').height() + 'px';
+				myFooter.width(width);
+				footerHeight = $('footer').height() + 'px';
 				$('.footer-push').css('margin-bottom', footerHeight);
 				//$('body').addClass('footer-mobile');
 			}
@@ -290,6 +295,9 @@ $(function() {
 
 		function centerModal(){
 
+			//set body to max width to prevent image scaling issue
+			var windowWidth = $(window).width();
+			//$('body').css('max-width', windowWidth);
 
 			//add display block to get height of the modal-dialog
 			$(this).css('display', 'block');
@@ -301,6 +309,8 @@ $(function() {
 
 					// get current bottom margin - set base 10
 					bottomMargin = parseInt(dialog.css('marginBottom'), 10);
+
+
 
 			//makes sure you dont have negative margin
 			if(offset < bottomMargin){
@@ -341,6 +351,7 @@ $(function() {
 
 		function modalOut(){
 			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
+			//$('body').css('max-width', '100%');
 			modalOpen = false;
 		}
 
@@ -425,6 +436,7 @@ $(function() {
 				$('.angle-top-price').css('border-right-width', sheetWidth);
 			}
 
+
 		}
 
 		// ==========================================================================
@@ -462,11 +474,15 @@ $(function() {
 		}
 	}
 
-		// ==========================================================================
-		// Sub-menu item hover
-		// ==========================================================================
+
 		(function() {
 
+			var header = $('#header'),
+				main = $('main'),
+				firstSection = main.children('section').first();
+			// ==========================================================================
+			// Sub-menu item hover
+			// ==========================================================================
 			var serviceBg = $('.cd-service-bg');
 
 			serviceBg.mouseover( function(){
@@ -481,26 +497,20 @@ $(function() {
 				}
 			});
 
-		})();
 
-		// ==========================================================================
-		// Modal click functions
-		// ==========================================================================
-		(function() {
-
+			// ==========================================================================
+			// Modal click functions
+			// ==========================================================================
 			$('.modal-form').find('li').click(function (e) {
 				e.preventDefault();
 				var link = $(this).children('a').attr('href');
 				window.location = link;
 			});
 
-		})();
 
-		// ==========================================================================
-		// Form focus for comments
-		// ==========================================================================
-		(function() {
-
+			// ==========================================================================
+			// Form focus for comments
+			// ==========================================================================
 			$( ".comment__form" ).delegate( "*", "focus blur", function() {
 				var elem = $( this );
 				setTimeout(function() {
@@ -509,7 +519,31 @@ $(function() {
 				}, 0 );
 			});
 
+			// ==========================================================================
+			// Hero hover
+			// ==========================================================================
+			header.hover(function(){
+				$('.hero-hover').addClass('active');
+			}, function(){
+				$('.hero-hover').removeClass('active');
+			});
+
+			$('.hero-container').hover(function(){
+				$('.hero-hover').addClass('active');
+			}, function(){
+				$('.hero-hover').removeClass('active');
+			});
+
+
+			// ==========================================================================
+			// Global Nav check
+			// ==========================================================================
+			if(!firstSection.hasClass('hero-container') && !firstSection.hasClass('hero')){
+				header.addClass('no-hero');
+			}
+
 		})();
+
 
 		// ==========================================================================
 		// Run on First Load
@@ -522,6 +556,6 @@ $(function() {
 		shavePreloader();
 
 		//angled boarders
-		setAngleWidth(windowSize);
+		//setAngleWidth(windowSize);
 
 });

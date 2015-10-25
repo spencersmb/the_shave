@@ -18,7 +18,10 @@ body {
 
 body {
     overflow-x: hidden;
+    padding:0 !important;
 }
+
+
 
 h1,
 h2,
@@ -169,10 +172,10 @@ ul {
         font-size: 28px;
     }
     h3 {
-        margin-top: 20px;
+        color:#9A9A9A;
+        margin:10px auto 0;
         font-size: 16px;
         letter-spacing: 0;
-        margin-bottom: 0;
     }
 }
 
@@ -353,7 +356,7 @@ blockquote {
         }
     }
     .inner__header--sm {
-        margin:110px auto 35px;
+        margin:140px auto 35px;
         padding:0 35px;
 
         h1 {
@@ -385,7 +388,7 @@ blockquote {
         color: $black;
     }
     .inner__header--sm {
-        margin:130px auto 50px;
+        margin:160px auto 80px;
 
         h1 {
             font-size: 84px;
@@ -446,7 +449,7 @@ blockquote {
         padding: 700px 60px 0;
     }
     .container-push {
-        min-height: 500px;
+        min-height: 540px;
     }
     .card__feature {
         width: 72.8%;
