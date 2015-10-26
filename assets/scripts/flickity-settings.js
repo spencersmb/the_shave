@@ -1,14 +1,7 @@
-
-// $('.gallery').flickity({
-//   cellAlign:'left',
-//   contain: true,
-//   wrapAround: true
-// });
-
 //GALLERY DETAILS PAGE
 $('.gallery-main').flickity({
 	setGallerySize: true,
-	prevNextButtons: false,
+	prevNextButtons: true,
 	pageDots: false
 });
 

@@ -6,6 +6,10 @@
     max-width: 1360px;
     margin: 0 auto;
     padding-bottom: 49%;
+
+    .flickity-prev-next-button{
+        display: none;
+    }
 }
 /* inherit size from gallery */
 .gallery .flickity-viewport {
@@ -75,6 +79,8 @@
         }
     }
 }
+
+
 
 .stats__container {
     margin: 0 auto 35px;
@@ -297,6 +303,11 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+    .gallery{
+        .flickity-prev-next-button{
+            display: block;
+        }
+    }
     .gallery-details {
         .table-responsive {
             margin-bottom: 25px;

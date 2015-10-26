@@ -344,10 +344,10 @@
 //TODO: organize JS
 $(function() {
 
-	//Filter
+	//Price Filter
 	var val = window.location.hash;
 	var hash;
-	console.log(val);
+	//	console.log(val);
 
 	var animateInDelay = function(e){
 		setTimeout(function(){
@@ -379,11 +379,10 @@ $(function() {
 
 					if(panelId === this.id){
 						var element = $(this);
-						$(this).addClass('active in');
+						$(this).addClass('active');
 
 						animateInDelay(element);
 
-//							$(this).addClass('active').addClass('in');
 					}
 				});
 
@@ -394,6 +393,7 @@ $(function() {
 		});
 
 	} else{
+
 		//show default
 		setTimeout(function(){
 			$('#shaving').addClass('active in');
@@ -401,36 +401,6 @@ $(function() {
 
 	}
 
-	//Change size of body depending on content in tabs
-	$('#priceTabs').on('click', 'li', function(){
-		var galleryPageHeight = $(window).height();
-		var tabContentHeight = $('.sv__container--sm').height();
-		var updatedHeight = galleryPageHeight - tabContentHeight;
-		var panelId = $(this).find('a').attr('href').substr(1);
-		$('body').css('height', updatedHeight + 'px');
-
-		$('#myTabContent > div').each( function() {
-
-			//first chck if the tab has active that was clicked
-			if(!$(this).hasClass('active')){
-
-				$(this).removeClass('active').removeClass('in');
-
-				if(panelId === this.id){
-
-					var element = $(this);
-					console.log(this);
-
-					setTimeout(function(){
-						element.addClass('in');
-					}, 200);
-
-				}
-			}
-
-		});
-
-	})
 
 });
     

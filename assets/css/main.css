@@ -1425,6 +1425,9 @@ blockquote.reverse {
   border: 3px solid #af8c45;
   background-color: #af8c45;
 }
+.book-now-btn:focus {
+  outline: none;
+}
 
 .form-btn {
   display: block;
@@ -5648,7 +5651,7 @@ footer.loaded {
 
 .barber__box {
   width: 100%;
-  max-width: 500px;
+  max-width: 350px;
   margin: 0 auto 30px;
   background-color: #fff;
   padding-bottom: 30px;
@@ -5660,7 +5663,7 @@ footer.loaded {
   overflow: hidden;
 }
 .barber__box .overlay {
-  height: 150px;
+  height: 175px;
   padding-top: 0;
   opacity: 0;
   background-color: rgba(175, 140, 69, 0.8);
@@ -5669,7 +5672,7 @@ footer.loaded {
   transition: opacity 0.3s ease;
 }
 .barber__box .overlay h3 {
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-family: "Ubuntu", sans-serif;
   text-transform: none;
   letter-spacing: 1px;
   font-size: 16px;
@@ -5702,10 +5705,10 @@ footer.loaded {
   margin-top: -60px;
   z-index: 2;
   position: relative;
-  width: 35%;
+  width: 40%;
 }
 .barber__box .title {
-  margin: 25px auto;
+  margin: 30px auto;
 }
 .barber__box h4 {
   font-size: 16px;
@@ -5744,7 +5747,7 @@ footer.loaded {
   }
   .col-sm-4.barber__wrapper .barber__box .avatar {
     border-radius: 50%;
-    width: 45%;
+    width: 25%;
   }
   .col-sm-4.barber__wrapper .barber__box .title {
     margin: 25px auto;
@@ -5777,7 +5780,7 @@ footer.loaded {
     padding-top: 20px;
   }
   .col-sm-6.barber__wrapper .barber__box .avatar {
-    width: 35%;
+    width: 30%;
   }
   .col-sm-6.barber__wrapper .barber__box .title {
     margin: 25px auto;
@@ -5801,24 +5804,77 @@ footer.loaded {
   }
 }
 @media only screen and (min-width: 992px) {
-  .barber__box {
-    max-width: 500px;
+  .col-md-4.barber__wrapper .barber__box {
     padding-bottom: 40px;
   }
-  .barber__box .barber__image {
-    overflow: hidden;
+  .col-md-4.barber__wrapper .barber__box .overlay {
+    height: 200px;
+    padding-top: 55px;
   }
-  .barber__box .overlay {
-    height: 250px;
+  .col-md-4.barber__wrapper .barber__box .overlay h3 {
+    font-size: 18px;
+  }
+  .col-md-4.barber__wrapper .barber__box .avatar {
+    border-radius: 50%;
+    width: 35%;
+  }
+  .col-md-4.barber__wrapper .barber__box .title {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  .col-md-4.barber__wrapper .barber__box h4 {
+    font-size: 21px;
+  }
+
+  .col-md-6.barber__wrapper .barber__box {
+    padding-bottom: 40px;
+  }
+  .col-md-6.barber__wrapper .barber__box .overlay {
+    height: 240px;
     padding-top: 80px;
   }
-  .barber__box .avatar {
+  .col-md-6.barber__wrapper .barber__box .overlay h3 {
+    font-size: 21px;
+    font-weight: 400;
+    font-style: italic;
+    max-width: 75%;
+    margin: 0 auto;
+    line-height: 1.3;
+  }
+  .col-md-6.barber__wrapper .barber__box .avatar {
+    border-radius: 50%;
     width: auto;
   }
-  .barber__box .title {
+  .col-md-6.barber__wrapper .barber__box .title {
     margin: 50px auto;
+    padding: 0 15px;
   }
-  .barber__box h4 {
+  .col-md-6.barber__wrapper .barber__box h4 {
+    font-size: 21px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col-sm-4.barber__wrapper .barber__box,
+  .col-sm-6.barber__wrapper .barber__box {
+    padding-bottom: 40px;
+  }
+  .col-sm-4.barber__wrapper .barber__box .overlay,
+  .col-sm-6.barber__wrapper .barber__box .overlay {
+    height: 240px;
+    padding-top: 80px;
+  }
+  .col-sm-4.barber__wrapper .barber__box .avatar,
+  .col-sm-6.barber__wrapper .barber__box .avatar {
+    border-radius: 50%;
+    width: auto;
+  }
+  .col-sm-4.barber__wrapper .barber__box .title,
+  .col-sm-6.barber__wrapper .barber__box .title {
+    margin: 50px auto;
+    padding: 0 15px;
+  }
+  .col-sm-4.barber__wrapper .barber__box h4,
+  .col-sm-6.barber__wrapper .barber__box h4 {
     font-size: 21px;
   }
 }
@@ -6403,6 +6459,9 @@ footer.loaded {
   margin: 0 auto;
   padding-bottom: 49%;
 }
+.gallery .flickity-prev-next-button {
+  display: none;
+}
 
 /* inherit size from gallery */
 .gallery .flickity-viewport {
@@ -6689,6 +6748,10 @@ footer.loaded {
   }
 }
 @media only screen and (min-width: 992px) {
+  .gallery .flickity-prev-next-button {
+    display: block;
+  }
+
   .gallery-details .table-responsive {
     margin-bottom: 25px;
   }
