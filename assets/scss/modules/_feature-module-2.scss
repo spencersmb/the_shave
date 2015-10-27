@@ -77,7 +77,8 @@
         }
         .title {
             margin: 0 auto;
-            width: 100%;
+            /* override for price tab */
+            width: 100% !important;
             h3 {
                 letter-spacing: 2px;
                 font-size: 16px;
@@ -92,13 +93,14 @@
             position: relative;
             display: block;
             a {
-                padding-top: 15px;
+                padding: 15px 0;
                 text-align: left;
                 margin: 0;
                 display: block;
                 font-size: 14px;
                 text-transform: uppercase;
                 font-family: $ubuntu;
+                border-bottom: 1px solid #CACACA;
             }
             i {
                 float: right;
@@ -167,6 +169,12 @@
                     width: 100%;
                 }
             }
+            .item__link{
+                a{
+                    border-bottom: none;
+                    padding: 15px 0 0;
+                }
+            }
         }
         .svfm2__image {
             height: 100%;
@@ -184,8 +192,8 @@
         }
 
         .svfm2__tabs {
-            margin-left: 50%;
-            width:450px;
+            margin-left: 55%;
+            width:400px;
         }
         .svfm2__header {
             display: block;
@@ -200,6 +208,11 @@
 @include breakpoint(desktop) {
     .svfm2__wrapper {
         padding: 100px 0 130px;
+
+        .svfm2__tabs {
+            margin-left: 50%;
+            width:450px;
+        }
     }
 }
 

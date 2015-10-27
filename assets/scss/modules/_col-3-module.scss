@@ -4,7 +4,6 @@
 
 .col3__module {
 
-
     h6 {
         font-size: em(18px);
         color: $primary-color;
@@ -34,6 +33,14 @@
     h2{
         margin-bottom: 0;
         font-size: 69px;
+    }
+
+    .wrapper > div {
+        &:nth-last-child(1){
+            .col3__item {
+                padding-bottom: 0;
+            }
+        }
     }
 }
 
@@ -69,6 +76,7 @@
             margin: 0;
         }
     }
+
 }
 
 // Displays greater than 768px
@@ -85,6 +93,14 @@
 
     }
     .col3__container {
+        .wrapper > div {
+            &:nth-last-child(1){
+                .col3__item {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+
         .col3__item{
             padding:0 15px;
         }

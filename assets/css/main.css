@@ -703,18 +703,20 @@ blockquote.reverse {
   max-width: 1160px;
   background: #fff;
   margin: 0 auto;
+  padding: 0 30px;
 }
 .intro h2 {
   margin: 15px 0 32px 0;
-  font-size: 3.0625em;
-  line-height: 55px;
+  font-size: 1.625em;
+  line-height: 32px;
   margin-bottom: 16px;
 }
 .intro h5 {
-  font-size: 1.5em;
+  font-size: 1.125em;
   color: #959595;
   font-weight: 500;
   text-transform: uppercase;
+  line-height: 24px;
   letter-spacing: 1px;
 }
 .intro h6 {
@@ -1028,8 +1030,8 @@ blockquote.reverse {
     padding: 0;
   }
   .intro h2 {
-    font-size: 6.0625em;
-    line-height: 105px;
+    font-size: 4.1875em;
+    line-height: 72px;
   }
 
   .headline-md p {
@@ -1062,6 +1064,11 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .intro h2 {
+    font-size: 6.0625em;
+    line-height: 105px;
+  }
+
   .headline-md p {
     font-size: 24px;
     line-height: 32px;
@@ -1316,7 +1323,7 @@ blockquote.reverse {
   position: relative;
 }
 .inner-lg {
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
 }
 
@@ -1324,28 +1331,25 @@ blockquote.reverse {
   font-size: 21px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 30px;
 }
 .col-block h4 {
   text-transform: none;
   font-weight: 300;
   letter-spacing: 1px;
-}
-
-.buy-theme-sm h4 {
-  display: inline-block;
-  margin-right: 20px;
-}
-.buy-theme-sm a {
-  border-color: #fff;
-  color: #fff;
-}
-.buy-theme-sm a:hover {
-  background: #252525;
-  border-color: #252525;
-  color: #fff;
+  line-height: 28px;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 768px) {
+  .col-block {
+    padding: 0 30px;
+  }
+  .col-block h4 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
   .angle-top-bottom {
     bottom: 0;
     border-top: 35px solid transparent;
@@ -1376,6 +1380,10 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 992px) {
+  .inner-lg {
+    padding: 70px 0;
+  }
+
   .angle-top-bottom {
     bottom: 0;
     border-top: 60px solid transparent;
@@ -1406,6 +1414,10 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .inner-lg {
+    padding: 100px 0;
+  }
+
   .angle-top-bottom {
     bottom: 0;
     border-top: 80px solid transparent;
@@ -3196,7 +3208,7 @@ blockquote.reverse {
 
 .svfm1__content {
   padding: 0;
-  margin: 0 auto;
+  margin: 40px auto 0;
   max-width: 750px;
   position: relative;
   z-index: 2;
@@ -3635,7 +3647,8 @@ blockquote.reverse {
 }
 .svfm2__wrapper .tab__panel .title {
   margin: 0 auto;
-  width: 100%;
+  /* override for price tab */
+  width: 100% !important;
 }
 .svfm2__wrapper .tab__panel .title h3 {
   letter-spacing: 2px;
@@ -3651,13 +3664,14 @@ blockquote.reverse {
   display: block;
 }
 .svfm2__wrapper .tab__panel .item__link a {
-  padding-top: 15px;
+  padding: 15px 0;
   text-align: left;
   margin: 0;
   display: block;
   font-size: 14px;
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
+  border-bottom: 1px solid #CACACA;
 }
 .svfm2__wrapper .tab__panel .item__link i {
   float: right;
@@ -3728,6 +3742,10 @@ blockquote.reverse {
   .svfm2__wrapper .tab__panel .item .desc {
     width: 100%;
   }
+  .svfm2__wrapper .tab__panel .item__link a {
+    border-bottom: none;
+    padding: 15px 0 0;
+  }
   .svfm2__wrapper .svfm2__image {
     height: 100%;
   }
@@ -3740,8 +3758,8 @@ blockquote.reverse {
     width: 100%;
   }
   .svfm2__wrapper .svfm2__tabs {
-    margin-left: 50%;
-    width: 450px;
+    margin-left: 55%;
+    width: 400px;
   }
   .svfm2__wrapper .svfm2__header {
     display: block;
@@ -3753,6 +3771,10 @@ blockquote.reverse {
 @media only screen and (min-width: 1200px) {
   .svfm2__wrapper {
     padding: 100px 0 130px;
+  }
+  .svfm2__wrapper .svfm2__tabs {
+    margin-left: 50%;
+    width: 450px;
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -3916,7 +3938,7 @@ blockquote.reverse {
 }
 
 .box-lg .content {
-  padding: 2em;
+  padding: 1.5em;
 }
 .box-lg .content h3 {
   margin: 0 auto;
@@ -4219,12 +4241,11 @@ blockquote.reverse {
 
 @media only screen and (min-width: 768px) {
   .contact__wrapper {
-    margin: 200px auto 0;
-    padding: 0;
+    padding: 60px;
   }
 
   .contact__card {
-    height: 31.5625em;
+    height: 29.375em;
   }
   .contact__card--content h3 {
     font-size: 1.5em;
@@ -4238,13 +4259,14 @@ blockquote.reverse {
     padding: 0;
   }
   .contact__card--left {
-    width: 55%;
+    width: 50%;
   }
   .contact__card--left img {
     left: -155px;
+    max-width: 700px;
   }
   .contact__card--right {
-    width: 45%;
+    width: 50%;
   }
 
   .contact__us--content {
@@ -4269,9 +4291,27 @@ blockquote.reverse {
 @media only screen and (min-width: 992px) {
   .contact__wrapper {
     max-width: 1200px;
-    margin: 120px auto;
+    padding: 80px;
   }
 
+  .contact__card {
+    height: 30.625em;
+  }
+  .contact__card--left {
+    width: 50%;
+  }
+  .contact__card--left img {
+    left: -175px;
+    max-width: 782px;
+  }
+  .contact__card--right {
+    width: 50%;
+  }
+  .contact__card .contact__us h4 {
+    font-size: 1.125em;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .contact__card {
     height: 36em;
   }
@@ -4280,15 +4320,11 @@ blockquote.reverse {
   }
   .contact__card--left img {
     left: 0px;
+    max-width: 782px;
   }
   .contact__card--right {
     width: 35%;
   }
-  .contact__card .contact__us h4 {
-    font-size: 1.125em;
-  }
-}
-@media only screen and (min-width: 1200px) {
   .contact__card .contact__us h4 {
     padding-left: 47px;
   }
@@ -4388,19 +4424,19 @@ blockquote.reverse {
 .buy__container {
   display: table;
   text-align: center;
-  padding: 0;
+  padding: 0 30px;
   margin: 0 auto;
   color: #fff;
 }
 .buy__container h2 {
-  font-size: 46px;
+  font-size: 24px;
   margin-bottom: 40px;
   font-weight: 500;
   letter-spacing: 2px;
 }
 .buy__container p {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 40px;
   font-weight: 500;
   font-family: 'courier';
@@ -4408,11 +4444,68 @@ blockquote.reverse {
 .buy__container .buy-theme-sm {
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 45px;
 }
 .buy__container .buy-theme-sm h4 {
-  float: left;
+  display: block;
+  margin-bottom: 40px;
+  font-size: 21px;
 }
 
+@media only screen and (min-width: 768px) {
+  .buy__container h2 {
+    font-size: 32px;
+  }
+  .buy__container p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .buy__container .buy-theme-sm {
+    padding: 0;
+  }
+  .buy__container .buy-theme-sm h4 {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .buy__container {
+    padding: 0;
+    max-width: 840px;
+  }
+  .buy__container h2 {
+    font-size: 40px;
+  }
+  .buy__container p {
+    font-size: 21px;
+    line-height: 28px;
+  }
+  .buy__container .buy-theme-sm {
+    padding: 0;
+  }
+  .buy__container .buy-theme-sm h4 {
+    display: block;
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .buy__container {
+    max-width: 1000px;
+  }
+  .buy__container h2 {
+    font-size: 46px;
+  }
+  .buy__container p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .buy__container .buy-theme-sm h4 {
+    float: left;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+}
 /***************************************************************************/
 /* Footer ****************************************************/
 /***************************************************************************/
@@ -4889,6 +4982,9 @@ footer.loaded {
   margin-bottom: 0;
   font-size: 69px;
 }
+.col3__container .wrapper > div:nth-last-child(1) .col3__item {
+  padding-bottom: 0;
+}
 
 .col3__item {
   padding-bottom: 30px;
@@ -4934,6 +5030,9 @@ footer.loaded {
     text-align: center;
   }
 
+  .col3__container .wrapper > div:nth-last-child(1) .col3__item {
+    padding-bottom: 30px;
+  }
   .col3__container .col3__item {
     padding: 0 15px;
   }
@@ -7566,12 +7665,8 @@ footer.loaded {
   padding: 80px 0 40px;
   max-width: 250px;
 }
-.blog-featured .row {
-  padding: 0 30px;
-}
 .blog-featured .post-thumb {
   height: 300px;
-  margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 768px) {

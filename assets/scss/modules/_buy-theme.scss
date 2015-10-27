@@ -1,20 +1,20 @@
 .buy__container{
   display: table;
   text-align: center;
-  padding:0;
+  padding:0 30px;
   margin:0 auto;
   color:#fff;
 
   h2{
-	font-size: 46px;
+	font-size: 24px;
 	margin-bottom: 40px;
 	font-weight: 500;
     letter-spacing: 2px;
   }
 
   p{
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 16px;
+	line-height: 24px;
 	margin-bottom: 40px;
     font-weight: 500;
     font-family: 'courier';
@@ -22,30 +22,84 @@
   .buy-theme-sm{
     max-width:1170px;
     margin:0 auto;
+    padding:0 45px;
 
     h4{
-      float:left;
+      display: block;
+      margin-bottom: 40px;
+      font-size:21px;
     }
   }
 }
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
-
-
-
+  .buy__container{
+    h2{
+      font-size: 32px;
+    }
+    p{
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .buy-theme-sm{
+      padding:0;
+      h4{
+        font-size:24px;
+      }
+    }
+  }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+  .buy__container{
+    padding:0;
+    max-width: 840px;
 
+    h2{
+      font-size: 40px;
+    }
 
+    p{
 
+      font-size: 21px;
+      line-height: 28px;
+    }
+    .buy-theme-sm{
+      padding:0;
+
+      h4{
+        display: block;
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+  .buy__container{
+    max-width: 1000px;
+    h2{
+      font-size: 46px;
+    }
 
+    p{
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .buy-theme-sm{
+
+      h4{
+        float:left;
+        display: inline-block;
+        margin-right:20px;
+        margin-bottom: 0;
+        font-size: 24px;
+      }
+    }
+  }
 
 
 }

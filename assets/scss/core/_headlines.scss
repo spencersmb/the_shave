@@ -10,18 +10,20 @@
     max-width: 1160px;
     background: $white;
     margin: 0 auto;
+    padding:0 30px;
 
     h2 {
         margin: 15px 0 32px 0;
-        font-size: em(49px);
-        line-height: 55px;
+        font-size: em(26px);
+        line-height: 32px;
         margin-bottom: 16px;
     }
     h5{
-        font-size: em(24px);
+        font-size: em(18px);
         color: $dark-grey;
         font-weight: 500;
         text-transform:uppercase;
+        line-height: 24px;
         letter-spacing: 1px;
     }
     h6 {
@@ -340,8 +342,8 @@
     .intro {
         padding: 0;
         h2 {
-            font-size: em(97px);
-            line-height: 105px;
+            font-size: em(67px);
+            line-height: 72px;
         }
     }
 
@@ -387,6 +389,12 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+    .intro {
+        h2 {
+            font-size: em(97px);
+            line-height: 105px;
+        }
+    }
     .headline-md {
         p {
             font-size: 24px;

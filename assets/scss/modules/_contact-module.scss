@@ -120,11 +120,10 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .contact__wrapper {
-        margin: 200px auto 0;
-        padding: 0;
+        padding: 60px;
     }
     .contact__card {
-        height: em(505px);
+        height: em(470px);
         &--content {
             h3 {
                 font-size: em(24px);
@@ -139,13 +138,14 @@
             }
         }
         &--left {
-            width: 55%;
+            width: 50%;
             img {
                 left: -155px;
+                max-width: 700px;
             }
         }
         &--right {
-            width: 45%;
+            width: 50%;
         }
     }
     .contact__us {
@@ -173,18 +173,19 @@
 @include breakpoint(laptop) {
     .contact__wrapper {
         max-width: 1200px;
-        margin: 120px auto;
+        padding:80px;
     }
     .contact__card {
-        height: em(576px);
+        height: em(490px);
         &--left {
-            width: 65%;
+            width: 50%;
             img {
-                left: 0px;
+                left: -175px;
+                max-width: 782px;
             }
         }
         &--right {
-            width: 35%;
+            width: 50%;
         }
         .contact__us {
             h4 {
@@ -197,6 +198,17 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
     .contact__card {
+        height: em(576px);
+        &--left {
+            width: 65%;
+            img {
+                left: 0px;
+                max-width: 782px;
+            }
+        }
+        &--right {
+            width: 35%;
+        }
         .contact__us {
             h4 {
                 padding-left: 47px;
