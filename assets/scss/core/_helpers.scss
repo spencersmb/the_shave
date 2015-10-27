@@ -130,6 +130,10 @@
     background: $primary-color;
 }
 
+.black-bg {
+    background: $black;
+}
+
 .light-grey-bg {
     background-color: #F5F5F5;
 }
@@ -245,6 +249,45 @@
         top:-39px;
         left:50%;
         @include transform(translateX(-50%));
+    }
+}
+.inner{
+    &-sm{
+        padding:40px 0;
+        position: relative;
+    }
+    &-lg{
+        padding:100px 0;
+        position: relative;
+    }
+}
+.col-block{
+    font-size: 21px;
+    margin:0 auto;
+    text-align: center;
+
+    h4{
+        text-transform: none;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+}
+
+.buy-theme-sm{
+    h4{
+        display: inline-block;
+        margin-right:20px;
+    }
+    a{
+        border-color:#fff;
+        color:#fff;
+
+        &:hover{
+            background: $black;
+            border-color:$black;
+            color:$white;
+        }
     }
 }
 

@@ -21,22 +21,31 @@
         text-align: center;
         border-bottom: 0;
         background-color: rgba(0, 0, 0, 0.35);
-        height: 115px;
+        height: 100%;
         display: none;
         @include transition(all .3s);
+        h2{
+            margin:20px 0;
+            width:100%;
+            font-size: 24px;
+            color:$white;
+            font-family: $ubuntu;
+            font-weight: 500;
+        }
         h3 {
             color: #fff;
-            padding: 1.5em 1.5em;
-            margin: 0;
+            margin: 0 auto 20px;
             height: 100%;
             width: 100%;
-            display: table-cell;
-            vertical-align: middle;
+            display: block;
+            font-weight: 300;
+
         }
         .headline-container {
             height: 100%;
             width: 100%;
             display: table;
+            padding:20px 0;
         }
     }
     .tab-pane.tab-fade.in {
@@ -131,7 +140,6 @@
         }
         .svfm2__header {
             h3 {
-                padding: 1.5em 1.5em;
             }
         }
         .tab-pane.tab-fade.in {
@@ -170,13 +178,19 @@
 @include breakpoint(laptop) {
     .svfm2__wrapper {
         padding: 75px 0;
+
+        .tab-content {
+            width: 100%;
+        }
+
         .svfm2__tabs {
-            margin-left: 65%;
+            margin-left: 50%;
+            width:450px;
         }
         .svfm2__header {
             display: block;
             h3 {
-                padding: 1.5em 1.5em;
+                font-size: 16px;
             }
         }
     }
@@ -193,5 +207,9 @@
 @include breakpoint(desktopXL) {
     .svfm2__wrapper {
         padding: 140px 0;
+
+        .svfm2__tabs {
+            margin-left: 66%;
+        }
     }
 }

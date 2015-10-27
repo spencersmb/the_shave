@@ -85,7 +85,7 @@ $(function() {
 			var cascadeFeature = $('#cascadeFeature');
 
 				if(browserID == 'msie' && document.documentMode == 9){
-
+						
 						//IE9 fix for cascading animation
 						cascadeFeature.find('.svfm1__card').each(function(index){
 								$(this).css('opacity', 1);
@@ -97,7 +97,10 @@ $(function() {
 				}else{
 						//Run if any other browser
 						if(cascadeFeature){
-							ScrollCascade(windowSize, cascadeFeature);
+							setTimeout(function() {
+								ScrollCascade(windowSize, cascadeFeature);
+							}, 900);
+
 						}
 
 						modernProductsEvent();
@@ -154,11 +157,11 @@ $(function() {
 		// Scroll Magic Cascading fade in
 		// ==========================================================================
 		function ScrollCascade(windowWidthX, object){
-
+			
 			var cascadeFeature = object;
 
 			var duration = cascadeFeature.height();
-
+			
 			var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
 
 			function cascadeClasses(){
@@ -170,9 +173,9 @@ $(function() {
 			if(windowWidthX >= 600){
 				// build scenes
 				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
-					.offset(150)
+					.offset(-200)
 					.on("enter", cascadeClasses)
-			    //.addIndicators() // add indicators (requires plugin)
+			    .addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 			}else {
 				cascadeClasses();
@@ -342,8 +345,6 @@ $(function() {
 
 			if (windowSize + 15 >= desktop) {
 
-
-
 				skrollrCheck();
 				myFooter.width(windowSize);
 
@@ -362,14 +363,8 @@ $(function() {
 				myFooter.width(windowSize);
 				footerHeight = $('footer').height() + 'px';
 				$('.footer-push').css('margin-bottom', footerHeight);
-				//$('body').addClass('footer-mobile');
 			}
 
-			//modal check
-			//if(modalOpen && checkLaptopWidth() == false){
-			//	var modalImage = $('.modal-content').find('.row').windowSize();
-			//	$('.angle-top-modal').css('border-right-width', modalImage);
-			//}
 		}
 
 		// ==========================================================================

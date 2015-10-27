@@ -3,22 +3,8 @@
 /***************************************************************************/
 
 .col3__module {
-    h2 {
-        font-size: em(44px);
-        line-height: 55px;
-        margin-bottom: 10px;
-        margin-top: 15px;
-        text-align: center;
-    }
-    h5 {
-        font-size: em(22px);
-        font-family: $courier;
-        color: #909090;
-        text-transform: initial;
-        max-width: 800px;
-        width: 100%;
-        margin: 15px auto 0;
-    }
+
+
     h6 {
         font-size: em(18px);
         color: $primary-color;
@@ -32,20 +18,23 @@
         margin: 0 auto;
     }
     .wrapper {
-        margin: 0 auto 20px;
+        margin: 0 auto;
         padding: 0;
         max-width: 1200px;
+        display: block;
     }
     .desc {
         text-align: center;
     }
-    .intro {
-        margin: 30px auto 15px;
-    }
+
 }
 
 .col3__container {
     text-align: center;
+    h2{
+        margin-bottom: 0;
+        font-size: 69px;
+    }
 }
 
 .col3__item {
@@ -67,10 +56,14 @@
     &--content {
         clear: both;
         h5 {
-            font-weight: 700;
-            text-transform: uppercase;
             font-size: em(18px);
-            margin: 25px auto 15px;
+            font-family: $ubuntu;
+            color: #909090;
+            max-width: 800px;
+            width: 100%;
+            margin: 30px auto 15px;
+            font-weight: 500;
+            text-transform: uppercase;
         }
         p {
             margin: 0;
@@ -81,52 +74,42 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .col3__module {
-        h2 {
-            font-size: em(72px);
-            line-height: 80px;
-            margin-bottom: 16px;
-            letter-spacing: 3px;
-        }
-        h5 {
-            font-size: 20px;
-        }
         .wrapper {
             margin: 0 auto;
-            padding: 0 15px;
-            display: inline-block;
+            padding: 0;
+            display: block;
         }
         .desc {
             text-align: center;
         }
-        .intro {
-            margin: 55px auto 15px;
-            padding: 0 3.5%;
-        }
+
     }
     .col3__container {
-        margin-bottom: 20px;
+        .col3__item{
+            padding:0 15px;
+        }
+        h5 {
+            margin: 50px auto 25px;
+        }
     }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
     .col3__module {
-        h2 {
-            font-size: em(95px);
-            line-height: 105px;
-        }
-        h5 {
-            font-size: em(24px);
-        }
         .wrapper {
-            margin: 20px auto 20px;
+            margin: 20px auto 0;
         }
         .desc {
             text-align: left;
         }
+
     }
     .col3__container {
-        margin-bottom: 30px;
+
+        h5 {
+            font-size: em(18px);
+        }
     }
 }
 

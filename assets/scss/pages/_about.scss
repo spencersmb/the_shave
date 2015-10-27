@@ -101,6 +101,54 @@
     }
 }
 
+.about-phone{
+    margin:0 auto;
+    width:100%;
+    height:100%;
+    position: relative;
+    text-align: center;
+    color:$white;
+
+    &-bg{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        opacity: .1;
+        background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+
+
+    a{
+        color:$white;
+    }
+
+    h2{
+        margin-bottom:40px;
+        font-size:69px;
+        @include transition(all .3s $ease-in-cubic);
+        display: inline-block;
+
+        &:hover{
+        }
+    }
+    .subtext{
+        margin-bottom: 40px;
+    }
+    p{
+        font-size:24px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: 'courier';
+        line-height: 32px;
+        margin:0;
+    }
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .image-bg-cover {

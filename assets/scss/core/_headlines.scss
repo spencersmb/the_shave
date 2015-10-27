@@ -2,12 +2,36 @@
 /* Headlines & Headers ****************************************************/
 /***************************************************************************/
 
+
+
 .intro {
-    margin: 30px auto 40px;
     text-align: center;
     font-family: $heading-font;
+    max-width: 1160px;
+    background: $white;
+    margin: 0 auto;
+
     h2 {
-        margin: 0 0 32px 0;
+        margin: 15px 0 32px 0;
+        font-size: em(49px);
+        line-height: 55px;
+        margin-bottom: 16px;
+    }
+    h5{
+        font-size: em(24px);
+        color: $dark-grey;
+        font-weight: 500;
+        text-transform:uppercase;
+        letter-spacing: 1px;
+    }
+    h6 {
+        font-size: em(18px);
+        color: $primary-color;
+        font-family: 'courier';
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
     }
     p {
         font-weight: 300;
@@ -24,6 +48,9 @@
         text-transform: initial;
         font-size: em(16px);
         color: darken($white, 80%);
+        text-align: center;
+        max-width: 900px;
+        margin:0 auto;
     }
 }
 
@@ -219,10 +246,13 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .intro {
-        margin: 30px auto 45px;
         padding: 0 10%;
         .sub-copy {
             font-size: em(18px);
+        }
+        h2 {
+            font-size: em(72px);
+            line-height: 80px;
         }
     }
     .headline-sm {
@@ -308,8 +338,11 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
     .intro {
-        margin: 30px auto 80px;
         padding: 0;
+        h2 {
+            font-size: em(97px);
+            line-height: 105px;
+        }
     }
 
     .headline-md {
