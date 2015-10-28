@@ -200,14 +200,14 @@
     .contact__card {
         height: em(576px);
         &--left {
-            width: 65%;
+            width: 60%;
             img {
-                left: 0px;
+                left: 0;
                 max-width: 782px;
             }
         }
         &--right {
-            width: 35%;
+            width: 40%;
         }
         .contact__us {
             h4 {

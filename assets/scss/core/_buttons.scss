@@ -18,31 +18,20 @@
     @include transition(all 0.2s);
 }
 
-.nav__book {
-    position: absolute;
-    top: 26px;
-    right: 4%;
-    width: 20%;
-    a {
-        display: inline-block;
-        float: right;
-
-        &:focus{
-            color:$white;
-        }
-    }
-
-}
-
 .book__nav {
     font-family: $ubuntu;
     font-size: 13px;
     text-transform: uppercase;
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 2px solid $white;
     color:#fff;
+    @include transition(all .3s);
 
     i {
         margin-left: 7px;
+    }
+
+    &:hover{
+        border-bottom: 2px solid $primary-color;
     }
 }
 
@@ -168,9 +157,7 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-    .nav__book {
-        right: 45px;
-    }
+
 }
 
 // Displays greater than 1200px

@@ -20,7 +20,6 @@
     font-family: 'courier';
   }
   .buy-theme-sm{
-    max-width:1170px;
     margin:0 auto;
     padding:0 45px;
 
@@ -54,15 +53,16 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
   .buy__container{
+    display: block;
     padding:0;
-    max-width: 840px;
+    max-width: 850px;
 
     h2{
       font-size: 40px;
+
     }
 
     p{
-
       font-size: 21px;
       line-height: 28px;
     }
@@ -71,7 +71,12 @@
 
       h4{
         display: block;
-        font-size: 24px;
+        font-size: 21px;
+        margin:10px auto 0;
+        float:left;
+      }
+      a{
+        float:right;
       }
     }
   }
@@ -80,7 +85,7 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
   .buy__container{
-    max-width: 1000px;
+    max-width: 925px;
     h2{
       font-size: 46px;
     }
@@ -92,9 +97,6 @@
     .buy-theme-sm{
 
       h4{
-        float:left;
-        display: inline-block;
-        margin-right:20px;
         margin-bottom: 0;
         font-size: 24px;
       }

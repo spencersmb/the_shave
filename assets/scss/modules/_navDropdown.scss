@@ -12,6 +12,61 @@
     z-index: $above-content; //3
     @include transition(background .3s $ease-in-out-quad);
 
+    .nav__book {
+        position: absolute;
+        text-align: right;
+        top: 26px;
+        right: 160px;
+        padding-top: 2px;
+        display: table;
+        & > a {
+            display: inline-block;
+            float:right;
+            margin-right:5px;
+            margin-left:10px;
+
+            &:focus{
+                color:$white;
+            }
+        }
+
+        @include MQ(M){
+            .nav__book {
+                right: 45px;
+            }
+        }
+
+    }
+    .quick-link{
+        display: inline-block;
+        height:32px;
+
+        a{
+            display: table;
+            width:32px;
+            height:100%;
+            text-align: center;
+            color:$white;
+            margin:0 7px;
+            @include transition(color 0s);
+
+            &:hover{
+                color:$primary-color;
+                i{
+                    color:$primary-color;
+                }
+            }
+        }
+        i{
+            width:100%;
+            height:100%;
+            vertical-align: baseline;
+            display:table-cell;
+            padding-top:4px;
+            @include transition(color 0.3s);
+        }
+    }
+
     @include MQ(M) {
         top: 0;
         left: 0;
@@ -61,6 +116,27 @@
 
         .book__nav{
             color:$black;
+            border-bottom: 2px solid $black;
+
+            &:hover{
+                color:$primary-color;
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+
+        .quick-link{
+            a{
+                i{
+                    color:$black;
+                }
+
+                &:hover{
+                    color:$primary-color;
+                    i{
+                        color:$primary-color;
+                    }
+                }
+            }
         }
         @include MQ(M){
             background:rgba(255, 255, 255, 0);
@@ -72,12 +148,11 @@
 #sv__logo {
     height: 100%;
     display: inline-block;
-    left: 0;
+    left: 25px;
     position: relative;
-    float: right;
-    right: 10px;
+    float: left;
+    right: auto;
     padding-right: 20px;
-
 
     &:hover{
         color:$primary-color;
@@ -96,11 +171,8 @@
         color:$white;
     }
     @include MQ(M) {
-        left: -5px;
-        float: none;
-        right: 0;
         padding-right: 0;
-        color:#fff;
+        color:$white;
         h1 {
             font-size: em(24px);
             margin-top: 28px;
@@ -125,13 +197,13 @@
     display: inline-block;
     position: absolute;
     top: 14px;
-    left: 4.5%;
+    right:4.5%;
     @include MQ(M) {
-        top: 19px;
-        left: 2.5%;
+        top: 17px;
+        right:32px;
     }
     @include MQ(L) {
-        left: 20px;
+
     }
     .book-now-m {
         cursor: pointer;
@@ -157,8 +229,8 @@
 
     .no-touch &:hover {
         color: $primary-color;
-        background-color: $white;
-        border: 3px solid $white;
+        background-color: transparent;
+        border: 3px solid $primary-color;
         &::before,
         &::after {
             @include transition(background-color 0.2s);
@@ -1001,7 +1073,7 @@
         }
         > .has-children > a.is-active {
             /* hover effect for .cd-dropdown-content items with subnavigation */
-            box-shadow: inset 2px 0 0 $primary-color;
+            box-shadow: inset 3px 0 0 $primary-color;
             color: $primary-color;
             &::before,
             &::after {
@@ -1010,11 +1082,14 @@
         }
         > .single-item > a.is-active {
             /* hover effect for .cd-dropdown-content items with no subnavigation */
-            box-shadow: inset 2px 0 0 $primary-color;
+            box-shadow: inset 3px 0 0 $primary-color;
             color: $primary-color;
         }
         .open-to-left & > .has-children > a.is-active {
-            box-shadow: inset -2px 0 0 $primary-color;
+            box-shadow: inset -3px 0 0 $primary-color;
+        }
+        .open-to-left & > .single-item > a.is-active {
+            box-shadow: inset -3px 0 0 $primary-color;
         }
     }
 }

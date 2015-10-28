@@ -175,7 +175,7 @@ $(function() {
 				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
 					.offset(-200)
 					.on("enter", cascadeClasses)
-			    .addIndicators() // add indicators (requires plugin)
+			    //.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 			}else {
 				cascadeClasses();
@@ -367,70 +367,6 @@ $(function() {
 
 		}
 
-		// ==========================================================================
-		// Modal config
-		// ==========================================================================
-		(function() {
-
-			var modal = $('.modal');
-
-			modal.on('show.bs.modal', centerModal);
-			modal.on('hide.bs.modal', modalOut);
-			modal.click(function () {
-				$('.modal').modal('toggle');
-			});
-
-			$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
-				var elem = $( this );
-				setTimeout(function() {
-					elem.prev().toggleClass('focused');
-					elem.toggleClass( "focused", elem.is( ":focus" ) );
-				}, 0 );
-			});
-
-		})();
-
-		function centerModal(){
-
-			//add display block to get height of the modal-dialog
-			$(this).css('display', 'block');
-
-			var dialog = $(this).children('.modal-dialog'),
-
-				//center the object
-					offset = ( $(window).height() - dialog.height() ) / 2,
-
-					// get current bottom margin - set base 10
-					bottomMargin = parseInt(dialog.css('marginBottom'), 10);
-
-
-
-			//makes sure you dont have negative margin
-			if(offset < bottomMargin){
-
-				offset = bottomMargin;
-			}
-
-			dialog.css('margin-top', offset);
-
-			modalIn();
-		}
-
-		function angleModal(){
-				var modalImage = $('.modal-content').find('.row').width();
-				$('.angle-top-modal').css('border-right-width', (modalImage / 2) + 1);
-		}
-
-		function modalIn(){
-			$('.modal-content').find('.row').children('div').eq(1).addClass('animate-in');
-		}
-
-		function modalOut(){
-			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
-			//$('body').css('max-width', '100%');
-			modalOpen = false;
-		}
-
 		function setModalHeight(object){
 
 			//set div heights the same for laptop/desktop
@@ -524,7 +460,7 @@ $(function() {
 
 			$(window).on('resize', function() {
 				resizedWidth = $(window).width() + 15;
-				console.log(resizedWidth);
+				//console.log(resizedWidth);
 			});
 
 			if (resizedWidth >= tablet || screenSize >= tablet) {
@@ -610,6 +546,33 @@ $(function() {
 			$('#twitter-carousel').carousel({
 				interval: 0
 			});
+
+			// ==========================================================================
+			// Scroll to functions
+			// ==========================================================================
+			$('.box-sm-hours').find('a').click(function (e) {
+				e.preventDefault();
+
+				$('html, body').animate({
+					scrollTop: $( $.attr(this, 'href') ).offset().top - 80
+				}, 900);
+				return false;
+
+			});
+
+			//$('#hours').click(function(e){
+			//	e.preventDefault();
+			//	$('.sv-toast').addClass('in');
+			//});
+      //
+			//$('.sv-hours').children('button').click(function(e){
+			//	e.preventDefault();
+			//	$('.sv-toast').addClass('out');
+			//	setTimeout(function() {
+			//		$('.sv-toast').removeClass('in out');
+			//	}, 800 );
+			//});
+
 
 
 		})();

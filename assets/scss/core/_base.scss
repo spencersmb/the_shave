@@ -75,7 +75,7 @@ article {
 a {
     color: $black;
     @include transition-property(color);
-    @include transition-duration(.4s);
+    @include transition-duration(.3s);
     &:hover {
         color: $primary-color;
         text-decoration: none;

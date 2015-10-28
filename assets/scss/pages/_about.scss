@@ -108,7 +108,6 @@
     position: relative;
     text-align: center;
     color:$white;
-
     &-bg{
         position: absolute;
         top:0;
@@ -120,31 +119,28 @@
         -webkit-background-size: cover;
         background-size: cover;
     }
-
-
-
     a{
         color:$white;
     }
-
     h2{
-        margin-bottom:40px;
-        font-size:69px;
+        margin-bottom:30px;
+        font-size:36px;
         @include transition(all .3s $ease-in-cubic);
-        display: inline-block;
+        display: block;
+        line-height: 42px;
 
         &:hover{
         }
     }
     .subtext{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     p{
-        font-size:24px;
+        font-size:16px;
         text-transform: uppercase;
         font-weight: 500;
         font-family: 'courier';
-        line-height: 32px;
+        line-height: 24px;
         margin:0;
     }
 }
@@ -236,6 +232,22 @@
             }
         }
     }
+    .about-phone {
+        h2{
+            margin-bottom:40px;
+            font-size:55px;
+            line-height: 60px;
+            display: block;
+        }
+        .subtext{
+            margin-bottom: 40px;
+        }
+        p{
+            font-size:21px;
+            line-height: 28px;
+        }
+
+    }
 }
 
 // Displays greater than 992px
@@ -283,6 +295,21 @@
                 }
             }
         }
+    }
+    .about-phone {
+        h2{
+            margin-bottom:40px;
+            font-size:69px;
+            display: inline-block;
+        }
+        .subtext{
+            margin-bottom: 40px;
+        }
+        p{
+            font-size:24px;
+            line-height: 32px;
+        }
+
     }
 }
 
