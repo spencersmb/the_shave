@@ -6,6 +6,7 @@
     max-width: 970px;
     background: $white;
     margin: 0 auto;
+    padding:0 15px;
     text-align: center;
     h2 {
         font-size: em(49px);
@@ -16,7 +17,7 @@
     h6 {
         font-size: em(18px);
         color: $primary-color;
-        font-family: 'courier';
+        font-family: $courier;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -47,7 +48,7 @@
     overflow: hidden;
     text-align: center;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     background-color: $black;
     .content {
         position: relative;
@@ -155,7 +156,7 @@
     background-color: #eeeeee;
     .content {
         padding: 25px 10%;
-        background-color: #ECECEC;
+        background-color: $grey;
     }
     img {
         display: block;
@@ -225,6 +226,7 @@
 // Displays greater than 600px
 @include breakpoint(tablet) {
     .staggered__container {
+        padding:0 15px;
         h2 {
             font-size: em(72px);
             line-height: 80px;
@@ -303,6 +305,7 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
     .staggered__container {
+        padding:0;
         h2 {
             font-size: em(97px);
             line-height: 105px;

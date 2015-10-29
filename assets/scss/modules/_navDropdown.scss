@@ -122,6 +122,9 @@
                 color:$primary-color;
                 border-bottom: 2px solid $primary-color;
             }
+            &:focus{
+                color:$black;
+            }
         }
 
         .quick-link{
@@ -555,7 +558,7 @@
             font-size: 16px;
             text-align: left;
             @include transition(color .2s);
-            font-family: $courier;
+            font-family: $courier-new;
             letter-spacing: 0;
             text-transform: none;
             font-weight: 300;
@@ -1121,7 +1124,7 @@
     height: 50px;
     padding: 0 20px;
     @include appearance(none);
-    background-color: darken($white, 76%);
+    background-color: $light-grey;
     color: $white;
     border: none;
     border-radius: 0;
@@ -1171,7 +1174,7 @@
     @include MQ(L) {
         &::before,
         &::after {
-            background: darken($white, 30%);
+            background: $dark-grey-hover;
         }
     }
 }

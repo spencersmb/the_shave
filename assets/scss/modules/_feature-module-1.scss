@@ -167,6 +167,7 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .svfm1__content {
+        padding:0 15px;
         max-width: 800px;
         &--offset {
             position: absolute;
@@ -199,6 +200,7 @@
 @include breakpoint(laptop) {
 
     .svfm1__content {
+        padding:0;
         max-width: 1200px;
     }
     .svfm1__card {

@@ -44,7 +44,7 @@
         opacity: 1;
         @include transition(all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55));
     }
-    p {
+    .grid__content {
         position: relative;
         padding: 0 15px;
         width: 100%;
@@ -77,7 +77,10 @@
         position: relative;
         padding: 15px 10px;
         height: 100%;
-        background: #f3f3f3;
+        background: $lighter-grey;
+    }
+    p{
+        margin:0;
     }
 }
 
@@ -135,11 +138,11 @@
     .subtext{
         margin-bottom: 30px;
     }
-    p{
+    .grid__content{
         font-size:16px;
         text-transform: uppercase;
         font-weight: 500;
-        font-family: 'courier';
+        font-family: $courier;
         line-height: 24px;
         margin:0;
     }
@@ -165,6 +168,7 @@
         .fa-icon {
             top: 70px;
             margin-bottom: 60px;
+            opacity: 1;
         }
         .fa-down {
             display: block;
@@ -173,7 +177,7 @@
             padding: 0 0 15px;
             top: 0;
         }
-        p {
+        .grid__content {
             position: absolute;
             width: 90%;
             left: 50%;
@@ -185,10 +189,11 @@
         .grid__inner {
             padding: 25px;
             height: 320px;
-            border: 5px solid #f3f3f3;
+            border: 5px solid $lighter-grey;
             &:hover {
                 .fa-icon {
-                    top: -5px;
+                    top: -20px;
+                    opacity: 0;
                 }
                 .fa-down {
                     opacity: 0;
@@ -198,7 +203,7 @@
                     top: 115px;
                     opacity: 0;
                 }
-                p {
+                .grid__content {
                     top: 50%;
                     opacity: 1;
                     @include transform(translateY(-50%) translateX(-50%) scale(1));

@@ -4,15 +4,11 @@
 
 // Font Stacks
 $font-url--ubuntu: 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,400italic';
-
 $ubuntu: 'Ubuntu', sans-serif;
-
 $font-url--yellowtail: 'http://fonts.googleapis.com/css?family=Yellowtail';
-
-$courier   : 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
-
+$courier   : Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+$courier-new   : 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 $heading-font: $ubuntu;
-
 $yellowtail: 'Yellowtail', cursive;
 
 
@@ -26,58 +22,20 @@ $letter-space: 1px;
 // Descriptive Base Colors
 $white     : #fff;
 $black     : #252525;
+$light-grey: #ebebeb;
+$lighter-grey: #F3F3F3;
 $grey      : #e8e8e8;
-$dark-grey : #959595;
-$light-grey: #EDEDED;
+$dark-grey : #d0d0d0;
+$darker-grey : #959595;
+$subtext-dk-grey: #6B6B6B;
 
-//3 col header grey - #909090
-//nav grey btns - #ebebeb
-//nav arrow grey - #b3b3b3
-
-//modul borders - #cbcbcb
-//modal - li-bg - #DCDCDC
-//modal hover - #E8E8E8
-
-//toast text - #969696
-//toast close btn - #000 opacity .2 / hover .5
-//toast - subtext - #636363
-
-//staggered grid bg - #ECECEC
-
-//AFtershave - subtext - #9A9A9A
-
-//Tab active bg - #e8e8e8
-//Tab inactive - #F3F3F3
-//Tab inactive border - #d0d0d0
-
-//container grey - #e8e8e8
-
-//prices border bottom - #CACACA
-
-//H3 sub headers on white(prices page) - #9A9A9A
-
-//Why choose shave card hovers - #f3f3f3
-
-//blog details bg color - blog author - #EAEAEA
-
-//blog comments border (on grey) - #DBDBDB
-
-//comments bg - #EAEAEA
-//comments border bottom - #C3C3C3
-//comments focused - rgb(224,224,224, .35
-
-
-//## Gray and brand colors for use across Bootstrap.
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-
+//Hover base colors
+$lighter-grey-hover: #D4D4D4;
+$dark-grey-hover: #B5B5B5;
 
 // BRAND COLOR
-$gold              : #af8c45;//standard
+$gold              : #af8c45;
+$cream             : #eae9e5;
 
 $primary-color     : $gold;
 $shadow-color      : rgba($black, .2);
@@ -124,9 +82,6 @@ $above-content: 3;
 //Header Sizes
 $header-S: 60px;
 $header-M: 80px;
-
-//Change nav slideout animation
-$pushNav: transform .4s ease-in-out, opacity 300ms, ease-out;
 
 //Push space for footer
 $footerPush: 435px;

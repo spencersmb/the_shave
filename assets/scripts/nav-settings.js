@@ -214,7 +214,6 @@ $(function() {
 
 				//mon-fri
 				if(day >= 1 && day <= 5){
-
 					//if its am or pm
 					if(ampm === 'am'){
 
@@ -227,7 +226,8 @@ $(function() {
 						}
 
 					}else{
-						if(hours >= 1 && hours <= 9){
+
+						if(hours >= 12 && hours < 21){
 							console.log('open');
 							toastStatus.text(open);
 						}else{

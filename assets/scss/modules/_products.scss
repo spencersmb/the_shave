@@ -61,12 +61,13 @@
         h5 {
             font-size: 15px;
             font-weight: 400;
+            margin-bottom: 5px;
         }
         h6 {
-            color: #9A9A9A;
+            color: $darker-grey;
             font-size: 15px;
             font-weight: 400;
-            padding-top: 5px;
+            padding-top: 0;
         }
         .angle-bottom-card {
             @extend .angle-bottom;

@@ -7,7 +7,7 @@
     h6 {
         font-size: em(18px);
         color: $primary-color;
-        font-family: 'courier';
+        font-family: $courier;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -65,7 +65,7 @@
         h5 {
             font-size: em(18px);
             font-family: $ubuntu;
-            color: #909090;
+            color: $darker-grey;
             max-width: 800px;
             width: 100%;
             margin: 30px auto 15px;

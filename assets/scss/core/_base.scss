@@ -10,7 +10,7 @@
 html,
 body {
     //  height: 100%;
-    font-family: $courier;
+    font-family: $courier-new;
     font-size: $base__font-size;
     line-height: $base__line;
     -webkit-font-smoothing: antialiased;
@@ -20,8 +20,6 @@ body {
     overflow-x: hidden;
     padding:0 !important;
 }
-
-
 
 h1,
 h2,
@@ -125,58 +123,6 @@ ul {
 .no-js section {
     @include transition(opacity 1s ease-out);
     opacity: 1;
-}
-
-.inner__header,
-.inner__header--sm {
-    text-align: center;
-    clear: both;
-    margin: em(40px) auto em(200px);
-    h1 {
-        font-size: em(84px);
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    p {
-        font-size: em(24px);
-    }
-    h3 {
-        color: $white;
-        max-width: 39.375em;
-        margin-left: auto;
-        margin-right: auto;
-        font-weight: 300;
-        line-height: em(21px);
-        font-family: courier;
-        letter-spacing: 1px;
-        font-size: em(24px);
-        text-transform: none;
-    }
-    h4 {
-        text-transform: none;
-        font-weight: 300;
-        font-size: em(16px);
-        color: darken($white, 60%);
-        line-height: em(28px);
-        max-width: 900px;
-        text-align: center;
-        margin: 0 auto;
-    }
-}
-
-.inner__header--sm {
-    margin: 50px auto 25px;
-    padding: 0 25px;
-
-    h1 {
-        font-size: 28px;
-    }
-    h3 {
-        color:#9A9A9A;
-        margin:10px auto 0;
-        font-size: 16px;
-        letter-spacing: 0;
-    }
 }
 
 .inner-content-module {
@@ -355,20 +301,7 @@ blockquote {
             }
         }
     }
-    .inner__header--sm {
-        margin:140px auto 35px;
-        padding:0 35px;
 
-        h1 {
-            font-size: 56px;
-        }
-        h3 {
-            margin-top: 25px;
-            font-size: 21px;
-            max-width: 700px;
-            margin-bottom: 15px;
-        }
-    }
     .section__wrapper {
         margin: 40px auto 25px;
     }
@@ -386,18 +319,6 @@ blockquote {
         font-family: $ubuntu;
         font-weight: 300;
         color: $black;
-    }
-    .inner__header--sm {
-        margin:160px auto 80px;
-
-        h1 {
-            font-size: 84px;
-            line-height: 1.13;
-        }
-        h3 {
-            margin-top: 35px;
-            font-size: 21px;
-        }
     }
     .offset__content {
         padding: 0 60px;

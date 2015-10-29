@@ -26,6 +26,7 @@
     & > li {
         background: $white;
         margin: 0 25px 25px;
+
     }
     .shave__faq--title {
         margin: 2em 0 1em;
@@ -51,6 +52,12 @@
         font-size: em(15px);
         line-height: em(24px);
         color: $black;
+
+    }
+    &.active{
+        display: block;
+    }
+    .faq--wrapper{
         padding: 0 30px 30px;
     }
 }
@@ -112,12 +119,13 @@
         }
     }
     .shave__faq--content {
-        display: none;
         border: 1px solid transparent;
         p {
             font-size: em(15px);
             line-height: em(24px);
             color: $black;
+        }
+        .faq--wrapper{
             padding: 0 24px 30px;
         }
     }

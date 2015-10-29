@@ -30,7 +30,6 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    //  padding-left:58px;
 }
 
 .icon {
@@ -39,17 +38,15 @@
     left: 0;
     width: 52px;
     height: 52px;
-    //  background-color: rgba(255, 255, 255, 0.5);
     @include transition(all .5s);
     i {
         text-align: center;
         padding-top: 15px;
         font-size: 21px;
         display: block;
-        color: #9A9A9A;
+        color: $darker-grey;
     }
     &.focused {
-        //  background-color: rgba(255, 255, 255, 1);
         i {
             color: $primary-color;
         }
@@ -66,26 +63,26 @@
     border: 0;
     padding-left: 45px;
     margin-bottom: 30px;
-    background-color: #EAEAEA;
-    border-bottom: 3px solid #C3C3C3;
+    background-color: $grey;
+    border-bottom: 3px solid $dark-grey;
     @include transition(all .5s);
     &:focus {
         box-shadow: none;
         outline: 0;
-        background-color: rgba(224, 224, 224, 0.35);
-        border-bottom: 3px solid #D0B311;
+        background-color: $lighter-grey;
+        border-bottom: 3px solid $primary-color;
     }
     &::-webkit-input-placeholder {
-        color: #5F5F5F;
+        color: $subtext-dk-grey;
     }
     &::-moz-placeholder {
-        color: #5F5F5F;
+        color: $subtext-dk-grey;
     }
     &:-moz-placeholder {
-        color: #5F5F5F;
+        color: $subtext-dk-grey;
     }
     &:-ms-input-placeholder {
-        color: #5F5F5F;
+        color: $subtext-dk-grey;
     }
 }
 
@@ -98,41 +95,29 @@
     padding-top: 13px;
     margin-bottom: 30px;
     height: 216px;
-    background-color: #EAEAEA;
-    border-bottom: 3px solid #C3C3C3;
+    background-color: $grey;
+    border-bottom: 3px solid $dark-grey;
     @include transition(all .5s);
     &:focus {
         box-shadow: none;
         outline: 0;
-        background-color: rgba(224, 224, 224, 0.35);
-        border-bottom: 3px solid #D0B311;
+        background-color: $lighter-grey;
+        border-bottom: 3px solid $primary-color;
     }
     &::-webkit-input-placeholder {
-        color: $black;
+        color: $subtext-dk-grey;
     }
     &::-moz-placeholder {
-        color: $black;
+        color: $subtext-dk-grey;
     }
     &:-moz-placeholder {
-        color: $black;
+        color: $subtext-dk-grey;
     }
     &:-ms-input-placeholder {
-        color: $black;
+        color: $subtext-dk-grey;
     }
 }
 
-.pencil-contact {
-    .icon {
-        background-color: transparent;
-    }
-    i {
-        position: absolute;
-        padding-left: 15px;
-        margin-bottom: 30px;
-        font-size: 25px;
-        color: #9A9A9A;
-    }
-}
 
 @include breakpoint(tablet) {
     .contact__form {

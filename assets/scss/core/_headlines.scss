@@ -1,7 +1,57 @@
 /***************************************************************************/
 /* Headlines & Headers ****************************************************/
 /***************************************************************************/
+.inner__header,
+.inner__header--sm {
+    text-align: center;
+    clear: both;
+    margin: em(40px) auto em(200px);
+    h1 {
+        font-size: em(84px);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    p {
+        font-size: em(24px);
+    }
+    h3 {
+        color: $white;
+        max-width: 39.375em;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 300;
+        line-height: em(21px);
+        font-family: courier;
+        letter-spacing: 1px;
+        font-size: em(24px);
+        text-transform: none;
+    }
+    h4 {
+        text-transform: none;
+        font-weight: 300;
+        font-size: em(16px);
+        color: darken($white, 60%);
+        line-height: em(28px);
+        max-width: 900px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
 
+.inner__header--sm {
+    margin: 50px auto 25px;
+    padding: 0 25px;
+
+    h1 {
+        font-size: 28px;
+    }
+    h3 {
+        color:$darker-grey;
+        margin:10px auto 0;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+}
 
 
 .intro {
@@ -29,7 +79,7 @@
     h6 {
         font-size: em(18px);
         color: $primary-color;
-        font-family: 'courier';
+        font-family: $courier;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -46,7 +96,7 @@
         margin: 0;
     }
     .sub-copy {
-        font-family: $courier;
+        font-family: $courier-new;
         text-transform: initial;
         font-size: em(16px);
         color: darken($white, 80%);
@@ -240,13 +290,27 @@
             line-height: 1.3125em;
             text-transform: none;
             text-align: center;
-            font-family: 'courier';
+            font-family: $courier;
         }
     }
 }
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+    .inner__header--sm {
+        margin:140px auto 35px;
+        padding:0 35px;
+
+        h1 {
+            font-size: 56px;
+        }
+        h3 {
+            margin-top: 25px;
+            font-size: 21px;
+            max-width: 700px;
+            margin-bottom: 15px;
+        }
+    }
     .intro {
         padding: 0 10%;
         .sub-copy {
@@ -339,6 +403,18 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+    .inner__header--sm {
+        margin:160px auto 80px;
+
+        h1 {
+            font-size: 84px;
+            line-height: 1.13;
+        }
+        h3 {
+            margin-top: 35px;
+            font-size: 21px;
+        }
+    }
     .intro {
         padding: 0;
         h2 {
@@ -346,7 +422,6 @@
             line-height: 72px;
         }
     }
-
     .headline-md {
         p {
             max-width: 825px;
