@@ -6,7 +6,7 @@ $(function() {
 		myFooter = $('footer'),
 		desktop = 993,
 		tablet = 784,
-		windowSize = myWindow.width() + 15,
+		windowSize = myWindow.width(),
 		browserID = WhichBrowser(),
 		resizedWidth;
 	
@@ -85,30 +85,83 @@ $(function() {
 			var cascadeFeature = $('#cascadeFeature');
 
 				if(browserID == 'msie' && document.documentMode == 9){
-
+						
 						//IE9 fix for cascading animation
 						cascadeFeature.find('.svfm1__card').each(function(index){
 								$(this).css('opacity', 1);
 						});
 
+						//ie9 fix for cards
+						ie9ProductsEvent();
+
 				}else{
 						//Run if any other browser
 						if(cascadeFeature){
-							ScrollCascade(windowSize, cascadeFeature);
+							setTimeout(function() {
+								ScrollCascade(windowSize, cascadeFeature);
+							}, 900);
+
 						}
+
+						modernProductsEvent();
 				}
 
+		}
+
+		// ==========================================================================
+		// Activate Product details modern browser
+		// ==========================================================================
+		function modernProductsEvent(){
+			var wrapper = $('.card__slider');
+
+			wrapper.on('click', function(event){
+				event.preventDefault();
+				$(this).find('.content__wrapper').toggleClass('active');
+			});
+		}
+
+		// ==========================================================================
+		// Rearrange copy for IE9
+		// ==========================================================================
+		function ie9ProductsEvent(){
+			var productsContainer = $('.products');
+
+			//click event
+			var wrapper = $('.card__slider');
+
+			wrapper.on('click', function(event){
+				event.preventDefault();
+				$(this).toggleClass('active');
+			});
+
+			//move elements
+
+			if(productsContainer){
+				productsContainer.find('.card__slider').each(function(i, v){
+
+					var $this = $(this);
+					var bio = $this.find(".bio"),
+						title = $this.find('.title'),
+						contentWrapper = $this.find('.content__wrapper');
+
+					bio.detach();
+					bio.insertBefore(contentWrapper);
+
+					var newBio = $this.find('.bio').children('h6');
+					title.clone().insertBefore(newBio);
+				});
+			}
 		}
 
 		// ==========================================================================
 		// Scroll Magic Cascading fade in
 		// ==========================================================================
 		function ScrollCascade(windowWidthX, object){
-
+			
 			var cascadeFeature = object;
 
 			var duration = cascadeFeature.height();
-
+			
 			var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: duration}});
 
 			function cascadeClasses(){
@@ -120,7 +173,7 @@ $(function() {
 			if(windowWidthX >= 600){
 				// build scenes
 				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
-					.offset(150)
+					.offset(-200)
 					.on("enter", cascadeClasses)
 			    //.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
@@ -130,7 +183,7 @@ $(function() {
 		}
 
 		// ==========================================================================
-		// Skrollr checks + preloader
+		// Skrollr checks + image preloader
 		// ==========================================================================
 		function skrollrCheck() {
 
@@ -181,6 +234,42 @@ $(function() {
 			}
 		}
 
+		//preload images
+		function preLoadElement(element, func){
+			$(element).Prefetch({
+
+				onImageLoaded:function(source, instance){
+					console.log('Image source');
+					console.log(source);
+					console.log(instance);
+				},
+
+				onAllLoaded:function(instance) {
+					console.log('prefetch loaded element');
+					console.log(instance);
+
+					if(func){
+						func();
+					}
+				}
+			});
+		}
+
+		///main init for display
+		function initLayout(){
+
+			setTimeout(function() {
+				console.log('done loading images');
+				specialFooter();
+
+				// Fade in sections
+				myBody.removeClass('loading').addClass('loaded');
+				myFooter.removeClass('loading').addClass('loaded');
+
+
+			}, 800);
+		}
+
 		function shavePreloader(){
 			//onload check for loaded class
 			if (myBody.hasClass('loaded')) {
@@ -190,16 +279,32 @@ $(function() {
 			} else {
 
 				//FadeIn all sections
-				myBody.imagesLoaded(function() {
-					setTimeout(function() {
+				myBody.imagesLoaded(function(){
+					var modal = $('.modal-bookNow');
 
-						specialFooter();
+					//run while preloading
+					preLoadElement(modal);
 
-						// Fade in sections
-						myBody.removeClass('loading').addClass('loaded');
-						myFooter.removeClass('loading').addClass('loaded');
 
-					}, 800);
+				}).done(function (instance) {
+					var isoGalleryItem = $('.gallery-item').find('span').get(),
+							heroItem = $('.hero-background'),
+							postThumb = $('.post-thumb-img').get();
+
+							//background image preloader
+							if(heroItem.length > 0 ){
+								preLoadElement(heroItem, initLayout);
+
+							}else if(postThumb.length > 0 ) {
+								preLoadElement(postThumb, initLayout);
+							}
+							else if(isoGalleryItem.length > 0){
+								preLoadElement(isoGalleryItem, initLayout);
+
+							}else{
+								initLayout();
+							}
+
 				});
 			}
 		}
@@ -228,25 +333,20 @@ $(function() {
 		// ==========================================================================
 		function specialFooter() {
 
-			//Footer-push resize + sckrollr check
+			//var width = $(window).width(),
+				var footerHeight,
+						body = $('body');
 
-			var width = $(window).width(),
-					footerHeight,
-					body = $('body');
-
-			//body.css('max-width', width);
-
-
+			//Overwrite windowsize on resize
+			windowSize = $(window).width();
 
 			//Resize angle
-			setAngleWidth(width);
+			setAngleWidth(windowSize);
 
-			if (width + 15 >= desktop) {
-
-
+			if (windowSize + 15 >= desktop) {
 
 				skrollrCheck();
-				myFooter.width(width);
+				myFooter.width(windowSize);
 
 				body.removeClass('footer-mobile');
 
@@ -257,102 +357,14 @@ $(function() {
 					$('.footer-push').css('margin-bottom', footerHeight);
 				}
 
-			} else if( width - 15 <= desktop){
+			} else if( windowSize - 15 <= desktop){
 
 				skrollrCheck();
-				myFooter.width(width);
+				myFooter.width(windowSize);
 				footerHeight = $('footer').height() + 'px';
 				$('.footer-push').css('margin-bottom', footerHeight);
-				//$('body').addClass('footer-mobile');
 			}
 
-			//modal check
-			//if(modalOpen && checkLaptopWidth() == false){
-			//	var modalImage = $('.modal-content').find('.row').width();
-			//	$('.angle-top-modal').css('border-right-width', modalImage);
-			//}
-		}
-
-		// ==========================================================================
-		// Modal config
-		// ==========================================================================
-		(function() {
-
-			var modal = $('.modal');
-
-			modal.on('show.bs.modal', centerModal);
-			modal.on('hide.bs.modal', modalOut);
-
-			$( ".contact__form--container" ).delegate( "*", "focus blur", function() {
-				var elem = $( this );
-				setTimeout(function() {
-					elem.prev().toggleClass('focused');
-					elem.toggleClass( "focused", elem.is( ":focus" ) );
-				}, 0 );
-			});
-
-		})();
-
-		function centerModal(){
-
-			//set body to max width to prevent image scaling issue
-			var windowWidth = $(window).width();
-			//$('body').css('max-width', windowWidth);
-
-			//add display block to get height of the modal-dialog
-			$(this).css('display', 'block');
-
-			var dialog = $(this).children('.modal-dialog'),
-
-				//center the object
-					offset = ( $(window).height() - dialog.height() ) / 2,
-
-					// get current bottom margin - set base 10
-					bottomMargin = parseInt(dialog.css('marginBottom'), 10);
-
-
-
-			//makes sure you dont have negative margin
-			if(offset < bottomMargin){
-
-				offset = bottomMargin;
-			}
-
-			dialog.css('margin-top', offset);
-
-			//if(checkLaptopWidth() === true){
-
-				//setModalHeight(dialog);
-
-				//angleModal();
-
-			//}else{
-
-				//console.log('modal mobile');
-				//reset styles from desktop if already set
-				//resetModalHeight(dialog);
-
-				//full width
-				//var modalImage = $('.modal-content').find('.row').width();
-				//$('.angle-top-modal').css('border-right-width', modalImage);
-			//}
-
-			modalIn();
-		}
-
-		function angleModal(){
-				var modalImage = $('.modal-content').find('.row').width();
-				$('.angle-top-modal').css('border-right-width', (modalImage / 2) + 1);
-		}
-
-		function modalIn(){
-			$('.modal-content').find('.row').children('div').eq(1).addClass('animate-in');
-		}
-
-		function modalOut(){
-			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
-			//$('body').css('max-width', '100%');
-			modalOpen = false;
 		}
 
 		function setModalHeight(object){
@@ -444,14 +456,14 @@ $(function() {
 		// ==========================================================================
 		function checkWindowWidth() {
 
-			var windowSize = $(window).width() + 15;
+			var screenSize = windowSize + 15;
 
 			$(window).on('resize', function() {
 				resizedWidth = $(window).width() + 15;
-				console.log(resizedWidth);
+				//console.log(resizedWidth);
 			});
 
-			if (resizedWidth >= tablet || windowSize >= tablet) {
+			if (resizedWidth >= tablet || screenSize >= tablet) {
 				return true;
 			} else {
 				return false;
@@ -460,26 +472,24 @@ $(function() {
 
 		function checkLaptopWidth() {
 
-		var windowSize = $(window).width();
+			var windowSize = $(window).width();
 
-		$(window).on('resize', function() {
-			resizedWidth = $(window).width();
-			console.log(resizedWidth);
-		});
+			$(window).on('resize', function() {
+				resizedWidth = $(window).width();
+				console.log(resizedWidth);
+			});
 
-		if (resizedWidth >= desktop || windowSize >= desktop) {
-			return true;
-		} else {
-			return false;
+			if (resizedWidth >= desktop || windowSize >= desktop) {
+				return true;
+			} else {
+				return false;
+			}
 		}
-	}
 
-
+		///Encapselated States
 		(function() {
 
-			var header = $('#header'),
-				main = $('main'),
-				firstSection = main.children('section').first();
+			var header = $('#header');
 			// ==========================================================================
 			// Sub-menu item hover
 			// ==========================================================================
@@ -519,31 +529,193 @@ $(function() {
 				}, 0 );
 			});
 
+
 			// ==========================================================================
-			// Hero hover
+			// FAQ
 			// ==========================================================================
-			header.hover(function(){
-				$('.hero-hover').addClass('active');
-			}, function(){
-				$('.hero-hover').removeClass('active');
+			var faqTrigger = $('.shave__faq--trigger');
+
+			faqTrigger.on('click', function(event){
+				event.preventDefault();
+				$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
 			});
 
-			$('.hero-container').hover(function(){
-				$('.hero-hover').addClass('active');
-			}, function(){
-				$('.hero-hover').removeClass('active');
+			// ==========================================================================
+			// Twitter Carousel
+			// ==========================================================================
+			$('#twitter-carousel').carousel({
+				interval: 0
 			});
 
+			// ==========================================================================
+			// Scroll to functions
+			// ==========================================================================
+			$('.box-sm-hours').find('a').click(function (e) {
+				e.preventDefault();
 
-			// ==========================================================================
-			// Global Nav check
-			// ==========================================================================
-			if(!firstSection.hasClass('hero-container') && !firstSection.hasClass('hero')){
-				header.addClass('no-hero');
-			}
+				$('html, body').animate({
+					scrollTop: $( $.attr(this, 'href') ).offset().top - 80
+				}, 900);
+				return false;
+
+			});
+
+			//$('#hours').click(function(e){
+			//	e.preventDefault();
+			//	$('.sv-toast').addClass('in');
+			//});
+      //
+			//$('.sv-hours').children('button').click(function(e){
+			//	e.preventDefault();
+			//	$('.sv-toast').addClass('out');
+			//	setTimeout(function() {
+			//		$('.sv-toast').removeClass('in out');
+			//	}, 800 );
+			//});
+
+
 
 		})();
 
+		// ==========================================================================
+		// Feature Module 2
+		// ==========================================================================
+		//TODO: organize JS
+		var myTab = $('#svfm2Tab');
+
+		if(myTab){
+
+			var myTabContent = myTab.next(),
+				svfm2Wrapper = $('.svfm2__wrapper'),
+				svfm2ImageContainer = $('.svfm2__wrapper--images'),
+				svfm2Image = '.svfm2__image',
+				tabTitle = myTab.find('li.active').data('title'),
+				headline = svfm2Wrapper.find('.headline-container').children('h3');
+
+			svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).each(function(index){
+				if(index == 0){
+
+				}else{
+					//				$(this).fadeOut();
+				}
+			});
+
+			//Change tab content
+			myTab.on('click', 'li', function(){
+				//console.log('click');
+				//check width before starting
+				//width = $(window).width();
+
+				var tab = $(this);
+
+				//get panel ID that was clicked and remove the hash
+				var panelId = tab.find('a').attr('href').substr(1);
+
+				//get the data-attrb for the current clicked tab
+				tabTitle = tab.data('title');
+
+				$('#myTabContent > div').each( function() {
+
+					//first chck if the tab has active that was clicked
+					if(!$(this).hasClass('active')){
+
+						$(this).removeClass('active').removeClass('in');
+
+						if(panelId === this.id){
+
+							var element = $(this),
+								currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
+
+							//get heigh of clicked content
+							var panelHeight = element.height(),
+								imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
+
+							//loop through the images and match the title to the tab title
+							for( var i=0; i < imageTitle.length; i++){
+
+								if($(imageTitle[i]).data('title') === panelId){
+
+									$(imageTitle[i]).addClass('active');
+								}
+							}
+
+							//add hight to adj the for new content
+							if(windowSize <= 600){
+								//slide content out and then add the content back in
+								setTimeout(function(){
+									myTabContent.height(panelHeight);
+								}, 400);
+
+							}
+
+							currentImage.removeClass('active');
+
+							//change title
+							headline.fadeTo( "slow", 0, function(){
+								headline.text(tabTitle).fadeTo('fast', 1);
+							});
+
+
+							setTimeout(function(){
+								element.addClass('in');
+							}, 400);
+
+						}
+					}
+
+				});
+
+			});
+
+
+			//change title on page load
+			headline.text(tabTitle);
+
+			//sett height for phones on load
+			if(windowSize <= 600){
+
+				var mobilePanelHeight = $('#myTabContent').find('.active').height();
+
+				$('#myTabContent').height(mobilePanelHeight);
+
+			}
+		} //end SVFM2 TAB functions
+
+
+		// ==========================================================================
+		// Price Tab sizing function
+		// ==========================================================================
+
+		//Change size of body depending on content in tabs
+		$('#priceTabs').on('click', 'li', function(){
+			var galleryPageHeight = $(window).height();
+			var tabContentHeight = $('.sv__container--sm').height();
+			var updatedHeight = galleryPageHeight - tabContentHeight;
+			var panelId = $(this).find('a').attr('href').substr(1);
+			$('body').css('height', updatedHeight + 'px');
+
+			$('#myTabContent > div').each( function() {
+
+				//first chck if the tab has active that was clicked
+				if(!$(this).hasClass('active')){
+
+					$(this).removeClass('active').removeClass('in');
+
+					if(panelId === this.id){
+
+						var element = $(this);
+						//console.log(this);
+
+						setTimeout(function(){
+							element.addClass('in');
+						}, 200);
+
+					}
+				}
+
+			});
+
+		});
 
 		// ==========================================================================
 		// Run on First Load
@@ -554,6 +726,7 @@ $(function() {
 
 		//Image Preloader check
 		shavePreloader();
+
 
 		//angled boarders
 		//setAngleWidth(windowSize);

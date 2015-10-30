@@ -25,31 +25,37 @@
 
 		<div class="tabs__wrapper">
 
-			<div class="tabs__content" role="tabpanel" data-tab-id="tab-content-toggle">
+			<div class="tabs__content" role="tabpanel">
 
 				<ul id="priceTabs" class="nav nav-tabs nav-justified white-tabs" role="tablist">
 
 					<li id="beard-mustache" role="presentation" class="tab__control ">
-						<a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="false">
+						<a href="#beard" id="beard-tab" role="tab" aria-controls="beard" aria-expanded="false">
 							<div class="tab-wrapper-icons">
-								<span class="tab-icon"><img class="img-responsive" src="{{'noun_140468_cc.png' | asset_url}}" alt=""/></span>
+								<span class="tab-icon">
+									<i class="icon-sv-mustache"></i>
+								</span>
 								<span class="text">Beard & Mustache</span>
 							</div>
 						</a>
 					</li>
 					<li id="shave" role="presentation" class="tab__control active">
-						<a href="#shaving" role="tab" id="shaving-tab" data-toggle="tab" aria-controls="shaving" aria-expanded="false">
+						<a href="#shaving" role="tab" id="shaving-tab" aria-controls="shaving" aria-expanded="false">
 							<div class="tab-wrapper-icons">
-								<span class="tab-icon"><img class="img-responsive" src="{{'noun_163738_cc.png' | asset_url}}" alt=""/></span>
+								<span class="tab-icon">
+									<i class="icon-sv-razor"></i>
+								</span>
 								<span class="text">Shaving</span>
 							</div>
 						</a>
 					</li>
 
 					<li id="haircuts" role="presentation" class="tab__control">
-						<a href="#hair-cuts" role="tab" id="haircuts-tab" data-toggle="tab" aria-controls="hair-cuts" aria-expanded="false">
+						<a href="#hair-cuts" role="tab" id="haircuts-tab" aria-controls="hair-cuts" aria-expanded="false">
 							<div class="tab-wrapper-icons">
-								<span class="tab-icon"><img class="img-responsive" src="{{'noun_22509_cc.png' | asset_url}}" alt=""/></span>
+								<span class="tab-icon">
+									<i class="icon-sv-scissors"></i>
+								</span>
 								<span class="text">Hair Cuts</span>
 							</div>
 						</a>
@@ -58,7 +64,7 @@
 				</ul>
 
 				<!-- tab content -->
-				<div id="myTabContent" class="tab-content">
+				<div id="myPriceContent" class="tab-content">
 
 					<!-- start breard and mustache -->
 					<div role="tabpanel" class="tab-pane tab-fade" id="beard" aria-labelledby="beard-tab">
@@ -362,8 +368,9 @@ $(function() {
 	};
 
 	if(val != ''){
-
+		
 		hash = val.substr(5);
+
 
 		$('#priceTabs > li').each(function(){
 
@@ -374,7 +381,7 @@ $(function() {
 				var panelId = $(this).find('a').attr('href').substr(1);
 
 				//show correct matching content with active Tab
-				$('#myTabContent > div').each( function(){
+				$('#myPriceContent > div').each( function(){
 					$(this).removeClass('active').removeClass('in');
 
 					if(panelId === this.id){

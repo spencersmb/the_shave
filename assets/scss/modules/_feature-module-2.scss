@@ -64,7 +64,7 @@
         @include transform(translateX(-200px));
     }
     .tab-icon {
-        display: block;
+
     }
     .text {
         display: none !Important;
@@ -126,6 +126,27 @@
         &.active{
             opacity: 1;
         }
+    }
+    .nav-tabs.nav-justified>li {
+        > a{
+            padding:23px 0 25px;
+        }
+        .tab-icon{
+            display: block;
+            margin:0 auto;
+            i{
+                display: table;
+                width: 100%;
+                position: absolute;
+                top:50%;
+                @include transform(translateY(-50%));
+            }
+        }
+    }
+    //small icon fix
+    .icon-sv-razor{
+        top:50% !important;
+        @include transform(translateY(-50%));
     }
 }
 

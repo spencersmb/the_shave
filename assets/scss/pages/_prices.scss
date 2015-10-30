@@ -3,12 +3,13 @@
 /***************************************************************************/
 
 /* Razor Icon by Ivan Colic from the Noun Project */
-
-
 /* Mustache Icon by Joseph Augustine from the Noun Project */
-
-
 /* Scissors Icon by Ema Dimitrova from the Noun Project */
+/* Badge Icon by Anbileru Adaleru from the Noun Project */
+/* Product Icon by Joe Harrison from the Noun Project */
+/* 3d Cube Icon by Jevgeni Striganov from the Noun Project */
+/* Trophy Icon by Sergey Demushkin from the Noun Project */
+/* Arrows Icon by iconsmind.com from the Noun Project */
 
 .tab-control {
     @include transition(all .2s);
@@ -36,6 +37,7 @@
                 color: $black;
                 &:focus {
                     border: 0;
+                    color: $black;
                 }
                 &:hover {
                     border: 0;
@@ -55,8 +57,21 @@
             width: 45px;
             display: block;
             position: relative;
-            height: 100%;
             margin: 0 auto;
+            height: 45px;
+
+            i{
+                font-size: 35px;
+                display: table;
+                margin:0 auto;
+                position: absolute;
+                width:100%;
+                top:50%;
+                @include transform(translateY(-50%));
+            }
+            i.icon-sv-razor{
+                font-size: 45px;
+            }
         }
         img {
             position: relative;
@@ -75,7 +90,7 @@
             font-family: $heading-font;
             font-size: em(16px);
             font-weight: 300;
-            padding: 10px 0;
+            padding: 23px 0 25px;
             margin-bottom: 0;
 
         }
@@ -109,6 +124,7 @@
     opacity: 0;
     @include transition(all .4s .2s ease-in-out);
     @include transform(translateY(100px));
+
     &.tab-fade.in {
         opacity: 1;
         @include transform(translateY(0px));
@@ -255,6 +271,19 @@
         .tab-icon {
             width: 45px;
             display: inline-block;
+            height: 45px;
+            margin-right:5px;
+            i{
+                height: 35px;
+                position: relative;
+                display: block;
+                position: absolute;
+                top:12px;
+                @include transform(translateY(0));
+            }
+            i.icon-sv-razor{
+                top:6px;
+            }
         }
         img {
             position: absolute;
@@ -265,7 +294,7 @@
             display: inline-block;
         }
         > a {
-            padding: 25px 0 30px;
+            padding: 12px 0 38px;
         }
     }
     .tab__panel {

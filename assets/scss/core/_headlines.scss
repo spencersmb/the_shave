@@ -70,7 +70,7 @@
     }
     h5{
         font-size: em(18px);
-        color: $dark-grey;
+        color: $darker-grey;
         font-weight: 500;
         text-transform:uppercase;
         line-height: 24px;
@@ -295,8 +295,63 @@
     }
 }
 
+.sv-col-block-wrapper{
+    padding:0 30px;
+
+    .inner-lg{
+        padding-bottom: 40px;
+    }
+}
+
+.icon-headline{
+    position: absolute;
+    display: inline-block;
+    float:left;
+    margin-right:30px;
+    margin-bottom: 30px;
+    font-size: 34px;
+    color:$darker-grey;
+    &.fa{
+        font-size: 28px;
+    }
+}
+.sv-block-with-icon{
+    position: relative;
+    padding-left:60px;
+    h6{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+    p{
+        color:$subtext-dk-grey;
+    }
+}
+.sv-col-block{
+    margin-bottom: 60px;
+    padding:0;
+    &:first-child {
+        margin-top: 60px;
+    }
+}
+.one-third{
+    width:100%;
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
+    .sv-col-block{
+        margin-left:5%;
+        margin-bottom: 60px;
+        padding:0;
+        &:nth-child(-n+2){
+            margin-top:60px;
+        }
+        &:nth-child(2n+1){
+            clear: both;
+        }
+
+    }
     .inner__header--sm {
         margin:140px auto 35px;
         padding:0 35px;
@@ -399,6 +454,9 @@
         }
 
     }
+    .one-third{
+        width:42%;
+    }
 }
 
 // Displays greater than 992px
@@ -460,10 +518,29 @@
             }
         }
     }
+
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+    .one-third{
+        width:30%;
+    }
+    .sv-col-block {
+        &:first-child {
+            margin-left: 0;
+        }
+        &:nth-child(3n+1){
+            margin-left:0;
+            clear: both;
+        }
+        &:nth-child(-n+2){
+            margin-top:0;
+        }
+        &:nth-child(2n+1){
+            clear: none;
+        }
+    }
     .intro {
         h2 {
             font-size: em(97px);

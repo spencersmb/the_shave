@@ -276,7 +276,9 @@ blockquote {
     background-position: 50% 50%;
     @include transition(all .4s ease-in-out);
 }
-
+.icon-sv-razor {
+    font-size: 45px;
+}
 // Displays greater than 768px
 @include breakpoint(tablet) {
     blockquote {
