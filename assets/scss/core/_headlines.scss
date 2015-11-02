@@ -338,8 +338,76 @@
     width:100%;
 }
 
+.sv-feature{
+    &-intro,
+    &-headline,
+    &-subtitle{
+        background-color:transparent;
+        border-color:transparent;
+        border-radius:0;
+        border-style:none;
+        color:$white;
+        font-family: $ubuntu;
+        font-size:14px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        line-height: 20px;
+        padding:0;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        display: block;
+    }
+    &.intro{
+        text-transform: uppercase;
+        font-weight:300;
+    }
+    &-subtitle{
+        font-family: $courier;
+        letter-spacing: 1px;
+    }
+
+    &-headline{
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        max-width: 400px !important;
+        min-width: 400px !important;
+    }
+}
+
+.sv-feature-Icon{
+    [class^="icon-sv"]{
+        font-size: 45px;
+        color:$white;
+    }
+}
+
+.headline-left{
+    max-width: 300px !important;
+    min-width: 300px !important;
+    text-align: left;
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
+    .sv-feature {
+        &-intro{
+
+        }
+        &-headline{
+            max-width: 500px!important;
+            min-width: 500px!important;
+        }
+        &-subtitle {
+
+        }
+    }
+    .sv-feature-Icon{
+        [class^="icon-sv"]{
+            font-size: 40px;
+        }
+    }
     .sv-col-block{
         margin-left:5%;
         margin-bottom: 60px;
@@ -457,10 +525,27 @@
     .one-third{
         width:42%;
     }
+    .headline-left{
+        max-width: 350px !important;
+        min-width: 350px !important;
+    }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+    .sv-feature {
+        &-intro{
+
+        }
+        &-headline{
+            max-width: 800px !important;
+            min-width: 800px !important;
+        }
+        &-subtitle {
+
+        }
+    }
+
     .inner__header--sm {
         margin:160px auto 80px;
 
@@ -518,11 +603,40 @@
             }
         }
     }
-
+    .headline-left{
+        max-width: 450px !important;
+        min-width: 450px !important;
+    }
 }
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+
+    .sv-feature {
+        &-intro{
+
+        }
+        &-headline{
+            max-width: 1200px !important;
+            min-width: 1200px !important;
+        }
+        &-subtitle {
+
+        }
+    }
+    .sv-feature-Icon{
+        [class^="icon-sv"]{
+            font-size: 55px;
+        }
+    }
+    .headline-left{
+        max-width: 700px !important;
+        min-width: 700px !important;
+        text-align: left;
+    }
+    .subtitle-left{
+        text-align: left;
+    }
     .one-third{
         width:30%;
     }

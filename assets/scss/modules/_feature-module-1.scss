@@ -56,8 +56,9 @@
     figure {
         position: relative;
         overflow: hidden;
-        max-height: 430px;
+        max-height: 530px;
         width: 100%;
+        max-width: 400px;
         height: auto;
         text-align: center;
         cursor: pointer;
@@ -140,7 +141,7 @@
         width: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        @include transform(translate3d(0, -80px, 0));
+        @include transform(translate3d(0, 0, 0));
     }
     h2 {
         @include transition(opacity 0.35s, transform 0.35s);
@@ -186,11 +187,6 @@
             }
             h2 {
                 bottom: 21px;
-            }
-        }
-        &--effect{
-            img{
-                @include transform(translate3d(0, -60px, 0));
             }
         }
     }
@@ -251,13 +247,13 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
     .svfm1__content {
-        max-width: 1160px;
+        max-width: 1200px;
         margin-top:60px;
     }
     .svfm1__card {
         figure {
             max-width: 445px;
-            max-height: 522px;
+            max-height: 588px;
             .content {
                 height: 100px;
             }

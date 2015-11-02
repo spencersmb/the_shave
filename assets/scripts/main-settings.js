@@ -564,6 +564,7 @@ $(function() {
 			// 3 col 2 row grid
 			// ==========================================================================
 			//var gridElements = $('.one-third');
+
 			//
 			//var lastThree = gridElements.slice(-3);
       //
