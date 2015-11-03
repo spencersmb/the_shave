@@ -144,11 +144,6 @@
 
 	</div><!-- end grid container -->
 
-	<!-- single image container -->
-	<div class="container-fluid no-padding single-image">
-		<img class="img-responsive" src="{{'about-bg-lg.jpg' | asset_url}}" alt=""/>
-	</div><!-- end single image -->
-
 </section><!-- end process grid -->
 <section class="container-fluid no-padding black-bg">
 	<div class="inner-sm">
@@ -159,7 +154,9 @@
 		</div>
 	</div>
 </section>
+
 {% include "6-block" %}
+
 <section class="container-fluid no-padding gold-bg">
 	<div class="inner-sm">
 		<div class="row">
@@ -172,6 +169,15 @@
 		</div>
 	</div>
 </section>
+
+<!-- single image container -->
+<section class="container-fluid no-padding single-image">
+	<img class="img-responsive" src="{{'about-bg-lg.jpg' | asset_url}}" alt=""/>
+</section><!-- end single image -->
+
+<!-- FAQ -->
+{% include "service-shave/faq-shave" %}
+<!-- End Faq -->
 {% endblock %}
 
 {% block scripts %}

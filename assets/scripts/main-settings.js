@@ -96,12 +96,10 @@ $(function() {
 
 				}else{
 						//Run if any other browser
-						if(cascadeFeature){
-							setTimeout(function() {
-								ScrollCascade(windowSize, cascadeFeature);
-							}, 900);
 
-						}
+							setTimeout(function() {
+								ScrollCascade(windowSize, cascadeFeature)
+							});
 
 						modernProductsEvent();
 				}
@@ -170,15 +168,37 @@ $(function() {
 				});
 			}
 
+			function imageActiveLeft(){
+				$('.image-text').find('.image-text-img').children('img').addClass('active');
+			}
+
+			function imageActiveRight(){
+				$('.text-image').find('.text-image-img').children('img').addClass('active');
+			}
+
 			if(windowWidthX >= 600){
 				// build scenes
-				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
+				var introServices = new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
 					.offset(-200)
 					.on("enter", cascadeClasses)
 			    //.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
+
+				var imageLeft = new ScrollMagic.Scene({triggerElement: ".image-text"})
+					.offset(-200)
+					.on("enter", imageActiveLeft)
+					.addTo(controller);
+
+				var imageRight = new ScrollMagic.Scene({triggerElement: ".text-image"})
+					.offset(-200)
+					.on("enter", imageActiveRight)
+					.addTo(controller);
+
+
 			}else {
 				cascadeClasses();
+				imageActiveLeft();
+				imageActiveRight();
 			}
 		}
 
@@ -234,19 +254,15 @@ $(function() {
 			}
 		}
 
-		//preload images
+		//preload background images
 		function preLoadElement(element, func){
 			$(element).Prefetch({
 
 				onImageLoaded:function(source, instance){
-					console.log('Image source');
-					console.log(source);
-					console.log(instance);
+
 				},
 
 				onAllLoaded:function(instance) {
-					console.log('prefetch loaded element');
-					console.log(instance);
 
 					if(func){
 						func();
