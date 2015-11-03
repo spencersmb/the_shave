@@ -115,10 +115,11 @@
 }
 
 .headline-sm {
-    text-align: center;
     margin: 0 auto;
     display: table;
     max-width: 250px;
+    width:100%;
+
     h2 {
         margin: 0 auto;
         margin-bottom: 45px;
@@ -377,9 +378,21 @@
 }
 
 .sv-feature-Icon{
-    [class^="icon-sv"]{
+    display: block;
+    text-align: center;
+    margin:0 auto;
+    [class^="icon-sv"],
+    [class^="fa"]{
         font-size: 45px;
         color:$white;
+    }
+
+    [class^="fa"]{
+        display: block;
+        text-align: center;
+        margin:0;
+        height: 45px;
+        width:45px;
     }
 }
 

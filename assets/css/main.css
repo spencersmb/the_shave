@@ -846,10 +846,10 @@ blockquote.reverse {
 }
 
 .headline-sm {
-  text-align: center;
   margin: 0 auto;
   display: table;
   max-width: 250px;
+  width: 100%;
 }
 .headline-sm h2 {
   margin: 0 auto;
@@ -1103,9 +1103,22 @@ blockquote.reverse {
   min-width: 400px !important;
 }
 
-.sv-feature-Icon [class^="icon-sv"] {
+.sv-feature-Icon {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.sv-feature-Icon [class^="icon-sv"],
+.sv-feature-Icon [class^="fa"] {
   font-size: 45px;
   color: #fff;
+}
+.sv-feature-Icon [class^="fa"] {
+  display: block;
+  text-align: center;
+  margin: 0;
+  height: 45px;
+  width: 45px;
 }
 
 .headline-left {
@@ -1624,6 +1637,12 @@ blockquote.reverse {
 
 .icon-gold {
   color: #af8c45;
+}
+
+.circle-boarder {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6361,7 +6380,7 @@ footer.loaded {
   margin-top: -60px;
   z-index: 2;
   position: relative;
-  width: 40%;
+  width: 30%;
 }
 .barber__box .title {
   margin: 30px auto;
@@ -6518,7 +6537,7 @@ footer.loaded {
   .col-sm-4.barber__wrapper .barber__box .avatar,
   .col-sm-6.barber__wrapper .barber__box .avatar {
     border-radius: 50%;
-    width: auto;
+    width: 30%;
   }
   .col-sm-4.barber__wrapper .barber__box .title,
   .col-sm-6.barber__wrapper .barber__box .title {
@@ -6931,6 +6950,23 @@ footer.loaded {
     width: 49%;
   }
 }
+.image-text img, .text-image img {
+  margin: 0 0 0 auto;
+}
+.image-text-inner, .text-image-inner {
+  padding: 0 70px;
+}
+.image-text .content, .text-image .content {
+  margin-bottom: 50px;
+}
+.image-text .content p, .text-image .content p {
+  color: #959595;
+}
+
+.text-image img {
+  margin: 0 auto 0 0;
+}
+
 /***************************************************************************/
 /* Contact Us page ****************************************************/
 /***************************************************************************/

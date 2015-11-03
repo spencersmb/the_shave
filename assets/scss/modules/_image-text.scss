@@ -1,0 +1,23 @@
+.image-text, .text-image{
+  img{
+    margin:0 0 0 auto;
+  }
+
+  &-inner{
+    padding:0 70px;
+  }
+
+  .content {
+    margin-bottom: 50px;
+
+    p{
+      color:$darker-grey;
+    }
+  }
+}
+
+.text-image{
+  img{
+    margin:0 auto 0 0;
+  }
+}

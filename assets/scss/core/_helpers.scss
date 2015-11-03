@@ -280,6 +280,12 @@
     color:$primary-color;
 }
 
+.circle-boarder{
+    border:3px solid $white;
+    border-radius:50%;
+    padding:15px;
+}
+
 @include breakpoint(tablet) {
 
     .col-block {
