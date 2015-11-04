@@ -313,8 +313,8 @@ $(function() {
 
 							}else if(postThumb.length > 0 ) {
 								preLoadElement(postThumb, initLayout);
-							}
-							else if(isoGalleryItem.length > 0){
+								
+							}else if(isoGalleryItem.length > 0){
 								preLoadElement(isoGalleryItem, initLayout);
 
 							}else{
@@ -374,11 +374,11 @@ $(function() {
 				}
 
 			} else if( windowSize - 15 <= desktop){
-
+				console.log('mobile footer');
 				skrollrCheck();
 				myFooter.width(windowSize);
-				footerHeight = $('footer').height() + 'px';
-				$('.footer-push').css('margin-bottom', footerHeight);
+				//footerHeight = $('footer').height() + 'px';
+				$('.footer-push').css('margin-bottom', 0);
 			}
 
 		}

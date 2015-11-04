@@ -3,12 +3,7 @@
 /***************************************************************************/
 
 footer {
-    position: fixed;
-    position: -webkit-sticky !important;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    z-index: -1;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -228,6 +223,14 @@ footer {
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+    footer{
+        position: fixed;
+        position: -webkit-sticky !important;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        z-index: -1;
+    }
     .footer__wrapper {
         padding: em(40px) 0 0;
     }

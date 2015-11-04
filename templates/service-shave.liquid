@@ -9,12 +9,22 @@
 
 {% include "col-3-module-1" %}
 
-{% include "image-text" %}
+<section class="container-fluid no-padding">
+	<div class="row no-margin">
+		<div class="col-sm-6 no-padding">
+			<img class="img-responsive" src="{{'shave-1.jpg' | asset_url}}" alt="Shaving process"/>
+		</div>
+		<div class="col-sm-6 no-padding">
+			<img class="img-responsive" src="{{'shave-2.jpg' | asset_url}}" alt="Shaving process"/>
+		</div>
+	</div>
+</section>
 
+{% include "image-text" %}
 
 <section class="container-fluid no-padding black-bg">
 	<div class="inner-sm">
-		<div class="row">
+		<div class="row no-margin">
 			<div class="col-xs-12 col-block">
 				<h4 class="text-center white">Clean Design and Powerful Features makes Namo a superstar</h4>
 			</div>

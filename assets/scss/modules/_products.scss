@@ -112,12 +112,12 @@
         }
         &::after {
             @include transform(translateX(0) translateY(0) rotate(-45deg));
-            top: 21px;
+            top: 26px;
             right: 20px;
         }
         &::before {
             @include transform(translateX(0) translateY(0) rotate(45deg));
-            top: 21px;
+            top: 26px;
             right: 25px;
         }
     }

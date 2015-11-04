@@ -202,8 +202,8 @@
 
 .hero-wrapper{
     position: absolute;
-    top:55%;
-    @include transform(translateY(-55%));
+    top:50%;
+    @include transform(translateY(-50%));
     color:$white;
     width:100%;
     margin:0 auto;
@@ -401,6 +401,18 @@
     text-align: left;
 }
 
+.headline-left-right{
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color:$white;
+    font-family: $ubuntu;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .sv-feature {
@@ -452,8 +464,8 @@
             font-size: em(18px);
         }
         h2 {
-            font-size: em(72px);
-            line-height: 80px;
+            font-size: em(48px);
+            line-height: 52px;
         }
     }
     .headline-sm {
@@ -546,6 +558,7 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
     .sv-feature {
+
         &-intro{
 
         }
@@ -555,9 +568,18 @@
         }
         &-subtitle {
 
-        }
-    }
 
+        }
+
+    }
+    .headline-left{
+        max-width: 450px !important;
+        min-width: 450px !important;
+    }
+    .right{
+        max-width: 500px !important;
+        min-width: 500px !important;
+    }
     .inner__header--sm {
         margin:160px auto 80px;
 
@@ -615,10 +637,7 @@
             }
         }
     }
-    .headline-left{
-        max-width: 450px !important;
-        min-width: 450px !important;
-    }
+
 }
 
 // Displays greater than 1200px
@@ -645,9 +664,16 @@
         max-width: 700px !important;
         min-width: 700px !important;
         text-align: left;
+
+    }
+    .right{
+        max-width: 45vw !important;
+        min-width: 45vw !important;
+
     }
     .subtitle-left{
         text-align: left;
+
     }
     .one-third{
         width:30%;
@@ -683,4 +709,13 @@
 }
 
 // Displays greater than 1600px
-@include breakpoint(desktopXL) {}
+@include breakpoint(desktopXL) {
+    .right{
+        max-width: 700px !important;
+        min-width: 700px !important;
+    }
+    .subtitle-left{
+
+    }
+
+}

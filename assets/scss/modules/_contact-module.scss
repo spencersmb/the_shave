@@ -58,6 +58,12 @@
         p {
             margin: 0;
         }
+        a{
+            color:$white;
+            &:hover{
+                color:$white;
+            }
+        }
     }
 }
 

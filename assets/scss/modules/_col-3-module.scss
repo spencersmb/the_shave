@@ -31,8 +31,9 @@
 .col3__container {
     text-align: center;
     h2{
+        margin-top: 20px;
         margin-bottom: 0;
-        font-size: 69px;
+        font-size: 36px;
     }
 
     .wrapper > div {
@@ -88,6 +89,10 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .col3__module {
+        h2{
+            margin-top: 0;
+            font-size: 69px;
+        }
         .wrapper {
             margin: 0 auto;
             padding: 0;

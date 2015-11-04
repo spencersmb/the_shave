@@ -96,12 +96,10 @@ $(function() {
 
 				}else{
 						//Run if any other browser
-						if(cascadeFeature){
-							setTimeout(function() {
-								ScrollCascade(windowSize, cascadeFeature);
-							}, 900);
 
-						}
+							setTimeout(function() {
+								ScrollCascade(windowSize, cascadeFeature)
+							});
 
 						modernProductsEvent();
 				}
@@ -170,15 +168,37 @@ $(function() {
 				});
 			}
 
+			function imageActiveLeft(){
+				$('.image-text').find('.image-text-img').children('img').addClass('active');
+			}
+
+			function imageActiveRight(){
+				$('.text-image').find('.text-image-img').children('img').addClass('active');
+			}
+
 			if(windowWidthX >= 600){
 				// build scenes
-				new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
+				var introServices = new ScrollMagic.Scene({triggerElement: "#cascadeFeature"})
 					.offset(-200)
 					.on("enter", cascadeClasses)
 			    //.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
+
+				var imageLeft = new ScrollMagic.Scene({triggerElement: ".image-text"})
+					.offset(-200)
+					.on("enter", imageActiveLeft)
+					.addTo(controller);
+
+				var imageRight = new ScrollMagic.Scene({triggerElement: ".text-image"})
+					.offset(-200)
+					.on("enter", imageActiveRight)
+					.addTo(controller);
+
+
 			}else {
 				cascadeClasses();
+				imageActiveLeft();
+				imageActiveRight();
 			}
 		}
 
@@ -220,7 +240,7 @@ $(function() {
 					// console.log('orientation is portrait');
 					skrollr.get().refresh();
 				}
-			} else if (winWidth < 991) {
+			} else if (winWidth < 992) {
 
 				// Destroy skrollr for screens less than 600px for mobile
 				if (document.body.id === 'skrollr-body') {
@@ -234,19 +254,15 @@ $(function() {
 			}
 		}
 
-		//preload images
+		//preload background images
 		function preLoadElement(element, func){
 			$(element).Prefetch({
 
 				onImageLoaded:function(source, instance){
-					console.log('Image source');
-					console.log(source);
-					console.log(instance);
+
 				},
 
 				onAllLoaded:function(instance) {
-					console.log('prefetch loaded element');
-					console.log(instance);
 
 					if(func){
 						func();
@@ -297,8 +313,8 @@ $(function() {
 
 							}else if(postThumb.length > 0 ) {
 								preLoadElement(postThumb, initLayout);
-							}
-							else if(isoGalleryItem.length > 0){
+								
+							}else if(isoGalleryItem.length > 0){
 								preLoadElement(isoGalleryItem, initLayout);
 
 							}else{
@@ -358,11 +374,11 @@ $(function() {
 				}
 
 			} else if( windowSize - 15 <= desktop){
-
+				console.log('mobile footer');
 				skrollrCheck();
 				myFooter.width(windowSize);
-				footerHeight = $('footer').height() + 'px';
-				$('.footer-push').css('margin-bottom', footerHeight);
+				//footerHeight = $('footer').height() + 'px';
+				$('.footer-push').css('margin-bottom', 0);
 			}
 
 		}
@@ -470,21 +486,21 @@ $(function() {
 			}
 		}
 
-		function checkLaptopWidth() {
-
-			var windowSize = $(window).width();
-
-			$(window).on('resize', function() {
-				resizedWidth = $(window).width();
-				console.log(resizedWidth);
-			});
-
-			if (resizedWidth >= desktop || windowSize >= desktop) {
-				return true;
-			} else {
-				return false;
-			}
-		}
+		//function checkLaptopWidth() {
+    //
+		//	var windowSize = $(window).width();
+    //
+		//	$(window).on('resize', function() {
+		//		resizedWidth = $(window).width();
+		//		console.log(resizedWidth);
+		//	});
+    //
+		//	if (resizedWidth >= desktop || windowSize >= desktop) {
+		//		return true;
+		//	} else {
+		//		return false;
+		//	}
+		//}
 
 		///Encapselated States
 		(function() {
@@ -560,6 +576,16 @@ $(function() {
 
 			});
 
+			// ==========================================================================
+			// 3 col 2 row grid
+			// ==========================================================================
+			//var gridElements = $('.one-third');
+
+			//
+			//var lastThree = gridElements.slice(-3);
+      //
+			//lastThree.css('margin-bottom', 0);
+			
 			//$('#hours').click(function(e){
 			//	e.preventDefault();
 			//	$('.sv-toast').addClass('in');
@@ -580,142 +606,163 @@ $(function() {
 		// ==========================================================================
 		// Feature Module 2
 		// ==========================================================================
-		//TODO: organize JS
-		var myTab = $('#svfm2Tab');
+		(function() {
+			//TODO: organize JS
+			var myTab = $('#svfm2Tab');
 
-		if(myTab){
+			if(myTab){
+				var myTabNext = myTab.next(),
+					myTabContent = $('#myTabContent'),
+					svfm2Wrapper = $('.svfm2__wrapper'),
+					svfm2ImageContainer = $('.svfm2__wrapper--images'),
+					svfm2Image = '.svfm2__image',
+					tabTitle = myTab.find('li.active').data('title'),
+					headline = svfm2Wrapper.find('.headline-container').children('h3');
 
-			var myTabContent = myTab.next(),
-				svfm2Wrapper = $('.svfm2__wrapper'),
-				svfm2ImageContainer = $('.svfm2__wrapper--images'),
-				svfm2Image = '.svfm2__image',
-				tabTitle = myTab.find('li.active').data('title'),
-				headline = svfm2Wrapper.find('.headline-container').children('h3');
+				svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).each(function(index){
+					if(index == 0){
 
-			svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).each(function(index){
-				if(index == 0){
+					}else{
+						//				$(this).fadeOut();
+					}
+				});
 
-				}else{
-					//				$(this).fadeOut();
-				}
-			});
+				//Change tab content
+				myTab.on('click', 'li', function(){
 
-			//Change tab content
-			myTab.on('click', 'li', function(){
-				//console.log('click');
-				//check width before starting
-				//width = $(window).width();
+					var tab = $(this);
 
-				var tab = $(this);
+					//get panel ID that was clicked and remove the hash
+					var panelId = tab.find('a').attr('href').substr(1);
 
-				//get panel ID that was clicked and remove the hash
-				var panelId = tab.find('a').attr('href').substr(1);
+					//get the data-attrb for the current clicked tab
+					tabTitle = tab.data('title');
 
-				//get the data-attrb for the current clicked tab
-				tabTitle = tab.data('title');
+					myTabContent.children('div').each( function() {
 
-				$('#myTabContent > div').each( function() {
+						//first chck if the tab has active that was clicked
+						if(!$(this).hasClass('active')){
 
-					//first chck if the tab has active that was clicked
-					if(!$(this).hasClass('active')){
+							$(this).removeClass('active').removeClass('in');
 
-						$(this).removeClass('active').removeClass('in');
+							if(panelId === this.id){
 
-						if(panelId === this.id){
+								var element = $(this),
+									currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
 
-							var element = $(this),
-								currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
+								//get heigh of clicked content
+								var panelHeight = element.height(),
+									imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
 
-							//get heigh of clicked content
-							var panelHeight = element.height(),
-								imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
+								//loop through the images and match the title to the tab title
+								for( var i=0; i < imageTitle.length; i++){
 
-							//loop through the images and match the title to the tab title
-							for( var i=0; i < imageTitle.length; i++){
+									if($(imageTitle[i]).data('title') === panelId){
 
-								if($(imageTitle[i]).data('title') === panelId){
-
-									$(imageTitle[i]).addClass('active');
+										$(imageTitle[i]).addClass('active');
+									}
 								}
-							}
 
-							//add hight to adj the for new content
-							if(windowSize <= 600){
-								//slide content out and then add the content back in
+								//add hight to adj the for new content
+								if(windowSize <= 600){
+									//slide content out and then add the content back in
+									setTimeout(function(){
+										myTabNext.height(panelHeight);
+									}, 400);
+
+								}
+
+								currentImage.removeClass('active');
+
+								//change title
+								headline.fadeTo( "slow", 0, function(){
+									headline.text(tabTitle).fadeTo('fast', 1);
+								});
+
+
 								setTimeout(function(){
-									myTabContent.height(panelHeight);
+									element.addClass('in');
 								}, 400);
 
 							}
-
-							currentImage.removeClass('active');
-
-							//change title
-							headline.fadeTo( "slow", 0, function(){
-								headline.text(tabTitle).fadeTo('fast', 1);
-							});
-
-
-							setTimeout(function(){
-								element.addClass('in');
-							}, 400);
-
 						}
-					}
+
+					});
 
 				});
 
-			});
+				//change title on page load
+				headline.text(tabTitle);
 
+				mobilePanelHeight = myTabContent.find('.active').height();
 
-			//change title on page load
-			headline.text(tabTitle);
+				myTabContent.height(mobilePanelHeight);
 
-			//sett height for phones on load
-			if(windowSize <= 600){
+				//sett height for phones on load
+				if(windowSize <= 600){
 
-				var mobilePanelHeight = $('#myTabContent').find('.active').height();
+					mobilePanelHeight = myTabContent.find('.active').height();
 
-				$('#myTabContent').height(mobilePanelHeight);
+					myTabContent.height(mobilePanelHeight);
 
-			}
-		} //end SVFM2 TAB functions
+				}
+			} //end SVFM2 TAB functions
+			})();
 
 
 		// ==========================================================================
 		// Price Tab sizing function
 		// ==========================================================================
 
-		//Change size of body depending on content in tabs
-		$('#priceTabs').on('click', 'li', function(){
+		function animatePriceIn(object){
+			setTimeout(function(){
+				object.addClass('in');
+			}, 200);
+		}
+	//Change size of body depending on content in tabs
+		$('#priceTabs').on('click', 'li', function(e){
+			e.preventDefault();
 			var galleryPageHeight = $(window).height();
 			var tabContentHeight = $('.sv__container--sm').height();
 			var updatedHeight = galleryPageHeight - tabContentHeight;
+			var myPriceContent = $('#myPriceContent');
 			var panelId = $(this).find('a').attr('href').substr(1);
-			$('body').css('height', updatedHeight + 'px');
+			var activeElement = myPriceContent.children('.active');
+					$this = $(this);
+			if($this.hasClass('active')){
+				//do nothing
+			}else{
 
-			$('#myTabContent > div').each( function() {
+				//loop through the elements and remove active and add it to the clicked element
+				$this.parent().children('li').each(function(){
+					$(this).removeClass('active');
+				});
 
-				//first chck if the tab has active that was clicked
-				if(!$(this).hasClass('active')){
+				$this.addClass('active');
 
-					$(this).removeClass('active').removeClass('in');
+				activeElement.removeClass('in');
 
-					if(panelId === this.id){
+				setTimeout(function(){
 
-						var element = $(this);
-						//console.log(this);
+					//remove active from prev panel
+					activeElement.removeClass('active');
 
-						setTimeout(function(){
-							element.addClass('in');
-						}, 200);
+					//loop through the tabcontent and find the match
+					myPriceContent.children('div').each(function(){
+						if(panelId === this.id){
 
-					}
-				}
+							var element = $(this);
+							//console.log(this);
+							$(this).addClass('active');
 
-			});
+							animatePriceIn(element);
+						}
+					});
+				},600);
+			}
 
 		});
+
 
 		// ==========================================================================
 		// Run on First Load

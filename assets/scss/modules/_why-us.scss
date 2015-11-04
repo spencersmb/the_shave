@@ -131,6 +131,7 @@
 @include breakpoint(laptop) {
   .sv-approach{
     &-wrapper {
+      padding: 0 0 0 90px;
       h2{
         max-width: 420px;
       }

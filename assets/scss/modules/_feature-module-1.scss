@@ -103,8 +103,6 @@
         }
         figcaption {
             padding: 2em;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
             position: absolute;
             top: 0;
             left: 0;
@@ -139,13 +137,9 @@
     }
     img {
         width: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        @include transform(translate3d(0, 0, 0));
     }
     h2 {
         @include transition(opacity 0.35s, transform 0.35s);
-        @include transform(translate3d(0, 0px, 0));
     }
     //secondary text animation setup
     p {
@@ -188,6 +182,10 @@
             h2 {
                 bottom: 21px;
             }
+            figcaption{
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
         }
     }
 }
@@ -202,7 +200,7 @@
     .svfm1__card {
         figure {
             max-width: 343px;
-            max-height: 390px;
+            max-height: 455px;
             .content {
                 height: 85px;
             }
