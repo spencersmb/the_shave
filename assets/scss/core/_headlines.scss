@@ -423,9 +423,6 @@
             max-width: 500px!important;
             min-width: 500px!important;
         }
-        &-subtitle {
-
-        }
     }
     .sv-feature-Icon{
         [class^="icon-sv"]{
@@ -566,17 +563,13 @@
             max-width: 800px !important;
             min-width: 800px !important;
         }
-        &-subtitle {
-
-
-        }
 
     }
     .headline-left{
         max-width: 450px !important;
         min-width: 450px !important;
     }
-    .right{
+    .pos-right{
         max-width: 500px !important;
         min-width: 500px !important;
     }
@@ -666,7 +659,7 @@
         text-align: left;
 
     }
-    .right{
+    .pos-right{
         max-width: 45vw !important;
         min-width: 45vw !important;
 
@@ -710,12 +703,9 @@
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {
-    .right{
+    .pos-right{
         max-width: 700px !important;
         min-width: 700px !important;
-    }
-    .subtitle-left{
-
     }
 
 }
