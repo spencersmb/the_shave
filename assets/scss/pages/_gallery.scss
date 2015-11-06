@@ -181,6 +181,12 @@
     }
 }
 
+/***************************************************************************/
+/* Gallery Preview ****************************************************/
+/***************************************************************************/
+
+
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .filter-group {
@@ -253,6 +259,14 @@
         .gallery-item {
             width: 33.33333333333%;
         }
+        &.gallery-preview-grid{
+            .grid-sizer {
+                width: 50%;
+            }
+            .gallery-item {
+                width: 50%;
+            }
+        }
     }
 }
 
@@ -290,6 +304,14 @@
         }
         .gallery-item {
             width: 25%;
+        }
+        &.gallery-preview-grid{
+            .grid-sizer {
+                width: 25%;
+            }
+            .gallery-item {
+                width: 25%;
+            }
         }
     }
 }

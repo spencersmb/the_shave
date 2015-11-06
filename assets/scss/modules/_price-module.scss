@@ -12,6 +12,9 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    .section__wrapper{
+        margin-top:20px;
+    }
 }
 
 .price__table {
@@ -105,6 +108,11 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+    .price__wrapper {
+       .section__wrapper{
+           margin-top:70px;
+       }
+    }
     .price__table {
         max-width: none;
         .price__header {

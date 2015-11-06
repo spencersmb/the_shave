@@ -167,8 +167,10 @@
 
 .hero-container{
     background: $black;
-    //    @include calc(height, "100vh * 0.65");
     position: relative;
+    &.hero-static{
+        @include calc(height, "100vh * 0.65");
+    }
 }
 
 .hero-background{
@@ -207,6 +209,7 @@
     color:$white;
     width:100%;
     margin:0 auto;
+    height:100%;
 }
 
 .hero-content{
@@ -411,6 +414,21 @@
     text-decoration: none;
     position: relative;
     display: block;
+}
+
+.black-headline{
+    h2{
+        font-size: 21px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+    h5{
+        font-size: 18px;
+        margin-bottom: 0;
+        font-family: $courier;
+
+    }
+
 }
 
 // Displays greater than 768px

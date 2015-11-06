@@ -136,6 +136,11 @@
     .contact__form {
         padding: 0 30px;
     }
+    .contact__form--container{
+        .pencil-contact > .icon{
+            left:28px;
+        }
+    }
     .user-text {
         margin-left: 30px;
     }

@@ -909,6 +909,10 @@ blockquote.reverse {
   background: #252525;
   position: relative;
 }
+.hero-container.hero-static {
+  height: -webkit-calc(100vh * 0.65);
+  height: calc(100vh * 0.65);
+}
 
 .hero-background {
   overflow: hidden;
@@ -953,6 +957,7 @@ blockquote.reverse {
   color: #fff;
   width: 100%;
   margin: 0 auto;
+  height: 100%;
 }
 
 .hero-content {
@@ -1146,6 +1151,17 @@ blockquote.reverse {
   text-decoration: none;
   position: relative;
   display: block;
+}
+
+.black-headline h2 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+.black-headline h5 {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1652,6 +1668,8 @@ blockquote.reverse {
 .inner-sm {
   padding: 40px 0;
   position: relative;
+  display: table;
+  width: 100%;
 }
 .inner-lg {
   padding: 50px 0;
@@ -2074,6 +2092,10 @@ blockquote.reverse {
 @media only screen and (min-width: 992px) {
   .contact__form {
     padding: 0 30px;
+  }
+
+  .contact__form--container .pencil-contact > .icon {
+    left: 28px;
   }
 
   .user-text {
@@ -3752,6 +3774,16 @@ blockquote.reverse {
 }
 .svfm1__card figure figcaption::before, .svfm1__card figure figcaption::after {
   pointer-events: none;
+}
+.svfm1__card.svfm1__2col .svfm1__2col--item {
+  margin: 0;
+}
+.svfm1__card.svfm1__2col:nth-child(1) .svfm1__2col--item {
+  margin: 0 0 0 auto;
+}
+.svfm1__card.svfm1__2col figure {
+  max-width: 370px;
+  max-height: 568px;
 }
 
 .svfm1__card--effect {
@@ -5804,6 +5836,9 @@ footer.loaded {
   width: 100%;
   margin: 0 auto;
 }
+.price__wrapper .section__wrapper {
+  margin-top: 20px;
+}
 
 .price__table {
   background: #fff;
@@ -5891,6 +5926,10 @@ footer.loaded {
   }
 }
 @media only screen and (min-width: 992px) {
+  .price__wrapper .section__wrapper {
+    margin-top: 70px;
+  }
+
   .price__table {
     max-width: none;
   }
@@ -7251,6 +7290,9 @@ footer.loaded {
   width: 100%;
 }
 
+/***************************************************************************/
+/* Gallery Preview ****************************************************/
+/***************************************************************************/
 @media only screen and (min-width: 768px) {
   .filter-group {
     padding-top: 80px;
@@ -7320,6 +7362,16 @@ footer.loaded {
   .gallery-5-grid .gallery-item {
     width: 33.33333333333%;
   }
+  .gallery-3-grid.gallery-preview-grid .grid-sizer,
+  .gallery-4-grid.gallery-preview-grid .grid-sizer,
+  .gallery-5-grid.gallery-preview-grid .grid-sizer {
+    width: 50%;
+  }
+  .gallery-3-grid.gallery-preview-grid .gallery-item,
+  .gallery-4-grid.gallery-preview-grid .gallery-item,
+  .gallery-5-grid.gallery-preview-grid .gallery-item {
+    width: 50%;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .filter-group {
@@ -7353,6 +7405,14 @@ footer.loaded {
   }
   .gallery-4-grid .gallery-item,
   .gallery-5-grid .gallery-item {
+    width: 25%;
+  }
+  .gallery-4-grid.gallery-preview-grid .grid-sizer,
+  .gallery-5-grid.gallery-preview-grid .grid-sizer {
+    width: 25%;
+  }
+  .gallery-4-grid.gallery-preview-grid .gallery-item,
+  .gallery-5-grid.gallery-preview-grid .gallery-item {
     width: 25%;
   }
 }
@@ -8283,18 +8343,7 @@ footer.loaded {
     padding: 25px;
   }
   .tab-header h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  .tab-header h4 {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 1px;
-    overflow: hidden;
-    text-indent: 0;
-    position: relative;
+    font-size: 25px;
   }
 
   .tabs__wrapper {

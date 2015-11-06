@@ -1,14 +1,14 @@
+(function(){
 // ==========================================================================
 // Flickity Gallery
 // ==========================================================================
-(function(){
 
     var currHeight,
-      currThumbHeight;
+        currThumbHeight;
 
     //get height of image on window resize
     function getImgHeightMaster(){
-      var myImg = document.querySelector("#myImg");
+      var myImg = document.querySelector(".flickity-slider").children[0].children[0];
       currHeight = myImg.clientHeight;
 
       return currHeight;
@@ -23,17 +23,13 @@
     }
 
     function resizeFlickity(){
-      var gallery = $(".gallery-main");
+      var gallery = $(".gallery-main"),
+          reSize = getImgHeightMaster();
 
-      gallery.find('.flickity-viewport').height(getImgHeightMaster());
+      gallery.find('.flickity-viewport').height(reSize);
       $('.gallery-nav').height(getThumbnailHeight());
-      gallery.css('padding-bottom', getImgHeightMaster());
+      gallery.css('padding-bottom', reSize);
     }
-
-    $('.gallery-nav').height(getThumbnailHeight());
-
-    //Set Gallery Main padding-bottom to align subnav
-    $('.gallery-main').css('padding-bottom', getImgHeightMaster());
 
     //apply
     $(window).on('resize', function(){
@@ -43,4 +39,5 @@
     $(window).on('load', function(){
       resizeFlickity();
     });
+
 })();
