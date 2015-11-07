@@ -65,16 +65,17 @@
   .approach-content{
     display: table;
     h6{
-      text-transform: none;
+      text-transform: uppercase;
       font-family:$ubuntu;
       color:$black;
+      font-size:14px;
       margin-top:5px;
       margin-bottom:5px;
       font-weight:500;
     }
     p{
-      line-height: 18px;
-      font-size: 14px;
+      line-height: 24px;
+      font-size: 16px;
     }
   }
 

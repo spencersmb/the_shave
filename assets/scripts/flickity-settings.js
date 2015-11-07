@@ -2,7 +2,8 @@
 $('.gallery-main').flickity({
 	setGallerySize: true,
 	prevNextButtons: true,
-	pageDots: false
+	pageDots: false,
+  wrapAround: true
 });
 
 $('.gallery-nav').flickity({

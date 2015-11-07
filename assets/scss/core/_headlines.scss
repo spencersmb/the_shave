@@ -121,7 +121,7 @@
 
     h2 {
         margin: 0 auto;
-        margin-bottom: 45px;
+        margin-bottom: 26px;
         font-size: 18px;
         font-weight: 500;
         letter-spacing: 3px;
@@ -146,23 +146,36 @@
     }
 }
 
-.single-headline {
-    width: 100%;
-    max-width: 900px;
-    margin: 50px auto;
-    text-align: center;
-    padding: 0 20px;
-    h2 {
-        margin: 0 auto 30px;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 3px;
+.headline-intro{
+    h2{
+        margin-bottom: 0;
+    }
+
+    h4{
+        max-width: 900px;
+        font-family: $courier;
+        margin:0 auto 25px;
         font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0;
+        color:$subtext-dk-grey;
     }
-    p {
-        line-height: 24px;
-        font-family: "courier";
-    }
+}
+
+.single-headline {
+        margin: 0 auto;
+        display: table;
+        width:100%;
+
+        h2 {
+            margin: 0 auto;
+            margin-bottom: 45px;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
 }
 
 .hero-container{
@@ -431,6 +444,10 @@
 
 }
 
+.col-block{
+    width:47.5%;
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .sv-feature {
@@ -486,7 +503,7 @@
     .headline-sm {
         max-width: none;
         h2 {
-            margin-top:45px;
+            margin-top:0;
             margin-bottom: 45px;
             font-size: 21px;
             font-weight: 700;

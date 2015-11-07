@@ -214,25 +214,23 @@ blockquote {
 .sv__container {
     margin: 0 auto;
     max-width: 1700px;
-    padding: 0 15px;
     position: relative;
     width: 100%;
-    @include breakpoint(mobile) {
-        padding: 0;
-    }
+    padding: 0;
+
     &--md {
         width: 100%;
         margin: 0 auto;
-        max-width: 1360px;
+        max-width: 440px;
     }
     &--sm {
         width: 100%;
         margin: 0 auto;
-        max-width: 1001.72px;
+        max-width: 440px;
     }
     &--xs {
         width: 100%;
-        max-width: 756px;
+        max-width: 440px;
         margin: 0 auto;
     }
 }
@@ -280,6 +278,7 @@ blockquote {
 .icon-sv-razor {
     font-size: 45px;
 }
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
 
@@ -315,6 +314,27 @@ blockquote {
 
     .section__wrapper {
         margin: 40px auto 25px;
+    }
+
+    .sv__container {
+        padding: 0 15px;
+
+        &--md {
+            max-width: 1360px;
+        }
+        &--sm {
+            max-width: 1001.72px;
+        }
+        &--xs {
+            max-width: 756px;
+        }
+    }
+
+    .col-half{
+        width:47.5%;
+    }
+    .margin-left-5{
+        left:5%;
     }
 }
 

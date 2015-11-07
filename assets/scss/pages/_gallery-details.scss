@@ -18,13 +18,17 @@
 }
 
 .gallery-cell {
-    width: 100%;
+    width: 75%;
     height: 100%;
     background: transparent;
     counter-increment: gallery-cell;
     img {
         width: 100%;
         height: initial;
+    }
+
+    &.size-tall{
+        width: 36%;
     }
 }
 

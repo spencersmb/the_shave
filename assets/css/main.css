@@ -393,28 +393,23 @@ blockquote.reverse {
 .sv__container {
   margin: 0 auto;
   max-width: 1700px;
-  padding: 0 15px;
   position: relative;
   width: 100%;
-}
-@media (max-width: 480px) {
-  .sv__container {
-    padding: 0;
-  }
+  padding: 0;
 }
 .sv__container--md {
   width: 100%;
   margin: 0 auto;
-  max-width: 1360px;
+  max-width: 440px;
 }
 .sv__container--sm {
   width: 100%;
   margin: 0 auto;
-  max-width: 1001.72px;
+  max-width: 440px;
 }
 .sv__container--xs {
   width: 100%;
-  max-width: 756px;
+  max-width: 440px;
   margin: 0 auto;
 }
 
@@ -499,6 +494,27 @@ blockquote.reverse {
 
   .section__wrapper {
     margin: 40px auto 25px;
+  }
+
+  .sv__container {
+    padding: 0 15px;
+  }
+  .sv__container--md {
+    max-width: 1360px;
+  }
+  .sv__container--sm {
+    max-width: 1001.72px;
+  }
+  .sv__container--xs {
+    max-width: 756px;
+  }
+
+  .col-half {
+    width: 47.5%;
+  }
+
+  .margin-left-5 {
+    left: 5%;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -862,7 +878,7 @@ blockquote.reverse {
 }
 .headline-sm h2 {
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 26px;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 3px;
@@ -886,23 +902,32 @@ blockquote.reverse {
   margin: 0 auto 15px;
 }
 
-.single-headline {
-  width: 100%;
+.headline-intro h2 {
+  margin-bottom: 0;
+}
+.headline-intro h4 {
   max-width: 900px;
-  margin: 50px auto;
-  text-align: center;
-  padding: 0 20px;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  margin: 0 auto 25px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #6B6B6B;
+}
+
+.single-headline {
+  margin: 0 auto;
+  display: table;
+  width: 100%;
 }
 .single-headline h2 {
-  margin: 0 auto 30px;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 3px;
+  margin: 0 auto;
+  margin-bottom: 45px;
   font-size: 18px;
-}
-.single-headline p {
-  line-height: 24px;
-  font-family: "courier";
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 
 .hero-container {
@@ -1164,6 +1189,10 @@ blockquote.reverse {
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 
+.col-block {
+  width: 47.5%;
+}
+
 @media only screen and (min-width: 768px) {
   .sv-feature-headline {
     max-width: 500px !important;
@@ -1215,7 +1244,7 @@ blockquote.reverse {
     max-width: none;
   }
   .headline-sm h2 {
-    margin-top: 45px;
+    margin-top: 0;
     margin-bottom: 45px;
     font-size: 21px;
     font-weight: 700;
@@ -1512,6 +1541,10 @@ blockquote.reverse {
   border: 0;
 }
 
+.img-center {
+  margin: 0 auto;
+}
+
 .row {
   margin-bottom: 0;
 }
@@ -1676,20 +1709,6 @@ blockquote.reverse {
   position: relative;
 }
 
-.col-block {
-  font-size: 21px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 30px;
-}
-.col-block h4 {
-  text-transform: none;
-  font-weight: 300;
-  letter-spacing: 1px;
-  line-height: 28px;
-  font-size: 18px;
-}
-
 .icon-gold {
   color: #af8c45;
 }
@@ -1700,13 +1719,13 @@ blockquote.reverse {
   padding: 15px;
 }
 
+.mobile-space-sm {
+  padding-top: 70px;
+}
+
 @media only screen and (min-width: 768px) {
-  .col-block {
-    padding: 0 30px;
-  }
-  .col-block h4 {
-    font-size: 24px;
-    line-height: 32px;
+  .mobile-space-sm {
+    padding-top: 0;
   }
 
   .angle-top-bottom {
@@ -6754,16 +6773,17 @@ footer.loaded {
   display: table;
 }
 .approach-list .approach-content h6 {
-  text-transform: none;
+  text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
   color: #252525;
+  font-size: 14px;
   margin-top: 5px;
   margin-bottom: 5px;
   font-weight: 500;
 }
 .approach-list .approach-content p {
-  line-height: 18px;
-  font-size: 14px;
+  line-height: 24px;
+  font-size: 16px;
 }
 .approach-list .approach-icon-wrapper {
   height: 60px;
@@ -7464,7 +7484,7 @@ footer.loaded {
 }
 
 .gallery-cell {
-  width: 100%;
+  width: 75%;
   height: 100%;
   background: transparent;
   counter-increment: gallery-cell;
@@ -7472,6 +7492,9 @@ footer.loaded {
 .gallery-cell img {
   width: 100%;
   height: initial;
+}
+.gallery-cell.size-tall {
+  width: 36%;
 }
 
 /* cell number */
