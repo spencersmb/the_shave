@@ -25,6 +25,10 @@
     }
 }
 
+.sv-wrapper{
+    padding:0 30px;
+}
+
 .divider__plus {
     margin: 0 auto;
     text-align: center;
@@ -149,14 +153,15 @@
 .white {
     color: $white;
 }
-
+.gold {
+    color: $primary-color;
+}
 .single-image {
     img {
         margin: 0 auto;
         width: 100%;
     }
 }
-
 .dual-img {
     img {
         width: 100%;
@@ -257,31 +262,22 @@
 }
 .inner{
     &-sm{
+        padding:25px 0;
+        position: relative;
+        display: table;
+        width: 100%;
+    }
+    &-md{
         padding:40px 0;
         position: relative;
         display: table;
         width: 100%;
     }
     &-lg{
-        padding:50px 0;
+        padding:70px 0;
         position: relative;
     }
 }
-//.col-block{
-//    font-size: 21px;
-//    margin:0 auto;
-//    text-align: center;
-//    padding: 0 30px;
-//
-//    h4{
-//        text-transform: none;
-//        font-weight: 300;
-//        letter-spacing: 1px;
-//        line-height: 28px;
-//        font-size:18px;
-//    }
-//
-//}
 .icon-gold{
     color:$primary-color;
 }
@@ -295,20 +291,20 @@
 .mobile-space-sm{
     padding-top:70px;
 }
+.mobile-space-tb{
+    padding:70px 0;
+}
+
+.space-sm{
+    padding-top:25px;
+}
+
+.space-lg{
+    padding-top:100px;
+}
 
 @include breakpoint(tablet) {
 
-    .mobile-space-sm{
-        padding-top:0;
-    }
-
-//    .col-block {
-//        padding:0 30px;
-//        h4{
-//            font-size:24px;
-//            line-height: 32px;
-//        }
-//    }
     .angle-top-bottom {
         bottom: 0;
         border-top: 35px solid transparent;
@@ -334,12 +330,28 @@
     .footer__dots{
         margin:50px 0;
     }
+
 }
 
 @include breakpoint(laptop) {
+    .space-sm{
+        padding-top:40px;
+    }
+    .mobile-space-sm{
+        padding-top:0;
+    }
+    .mobile-space-tb{
+        padding:0;
+    }
     .inner{
         &-lg{
             padding:70px 0;
+        }
+        &-md{
+            padding:50px 0;
+        }
+        &-sm {
+            padding: 40px 0;
         }
     }
     .angle-top-bottom {
@@ -391,5 +403,8 @@
     .angle-bottom {
         bottom: -80px;
         border-bottom: 80px solid transparent;
+    }
+    .sv-wrapper{
+        padding:0;
     }
 }

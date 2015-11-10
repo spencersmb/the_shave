@@ -4,7 +4,7 @@
 
 .google-container{
   margin:0 auto;
-  padding:0 30px;
+  padding:0 30px 40px;
   width:100%;
 }
 
@@ -106,6 +106,9 @@
 }
 
 @include breakpoint(tablet) {
+  .google-container{
+	padding:0 30px;
+  }
 
   .contact__header{
 	padding:0;

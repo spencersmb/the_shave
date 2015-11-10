@@ -55,9 +55,10 @@ h3 {
 
 h4 {
     font-size: em(18px);
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 h5 {
@@ -196,7 +197,6 @@ blockquote {
     img {
         display: block;
         position: absolute;
-        top: 0;
         min-height: 100%;
         min-width: 100%;
         top: 50%;
@@ -227,6 +227,9 @@ blockquote {
         width: 100%;
         margin: 0 auto;
         max-width: 440px;
+        &.sm-fluid{
+            max-width: 100%;
+        }
     }
     &--xs {
         width: 100%;
@@ -293,9 +296,7 @@ blockquote {
         font-size: 21.5px;
         padding: 10px 20px;
     }
-    .sv__main--content {
-//        padding-top: $header-M;
-    }
+
     .card {
         .content {
             margin: 7.525em 27.5%;
@@ -324,24 +325,28 @@ blockquote {
         }
         &--sm {
             max-width: 1001.72px;
+            &.sm-fluid{
+                max-width: 1001.72px;
+            }
         }
         &--xs {
             max-width: 756px;
         }
     }
 
-    .col-half{
-        width:47.5%;
-    }
-    .margin-left-5{
-        left:5%;
-    }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-    .sv__main--content {
-//        padding-top: $header-M;
+
+    .margin-left-5{
+        left:5%;
+    }
+    .margin-right-5{
+        right:5%;
+    }
+    .col-half{
+        width:47.5%;
     }
     blockquote {
         border-left: 5px solid $primary-color;

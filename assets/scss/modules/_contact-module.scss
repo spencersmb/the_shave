@@ -5,7 +5,8 @@
 .contact__wrapper {
     overflow: hidden;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 30px;
+
     .section__wrapper {
         margin: 0 auto;
     }
@@ -126,7 +127,7 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .contact__wrapper {
-        padding: 60px;
+        padding: 10px 60px;
     }
     .contact__card {
         height: em(470px);
@@ -179,7 +180,7 @@
 @include breakpoint(laptop) {
     .contact__wrapper {
         max-width: 1200px;
-        padding:80px;
+        padding:0 80px;
     }
     .contact__card {
         height: em(490px);

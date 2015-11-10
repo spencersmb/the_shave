@@ -22,11 +22,17 @@
   .buy-theme-sm{
     margin:0 auto;
     padding:0 45px;
+    display: table;
+    width: 100%;
 
     h4{
-      display: block;
       margin-bottom: 40px;
-      font-size:21px;
+      display: block;
+      vertical-align: baseline;
+      line-height: 27px;
+      font-size:18px;
+      position: relative;
+      letter-spacing: 2px;
     }
   }
 }
@@ -34,6 +40,8 @@
 // Displays greater than 768px
 @include breakpoint(tablet) {
   .buy__container{
+    max-width: 1160px;
+
     h2{
       font-size: 32px;
     }
@@ -43,9 +51,7 @@
     }
     .buy-theme-sm{
       padding:0;
-      h4{
-        font-size:24px;
-      }
+
     }
   }
 }
@@ -55,7 +61,6 @@
   .buy__container{
     display: block;
     padding:0;
-    max-width: 850px;
 
     h2{
       font-size: 40px;
@@ -68,16 +73,12 @@
     }
     .buy-theme-sm{
       padding:0;
-
       h4{
-        display: block;
-        font-size: 21px;
-        margin:10px auto 0;
-        float:left;
+        display: inline;
+        margin-right:40px;
+        top:2px;
       }
-      a{
-        float:right;
-      }
+
     }
   }
 }
@@ -85,7 +86,7 @@
 // Displays greater than 1200px
 @include breakpoint(desktop) {
   .buy__container{
-    max-width: 925px;
+
     h2{
       font-size: 46px;
     }
@@ -96,10 +97,6 @@
     }
     .buy-theme-sm{
 
-      h4{
-        margin-bottom: 0;
-        font-size: 24px;
-      }
     }
   }
 

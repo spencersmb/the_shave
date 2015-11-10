@@ -50,18 +50,40 @@
     float:left;
     margin-right:15px;
   }
-
+  li{
+    margin-bottom: 20px;
+    clear: both;
+    & > i{
+      display: block;
+      float:left;
+    }
+    span{
+      margin-left:40px;
+      display: block;
+    }
+  }
   .approach-group{
     margin-bottom: 30px;
   }
-
   .approach-item{
     margin-bottom: 20px;
     &:nth-last-child(1){
       margin-bottom:0;
     }
   }
-
+  .approach-icon-wrapper{
+    height: 60px;
+    width: 60px;
+    display: block;
+    position: relative;
+    margin-right:30px;
+    float:left;
+    i{
+      font-size: 60px;
+      width:100%;
+      display: block;
+    }
+  }
   .approach-content{
     display: table;
     h6{
@@ -77,20 +99,6 @@
       line-height: 24px;
       font-size: 16px;
     }
-  }
-
-  .approach-icon-wrapper{
-      height: 60px;
-      width: 60px;
-      display: block;
-      position: relative;
-      margin-right:30px;
-      float:left;
-      i{
-        font-size: 60px;
-        width:100%;
-        display: block;
-      }
   }
 }
 

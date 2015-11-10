@@ -60,7 +60,7 @@
 }
 
 .blog__content--author {
-    margin: 0 30px 45px;
+    margin: 0 auto 45px;
     padding: 20px;
     display: table;
     max-width: 800px;
@@ -156,6 +156,7 @@
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+
     .blog__content {
         &--inner {
             padding: 50px 20px 0;
@@ -165,7 +166,6 @@
             margin: 40px 0 40px;
         }
         &--author {
-            margin: 0 30px 45px;
             .text {
                 padding-left: 36px;
                 text-align: left;
@@ -214,6 +214,9 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
+    .blog__content--author {
+        margin: 0 30px 45px;
+    }
     .blog__offset {
         margin-top: 75px;
     }
