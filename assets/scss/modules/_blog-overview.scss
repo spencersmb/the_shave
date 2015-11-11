@@ -96,28 +96,6 @@
         display: block;
     }
 
-    .shave__faq--trigger{
-        i{
-            width:36px;
-            position: absolute;
-            top:50%;
-            @include transform(translateY(-50%));
-            color:$primary-color;
-        }
-        span{
-            margin-left:55px;
-            font-family: $ubuntu;
-            font-weight: 400;
-            display: block;
-            position: relative;
-        }
-
-        &::before,
-        &::after{
-            background: $black;
-        }
-
-    }
 }
 
 // Displays greater than 768px

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'sv-barbershop';
-  src: url('../fonts/sv-fonts/sv-barbershop.eot?48779779');
-  src: url('../fonts/sv-fonts/sv-barbershop.eot?48779779#iefix') format('embedded-opentype'),
-  url('../fonts/sv-fonts/sv-barbershop.woff?48779779') format('woff'),
-  url('../fonts/sv-fonts/sv-barbershop.ttf?48779779') format('truetype'),
-  url('../fonts/sv-fonts/sv-barbershop.svg?48779779#sv-barbershop') format('svg');
+  src: url('../fonts/sv-fonts/sv-barbershop.eot?49862412');
+  src: url('../fonts/sv-fonts/sv-barbershop.eot?49862412#iefix') format('embedded-opentype'),
+  url('../fonts/sv-fonts/sv-barbershop.woff?49862412') format('woff'),
+  url('../fonts/sv-fonts/sv-barbershop.ttf?49862412') format('truetype'),
+  url('../fonts/sv-fonts/sv-barbershop.svg?49862412#sv-barbershop') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,12 +14,15 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'sv-barbershop';
-    src: url('../font/sv-barbershop.svg?48779779#sv-barbershop') format('svg');
+    src: url('../font/sv-barbershop.svg?49862412#sv-barbershop') format('svg');
   }
 }
 */
 
-[class^="icon-sv"]:before, [class*=" icon-sv"]:before {
+[class^="icon-sv"]:before,
+[class*=" icon-sv"]:before,
+.testimonial-icon-left,
+.testimonial-icon-right{
   font-family: "sv-barbershop";
   font-style: normal;
   font-weight: normal;
@@ -76,3 +79,5 @@
 .icon-sv-design:before { content: '\e808'; } /* '' */
 .icon-sv-options:before { content: '\e809'; } /* '' */
 .icon-sv-gears:before { content: '\e80a'; } /* '' */
+.icon-right-open-big:before { content: '\e80b'; } /* '' */
+.icon-left-open-big:before { content: '\e80c'; } /* '' */

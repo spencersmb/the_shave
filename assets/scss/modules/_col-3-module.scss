@@ -91,7 +91,8 @@
     .col3__module {
         h2{
             margin-top: 0;
-            font-size: 69px;
+            font-size: 48px;
+            line-height: 52px;
         }
         .wrapper {
             margin: 0 auto;
@@ -129,6 +130,16 @@
         }
         .desc {
             text-align: left;
+        }
+        .intro{
+            h2{
+                font-size: 97px;
+                line-height: 100px;
+            }
+            h5{
+                font-size:34px;
+                line-height: 44px;
+            }
         }
 
     }

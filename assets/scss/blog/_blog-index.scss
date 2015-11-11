@@ -9,6 +9,7 @@
 
   h1{
     font-size:24px;
+    font-weight: 500;
   }
 
   &:hover{
@@ -98,10 +99,10 @@
 //BLOG FEATURED MODULE
 .blog-featured{
 
-  .headline-sm{
-    padding:80px 0 40px;
-    max-width: 250px;
-  }
+//  .headline-sm{
+//    padding:80px 0 40px;
+//    max-width: 250px;
+//  }
 
   h2{
     font-weight: 500;
@@ -119,7 +120,7 @@
     height: 500px;
 
     h1{
-      font-size:36px;
+      font-size:32px;
     }
 
     &:hover{
@@ -154,10 +155,10 @@
   //BLOG FEATURED MODULE
   .blog-featured{
 
-    .headline-sm{
-      padding:80px 0 40px;
-      max-width: 500px;
-    }
+//    .headline-sm{
+//      padding:80px 0 40px;
+//      max-width: 500px;
+//    }
 
     .post-thumb{
       height:360px;
@@ -172,10 +173,10 @@
   //BLOG FEATURED MODULE
   .blog-featured{
 
-    .headline-sm{
-      padding:120px 0 60px;
-      max-width: 700px;
-    }
+//    .headline-sm{
+//      padding:120px 0 60px;
+//      max-width: 700px;
+//    }
 
     .row{
       padding:0;

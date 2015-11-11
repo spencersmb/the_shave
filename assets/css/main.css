@@ -60,8 +60,8 @@ Tags:
 @import url("http://fonts.googleapis.com/css?family=Yellowtail");
 @font-face {
   font-family: 'sv-barbershop';
-  src: url("../fonts/sv-fonts/sv-barbershop.eot?48779779");
-  src: url("../fonts/sv-fonts/sv-barbershop.eot?48779779#iefix") format("embedded-opentype"), url("../fonts/sv-fonts/sv-barbershop.woff?48779779") format("woff"), url("../fonts/sv-fonts/sv-barbershop.ttf?48779779") format("truetype"), url("../fonts/sv-fonts/sv-barbershop.svg?48779779#sv-barbershop") format("svg");
+  src: url("../fonts/sv-fonts/sv-barbershop.eot?49862412");
+  src: url("../fonts/sv-fonts/sv-barbershop.eot?49862412#iefix") format("embedded-opentype"), url("../fonts/sv-fonts/sv-barbershop.woff?49862412") format("woff"), url("../fonts/sv-fonts/sv-barbershop.ttf?49862412") format("truetype"), url("../fonts/sv-fonts/sv-barbershop.svg?49862412#sv-barbershop") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -71,11 +71,14 @@ Tags:
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'sv-barbershop';
-    src: url('../font/sv-barbershop.svg?48779779#sv-barbershop') format('svg');
+    src: url('../font/sv-barbershop.svg?49862412#sv-barbershop') format('svg');
   }
 }
 */
-[class^="icon-sv"]:before, [class*=" icon-sv"]:before {
+[class^="icon-sv"]:before,
+[class*=" icon-sv"]:before,
+.testimonial-icon-left,
+.testimonial-icon-right {
   font-family: "sv-barbershop";
   font-style: normal;
   font-weight: normal;
@@ -168,6 +171,16 @@ Tags:
 }
 
 /* '' */
+.icon-right-open-big:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-left-open-big:before {
+  content: '\e80c';
+}
+
+/* '' */
 /***************************************************************************/
 /* Base Settings ****************************************************/
 /***************************************************************************/
@@ -862,8 +875,14 @@ blockquote.reverse {
   font-size: 1.125em;
 }
 .intro .small-headline {
-  font-size: 0.875em;
-  margin: 0;
+  line-height: 24px;
+  margin: 0 auto;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+  max-width: 850px;
+  color: #6B6B6B;
 }
 .intro .sub-copy {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -914,6 +933,24 @@ blockquote.reverse {
   font-size: 20px;
 }
 .headline-md p {
+  width: 100%;
+  max-width: 1000px;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto 15px;
+}
+
+.headline-lg {
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+  padding: 0 15px;
+}
+.headline-lg h2 {
+  margin: 20px auto;
+  font-size: 52px;
+}
+.headline-lg p {
   width: 100%;
   max-width: 1000px;
   font-size: 16px;
@@ -1256,12 +1293,16 @@ blockquote.reverse {
   .intro {
     padding: 0 10%;
   }
-  .intro .sub-copy {
-    font-size: 1.125em;
-  }
   .intro h2 {
     font-size: 3em;
     line-height: 52px;
+  }
+  .intro .small-headline {
+    line-height: 26px;
+    font-size: 18px;
+  }
+  .intro .sub-copy {
+    font-size: 1.125em;
   }
 
   .headline-sm {
@@ -1474,8 +1515,13 @@ blockquote.reverse {
   }
 
   .intro h2 {
-    font-size: 6.0625em;
-    line-height: 73px;
+    font-size: 97px;
+    line-height: 100px;
+  }
+  .intro .small-headline {
+    max-width: 850px;
+    line-height: 28px;
+    font-size: 21px;
   }
 
   .headline-md p {
@@ -4885,93 +4931,130 @@ blockquote.reverse {
 /***************************************************************************/
 /* Twitter Module ****************************************************/
 /***************************************************************************/
-.twitter__wrapper {
-  text-align: center;
-  color: #fff;
-  margin: 0 auto;
-}
-.twitter__wrapper blockquote {
+.testimonial-wrapper blockquote {
   border: 0;
-  width: 65%;
   padding: 0;
   margin: 0 auto;
-  color: #fff;
-  font-size: 16px;
-  line-height: 12px;
-}
-.twitter__wrapper p {
-  line-height: 24px;
   display: block;
+  color: #6B6B6B;
 }
-.twitter__wrapper span {
-  font-weight: 600;
-}
-.twitter__wrapper hr {
-  width: 15%;
-  margin: 20px auto;
-}
-.twitter__wrapper h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-.twitter__wrapper cite {
-  padding-top: 5px;
+.testimonial-wrapper cite {
   display: block;
+  font-size: 14px;
+  border-left: solid #af8c45;
+  margin-top: 25px;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  padding-left: 25px;
 }
 
-#twitter-carousel {
-  padding: 50px 0;
+#testimonial-carousel .carousel-inner > .item.active {
+  display: table;
+  width: 100%;
 }
-#twitter-carousel .carousel-inner {
-  margin-bottom: 20px;
-}
-#twitter-carousel .carousel-inner > .item > img {
+#testimonial-carousel .carousel-inner > .item > img {
   margin: 0 auto;
   max-width: 60px;
 }
-#twitter-carousel .carousel-control:focus {
+#testimonial-carousel .carousel-control {
+  color: #252525;
+}
+#testimonial-carousel .carousel-control i {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-shadow: none;
+  position: absolute;
+  width: 100%;
+}
+#testimonial-carousel .carousel-control:focus {
   opacity: .5;
 }
-#twitter-carousel .carousel-control:hover {
+#testimonial-carousel .carousel-control:hover {
   opacity: .9 !important;
 }
-#twitter-carousel .carousel-control.right, #twitter-carousel .carousel-control.left {
+#testimonial-carousel .carousel-control.right, #testimonial-carousel .carousel-control.left {
   background-image: none;
 }
-#twitter-carousel .carousel-indicators {
+#testimonial-carousel .carousel-indicators {
   margin-left: -30.5%;
 }
 
 @media only screen and (min-width: 768px) {
-  .twitter__wrapper blockquote {
-    width: 80%;
+  .testimonial-wrapper {
+    padding: 0 35px;
   }
-  .twitter__wrapper cite {
-    display: block;
+  .testimonial-wrapper blockquote {
+    font-size: 40px;
+    line-height: 53px;
+  }
+  .testimonial-wrapper cite {
+    font-size: 18px;
+    margin-top: 50px;
   }
 
-  #twitter-carousel .carousel-inner {
-    max-width: 700px;
-    margin: 0 auto 30px;
-  }
-  #twitter-carousel .carousel-indicators {
+  #testimonial-carousel .carousel-indicators {
     margin-left: -30.5%;
     bottom: 0;
   }
 }
 @media only screen and (min-width: 992px) {
-  #twitter-carousel .carousel-inner {
-    max-width: 700px;
+  .testimonial-wrapper {
+    position: absolute;
+    max-width: 410px;
+    padding: 0;
+    right: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .testimonial-wrapper blockquote {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .testimonial-wrapper cite {
+    font-size: 16px;
+  }
+
+  #testimonial-carousel .testimonial-img {
+    width: 46%;
+    margin: 0 2%;
+  }
+  #testimonial-carousel .testimonial-img img {
+    max-height: 600px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #twitter-carousel .carousel-inner {
-    max-width: 900px;
+  .testimonial-wrapper {
+    max-width: 39%;
+    padding: 0;
+    right: 6%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
-}
-@media only screen and (min-width: 1600px) {
-  #twitter-carousel .carousel-inner {
-    max-width: 1200px;
+  .testimonial-wrapper blockquote {
+    font-size: 40px;
+    line-height: 51px;
+  }
+
+  #testimonial-carousel .testimonial-img {
+    width: 55%;
+    margin: 0;
+  }
+  #testimonial-carousel .testimonial-img img {
+    max-height: 100%;
+  }
+  #testimonial-carousel .carousel-control {
+    width: 10%;
   }
 }
 .buy__container {
@@ -5588,7 +5671,8 @@ footer.loaded {
 @media only screen and (min-width: 768px) {
   .col3__module h2 {
     margin-top: 0;
-    font-size: 69px;
+    font-size: 48px;
+    line-height: 52px;
   }
   .col3__module .wrapper {
     margin: 0 auto;
@@ -5615,6 +5699,14 @@ footer.loaded {
   }
   .col3__module .desc {
     text-align: left;
+  }
+  .col3__module .intro h2 {
+    font-size: 97px;
+    line-height: 100px;
+  }
+  .col3__module .intro h5 {
+    font-size: 34px;
+    line-height: 44px;
   }
 
   .col3__container h5 {
@@ -6897,7 +6989,7 @@ footer.loaded {
     font-size: 16px;
   }
   .sv-approach-wrapper h2 {
-    font-size: 37px;
+    font-size: 35px;
     line-height: 37px;
     margin-bottom: 50px;
     width: 100%;
@@ -8557,6 +8649,7 @@ footer.loaded {
 }
 .post-thumb h1 {
   font-size: 24px;
+  font-weight: 500;
 }
 .post-thumb:hover {
   cursor: pointer;
@@ -8639,10 +8732,6 @@ footer.loaded {
   color: #fff;
 }
 
-.blog-featured .headline-sm {
-  padding: 80px 0 40px;
-  max-width: 250px;
-}
 .blog-featured h2 {
   font-weight: 500;
   letter-spacing: 2px;
@@ -8656,7 +8745,7 @@ footer.loaded {
     height: 500px;
   }
   .post-thumb h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
   .post-thumb:hover .post-thumb-img {
     opacity: .4;
@@ -8681,19 +8770,11 @@ footer.loaded {
     display: block;
   }
 
-  .blog-featured .headline-sm {
-    padding: 80px 0 40px;
-    max-width: 500px;
-  }
   .blog-featured .post-thumb {
     height: 360px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .blog-featured .headline-sm {
-    padding: 120px 0 60px;
-    max-width: 700px;
-  }
   .blog-featured .row {
     padding: 0;
   }
