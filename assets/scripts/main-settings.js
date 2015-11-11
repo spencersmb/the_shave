@@ -557,10 +557,10 @@ $(function() {
 			});
 
 			// ==========================================================================
-			// Twitter Carousel
+			// Testimonial Carousel
 			// ==========================================================================
 			$('#testimonial-carousel').carousel({
-				interval: 8000,
+				interval: 15000,
 				pause: "false"
 			});
 
@@ -576,31 +576,6 @@ $(function() {
 				return false;
 
 			});
-
-			// ==========================================================================
-			// 3 col 2 row grid
-			// ==========================================================================
-			//var gridElements = $('.one-third');
-
-			//
-			//var lastThree = gridElements.slice(-3);
-      //
-			//lastThree.css('margin-bottom', 0);
-			
-			//$('#hours').click(function(e){
-			//	e.preventDefault();
-			//	$('.sv-toast').addClass('in');
-			//});
-      //
-			//$('.sv-hours').children('button').click(function(e){
-			//	e.preventDefault();
-			//	$('.sv-toast').addClass('out');
-			//	setTimeout(function() {
-			//		$('.sv-toast').removeClass('in out');
-			//	}, 800 );
-			//});
-
-
 
 		})();
 
@@ -624,7 +599,7 @@ $(function() {
 					if(index == 0){
 
 					}else{
-						//				$(this).fadeOut();
+
 					}
 				});
 
@@ -720,7 +695,7 @@ $(function() {
 				object.addClass('in');
 			}, 200);
 		}
-	//Change size of body depending on content in tabs
+		//Change size of body depending on content in tabs
 		$('#priceTabs').on('click', 'li', function(e){
 			e.preventDefault();
 			var galleryPageHeight = $(window).height();
@@ -774,9 +749,5 @@ $(function() {
 
 		//Image Preloader check
 		shavePreloader();
-
-
-		//angled boarders
-		//setAngleWidth(windowSize);
 
 });

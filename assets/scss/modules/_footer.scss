@@ -9,7 +9,7 @@ footer {
     width: 100%;
     background: $black;
     opacity: 0;
-    @include transition(opacity 1s .7s ease-out);
+    @include transition(opacity 1s .9s ease-out);
     &.safari {
         z-index: 0;
     }

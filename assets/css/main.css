@@ -284,21 +284,6 @@ ul {
   margin-top: 0;
 }
 
-.loading {
-  background-color: #fff;
-}
-.loading .load-icon {
-  -webkit-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-  position: absolute;
-  top: 50%;
-  margin: 0 auto;
-  width: 100%;
-  height: 50px;
-  background: url("../images/icons/ico_loading.gif") no-repeat center center;
-}
-
 .sv__main--content {
   opacity: 0;
   position: relative;
@@ -313,6 +298,10 @@ ul {
   -moz-transition: opacity 1s ease-out;
   transition: opacity 1s ease-out;
   opacity: 1;
+}
+.loaded .sv__main--content .loader-wrapper,
+.no-js section .loader-wrapper {
+  opacity: 0;
 }
 
 .inner-content-module {
@@ -624,6 +613,45 @@ blockquote.reverse {
 /***************************************************************************/
 /* Effects ****************************************************/
 /***************************************************************************/
+.loading {
+  background-color: #fff;
+}
+.loading .loader-wrapper {
+  position: fixed;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateY(-30%);
+  -moz-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
+  transform: translateY(-30%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+.loading .loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #252525;
+  animation: loader 2s infinite ease;
+}
+.loading .loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #252525;
+  animation: loader-inner 2s infinite ease-in;
+}
+
 .parallax__background {
   background-size: cover;
   background-position: 50% 50%;
@@ -710,6 +738,40 @@ blockquote.reverse {
   box-shadow: 0 5px 15px rgba(37, 37, 37, 0.5);
 }
 
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .parallax__background.image__content {
     height: 500px;
@@ -5067,7 +5129,7 @@ blockquote.reverse {
 .buy__container h2 {
   font-size: 24px;
   margin-bottom: 40px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 2px;
 }
 .buy__container p {
@@ -5148,9 +5210,9 @@ footer {
   width: 100%;
   background: #252525;
   opacity: 0;
-  -webkit-transition: opacity 1s 0.7s ease-out;
-  -moz-transition: opacity 1s 0.7s ease-out;
-  transition: opacity 1s 0.7s ease-out;
+  -webkit-transition: opacity 1s 0.9s ease-out;
+  -moz-transition: opacity 1s 0.9s ease-out;
+  transition: opacity 1s 0.9s ease-out;
 }
 footer.safari {
   z-index: 0;
