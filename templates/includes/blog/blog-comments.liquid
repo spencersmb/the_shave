@@ -1,5 +1,5 @@
 <!-- Blog Comments -->
-<section class="container-fluid no-padding light-grey-bg">
+<div class="section container-fluid no-padding light-grey-bg">
 
 	<div class="sv__container--sm">
 
@@ -11,22 +11,24 @@
 
 			<div class="comments">
 
-				<li class="comment">
-					<div class="user">
-						<div class="author__img">
-							<img src="{{ 'user.png' | asset_url }}" alt="" />
-						</div>
-						<div class="comment__text">
+				<ul class="children">
+					<li class="comment">
+						<div class="user">
+							<div class="author__img">
+								<img src="{{ 'user.png' | asset_url }}" alt="" />
+							</div>
+							<div class="comment__text">
 							<span class="reply">
 								<a href="#"><i class="fa fa-reply"></i>reply</a>
 							</span>
-							<span class="author">Solar Juna</span>
-							<span class="date">March 31, 2015 at 8:46 PM</span>
-							<p>I’d really like to purchase this, but where can I add in the code to get 20% off? I can’t see where to put it in the checkout process</p>
+								<span class="author">Solar Juna</span>
+								<span class="date">March 31, 2015 at 8:46 PM</span>
+								<p>I’d really like to purchase this, but where can I add in the code to get 20% off? I can’t see where to put it in the checkout process</p>
 
+							</div>
 						</div>
-					</div>
-				</li>
+					</li>
+				</ul>
 
 				<!-- comment reply -->
 				<ul class="children">
@@ -45,29 +47,28 @@
 
 							</div>
 						</div>
-					</li>
+						<!-- comment reply -->
+						<ul class="children">
 
-					<!-- comment reply -->
-					<ul class="children">
-
-						<li class="comment">
-							<div class="user">
-								<div class="author__img">
-									<img src="{{ 'user.png' | asset_url }}" alt="" />
-								</div>
-								<div class="comment__text">
+							<li class="comment">
+								<div class="user">
+									<div class="author__img">
+										<img src="{{ 'user.png' | asset_url }}" alt="" />
+									</div>
+									<div class="comment__text">
 									<span class="reply">
 										<a href="#"><i class="fa fa-reply"></i>reply</a>
 									</span>
-									<span class="author">Solar Juna</span>
-									<span class="date">March 31, 2015 at 8:46 PM</span>
-									<p>I’d really like to purchase this, but where can I add in the code to get 20% off? I can’t see where to put it in the checkout process</p>
+										<span class="author">Solar Juna</span>
+										<span class="date">March 31, 2015 at 8:46 PM</span>
+										<p>I’d really like to purchase this, but where can I add in the code to get 20% off? I can’t see where to put it in the checkout process</p>
 
+									</div>
 								</div>
-							</div>
-						</li>
+							</li>
 
-					</ul><!-- end comment reply -->
+						</ul><!-- end comment reply -->
+					</li>
 
 				</ul><!-- end comment reply -->
 
@@ -77,10 +78,10 @@
 
 	</div><!-- end container -->
 
-</section> <!-- end comments -->
+</div> <!-- end comments -->
 
 <!-- Leave comment section -->
-<section class="container-fluid no-padding container__white">
+<div class="section container-fluid no-padding container__white">
 
 	<div class="row sv__container--sm comment__respond">
 
@@ -90,7 +91,7 @@
 
 		<!-- comment form -->
 		<div class="comment__form">
-			<form action="" method="post">
+			<form>
 				<div class="col-xs-12 col-md-6">
 					<div class="input__container">
 						<span class="icon"><i class="fa fa-user"></i></span>
@@ -115,5 +116,5 @@
 
 	</div><!-- end container -->
 
-</section>
+</div>
 <!-- End comment form -->

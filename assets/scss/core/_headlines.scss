@@ -6,10 +6,12 @@
     text-align: center;
     clear: both;
     margin: em(40px) auto em(200px);
-    h1 {
+    h2 {
         font-size: em(84px);
         max-width: 900px;
         margin: 0 auto;
+        text-transform: none;
+        letter-spacing: .5px;
     }
     p {
         font-size: em(24px);
@@ -42,7 +44,7 @@
     margin: 50px auto 25px;
     padding: 0 25px;
 
-    h1 {
+    h2 {
         font-size: 28px;
     }
     h3 {
@@ -268,6 +270,8 @@
     .hero-title{
         font-size: 32px;
         line-height: 32px;
+        text-transform: none;
+        letter-spacing: .5px;
     }
 
     .hero-meta{
@@ -319,13 +323,14 @@
         position: absolute;
         text-align: center;
 
-        h1{
+        h2{
             margin:0 auto;
             max-width: 400px;
             font-size: 37px;
             line-height: 1.1;
             font-weight: 700;
             letter-spacing: .5px;
+            text-transform: none;
         }
 
         h3{
@@ -516,7 +521,7 @@
         margin:140px auto 35px;
         padding:0 35px;
 
-        h1 {
+        h2 {
             font-size: 56px;
         }
         h3 {
@@ -599,7 +604,7 @@
             position: absolute;
             text-align: center;
 
-            h1{
+            h2{
                 max-width: 900px;
                 font-size: 70px;
                 line-height: 1.1;
@@ -656,7 +661,7 @@
     .inner__header--sm {
         margin:160px auto 80px;
 
-        h1 {
+        h2 {
             font-size: 84px;
             line-height: 1.13;
         }
@@ -700,7 +705,7 @@
     .hero-content{
         &.header {
 
-            h1 {
+            h2 {
                 font-size: 84px;
             }
 

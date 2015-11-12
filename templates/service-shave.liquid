@@ -9,7 +9,7 @@
 
 {% include "col-3-module-1" %}
 
-<section class="container-fluid no-padding">
+<div class="section container-fluid no-padding">
 	<div class="row no-margin">
 		<div class="col-sm-6 no-padding">
 			<img class="img-responsive" src="{{'shave-1.jpg' | asset_url}}" alt="Shaving process"/>
@@ -18,11 +18,11 @@
 			<img class="img-responsive" src="{{'shave-2.jpg' | asset_url}}" alt="Shaving process"/>
 		</div>
 	</div>
-</section>
+</div>
 
 {% include "image-text" %}
 
-<section class="container-fluid no-padding black-bg">
+<div class="section container-fluid no-padding black-bg">
 	<div class="inner-sm">
 		<div class="row no-margin">
 			<div class="col-xs-12">
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
 {% include "text-image" %}
 
@@ -42,7 +42,7 @@
 {% include "service-shave/suggested-barber" %}
 <!-- End bio module -->
 
-<section class="container-fluid no-padding black-bg black-headline">
+<div class="section container-fluid no-padding black-bg black-headline">
 	<div class="inner-lg">
 		<div class="row no-margin">
 			<div class="col-xs-12">
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
 <!-- Start Price module -->
 {% include "gallery-preview" %}
@@ -61,11 +61,11 @@
 {% include "service-shave/price-boxs-shave" %}
 <!-- End Section price module -->
 
-<section>
+<div class="section">
 	<!-- Start Price module -->
 	{% include "service-shave/other-services" %}
 	<!-- End Section price module -->
-</section>
+</div>
 
 
 {% endblock %}

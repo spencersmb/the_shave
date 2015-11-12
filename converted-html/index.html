@@ -1,11 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <html lang="en">
     <head>
+        <meta charset="utf-8"/>
         <!-- Title block allowing child pages to override -->
         <title>The Shave</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -42,7 +38,10 @@
     </head>
     <body class="loading">
 
-        <div class="load-icon"></div>
+        <!--<div class="load-icon"></div>-->
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
         <!--
 #################################
 	- Header Section -
@@ -84,28 +83,6 @@
             <li class="mobile-modal book-now-m" >
                 <a data-toggle="modal" data-target="#bookNowModal">Book Today</a>
             </li>
-
-            <!-- Our Services
-            <li class="has-children">
-
-                <a href="services.html">Our Services</a>
-
-                <ul class="cd-dropdown-services is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
-
-                    <li class="cd-service-bg">
-                        <a class="cd-dropdown-item" href="service-shave.html">
-                            <img class="visible-xs visible-sm" src="assets/images/nav/nav-gallery-1.jpg" alt="service 1">
-                            <h3>When you get a shave</h3>
-                            <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
-                        </a>
-                        <img class="hidden-xs hidden-sm" src="nav-shave-hover.jpg" alt="service 1">
-                        <img class="hidden-xs hidden-sm" src="nav-shave.jpg" alt="service 1">
-                    </li>
-
-                </ul>
-            </li> <!-- end why us -->
 
             <!-- Service Icons -->
             <li class="has-children">
@@ -160,7 +137,7 @@
                 <a href="gallery.html">Gallery</a>
                 <ul class="cd-dropdown-gallery is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
-                    <li class="see-all"><a href="gallery.html">View all gallery options</a></li>
+                    <li class="see-all"><a href="features.html">Browse all features</a></li>
 
                     <!-- Gallery Item 1 -->
                     <li class="plus-effect">
@@ -171,7 +148,7 @@
                                 </div>
                                 <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
                             </div>
-                            <h3>Masonry Gallery Full width</h3>
+                            <h3>Masonry Gallery</h3>
                         </a>
                     </li>
 
@@ -182,9 +159,9 @@
                                 <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
-                                <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
+                                <img src="assets/images/nav/nav-gallery-2.jpg" alt="Product Image">
                             </div>
-                            <h3>Masonry Gallery Boxed</h3>
+                            <h3>3 Column grid</h3>
                         </a>
                     </li>
 
@@ -195,9 +172,9 @@
                                 <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
-                                <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
+                                <img src="assets/images/nav/nav-gallery-3.jpg" alt="Product Image">
                             </div>
-                            <h3>3 Grid Gallery</h3>
+                            <h3>4 Column grid</h3>
                         </a>
                     </li>
 
@@ -208,9 +185,9 @@
                                 <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
-                                <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
+                                <img src="assets/images/nav/nav-gallery-4.jpg" alt="Product Image">
                             </div>
-                            <h3>4 Grid Gallery</h3>
+                            <h3>5 Column grid</h3>
                         </a>
                     </li>
 
@@ -236,7 +213,7 @@
                         <!-- Sub-item contents -->
                         <ul class="is-hidden">
 
-                            <li class="go-back"><a href="#0">Get a haircut</a></li>
+                            <li class="go-back"><a href="#0">Haircuts</a></li>
 
                             <li class="see-all">
                                 <a href="full-gallery.html#filter=.hair">View Gallery</a>
@@ -264,7 +241,6 @@
 
                                 <ul class="is-hidden">
                                     <li class="go-back"><a href="#0">Kids Cuts</a></li>
-                                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
                                     <li><a href="prices.html#tab=haircuts">Kids Cut</a></li>
                                     <li><a href="prices.html#tab=haircuts">Full style</a></li>
                                     <li><a href="prices.html#tab=haircuts">Shampoo</a></li>
@@ -317,10 +293,10 @@
                     <!-- Sub-item -->
                     <li class="has-children">
                        <!-- Sub-item title -->
-                        <a href="http://codyhouse.co/?p=748">Beards</a>
+                        <a href="service-shave.html">Beards</a>
                         <!-- Sub-item contents -->
                         <ul class="is-hidden">
-                            <li class="go-back"><a href="#0">Clothing</a></li>
+                            <li class="go-back"><a href="#0">Beards</a></li>
                             <li class="see-all">
                                 <a href="full-gallery.html#filter=.beard">View Gallery</a>
                             </li>
@@ -340,83 +316,50 @@
             <li class="has-children">
 
                 <!-- Nav title -->
-                <a href="http://codyhouse.co/?p=748">Features & options</a>
+                <a href="features.html">Features & options</a>
 
                 <ul class="cd-dropdown-icons is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
-                    <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+                    <li class="see-all"><a href="features.html">Browse All Features</a></li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-1" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-diamond"></i>
                             </div>
-                            <h3>Pricing Tables</h3>
-                            <p>Simple way to hold data</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-flag-o"></i>
-                            </div>
-                            <h3>SVG Icons</h3>
-                            <p>1000+ Free Icons included</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-paper-plane-o"></i>
-                            </div>
-                            <h3>Google Map Service</h3>
-                            <p>Add your own location easily</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-map-marker"></i>
-                            </div>
                             <h3>Revolution Slider</h3>
-                            <p>Plugin Included with purchase</p>
+                            <p>#1 Selling slider plugin included</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-10" href="features.html">
                             <div class="icon-wrapper">
-                                <i class="fa fa-home"></i>
+                                <i class="fa fa-star-o"></i>
                             </div>
-                            <h3>Responsive Site</h3>
-                            <p>Looks good on every device</p>
+                            <h3>Hero / Parallax headers</h3>
+                            <p>Strong page headers that look great</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-8" href="features.html">
                             <div class="icon-wrapper">
-                                <i class="fa fa-object-ungroup"></i>
+                                <i class="fa fa-code"></i>
                             </div>
-                            <h3>Retina quality</h3>
-                            <p>Looks amazing on all devices</p>
+                            <h3>Development</h3>
+                            <p>Code crafted to perfection</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-7" href="features.html">
                             <div class="icon-wrapper">
-                                <i class="fa fa-camera-retro"></i>
+                                <i class="fa fa-columns"></i>
                             </div>
                             <h3>Stylish Layouts</h3>
                             <p>Sleek page layouts</p>
@@ -425,58 +368,91 @@
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-9" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-toggle-off"></i>
+                            </div>
+                            <h3>Niche Theme</h3>
+                            <p>Designed and developed for a real barber</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-4" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-picture-o"></i>
                             </div>
                             <h3>Beautiful Gallery</h3>
-                            <p>Isotop Gallery plugin setup</p>
+                            <p>Isotop Gallery looks amazing</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-5" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-television"></i>
+                            </div>
+                            <h3>Fully Responsive</h3>
+                            <p>Looks good on every device</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-3" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <h3>Google Map Service</h3>
+                            <p>Add your own location easily</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-2" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-flag-o"></i>
+                            </div>
+                            <h3>Font Awesome Icons</h3>
+                            <p>500+ Free Icons included</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-6" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-object-ungroup"></i>
                             </div>
-                            <h3>Service #9</h3>
-                            <p>This is the item description</p>
+                            <h3>Retina quality</h3>
+                            <p>Looks amazing on all devices</p>
                         </a>
                     </li>
 
-                    <!-- item -->
+                    <!-- item
                     <li>
-                        <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-object-ungroup"></i>
-                            </div>
-                            <h3>Service #10</h3>
-                            <p>This is the item description</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-11" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-object-ungroup"></i>
                             </div>
                             <h3>Service #11</h3>
                             <p>This is the item description</p>
                         </a>
-                    </li>
+                    </li>-->
 
-                    <!-- item -->
+                    <!-- item
                     <li>
-                        <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-12" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-object-ungroup"></i>
                             </div>
                             <h3>Service #12</h3>
                             <p>This is the item description</p>
                         </a>
-                    </li>
+                    </li>-->
 
                 </ul> <!-- .cd-dropdown-icons -->
 
@@ -515,20 +491,17 @@
             
 
 	
-<section class="container-fluid no-padding white-bg hero">
+<div class="section container-fluid no-padding white-bg hero">
 	<article class="content tp-banner-container">
 		<div id="rev_slider_46_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="notgeneric1" style="background-color:transparent;padding:0px;">
 			<!-- START REVOLUTION SLIDER 5.0.7 fullscreen mode -->
 			<div id="rev_slider_46_1" class="rev_slider fullscreenbanner tp-banner" style="display:none;" data-version="5.0.7">
 				<ul>
-
+					<!-- Slide -->
 					<li data-index="rs-148" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="phone1-60x60.png"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-						<!-- MAIN IMAGE
-						<img src="assets/images/feature-slider/1.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina> -->
-
+						<!-- MAIN IMAGE -->
 						<img src="assets/images/feature-slider/1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 						<!-- LAYERS -->
-
 						<!-- LAYER NR. 1 -->
 						<div class="tp-caption sv-feature-Icon circle-boarder tp-resizeme rs-parallaxlevel-0"
 							 id="slide-148-layer-8"
@@ -551,14 +524,14 @@
 							 style="z-index: 7; white-space: nowrap;"><i class="icon-sv-razor"></i>
 						</div>
 
-						<!-- LAYER NR. 1 -->
-						<div class="tp-caption headline-left-right tp-resizeme rs-parallaxlevel-0"
+						<!-- LAYER NR. 2 -->
+						<h2 class="tp-caption headline-left-right tp-resizeme rs-parallaxlevel-0"
 							 id="slide-148-layer-1"
 							 data-x="['left','left','left','left']" data-hoffset="['700','550','450','300','160']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-100','-65','-125','-115','-115']"
-							 data-fontsize="['96','80','80','35']"
-							 data-lineheight="['96','80','80','35']"
-							 data-width="['700','550','none','350','305']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['-100','-65','-125','-105','-115']"
+							 data-fontsize="['96','80','80','60','35']"
+							 data-lineheight="['96','80','80','60','35']"
+							 data-width="['700','550','none','450','305']"
 							 data-height="none"
 							 data-whitespace="normal"
 							 data-transform_idle="o:1;"
@@ -573,13 +546,13 @@
 							 data-elementdelay="0.6"
 
 							 style="z-index: 5; white-space: normal;">Masters <span>of</span> the Blade
-						</div>
+						</h2>
 
 						<!-- LAYER NR. 3 -->
 						<div class="tp-caption sv-feature-subtitle subtitle-left tp-resizeme rs-parallaxlevel-0"
 							 id="slide-148-layer-4"
 							 data-x="['left','left','left','left']" data-hoffset="['700','550','450','300','160']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['75','75','75','0','0']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['75','75','75','30','0']"
 							 data-fontsize="['24','21','24','18','21']"
 							 data-lineheight="['32','28','32','21','24']"
 							 data-width="['700','600','425','350','300']"
@@ -602,7 +575,7 @@
 						<div class="tp-caption btn book-now-btn btn-white rs-parallaxlevel-0"
 							 id="slide-148-layer-7"
 							 data-x="['left','left','left','left']" data-hoffset="['700','550','450','300','160']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['220','215','210','150','163']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['220','215','210','170','163']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="nowrap"
@@ -622,7 +595,7 @@
 						</div>
 
 						<!-- LAYER NR. 5 -->
-						<div class="tp-caption rev-scroll-btn hidden-xs rs-parallaxlevel-0"
+						<div class="tp-caption rev-scroll-btn hidden-xs hidden-sm rs-parallaxlevel-0"
 							 id="slide-148-layer-9"
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
 							 data-y="['middle','middle','middle','middle']" data-voffset="['440','440','500','450','220']"
@@ -648,19 +621,12 @@
 
 						</div>
 					</li>
-
+					<!-- Slide -->
 					<li data-index="rs-68" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="phone1-60x60.png"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-
-
-						<!-- MAIN IMAGE
-						<img src="assets/images/feature-slider/3.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>-->
+						<!-- MAIN IMAGE -->
 						<img src="assets/images/feature-slider/3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 
-
-
-
 						<!-- LAYERS -->
-
 						<!-- LAYER NR. 1 background overlay -->
 						<div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0"
 							 id="slide-68-layer-10"
@@ -685,7 +651,7 @@
 						<div class="tp-caption sv-feature-Icon circle-boarder  tp-resizeme rs-parallaxlevel-0"
 							 id="slide-68-layer-8"
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-156','-68','-78','-225']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['-156','-68','-78','-150','-225']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="nowrap"
@@ -710,8 +676,8 @@
 							 id="slide-68-layer-1"
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
 							 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0','-115']"
-							 data-fontsize="['96','70','70','35']"
-							 data-lineheight="['96','70','70','35']"
+							 data-fontsize="['96','70','70','60','35']"
+							 data-lineheight="['96','70','70','60','35']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="normal"
@@ -734,7 +700,7 @@
 						<div class="tp-caption sv-feature-subtitle   tp-resizeme rs-parallaxlevel-0"
 							 id="slide-68-layer-4"
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['162','132','152','152','0']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['162','132','152','170','0']"
 							 data-fontsize="['24','21','24','18','21']"
 							 data-lineheight="['32','28','32','21','24']"
 							 data-width="['700','670','550','550','400']"
@@ -759,7 +725,7 @@
 						<div class="tp-caption btn book-now-btn btn-white  rs-parallaxlevel-0"
 							 id="slide-68-layer-7"
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['260','220','270','260','175']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['260','220','270','280','175']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="nowrap"
@@ -781,154 +747,18 @@
 						</div>
 					</li>
 
-					<!-- SLIDE 1 original
-					<li data-index="rs-148" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="phone1-60x60.png"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
-						<!-- MAIN IMAGE
-
-						<img src="assets/images/feature-slider/1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-						<!-- LAYERS -->
-
-						<!-- LAYER NR. 1
-						<div class="tp-caption sv-feature-headline tp-resizeme rs-parallaxlevel-0"
-							 id="slide-148-layer-1"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0','-135']"
-							 data-fontsize="['96','70','70','45']"
-							 data-lineheight="['96','70','70','50']"
-							 data-width="none"
-							 data-height="none"
-							 data-whitespace="normal"
-							 data-transform_idle="o:1;"
-
-							 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-							 data-transform_out="auto:auto;s:1000;"
-							 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-							 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-							 data-start="1000"
-							 data-splitin="chars"
-							 data-splitout="none"
-							 data-responsive_offset="on"
-							 data-responsive="on"
-							 data-elementdelay="0.05"
-
-							 style="z-index: 5; white-space: normal;">Masters <span>of</span> the Blade
-						</div>
-
-						<!-- LAYER NR. 2
-						<div class="tp-caption sv-feature-subtitle  tp-resizeme rs-parallaxlevel-0"
-							 id="slide-148-layer-4"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['132','132','152','152','0']"
-							 data-fontsize="['24','21','24','18','21']"
-							 data-lineheight="['32','28','32','24','32']"
-							 data-width="['700','670','550','550','400']"
-							 data-height="100"
-							 data-whitespace="[‘nowrap’,’normal’,’normal’,’normal’]"
-							 data-transform_idle="o:1;"
-
-							 data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
-							 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-							 data-mask_in="x:0px;y:0px;"
-							 data-mask_out="x:0;y:0;"
-							 data-start="2000"
-							 data-splitin="none"
-							 data-splitout="none"
-							 data-responsive_offset="on"
-							 data-responsive="on"
-
-							 style="z-index: 6; white-space: normal; line-height: 20px; text-align: center;">The Shave barbershop is a full service deluxe HTML5 theme with tons of cool features.
-						</div>
-
-						<!-- LAYER NR. 3
-						<div class="tp-caption sv-feature-Icon circle-boarder  tp-resizeme rs-parallaxlevel-0"
-							 id="slide-148-layer-8"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-115','-120','-120','-110','-250']"
-							 data-width="none"
-							 data-height="none"
-							 data-whitespace="nowrap"
-							 data-transform_idle="o:1;"
-							 data-style_hover="cursor:default;"
-
-							 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
-							 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-							 data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-							 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-							 data-start="2000"
-							 data-splitin="none"
-							 data-splitout="none"
-							 data-responsive_offset="on"
-
-
-							 style="z-index: 7; white-space: nowrap;"><i class="icon-sv-razor"></i>
-						</div>
-
-						<!-- LAYER NR. 4
-						<div class="tp-caption btn book-now-btn btn-white rs-parallaxlevel-0"
-							 id="slide-148-layer-7"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['220','220','270','260','123']"
-							 data-width="none"
-							 data-height="none"
-							 data-whitespace="nowrap"
-							 data-transform_idle="o:1;"
-							 data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-							 data-style_hover="c:rgba(51, 51, 51, 1.00);bg:rgba(255, 255, 255, 1.00);cursor:pointer;"
-
-							 data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
-							 data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-							 data-mask_out="x:inherit;y:inherit;"
-							 data-start="2000"
-							 data-splitin="none"
-							 data-splitout="none"
-							 data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":""}]'
-							 data-responsive_offset="on"
-							 data-responsive="off"
-
-							 style="z-index: 8; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">NEXT
-						</div>
-
-						<!-- LAYER NR. 5
-						<div class="tp-caption rev-scroll-btn hidden-xs rs-parallaxlevel-0"
-							 id="slide-148-layer-9"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['440','440','500','450','220']"
-							 data-width="35"
-							 data-height="55"
-							 data-whitespace="nowrap"
-							 data-transform_idle="o:1;"
-							 data-style_hover="cursor:pointer;"
-
-							 data-transform_in="y:50px;opacity:0;s:1500;e:Power3.easeInOut;"
-							 data-transform_out="y:50px;opacity:0;s:1000;s:1000;"
-							 data-start="2000"
-							 data-splitin="none"
-							 data-splitout="none"
-							 data-actions='[{"event":"click","action":"scrollbelow","offset":"0px"}]'
-							 data-basealign="slide"
-							 data-responsive_offset="on"
-							 data-responsive="on"
-
-							 style="z-index: 9; min-width: 35px; max-width: 35px; max-width: 55px; max-width: 55px; white-space: nowrap; font-size: px; line-height: px; font-weight: 100;border-color:rgba(255, 255, 255, 0.50);border-style:solid;border-width:1px;border-radius:23px 23px 23px 23px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
-													<span>
-													</span>
-
-						</div>
-					</li> -->
-
-					<!-- SLIDE  -->
+					<!-- Slide -->
 					<li data-index="rs-149" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="phone1-60x60.png"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-description="">
 						<!-- MAIN IMAGE -->
 						<img src="assets/images/feature-slider/2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 						<!-- LAYERS -->
-
 						<!-- LAYER NR. 1 -->
 						<div class="tp-caption sv-feature-headline headline-left   tp-resizeme rs-parallaxlevel-0"
 							 id="slide-149-layer-1"
 							 data-x="['left','left','left','left']" data-hoffset="['180','150','150','110','45']"
 							 data-y="['middle','middle','middle','middle']" data-voffset="['-100','-165','-165','-135','-135']"
-							 data-fontsize="['96','80','80','45']"
-							 data-lineheight="['96','80','80','50']"
+							 data-fontsize="['96','80','80','60','45']"
+							 data-lineheight="['96','80','80','60','45']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="normal"
@@ -950,9 +780,9 @@
 						<div class="tp-caption sv-feature-subtitle subtitle-left  tp-resizeme rs-parallaxlevel-0"
 							 id="slide-149-layer-4"
 							 data-x="['left','left','left','left']" data-hoffset="['185','150','150','110','45']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['75','-25','-25','-25','-10']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['75','-25','-25','-5','-10']"
 							 data-fontsize="['24','21','24','18','21']"
-							 data-lineheight="['32','28','32','24','32']"
+							 data-lineheight="['32','28','32','21','24']"
 							 data-width="['600','670','550','400','400']"
 							 data-height="100"
 							 data-whitespace="[‘nowrap’,’normal’,’normal’,’normal’]"
@@ -974,7 +804,7 @@
 						<div class="tp-caption sv-feature-Icon circle-boarder  tp-resizeme rs-parallaxlevel-0"
 							 id="slide-149-layer-8"
 							 data-x="['left','left','left','left']" data-hoffset="['180','150','150','110','45']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-260','-270','-275','-210','-250']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['-260','-270','-275','-250','-250']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="nowrap"
@@ -996,7 +826,7 @@
 						<div class="tp-caption btn book-now-btn btn-white  rs-parallaxlevel-0"
 							 id="slide-149-layer-7"
 							 data-x="['left','left','left','left']" data-hoffset="['185','150','150','110','45']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['220','125','125','100','123']"
+							 data-y="['middle','middle','middle','middle']" data-voffset="['220','125','125','130','123']"
 							 data-width="none"
 							 data-height="none"
 							 data-whitespace="nowrap"
@@ -1017,7 +847,7 @@
 						</div>
 
 						<!-- LAYER NR. 5 -->
-						<div class="tp-caption rev-scroll-btn hidden-xs rs-parallaxlevel-0"
+						<div class="tp-caption rev-scroll-btn hidden-xs hidden-sm rs-parallaxlevel-0"
 							 id="slide-149-layer-9"
 							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0','0']"
 							 data-y="['middle','middle','middle','middle']" data-voffset="['430','430','440','450','220']"
@@ -1051,89 +881,91 @@
 		</div><!-- END REVOLUTION SLIDER -->
 
 	</article>
-</section>
+</div>
 
 	<!--
 #################################
 	- Featured Module One -
 #################################
 -->
-<section class="container-fluid svfm1__container no-padding" >
+<div class="section container-fluid svfm1__container no-padding" >
     <div class="angle-top" style="color: #fff;"></div>
 
     <div class="inner-lg">
-        <div class="intro">
-            <h6>Welcome to the shave</h6>
-            <h2>A full service barbershop</h2>
-            <p class="sub-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repellat autem dolor expedita minima quidem vero ipsa ea tempore dolorem nobis eius, modi molestiae dignissimos assumenda aliquid molestias adipisci veritatis!</p>
+
+        <div class="sv__container--md">
+
+            <div class="intro">
+                <h6>Welcome to the shave</h6>
+                <h2>A full service barbershop</h2>
+                <p class="sub-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repellat autem dolor expedita minima quidem vero ipsa ea tempore dolorem nobis eius, modi molestiae dignissimos assumenda aliquid molestias adipisci veritatis!</p>
+            </div>
+
+            <div id="cascadeFeature" class="container inner-content-module svfm1__content">
+
+                <!-- feature -->
+                <div class="col-xs-12 col-sm-4 col-md-4 svfm1__card">
+                    <figure class="svfm1__card--effect card-shadow-md">
+                        <img class="img-responsive" src="assets/images/services/feature-module-1/feature-box-1.jpg" alt="feature 1"/>
+                        <figcaption>
+                            <div class="content">
+                                <h2>Full Shave</h2>
+                                <p class="hidden-sm">View the latest trends and styles.</p>
+                            </div>
+                            <a href="service-shave.html">View more</a>
+                        </figcaption><!-- end figcaption -->
+                    </figure><!-- end figure -->
+                </div><!-- end feature 1 -->
+
+                <!-- feature -->
+                <div class="col-xs-12 col-sm-4 col-md-4 svfm1__card">
+                    <figure class="svfm1__card--effect card-shadow-md">
+                        <img class="img-responsive" src="assets/images/services/feature-module-1/feature-box-3.jpg" alt="feature 3"/>
+                        <figcaption>
+                            <div class="content">
+                                <h2>Beard / Stache</h2>
+                                <p class="hidden-sm">See why we are different</p>
+                            </div>
+                            <a href="service-shave.html">View more</a>
+                        </figcaption><!-- end figcaption -->
+                    </figure><!-- end figure -->
+                </div><!-- end feature 3 -->
+
+                <!-- feature -->
+                <div class="col-xs-12 col-sm-4 col-md-4 svfm1__card">
+                    <figure class="svfm1__card--effect card-shadow-md">
+                        <img class="img-responsive" src="assets/images/services/feature-module-1/feature-box-2.jpg" alt="feature 2"/>
+                        <figcaption>
+                            <div class="content">
+                                <h2>Hair Cuts</h2>
+                                <p class="hidden-sm">View the full list </p>
+                            </div>
+                            <a href="service-shave.html">View more</a>
+                        </figcaption><!-- end figcaption -->
+                    </figure><!-- end figure -->
+                </div><!-- end feature 2 -->
+
+            </div><!-- end container -->
         </div>
-
-        <div id="cascadeFeature" class="container sv__container--md inner-content-module svfm1__content">
-
-            <!-- feature -->
-            <div class="col-xs-12 col-sm-4 col-md-4 svfm1__card">
-                <figure class="svfm1__card--effect card-shadow-md">
-                    <img class="img-responsive" src="assets/images/services/feature-module-1/feature-box-1.jpg" alt="feature 1"/>
-                    <figcaption>
-                        <div class="content">
-                            <h2>Full Shave</h2>
-                            <p class="hidden-sm">View the latest trends and styles.</p>
-                        </div>
-                        <a href="#">View more</a>
-                    </figcaption><!-- end figcaption -->
-                </figure><!-- end figure -->
-            </div><!-- end feature 1 -->
-
-            <!-- feature -->
-            <div class="col-xs-12 col-sm-4 col-md-4 svfm1__card">
-                <figure class="svfm1__card--effect card-shadow-md">
-                    <img class="img-responsive" src="assets/images/services/feature-module-1/feature-box-3.jpg" alt="feature 3"/>
-                    <figcaption>
-                        <div class="content">
-                            <h2>Beard / Stache</h2>
-                            <p class="hidden-sm">See why we are different</p>
-                        </div>
-                        <a href="#">View more</a>
-                    </figcaption><!-- end figcaption -->
-                </figure><!-- end figure -->
-            </div><!-- end feature 3 -->
-
-            <!-- feature -->
-            <div class="col-xs-12 col-sm-4 col-md-4 svfm1__card">
-                <figure class="svfm1__card--effect card-shadow-md">
-                    <img class="img-responsive" src="assets/images/services/feature-module-1/feature-box-2.jpg" alt="feature 2"/>
-                    <figcaption>
-                        <div class="content">
-                            <h2>Hair Cuts</h2>
-                            <p class="hidden-sm">View the full list </p>
-                        </div>
-                        <a href="#">View more</a>
-                    </figcaption><!-- end figcaption -->
-                </figure><!-- end figure -->
-            </div><!-- end feature 2 -->
-
-
-
-        </div><!-- end container -->
     </div>
 
-</section><!-- end section -->
+</div><!-- end section -->
 
 	<!--
 #################################
 	- Feature Module 2 -
 #################################
 -->
-<section class="container-fluid no-padding">
+<div class="section container-fluid no-padding">
     <div class="svfm2__wrapper">
 
         <!-- background image wrapper -->
         <div class="svfm2__wrapper--images">
-            <div class="svfm2__image active" data-title="beard" style="background-image: url(/assets/images/services/feature-module-2/feature-background_3.jpg);">
+            <div class="svfm2__image" data-title="beard" style="background-image: url(/assets/images/services/feature-module-2/feature-background_3.jpg);">
             </div>
             <div class="svfm2__image" data-title="shaving" style="background-image: url(/assets/images/services/feature-module-2/feature-background2.jpg);">
             </div>
-            <div class="svfm2__image" data-title="hair-cuts" style="background-image: url(/assets/images/services/feature-module-2/feature-background_4.jpg);">
+            <div class="svfm2__image active" data-title="hair-cuts" style="background-image: url(/assets/images/services/feature-module-2/feature-background_4.jpg);">
             </div>
         </div> <!-- end image wrapper -->
 
@@ -1155,7 +987,7 @@
                 <ul id="svfm2Tab" class="nav nav-tabs nav-justified white-tabs" role="tablist">
 
                     <!-- Tab Item -->
-                    <li id="beard-mustache" role="presentation" class="tab__control active" data-title="Beard & Mustache">
+                    <li id="beard-mustache" role="presentation" class="tab__control" data-title="Beard & Mustache">
                         <a href="#beard" id="beard-tab" role="tab" data-toggle="tab" aria-controls="beard" aria-expanded="false">
                             <div class="tab-wrapper-icons">
                                 <span class="tab-icon">
@@ -1179,7 +1011,7 @@
                     </li> <!-- End Tab Item -->
 
                     <!-- Tab Item -->
-                    <li id="haircuts" role="presentation" class="tab__control" data-title="Hair Cuts">
+                    <li id="haircuts" role="presentation" class="tab__control active" data-title="Hair Cuts">
                         <a href="#hair-cuts" role="tab" id="haircuts-tab" data-toggle="tab" aria-controls="hair-cuts" aria-expanded="false">
                             <div class="tab-wrapper-icons">
                                 <span class="tab-icon">
@@ -1196,15 +1028,12 @@
                 <div id="myTabContent" class="tab-content">
 
                     <!-- start breard and mustache -->
-                    <div role="tabpanel" class="tab-pane tab-fade active in" id="beard" aria-labelledby="beard-tab">
+                    <div role="tabpanel" class="tab-pane tab-fade" id="beard" aria-labelledby="beard-tab">
                         <div class="tab__panel">
                             <div class="item">
                                 <div class="title">
                                     <h3>Stash craft</h3>
                                 </div>
-                                <!--<div class="price">
-                                    <p>$15.00</p>
-                                </div>-->
                                 <div class="desc">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quasi ad, deleniti voluptas hic repudiandae saepe expedita dolore modi.</p>
                                 </div>
@@ -1233,7 +1062,7 @@
                     </div><!-- end shaving -->
 
                     <!-- start haircut -->
-                    <div role="tabpanel" class="tab-pane tab-fade" id="hair-cuts" aria-labelledby="haircuts-tab">
+                    <div role="tabpanel" class="tab-pane tab-fade active in" id="hair-cuts" aria-labelledby="haircuts-tab">
                         <div class="tab__panel">
                             <div class="item">
                                 <div class="title">
@@ -1257,81 +1086,83 @@
 
     </div><!-- end feature module 2 wrapper -->
 
-</section><!-- end section -->
+</div><!-- end section -->
 
 	<!--
 #################################
 	- Staggered Grid Section -
 #################################
 -->
-<section class="container-fluid white-bg">
+<div class="section container-fluid white-bg">
 
     <div class="inner-lg">
-        <div class="row staggered__container">
+        <div class="sv__container--md">
+            <div class="row staggered__container">
 
-            <!-- Box -->
-            <div class="box box-sm box-2 card-shadow-dk">
-                <div class="box-overlay"></div>
-                <img src="assets/images/staggered-grid/box-sm.jpg" alt="Popular Hair Styles">
-                <div class="content">
-                    <p>View the most popular hair styles</p>
-                    <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
-                    <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
-                </div>
-                <a href="full-gallery.html" class="box-link">View More</a>
-            </div><!-- End Box -->
+                <!-- Box -->
+                <div class="box box-sm box-2 card-shadow-dk">
+                    <div class="box-overlay"></div>
+                    <img src="assets/images/staggered-grid/box-sm.jpg" alt="Popular Hair Styles">
+                    <div class="content">
+                        <p>View the most popular hair styles</p>
+                        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+                    </div>
+                    <a href="full-gallery.html" class="box-link">View More</a>
+                </div><!-- End Box -->
 
-            <!-- Box -->
-            <div class="box box-lg box-1 card-shadow-dk">
-                <div class="content">
-                    <h3>First time visit?</h3>
-                    <p>Click here to learn about us.</p>
-                    <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
-                    <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
-                </div>
-                <div class="box-overlay"></div>
-                <img src="assets/images/staggered-grid/box-lg.jpg" alt="First Visit">
-                <a href="about.html" class="box-link"></a>
-            </div><!-- End Box -->
+                <!-- Box -->
+                <div class="box box-lg box-1 card-shadow-dk">
+                    <div class="content">
+                        <h3>First time visit?</h3>
+                        <p>Click here to learn about us.</p>
+                        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+                    </div>
+                    <div class="box-overlay"></div>
+                    <img src="assets/images/staggered-grid/box-lg.jpg" alt="First Visit">
+                    <a href="about.html" class="box-link"></a>
+                </div><!-- End Box -->
 
-            <!-- Box -->
-            <div class="box box-sm-hours box-4 card-shadow-dk">
-                <div class="content">
-                    <i class="fa fa-clock-o fa-lg clock"></i>
-                    <p>our weekly shop hours</p>
-                    <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
-                    <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
-                </div>
-                <div class="box-overlay"></div>
-                <img src="assets/images/staggered-grid/box-sm-hours.jpg" alt="Barbershop Hours">
-                <a href="#shop-hours" class="box-link"></a>
-            </div><!-- End Box -->
+                <!-- Box -->
+                <div class="box box-sm-hours box-4 card-shadow-dk">
+                    <div class="content">
+                        <i class="fa fa-clock-o fa-lg clock"></i>
+                        <p>our weekly shop hours</p>
+                        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+                    </div>
+                    <div class="box-overlay"></div>
+                    <img src="assets/images/staggered-grid/box-sm-hours.jpg" alt="Barbershop Hours">
+                    <a href="#shop-hours" class="box-link"></a>
+                </div><!-- End Box -->
 
-            <!-- Tall Image  -->
-            <div class="box box-sm-tall box-3 hidden-xs">
-                <img src="assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop Tools">
-            </div><!-- End Tall Image -->
+                <!-- Tall Image  -->
+                <div class="box box-sm-tall box-3 hidden-xs">
+                    <img src="assets/images/staggered-grid/box-sm-tall.jpg" alt="BarberShop Tools">
+                </div><!-- End Tall Image -->
 
-            <!-- Box -->
-            <div class="box box-last box-1 card-shadow-dk">
-                <div class="content">
-                    <h3>Meet the staff</h3>
-                    <p>Find the right barber expert to clean you up.</p>
-                    <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
-                    <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
-                </div>
-                <div class="box-overlay"></div>
-                <img src="assets/images/staggered-grid/box-last.jpg" alt="Meet the staff">
-                <a href="team.html" class="box-link"></a>
-            </div><!-- Box -->
+                <!-- Box -->
+                <div class="box box-last box-1 card-shadow-dk">
+                    <div class="content">
+                        <h3>Meet the staff</h3>
+                        <p>Find the right barber expert to clean you up.</p>
+                        <i class="fa fa-long-arrow-right fa-lg animate-off"></i>
+                        <i class="fa fa-long-arrow-right fa-lg animate-on"></i>
+                    </div>
+                    <div class="box-overlay"></div>
+                    <img src="assets/images/staggered-grid/box-last.jpg" alt="Meet the staff">
+                    <a href="team.html" class="box-link"></a>
+                </div><!-- Box -->
 
-        </div><!-- end row -->
+            </div><!-- end row -->
+        </div>
     </div>
 
-</section><!-- end section -->
+</div><!-- end section -->
 
 
-	<section id="whyus-skr" class="container-fluid no-padding sv-approach-container">
+	<div id="whyus-skr" class="section container-fluid no-padding sv-approach-container">
     <!--<div class="sv-approach" style="background-image: url(/assets/images/why-us/why-us-bg.jpg);"></div>-->
     <div class="parallax__background" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url(/assets/images/why-us/why-us-bg.jpg);"></div>
     <div class="inner-lg">
@@ -1377,27 +1208,27 @@
         </div>
     </div>
 
-</section>
+</div>
 
-	<section class="container-fluid no-padding gold-bg">
-    <div class="inner-sm">
+	<div class="section container-fluid no-padding gold-bg">
+    <div class="inner-md">
         <div class="row no-margin">
             <div class="buy__container">
-                <div class="col-xs-12 col-block buy-theme-sm">
+                <div class="col-xs-12 buy-theme-sm">
                     <h4 class="text-center white">Clean Design and Powerful Features makes Namo a superstar</h4>
                     <a href="#" class="btn book-now-btn btn-white">Purchase Today</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 	<!--
 #################################
 	- 3 Col Module: Design -
 #################################
 -->
-<section class="container-fluid white-bg no-padding">
+<div class="section container-fluid white-bg no-padding">
 
 	<div class="inner-lg">
 		<!-- Sell Box -->
@@ -1467,21 +1298,23 @@
 		</div><!-- end sell-box -->
 	</div>
 
-</section><!-- end section -->
+</div><!-- end section -->
 
 
-	<section class="container-fluid no-padding blog-container blog-featured">
+	<div class="section container-fluid no-padding blog-container blog-featured">
 
-    <section class="container-fluid no-padding black-bg">
+    <div class="container-fluid no-padding black-bg">
         <div class="inner-lg">
             <div class="row no-margin">
-                <div class="col-xs-12 col-block">
-                    <h2 class="text-center white">From the Blog</h2>
+                <div class="col-xs-12">
+                    <div class="headline-lg">
+                        <h2 class="text-center white">From the Blog</h2>
+                    </div>
                     <h5 class="text-center white">Here is what we have been cooking recently, latest news and case studies</h5>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="row no-margin">
         <article class="col-xs-12 col-sm-6 no-padding post-thumb">
@@ -1490,13 +1323,11 @@
             <div class="post-thumb-content">
                 <div class="post-thumb-meta">
                 <span class="post-thumb-category">
-                    <!-- <span class="angle-top-post" style="border-left-color: #fff;"></span> -->
                     <a href="#" rel=" category tag">Haircuts</a>
-                    <!--<span class="angle-bottom-post" style="border-left-color: #fff;"></span>-->
                 </span>
                     <span class="post-thumb-time"><i class="fa fa-clock-o fa-lg"></i>October 22, 2015</span>
                 </div>
-                <h1 class="post-thumb-title"><a href="blog-details.html">Masters of the blade</a></h1>
+                <h2 class="post-thumb-title"><a href="blog-details.html">Masters of the blade</a></h2>
             </div>
         </article>
         <article class="col-xs-12 col-sm-6 no-padding post-thumb">
@@ -1505,113 +1336,189 @@
             <div class="post-thumb-content">
                 <div class="post-thumb-meta">
                 <span class="post-thumb-category">
-                    <!-- <span class="angle-top-post" style="border-left-color: #fff;"></span> -->
                     <a href="#" rel=" category tag">Haircuts</a>
-                    <!--<span class="angle-bottom-post" style="border-left-color: #fff;"></span>-->
                 </span>
                     <span class="post-thumb-time"><i class="fa fa-clock-o fa-lg"></i>October 22, 2015</span>
                 </div>
-                <h1 class="post-thumb-title"><a href="blog-details.html">Masters of the blade</a></h1>
+                <h2 class="post-thumb-title"><a href="blog-details.html">Masters of the blade</a></h2>
             </div>
         </article>
     </div>
 
-</section><!-- End blog -->
+</div><!-- End blog -->
 
 	<!--
 #################################
 	- Contact Section -
 #################################
 -->
-<section id="shop-hours" class="container-fluid white-bg no-padding">
+<div id="shop-hours" class="section container-fluid white-bg no-padding">
 
-		<div class="sv__container--fluid">
+		<div class="inner-lg">
+			<div class="sv__container--md">
 
-			<div class="contact__wrapper">
+				<div class="contact__wrapper">
 
-				<div class="section__wrapper">
+					<div class="section__wrapper">
 
-					<!-- Contact Overview -->
-					<div class="contact__card">
+						<!-- Contact Overview -->
+						<div class="contact__card">
 
-						<!-- Contact Image Left -->
-						<div class="contact__card--left">
-							<img class="img-responsive" src="assets/images/contact/contact.jpg" alt="">
-						</div><!-- end content left -->
+							<!-- Contact Image Left -->
+							<div class="contact__card--left">
+								<img class="img-responsive" src="assets/images/contact/contact.jpg" alt="">
+							</div><!-- end content left -->
 
-						<!-- Contact Content Right -->
-						<div class="contact__card--right">
+							<!-- Contact Content Right -->
+							<div class="contact__card--right">
 
-							<!-- Barbershop Location & Phone -->
-							<div class="contact__shop">
-								<div class="contact__card--content">
-									<h3>Location</h3>
-									<p>Nordhoff st. , Northridge, CA 91324</p>
-									<p>303-333-3333</p>
-								</div>
-							</div>
-
-							<!-- Barbershop Email -->
-							<div class="contact__us">
-								<div class="contact__us--content card-shadow-lt icon-up-down">
-									<div class="inner__content">
-										<h4>contact us<i class="fa fa-paper-plane-o animate-down-2 top-i"></i><i class="fa fa-envelope-o fa-lg animate-down-1 bottom-i"></i></h4>
+								<!-- Barbershop Location & Phone -->
+								<div class="contact__shop">
+									<div class="contact__card--content">
+										<h3>Location</h3>
+										<p>Nordhoff st. , Northridge, CA 91324</p>
+										<a class="phone" href="tel:303-313-0303">303-313-0303</a>
 									</div>
-									<a href="#">Email Us</a>
 								</div>
-							</div>
 
-							<!-- Barbershop Hours -->
-							<div class="contact__hours">
-								<div class="contact__card--content">
-									<h3>Opening Hours</h3>
-									<p>Monday to Friday</p>
-									<p>9am - 6pm</p>
-									<p>Saturday to Sunday</p>
-									<p>10am - 4pm</p>
+								<!-- Barbershop Email -->
+								<div class="contact__us">
+									<div class="contact__us--content card-shadow-lt icon-up-down">
+										<div class="inner__content">
+											<h4>contact us<i class="fa fa-paper-plane-o animate-down-2 top-i"></i><i class="fa fa-envelope-o fa-lg animate-down-1 bottom-i"></i></h4>
+										</div>
+										<a href="#">Email Us</a>
+									</div>
 								</div>
-							</div>
 
-						</div><!-- end content right -->
+								<!-- Barbershop Hours -->
+								<div class="contact__hours">
+									<div class="contact__card--content">
+										<h3>Opening Hours</h3>
+										<p>Monday to Friday</p>
+										<p>9am - 6pm</p>
+										<p>Saturday to Sunday</p>
+										<p>10am - 4pm</p>
+									</div>
+								</div>
 
-					</div><!-- end contact card -->
+							</div><!-- end content right -->
 
-				</div><!-- end section wrapper -->
+						</div><!-- end contact card -->
 
-			</div><!-- end contact wrapper -->
+					</div><!-- end section wrapper -->
 
-		</div><!-- end container -->
+				</div><!-- end contact wrapper -->
 
-</section><!-- end section -->
+			</div><!-- end container -->
+		</div>
+
+</div><!-- end section -->
 
 
-	<section id="sell-skr" class="sv__container--fluid no-padding">
+	
+<div id="sell-skr" class="section sv__container--fluid no-padding">
 
-	<div class="parallax__background" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url(/assets/images/services/service-shave-bg.jpg);">
+	<div class="parallax__background" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 300px;" data-top-bottom="background-position: 50% -250px;" style="background-image: url(/assets/images/services/service-shave-parallax.jpg);">
 
 		<div class="inner-lg">
 			<div class="buy__container sv__container--md">
 				<div class="buy__content">
-					<h2>STYLISH cuts AND styles</h2>
+					<h2>Change the way you see a shave</h2>
 					<p>Designed with passion and coded to perfection, The shave is a stylish responsive HTML theme, that is packed with tons of features and easy to use .</p>
-					<a href="#" class="btn book-now-btn btn-white">Get it today</a>
+					<a href="" class="btn book-now-btn btn-white" onclick='return false'>Why choose us?</a>
 				</div>
 			</div>
 		</div>
 	</div><!-- end parallax bg -->
 
-</section>
-<!-- End container -->
+</div>
 
-	<section class="container-fluid no-padding gold-bg">
+
+	<div class="section container-fluid no-padding white-bg">
+
+            <div class="row no-margin">
+                <div class="">
+                    <div id="testimonial-carousel" class="carousel slide">
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                                <!-- tweet -->
+                                <div class="item active">
+                                    <div class="sv__container--md">
+                                        <div class="col-sm-12 mobile-space-sm">
+                                            <div class="testimonial-wrapper">
+                                                <blockquote>
+                                                    <q>"With Pluralsight, I was able to learn at my own pace, on my own time. Pluralsight gave me the tools that I need to express myself creatively."</q>
+                                                    <cite>-By spencer Bigum</cite>
+                                                </blockquote>
+                                            </div>
+                                            <div class="testimonial-img">
+                                                <img class="img-responsive img-center active" src="https://preview.pluralsight.com/content/pluralsight/en/_jcr_content/main/user_story_block/image/image-res.img.png" alt="Mobile Phone">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div><!-- end tweet -->
+
+                                <!-- tweet -->
+                                <div class="item">
+                                    <div class="sv__container--md">
+                                        <div class="col-sm-12 mobile-space-sm">
+                                            <div class="testimonial-wrapper">
+                                                <blockquote>
+                                                    <q>"With Pluralsight, I was able to learn at my own pace, on my own time. Pluralsight gave me the tools that I need to express myself creatively."</q>
+                                                    <cite>-By spencer Bigum</cite>
+                                                </blockquote>
+                                            </div>
+                                            <div class="testimonial-img">
+                                                <img class="img-responsive img-center active" src="https://preview.pluralsight.com/content/pluralsight/en/_jcr_content/main/user_story_block/image/image-res.img.png" alt="Mobile Phone">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div><!-- end tweet -->
+
+                        </div><!-- end carousel-inner -->
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#testimonial-carousel" role="button" data-slide="prev">
+                            <span class="" aria-hidden="true"></span>
+                            <i class="icon-left-open-big testimonial-icon-left"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#testimonial-carousel" role="button" data-slide="next">
+                            <i class="icon-right-open-big testimonial-icon-right"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div><!-- end testimonial-carousel -->
+                </div>
+            </div>
+
+</div>
+
+
+
+
+	<div class="section container-fluid no-padding gold-bg">
     <div class="inner-sm">
         <div class="row no-margin">
-            <div class="col-xs-12 col-block">
+            <div class="col-xs-12">
                 <h4 class="text-center white">Clean Design and Powerful Features makes Namo a superstar</h4>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
 
@@ -1626,96 +1533,98 @@
 -->
 <footer class="loading">
 
-	<!-- Footer Wrapper -->
-	<div class="footer__wrapper">
-		
-		<div class="row footer__row">
+	<div class="sv__container--md">
+		<!-- Footer Wrapper -->
+		<div class="footer__wrapper">
 
-			<!-- Footer Logo -->
-			<div class="footer__logo no-padding">
-				<div class="logo__container">
-					<h5>The</h5>
-					<h3>Shave</h3>
-					<h4>Mens Barbershop</h4>
+			<div class="row footer__row">
+
+				<!-- Footer Logo -->
+				<div class="footer__logo no-padding">
+					<div class="logo__container">
+						<h5>The</h5>
+						<h3>Shave</h3>
+						<h4>Mens Barbershop</h4>
+					</div>
 				</div>
-			</div>
 
-			<!-- Footer Description -->
-			<div class="footer__desc">
+				<!-- Footer Description -->
+				<div class="footer__desc">
 
-				<!-- email container -->
-				<div class="email__wrapper">
+					<!-- email container -->
+					<div class="email__wrapper">
 
-					<!-- email form -->
-					<div class="email__form form-group">
+						<!-- email form -->
+						<div class="email__form form-group">
 
-						<form>
+							<form>
 
-							<!-- email input -->
-							<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
+								<!-- email input -->
+								<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
 
-							<!-- subtext to email -->
-							<div class="email__offers">
-								<p>Get the latest updates, special offers and much more.</p>
-							</div><!-- end sub-text -->
+								<!-- subtext to email -->
+								<div class="email__offers">
+									<p>Get the latest updates, special offers and much more.</p>
+								</div><!-- end sub-text -->
 
-							<button type="submit" class="btn book-now-btn form-btn">Submit</button>
+								<button type="submit" class="btn book-now-btn form-btn">Submit</button>
 
-						</form>
+							</form>
 
-					</div><!-- end email form -->
+						</div><!-- end email form -->
 
-				</div><!-- end email container -->
+					</div><!-- end email container -->
 
-				<!-- address container -->
-				<div class="row footer__contact">
+					<!-- address container -->
+					<div class="row footer__contact">
 
-					<!-- address -->
-					<div class="col-xs-12 col-sm-6 footer__address no-padding">
-						<p>Nordhoff st.</p>
-						<p>NorthRidge, CA 91324</p>
-					</div>
-
-					<!-- email -->
-					<div class="col-xs-12 col-sm-6 contact no-padding">
-						<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
-						<a class="phone" href="tel:303-313-0303">303-313-0303</a>
-					</div>
-
-				</div><!-- end address container -->
-
-				<!-- social media -->
-				<div class="row social-footer">
-					<div class="col-xs-12 col-sm-6 col-md-8">
-						<ul>
-							<li><a href=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href=""><i class="fa fa-instagram"></i></a></li>
-							<li><a href=""><i class="fa fa-pinterest"></i></a></li>
-							<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-							<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-						</ul>
-					</div><!-- end col -->
-
-					<!-- copyright -->
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="copyright">
-							<p>2015 The Shave LTD</p>
+						<!-- address -->
+						<div class="col-xs-12 col-sm-6 footer__address no-padding">
+							<p>Nordhoff st.</p>
+							<p>NorthRidge, CA 91324</p>
 						</div>
-					</div><!-- end col -->
 
-				</div><!-- end social media -->
+						<!-- email -->
+						<div class="col-xs-12 col-sm-6 contact no-padding">
+							<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
+							<a class="phone" href="tel:303-313-0303">303-313-0303</a>
+						</div>
 
-			</div><!-- end right side -->
+					</div><!-- end address container -->
 
-		</div><!-- end row -->
+					<!-- social media -->
+					<div class="row social-footer">
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<ul>
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-instagram"></i></a></li>
+								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div><!-- end col -->
 
-	</div><!-- end container -->
+						<!-- copyright -->
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="copyright">
+								<p>2015 The Shave LTD</p>
+							</div>
+						</div><!-- end col -->
+
+					</div><!-- end social media -->
+
+				</div><!-- end right side -->
+
+			</div><!-- end row -->
+
+		</div><!-- end container -->
+	</div>
 
 </footer><!-- end foother -->
 
         <!-- Book now modal -->
-        <div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" >
+        <div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="row">

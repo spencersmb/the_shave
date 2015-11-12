@@ -18,6 +18,7 @@
 
 .comments {
     clear: both;
+    padding:0 30px;
     h4 {
         padding-top: 25px;
         margin-bottom: 5px;
@@ -32,7 +33,7 @@
 }
 
 .comment {
-    padding: 20px 30px 15px;
+    padding: 20px 0 15px;
     *::after,
     *::before {
         content: none;

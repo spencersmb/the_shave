@@ -4,18 +4,18 @@
 #################################
 -->
 {% block content %}
-<section class="container-fluid white-bg">
+<div class="section container-fluid white-bg">
 	<div class="row sv__container--sm">
 		<div class="col-xs-12 inner__header--sm">
-			<h1>Trending Cuts</h1>
+			<h2>Trending Cuts</h2>
 			<h3>The latest hair cuts that made our heads turn.</h3>
 			{% include "gallery/gallery-filter" %}
 		</div>
 	</div>
-</section><!-- end gallery header -->
+</div><!-- end gallery header -->
 
 <!-- gallery -->
-<section class="container__white">
+<div class="container__white">
 
 	<div class="container-fluid inner-content-module full-width-container gallery-container">
 
@@ -108,12 +108,10 @@
 
 			<div class="gallery-item width1 hair">
 				<a href="">
-
 					<h5>Wild Stallion</h5>
 					<div class="subtext">Trendy, Hipster</div>
 					<div class="overlay"></div>
 					<img class="img-responsive" src="{{'iso-1.jpg' | asset_url}}" alt=""/>
-
 				</a>
 			</div>
 
@@ -139,7 +137,7 @@
 
 	</div><!-- end container -->
 
-</section><!-- end gallery section -->
+</div><!-- end gallery section -->
 
 {% endblock %}
 {% block scripts %}

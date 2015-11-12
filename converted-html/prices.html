@@ -1,11 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
 <html lang="en">
     <head>
+        <meta charset="utf-8"/>
         <!-- Title block allowing child pages to override -->
         <title>The Shave</title>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -37,7 +33,10 @@
     </head>
     <body class="loading">
 
-        <div class="load-icon"></div>
+        <!--<div class="load-icon"></div>-->
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
         <!--
 #################################
 	- Header Section -
@@ -79,28 +78,6 @@
             <li class="mobile-modal book-now-m" >
                 <a data-toggle="modal" data-target="#bookNowModal">Book Today</a>
             </li>
-
-            <!-- Our Services
-            <li class="has-children">
-
-                <a href="services.html">Our Services</a>
-
-                <ul class="cd-dropdown-services is-hidden">
-                    <li class="go-back"><a href="#0">Menu</a></li>
-                    <li class="see-all"><a href="#browse">Browse All Services &amp; Prices </a></li>
-
-                    <li class="cd-service-bg">
-                        <a class="cd-dropdown-item" href="service-shave.html">
-                            <img class="visible-xs visible-sm" src="assets/images/nav/nav-gallery-1.jpg" alt="service 1">
-                            <h3>When you get a shave</h3>
-                            <p>We offer the very best in straight shave using modern techniques to give you the the closest shave you'll ever have.</p>
-                        </a>
-                        <img class="hidden-xs hidden-sm" src="nav-shave-hover.jpg" alt="service 1">
-                        <img class="hidden-xs hidden-sm" src="nav-shave.jpg" alt="service 1">
-                    </li>
-
-                </ul>
-            </li> <!-- end why us -->
 
             <!-- Service Icons -->
             <li class="has-children">
@@ -155,7 +132,7 @@
                 <a href="gallery.html">Gallery</a>
                 <ul class="cd-dropdown-gallery is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
-                    <li class="see-all"><a href="gallery.html">View all gallery options</a></li>
+                    <li class="see-all"><a href="features.html">Browse all features</a></li>
 
                     <!-- Gallery Item 1 -->
                     <li class="plus-effect">
@@ -166,7 +143,7 @@
                                 </div>
                                 <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
                             </div>
-                            <h3>Masonry Gallery Full width</h3>
+                            <h3>Masonry Gallery</h3>
                         </a>
                     </li>
 
@@ -177,9 +154,9 @@
                                 <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
-                                <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
+                                <img src="assets/images/nav/nav-gallery-2.jpg" alt="Product Image">
                             </div>
-                            <h3>Masonry Gallery Boxed</h3>
+                            <h3>3 Column grid</h3>
                         </a>
                     </li>
 
@@ -190,9 +167,9 @@
                                 <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
-                                <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
+                                <img src="assets/images/nav/nav-gallery-3.jpg" alt="Product Image">
                             </div>
-                            <h3>3 Grid Gallery</h3>
+                            <h3>4 Column grid</h3>
                         </a>
                     </li>
 
@@ -203,9 +180,9 @@
                                 <div class="plus-hover hidden-xs hidden-sm">
                                     <i class="fa fa-plus-circle"></i>
                                 </div>
-                                <img src="assets/images/nav/nav-gallery-1.jpg" alt="Product Image">
+                                <img src="assets/images/nav/nav-gallery-4.jpg" alt="Product Image">
                             </div>
-                            <h3>4 Grid Gallery</h3>
+                            <h3>5 Column grid</h3>
                         </a>
                     </li>
 
@@ -231,7 +208,7 @@
                         <!-- Sub-item contents -->
                         <ul class="is-hidden">
 
-                            <li class="go-back"><a href="#0">Get a haircut</a></li>
+                            <li class="go-back"><a href="#0">Haircuts</a></li>
 
                             <li class="see-all">
                                 <a href="full-gallery.html#filter=.hair">View Gallery</a>
@@ -259,7 +236,6 @@
 
                                 <ul class="is-hidden">
                                     <li class="go-back"><a href="#0">Kids Cuts</a></li>
-                                    <li class="see-all"><a href="full-gallery.html#filter=.hair">View Gallery</a></li>
                                     <li><a href="prices.html#tab=haircuts">Kids Cut</a></li>
                                     <li><a href="prices.html#tab=haircuts">Full style</a></li>
                                     <li><a href="prices.html#tab=haircuts">Shampoo</a></li>
@@ -312,10 +288,10 @@
                     <!-- Sub-item -->
                     <li class="has-children">
                        <!-- Sub-item title -->
-                        <a href="http://codyhouse.co/?p=748">Beards</a>
+                        <a href="service-shave.html">Beards</a>
                         <!-- Sub-item contents -->
                         <ul class="is-hidden">
-                            <li class="go-back"><a href="#0">Clothing</a></li>
+                            <li class="go-back"><a href="#0">Beards</a></li>
                             <li class="see-all">
                                 <a href="full-gallery.html#filter=.beard">View Gallery</a>
                             </li>
@@ -335,83 +311,50 @@
             <li class="has-children">
 
                 <!-- Nav title -->
-                <a href="http://codyhouse.co/?p=748">Features & options</a>
+                <a href="features.html">Features & options</a>
 
                 <ul class="cd-dropdown-icons is-hidden">
                     <li class="go-back"><a href="#0">Menu</a></li>
-                    <li class="see-all"><a href="http://codyhouse.co/?p=748">Browse All Services</a></li>
+                    <li class="see-all"><a href="features.html">Browse All Features</a></li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-1" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-1" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-diamond"></i>
                             </div>
-                            <h3>Pricing Tables</h3>
-                            <p>Simple way to hold data</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-2" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-flag-o"></i>
-                            </div>
-                            <h3>SVG Icons</h3>
-                            <p>1000+ Free Icons included</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-3" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-paper-plane-o"></i>
-                            </div>
-                            <h3>Google Map Service</h3>
-                            <p>Add your own location easily</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-4" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-map-marker"></i>
-                            </div>
                             <h3>Revolution Slider</h3>
-                            <p>Plugin Included with purchase</p>
+                            <p>#1 Selling slider plugin included</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-5" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-10" href="features.html">
                             <div class="icon-wrapper">
-                                <i class="fa fa-home"></i>
+                                <i class="fa fa-star-o"></i>
                             </div>
-                            <h3>Responsive Site</h3>
-                            <p>Looks good on every device</p>
+                            <h3>Hero / Parallax headers</h3>
+                            <p>Strong page headers that look great</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-6" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-8" href="features.html">
                             <div class="icon-wrapper">
-                                <i class="fa fa-object-ungroup"></i>
+                                <i class="fa fa-code"></i>
                             </div>
-                            <h3>Retina quality</h3>
-                            <p>Looks amazing on all devices</p>
+                            <h3>Development</h3>
+                            <p>Code crafted to perfection</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-7" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-7" href="features.html">
                             <div class="icon-wrapper">
-                                <i class="fa fa-camera-retro"></i>
+                                <i class="fa fa-columns"></i>
                             </div>
                             <h3>Stylish Layouts</h3>
                             <p>Sleek page layouts</p>
@@ -420,58 +363,91 @@
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-8" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-9" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-toggle-off"></i>
+                            </div>
+                            <h3>Niche Theme</h3>
+                            <p>Designed and developed for a real barber</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-4" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-picture-o"></i>
                             </div>
                             <h3>Beautiful Gallery</h3>
-                            <p>Isotop Gallery plugin setup</p>
+                            <p>Isotop Gallery looks amazing</p>
                         </a>
                     </li>
 
                     <!-- item -->
                     <li>
-                        <a class="cd-dropdown-item item-9" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-5" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-television"></i>
+                            </div>
+                            <h3>Fully Responsive</h3>
+                            <p>Looks good on every device</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-3" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <h3>Google Map Service</h3>
+                            <p>Add your own location easily</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-2" href="features.html">
+                            <div class="icon-wrapper">
+                                <i class="fa fa-flag-o"></i>
+                            </div>
+                            <h3>Font Awesome Icons</h3>
+                            <p>500+ Free Icons included</p>
+                        </a>
+                    </li>
+
+                    <!-- item -->
+                    <li>
+                        <a class="cd-dropdown-item item-6" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-object-ungroup"></i>
                             </div>
-                            <h3>Service #9</h3>
-                            <p>This is the item description</p>
+                            <h3>Retina quality</h3>
+                            <p>Looks amazing on all devices</p>
                         </a>
                     </li>
 
-                    <!-- item -->
+                    <!-- item
                     <li>
-                        <a class="cd-dropdown-item item-10" href="http://codyhouse.co/?p=748">
-                            <div class="icon-wrapper">
-                                <i class="fa fa-object-ungroup"></i>
-                            </div>
-                            <h3>Service #10</h3>
-                            <p>This is the item description</p>
-                        </a>
-                    </li>
-
-                    <!-- item -->
-                    <li>
-                        <a class="cd-dropdown-item item-11" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-11" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-object-ungroup"></i>
                             </div>
                             <h3>Service #11</h3>
                             <p>This is the item description</p>
                         </a>
-                    </li>
+                    </li>-->
 
-                    <!-- item -->
+                    <!-- item
                     <li>
-                        <a class="cd-dropdown-item item-12" href="http://codyhouse.co/?p=748">
+                        <a class="cd-dropdown-item item-12" href="features.html">
                             <div class="icon-wrapper">
                                 <i class="fa fa-object-ungroup"></i>
                             </div>
                             <h3>Service #12</h3>
                             <p>This is the item description</p>
                         </a>
-                    </li>
+                    </li>-->
 
                 </ul> <!-- .cd-dropdown-icons -->
 
@@ -513,7 +489,7 @@
 	       - Prices -
 #################################
 -->
-<section class="container-fluid white-bg container-push">
+<div class="section container-fluid white-bg container-push">
 	<div class="row sv__container--sm">
 
 		<div class="col-xs-12 inner__header--sm">
@@ -523,14 +499,14 @@
 
 	</div>
 
-</section><!-- end header -->
+</div><!-- end header -->
 
 <!-- price section -->
-<section class="container-fluid container__grey no-padding">
+<div class="section container-fluid container__grey no-padding">
 	<div class="angle-bottom-top" style="color: #fff;"></div>
 
 	<!-- pricing tab accordion -->
-	<div class="sv__container--sm no-padding tier2">
+	<div class="sv__container--sm sm-fluid no-padding tier2">
 
 		<div class="tabs__wrapper">
 
@@ -581,10 +557,10 @@
 						<!-- tab header -->
 						<div class="tab-header">
 							<div class="headline-container">
-								<h3>Beard & Mustache</h3>
+								<h3>Styling Manliness</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
 							</div>
-							<img class="img-responsive" src="header-img.jpg" alt="">
+							<img class="img-responsive" src="assets/images/prices/header-beard.jpg" alt="">
 						</div>
 
 						<!-- tab panel -->
@@ -640,10 +616,10 @@
 
 						<div class="tab-header">
 							<div class="headline-container">
-								<h3>Shaving</h3>
+								<h3>Masters of the blade</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
 							</div>
-							<img class="img-responsive" src="header-img.jpg" alt="">
+							<img class="img-responsive" src="assets/images/prices/header-shave.jpg" alt="">
 						</div>
 
 						<div class="tab__panel">
@@ -748,10 +724,10 @@
 
 						<div class="tab-header">
 							<div class="headline-container">
-								<h3>Hair Cuts</h3>
+								<h3>The art of scissor</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
 							</div>
-							<img class="img-responsive" src="header-img.jpg" alt="">
+							<img class="img-responsive" src="assets/images/prices/header-haircut.jpg" alt="">
 						</div>
 
 						<div class="tab__panel">
@@ -848,7 +824,7 @@
 
 	</div><!-- end tab accordion -->
 
-</section><!-- end price section -->
+</div><!-- end price section -->
 
 
 
@@ -863,96 +839,98 @@
 -->
 <footer class="loading">
 
-	<!-- Footer Wrapper -->
-	<div class="footer__wrapper">
-		
-		<div class="row footer__row">
+	<div class="sv__container--md">
+		<!-- Footer Wrapper -->
+		<div class="footer__wrapper">
 
-			<!-- Footer Logo -->
-			<div class="footer__logo no-padding">
-				<div class="logo__container">
-					<h5>The</h5>
-					<h3>Shave</h3>
-					<h4>Mens Barbershop</h4>
+			<div class="row footer__row">
+
+				<!-- Footer Logo -->
+				<div class="footer__logo no-padding">
+					<div class="logo__container">
+						<h5>The</h5>
+						<h3>Shave</h3>
+						<h4>Mens Barbershop</h4>
+					</div>
 				</div>
-			</div>
 
-			<!-- Footer Description -->
-			<div class="footer__desc">
+				<!-- Footer Description -->
+				<div class="footer__desc">
 
-				<!-- email container -->
-				<div class="email__wrapper">
+					<!-- email container -->
+					<div class="email__wrapper">
 
-					<!-- email form -->
-					<div class="email__form form-group">
+						<!-- email form -->
+						<div class="email__form form-group">
 
-						<form>
+							<form>
 
-							<!-- email input -->
-							<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
+								<!-- email input -->
+								<input type="email" class="form-control email__form--input" id="footer-email" name="EMAIL" required placeholder="Your Email Address">
 
-							<!-- subtext to email -->
-							<div class="email__offers">
-								<p>Get the latest updates, special offers and much more.</p>
-							</div><!-- end sub-text -->
+								<!-- subtext to email -->
+								<div class="email__offers">
+									<p>Get the latest updates, special offers and much more.</p>
+								</div><!-- end sub-text -->
 
-							<button type="submit" class="btn book-now-btn form-btn">Submit</button>
+								<button type="submit" class="btn book-now-btn form-btn">Submit</button>
 
-						</form>
+							</form>
 
-					</div><!-- end email form -->
+						</div><!-- end email form -->
 
-				</div><!-- end email container -->
+					</div><!-- end email container -->
 
-				<!-- address container -->
-				<div class="row footer__contact">
+					<!-- address container -->
+					<div class="row footer__contact">
 
-					<!-- address -->
-					<div class="col-xs-12 col-sm-6 footer__address no-padding">
-						<p>Nordhoff st.</p>
-						<p>NorthRidge, CA 91324</p>
-					</div>
-
-					<!-- email -->
-					<div class="col-xs-12 col-sm-6 contact no-padding">
-						<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
-						<a class="phone" href="tel:303-313-0303">303-313-0303</a>
-					</div>
-
-				</div><!-- end address container -->
-
-				<!-- social media -->
-				<div class="row social-footer">
-					<div class="col-xs-12 col-sm-6 col-md-8">
-						<ul>
-							<li><a href=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href=""><i class="fa fa-instagram"></i></a></li>
-							<li><a href=""><i class="fa fa-pinterest"></i></a></li>
-							<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-							<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-						</ul>
-					</div><!-- end col -->
-
-					<!-- copyright -->
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="copyright">
-							<p>2015 The Shave LTD</p>
+						<!-- address -->
+						<div class="col-xs-12 col-sm-6 footer__address no-padding">
+							<p>Nordhoff st.</p>
+							<p>NorthRidge, CA 91324</p>
 						</div>
-					</div><!-- end col -->
 
-				</div><!-- end social media -->
+						<!-- email -->
+						<div class="col-xs-12 col-sm-6 contact no-padding">
+							<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
+							<a class="phone" href="tel:303-313-0303">303-313-0303</a>
+						</div>
 
-			</div><!-- end right side -->
+					</div><!-- end address container -->
 
-		</div><!-- end row -->
+					<!-- social media -->
+					<div class="row social-footer">
+						<div class="col-xs-12 col-sm-6 col-md-8">
+							<ul>
+								<li><a href=""><i class="fa fa-facebook"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href=""><i class="fa fa-instagram"></i></a></li>
+								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
+								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div><!-- end col -->
 
-	</div><!-- end container -->
+						<!-- copyright -->
+						<div class="col-xs-12 col-sm-6 col-md-4">
+							<div class="copyright">
+								<p>2015 The Shave LTD</p>
+							</div>
+						</div><!-- end col -->
+
+					</div><!-- end social media -->
+
+				</div><!-- end right side -->
+
+			</div><!-- end row -->
+
+		</div><!-- end container -->
+	</div>
 
 </footer><!-- end foother -->
 
         <!-- Book now modal -->
-        <div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" >
+        <div class="modal fade" id="bookNowModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="row">
