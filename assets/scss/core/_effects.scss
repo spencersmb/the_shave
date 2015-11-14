@@ -5,13 +5,12 @@
     background-color: #fff;
 
     .loader-wrapper{
-        position: fixed;
+        position: absolute;
         opacity: 1;
         @include transition(opacity .2s);
         top: 30%;
         left:50%;
-        @include transform(translateY(-30%));
-        @include transform(translateX(-50%));
+        @include transform(translateY(-30%)translateX(-50%));
         margin: 0 auto;
     }
 
@@ -147,6 +146,13 @@
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+    .loading {
+        background-color: #fff;
+
+        .loader-wrapper {
+            position: fixed;
+        }
+    }
     .parallax__background {
         &.image__content {
             height: 500px;
