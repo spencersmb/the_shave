@@ -249,6 +249,17 @@
                 font-size: 15px;
                 white-space: normal;
             }
+            & > tr{
+
+                &:first-child{
+                    & > th{
+                        padding-top:0;
+                    }
+                    & > td{
+                        padding-top:0;
+                    }
+                }
+            }
         }
     }
 }
@@ -314,7 +325,7 @@
     }
     .gallery-details {
         .table-responsive {
-            margin-bottom: 25px;
+            margin-bottom: 0;
         }
     }
     .stats__container {

@@ -1,0 +1,308 @@
+{% block content %}
+<!--
+#################################
+    - Service Section -
+#################################
+-->
+{% include "service-haircut/haircut-header-parallax" %}
+
+{% include "service-haircut/haircut-intro" %}
+
+<!-- Service dual feature imgs -->
+<div class="section container-fluid no-padding">
+    <div class="row no-margin">
+        <div class="col-sm-6 no-padding">
+            <img class="img-responsive" src="{{'service-haircut-1.jpg' | asset_url}}" alt="Shaving process"/>
+        </div>
+        <div class="col-sm-6 no-padding">
+            <img class="img-responsive" src="{{'service-haircut-2.jpg' | asset_url}}" alt="Shaving process"/>
+        </div>
+    </div>
+</div><!-- End feature imgs -->
+
+
+<div class="section container-fluid no-padding grey-bg">
+    <div class="inner-lg">
+        <div class="sv__container--sm">
+            <div class="row no-margin">
+                <div class="sv-wrapper">
+                    <div class="col-sm-12 col-md-6 mobile-space-sm">
+                        <img class="img-responsive img-center active" src="{{'device-mock-up2.png' | asset_url}}" alt="Mobile Phone">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-half margin-left-5 mobile-space-sm">
+                        <div class="headline-sm">
+                            <h2 class="text-left black">STUNNING DESIGN & GREAT FUNCTIONALITY</h2>
+                        </div>
+                        <div class="content black">
+                            <p>Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim.</p>
+                        </div>
+                        <div class="approach-list inner-sm">
+                            <div class="approach-item">
+                                <div class="approach-icon-wrapper">
+                                    <i class="icon-sv-arrows black"></i>
+                                </div>
+                                <div class="approach-content black">
+                                    <h6 class="title">Modern Techniques</h6>
+                                    <p>To change your password you need to do the following steps.</p>
+                                </div>
+                            </div>
+                            <div class="approach-item">
+                                <div class="approach-icon-wrapper">
+                                    <i class="icon-sv-products black"></i>
+                                </div>
+                                <div class="approach-content black">
+                                    <h6 class="title">Top of the line products</h6>
+                                    <p>To change your password you need to do the following steps.</p>
+                                </div>
+                            </div>
+                            <div class="approach-item">
+                                <div class="approach-icon-wrapper">
+                                    <i class="icon-sv-trophy black"></i>
+                                </div>
+                                <div class="approach-content black">
+                                    <h6 class="title">The best service</h6>
+                                    <p>To change your password you need to do the following steps.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "image-text" %}
+
+<div class="section container-fluid no-padding black-bg">
+    <div class="inner-sm">
+        <div class="row no-margin">
+            <div class="col-xs-12">
+                <h4 class="text-center white">Clean Design and Powerful Features makes The Shave a superstar</h4>
+            </div>
+        </div>
+    </div>
+</div><!-- End black bar -->
+
+<!-- products section -->
+<div class="section container-fluid white-bg">
+
+    <div class="sv__container--md inner-content-module">
+        <div class="products">
+
+            <div class="single-headline">
+                <h2>We use the finest products available</h2>
+            </div>
+
+            <div class="section__wrapper">
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 products__wrapper">
+
+                    <div class="card__slider card-shadow-md">
+
+                        <!-- product content -->
+                        <div class="content__wrapper">
+
+                            <div class="image">
+                                <img class="img-responsive" src="{{ 'product-bottle.jpg' | asset_url}}" alt="">
+                            </div>
+
+                            <div class="title__wrapper">
+
+                                <div class="title">
+
+                                    <a class="open" href="">
+                                        <h5>Sandal Wood</h5>
+                                        <h6>Aftershave</h6>
+                                        <div class="product__bg--1" style="background-image: url('{{ 'wood-fresh.jpg' | asset_url}}')">
+                                        </div>
+                                    </a>
+
+                                    <div class="bio">
+                                        <h6>Fresh Wood</h6>
+                                        <p>What's up. My name is joe and I've been a family member of the shave for the last 8 years.</p>
+                                    </div>
+
+                                </div><!-- end title -->
+
+                            </div><!-- end title wrapper -->
+
+                        </div><!-- product content -->
+
+                    </div><!-- end card wrapper -->
+
+                </div><!-- end product -->
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 products__wrapper">
+
+                    <div class="card__slider card-shadow-md">
+
+                        <!-- product content -->
+                        <div class="content__wrapper">
+
+                            <div class="image">
+                                <img class="img-responsive" src="{{ 'product-bottle-2.jpg' | asset_url}}" alt="">
+                            </div>
+
+                            <div class="title__wrapper">
+
+                                <div class="title">
+
+                                    <a class="open" href="">
+                                        <h5>Super Fresh</h5>
+                                        <h6>Aftershave</h6>
+                                        <div class="product__bg--2" style="background-image: url('{{ 'ocean-fresh.jpg' | asset_url}}')">
+                                        </div>
+                                    </a>
+
+                                    <div class="bio">
+                                        <h6>Fresh Scent</h6>
+                                        <p>What's up. My name is joe and I've been a family member of the shave for the last 8 years.</p>
+                                    </div>
+
+                                </div><!-- end title -->
+
+                            </div><!-- end title wrapper -->
+
+                        </div><!-- product content -->
+
+                    </div><!-- end card wrapper -->
+
+                </div><!-- end product -->
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 products__wrapper">
+
+                    <div class="card__slider card-shadow-md">
+
+                        <!-- product content -->
+                        <div class="content__wrapper">
+
+                            <div class="image">
+                                <img class="img-responsive" src="{{ 'soap-product.jpg' | asset_url}}" alt="">
+                            </div>
+
+                            <div class="title__wrapper">
+
+                                <div class="title">
+
+                                    <a class="open" href="">
+                                        <h5>Coffee Bean</h5>
+                                        <h6>Aftershave</h6>
+                                        <div class="product__bg--3" style="background-image: url('{{ 'coffee-scent.jpg' | asset_url}}')">
+
+                                        </div>
+                                    </a>
+
+                                    <div class="bio">
+                                        <h6>Coffee Scent</h6>
+                                        <p>What's up. My name is joe and I've been a family member of the shave for the last 8 years.</p>
+                                    </div>
+
+                                </div><!-- end title -->
+
+                            </div><!-- end title wrapper -->
+
+                        </div><!-- product content -->
+
+                    </div><!-- end card wrapper -->
+
+                </div><!-- end product -->
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 products__wrapper">
+
+                    <div class="card__slider card-shadow-md">
+
+                        <!-- product content -->
+                        <div class="content__wrapper">
+
+                            <div class="image">
+                                <img class="img-responsive" src="{{ 'product-wax.jpg' | asset_url}}" alt="">
+                            </div>
+
+                            <div class="title__wrapper">
+
+                                <div class="title">
+
+                                    <a class="open" href="">
+                                        <h5>Pine Wood</h5>
+                                        <h6>Aftershave</h6>
+                                        <div class="product__bg--4" style="background-image: url('{{ 'pinewood.jpg' | asset_url}}')">
+                                        </div>
+                                    </a>
+
+                                    <div class="bio">
+                                        <h6>Pine Scent</h6>
+                                        <p>What's up. My name is joe and I've been a family member of the shave for the last 8 years.</p>
+                                    </div>
+
+                                </div><!-- end title -->
+
+                            </div><!-- end title wrapper -->
+
+                        </div><!-- product content -->
+
+                    </div><!-- end card wrapper -->
+
+                </div><!-- end product -->
+
+            </div><!-- end section wrapper -->
+
+        </div><!-- end products -->
+
+    </div><!-- end container--md -->
+
+</div><!-- end products section -->
+
+<!-- Start Price module -->
+{% include "service-shave/price-boxs-shave" %}
+<!-- End Section price module -->
+
+<!-- black bar -->
+<div class="section container-fluid no-padding black-bg black-headline">
+    <div class="inner-lg">
+        <div class="row no-margin">
+            <div class="col-xs-12">
+                <h2 class="text-center white">Featured Gallery Shots</h2>
+                <h5 class="text-center white">See some of our favorite clients results.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Start Gallery module -->
+{% include "gallery-preview" %}
+<!-- End Section gallery module -->
+<div class="section container-fluid white-bg no-padding">
+    <div class="space-lg">
+        <!-- Sell Box -->
+        <div class="sv__container--md col3__module">
+
+            <!-- Intro -->
+            <div class="col-sm-12 no-padding">
+                <div class="intro">
+                    <h2>Style Different</h2>
+                    <p class="small-headline">The Shave has a striking balance of beautiful design and powerful features. Try building your website using our all powerful theme now!</p>
+                </div>
+            </div> <!-- End Intro -->
+
+            <!-- Sell box featured image -->
+            <div class="col-sm-12">
+                <img class="img-responsive space-lg" src="{{'shave-haircut-footer.jpg' | asset_url}}" alt="featured barber products">
+            </div>
+
+        </div><!-- end sell-box -->
+
+    </div><!-- end space-lg -->
+
+</div><!-- end section -->
+
+<!-- Service links -->
+<div class="section">
+    {% include "service-haircut/related-services" %}
+</div><!-- End service links -->
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

@@ -125,6 +125,7 @@
             }
         }
     }
+
     &-thumb {
         height: 300px;
         opacity: .8;
@@ -209,6 +210,9 @@
     .post-nav {
         .prev-post {
             text-align: right;
+            h2{
+                right:-5px;
+            }
         }
     }
 }

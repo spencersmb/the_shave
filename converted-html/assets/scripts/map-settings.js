@@ -207,10 +207,10 @@ function initialize() {
     position: loc1,
     map: map,
     animation: google.maps.Animation.DROP,
-    visible: true,
+    visible: true
     //icon: marker_url
     //'optimized': true
-    icon: 'assets/images/icons/cd-icon-location.png'
+    //icon: 'assets/images/icons/cd-icon-location.png'
   });
 
   function toggleBounce() {

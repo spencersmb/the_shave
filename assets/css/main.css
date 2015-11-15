@@ -1749,6 +1749,10 @@ blockquote.reverse {
   background: #252525;
 }
 
+.sv-blue-bg {
+  background: #3F4350;
+}
+
 .light-grey-bg {
   background-color: #F3F3F3;
 }
@@ -6792,6 +6796,11 @@ footer.loaded {
   color: #fff;
 }
 
+.erinyen.tp-title-wrap {
+  min-height: 0;
+  line-height: 0;
+}
+
 /***************************************************************************/
 /* Rev Plugin CSS ****************************************************/
 /***************************************************************************/
@@ -7050,7 +7059,6 @@ footer.loaded {
 .approach-list .approach-content h6 {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
-  color: #252525;
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -7983,6 +7991,12 @@ footer.loaded {
   font-size: 15px;
   white-space: normal;
 }
+.gallery-details .table > tbody > tr:first-child > th {
+  padding-top: 0;
+}
+.gallery-details .table > tbody > tr:first-child > td {
+  padding-top: 0;
+}
 
 @media only screen and (min-width: 768px) {
   .gallery-details h4 {
@@ -8036,7 +8050,7 @@ footer.loaded {
   }
 
   .gallery-details .table-responsive {
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   .stats__container {
@@ -9079,6 +9093,9 @@ footer.loaded {
 
   .post-nav .prev-post {
     text-align: right;
+  }
+  .post-nav .prev-post h2 {
+    right: -5px;
   }
 }
 @media only screen and (min-width: 992px) {

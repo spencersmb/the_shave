@@ -5,10 +5,10 @@
 #################################
 -->
 {% include "service-shave/service-intro-parallax" %}
-<!-- end service featured intro -->
 
 {% include "col-3-module-1" %}
 
+<!-- Service dual feature imgs -->
 <div class="section container-fluid no-padding">
 	<div class="row no-margin">
 		<div class="col-sm-6 no-padding">
@@ -18,19 +18,20 @@
 			<img class="img-responsive" src="{{'service-shave-1.jpg' | asset_url}}" alt="Shaving process"/>
 		</div>
 	</div>
-</div>
+</div><!-- End feature imgs -->
 
 {% include "image-text" %}
 
+<!-- black bar -->
 <div class="section container-fluid no-padding black-bg">
 	<div class="inner-sm">
 		<div class="row no-margin">
 			<div class="col-xs-12">
-				<h4 class="text-center white">Clean Design and Powerful Features makes Namo a superstar</h4>
+				<h4 class="text-center white">Clean Design and Powerful Features makes The Shave a superstar</h4>
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- End black bar -->
 
 {% include "text-image" %}
 
@@ -42,6 +43,7 @@
 {% include "service-shave/suggested-barber" %}
 <!-- End bio module -->
 
+<!-- black bar -->
 <div class="section container-fluid no-padding black-bg black-headline">
 	<div class="inner-lg">
 		<div class="row no-margin">
@@ -53,19 +55,19 @@
 	</div>
 </div>
 
-<!-- Start Price module -->
+
+<!-- Start Gallery module -->
 {% include "gallery-preview" %}
-<!-- End Section price module -->
+<!-- End Section gallery module -->
 
 <!-- Start Price module -->
 {% include "service-shave/price-boxs-shave" %}
 <!-- End Section price module -->
 
+<!-- Service links -->
 <div class="section">
-	<!-- Start Price module -->
 	{% include "service-shave/other-services" %}
-	<!-- End Section price module -->
-</div>
+</div><!-- End service links -->
 
 
 {% endblock %}

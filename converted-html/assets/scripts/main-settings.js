@@ -693,7 +693,7 @@ $(function() {
 		function animatePriceIn(object){
 			setTimeout(function(){
 				object.addClass('in');
-			}, 200);
+			}, 100);
 		}
 		//Change size of body depending on content in tabs
 		$('#priceTabs').on('click', 'li', function(e){

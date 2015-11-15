@@ -514,7 +514,7 @@ blockquote.reverse {
     max-width: 1001.72px;
   }
   .sv__container--xs {
-    max-width: 756px;
+    max-width: 600px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -617,23 +617,18 @@ blockquote.reverse {
   background-color: #fff;
 }
 .loading .loader-wrapper {
-  position: fixed;
+  position: absolute;
   opacity: 1;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   transition: opacity 0.2s;
   top: 30%;
   left: 50%;
-  -webkit-transform: translateY(-30%);
-  -moz-transform: translateY(-30%);
-  -ms-transform: translateY(-30%);
-  -o-transform: translateY(-30%);
-  transform: translateY(-30%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translateY(-30%) translateX(-50%);
+  -moz-transform: translateY(-30%) translateX(-50%);
+  -ms-transform: translateY(-30%) translateX(-50%);
+  -o-transform: translateY(-30%) translateX(-50%);
+  transform: translateY(-30%) translateX(-50%);
   margin: 0 auto;
 }
 .loading .loader {
@@ -773,6 +768,13 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 768px) {
+  .loading {
+    background-color: #fff;
+  }
+  .loading .loader-wrapper {
+    position: fixed;
+  }
+
   .parallax__background.image__content {
     height: 500px;
   }
@@ -1012,7 +1014,7 @@ blockquote.reverse {
 }
 .headline-lg h2 {
   margin: 20px auto;
-  font-size: 52px;
+  font-size: 26px;
 }
 .headline-lg p {
   width: 100%;
@@ -1266,8 +1268,6 @@ blockquote.reverse {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
-  max-width: 400px !important;
-  min-width: 400px !important;
 }
 
 .sv-feature-Icon {
@@ -1295,7 +1295,7 @@ blockquote.reverse {
 }
 
 .headline-left-right {
-  text-align: left;
+  text-align: center;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -1322,11 +1322,6 @@ blockquote.reverse {
 }
 
 @media only screen and (min-width: 768px) {
-  .sv-feature-headline {
-    max-width: 500px !important;
-    min-width: 500px !important;
-  }
-
   .sv-feature-Icon [class^="icon-sv"] {
     font-size: 40px;
   }
@@ -1385,6 +1380,14 @@ blockquote.reverse {
 
   .headline-md p {
     font-size: 18px;
+    line-height: 24px;
+  }
+
+  .headline-lg h2 {
+    font-size: 48px;
+  }
+  .headline-lg p {
+    font-size: 16px;
     line-height: 24px;
   }
 
@@ -1466,6 +1469,10 @@ blockquote.reverse {
   }
 }
 @media only screen and (min-width: 992px) {
+  .headline-left-right {
+    text-align: left;
+  }
+
   .sv-feature-headline {
     max-width: 800px !important;
     min-width: 800px !important;
@@ -1505,6 +1512,10 @@ blockquote.reverse {
     max-width: 825px;
   }
 
+  .headline-lg h2 {
+    font-size: 52px;
+  }
+
   .single-headline {
     max-width: 950px;
     margin: 0 auto;
@@ -1513,6 +1524,10 @@ blockquote.reverse {
   .single-headline h2 {
     margin: 45px auto;
     font-size: 21px;
+  }
+
+  .subtitle-left {
+    text-align: left;
   }
 
   .hero-content-inner {
@@ -1554,10 +1569,6 @@ blockquote.reverse {
   .pos-right {
     max-width: 45vw !important;
     min-width: 45vw !important;
-  }
-
-  .subtitle-left {
-    text-align: left;
   }
 
   .one-third {
@@ -1736,6 +1747,10 @@ blockquote.reverse {
 
 .black-bg {
   background: #252525;
+}
+
+.sv-blue-bg {
+  background: #3F4350;
 }
 
 .light-grey-bg {
@@ -5045,6 +5060,9 @@ blockquote.reverse {
 #testimonial-carousel .carousel-control.right, #testimonial-carousel .carousel-control.left {
   background-image: none;
 }
+#testimonial-carousel .carousel-control.right {
+  right: 5px;
+}
 #testimonial-carousel .carousel-indicators {
   margin-left: -30.5%;
 }
@@ -7036,7 +7054,6 @@ footer.loaded {
 .approach-list .approach-content h6 {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
-  color: #252525;
   font-size: 14px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -7969,6 +7986,12 @@ footer.loaded {
   font-size: 15px;
   white-space: normal;
 }
+.gallery-details .table > tbody > tr:first-child > th {
+  padding-top: 0;
+}
+.gallery-details .table > tbody > tr:first-child > td {
+  padding-top: 0;
+}
 
 @media only screen and (min-width: 768px) {
   .gallery-details h4 {
@@ -8022,7 +8045,7 @@ footer.loaded {
   }
 
   .gallery-details .table-responsive {
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   .stats__container {
@@ -8986,7 +9009,7 @@ footer.loaded {
 }
 .post-nav-thumb {
   height: 300px;
-  opacity: .7;
+  opacity: .8;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -9065,6 +9088,9 @@ footer.loaded {
 
   .post-nav .prev-post {
     text-align: right;
+  }
+  .post-nav .prev-post h2 {
+    right: -5px;
   }
 }
 @media only screen and (min-width: 992px) {
