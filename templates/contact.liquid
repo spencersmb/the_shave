@@ -1,7 +1,3 @@
-{% block styles %}
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHjfEAx3kun_6_SvIHIdSl04ayMBuRRi0"></script>
-{% endblock %}
-
 {% block content %}
 <!--
 #################################
@@ -42,6 +38,7 @@
 			</div>
 
 		</div><!-- end header -->
+
 	</div><!-- end container -->
 
 </div><!-- end header section -->
@@ -55,6 +52,8 @@
 		<a class="btn book-now-btn" href="">Get Directions</a>
 	</div>
 </div><!-- end google map -->
+
+<!-- Gold bar -->
 <div class="section container-fluid no-padding gold-bg">
 	<div class="inner-sm">
 		<div class="row no-margin">
@@ -63,7 +62,8 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- end gold bar -->
+
 <!-- contact form -->
 <div class="section container-fluid white-bg contact__form">
 
@@ -109,5 +109,6 @@
 
 {% endblock %}
 {% block scripts %}
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHjfEAx3kun_6_SvIHIdSl04ayMBuRRi0"></script>
 {{ "map-settings.js" | asset_url | script_tag }}
 {% endblock %}

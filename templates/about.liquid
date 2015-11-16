@@ -34,11 +34,12 @@
 
 			</div>
 		</div>
-	</div>
 
-</div>
-<!-- end about container -->
+	</div><!-- end container md -->
 
+</div><!-- end section -->
+
+<!-- Gold bar -->
 <div class="section container-fluid gold-bg no-padding">
 
 	<div class="about-phone">
@@ -50,12 +51,12 @@
 					<p>FEEL FREE TO CONTACT US.</p>
 					<p>WE ARE ALWAYS HERE TO MAKE YOUR Experience the very best.</p>
 				</div>
-				<a href="#" class="btn book-now-btn btn-white" onclick='return false'>Get in touch</a>
+				<a href="#" class="btn book-now-btn btn-white" >Get in touch</a>
 			</div>
 		</div>
 	</div>
 
-</div>
+</div><!-- end gold bar -->
 
 <!-- About Skill-Set -->
 <div class="section container__white">
@@ -74,8 +75,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+
+		</div><!-- end container-fluid -->
+
+	</div><!-- end about sell -->
 
 </div><!-- end about skill-set -->
 
@@ -153,6 +156,7 @@
 
 </div><!-- end process grid -->
 
+<!-- Black bar -->
 <div class="section container-fluid no-padding black-bg">
 	<div class="inner-sm">
 		<div class="row no-margin">
@@ -161,10 +165,11 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- end black bar -->
 
 {% include "6-block" %}
 
+<!-- Gold bar -->
 <div class="section container-fluid no-padding gold-bg">
 	<div class="inner-sm">
 		<div class="row no-margin">
@@ -176,16 +181,15 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- end gold bar -->
 
 <!-- single image container -->
 <div class="section container-fluid no-padding single-image">
-	<img class="img-responsive" src="{{'about-footer.jpg' | asset_url}}" alt=""/>
+	<img class="img-responsive" src="{{'about-footer.jpg' | asset_url}}" alt="The Shave Barbershop HTML Theme"/>
 </div><!-- end single image -->
 
-<!-- FAQ -->
-{% include "service-shave/faq-shave" %}
-<!-- End Faq -->
+{% include "faq-shave" %}
+
 {% endblock %}
 
 {% block scripts %}

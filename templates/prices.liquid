@@ -8,7 +8,7 @@
 	<div class="row sv__container--sm">
 
 		<div class="col-xs-12 inner__header--sm">
-			<h1>Let's talk prices.</h1>
+			<h2>Let's talk prices.</h2>
 			<h3>Here is a full list of all our services.</h3>
 		</div>
 
@@ -75,7 +75,7 @@
 								<h3>Styling Manliness</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
 							</div>
-							<img class="img-responsive" src="{{ 'price-header-bm.jpg' | asset_url}}" alt="">
+							<img class="img-responsive" src="{{ 'price-header-bm.jpg' | asset_url}}" alt="The Shave Barbershop HTML Theme">
 						</div>
 
 						<!-- tab panel -->
@@ -134,7 +134,7 @@
 								<h3>Masters of the blade</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
 							</div>
-							<img class="img-responsive" src="{{ 'price-header-shave.jpg' | asset_url}}" alt="">
+							<img class="img-responsive" src="{{ 'price-header-shave.jpg' | asset_url}}" alt="The Shave Barbershop HTML Theme">
 						</div>
 
 						<div class="tab__panel">
@@ -242,7 +242,7 @@
 								<h3>The art of scissor</h3>
 								<h4>Sub head copy for a more complete service desc</h4>
 							</div>
-							<img class="img-responsive" src="{{ 'price-header-haircut.jpg' | asset_url}}" alt="">
+							<img class="img-responsive" src="{{ 'price-header-haircut.jpg' | asset_url}}" alt="The Shave Barbershop HTML Theme">
 						</div>
 
 						<div class="tab__panel">
@@ -347,53 +347,52 @@
 // ==========================================================================
 // Set tab active based on URL
 // ==========================================================================
-//TODO: organize JS
 $(function() {
 
 	//Price Filter
 	var val = window.location.hash;
 	var hash;
-	//	console.log(val);
 
 	var animateInDelay = function(e){
 		setTimeout(function(){
 			e.addClass('in');
-		}, 1000);
-	};
-
-	var animateInShort = function(e){
-		setTimeout(function(){
-			e.addClass('in');
-		}, 300);
+		}, 500);
 	};
 
 	if(val != ''){
-		
+		//clean up value to get the string
 		hash = val.substr(5);
-
 
 		$('#priceTabs > li').each(function(){
 
+			//remove the default active class on the tab elements
 			$(this).removeClass('active');
 
+			//check to make sure the id == the hash
 			if( hash === this.id ){
 
+				//set panelId
 				var panelId = $(this).find('a').attr('href').substr(1);
 
 				//show correct matching content with active Tab
+				//loop through the panel conents
 				$('#myPriceContent > div').each( function(){
 					$(this).removeClass('active').removeClass('in');
 
+					//check if the id of the tab matches the id of the panel
 					if(panelId === this.id){
+
 						var element = $(this);
+
 						$(this).addClass('active');
 
+						//animate in
 						animateInDelay(element);
 
 					}
 				});
 
-				//add active class to the tab element
+				//add active class to the tab element that was a match
 				$(this).addClass('active');
 
 			}
@@ -404,10 +403,9 @@ $(function() {
 		//show default
 		setTimeout(function(){
 			$('#shaving').addClass('active in');
-		}, 1000);
+		}, 500);
 
 	}
-
 
 });
     

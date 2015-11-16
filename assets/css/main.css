@@ -8978,8 +8978,9 @@ footer.loaded {
   background: #252525;
   color: #fff;
 }
-.post-nav .next-post a,
-.post-nav .prev-post a {
+.post-nav .next-post a, .post-nav .next-post span,
+.post-nav .prev-post a,
+.post-nav .prev-post span {
   color: #fff;
   position: absolute;
   top: 0;
