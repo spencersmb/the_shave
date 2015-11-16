@@ -1,9 +1,7 @@
 /***************************************************************************/
 /* 3 Col Module ************************************************/
 /***************************************************************************/
-
 .col3__module {
-
     h6 {
         font-size: em(18px);
         color: $primary-color;
@@ -25,9 +23,7 @@
     .desc {
         text-align: center;
     }
-
 }
-
 .col3__container {
     text-align: center;
     h2{
@@ -35,7 +31,6 @@
         margin-bottom: 0;
         font-size: 36px;
     }
-
     .wrapper > div {
         &:nth-last-child(1){
             .col3__item {
@@ -50,10 +45,8 @@
         margin-bottom: 40px;
     }
 }
-
 .col3__item {
     padding-bottom: 30px;
-
     .icon__wrapper {
         margin: 0 auto;
         max-width: 59px;
@@ -83,7 +76,6 @@
             margin: 0;
         }
     }
-
 }
 
 // Displays greater than 768px
@@ -102,7 +94,6 @@
         .desc {
             text-align: center;
         }
-
     }
     .col3__container {
         .wrapper > div {
@@ -112,7 +103,6 @@
                 }
             }
         }
-
         .col3__item{
             padding:0 15px;
         }
@@ -133,6 +123,27 @@
         }
         .intro{
             h2{
+                font-size: 67px;
+                line-height: 72px;
+            }
+            h5{
+                font-size:30px;
+                line-height: 32px;
+            }
+        }
+    }
+    .col3__container {
+        h5 {
+            font-size: em(18px);
+        }
+    }
+}
+
+// Displays greater than 1200px
+@include breakpoint(desktop) {
+    .col3__module {
+        .intro{
+            h2{
                 font-size: 97px;
                 line-height: 100px;
             }
@@ -141,18 +152,8 @@
                 line-height: 44px;
             }
         }
-
-    }
-    .col3__container {
-
-        h5 {
-            font-size: em(18px);
-        }
     }
 }
-
-// Displays greater than 1200px
-@include breakpoint(desktop) {}
 
 // Displays greater than 1600px
 @include breakpoint(desktopXL) {}

@@ -1,34 +1,17 @@
 /***************************************************************************/
 /* Helper Classes ****************************************************/
 /***************************************************************************/
-
 .container__white {
     background: #fff;
     position: relative;
 }
-
 .container__grey {
     background: $grey;
     position: relative;
 }
-
-.heading-divider {
-    &::before {
-        position: absolute;
-        top: -25px;
-        left: 15px;
-        font-size: 18px;
-        font-weight: 400;
-        text-align: left;
-        width: 100%;
-        content: "::::::::::"
-    }
-}
-
 .sv-wrapper{
     padding:0 30px;
 }
-
 .divider__plus {
     margin: 0 auto;
     text-align: center;
@@ -41,7 +24,7 @@
     p {
         display: block;
         border-bottom:1px solid $dark-grey;
-        line-height: 0em;
+        line-height: 0;
         font-weight: bold;
         margin: 0 0 25px 0;
     }
@@ -59,33 +42,6 @@
 
 .italic {
     font-style: italic;
-}
-
-.spacer {
-    &::after {
-        position: absolute;
-        top: 47px;
-        left: 0;
-        font-family: $courier-new;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        color: $primary-color;
-        width: 100%;
-        content: ":::"
-    }
-}
-
-.spacer-left {
-    &::before {
-        position: relative;
-        margin-right: 15px;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        color: $primary-color;
-        content: ":::"
-    }
 }
 
 .tier2 {
@@ -140,10 +96,6 @@
 
 .black-bg {
     background: $black;
-}
-
-.sv-blue-bg {
-    background: $sv-blue;
 }
 
 .light-grey-bg {
@@ -281,9 +233,6 @@
         padding:70px 0;
         position: relative;
     }
-}
-.icon-gold{
-    color:$primary-color;
 }
 
 .circle-boarder{

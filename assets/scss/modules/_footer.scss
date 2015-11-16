@@ -1,7 +1,6 @@
 /***************************************************************************/
 /* Footer ****************************************************/
 /***************************************************************************/
-
 footer {
     position: relative;
     bottom: 0;
@@ -49,13 +48,13 @@ footer {
             font-weight: 500;
         }
         h3 {
-            font-size: em(48px);
+            font-size: 48px;
             margin: 0;
             letter-spacing: 7px;
         }
         h4 {
             color: $primary-color;
-            font-size: em(18px);
+            font-size: 18px;
             font-family: $courier-new;
             text-transform: none;
             font-weight: 400;
@@ -81,18 +80,18 @@ footer {
     input {
         background: transparent;
         float: left;
-        font-size: em(18px);
+        font-size: 18px;
         padding: 0;
         border-radius: 0;
         height: 50px;
         border: 0;
         box-shadow: none;
         color: $primary-color;
-        border-bottom: 1px solid #bcbcbc;
+        border-bottom: 1px solid $white;
         text-align: center;
         &:focus {
             box-shadow: none;
-            border-color: #bcbcbc;
+            border-color: $white;
         }
         &::-webkit-input-placeholder {
             color: $primary-color;
@@ -120,7 +119,7 @@ footer {
 
 .email__offers {
     margin-top: 5px;
-    font-size: em(14px);
+    font-size: 14px;
     text-align: center;
 }
 
@@ -141,7 +140,7 @@ footer {
 }
 
 .copyright {
-    font-size: em(14px);
+    font-size: 14px;
     margin-top: 15px;
     text-align: center;
 }
@@ -166,7 +165,7 @@ footer {
         width: 23px;
         height: 23px;
         display: block;
-        color: #fff;
+        color: $white;
     }
 }
 
@@ -179,7 +178,7 @@ footer {
     }
     .email__form {
         input {
-            font-size: em(32px);
+            font-size: 32px;
         }
     }
     .email__wrapper {
@@ -232,7 +231,7 @@ footer {
         z-index: -1;
     }
     .footer__wrapper {
-        padding: em(40px) 0 0;
+        padding: 40px 0 0;
     }
     .footer__logo {
         width: 50%;

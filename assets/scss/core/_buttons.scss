@@ -1,7 +1,6 @@
 /***************************************************************************/
 /* Buttons ****************************************************/
 /***************************************************************************/
-
 .btn {
     line-height: 1.4;
     text-align: center;
@@ -33,16 +32,6 @@
     &:hover{
         border-bottom: 2px solid $primary-color;
     }
-}
-
-.reply-btn {
-    font-weight: bold;
-    text-align: right;
-    float: right;
-}
-
-.center-btn {
-    margin-top: 40px;
 }
 
 .book-now-btn {
@@ -132,10 +121,6 @@
     }
 }
 
-.btn-slider{
-
-}
-
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .form-btn {
@@ -161,7 +146,6 @@
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-
 }
 
 // Displays greater than 1200px

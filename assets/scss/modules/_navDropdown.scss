@@ -2,7 +2,6 @@
 /* - Dropdown Nav - ****************************************************/
 /*   codyhouse.co   ****************************************************/
 /***************************************************************************/
-
 #header {
     position: relative;
     text-align: center;
@@ -24,23 +23,19 @@
             float:right;
             margin-right:5px;
             margin-left:10px;
-
             &:focus{
                 color:$white;
             }
         }
-
         @include MQ(M){
             .nav__book {
                 right: 45px;
             }
         }
-
     }
     .quick-link{
         display: inline-block;
         height:32px;
-
         a{
             display: table;
             width:32px;
@@ -49,7 +44,6 @@
             color:$white;
             margin:0 7px;
             @include transition(color 0s);
-
             &:hover{
                 color:$primary-color;
                 i{
@@ -662,49 +656,6 @@
             background-position: center center;
             background-size: 40px 40px;
         }
-        //    &.item-1::before {
-        //      background-image: url('../images/icons/svg/ecommerce_diamond.svg');
-        //    }
-        //    &.item-2::before {
-        //      background-image: url('../images/icons/svg/basic_pencil_ruler_pen.svg');
-        //    }
-        //    &.item-3::before {
-        //      background-image: url('../images/icons/svg/basic_paperplane.svg');
-        //    }
-        //    &.item-4::before {
-        //      background-image: url('../images/icons/svg/basic_geolocalize-05.svg');
-        //    }
-        //    &.item-5::before {
-        //      background-image: url('../images/icons/svg/basic_home.svg');
-        //    }
-        //
-        //    &.item-6::before {
-        //      background-image: url('../images/icons/svg/basic_message_multiple.svg');
-        //    }
-        //
-        //    &.item-7::before {
-        //      background-image: url('../images/icons/svg/basic_settings.svg');
-        //    }
-        //
-        //    &.item-8::before {
-        //      background-image: url('../images/icons/svg/basic_share.svg');
-        //    }
-        //
-        //    &.item-9::before {
-        //      background-image: url('../images/icons/svg/ecommerce_graph1.svg');
-        //    }
-        //
-        //    &.item-10::before {
-        //      background-image: url('../images/icons/svg/basic_gear.svg');
-        //    }
-        //
-        //    &.item-11::before {
-        //      background-image: url('../images/icons/svg/basic_paperplane.svg');
-        //    }
-        //
-        //    &.item-12::before {
-        //      background-image: url('../images/icons/svg/ecommerce_graph_increase.svg');
-        //    }
     }
     @include MQ(M) {
         .cd-dropdown-gallery {
@@ -958,8 +909,6 @@
                 height: 250px;
                 position: relative;
                 overflow: hidden;
-                // background-color:$primary-color;
-                // @include transition(all .2s);
                 &:nth-of-type(2n) {
                     margin-right: 0;
                 }
@@ -1047,7 +996,7 @@
                     color: $primary-color;
                     font-size: 16px;
                     text-transform: none;
-                    font-family: courier;
+                    font-family: $courier;
                     font-weight: bold;
                     letter-spacing: 0;
                     margin-bottom: 2px;

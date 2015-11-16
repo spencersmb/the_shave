@@ -5,16 +5,16 @@
 .inner__header--sm {
     text-align: center;
     clear: both;
-    margin: em(40px) auto em(200px);
+    margin: 40px auto 200px;
     h2 {
-        font-size: em(84px);
+        font-size: 84px;
         max-width: 900px;
         margin: 0 auto;
         text-transform: none;
         letter-spacing: .5px;
     }
     p {
-        font-size: em(24px);
+        font-size: 24px;
     }
     h3 {
         color: $white;
@@ -22,18 +22,18 @@
         margin-left: auto;
         margin-right: auto;
         font-weight: 300;
-        line-height: em(21px);
-        font-family: courier;
+        line-height: 21px;
+        font-family: $courier;
         letter-spacing: 1px;
-        font-size: em(24px);
+        font-size: 24px;
         text-transform: none;
     }
     h4 {
         text-transform: none;
         font-weight: 300;
-        font-size: em(16px);
+        font-size: 16px;
         color: darken($white, 60%);
-        line-height: em(28px);
+        line-height: 28px;
         max-width: 900px;
         text-align: center;
         margin: 0 auto;
@@ -55,7 +55,6 @@
     }
 }
 
-
 .intro {
     text-align: center;
     font-family: $heading-font;
@@ -66,12 +65,12 @@
 
     h2 {
         margin: 15px 0 32px 0;
-        font-size: em(26px);
+        font-size: 26px;
         line-height: 32px;
         margin-bottom: 16px;
     }
     h5{
-        font-size: em(18px);
+        font-size: 18px;
         color: $darker-grey;
         font-weight: 500;
         text-transform:uppercase;
@@ -81,7 +80,7 @@
         max-width: 900px;
     }
     h6 {
-        font-size: em(18px);
+        font-size: 18px;
         color: $primary-color;
         font-family: $courier;
         font-weight: 700;
@@ -93,7 +92,7 @@
         font-weight: 300;
         text-transform: uppercase;
         color: $dark-grey;
-        font-size: em(18px);
+        font-size: 18px;
     }
     .small-headline {
         line-height:24px;
@@ -108,7 +107,7 @@
     .sub-copy {
         font-family: $courier-new;
         text-transform: initial;
-        font-size: em(16px);
+        font-size: 16px;
         color: darken($white, 80%);
         text-align: center;
         max-width: 900px;
@@ -117,7 +116,7 @@
 }
 
 .subhead {
-    font-size: em(18px);
+    font-size: 18px;
     color: $black;
     text-transform: uppercase;
     font-family: $heading-font;
@@ -245,7 +244,6 @@
     &.active{
         opacity: .4;
     }
-
 }
 
 .hero-wrapper{
@@ -295,11 +293,9 @@
         a {
             position: relative;
             display: block;
-            //      border:3px solid $white;
             text-align: center;
             background: $white;
             padding: 5px 10px;
-            //      left:-8px;
 
             &:hover {
                 background-color: $primary-color;
@@ -428,8 +424,6 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 3px;
-//        max-width: 400px !important;
-//        min-width: 400px !important;
     }
 }
 
@@ -481,7 +475,6 @@
         margin-bottom: 0;
         font-family: $courier;
     }
-
 }
 
 .col-block{
@@ -490,15 +483,6 @@
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
-    .sv-feature {
-        &-intro{
-
-        }
-        &-headline{
-//            max-width: 500px!important;
-//            min-width: 500px!important;
-        }
-    }
     .sv-feature-Icon{
         [class^="icon-sv"]{
             font-size: 40px;
@@ -514,7 +498,6 @@
         &:nth-child(2n+1){
             clear: both;
         }
-
     }
     .inner__header--sm {
         margin:140px auto 35px;
@@ -533,7 +516,7 @@
     .intro {
         padding: 0 10%;
         h2 {
-            font-size: em(48px);
+            font-size: 48px;
             line-height: 52px;
         }
         .small-headline {
@@ -541,7 +524,7 @@
             font-size: 18px;
         }
         .sub-copy {
-            font-size: em(18px);
+            font-size: 18px;
         }
     }
     .headline-sm {
@@ -651,10 +634,6 @@
         text-align: left;
     }
     .sv-feature {
-
-        &-intro{
-
-        }
         &-headline{
             max-width: 800px !important;
             min-width: 800px !important;
@@ -684,7 +663,7 @@
     .intro {
         padding: 0;
         h2 {
-            font-size: em(67px);
+            font-size: 67px;
             line-height: 72px;
         }
     }
@@ -723,11 +702,9 @@
 
     .hero-content{
         &.header {
-
             h2 {
                 font-size: 84px;
             }
-
             h3{
                 max-width: 700px;
             }
@@ -743,11 +720,8 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
-
     .sv-feature {
-        &-intro{
 
-        }
         &-headline{
             max-width: 1200px !important;
             min-width: 1200px !important;

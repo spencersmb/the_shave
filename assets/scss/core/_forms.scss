@@ -1,7 +1,6 @@
 /***************************************************************************/
 /* Forms ****************************************************/
 /***************************************************************************/
-
 .contact__form {
     padding: 0 30px;
     &--wrapper {
@@ -16,22 +15,18 @@
         }
     }
 }
-
 .form__left,
 .form__right {
     padding: 0;
 }
-
 .form__right {
     overflow: hidden;
 }
-
 .input__container {
     width: 100%;
     position: relative;
     overflow: hidden;
 }
-
 .icon {
     position: absolute;
     top: -2px;
@@ -52,7 +47,6 @@
         }
     }
 }
-
 .user-name,
 .user-email,
 .user-phone {
@@ -85,7 +79,6 @@
         color: $subtext-dk-grey;
     }
 }
-
 .user-text {
     width: 100%;
     display: block;
@@ -117,7 +110,6 @@
         color: $subtext-dk-grey;
     }
 }
-
 
 @include breakpoint(tablet) {
     .contact__form {

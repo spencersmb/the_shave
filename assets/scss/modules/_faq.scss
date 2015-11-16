@@ -1,11 +1,9 @@
 /***************************************************************************/
 /* Faq Module ****************************************************/
 /***************************************************************************/
-
 .shave__faq {
     margin: 90px auto;
 }
-
 .shave__faq--items {
     height: auto;
     width: 100%;
@@ -14,12 +12,11 @@
     @include transform(translateZ(0));
     @include transition(transform 2s);
 }
-
 .shave__faq--group {
     display: block;
     h2 {
         text-transform: uppercase;
-        font-size: (24px);
+        font-size: 24px;
         font-weight: 700;
         color: $black;
     }
@@ -32,7 +29,6 @@
         margin: 2em 0 1em;
     }
 }
-
 .shave__faq--trigger {
     position: relative;
     display: block;
@@ -49,8 +45,8 @@
     border: 1px solid transparent;
     text-align: left;
     p {
-        font-size: em(15px);
-        line-height: em(24px);
+        font-size: 15px;
+        line-height: 24px;
         color: $black;
 
     }
@@ -68,7 +64,7 @@
         display: block;
         h2 {
             text-transform: uppercase;
-            font-size: (24px);
+            font-size: 24px;
             font-weight: 700;
             color: $black;
         }
@@ -121,8 +117,8 @@
     .shave__faq--content {
         border: 1px solid transparent;
         p {
-            font-size: em(15px);
-            line-height: em(24px);
+            font-size: 15px;
+            line-height: 24px;
             color: $black;
         }
         .faq--wrapper{
