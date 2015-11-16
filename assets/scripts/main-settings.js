@@ -283,7 +283,7 @@ $(function() {
 				myFooter.removeClass('loading').addClass('loaded');
 
 
-			}, 800);
+			}, 200);
 		}
 
 		function shavePreloader(){
@@ -301,25 +301,27 @@ $(function() {
 					//run while preloading
 					preLoadElement(modal);
 
-
 				}).done(function (instance) {
-					var isoGalleryItem = $('.gallery-item').find('span').get(),
-							heroItem = $('.hero-background'),
-							postThumb = $('.post-thumb-img').get();
-
-							//background image preloader
-							if(heroItem.length > 0 ){
-								preLoadElement(heroItem, initLayout);
-
-							}else if(postThumb.length > 0 ) {
-								preLoadElement(postThumb, initLayout);
-								
-							}else if(isoGalleryItem.length > 0){
+					var isoGalleryItem = $('.gallery-item').find('span').get();
+					//		heroItem = $('.hero-background'),
+					//		postThumb = $('.post-thumb-img').get();
+          //
+					//		//background image preloader
+							if(isoGalleryItem.length > 0 ) {
 								preLoadElement(isoGalleryItem, initLayout);
-
 							}else{
 								initLayout();
 							}
+          //
+					//		}else if(postThumb.length > 0 ) {
+					//			preLoadElement(postThumb, initLayout);
+					//
+					//		}else if(isoGalleryItem.length > 0){
+					//			preLoadElement(isoGalleryItem, initLayout);
+          //
+					//		}else{
+					//			initLayout();
+					//		}
 
 				});
 			}
@@ -749,5 +751,6 @@ $(function() {
 
 		//Image Preloader check
 		shavePreloader();
+		//specialFooter();
 
 });

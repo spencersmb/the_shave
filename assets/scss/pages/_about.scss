@@ -84,6 +84,17 @@
     p{
         margin:0;
     }
+    a{
+        display: block;
+        position: relative;
+        margin-top:20px;
+        color:$black;
+        font-weight: 400;
+        font-family: $ubuntu;
+        &:hover{
+            color:$primary-color;
+        }
+    }
 }
 
 .about__process {

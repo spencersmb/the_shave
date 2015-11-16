@@ -57,7 +57,6 @@ Tags:
 	## Galleries
 --------------------------------------------------------------*/
 @import url("http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,400italic");
-@import url("http://fonts.googleapis.com/css?family=Yellowtail");
 @font-face {
   font-family: 'sv-barbershop';
   src: url("../fonts/sv-fonts/sv-barbershop.eot?49862412");
@@ -615,36 +614,6 @@ blockquote.reverse {
 /***************************************************************************/
 .loading {
   background-color: #fff;
-}
-.loading .loader-wrapper {
-  position: absolute;
-  opacity: 1;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  top: 30%;
-  left: 50%;
-  -webkit-transform: translateY(-30%) translateX(-50%);
-  -moz-transform: translateY(-30%) translateX(-50%);
-  -ms-transform: translateY(-30%) translateX(-50%);
-  -o-transform: translateY(-30%) translateX(-50%);
-  transform: translateY(-30%) translateX(-50%);
-  margin: 0 auto;
-}
-.loading .loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #252525;
-  animation: loader 2s infinite ease;
-}
-.loading .loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #252525;
-  animation: loader-inner 2s infinite ease-in;
 }
 
 .parallax__background {
@@ -6745,7 +6714,6 @@ footer.loaded {
 .tp-caption.shave_title_cursive {
   font-size: 5.625em;
   color: white;
-  font-family: "Yellowtail", cursive;
   min-width: 145px;
 }
 .tp-caption.shave_title_cursive.and {
@@ -8165,6 +8133,17 @@ footer.loaded {
 }
 .process__grid p {
   margin: 0;
+}
+.process__grid a {
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  color: #252525;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+.process__grid a:hover {
+  color: #af8c45;
 }
 
 .about__process {

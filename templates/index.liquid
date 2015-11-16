@@ -1,8 +1,5 @@
 {% block styles %}
-	{{ "rev-settings.css" | asset_url | stylesheet_tag }}
-	{{ "pe-icon-7-stroke.css" | asset_url | stylesheet_tag }}
-	{{ "layers.css" | asset_url | stylesheet_tag }}
-	{{ "navigation.css" | asset_url | stylesheet_tag }}
+	{{ "revolution5.css" | asset_url | stylesheet_tag }}
 {% endblock %}
 {% block content %}
 
@@ -51,7 +48,7 @@ $(function() {
 				jsFileLocation:"assets/scripts/",
 				sliderLayout:"fullscreen",
 				dottedOverlay:"none",
-				delay:9000,
+				delay:7000,
 				navigation: {
 					keyboardNavigation:"off",
 					keyboard_direction: "horizontal",
@@ -123,9 +120,8 @@ $(function() {
 				},
 				shadow:0,
 				spinner:"off",
-				stopLoop:"on",
-				stopAfterLoops:0,
-				stopAtSlide:1,
+				stopLoop:"off",
+				stopAfterLoops:3,
 				shuffle:"off",
 				autoHeight:"off",
 				fullScreenAlignForce:"off",
@@ -148,7 +144,6 @@ $(function() {
 
 	$(window).bind('resizeEnd', function() {
 		$("#rev_slider_46_1").revredraw();
-		console.log('redraw');
 	});
 	$(window).on('resize', function() {
 		if(this.resizeTO) clearTimeout(this.resizeTO);

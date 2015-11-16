@@ -3,13 +3,8 @@
 // ==========================================================================
 
 // Import if Google Fonts URL is defined
-
 @if variable-exists(font-url--ubuntu){
   @import url($font-url--ubuntu);
-}
-
-@if variable-exists(font-url--yellowtail){
-  @import url($font-url--yellowtail);
 }
 
 // Functions and Directives
