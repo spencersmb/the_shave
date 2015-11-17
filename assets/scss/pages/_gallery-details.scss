@@ -1,7 +1,6 @@
 /***************************************************************************/
 /* Gallery Details ****************************************************/
 /***************************************************************************/
-
 .gallery {
     max-width: 1360px;
     margin: 0 auto;
@@ -16,7 +15,6 @@
     position: absolute;
     width: 100%;
 }
-
 .gallery-cell {
     width: 75%;
     height: 100%;
@@ -32,9 +30,7 @@
     }
 }
 
-
 /* cell number */
-
 .gallery-cell:before {
     display: block;
     text-align: center;
@@ -57,17 +53,14 @@
         opacity: .5;
     }
 }
-
 .gallery-nav .gallery-cell:before {
     font-size: 50px;
 }
-
 .gallery-nav .gallery-cell.is-nav-selected {
     img {
         opacity: 1;
     }
 }
-
 .gallery__inner {
     &--feature {
         position: relative;
@@ -83,9 +76,6 @@
         }
     }
 }
-
-
-
 .stats__container {
     margin: 0 auto 35px;
     a {
@@ -93,7 +83,6 @@
         margin: 0 auto;
     }
 }
-
 .stats__details {
     position: relative;
     text-align: center;
@@ -119,13 +108,11 @@
         text-align: left;
     }
 }
-
 .stats__wrapper {
     margin: 20px 0;
     padding-bottom: 40px;
     display: table;
 }
-
 .stat {
     float: left;
     margin-right: 180px;
@@ -138,15 +125,14 @@
     h5 {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: em(17px);
-        margin: none;
+        font-size: 17px;
+        margin: 0;
     }
     p {
         margin-top: 5px;
         padding-bottom: 40px;
     }
 }
-
 .control-wrapper {
     position: absolute;
     height: 100%;
@@ -154,7 +140,6 @@
     top: 0;
     left: 0;
 }
-
 .gallery__controls {
     max-width: 1360px;
     margin: 0 auto;
@@ -208,7 +193,6 @@
         }
     }
 }
-
 .style__btn {
     margin: 0 auto;
     text-align: center;
@@ -216,7 +200,6 @@
         display: inline-block;
     }
 }
-
 .gallery-details {
     max-width: 700px;
     width: 100%;
@@ -224,7 +207,7 @@
     text-align: left;
     h4 {
         text-align: center;
-        font-size: em(18px);
+        font-size: 18px;
         margin: 50px auto 30px;
         letter-spacing: 2px;
         font-weight: 500;
@@ -233,7 +216,7 @@
         border: none;
     }
     .table {
-        font-size: em(18px);
+        font-size: 18px;
         & > tbody {
             padding: 0 30px;
             display: block;

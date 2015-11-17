@@ -1,21 +1,18 @@
 /***************************************************************************/
 /* About page ****************************************************/
 /***************************************************************************/
-
 .about__desc {
     margin: 50px 0 45px;
     width: 100%;
     max-width: 800px;
     padding: 0 15px;
 }
-
 .about__sell {
     margin: 40px auto 20px;
     .section__wrapper {
         margin: 0;
     }
 }
-
 .process__grid {
     padding: 0 25px;
     i {
@@ -96,17 +93,14 @@
         }
     }
 }
-
 .about__process {
     padding: 100px 0;
     color: $white;
     margin: 0;
 }
-
 .process__box {
     margin: 0 auto;
 }
-
 .image-bg-cover {
     background-size: cover;
     background-position: center center;
@@ -116,7 +110,6 @@
         padding-top: 180px;
     }
 }
-
 .about-phone{
     margin:0 auto;
     width:100%;
@@ -328,7 +321,6 @@
             font-size:24px;
             line-height: 32px;
         }
-
     }
 }
 

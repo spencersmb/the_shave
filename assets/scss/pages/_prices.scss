@@ -50,7 +50,6 @@
             position: relative;
             margin: 0 auto;
             height: 45px;
-
             i{
                 font-size: 35px;
                 display: table;
@@ -79,7 +78,7 @@
             border-radius: 0;
             border-bottom: 0;
             font-family: $heading-font;
-            font-size: em(16px);
+            font-size: 16px;
             font-weight: 300;
             padding: 23px 0 25px;
             margin-bottom: 0;
@@ -179,7 +178,7 @@
     position: relative;
     text-align: center;
     h2 {
-        font-size: em(24px);
+        font-size: 24px;
         text-align: center;
         margin-top: 35px;
         margin-bottom: 35px;
@@ -242,18 +241,7 @@
         }
         h3 {
             font-size: 25px;
-//            margin-bottom: 15px;
         }
-//        h4 {
-//            font-family: $courier-new;
-//            font-size: 18px;
-//            font-weight: 500;
-//            text-transform: none;
-//            letter-spacing: 1px;
-//            overflow: hidden;
-//            text-indent: 0;
-//            position: relative;
-//        }
     }
     .tabs__wrapper {
         top: 0;
@@ -266,7 +254,6 @@
             margin-right:5px;
             i{
                 height: 35px;
-                position: relative;
                 display: block;
                 position: absolute;
                 top:12px;

@@ -228,7 +228,7 @@ footer {
         position: -moz-sticky;
         position: -ms-sticky;
         position: -o-sticky;
-        z-index: -1;
+        z-index: 1;
     }
     .footer__wrapper {
         padding: 40px 0 0;

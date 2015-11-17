@@ -2292,6 +2292,7 @@ blockquote.reverse {
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   transition: color 0.3s;
+  font-size: 21px;
 }
 @media only screen and (min-width: 768px) {
   #header {
@@ -4344,13 +4345,13 @@ blockquote.reverse {
   text-align: center;
 }
 .staggered__container h2 {
-  font-size: 3.0625em;
+  font-size: 49px;
   line-height: 55px;
   margin-bottom: 16px;
   margin-top: 15px;
 }
 .staggered__container h6 {
-  font-size: 1.125em;
+  font-size: 18px;
   color: #af8c45;
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-weight: 700;
@@ -4492,7 +4493,7 @@ blockquote.reverse {
 .box-lg .content h3 {
   margin: 0 auto;
   max-width: 75%;
-  margin-bottom: 1.25em;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
 }
@@ -4526,7 +4527,7 @@ blockquote.reverse {
 .box-sm-hours .content {
   position: relative;
   padding: 20px 8% 38px;
-  font-size: 1em;
+  font-size: 16px;
 }
 .box-sm-hours img {
   display: block;
@@ -4539,7 +4540,7 @@ blockquote.reverse {
 .box-sm-hours p {
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
-  font-size: 1.375em;
+  font-size: 22px;
   font-weight: 500;
   line-height: 24px;
   padding-top: 10px;
@@ -4564,7 +4565,7 @@ blockquote.reverse {
 .box-last .content h3 {
   margin: 0 auto;
   max-width: 75%;
-  margin-bottom: 1.25em;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
 }
@@ -4581,7 +4582,7 @@ blockquote.reverse {
     padding: 0 15px;
   }
   .staggered__container h2 {
-    font-size: 4.5em;
+    font-size: 72px;
     line-height: 80px;
   }
 
@@ -4603,7 +4604,7 @@ blockquote.reverse {
   .box-lg .content h3 {
     margin: 0 auto;
     max-width: 75%;
-    margin-bottom: 1.25em;
+    margin-bottom: 20px;
     font-size: 22px;
     line-height: 28px;
   }
@@ -4618,7 +4619,7 @@ blockquote.reverse {
     margin: 0;
   }
   .box-sm .content p {
-    font-size: 1.375em;
+    font-size: 22px;
     line-height: 28px;
     font-weight: 500;
   }
@@ -4640,7 +4641,7 @@ blockquote.reverse {
     padding: 20px 8% 45px;
   }
   .box-sm-hours .content p {
-    font-size: 1.125em;
+    font-size: 18px;
   }
 
   .box-sm-tall {
@@ -4664,7 +4665,7 @@ blockquote.reverse {
     padding: 0;
   }
   .staggered__container h2 {
-    font-size: 6.0625em;
+    font-size: 97px;
     line-height: 105px;
   }
 }
@@ -4798,11 +4799,11 @@ blockquote.reverse {
   margin: 0 auto;
 }
 .contact__us h4 {
-  padding-left: 0;
   margin-top: 0;
   font-size: 15px;
   font-weight: 500;
   text-align: left;
+  padding-left: 11px;
 }
 .contact__us h4 .bottom-i, .contact__us h4 .top-i {
   top: 4px;
@@ -5048,7 +5049,7 @@ blockquote.reverse {
 .buy__container {
   display: table;
   text-align: center;
-  padding: 0 30px;
+  padding: 0;
   margin: 0 auto;
   color: #fff;
 }
@@ -5083,6 +5084,7 @@ blockquote.reverse {
 
 @media only screen and (min-width: 768px) {
   .buy__container {
+    padding: 0 30px;
     max-width: 1160px;
   }
   .buy__container h2 {
@@ -5354,7 +5356,7 @@ footer.loaded {
     position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
-    z-index: -1;
+    z-index: 1;
   }
 
   .footer__wrapper {
@@ -6154,7 +6156,7 @@ footer.loaded {
   padding: 0 15px;
 }
 .social-container i {
-  font-size: 1.5em;
+  font-size: 24px;
   display: block;
 }
 
@@ -7702,8 +7704,8 @@ footer.loaded {
 .stat h5 {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.0625em;
-  margin: none;
+  font-size: 17px;
+  margin: 0;
 }
 .stat p {
   margin-top: 5px;
@@ -7796,7 +7798,7 @@ footer.loaded {
 }
 .gallery-details h4 {
   text-align: center;
-  font-size: 1.125em;
+  font-size: 18px;
   margin: 50px auto 30px;
   letter-spacing: 2px;
   font-weight: 500;
@@ -7805,7 +7807,7 @@ footer.loaded {
   border: none;
 }
 .gallery-details .table {
-  font-size: 1.125em;
+  font-size: 18px;
 }
 .gallery-details .table > tbody {
   padding: 0 30px;
@@ -8323,7 +8325,7 @@ footer.loaded {
   border-radius: 0;
   border-bottom: 0;
   font-family: "Ubuntu", sans-serif;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 300;
   padding: 23px 0 25px;
   margin-bottom: 0;
@@ -8428,7 +8430,7 @@ footer.loaded {
   text-align: center;
 }
 .tab__panel h2 {
-  font-size: 1.5em;
+  font-size: 24px;
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -8504,7 +8506,6 @@ footer.loaded {
   }
   .nav-tabs.nav-justified > li .tab-icon i {
     height: 35px;
-    position: relative;
     display: block;
     position: absolute;
     top: 12px;

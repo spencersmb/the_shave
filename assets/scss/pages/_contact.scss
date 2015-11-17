@@ -1,13 +1,11 @@
 /***************************************************************************/
 /* Contact Us page ****************************************************/
 /***************************************************************************/
-
 .google-container{
   margin:0 auto;
   padding:0 30px 40px;
   width:100%;
 }
-
 #sv-google-map {
 	position: relative;
 	height: 600px;
@@ -18,35 +16,28 @@
 	  margin:0 auto;
 	  position: relative;
 	}
-
   	.firstHeading{
 	  font-size: 21px;
-
 	}
-
 	.tel{
 	  display: block;
 	  color:$primary-color;
 	  font-family: $courier-new;
 	  font-weight: 600;
 	}
-
 	p{
 	  font-family: $courier-new;
 	  margin-bottom:0;
 	}
-
   	#bodyContent{
 	  padding:5px 0 0;
 	}
 
 }
-
 .contact__header{
   clear:both;
   text-align:center;
   margin-bottom: 40px;
-
   h3{
 	text-transform: none;
 	font-size: 21px;
@@ -54,30 +45,24 @@
 	margin-bottom: 8px;
 	font-weight: 400;
   }
-
   p{
 	margin:0;
   }
-
   a{
 	font-weight: 300;
   }
-
   & > div{
 	padding:25px 25px 0;
 	margin-top:25px;
 	border-top:1px solid $dark-grey;
   }
-
   i{
 	font-size: 1.5em;
   }
 }
-
 .meta-share{
   padding: 25px 0 25px!important;
   border-bottom:1px solid $dark-grey;
-
   a{
 	padding:15px 10px 0;
 	color:$black;
@@ -88,7 +73,6 @@
 	}
   }
 }
-
 .directions{
   margin: 20px auto 0;
   position: relative;
@@ -98,7 +82,7 @@
 	color:$primary-color;
   }
 }
-
+//special fix for directions btn
 @media only screen and (min-width: 375px) {
   .directions{
 	display: none;
@@ -109,11 +93,9 @@
   .google-container{
 	padding:0 30px;
   }
-
   .contact__header{
 	padding:0;
   }
-
   .contact__form{
 
 	&--title{
@@ -126,14 +108,12 @@
 	  margin:80px auto;
 	}
   }
-
   .contact__header{
 	& > div{
 	  padding:0 25px 30px 25px;
 	  margin-top:0;
 	  border-top:0;
 	}
-
 	h3{
 	  text-transform: none;
 	  font-size: 21px;
@@ -142,37 +122,26 @@
 	  font-weight: 600;
 	}
   }
-
   .meta-share {
 	padding:0 25px 30px!important;
 	border-bottom: 0;
   }
-
 }
 
 @include breakpoint(laptop) {
-
   .contact__header{
 	padding:0 15px;
   }
-
   .google-container{
 	margin:0 auto;
 	padding:0;
 	width:100%;
   }
-
   .meta-share {
 	a {
 	  padding: 0 10px 0;
 	}
   }
-
-
 }
 
-@include breakpoint(desktop) {
-
-
-
-}
+@include breakpoint(desktop) {}

@@ -20,7 +20,6 @@
     .sv-phone{
       @include transform(translateX(0)translateY(0));
     }
-
   }
   &.out{
     opacity: 0;
@@ -97,7 +96,6 @@
   }
 }
 .sv-phone{
-
   h2{
     font-size: 21px;
     width: 50%;

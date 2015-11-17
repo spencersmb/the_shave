@@ -1,7 +1,6 @@
 /***************************************************************************/
 /* Staggered Gird ****************************************************/
 /***************************************************************************/
-
 .staggered__container {
     max-width: 970px;
     background: $white;
@@ -9,13 +8,13 @@
     padding:0 15px;
     text-align: center;
     h2 {
-        font-size: em(49px);
+        font-size: 49px;
         line-height: 55px;
         margin-bottom: 16px;
         margin-top: 15px;
     }
     h6 {
-        font-size: em(18px);
+        font-size: 18px;
         color: $primary-color;
         font-family: $courier;
         font-weight: 700;
@@ -138,7 +137,7 @@
         h3 {
             margin: 0 auto;
             max-width: 75%;
-            margin-bottom: em(20px);
+            margin-bottom: 20px;
             font-size: 18px;
             line-height: 24px;
         }
@@ -173,7 +172,7 @@
     .content {
         position: relative;
         padding: 20px 8% 38px;
-        font-size: em(16px);
+        font-size: 16px;
     }
     img {
         display: block;
@@ -186,7 +185,7 @@
     p {
         font-family: $heading-font;
         text-transform: uppercase;
-        font-size: em(22px);
+        font-size: 22px;
         font-weight: 500;
         line-height: 24px;
         padding-top: 10px;
@@ -210,7 +209,7 @@
         h3 {
             margin: 0 auto;
             max-width: 75%;
-            margin-bottom: em(20px);
+            margin-bottom: 20px;
             font-size: 18px;
             line-height: 24px;
         }
@@ -229,7 +228,7 @@
     .staggered__container {
         padding:0 15px;
         h2 {
-            font-size: em(72px);
+            font-size: 72px;
             line-height: 80px;
         }
     }
@@ -248,7 +247,7 @@
             h3 {
                 margin: 0 auto;
                 max-width: 75%;
-                margin-bottom: em(20px);
+                margin-bottom: 20px;
                 font-size: 22px;
                 line-height: 28px;
             }
@@ -262,7 +261,7 @@
             padding: 52px 10.8% 41px;
             margin: 0;
             p {
-                font-size: em(22px);
+                font-size: 22px;
                 line-height: 28px;
                 font-weight: 500;
             }
@@ -283,7 +282,7 @@
             margin: 10em 20%;
             padding: 20px 8% 45px;
             p {
-                font-size: em(18px);
+                font-size: 18px;
             }
         }
     }
@@ -308,7 +307,7 @@
     .staggered__container {
         padding:0;
         h2 {
-            font-size: em(97px);
+            font-size: 97px;
             line-height: 105px;
         }
     }

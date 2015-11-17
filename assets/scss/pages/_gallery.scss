@@ -1,25 +1,20 @@
 /***************************************************************************/
 /* Gallery Grids ****************************************************/
 /***************************************************************************/
-
 .gallery-container {
     width: 100%;
 }
-
 .full-width-container {
     margin: 0 auto;
     padding: 30px 0 0;
 }
-
 .gallery-isotope {
     @include transition(all .2s);
 }
-
 .grid-sizer,
 .gallery-item {
     width: 100%;
 }
-
 .full-width-gallery {
     .gallery-item {
         float: none;
@@ -41,7 +36,6 @@
         width: 100%;
     }
 }
-
 .gallery-item {
     float: none;
     overflow: hidden;
@@ -184,8 +178,6 @@
 /***************************************************************************/
 /* Gallery Preview ****************************************************/
 /***************************************************************************/
-
-
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
