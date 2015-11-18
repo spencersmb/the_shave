@@ -202,15 +202,11 @@ function initialize() {
     mapOptions);
 
 
-  // Atlanta Office
   var marker1 = new google.maps.Marker({
     position: loc1,
     map: map,
     animation: google.maps.Animation.DROP,
     visible: true
-    //icon: marker_url
-    //'optimized': true
-    //icon: 'assets/images/icons/cd-icon-location.png'
   });
 
   function toggleBounce() {
@@ -230,8 +226,7 @@ function initialize() {
     function activeLoad(){
 
       setTimeout(function(){
-        //toggleBounce();
-        atlanta.open(map,marker1);
+        myOffice.open(map,marker1);
         map.panTo(loc1);
       }, 1800);
 
@@ -248,7 +243,7 @@ function initialize() {
 
     // INFO WINDOWS - POPUP MODAL
     // Atlanta Office Details
-    var atlantaDetails = '<div id="content">'+
+    var officeDetails = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">The Shave</h1>'+
@@ -262,16 +257,15 @@ function initialize() {
       '</div>';
 
 
-    var atlanta = new google.maps.InfoWindow({
-      content: atlantaDetails
+    var myOffice = new google.maps.InfoWindow({
+      content: officeDetails
     });
 
     google.maps.event.addListener(marker1, 'click', function() {
       toggleBounce();
-      atlanta.open(map,marker1);
+      myOffice.open(map,marker1);
     });
 
-    //atlanta.open(map,marker1);
     activeLoad();
 
   }

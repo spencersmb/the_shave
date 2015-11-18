@@ -66,7 +66,6 @@ $(function() {
 			menuOpen = false;
 			var navIsVisible = ( !$('.cd-dropdown').hasClass('dropdown-is-active') ) ? true : false;
 			$('.cd-dropdown').toggleClass('dropdown-is-active', navIsVisible);
-			console.log(menuOpen);
 			$('.cd-dropdown-trigger').toggleClass('dropdown-is-active', navIsVisible);
 			if( !navIsVisible ) {
 				$('.cd-dropdown').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
@@ -77,24 +76,30 @@ $(function() {
 			}
 		}
 
+	// ==========================================================================
+	// Nav bar element
+	// ==========================================================================
+
 		var main = $('main'),
 			isHero = true,
 			firstSection = main.children().first();
+
     //Get current position of Nav element
     var currentPosition = $(window).scrollTop();
 
+		//check for hero section
 		if(!firstSection.hasClass('hero-container') && !firstSection.hasClass('hero')){
 			isHero = false;
 		}
 
-
-		//if is Hero
+		//if is Hero section
 		if(currentPosition > 50 && isHero){
 			$navigation.addClass('shadow-on');
 		}else{
 			$navigation.removeClass('shadow-on');
 		}
 
+		//if is not hero section
 		if(currentPosition > 50 && !isHero){
 			$navigation.addClass('shadow-on');
 			$navigation.removeClass('no-hero');
@@ -207,7 +212,6 @@ $(function() {
 				hours = d.getHours(),
 				day = d.getUTCDay(),
 				ampm = hours >= 12 ? 'pm' : 'am',
-				minutes = d.getMinutes(),
 				closed = "We're closed",
 				open = "We're open",
 				toastStatus = $('.toast-title').children('h6');
@@ -218,20 +222,16 @@ $(function() {
 					if(ampm === 'am'){
 
 						if(hours >= 9 && hours <= 12){
-							console.log('open');
 							toastStatus.text(open);
 						}else{
-							console.log('closed');
 							toastStatus.text(closed);
 						}
 
 					}else{
 
 						if(hours >= 12 && hours < 21){
-							console.log('open');
 							toastStatus.text(open);
 						}else{
-							console.log('closed');
 							toastStatus.text(closed);
 						}
 					}
@@ -240,7 +240,6 @@ $(function() {
 					if(ampm === 'am'){
 
 						if(hours >= 9 && hours <= 12){
-							console.log('open');
 							toastStatus.text(open);
 						}else{
 							console.log('closed');
@@ -249,15 +248,12 @@ $(function() {
 
 					}else{
 						if(hours >= 1 && hours <= 6){
-							console.log('open');
 							toastStatus.text(open);
 						}else{
-							console.log('closed');
 							toastStatus.text(closed);
 						}
 					}
 				}else{
-					console.log('closed');
 					toastStatus.text(closed);
 				}
 
@@ -291,8 +287,6 @@ $(function() {
 
 			// get current bottom margin - set base 10
 				bottomMargin = parseInt(dialog.css('marginBottom'), 10);
-
-
 
 			//makes sure you dont have negative margin
 			if(offset < bottomMargin){

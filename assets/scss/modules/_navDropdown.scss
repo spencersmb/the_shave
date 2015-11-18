@@ -245,18 +245,18 @@
         position: absolute;
         top: 50%;
         margin-top: -1px;
-        height: 2px;
+        height: 3px;
         width: 0;
         background: transparent;
         @include backface-visibility(hidden);
         @include transition(width .3s, transform .3s, background-color 0.2s);
     }
     &::before {
-        right: 22px;
+        right: 19px;
         @include transform(rotate(45deg));
     }
     &::after {
-        right: 17px;
+        right: 14px;
         @include transform(rotate(-45deg));
     }
     @include MQ(M) {

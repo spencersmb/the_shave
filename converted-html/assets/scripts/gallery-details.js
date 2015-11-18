@@ -22,13 +22,13 @@
       return currThumbHeight;
     }
 
+    //resize function
     function resizeFlickity(){
       var gallery = $(".gallery-main"),
           reSize = getImgHeightMaster();
 
       gallery.find('.flickity-viewport').height(reSize);
       $('.gallery-nav').height(getThumbnailHeight());
-      gallery.css('padding-bottom', reSize);
     }
 
     //apply
@@ -36,6 +36,7 @@
       resizeFlickity();
     });
 
+    //on load
     $(window).on('load', function(){
       resizeFlickity();
     });

@@ -14,6 +14,8 @@
 
         <!-- Style block allowing child pages to inject their own styles -->
         
+    <link href="assets/css/flickity.min.css" rel="stylesheet" type="text/css" media="all"/>
+
 
         <!-- Styles -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
@@ -439,113 +441,352 @@
         <main class="sv__main--content">
 
             
-<!--
-#################################
- - Contact Us -
-#################################
--->
-<div class="section container-fluid white-bg">
+    <!--
+    #################################
+           - Gallery-Details -
+    #################################
+    -->
+    <div class="section container-fluid container__white">
+        <div class="row sv__container--sm">
+            <div class="col-xs-12 inner__header--sm">
+                <h2>Wild Stallion</h2>
+                <h3>A strong and bold cut for free spirits.</h3>
+            </div>
+        </div>
+    </div><!-- end header -->
 
-	<div class="row">
+    <!-- Flickity Feature Gallery -->
+    <div class="section container-fluid container__grey no-padding ">
 
-		<div class="col-xs-12 inner__header--sm">
-			<h2>Say hello.</h2>
-			<h3>Walk-ins welcome, or call ahead 30 min.</h3>
-		</div>
+        <div class="angle-top" style="color: rgb(232, 232, 232);"></div>
 
-	</div>
+        <div class="sv__container--md inner-lg space-desktop-lg">
+            <div class="row no-margin">
+                <div class="col-md-7 no-padding">
+                    <!-- feature gallery -->
+                    <div class="gallery__inner--feature gallery__slider">
 
-	<div class="row sv__container--sm">
-		<div class="col-xs-12 contact__header">
+                        <div class="gallery__inner--content">
 
-			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h3>Walk in.</h3>
-				<p>273 S. Lincoln ave,</p>
-				<p>Louisville, Co 80027</p>
+                            <!-- Flickity HTML init -->
+                            <div class="gallery gallery-main">
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/1/s1.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/1/s1.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                                <!-- <div class="gallery-cell">
+					<img class="img-responsive" src="assets/images/gallery/1/stallion-lg-2.jpg" alt="The Shave BarberShop Theme">
+				</div>
+				<div class="gallery-cell">
+					<img class="img-responsive" src="assets/images/gallery/1/stallion-lg-3.jpg" alt="The Shave BarberShop Theme">
+				</div>
+				<div class="gallery-cell size-tall">
+					<img class="img-responsive" src="assets/images/gallery/1/stallion-lg-4.jpg" alt="The Shave BarberShop Theme">
+				</div>-->
+                            </div>
+
+                            <!--flickity sub-nav -->
+                            <div class="gallery-nav">
+                                <div class="gallery-cell"><img id="myThumb" class="img-responsive" src="assets/images/gallery/1/stallion-sm-1.jpg" alt="The Shave BarberShop Theme"></div>
+                                <div class="gallery-cell"><img id="myThumb" class="img-responsive" src="assets/images/gallery/1/stallion-sm-1.jpg" alt="The Shave BarberShop Theme"></div>
+                                <!--
+			  <div class="gallery-cell"><img class="img-responsive" src="assets/images/gallery/1/stallion-sm-2.jpg" alt="The Shave BarberShop Theme"></div>
+			  <div class="gallery-cell"><img class="img-responsive" src="assets/images/gallery/1/stallion-sm-3.jpg" alt="The Shave BarberShop Theme"></div>
+				<div class="gallery-cell"><img class="img-responsive" src="assets/images/gallery/1/stallion-sm-4.jpg" alt="The Shave BarberShop Theme"></div>-->
+                            </div>
+
+                        </div><!-- end offset content -->
+
+                    </div> <!-- end gallery slider -->
+                </div>
+
+                <!-- offset container spacer
+                <div class="sv__container--sm">
+                    <div class="offset__content--gallery">
+                    </div>
+                </div>-->
+
+                <div class="col-md-5 no-padding">
+                    <div class="sv__container--md ">
+
+                        <div class="stats__container">
+
+                            <div class="stats__details">
+                                <h3>The Stallion Style</h3>
+                                <h4>$45.00</h4>
+                                <p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
+                            </div>
+
+                            <div class="style__btn">
+                                <div class="btn-group" role="group" aria-label="Styles">
+                                    <a role="button" class="btn book-now-btn" data-toggle="modal" data-target="#bookNowModal">Get this style</a>
+                                    <a role="button" href="full-gallery.html" class="btn book-now-btn">View All styles</a>
+                                </div>
+                            </div>
+
+                           <div class="space-sm">
+                               <div class="gallery-details clearfix">
+
+
+                                   <h4><a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Style Details <span><i class="fa fa-chevron-down"></i></span></a></h4>
+
+                                   <div class="collapse" id="collapseExample">
+
+                                       <ul>
+                                           <li>Curly or wavy hair preferred</li>
+                                           <li>45 min</li>
+                                           <li>For pear or diamond shaped faces with a prominent chin.</li>
+                                           <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
+                                       </ul>
+
+                                       <div class="table-responsive">
+
+
+                                           <!-- <table class="table">
+                                               <tbody>
+                                               <tr>
+                                                   <th>Hair Type</th>
+                                                   <td>Curly or wavy hair preferred</td>
+                                               </tr>
+                                               <tr>
+                                                   <th>Time to cut</th>
+                                                   <td>45 min</td>
+                                               </tr>
+                                               <tr>
+                                                   <th>Face Type</th>
+                                                   <td>For pear or diamond shaped faces with a prominent chin.</td>
+                                               </tr>
+                                               <tr>
+                                                   <th>The Style</th>
+                                                   <td>Maintain length and add layers all over the head, not shorter than 3 inches.</td>
+                                               </tr>
+                                               </tbody>
+                                           </table> -->
+
+                                       </div><!-- end table -->
+                                   </div>
+
+                               </div><!-- end gallery details -->
+                           </div>
+
+                        </div><!-- end stats container -->
+
+                    </div> <!-- end container -->
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end section -->
+
+    <!-- Gallery Products -->
+<div class="section container sv__container--md inner-content-module">
+
+    <div class="products">
+
+        <div class="single-headline">
+            <h2>Product used for this style</h2>
+        </div>
+
+        <div class="section__wrapper">
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-3 products__wrapper">
+
+                <div class="card__slider card-shadow-md">
+
+					<!-- product content -->
+					<div class="content__wrapper">
+
+						<div class="image">
+							<img class="img-responsive" src="assets/images/services/products/product-bottle.jpg" alt="The Shave products">
+						</div>
+
+						<div class="title__wrapper">
+
+							<div class="title">
+
+								<a class="open" href="">
+									<h5>Sandal Wood</h5>
+									<h6>Aftershave</h6>
+									<div class="product__bg--1" style="background-image: url('http://shawnbooth18.com/wp-content/uploads/2015/09/herschel-cover.jpg')">
+
+									</div>
+								</a>
+
+								<div class="bio">
+									<h6>Forrest Scent</h6>
+									<p>What's up. My name is joe and I've been a family member of the shave for the last 8 years.</p>
+								</div>
+
+							</div><!-- end title -->
+
+						</div><!-- end title wrapper -->
+
+					</div><!-- product content -->
+
+                </div><!-- end product card -->
+
+            </div><!-- end product -->
+
+            <div class="col-xs-12 col-sm-6 col-md-3 products__wrapper">
+
+                <div class="card__slider card-shadow-md">
+
+					<!-- product content -->
+					<div class="content__wrapper">
+
+						<div class="image">
+							<img class="img-responsive" src="assets/images/services/products/product-bottle-2.jpg" alt="The Shave products">
+						</div>
+
+						<div class="title__wrapper">
+
+							<div class="title">
+
+								<a class="open" href="">
+									<h5>Super Fresh</h5>
+									<h6>Aftershave</h6>
+									<div class="product__bg--2" style="background-image: url('assets/images/services/products/ocean-fresh.jpg')">
+
+									</div>
+								</a>
+
+								<div class="bio">
+									<h6>Fresh Scent</h6>
+									<p>What's up. My name is joe and I've been a family member of the shave for the last 8 years.</p>
+								</div>
+
+							</div><!-- end title -->
+
+						</div><!-- end title wrapper -->
+
+					</div><!-- product content -->
+
+                </div><!-- end product card -->
+
+            </div><!-- end product -->
+
+        </div><!-- end section wrapper -->
+
+    </div><!-- end products -->
+
+</div><!-- end products section -->
+
+    <!-- gallery social block -->
+<div class="section">
+    <div class="social-container">
+        <a href="#">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-pinterest"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-youtube"></i>
+        </a>
+    </div><!-- end container -->
+</div><!-- end social block -->
+
+    <!-- barber section -->
+<div id="sec2" class="section container__white">
+
+	<div class="container sv__container--md inner-content-module">
+
+		<div class="barbers">
+
+			<div class="single-headline">
+				<h2>Featured BARBERS</h2>
 			</div>
 
-			<div class="col-xs-12 col-sm-4 col-md-4">
-				<h3>Make an appointment.</h3>
-				<a href="tel:333-333-3333">333-333-3333</a>
-			</div>
+			<div class="section__wrapper">
 
-			<div class="col-xs-12 col-sm-4 col-md-4 meta-share">
-				<h3>Get Connected.</h3>
-				<a href=""><i class="fa fa-facebook"></i></a>
-				<a href=""><i class="fa fa-twitter"></i></a>
-				<a href=""><i class="fa fa-pinterest"></i></a>
-				<a href=""><i class="fa fa-google-plus"></i></a>
-			</div>
+				<!-- barber card -->
+				<div class="col-xs-12 col-sm-6 col-md-4 barber__wrapper">
+					<div class="barber__box card-shadow-md">
 
-		</div><!-- end header -->
+						<div class="barber__image" style="background-image: url(/assets/images/team/barber-cover-4.jpg);">
+							<div class="overlay text-center">
+								<h3 class="white">The mountains is where you'll find me on the weekends.</h3>
+							</div>
+							<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
+						</div>
+						<img class="avatar" src="assets/images/team/avatar-4.jpg" alt="The Shave Barbershop HTML Theme"/>
+						<div class="title">
+							<h4>Adam Hinly</h4>
+							<h5>Owner & Master Barber</h5>
+						</div>
+						<a class="btn book-now-btn" href="" data-toggle="modal" data-target="#bookNowModal">Book now</a>
 
-	</div><!-- end container -->
+					</div><!-- end box -->
+				</div><!-- end barber card -->
 
-</div><!-- end header section -->
+				<!-- barber card -->
+				<div class="col-xs-12 col-sm-6 col-md-4 barber__wrapper">
+					<div class="barber__box card-shadow-md">
 
-<!-- Google Map -->
-<div class="section google-container">
-	<div id="sv-google-map">
-		<div id="google__container"></div>
-	</div>
-	<div class="directions text-center">
-		<a class="btn book-now-btn" href="">Get Directions</a>
-	</div>
-</div><!-- end google map -->
+						<div class="barber__image" style="background-image: url(/assets/images/team/barber-cover-6.jpg);">
+							<div class="overlay text-center">
+								<h3 class="white">When I have time, I love to travel.</h3>
+							</div>
+							<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
+						</div>
+						<img class="avatar" src="assets/images/team/avatar-6.jpg" alt="The Shave Barbershop HTML Theme"/>
+						<div class="title">
+							<h4>Lauren Beth</h4>
+							<h5>Stylist & Fashonista</h5>
+						</div>
+						<a class="btn book-now-btn" href="" data-toggle="modal" data-target="#bookNowModal">Book now</a>
 
-<!-- Gold bar -->
+					</div><!-- end box -->
+				</div><!-- end barber card -->
+
+				<!-- barber card -->
+				<div class="col-xs-12 col-sm-6 col-md-4 barber__wrapper">
+					<div class="barber__box card-shadow-md">
+
+						<div class="barber__image" style="background-image: url(/assets/images/team/barber-cover-3.jpg);">
+							<div class="overlay text-center">
+								<h3 class="white">I love the true craftsmenship of the retro barber and want to bring that experience to a new generation.</h3>
+							</div>
+							<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
+						</div>
+						<img class="avatar" src="assets/images/team/avatar-3.jpg" alt="The Shave Barbershop HTML Theme"/>
+						<div class="title">
+							<h4>Mike Stewart</h4>
+							<h5>Master Barber</h5>
+						</div>
+						<a class="btn book-now-btn" href="" data-toggle="modal" data-target="#bookNowModal">Book now</a>
+
+					</div><!-- end box -->
+
+				</div><!-- end barber card -->
+
+			</div><!-- end section wrapper -->
+
+		</div><!-- end barber wrapper -->
+
+	</div><!-- end content wrapper -->
+
+</div><!-- end barber section -->
+
+
+    <!-- Gold bar -->
 <div class="section container-fluid no-padding gold-bg">
-	<div class="inner-sm">
-		<div class="row no-margin">
-			<div class="col-xs-12">
-				<h4 class="text-center white">1150E Hammond Drive, Atlanta, GA 30328, Suites 400, 600 & 650</h4>
-			</div>
-		</div>
-	</div>
+    <div class="inner-sm sv__container--md">
+        <div class="row no-margin">
+            <div class="col-xs-12">
+                <h4 class="text-center white">Clean Design and Powerful Features makes The Shave a superstar</h4>
+            </div>
+        </div>
+    </div>
 </div><!-- end gold bar -->
-
-<!-- contact form -->
-<div class="section container-fluid white-bg contact__form">
-
-	<!-- contact form block -->
-	<div class="row sv__container--sm contact__form--wrapper ">
-		<div class="contact__form--title">
-			<h3>Get in touch.</h3>
-		</div>
-
-		<!-- contact form -->
-		<div class="row contact__form--container">
-			<form>
-				<div class="col-xs-12 col-md-6 form__left">
-					<div class="input__container">
-						<span class="icon"><i class="fa fa-user"></i></span>
-						<input type="text" class="user-name" id="contact-name" name="NAME" required placeholder="Name">
-					</div>
-
-					<div class="input__container">
-						<span class="icon"><i class="fa fa-envelope"></i></span>
-						<input type="email" class="user-email" id="contact-email" name="EMAIL" required placeholder="Email">
-					</div>
-
-					<div class="input__container">
-						<span class="icon"><i class="fa fa-phone"></i></span>
-						<input type="text" class="user-phone" id="contact-phone" name="PHONE" required placeholder="Phone">
-					</div>
-
-				</div>
-				<div class="col-xs-12 col-md-6 form__right pencil-contact">
-					<span class="icon"><i class="fa fa-pencil "></i></span>
-					<textarea id="contact-message" class="user-text" name="MESSAGE" required placeholder="Message"></textarea>
-				</div>
-				<div class="col-xs-12 no-padding">
-				<button type="submit" class="btn book-now-btn form-btn">Submit</button>
-				</div>
-			</form>
-		</div><!-- end form -->
-
-	</div><!-- end contact form block -->
-
-</div><!-- end contact section -->
 
 
 
@@ -774,8 +1015,9 @@
 
         <!-- Script block allowing child pages to inject their own scripts -->
         
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHjfEAx3kun_6_SvIHIdSl04ayMBuRRi0"></script>
-<script src="assets/scripts/map-settings.min.js"></script>
+    <script src="assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/scripts/flickity-settings.min.js"></script>
+    <script src="assets/scripts/gallery-details.min.js"></script>
 
 
     </body>

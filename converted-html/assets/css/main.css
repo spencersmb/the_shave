@@ -180,6 +180,10 @@ Tags:
 }
 
 /* '' */
+.icon-sv-razor {
+  font-size: 45px;
+}
+
 /***************************************************************************/
 /* Base Settings ****************************************************/
 /***************************************************************************/
@@ -220,7 +224,7 @@ h2 {
   font-weight: 700;
   margin: 0 0 15px 0;
   line-height: 1.3;
-  font-size: 1.5em;
+  font-size: 24px;
   letter-spacing: 5px;
 }
 
@@ -228,13 +232,13 @@ h3 {
   margin-top: 0;
   font-weight: 600;
   margin-bottom: 1.5em;
-  font-size: 1.375em;
+  font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
 h4 {
-  font-size: 1.125em;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -242,7 +246,7 @@ h4 {
 }
 
 h5 {
-  font-size: 0.875em;
+  font-size: 14px;
   font-weight: 300;
   line-height: 21px;
 }
@@ -460,17 +464,13 @@ blockquote.reverse {
   transition: all 0.4s ease-in-out;
 }
 
-.icon-sv-razor {
-  font-size: 45px;
-}
-
 @media only screen and (min-width: 768px) {
   h2 {
-    font-size: 2.125em;
+    font-size: 34px;
   }
 
   h5 {
-    font-size: 1em;
+    font-size: 16px;
     line-height: 24px;
   }
 
@@ -558,8 +558,8 @@ blockquote.reverse {
     width: 90%;
   }
   .card__feature .content {
-    margin: 13.125em 30%;
-    height: 19.6875em;
+    margin: 210px 30%;
+    height: 315px;
   }
 
   .card__offset {
@@ -702,46 +702,9 @@ blockquote.reverse {
   box-shadow: 0 5px 15px rgba(37, 37, 37, 0.5);
 }
 
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 0%;
-  }
-  50% {
-    height: 100%;
-  }
-  75% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
 @media only screen and (min-width: 768px) {
   .loading {
     background-color: #fff;
-  }
-  .loading .loader-wrapper {
-    position: fixed;
   }
 
   .parallax__background.image__content {
@@ -817,11 +780,11 @@ blockquote.reverse {
 .inner__header--sm {
   text-align: center;
   clear: both;
-  margin: 2.5em auto 12.5em;
+  margin: 40px auto 200px;
 }
 .inner__header h2,
 .inner__header--sm h2 {
-  font-size: 5.25em;
+  font-size: 84px;
   max-width: 900px;
   margin: 0 auto;
   text-transform: none;
@@ -829,7 +792,7 @@ blockquote.reverse {
 }
 .inner__header p,
 .inner__header--sm p {
-  font-size: 1.5em;
+  font-size: 24px;
 }
 .inner__header h3,
 .inner__header--sm h3 {
@@ -838,19 +801,19 @@ blockquote.reverse {
   margin-left: auto;
   margin-right: auto;
   font-weight: 300;
-  line-height: 1.3125em;
-  font-family: courier;
+  line-height: 21px;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   letter-spacing: 1px;
-  font-size: 1.5em;
+  font-size: 24px;
   text-transform: none;
 }
 .inner__header h4,
 .inner__header--sm h4 {
   text-transform: none;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 16px;
   color: #666666;
-  line-height: 1.75em;
+  line-height: 28px;
   max-width: 900px;
   text-align: center;
   margin: 0 auto;
@@ -880,12 +843,12 @@ blockquote.reverse {
 }
 .intro h2 {
   margin: 15px 0 32px 0;
-  font-size: 1.625em;
+  font-size: 26px;
   line-height: 32px;
   margin-bottom: 16px;
 }
 .intro h5 {
-  font-size: 1.125em;
+  font-size: 18px;
   color: #959595;
   font-weight: 500;
   text-transform: uppercase;
@@ -895,7 +858,7 @@ blockquote.reverse {
   max-width: 900px;
 }
 .intro h6 {
-  font-size: 1.125em;
+  font-size: 18px;
   color: #af8c45;
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-weight: 700;
@@ -907,7 +870,7 @@ blockquote.reverse {
   font-weight: 300;
   text-transform: uppercase;
   color: #d0d0d0;
-  font-size: 1.125em;
+  font-size: 18px;
 }
 .intro .small-headline {
   line-height: 24px;
@@ -922,7 +885,7 @@ blockquote.reverse {
 .intro .sub-copy {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-transform: initial;
-  font-size: 1em;
+  font-size: 16px;
   color: #333333;
   text-align: center;
   max-width: 900px;
@@ -930,7 +893,7 @@ blockquote.reverse {
 }
 
 .subhead {
-  font-size: 1.125em;
+  font-size: 18px;
   color: #252525;
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
@@ -1325,7 +1288,7 @@ blockquote.reverse {
     padding: 0 10%;
   }
   .intro h2 {
-    font-size: 3em;
+    font-size: 48px;
     line-height: 52px;
   }
   .intro .small-headline {
@@ -1333,7 +1296,7 @@ blockquote.reverse {
     font-size: 18px;
   }
   .intro .sub-copy {
-    font-size: 1.125em;
+    font-size: 18px;
   }
 
   .headline-sm {
@@ -1473,7 +1436,7 @@ blockquote.reverse {
     padding: 0;
   }
   .intro h2 {
-    font-size: 4.1875em;
+    font-size: 67px;
     line-height: 72px;
   }
 
@@ -1596,19 +1559,12 @@ blockquote.reverse {
   position: relative;
 }
 
-.heading-divider::before {
-  position: absolute;
-  top: -25px;
-  left: 15px;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: left;
-  width: 100%;
-  content: "::::::::::";
-}
-
 .sv-wrapper {
   padding: 0 30px;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .divider__plus {
@@ -1622,7 +1578,7 @@ blockquote.reverse {
 .divider__plus p {
   display: block;
   border-bottom: 1px solid #d0d0d0;
-  line-height: 0em;
+  line-height: 0;
   font-weight: bold;
   margin: 0 0 25px 0;
 }
@@ -1639,29 +1595,6 @@ blockquote.reverse {
 
 .italic {
   font-style: italic;
-}
-
-.spacer::after {
-  position: absolute;
-  top: 47px;
-  left: 0;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #af8c45;
-  width: 100%;
-  content: ":::";
-}
-
-.spacer-left::before {
-  position: relative;
-  margin-right: 15px;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #af8c45;
-  content: ":::";
 }
 
 .tier2 {
@@ -1716,10 +1649,6 @@ blockquote.reverse {
 
 .black-bg {
   background: #252525;
-}
-
-.sv-blue-bg {
-  background: #3F4350;
 }
 
 .light-grey-bg {
@@ -1859,10 +1788,6 @@ blockquote.reverse {
   position: relative;
 }
 
-.icon-gold {
-  color: #af8c45;
-}
-
 .circle-boarder {
   border: 3px solid #fff;
   border-radius: 50%;
@@ -1878,11 +1803,17 @@ blockquote.reverse {
 }
 
 .space-sm {
+  display: table;
+  width: 100%;
   padding-top: 25px;
 }
 
 .space-lg {
   padding-top: 100px;
+}
+
+.space-desktop-lg {
+  padding-top: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1918,6 +1849,10 @@ blockquote.reverse {
 @media only screen and (min-width: 992px) {
   .space-sm {
     padding-top: 40px;
+  }
+
+  .space-desktop-lg {
+    padding-top: 100px;
   }
 
   .mobile-space-sm {
@@ -2032,16 +1967,6 @@ blockquote.reverse {
 }
 .book__nav:hover {
   border-bottom: 2px solid #af8c45;
-}
-
-.reply-btn {
-  font-weight: bold;
-  text-align: right;
-  float: right;
-}
-
-.center-btn {
-  margin-top: 40px;
 }
 
 .book-now-btn {
@@ -2381,6 +2306,7 @@ blockquote.reverse {
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   transition: color 0.3s;
+  font-size: 21px;
 }
 @media only screen and (min-width: 768px) {
   #header {
@@ -2552,7 +2478,7 @@ blockquote.reverse {
   position: absolute;
   top: 50%;
   margin-top: -1px;
-  height: 2px;
+  height: 3px;
   width: 0;
   background: transparent;
   -webkit-backface-visibility: hidden;
@@ -2562,7 +2488,7 @@ blockquote.reverse {
   transition: width 0.3s, transform 0.3s, background-color 0.2s;
 }
 .cd-dropdown-trigger::before {
-  right: 22px;
+  right: 19px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -2570,7 +2496,7 @@ blockquote.reverse {
   transform: rotate(45deg);
 }
 .cd-dropdown-trigger::after {
-  right: 17px;
+  right: 14px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -3483,7 +3409,7 @@ blockquote.reverse {
     color: #af8c45;
     font-size: 16px;
     text-transform: none;
-    font-family: courier;
+    font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-weight: bold;
     letter-spacing: 0;
     margin-bottom: 2px;
@@ -3928,7 +3854,7 @@ blockquote.reverse {
   display: block;
   width: 100%;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 16px;
   padding: 23px 20px 6px;
   color: #252525;
   letter-spacing: 3px;
@@ -4005,7 +3931,7 @@ blockquote.reverse {
 .svfm1__card--effect p {
   padding: 10px 30px 20px;
   text-transform: none;
-  font-size: 1em;
+  font-size: 16px;
   opacity: 1;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   -moz-transition: opacity 0.35s, -moz-transform 0.35s;
@@ -4069,7 +3995,7 @@ blockquote.reverse {
     position: absolute;
     padding: 29px 20px;
     bottom: 0;
-    font-size: 1.125em;
+    font-size: 18px;
   }
   .svfm1__card figure p {
     padding: 10px 30px 20px;
@@ -4253,6 +4179,7 @@ blockquote.reverse {
 .svfm2__wrapper .tab__panel .item {
   margin: 0;
   padding-bottom: 5px;
+  border-bottom: 1px solid #959595;
 }
 .svfm2__wrapper .tab__panel .title {
   margin: 0 auto;
@@ -4280,7 +4207,7 @@ blockquote.reverse {
   font-size: 14px;
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
-  border-bottom: 1px solid #CACACA;
+  border-bottom: 1px solid #959595;
 }
 .svfm2__wrapper .tab__panel .item__link i {
   float: right;
@@ -4432,13 +4359,13 @@ blockquote.reverse {
   text-align: center;
 }
 .staggered__container h2 {
-  font-size: 3.0625em;
+  font-size: 49px;
   line-height: 55px;
   margin-bottom: 16px;
   margin-top: 15px;
 }
 .staggered__container h6 {
-  font-size: 1.125em;
+  font-size: 18px;
   color: #af8c45;
   font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-weight: 700;
@@ -4580,7 +4507,7 @@ blockquote.reverse {
 .box-lg .content h3 {
   margin: 0 auto;
   max-width: 75%;
-  margin-bottom: 1.25em;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
 }
@@ -4614,7 +4541,7 @@ blockquote.reverse {
 .box-sm-hours .content {
   position: relative;
   padding: 20px 8% 38px;
-  font-size: 1em;
+  font-size: 16px;
 }
 .box-sm-hours img {
   display: block;
@@ -4627,7 +4554,7 @@ blockquote.reverse {
 .box-sm-hours p {
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
-  font-size: 1.375em;
+  font-size: 22px;
   font-weight: 500;
   line-height: 24px;
   padding-top: 10px;
@@ -4652,7 +4579,7 @@ blockquote.reverse {
 .box-last .content h3 {
   margin: 0 auto;
   max-width: 75%;
-  margin-bottom: 1.25em;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
 }
@@ -4669,7 +4596,7 @@ blockquote.reverse {
     padding: 0 15px;
   }
   .staggered__container h2 {
-    font-size: 4.5em;
+    font-size: 72px;
     line-height: 80px;
   }
 
@@ -4691,7 +4618,7 @@ blockquote.reverse {
   .box-lg .content h3 {
     margin: 0 auto;
     max-width: 75%;
-    margin-bottom: 1.25em;
+    margin-bottom: 20px;
     font-size: 22px;
     line-height: 28px;
   }
@@ -4706,7 +4633,7 @@ blockquote.reverse {
     margin: 0;
   }
   .box-sm .content p {
-    font-size: 1.375em;
+    font-size: 22px;
     line-height: 28px;
     font-weight: 500;
   }
@@ -4728,7 +4655,7 @@ blockquote.reverse {
     padding: 20px 8% 45px;
   }
   .box-sm-hours .content p {
-    font-size: 1.125em;
+    font-size: 18px;
   }
 
   .box-sm-tall {
@@ -4752,7 +4679,7 @@ blockquote.reverse {
     padding: 0;
   }
   .staggered__container h2 {
-    font-size: 6.0625em;
+    font-size: 97px;
     line-height: 105px;
   }
 }
@@ -4770,7 +4697,7 @@ blockquote.reverse {
 
 .contact__card {
   float: left;
-  height: 27.5em;
+  height: 440px;
   width: 100%;
   text-align: center;
 }
@@ -4782,7 +4709,7 @@ blockquote.reverse {
   padding: 0;
   background: #af8c45;
   float: left;
-  width: 0%;
+  width: 0;
   height: 100%;
   z-index: 100;
   overflow: hidden;
@@ -4815,13 +4742,15 @@ blockquote.reverse {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
-  font-size: 1.125em;
+  font-size: 18px;
   line-height: 24px;
 }
 .contact__card--content p {
   margin: 0;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 .contact__card--content a {
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   color: #fff;
 }
 .contact__card--content a:hover {
@@ -4831,7 +4760,7 @@ blockquote.reverse {
 .contact__shop {
   color: #fff;
   height: 50%;
-  padding: 1em;
+  padding: 16px;
   background: #af8c45;
   position: relative;
 }
@@ -4867,23 +4796,31 @@ blockquote.reverse {
   width: 65%;
   height: 60px;
   margin: 0 auto;
-  top: 0px;
+  top: 0;
   overflow: hidden;
   display: block;
 }
 .contact__us .inner__content {
   text-align: center;
-  top: 38%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
   position: relative;
   width: 174px;
   margin: 0 auto;
 }
 .contact__us h4 {
-  padding-left: 0;
   margin-top: 0;
-  font-size: 0.9375em;
+  font-size: 15px;
   font-weight: 500;
   text-align: left;
+  padding-left: 11px;
+}
+.contact__us h4 .bottom-i, .contact__us h4 .top-i {
+  top: 4px;
 }
 .contact__us i {
   padding-left: 20px;
@@ -4895,10 +4832,10 @@ blockquote.reverse {
   }
 
   .contact__card {
-    height: 29.375em;
+    height: 470px;
   }
   .contact__card--content h3 {
-    font-size: 1.5em;
+    font-size: 24px;
     margin-bottom: 10px;
   }
   .contact__card .contact__hours {
@@ -4927,8 +4864,8 @@ blockquote.reverse {
   }
   .contact__us h4 {
     text-align: left;
-    font-size: 1em;
-    padding-left: 24px;
+    font-size: 16px;
+    padding-left: 15%;
   }
   .contact__us i {
     padding-left: 20px;
@@ -4945,7 +4882,7 @@ blockquote.reverse {
   }
 
   .contact__card {
-    height: 30.625em;
+    height: 490px;
   }
   .contact__card--left {
     width: 50%;
@@ -4958,12 +4895,18 @@ blockquote.reverse {
     width: 50%;
   }
   .contact__card .contact__us h4 {
-    font-size: 1.125em;
+    font-size: 18px;
+  }
+  .contact__card .contact__us h4 .bottom-i, .contact__card .contact__us h4 .top-i {
+    top: 2px;
+  }
+  .contact__card .contact__us h4 .top-i {
+    top: 5px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .contact__card {
-    height: 36em;
+    height: 575px;
   }
   .contact__card--left {
     width: 60%;
@@ -4977,6 +4920,12 @@ blockquote.reverse {
   }
   .contact__card .contact__us h4 {
     padding-left: 47px;
+  }
+  .contact__card .contact__us h4 .bottom-i, .contact__card .contact__us h4 .top-i {
+    top: 3px;
+  }
+  .contact__card .contact__us h4 .top-i {
+    top: 5px;
   }
 }
 /***************************************************************************/
@@ -5114,7 +5063,7 @@ blockquote.reverse {
 .buy__container {
   display: table;
   text-align: center;
-  padding: 0 30px;
+  padding: 0;
   margin: 0 auto;
   color: #fff;
 }
@@ -5149,6 +5098,7 @@ blockquote.reverse {
 
 @media only screen and (min-width: 768px) {
   .buy__container {
+    padding: 0 30px;
     max-width: 1160px;
   }
   .buy__container h2 {
@@ -5178,7 +5128,7 @@ blockquote.reverse {
     padding: 0;
   }
   .buy__container .buy-theme-sm h4 {
-    display: inline;
+    display: block;
     margin-right: 40px;
     top: 2px;
   }
@@ -5190,6 +5140,9 @@ blockquote.reverse {
   .buy__container p {
     font-size: 24px;
     line-height: 32px;
+  }
+  .buy__container .buy-theme-sm h4 {
+    display: inline;
   }
 }
 /***************************************************************************/
@@ -5246,13 +5199,13 @@ footer.loaded {
   font-weight: 500;
 }
 .footer__logo .logo__container h3 {
-  font-size: 3em;
+  font-size: 48px;
   margin: 0;
   letter-spacing: 7px;
 }
 .footer__logo .logo__container h4 {
   color: #af8c45;
-  font-size: 1.125em;
+  font-size: 18px;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-transform: none;
   font-weight: 400;
@@ -5277,19 +5230,19 @@ footer.loaded {
 .email__form input {
   background: transparent;
   float: left;
-  font-size: 1.125em;
+  font-size: 18px;
   padding: 0;
   border-radius: 0;
   height: 50px;
   border: 0;
   box-shadow: none;
   color: #af8c45;
-  border-bottom: 1px solid #bcbcbc;
+  border-bottom: 1px solid #fff;
   text-align: center;
 }
 .email__form input:focus {
   box-shadow: none;
-  border-color: #bcbcbc;
+  border-color: #fff;
 }
 .email__form input::-webkit-input-placeholder {
   color: #af8c45;
@@ -5315,7 +5268,7 @@ footer.loaded {
 
 .email__offers {
   margin-top: 5px;
-  font-size: 0.875em;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -5332,7 +5285,7 @@ footer.loaded {
 }
 
 .copyright {
-  font-size: 0.875em;
+  font-size: 14px;
   margin-top: 15px;
   text-align: center;
 }
@@ -5366,7 +5319,7 @@ footer.loaded {
   }
 
   .email__form input {
-    font-size: 2em;
+    font-size: 32px;
   }
 
   .email__wrapper {
@@ -5417,11 +5370,11 @@ footer.loaded {
     position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
-    z-index: -1;
+    z-index: 1;
   }
 
   .footer__wrapper {
-    padding: 2.5em 0 0;
+    padding: 40px 0 0;
   }
 
   .footer__logo {
@@ -5547,8 +5500,8 @@ footer.loaded {
   text-align: left;
 }
 .shave__faq--content p {
-  font-size: 0.9375em;
-  line-height: 1.5em;
+  font-size: 15px;
+  line-height: 24px;
   color: #252525;
 }
 .shave__faq--content.active {
@@ -5638,8 +5591,8 @@ footer.loaded {
     border: 1px solid transparent;
   }
   .shave__faq--content p {
-    font-size: 0.9375em;
-    line-height: 1.5em;
+    font-size: 15px;
+    line-height: 24px;
     color: #252525;
   }
   .shave__faq--content .faq--wrapper {
@@ -5755,16 +5708,26 @@ footer.loaded {
     text-align: left;
   }
   .col3__module .intro h2 {
+    font-size: 67px;
+    line-height: 72px;
+  }
+  .col3__module .intro h5 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .col3__container h5 {
+    font-size: 1.125em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col3__module .intro h2 {
     font-size: 97px;
     line-height: 100px;
   }
   .col3__module .intro h5 {
     font-size: 34px;
     line-height: 44px;
-  }
-
-  .col3__container h5 {
-    font-size: 1.125em;
   }
 }
 /***************************************************************************/
@@ -6095,7 +6058,7 @@ footer.loaded {
   margin: 0 0 25px;
   font-size: 16px;
   font-weight: 600;
-  font-family: courier;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 .price__table .price__header .price {
   font-size: 3.5em;
@@ -6207,7 +6170,7 @@ footer.loaded {
   padding: 0 15px;
 }
 .social-container i {
-  font-size: 1.5em;
+  font-size: 24px;
   display: block;
 }
 
@@ -6309,7 +6272,6 @@ footer.loaded {
 
 .modal-bookNow {
   position: relative;
-  background-color: #d7d7d7;
   padding: 20px;
   text-align: left;
   background-position: center center;
@@ -6317,7 +6279,7 @@ footer.loaded {
   color: #fff;
 }
 .modal-bookNow h3 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 2px;
@@ -6335,13 +6297,13 @@ footer.loaded {
 }
 .book-list li {
   padding: 20px 0 20px;
-  background-color: #DCDCDC;
+  background-color: #e8e8e8;
   display: block;
-  border-bottom: 1px solid #cbcbcb;
+  border-bottom: 1px solid #d0d0d0;
 }
 .book-list li:hover {
   cursor: pointer;
-  background-color: #E8E8E8;
+  background-color: #fff;
 }
 .book-list li:hover a {
   color: #252525;
@@ -6361,10 +6323,10 @@ footer.loaded {
 }
 .book-list i {
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: inline-block;
   float: left;
-  font-size: 1.5em;
+  font-size: 21px;
   margin-right: 20px;
   width: 32px;
 }
@@ -6405,7 +6367,7 @@ footer.loaded {
     margin-bottom: 10px;
   }
   .modal-bookNow h5 {
-    font-size: 1em;
+    font-size: 16px;
     margin-bottom: 118px;
     width: 100%;
     margin-top: 10px;
@@ -6683,95 +6645,13 @@ footer.loaded {
   }
 }
 /***************************************************************************/
-/* Revolution Slider Customizations ****************************************/
+/* Rev Plugin CSS ****************************************************/
 /***************************************************************************/
-.tp-caption.shave_title {
-  font-size: 5.625em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
-  letter-spacing: 4px;
-  font-weight: 700;
-}
-.tp-caption.shave_title.lg {
-  font-size: 6.25em;
-}
-.tp-caption.shave_title.md {
-  font-size: 3.4375em;
-}
-.tp-caption.shave_title.sm {
-  font-size: 2.5em;
-}
-
-.tp-caption.black {
-  color: #252525;
-}
-
-.tp-caption.gold {
-  color: #af8c45;
-}
-
-.tp-caption.shave_title_cursive {
-  font-size: 5.625em;
-  color: white;
-  min-width: 145px;
-}
-.tp-caption.shave_title_cursive.and {
-  text-align: center;
-  font-size: 7.5em;
-}
-.tp-caption.shave_title_cursive.sm {
-  min-width: 200px;
-  font-size: 3.75em;
-}
-.tp-caption.shave_title_cursive.lg {
-  font-size: 10em;
-  min-width: 490px;
-}
-.tp-caption.shave_title_cursive.lg.gold {
-  color: #af8c45;
-}
-
-.tp-caption.shave_title_small {
-  font-size: 1em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-}
-
-.tp-caption.shave_title_desc {
-  font-size: 1.3125em;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
-}
-.tp-caption.shave_title_desc.lg {
-  font-size: 1.75em;
-}
-
-.tp-caption.shave_frame img {
-  width: 80%;
-}
-
-.shave_title_btn a {
-  display: table;
-  color: #fff;
-}
-
-.tp-caption a:hover {
-  color: #fff;
-}
-
 .erinyen.tp-title-wrap {
   min-height: 0;
   line-height: 0;
 }
 
-/***************************************************************************/
-/* Rev Plugin CSS ****************************************************/
-/***************************************************************************/
 .tp-banner-container {
   background-color: #fff;
   width: 100%;
@@ -7711,9 +7591,8 @@ footer.loaded {
 /* Gallery Details ****************************************************/
 /***************************************************************************/
 .gallery {
-  max-width: 1360px;
+  max-width: 760px;
   margin: 0 auto;
-  padding-bottom: 49%;
 }
 .gallery .flickity-prev-next-button {
   display: none;
@@ -7721,12 +7600,12 @@ footer.loaded {
 
 /* inherit size from gallery */
 .gallery .flickity-viewport {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
 .gallery-cell {
-  width: 75%;
+  width: 100%;
   height: 100%;
   background: transparent;
   counter-increment: gallery-cell;
@@ -7786,7 +7665,10 @@ footer.loaded {
 }
 
 .stats__container {
-  margin: 0 auto 35px;
+  display: table;
+  height: 100%;
+  margin: 0 auto 0;
+  padding: 0 30px;
 }
 .stats__container a {
   display: table;
@@ -7802,16 +7684,16 @@ footer.loaded {
 }
 .stats__details h3 {
   max-width: 450px;
-  margin: 35px auto 10px;
+  margin: 35px auto 20px;
   font-size: 24px;
   text-transform: none;
 }
 .stats__details h4 {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: none;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   color: #af8c45;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
@@ -7838,8 +7720,8 @@ footer.loaded {
 .stat h5 {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.0625em;
-  margin: none;
+  font-size: 17px;
+  margin: 0;
 }
 .stat p {
   margin-top: 5px;
@@ -7855,7 +7737,7 @@ footer.loaded {
 }
 
 .gallery__controls {
-  max-width: 1360px;
+  max-width: 760px;
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -7925,23 +7807,39 @@ footer.loaded {
 }
 
 .gallery-details {
-  max-width: 700px;
+  max-width: 770px;
   width: 100%;
   margin: 0 auto;
   text-align: left;
 }
 .gallery-details h4 {
   text-align: center;
-  font-size: 1.125em;
-  margin: 50px auto 30px;
+  font-size: 18px;
+  margin: 0 auto 30px;
   letter-spacing: 2px;
   font-weight: 500;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+.gallery-details a {
+  margin: 0;
+  display: block;
+}
+.gallery-details i {
+  font-size: 16px;
+}
+.gallery-details li {
+  padding-bottom: 10px;
+  list-style: initial;
+}
+.gallery-details ul {
+  padding-left: 15px;
 }
 .gallery-details .table-responsive {
   border: none;
 }
 .gallery-details .table {
-  font-size: 1.125em;
+  font-size: 18px;
 }
 .gallery-details .table > tbody {
   padding: 0 30px;
@@ -7969,7 +7867,10 @@ footer.loaded {
 @media only screen and (min-width: 768px) {
   .gallery-details h4 {
     font-size: 20px;
-    margin: 45px auto 30px;
+    margin: 20px auto 30px;
+  }
+  .gallery-details .table > tbody {
+    padding: 0;
   }
   .gallery-details .table > tbody > tr > th {
     font-size: 18px;
@@ -7980,14 +7881,15 @@ footer.loaded {
   }
 
   .stats__container {
-    margin: 0 auto 55px;
+    margin: 0 auto;
   }
 
   .stats__details h3 {
     font-size: 32px;
+    margin: 70px auto 30px;
   }
   .stats__details h4 {
-    font-size: 36px;
+    font-size: 21px;
     margin-bottom: 25px;
   }
 
@@ -8007,35 +7909,53 @@ footer.loaded {
   .gallery__controls .right a {
     display: block;
   }
-
-  .stats__details h3 {
-    margin: 70px auto 10px;
-  }
 }
 @media only screen and (min-width: 992px) {
   .gallery .flickity-prev-next-button {
     display: block;
   }
 
+  .gallery__inner--feature {
+    max-width: 960px;
+    margin: 0 0 0 auto;
+    padding: 0 30px;
+  }
+
+  .gallery-details h4 {
+    margin-top: 0;
+    text-align: left;
+  }
   .gallery-details .table-responsive {
+    margin-bottom: 0;
+  }
+  .gallery-details .table {
     margin-bottom: 0;
   }
 
   .stats__container {
-    margin: 0 auto 70px;
+    margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
+  .stats__details {
+    margin: 0 0 40px;
+  }
   .stats__details h3 {
-    margin: 70px auto 10px;
+    text-align: left;
+    margin: 0 0 30px;
+  }
+  .stats__details h4 {
+    margin: 0 0 25px;
+    text-align: left;
+  }
+
+  .style__btn .btn-group {
+    display: inline-block;
+    float: left;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .gallery__inner--feature {
-    position: absolute;
-    top: -130px;
-    width: 100%;
-    margin: 0 auto;
-  }
   .gallery__inner--content {
     margin: 0 auto;
   }
@@ -8459,7 +8379,7 @@ footer.loaded {
   border-radius: 0;
   border-bottom: 0;
   font-family: "Ubuntu", sans-serif;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 300;
   padding: 23px 0 25px;
   margin-bottom: 0;
@@ -8532,13 +8452,16 @@ footer.loaded {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  width: auto;
+  width: 100%;
+  height: 100%;
   border: 3px solid;
   background-color: rgba(0, 0, 0, 0.45);
   padding: 15px;
 }
 .tab-header h3 {
+  margin-top: 35px;
   margin-bottom: 0;
+  font-size: 18px;
 }
 .tab-header h4 {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -8564,7 +8487,7 @@ footer.loaded {
   text-align: center;
 }
 .tab__panel h2 {
-  font-size: 1.5em;
+  font-size: 24px;
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -8623,8 +8546,11 @@ footer.loaded {
   }
   .tab-header .headline-container {
     padding: 25px;
+    width: auto;
+    border: 3px solid;
   }
   .tab-header h3 {
+    margin-top: 0;
     font-size: 25px;
   }
 
@@ -8640,7 +8566,6 @@ footer.loaded {
   }
   .nav-tabs.nav-justified > li .tab-icon i {
     height: 35px;
-    position: relative;
     display: block;
     position: absolute;
     top: 12px;
@@ -8978,8 +8903,9 @@ footer.loaded {
   background: #252525;
   color: #fff;
 }
-.post-nav .next-post a,
-.post-nav .prev-post a {
+.post-nav .next-post a, .post-nav .next-post span,
+.post-nav .prev-post a,
+.post-nav .prev-post span {
   color: #fff;
   position: absolute;
   top: 0;
@@ -9016,7 +8942,7 @@ footer.loaded {
   text-transform: uppercase;
 }
 .post-nav-subtitle {
-  font-family: courier;
+  font-family: Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-weight: 700;
   display: block;
   position: relative;
@@ -9129,19 +9055,18 @@ footer.loaded {
 @media only screen and (min-width: 1200px) {
   .blog__content .pull-quote.right, .blog__content .pull-quote.left {
     width: 50%;
+    padding-left: 20px;
   }
   .blog__content .pull-quote.right {
     float: right;
     margin: 50px 0 50px 50px;
     margin-right: -22%;
     text-align: left;
-    padding-left: 20px;
   }
   .blog__content .pull-quote.left {
     float: left;
     margin: 50px 50px 50px 0;
     margin-left: -10%;
-    padding-left: 20px;
   }
 }
 /***************************************************************************/

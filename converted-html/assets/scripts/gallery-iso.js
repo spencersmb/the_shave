@@ -4,16 +4,16 @@
 $(window).load(function(){
 
   //Get grid to assign dynamically
-  var gridId = $('.inner-content-module').children('div').attr('id');
-  console.log(gridId);
+  var gridId = $('.inner-content-module').children('div').attr('id'),
+      reIso,
+      $fullGrid = $('#' + gridId),
 
-  var reIso;
-  var $fullGrid = $('#' + gridId);
-  var $grid = $fullGrid.isotope({
-    itemSelector: '.gallery-item',
-    isInitLayout: false,
-    masonry: { "columnWidth": ".grid-sizer" }
-  });
+      //init isotope
+      $grid = $fullGrid.isotope({
+        itemSelector: '.gallery-item',
+        isInitLayout: false,
+        masonry: { "columnWidth": ".grid-sizer" }
+      });
 
   function pxConvert(string){
     return parseInt(string.slice(0, -2));
@@ -25,11 +25,13 @@ $(window).load(function(){
     });
   }
 
+  //resize isotope and minHeight
   function reSized(){
     $fullGrid.isotope('layout');
     setMinHeight();
   }
 
+  //assign grid
   function galleryIsotopeWrapper () {
 
     if ( $(window).innerWidth() > 1600 ) {
@@ -65,6 +67,7 @@ $(window).load(function(){
     return $gallery_grid;
   } // end galleryIsotopeWrapper
 
+  //set gallery height depending on new content reloaded
   function setMinHeight(){
     var currentHeight = $('.gallery-item.width1').css('padding-bottom');
     currentHeight = pxConvert(currentHeight);
@@ -78,6 +81,7 @@ $(window).load(function(){
 
   }
 
+  //on page load
   galleryIsotopeWrapper();
   setTimeout(reSized, 500);
 

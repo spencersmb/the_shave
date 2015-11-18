@@ -2,21 +2,21 @@
 /* Gallery Details ****************************************************/
 /***************************************************************************/
 .gallery {
-    max-width: 1360px;
+    max-width: 650px;
     margin: 0 auto;
-    padding-bottom: 49%;
 
     .flickity-prev-next-button{
         display: none;
     }
 }
+
 /* inherit size from gallery */
 .gallery .flickity-viewport {
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 .gallery-cell {
-    width: 75%;
+    width: 100%;
     height: 100%;
     background: transparent;
     counter-increment: gallery-cell;
@@ -77,7 +77,10 @@
     }
 }
 .stats__container {
-    margin: 0 auto 35px;
+    display: table;
+    height: 100%;
+    margin: 0 auto 0;
+    padding:0 30px;
     a {
         display: table;
         margin: 0 auto;
@@ -91,16 +94,16 @@
     margin: 0 auto 30px;
     h3 {
         max-width: 450px;
-        margin: 35px auto 10px;
+        margin: 35px auto 20px;
         font-size: 24px;
         text-transform: none;
     }
     h4 {
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 600;
         text-transform: none;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 20px;
         color: $primary-color;
         font-family: $courier-new;
     }
@@ -141,7 +144,7 @@
     left: 0;
 }
 .gallery__controls {
-    max-width: 1360px;
+    max-width: 650px;
     margin: 0 auto;
     width: 100%;
     position: relative;
@@ -201,16 +204,35 @@
     }
 }
 .gallery-details {
-    max-width: 700px;
+    max-width: 770px;
     width: 100%;
     margin: 0 auto;
     text-align: left;
     h4 {
         text-align: center;
         font-size: 18px;
-        margin: 50px auto 30px;
+        margin: 0 auto 30px;
         letter-spacing: 2px;
         font-weight: 500;
+        border-bottom:1px solid;
+        padding-bottom: 5px;
+    }
+    a{
+        margin:0;
+        display:block;
+        &:focus{
+
+        }
+    }
+    i{
+        font-size: 16px;
+    }
+    li{
+        padding-bottom:10px;
+        list-style: initial;
+    }
+    ul{
+        padding-left:15px;
     }
     .table-responsive {
         border: none;
@@ -249,13 +271,19 @@
 
 // Displays greater than 768px
 @include breakpoint(tablet) {
+    .gallery{
+        .flickity-prev-next-button{
+            display: block;
+        }
+    }
     .gallery-details {
         h4 {
             font-size: 20px;
-            margin: 45px auto 30px;
+            margin: 20px auto 30px;
         }
         .table {
             & > tbody {
+                padding: 0;
                 & > tr > th {
                     font-size: 18px;
                     width: 160px;
@@ -267,14 +295,15 @@
         }
     }
     .stats__container {
-        margin: 0 auto 55px;
+        margin: 0 auto;
     }
     .stats__details {
         h3 {
             font-size: 32px;
+            margin: 70px auto 30px;
         }
         h4 {
-            font-size: 36px;
+            font-size: 21px;
             margin-bottom: 25px;
         }
     }
@@ -292,31 +321,55 @@
             }
         }
     }
-    .stats__details {
-        h3 {
-            margin: 70px auto 10px;
-        }
-    }
 }
 
 // Displays greater than 992px
 @include breakpoint(laptop) {
-    .gallery{
-        .flickity-prev-next-button{
-            display: block;
+    .gallery {
+        max-width: 760px;
+    }
+    .gallery__inner {
+        &--feature {
+            max-width: 960px;
+            margin: 0 0 0 auto;
+            padding:0 30px;
         }
     }
+    .gallery__controls {
+        max-width: 760px;
+    }
     .gallery-details {
+        h4{
+            margin-top:0;
+            text-align: left;
+        }
         .table-responsive {
             margin-bottom: 0;
         }
+        .table {
+            margin-bottom:0;
+        }
     }
     .stats__container {
-        margin: 0 auto 70px;
+        margin: 0 auto;
+        padding-right:30px;
+        padding-left:30px;
     }
     .stats__details {
+        margin: 0 0 40px;
         h3 {
-            margin: 70px auto 10px;
+            text-align: left;
+            margin: 0 0 30px;
+        }
+        h4{
+            margin:0 0 25px;
+            text-align: left;
+        }
+    }
+    .style__btn{
+        .btn-group{
+            display: inline-block;
+            float: left;
         }
     }
 }
@@ -325,10 +378,6 @@
 @include breakpoint(desktop) {
     .gallery__inner {
         &--feature {
-            position: absolute;
-            top: -130px;
-            width: 100%;
-            margin: 0 auto;
         }
         &--content {
             margin: 0 auto;

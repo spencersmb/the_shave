@@ -10,7 +10,6 @@ $(function() {
 		browserID = WhichBrowser(),
 		resizedWidth;
 	
-		//console.log(browserID);
 		// ==========================================================================
 		// Master Resize
 		// ==========================================================================
@@ -23,7 +22,7 @@ $(function() {
 		// Browser Check
 		// ==========================================================================
 
-		//add footer class no matter what browser
+		//add footer function
 		function addFooterPush(){
 			$('main').children('.section').last().addClass('footer-push');
 		}
@@ -62,14 +61,10 @@ $(function() {
 
 				}else{
 
-					//$('body, footer').addClass('safari').addClass('safari-modal');
-
 					$('section').last().removeClass('footer-push');
 
 					return "safari";
 				}
-
-
 			}
 
 			//Opera
@@ -79,7 +74,7 @@ $(function() {
 			}
 		}
 
-		//IE9 fixs
+		//IE9 changes
 		function browserJs( browserID ){
 
 			var cascadeFeature = $('#cascadeFeature');
@@ -152,7 +147,7 @@ $(function() {
 		}
 
 		// ==========================================================================
-		// Scroll Magic Cascading fade in
+		// Scroll Magic functions
 		// ==========================================================================
 		function ScrollCascade(windowWidthX, object){
 			
@@ -203,12 +198,11 @@ $(function() {
 		}
 
 		// ==========================================================================
-		// Skrollr checks + image preloader
+		// Skrollr parallax
 		// ==========================================================================
 		function skrollrCheck() {
 
 			//check if skrollr is enabled or not
-
 			var winWidth = window.innerWidth;
 
 			var winHeight = window.innerHeight;
@@ -234,10 +228,8 @@ $(function() {
 				}
 
 				if (winWidth > winHeight) {
-					// console.log('orientation is landscape');
 					skrollr.get().refresh();
 				} else if (winWidth < winHeight) {
-					// console.log('orientation is portrait');
 					skrollr.get().refresh();
 				}
 			} else if (winWidth < 992) {
@@ -250,8 +242,24 @@ $(function() {
 					//Find skrollr elements and adjust background sizing
 					findskrollr();
 				}
-
 			}
+		}
+
+		// ==========================================================================
+		// Pre loader and page init
+		// ==========================================================================
+
+		///main init for display
+		function initLayout(){
+
+			setTimeout(function() {
+				specialFooter();
+
+				// Fade in sections
+				myBody.removeClass('loading').addClass('loaded');
+				myFooter.removeClass('loading').addClass('loaded');
+
+			}, 200);
 		}
 
 		//preload background images
@@ -271,21 +279,7 @@ $(function() {
 			});
 		}
 
-		///main init for display
-		function initLayout(){
-
-			setTimeout(function() {
-				console.log('done loading images');
-				specialFooter();
-
-				// Fade in sections
-				myBody.removeClass('loading').addClass('loaded');
-				myFooter.removeClass('loading').addClass('loaded');
-
-
-			}, 200);
-		}
-
+		//primary preload
 		function shavePreloader(){
 			//onload check for loaded class
 			if (myBody.hasClass('loaded')) {
@@ -327,6 +321,7 @@ $(function() {
 			}
 		}
 
+		//check skrollr functions
 		function findskrollr() {
 			var main = $('main');
 			var sectionId;
@@ -351,7 +346,6 @@ $(function() {
 		// ==========================================================================
 		function specialFooter() {
 
-			//var width = $(window).width(),
 				var footerHeight,
 						body = $('body');
 
@@ -360,9 +354,7 @@ $(function() {
 
 			//Resize angle
 			setAngleWidth(windowSize);
-
 			if (windowSize + 15 >= desktop) {
-
 				skrollrCheck();
 				myFooter.width(windowSize);
 
@@ -375,31 +367,17 @@ $(function() {
 					$('.footer-push').css('margin-bottom', footerHeight);
 				}
 
+				galleryDetails();
+
 			} else if( windowSize - 15 <= desktop){
-				console.log('mobile footer');
 				skrollrCheck();
 				myFooter.width(windowSize);
-				//footerHeight = $('footer').height() + 'px';
 				$('.footer-push').css('margin-bottom', 0);
+
+				//collapse gallery details
+				galleryDetails();
 			}
 
-		}
-
-		function setModalHeight(object){
-
-			//set div heights the same for laptop/desktop
-			var row = object.find('.row');
-			var rowHeight = row.height();
-
-			row.children('modal-bookNow').height(rowHeight);
-		}
-
-		function resetModalHeight(object){
-
-			//set div heights the same for laptop/desktop
-			var row = object.find('.row');
-
-			row.children('modal-bookNow').css('height', "");
 		}
 
 		// ==========================================================================
@@ -470,7 +448,7 @@ $(function() {
 		}
 
 		// ==========================================================================
-		// Helper functions
+		// check width
 		// ==========================================================================
 		function checkWindowWidth() {
 
@@ -488,43 +466,32 @@ $(function() {
 			}
 		}
 
-		//function checkLaptopWidth() {
-    //
-		//	var windowSize = $(window).width();
-    //
-		//	$(window).on('resize', function() {
-		//		resizedWidth = $(window).width();
-		//		console.log(resizedWidth);
-		//	});
-    //
-		//	if (resizedWidth >= desktop || windowSize >= desktop) {
-		//		return true;
-		//	} else {
-		//		return false;
-		//	}
-		//}
+		// ==========================================================================
+		// Gallery Details Style Details elements
+		// ==========================================================================
+		function showGalleryDetails(){
+			$('#collapseExample').collapse('show');
+		}
+		function hideGalleryDetails(){
+			$('#collapseExample').collapse('hide');
+		}
 
-		///Encapselated States
+		function galleryDetails(){
+			var win = windowSize + 15;
+			if(win > 1200){
+				showGalleryDetails();
+			}else if(win < 1200 && win > 991){
+				hideGalleryDetails();
+			}else{
+				showGalleryDetails();
+			}
+		}
+
+
+		///Encapsulated States
 		(function() {
 
 			var header = $('#header');
-			// ==========================================================================
-			// Sub-menu item hover
-			// ==========================================================================
-			var serviceBg = $('.cd-service-bg');
-
-			serviceBg.mouseover( function(){
-				if(checkWindowWidth() === true){
-					$(this).children('img').last().css('opacity', 0);
-				}
-			});
-
-			serviceBg.mouseout( function(){
-				if(checkWindowWidth() === true){
-					$(this).children('img').last().css('opacity', 1);
-				}
-			});
-
 
 			// ==========================================================================
 			// Modal click functions
@@ -585,11 +552,9 @@ $(function() {
 		// Feature Module 2
 		// ==========================================================================
 		(function() {
-			//TODO: organize JS
-			var myTab = $('#svfm2Tab');
 
-			if(myTab){
-				var myTabNext = myTab.next(),
+			var myTab = $('#svfm2Tab'),
+					myTabNext = myTab.next(),
 					myTabContent = $('#myTabContent'),
 					svfm2Wrapper = $('.svfm2__wrapper'),
 					svfm2ImageContainer = $('.svfm2__wrapper--images'),
@@ -597,96 +562,85 @@ $(function() {
 					tabTitle = myTab.find('li.active').data('title'),
 					headline = svfm2Wrapper.find('.headline-container').children('h3');
 
-				svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).each(function(index){
-					if(index == 0){
+					//Change tab content
+					myTab.on('click', 'li', function(){
 
-					}else{
+						var tab = $(this);
 
-					}
-				});
+						//get panel ID that was clicked and remove the hash
+						var panelId = tab.find('a').attr('href').substr(1);
 
-				//Change tab content
-				myTab.on('click', 'li', function(){
+						//get the data-attrb for the current clicked tab
+						tabTitle = tab.data('title');
 
-					var tab = $(this);
+						myTabContent.children('div').each( function() {
 
-					//get panel ID that was clicked and remove the hash
-					var panelId = tab.find('a').attr('href').substr(1);
+							//first chck if the tab has active that was clicked
+							if(!$(this).hasClass('active')){
 
-					//get the data-attrb for the current clicked tab
-					tabTitle = tab.data('title');
+								$(this).removeClass('active').removeClass('in');
 
-					myTabContent.children('div').each( function() {
+								if(panelId === this.id){
 
-						//first chck if the tab has active that was clicked
-						if(!$(this).hasClass('active')){
+									var element = $(this),
+										  currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
 
-							$(this).removeClass('active').removeClass('in');
+									//get heigh of clicked content
+									var panelHeight = element.height(),
+										  imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
 
-							if(panelId === this.id){
+									//loop through the images and match the title to the tab title
+									for( var i=0; i < imageTitle.length; i++){
 
-								var element = $(this),
-									currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
+										if($(imageTitle[i]).data('title') === panelId){
 
-								//get heigh of clicked content
-								var panelHeight = element.height(),
-									imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
-
-								//loop through the images and match the title to the tab title
-								for( var i=0; i < imageTitle.length; i++){
-
-									if($(imageTitle[i]).data('title') === panelId){
-
-										$(imageTitle[i]).addClass('active');
+											$(imageTitle[i]).addClass('active');
+										}
 									}
-								}
 
-								//add hight to adj the for new content
-								if(windowSize <= 600){
-									//slide content out and then add the content back in
+									//add hight to adj the for new content
+									if(windowSize <= 600){
+										//slide content out and then add the content back in
+										setTimeout(function(){
+											myTabNext.height(panelHeight);
+										}, 400);
+
+									}
+
+									currentImage.removeClass('active');
+
+									//change title
+									headline.fadeTo( "slow", 0, function(){
+										headline.text(tabTitle).fadeTo('fast', 1);
+									});
+
 									setTimeout(function(){
-										myTabNext.height(panelHeight);
+										element.addClass('in');
 									}, 400);
-
 								}
-
-								currentImage.removeClass('active');
-
-								//change title
-								headline.fadeTo( "slow", 0, function(){
-									headline.text(tabTitle).fadeTo('fast', 1);
-								});
-
-
-								setTimeout(function(){
-									element.addClass('in');
-								}, 400);
-
 							}
-						}
+
+						});
 
 					});
 
-				});
-
-				//change title on page load
-				headline.text(tabTitle);
-
-				mobilePanelHeight = myTabContent.find('.active').height();
-
-				myTabContent.height(mobilePanelHeight);
-
-				//sett height for phones on load
-				if(windowSize <= 600){
+					//change title on page load
+					headline.text(tabTitle);
 
 					mobilePanelHeight = myTabContent.find('.active').height();
 
 					myTabContent.height(mobilePanelHeight);
 
-				}
-			} //end SVFM2 TAB functions
-			})();
+					//set height for phones on load
+					if(windowSize <= 600){
 
+						mobilePanelHeight = myTabContent.find('.active').height();
+
+						myTabContent.height(mobilePanelHeight);
+
+					}
+
+			})();
 
 		// ==========================================================================
 		// Price Tab sizing function
@@ -697,16 +651,19 @@ $(function() {
 				object.addClass('in');
 			}, 100);
 		}
+
 		//Change size of body depending on content in tabs
 		$('#priceTabs').on('click', 'li', function(e){
 			e.preventDefault();
-			var galleryPageHeight = $(window).height();
-			var tabContentHeight = $('.sv__container--sm').height();
-			var updatedHeight = galleryPageHeight - tabContentHeight;
-			var myPriceContent = $('#myPriceContent');
-			var panelId = $(this).find('a').attr('href').substr(1);
-			var activeElement = myPriceContent.children('.active');
+
+			var galleryPageHeight = $(window).height(),
+					tabContentHeight = $('.sv__container--sm').height(),
+				  updatedHeight = galleryPageHeight - tabContentHeight,
+					myPriceContent = $('#myPriceContent'),
+					panelId = $(this).find('a').attr('href').substr(1),
+					activeElement = myPriceContent.children('.active'),
 					$this = $(this);
+
 			if($this.hasClass('active')){
 				//do nothing
 			}else{
@@ -718,29 +675,30 @@ $(function() {
 
 				$this.addClass('active');
 
+				//slide old element out
 				activeElement.removeClass('in');
 
+				//slide in new item
 				setTimeout(function(){
 
 					//remove active from prev panel
 					activeElement.removeClass('active');
 
-					//loop through the tabcontent and find the match
+					//loop through the tabcontent and find the match and animate in
 					myPriceContent.children('div').each(function(){
 						if(panelId === this.id){
 
 							var element = $(this);
-							//console.log(this);
 							$(this).addClass('active');
 
 							animatePriceIn(element);
 						}
 					});
+
 				},600);
 			}
 
 		});
-
 
 		// ==========================================================================
 		// Run on First Load
@@ -751,6 +709,5 @@ $(function() {
 
 		//Image Preloader check
 		shavePreloader();
-		//specialFooter();
 
 });

@@ -1,16 +1,11 @@
 /***************************************************************************/
 /* Helper Classes ****************************************************/
 /***************************************************************************/
-.container__white {
-    background: #fff;
-    position: relative;
-}
-.container__grey {
-    background: $grey;
-    position: relative;
-}
 .sv-wrapper{
     padding:0 30px;
+}
+.clearfix{
+    clear:both;
 }
 .divider__plus {
     margin: 0 auto;
@@ -249,11 +244,17 @@
 }
 
 .space-sm{
+    display: table;
+    width:100%;
     padding-top:25px;
 }
 
 .space-lg{
     padding-top:100px;
+}
+
+.space-desktop-lg{
+    padding-top:0;
 }
 
 @include breakpoint(tablet) {
@@ -269,7 +270,7 @@
     }
 
     .angle-bottom-nav {
-        top: 0px;
+        top: 0;
         border-bottom: 35px solid transparent;
     }
     .angle-top {
@@ -289,6 +290,9 @@
 @include breakpoint(laptop) {
     .space-sm{
         padding-top:40px;
+    }
+    .space-desktop-lg{
+        padding-top:100px;
     }
     .mobile-space-sm{
         padding-top:0;
