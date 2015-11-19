@@ -119,8 +119,25 @@ $primary-color     : $cinnabar;
   position: relative;
 
   .card__slider{
+    div[class^="product__bg"]{
+      background-size:cover;
+      background-position: center center;
+      position: absolute;
+      height:100%;
+      width:100%;
+      top:0;
+      left:0;
+      z-index: 0;
+      opacity: 0;
+      -webkit-transition: opacity 0.2s ease-out;
+      -moz-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out;
+    }
     &.active{
       .bio{
+        opacity: 1;
+      }
+      div[class^="product__bg"]{
         opacity: 1;
       }
     }
@@ -128,6 +145,7 @@ $primary-color     : $cinnabar;
 
   .content__wrapper{
     z-index: 1;
+
   }
 
   .bio{
@@ -162,6 +180,7 @@ $primary-color     : $cinnabar;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         transition: all 0.3s;
+        z-index: 1;
       }
 
       &::after {
@@ -190,6 +209,7 @@ $primary-color     : $cinnabar;
       position: relative;
 
       h5{
+        position: relative;
         color:#fff;
         font-size: 18px;
         font-weight: 400;
@@ -200,6 +220,7 @@ $primary-color     : $cinnabar;
       }
 
       h6{
+        position: relative;
         color:#fff;
         font-size: 15px;
         font-weight: 400;

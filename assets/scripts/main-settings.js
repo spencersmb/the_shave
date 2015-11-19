@@ -96,6 +96,11 @@ $(function() {
 								$(this).css('opacity', 1);
 						});
 
+						//slide in for image text blocks
+						$('.text-image').find('.text-image-img').children('img').addClass('active');
+						$('.image-text').find('.image-text-img').children('img').addClass('active');
+
+
 						//ie9 fix for cards
 						ie9ProductsEvent();
 

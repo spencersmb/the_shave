@@ -70,7 +70,24 @@
 .products__wrapper {
   position: relative;
 }
+.products__wrapper .card__slider div[class^="product__bg"] {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
 .products__wrapper .card__slider.active .bio {
+  opacity: 1;
+}
+.products__wrapper .card__slider.active div[class^="product__bg"] {
   opacity: 1;
 }
 .products__wrapper .content__wrapper {
@@ -107,6 +124,7 @@
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 1;
 }
 .products__wrapper .bio .open::after {
   -webkit-transform: translateX(-5px) translateY(0) rotate(45deg);
@@ -131,6 +149,7 @@
   position: relative;
 }
 .products__wrapper .bio .title h5 {
+  position: relative;
   color: #fff;
   font-size: 18px;
   font-weight: 400;
@@ -140,6 +159,7 @@
   z-index: 1;
 }
 .products__wrapper .bio .title h6 {
+  position: relative;
   color: #fff;
   font-size: 15px;
   font-weight: 400;
