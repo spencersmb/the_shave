@@ -71,6 +71,7 @@
     }
     &--content {
         margin: 0 auto;
+        padding-top:40px;
         img {
             margin: 0 auto;
         }
@@ -329,10 +330,14 @@
         max-width: 760px;
     }
     .gallery__inner {
+
         &--feature {
             max-width: 960px;
             margin: 0 0 0 auto;
             padding:0 30px;
+        }
+        &--content{
+            padding-top:0;
         }
     }
     .gallery__controls {

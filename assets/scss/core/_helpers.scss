@@ -7,6 +7,9 @@
 .clearfix{
     clear:both;
 }
+.container-push-sm {
+    min-height: 325px;
+}
 .divider__plus {
     margin: 0 auto;
     text-align: center;
@@ -343,6 +346,12 @@
         &-lg{
             padding:100px 0;
         }
+    }
+    .container-push {
+        min-height: 540px;
+    }
+    .container-push-sm {
+        min-height: 450px;
     }
     .angle-top-bottom {
         bottom: 0;

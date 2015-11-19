@@ -14,13 +14,15 @@ Tags:
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Base Settings
-	## Vendor Frameworks
+# Core Settings
+	## Fonts
+	## Variables
+	## Functions
+	## Mixins
 	## Base Settings
 	## Effects
 	## Headlines
 	## Helper Classes
-	## Typography?
 	## Buttons
 	## Forms
 # Modules
@@ -28,17 +30,21 @@ Tags:
 	## Feature Module 1
 	## Feature Module 2
 	## Staggered Grid
-	## Contact Box
-	## Twitter Box
+	## Contact Overview
+	## Testimonial Box
+	## Buy Theme Promo
 	## Footer
 	## Faq
 	## Col-3 Module
 	## Products
+	## Prices
+	## Social Bar
 	## Book Now Modal
-	## Blog Overview Module
 	## Barber Team Card
 	## Revolution Slider Settings
-	## Revolution Slides
+	## Toast
+	## Why Us
+	## image-text
 # Widgets
 # Pages
 	## Contact Us
@@ -50,11 +56,6 @@ Tags:
 	## Blog Index
     ## Posts
 	## Comments
-
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
 --------------------------------------------------------------*/
 @import "vendor/index";
 
@@ -84,12 +85,12 @@ Tags:
 
 
 //TODO: Style the map pin icon
+//TODO: Replace Shave text with Logo in footer and navbar
+//TODO: Fix filter on gallery pages so its even split when you filter
+//TODO: Browser Test
 
-//TODO: Finish mock-up placements for all the pages - final web mocks will be done at the very end + branding image on about page
-
-//TODO: Go through MAIN JS file one more time - 0
-//TODO: Optimize images on all pages - 1
-//TODO: Finish Gallery detail: add 2 other styles - 2
-//TODO: Update Blog with Video - 3
+//TODO: Shave logos on about page - 2
+//TODO: Make help file - 4
+//TODO: Design Sell page
 
 //TODO: After Price list in nav is final - fill out filter for price page

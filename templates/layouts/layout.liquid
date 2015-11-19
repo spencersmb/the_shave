@@ -17,7 +17,7 @@
 
         <!-- Styles -->
         {{ "bootstrap.min.css" | asset_url | stylesheet_tag }}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        {{ "font-awesome.css" | asset_url | stylesheet_tag }}
         {{ "main.css" | asset_url | stylesheet_tag }}
 
         <!--[if IE 9]>
@@ -149,19 +149,18 @@
         <!-- end shop times -->
 
         <!-- Plugins -->
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        {{ "jquery.min.js" | asset_url | script_tag }}
+        {{ "modernizr.min.js" | asset_url | script_tag }}
 
-        <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
-        <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        {{ "bootstrap.min.js" | asset_url | script_tag }}
         {{ "jquery.menu-aim.js" | asset_url | script_tag }}
         {{ "skrollr.js" | asset_url | script_tag }}
         {{ "imagesloaded.js" | asset_url | script_tag }}
         {{ "jquery-placeholder.js" | asset_url | script_tag }}
         {{ "jquery.prefetch.min.js" | asset_url | script_tag }}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+        {{ "ScrollMagic.min.js" | asset_url | script_tag }}
+        {{ "debug.addIndicators.min.js" | asset_url | script_tag }}
 
         <!-- Settings -->
         {{ "nav-settings.js" | asset_url | script_tag }}

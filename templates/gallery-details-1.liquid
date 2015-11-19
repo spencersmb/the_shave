@@ -7,11 +7,11 @@
            - Gallery-Details -
     #################################
     -->
-    <div class="section container-fluid white-bg">
+    <div class="section container-fluid white-bg container-push-sm">
         <div class="row sv__container--sm">
             <div class="col-xs-12 inner__header--sm">
-                <h2>Wild Stallion</h2>
-                <h3>A strong and bold cut for free spirits</h3>
+                <h2>CasaNova</h2>
+                <h3>The cut with all the right moves</h3>
             </div>
         </div>
     </div><!-- end header -->
@@ -19,7 +19,7 @@
     <!-- Flickity Feature Gallery -->
     <div class="section container-fluid grey-bg no-padding ">
 
-        <div class="angle-top" style="color: rgb(232, 232, 232);"></div>
+        <div class="angle-top" style="color: rgb(232, 232, 232); border-right-color:rgb(232, 232, 232);"></div>
 
         <div class="sv__container--md inner-lg space-desktop-lg">
 
@@ -35,30 +35,33 @@
                             <!-- Flickity HTML init -->
                             <div class="gallery gallery-main">
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="{{ 's1.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="{{ 'casanova-lg-1.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
                                 </div>
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="{{ 's1.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="{{ 'casanova-lg-2.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
                                 </div>
-                                <!-- <div class="gallery-cell">
-					<img class="img-responsive" src="{{ 'stallion-lg-2.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
-				</div>
-				<div class="gallery-cell">
-					<img class="img-responsive" src="{{ 'stallion-lg-3.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
-				</div>
-				<div class="gallery-cell size-tall">
-					<img class="img-responsive" src="{{ 'stallion-lg-4.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
-				</div>-->
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'casanova-lg-3.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'casanova-lg-4.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
                             </div>
 
                             <!--flickity sub-nav -->
                             <div class="gallery-nav">
-                                <div class="gallery-cell"><img id="myThumb" class="img-responsive" src="{{ 'stallion-sm-1.jpg' | asset_url}}" alt="The Shave BarberShop Theme"></div>
-                                <div class="gallery-cell"><img id="myThumb" class="img-responsive" src="{{ 'stallion-sm-1.jpg' | asset_url}}" alt="The Shave BarberShop Theme"></div>
-                                <!--
-			  <div class="gallery-cell"><img class="img-responsive" src="{{ 'stallion-sm-2.jpg' | asset_url}}" alt="The Shave BarberShop Theme"></div>
-			  <div class="gallery-cell"><img class="img-responsive" src="{{ 'stallion-sm-3.jpg' | asset_url}}" alt="The Shave BarberShop Theme"></div>
-				<div class="gallery-cell"><img class="img-responsive" src="{{ 'stallion-sm-4.jpg' | asset_url}}" alt="The Shave BarberShop Theme"></div>-->
+                                <div class="gallery-cell">
+                                    <img id="myThumb" class="img-responsive" src="{{ 'casanova-sm-1.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'casanova-sm-2.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'casanova-sm-3.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'casanova-sm-4.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
                             </div>
 
                         </div><!-- end offset content -->
@@ -73,7 +76,7 @@
                         <div class="stats__container">
 
                             <div class="stats__details">
-                                <h3>The Stallion Style</h3>
+                                <h3>The CasaNova Style</h3>
                                 <h4>$45.00</h4>
                                 <p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
                             </div>
@@ -93,10 +96,10 @@
                                     <div class="collapse" id="collapseExample">
 
                                         <ul>
-                                           <li>Curly or wavy hair preferred</li>
-                                           <li>45 min</li>
-                                           <li>For pear or diamond shaped faces with a prominent chin.</li>
-                                           <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
+                                            <li>Curly or wavy hair preferred</li>
+                                            <li>45 min</li>
+                                            <li>For pear or diamond shaped faces with a prominent chin.</li>
+                                            <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
                                         </ul>
 
                                     </div><!-- end collapse -->
@@ -175,9 +178,7 @@
         </div><!-- end inner-lg -->
     </div><!-- end lead img/text block -->
 
-    {% include "gallery/gallery-1/style-1-related" %}
-
-    {% include "gold-spacer" %}
+    {% include "gallery/style-1/style-1-related" %}
 
 {% endblock %}
 {% block scripts %}

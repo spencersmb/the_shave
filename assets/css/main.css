@@ -14,13 +14,15 @@ Tags:
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Base Settings
-	## Vendor Frameworks
+# Core Settings
+	## Fonts
+	## Variables
+	## Functions
+	## Mixins
 	## Base Settings
 	## Effects
 	## Headlines
 	## Helper Classes
-	## Typography?
 	## Buttons
 	## Forms
 # Modules
@@ -28,17 +30,21 @@ Tags:
 	## Feature Module 1
 	## Feature Module 2
 	## Staggered Grid
-	## Contact Box
-	## Twitter Box
+	## Contact Overview
+	## Testimonial Box
+	## Buy Theme Promo
 	## Footer
 	## Faq
 	## Col-3 Module
 	## Products
+	## Prices
+	## Social Bar
 	## Book Now Modal
-	## Blog Overview Module
 	## Barber Team Card
 	## Revolution Slider Settings
-	## Revolution Slides
+	## Toast
+	## Why Us
+	## image-text
 # Widgets
 # Pages
 	## Contact Us
@@ -50,11 +56,6 @@ Tags:
 	## Blog Index
     ## Posts
 	## Comments
-
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
 --------------------------------------------------------------*/
 @import url("http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,400italic");
 @font-face {
@@ -588,10 +589,6 @@ blockquote.reverse {
 
   .offset__content--gallery {
     padding: 700px 60px 0;
-  }
-
-  .container-push {
-    min-height: 540px;
   }
 
   .card__feature {
@@ -1557,6 +1554,10 @@ blockquote.reverse {
   clear: both;
 }
 
+.container-push-sm {
+  min-height: 325px;
+}
+
 .divider__plus {
   margin: 0 auto;
   text-align: center;
@@ -1895,6 +1896,14 @@ blockquote.reverse {
 @media only screen and (min-width: 1200px) {
   .inner-lg {
     padding: 100px 0;
+  }
+
+  .container-push {
+    min-height: 540px;
+  }
+
+  .container-push-sm {
+    min-height: 450px;
   }
 
   .angle-top-bottom {
@@ -7649,6 +7658,7 @@ footer.loaded {
 }
 .gallery__inner--content {
   margin: 0 auto;
+  padding-top: 40px;
 }
 .gallery__inner--content img {
   margin: 0 auto;
@@ -7913,6 +7923,9 @@ footer.loaded {
     max-width: 960px;
     margin: 0 0 0 auto;
     padding: 0 30px;
+  }
+  .gallery__inner--content {
+    padding-top: 0;
   }
 
   .gallery__controls {
@@ -8452,14 +8465,21 @@ footer.loaded {
   transform: translateX(-50%) translateY(-50%);
   width: 100%;
   height: 100%;
-  border: 3px solid;
   background-color: rgba(0, 0, 0, 0.45);
   padding: 15px;
 }
 .tab-header h3 {
-  margin-top: 35px;
   margin-bottom: 0;
+  margin-top: 0;
   font-size: 18px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .tab-header h4 {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -8545,11 +8565,19 @@ footer.loaded {
   .tab-header .headline-container {
     padding: 25px;
     width: auto;
-    border: 3px solid;
+    height: auto;
+    border: 4px solid;
   }
   .tab-header h3 {
     margin-top: 0;
     font-size: 25px;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
   }
 
   .tabs__wrapper {

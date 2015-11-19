@@ -297,25 +297,13 @@ $(function() {
 
 				}).done(function (instance) {
 					var isoGalleryItem = $('.gallery-item').find('span').get();
-					//		heroItem = $('.hero-background'),
-					//		postThumb = $('.post-thumb-img').get();
-          //
-					//		//background image preloader
+
+							//background image preloader
 							if(isoGalleryItem.length > 0 ) {
 								preLoadElement(isoGalleryItem, initLayout);
 							}else{
 								initLayout();
 							}
-          //
-					//		}else if(postThumb.length > 0 ) {
-					//			preLoadElement(postThumb, initLayout);
-					//
-					//		}else if(isoGalleryItem.length > 0){
-					//			preLoadElement(isoGalleryItem, initLayout);
-          //
-					//		}else{
-					//			initLayout();
-					//		}
 
 				});
 			}
@@ -354,9 +342,7 @@ $(function() {
 
 			//Resize angle
 			setAngleWidth(windowSize);
-
 			if (windowSize + 15 >= desktop) {
-
 				skrollrCheck();
 				myFooter.width(windowSize);
 
@@ -369,15 +355,11 @@ $(function() {
 					$('.footer-push').css('margin-bottom', footerHeight);
 				}
 
-				galleryDetails();
-
 			} else if( windowSize - 15 <= desktop){
 				skrollrCheck();
 				myFooter.width(windowSize);
 				$('.footer-push').css('margin-bottom', 0);
 
-				//collapse gallery details
-				galleryDetails();
 			}
 
 		}
@@ -465,26 +447,6 @@ $(function() {
 				return true;
 			} else {
 				return false;
-			}
-		}
-
-		// ==========================================================================
-		// Gallery Details Style Details elements
-		// ==========================================================================
-		function showGalleryDetails(){
-			$('#collapseExample').collapse('show');
-		}
-		function hideGalleryDetails(){
-			$('#collapseExample').collapse('hide');
-		}
-
-		function galleryDetails(){
-			if(windowSize > 1200){
-				showGalleryDetails();
-			}else if(windowSize < 1200 && windowSize > 992){
-				hideGalleryDetails();
-			}else{
-				showGalleryDetails();
 			}
 		}
 

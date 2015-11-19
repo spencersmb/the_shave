@@ -1,0 +1,188 @@
+{% block styles %}
+    {{ "flickity.min.css" | asset_url | stylesheet_tag }}
+{% endblock %}
+{% block content %}
+    <!--
+    #################################
+           - Gallery-Details -
+    #################################
+    -->
+    <div class="section container-fluid white-bg container-push-sm">
+        <div class="row sv__container--sm">
+            <div class="col-xs-12 inner__header--sm">
+                <h2>Wild Stallion</h2>
+                <h3>A strong and bold cut for free spirits</h3>
+            </div>
+        </div>
+    </div><!-- end header -->
+
+    <!-- Flickity Feature Gallery -->
+    <div class="section container-fluid grey-bg no-padding ">
+
+        <div class="angle-top" style="color: rgb(232, 232, 232); border-right-color:rgb(232, 232, 232);"></div>
+
+        <div class="sv__container--md inner-lg space-desktop-lg">
+
+            <div class="row no-margin">
+
+                <div class="col-md-7 no-padding">
+
+                    <!-- feature gallery -->
+                    <div class="gallery__inner--feature gallery__slider">
+
+                        <div class="gallery__inner--content">
+
+                            <!-- Flickity HTML init -->
+                            <div class="gallery gallery-main">
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-lg-1.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-lg-2.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-lg-3.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-lg-4.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                            </div>
+
+                            <!--flickity sub-nav -->
+                            <div class="gallery-nav">
+                                <div class="gallery-cell">
+                                    <img id="myThumb" class="img-responsive" src="{{ 'stallion-sm-1.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-sm-2.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-sm-3.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="{{ 'stallion-sm-4.jpg' | asset_url}}" alt="The Shave BarberShop Theme">
+                                </div>
+                            </div>
+
+                        </div><!-- end offset content -->
+
+                    </div> <!-- end gallery slider -->
+
+                </div><!-- end col-7 -->
+
+                <div class="col-md-5 no-padding">
+                    <div class="sv__container--md ">
+
+                        <div class="stats__container">
+
+                            <div class="stats__details">
+                                <h3>The Stallion Style</h3>
+                                <h4>$45.00</h4>
+                                <p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
+                            </div>
+
+                            <div class="style__btn">
+                                <div class="btn-group" role="group" aria-label="Styles">
+                                    <a role="button" class="btn book-now-btn" data-toggle="modal" data-target="#bookNowModal">Get this style</a>
+                                    <a role="button" href="/full-gallery" class="btn book-now-btn">View All styles</a>
+                                </div>
+                            </div>
+
+                            <div class="space-sm">
+                                <div class="gallery-details clearfix">
+
+                                    <h4><a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Style Details <span><i class="fa fa-chevron-down"></i></span></a></h4>
+
+                                    <div class="collapse" id="collapseExample">
+
+                                        <ul>
+                                           <li>Curly or wavy hair preferred</li>
+                                           <li>45 min</li>
+                                           <li>For pear or diamond shaped faces with a prominent chin.</li>
+                                           <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
+                                        </ul>
+
+                                    </div><!-- end collapse -->
+
+                                </div><!-- end gallery details -->
+
+                            </div><!-- end spacer -->
+
+                        </div><!-- end stats container -->
+
+                    </div><!-- end container -->
+
+                </div><!-- end col-5 -->
+
+            </div><!-- end row -->
+
+        </div><!-- end container -->
+
+    </div><!-- end section -->
+
+    {% include "gallery/gallery-social" %}
+
+    {% include "gallery/gallery-product" %}
+
+    <!-- lead img/text block -->
+    <div class="section container-fluid no-padding grey-bg">
+        <div class="inner-lg">
+            <div class="sv__container--sm">
+                <div class="row no-margin">
+                    <div class="sv-wrapper">
+                        <!-- col-6 -->
+                        <div class="col-sm-12 col-md-6 mobile-space-sm">
+                            <img class="img-responsive img-center active" src="{{'device-mock-up2.png' | asset_url}}" alt="Mobile Phone">
+                        </div>
+                        <!-- col-6 -->
+                        <div class="col-sm-12 col-md-6 col-half margin-left-5 mobile-space-sm">
+                            <div class="headline-sm">
+                                <h2 class="text-left black">STUNNING DESIGN & GREAT FUNCTIONALITY</h2>
+                            </div>
+                            <div class="content black">
+                                <p>Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim.</p>
+                            </div>
+                            <div class="approach-list inner-sm">
+                                <div class="approach-item">
+                                    <div class="approach-icon-wrapper">
+                                        <i class="icon-sv-arrows black"></i>
+                                    </div>
+                                    <div class="approach-content black">
+                                        <h6 class="title">Modern Techniques</h6>
+                                        <p>To change your password you need to do the following steps.</p>
+                                    </div>
+                                </div>
+                                <div class="approach-item">
+                                    <div class="approach-icon-wrapper">
+                                        <i class="icon-sv-products black"></i>
+                                    </div>
+                                    <div class="approach-content black">
+                                        <h6 class="title">Top of the line products</h6>
+                                        <p>To change your password you need to do the following steps.</p>
+                                    </div>
+                                </div>
+                                <div class="approach-item">
+                                    <div class="approach-icon-wrapper">
+                                        <i class="icon-sv-trophy black"></i>
+                                    </div>
+                                    <div class="approach-content black">
+                                        <h6 class="title">The best service</h6>
+                                        <p>To change your password you need to do the following steps.</p>
+                                    </div>
+                                </div>
+                            </div><!-- end approach-list -->
+                        </div><!-- end col-half -->
+                    </div><!-- end sv-wrapper -->
+                </div><!-- end row -->
+            </div><!-- end sv-container -->
+        </div><!-- end inner-lg -->
+    </div><!-- end lead img/text block -->
+
+    {% include "gallery/style-2/style-2-related" %}
+
+{% endblock %}
+{% block scripts %}
+    {{ "flickity.pkgd.min.js" | asset_url | script_tag }}
+    {{ "flickity-settings.js" | asset_url | script_tag }}
+    {{ "gallery-details.js" | asset_url | script_tag }}
+{% endblock %}

@@ -9,7 +9,17 @@ $(function() {
 		windowSize = myWindow.width(),
 		browserID = WhichBrowser(),
 		resizedWidth;
-	
+
+		// ==========================================================================
+		// Global A tag click
+		// ==========================================================================
+		$('a').click(function (e) {
+
+			if($(this).attr('href')==='#'){
+				e.preventDefault();
+			}
+
+		});
 		// ==========================================================================
 		// Master Resize
 		// ==========================================================================
@@ -94,7 +104,7 @@ $(function() {
 
 							setTimeout(function() {
 								ScrollCascade(windowSize, cascadeFeature)
-							});
+							},300);
 
 						modernProductsEvent();
 				}
@@ -296,27 +306,17 @@ $(function() {
 					preLoadElement(modal);
 
 				}).done(function (instance) {
-					var isoGalleryItem = $('.gallery-item').find('span').get();
-					//		heroItem = $('.hero-background'),
-					//		postThumb = $('.post-thumb-img').get();
-          //
-					//		//background image preloader
-							if(isoGalleryItem.length > 0 ) {
+					var isoGalleryItem = $('.gallery-item').find('span').get(),
+						  heroItem = $('.hero-background');
+
+							//background image preloader
+							if(heroItem.length > 0){
+								preLoadElement(heroItem, initLayout);
+							}else if(isoGalleryItem.length > 0 ) {
 								preLoadElement(isoGalleryItem, initLayout);
 							}else{
 								initLayout();
 							}
-          //
-					//		}else if(postThumb.length > 0 ) {
-					//			preLoadElement(postThumb, initLayout);
-					//
-					//		}else if(isoGalleryItem.length > 0){
-					//			preLoadElement(isoGalleryItem, initLayout);
-          //
-					//		}else{
-					//			initLayout();
-					//		}
-
 				});
 			}
 		}
@@ -367,15 +367,11 @@ $(function() {
 					$('.footer-push').css('margin-bottom', footerHeight);
 				}
 
-				galleryDetails();
-
 			} else if( windowSize - 15 <= desktop){
 				skrollrCheck();
 				myFooter.width(windowSize);
 				$('.footer-push').css('margin-bottom', 0);
 
-				//collapse gallery details
-				galleryDetails();
 			}
 
 		}
@@ -463,27 +459,6 @@ $(function() {
 				return true;
 			} else {
 				return false;
-			}
-		}
-
-		// ==========================================================================
-		// Gallery Details Style Details elements
-		// ==========================================================================
-		function showGalleryDetails(){
-			$('#collapseExample').collapse('show');
-		}
-		function hideGalleryDetails(){
-			$('#collapseExample').collapse('hide');
-		}
-
-		function galleryDetails(){
-			var win = windowSize + 15;
-			if(win > 1200){
-				showGalleryDetails();
-			}else if(win < 1200 && win > 991){
-				hideGalleryDetails();
-			}else{
-				showGalleryDetails();
 			}
 		}
 

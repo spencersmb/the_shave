@@ -4,7 +4,10 @@
 // ==========================================================================
 
     var currHeight,
-        currThumbHeight;
+        currThumbHeight,
+        winWidth = function() {
+          return window.innerWidth;
+        };
 
     //get height of image on window resize
     function getImgHeightMaster(){
@@ -31,14 +34,37 @@
       $('.gallery-nav').height(getThumbnailHeight());
     }
 
+    // Gallery Details Style Details elements
+    function showGalleryDetails(){
+      $('#collapseExample').collapse('show');
+    }
+    function hideGalleryDetails(){
+      $('#collapseExample').collapse('hide');
+    }
+
+    function galleryDetails(){
+      var win = winWidth();
+      if(win > 1200){
+        showGalleryDetails();
+      }else if(win < 1200 && win > 991){
+        hideGalleryDetails();
+      }else{
+        showGalleryDetails();
+      }
+    }
+
     //apply
     $(window).on('resize', function(){
+
       resizeFlickity();
+      galleryDetails();
+
     });
 
     //on load
     $(window).on('load', function(){
       resizeFlickity();
+      galleryDetails();
     });
 
 })();
