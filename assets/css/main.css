@@ -218,6 +218,9 @@ h6 {
 
 h1 {
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 40px;
 }
 
 h2 {
@@ -232,7 +235,7 @@ h2 {
 h3 {
   margin-top: 0;
   font-weight: 600;
-  margin-bottom: 1.5em;
+  margin-bottom: 15px;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 5px;

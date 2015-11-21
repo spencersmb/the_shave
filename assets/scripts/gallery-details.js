@@ -19,8 +19,9 @@
 
     //get height of thumbnail on window resize
     function getThumbnailHeight(){
-      var myImg = document.querySelector("#myThumb");
-      currThumbHeight = myImg.clientHeight;
+      var myImg = document.querySelector("#subNav").getElementsByTagName('img');
+
+      currThumbHeight = myImg[0].clientHeight;
 
       return currThumbHeight;
     }
