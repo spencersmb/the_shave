@@ -7243,14 +7243,21 @@ footer.loaded {
 }
 
 .gallery-isotope {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: -webkit-transform 0.8s;
+  -moz-transition: -moz-transform 0.8s;
+  transition: transform 0.8s;
 }
 
 .grid-sizer,
 .gallery-item {
   width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.grid-sizer.active,
+.gallery-item.active {
+  opacity: 1;
 }
 
 .full-width-gallery .gallery-item {
@@ -7434,9 +7441,6 @@ footer.loaded {
   width: 100%;
 }
 
-/***************************************************************************/
-/* Gallery Preview ****************************************************/
-/***************************************************************************/
 @media only screen and (min-width: 768px) {
   .filter-group {
     padding-top: 80px;
