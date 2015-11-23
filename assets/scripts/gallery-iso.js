@@ -8,6 +8,7 @@ $(window).load(function(){
       reIso,
       $fullGrid = $('#' + gridId);
 
+      //add transition for intro animation
       $('.gallery-item').css('transition-duration', "600ms");
 
       //init isotope
@@ -140,7 +141,6 @@ $(window).load(function(){
   if(val != ''){
     hash = val.substr(8);
 
-    // console.log(hash)
     reFilter(hash);
 
     $('.filter-group > li').each(function(){

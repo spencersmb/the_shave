@@ -2246,15 +2246,16 @@ blockquote.reverse {
 /*   codyhouse.co   ****************************************************/
 /***************************************************************************/
 #header {
+  opacity: 0;
   position: relative;
   text-align: center;
   height: 60px;
   width: 100vw;
   background: white;
   z-index: 3;
-  -webkit-transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -moz-transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 1s ease-out;
+  -moz-transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 1s ease-out;
+  transition: background 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 1s ease-out;
 }
 #header .nav__book {
   position: absolute;
@@ -2372,17 +2373,75 @@ blockquote.reverse {
   }
 }
 
+.loaded #header {
+  opacity: 1;
+}
+
 #sv__logo {
   height: 100%;
   display: inline-block;
-  left: 25px;
+  left: 0;
   position: relative;
   float: left;
   right: auto;
   padding-right: 20px;
+  width: 230px;
+  overflow: hidden;
 }
 #sv__logo:hover {
   color: #af8c45;
+}
+#sv__logo .sv__logo--img {
+  margin: 13px 10px 10px;
+  height: 35px;
+  width: 40px;
+  display: block;
+  float: left;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  #sv__logo .sv__logo--img {
+    margin: 23px 10px 10px;
+  }
+}
+#sv__logo .sv__logo--img img {
+  margin: 0 auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#sv__logo .logo-white, #sv__logo .logo-black {
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+#sv__logo .logo-white.active, #sv__logo .logo-black.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+#sv__logo .logo-black {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
 }
 #sv__logo h1 {
   font-weight: 700;
@@ -2400,6 +2459,8 @@ blockquote.reverse {
   #sv__logo {
     padding-right: 0;
     color: #fff;
+    left: 25px;
+    width: 260px;
   }
   #sv__logo h1 {
     font-size: 1.5em;
@@ -2455,6 +2516,7 @@ blockquote.reverse {
   line-height: 25px;
   background-color: transparent;
   color: #252525;
+  font-weight: bold;
   border: 3px solid #252525;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -2510,7 +2572,6 @@ blockquote.reverse {
     padding: 0 36px 0 20px;
     line-height: 40px;
     font-size: 18px;
-    font-weight: bold;
     color: #fff;
     border: 3px solid #fff;
   }
@@ -5194,14 +5255,8 @@ footer.loaded {
   z-index: 100;
   font-family: "Ubuntu", sans-serif;
 }
-.footer__logo .logo__container h5 {
-  font-size: 1.1875em;
-  text-transform: uppercase;
-  margin: 0 0 5px 0;
-  font-weight: 500;
-}
 .footer__logo .logo__container h3 {
-  font-size: 48px;
+  font-size: 26px;
   margin: 0;
   letter-spacing: 7px;
 }
@@ -5211,6 +5266,10 @@ footer.loaded {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-transform: none;
   font-weight: 400;
+}
+.footer__logo--img {
+  width: 97px;
+  margin: 0 auto 20px;
 }
 
 .footer__desc {
@@ -5376,7 +5435,7 @@ footer.loaded {
   }
 
   .footer__wrapper {
-    padding: 40px 0 0;
+    padding: 40px 0;
   }
 
   .footer__logo {
@@ -5386,7 +5445,7 @@ footer.loaded {
   }
   .footer__logo .logo__container {
     padding: 2em;
-    margin: 6em 19%;
+    margin: 4em 19%;
   }
 
   .footer__desc {
@@ -7439,6 +7498,10 @@ footer.loaded {
 .gallery-4-grid .gallery-item,
 .gallery-5-grid .gallery-item {
   width: 100%;
+}
+
+.gallery-preview .gallery-item {
+  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {

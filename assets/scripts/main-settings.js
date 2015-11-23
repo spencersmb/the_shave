@@ -457,7 +457,6 @@ $(function() {
 
 			$(window).on('resize', function() {
 				resizedWidth = $(window).width() + 15;
-				//console.log(resizedWidth);
 			});
 
 			if (resizedWidth >= tablet || screenSize >= tablet) {

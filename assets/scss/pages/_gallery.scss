@@ -182,6 +182,12 @@
     }
 }
 
+.gallery-preview{
+    .gallery-item{
+        opacity: 1;
+    }
+}
+
 // Displays greater than 768px
 @include breakpoint(tablet) {
     .filter-group {
