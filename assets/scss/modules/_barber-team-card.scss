@@ -24,7 +24,7 @@
         height: 175px;
         padding-top: 0;
         opacity: 0;
-        background-color: rgba(175, 140, 69, 0.8);
+        background-color: rgba(37, 37, 37, 0.8);
         @include transition (opacity .3s ease);
         h3 {
             font-family: $ubuntu;
@@ -40,24 +40,6 @@
             width:100%;
             @include transition(all .3s cubic-bezier(0.4, 0, 0.2, 1));
             @include transform(translate3d(0, 90px, 0));
-
-            &::before,
-            &::after{
-                content:'"';
-                font-family: $courier;
-                color:rgba(255, 255, 255, 0.38);
-                font-size:102px;
-            }
-            &::before{
-                position: absolute;
-                top:-3px;
-                left:0;
-            }
-            &::after{
-                position: absolute;
-                bottom:-48px;
-                right:20px
-            }
         }
         img {
             width: 50%;

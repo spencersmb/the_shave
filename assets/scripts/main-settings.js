@@ -6,7 +6,7 @@ $(function() {
 		myFooter = $('footer'),
 		desktop = 993,
 		tablet = 784,
-		windowSize = myWindow.width(),
+		windowSize = globalWindowWidth,
 		browserID = WhichBrowser(),
 		resizedWidth;
 
@@ -218,7 +218,7 @@ $(function() {
 		function skrollrCheck() {
 
 			//check if skrollr is enabled or not
-			var winWidth = window.innerWidth;
+			var winWidth = globalWindowWidth + 15;
 
 			var winHeight = window.innerHeight;
 
@@ -355,7 +355,8 @@ $(function() {
 						body = $('body');
 
 			//Overwrite windowsize on resize
-			windowSize = $(window).width();
+			windowSize = globalWindowWidth;
+			//console.log(globalWindowWidth);
 
 			//Resize angle
 			setAngleWidth(windowSize);
@@ -466,7 +467,6 @@ $(function() {
 			}
 		}
 
-
 		///Encapsulated States
 		(function() {
 
@@ -481,7 +481,6 @@ $(function() {
 				window.location = link;
 			});
 
-
 			// ==========================================================================
 			// Form focus for comments
 			// ==========================================================================
@@ -492,7 +491,6 @@ $(function() {
 					elem.toggleClass( "focused", elem.is( ":focus" ) );
 				}, 0 );
 			});
-
 
 			// ==========================================================================
 			// FAQ

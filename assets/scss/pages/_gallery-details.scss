@@ -41,7 +41,7 @@
 
 .gallery-nav {
     height: 164px;
-    max-width: 877px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -68,10 +68,12 @@
         width: 100%;
         margin: 0 auto;
         z-index: 2;
+
     }
     &--content {
         margin: 0 auto;
         padding-top:40px;
+        overflow: hidden;
         img {
             margin: 0 auto;
         }
@@ -327,12 +329,15 @@
 // Displays greater than 992px
 @include breakpoint(laptop) {
     .gallery {
-        max-width: 760px;
+        max-width: 597px;
+    }
+    .gallery-nav {
+        max-width: 597px;
     }
     .gallery__inner {
 
         &--feature {
-            max-width: 960px;
+            max-width: 597px;
             margin: 0 0 0 auto;
             padding:0 30px;
         }
@@ -381,10 +386,18 @@
 
 // Displays greater than 1200px
 @include breakpoint(desktop) {
+    .gallery {
+        max-width: 792px;
+    }
+    .gallery-nav {
+        max-width: 792px;
+    }
     .gallery__inner {
+
         &--feature {
+            max-width: 792px;
         }
-        &--content {
+        &--content{
             margin: 0 auto;
         }
     }

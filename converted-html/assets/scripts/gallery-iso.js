@@ -6,13 +6,21 @@ $(window).load(function(){
   //Get grid to assign dynamically
   var gridId = $('.inner-content-module').children('div').attr('id'),
       reIso,
-      $fullGrid = $('#' + gridId),
+      $fullGrid = $('#' + gridId);
+
+      //add transition for intro animation
+      $('.gallery-item').css('transition-duration', "600ms");
 
       //init isotope
       $grid = $fullGrid.isotope({
+        percentPosition: true,
         itemSelector: '.gallery-item',
         isInitLayout: false,
-        masonry: { "columnWidth": ".grid-sizer" }
+        masonry: {
+          "columnWidth": ".grid-sizer"
+        },
+        transitionDuration: '.6s'
+
       });
 
   function pxConvert(string){
@@ -20,14 +28,14 @@ $(window).load(function(){
   }
 
   function reFilter(item){
-    $fullGrid.isotope({
+    $grid.isotope({
       filter: item
     });
   }
 
   //resize isotope and minHeight
   function reSized(){
-    $fullGrid.isotope('layout');
+    $grid.isotope();
     setMinHeight();
   }
 
@@ -83,7 +91,18 @@ $(window).load(function(){
 
   //on page load
   galleryIsotopeWrapper();
-  setTimeout(reSized, 500);
+  setTimeout(reSized, 1000);
+
+  $grid.isotope( 'once', 'arrangeComplete', function() {
+    //fade in
+    $('.gallery-item').addClass('active');
+
+    //remove animation for smooth filtering
+    setTimeout(function(){
+      $('.gallery-item').css('transition-duration', "0ms");
+    },500);
+
+  });
 
   window.onresize = function(){
 
@@ -96,7 +115,6 @@ $(window).load(function(){
       //on resize complete, readjust grid
       reIso = setTimeout(reSized, 500);
     }
-
   };
 
   //Filter on click
@@ -116,6 +134,10 @@ $(window).load(function(){
 
   });
 
+  //select show all on load
+  $('.filter-group').children('li').first().addClass('selected');
+
+
   //Filter URL
   var val = window.location.hash;
   var hash;
@@ -123,7 +145,6 @@ $(window).load(function(){
   if(val != ''){
     hash = val.substr(8);
 
-    // console.log(hash)
     reFilter(hash);
 
     $('.filter-group > li').each(function(){

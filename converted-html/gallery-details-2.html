@@ -19,7 +19,7 @@
 
         <!-- Styles -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
 
         <!--[if IE 9]>
@@ -42,6 +42,10 @@
 
     <!--company name-->
     <a id="sv__logo" href="index.html">
+        <div class="sv__logo--img">
+            <img class="img-responsive logo-white" src="assets/images/shave-logo-white.png" alt="The Shave barbershop HTML theme"/>
+            <img class="img-responsive logo-black" src="assets/images/shave-logo-black.png" alt="The Shave barbershop HTML theme"/>
+        </div>
         <h1>The Shave</h1>
     </a>
 
@@ -473,33 +477,41 @@
 
                             <!-- Flickity HTML init -->
                             <div class="gallery gallery-main">
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-lg-1.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-lg-1.jpg" alt="The Shave BarberShop Theme">
                                 </div>
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-lg-2.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-lg-2.jpg" alt="The Shave BarberShop Theme">
                                 </div>
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-lg-3.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-lg-3.jpg" alt="The Shave BarberShop Theme">
                                 </div>
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-lg-4.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-lg-4.jpg" alt="The Shave BarberShop Theme">
                                 </div>
                             </div>
 
                             <!--flickity sub-nav -->
-                            <div class="gallery-nav">
+                            <div id="subNav" class="gallery-nav">
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img id="myThumb" class="img-responsive" src="assets/images/gallery/1/stallion-sm-1.jpg" alt="The Shave BarberShop Theme">
+                                    <img id="myThumb" class="img-responsive" src="assets/images/gallery/2/stallion-sm-1.jpg" alt="The Shave BarberShop Theme">
                                 </div>
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-sm-2.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-sm-2.jpg" alt="The Shave BarberShop Theme">
                                 </div>
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-sm-3.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-sm-3.jpg" alt="The Shave BarberShop Theme">
                                 </div>
+                                <!-- flickity image -->
                                 <div class="gallery-cell">
-                                    <img class="img-responsive" src="assets/images/gallery/1/stallion-sm-4.jpg" alt="The Shave BarberShop Theme">
+                                    <img class="img-responsive" src="assets/images/gallery/2/stallion-sm-4.jpg" alt="The Shave BarberShop Theme">
                                 </div>
                             </div>
 
@@ -520,31 +532,30 @@
                                 <p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
                             </div>
 
-                            <div class="style__btn">
-                                <div class="btn-group" role="group" aria-label="Styles">
-                                    <a role="button" class="btn book-now-btn" data-toggle="modal" data-target="#bookNowModal">Get this style</a>
-                                    <a role="button" href="full-gallery.html" class="btn book-now-btn">View All styles</a>
-                                </div>
-                            </div>
+                            <div class="gallery-details clearfix">
+
+                                <h4><a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Style Details <span><i class="fa fa-chevron-down"></i></span></a></h4>
+
+                                <div class="collapse" id="collapseExample">
+
+                                    <ul>
+                                        <li>Curly or wavy hair preferred</li>
+                                        <li>45 min</li>
+                                        <li>For pear or diamond shaped faces with a prominent chin.</li>
+                                        <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
+                                    </ul>
+
+                                </div><!-- end collapse -->
+
+                            </div><!-- end gallery details -->
 
                             <div class="space-sm">
-                                <div class="gallery-details clearfix">
-
-                                    <h4><a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Style Details <span><i class="fa fa-chevron-down"></i></span></a></h4>
-
-                                    <div class="collapse" id="collapseExample">
-
-                                        <ul>
-                                           <li>Curly or wavy hair preferred</li>
-                                           <li>45 min</li>
-                                           <li>For pear or diamond shaped faces with a prominent chin.</li>
-                                           <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
-                                        </ul>
-
-                                    </div><!-- end collapse -->
-
-                                </div><!-- end gallery details -->
-
+                                <div class="style__btn">
+                                    <div class="btn-group" role="group" aria-label="Styles">
+                                        <a role="button" class="btn book-now-btn" data-toggle="modal" data-target="#bookNowModal">Get this style</a>
+                                        <a role="button" href="full-gallery.html" class="btn book-now-btn">View All styles</a>
+                                    </div>
+                                </div>
                             </div><!-- end spacer -->
 
                         </div><!-- end stats container -->
@@ -609,7 +620,7 @@
 								<a class="open" href="">
 									<h5>Sandal Wood</h5>
 									<h6>Aftershave</h6>
-									<div class="product__bg--1" style="background-image: url('http://shawnbooth18.com/wp-content/uploads/2015/09/herschel-cover.jpg')">
+									<div class="product__bg--1" style="background-image: url('assets/images/services/products/pinewood.jpg')">
 
 									</div>
 								</a>
@@ -734,22 +745,22 @@
 
             <!-- Service Item -->
             <div class="col-xs-12 col-sm-6 prev-post">
-                <div class="post-nav-thumb" style="background-image: url('assets/images/gallery/1/style2-link.jpg')"></div>
+                <div class="post-nav-thumb" style="background-image: url('assets/images/gallery/3/style3-link.jpg')"></div>
                 <div class="post-nav-content">
                     <div class="post-nav-subtitle">Prev Style</div>
-                    <h2 class="post-nav-title"><span>Style 2</span></h2>
+                    <h2 class="post-nav-title"><span>The Lumberjack</span></h2>
                 </div>
-                <a href="service-haircuts.html"></a>
+                <a href="gallery-details-3.html"></a>
             </div>
 
             <!-- Service Item -->
             <div class="col-xs-12 col-sm-6 next-post">
-                <div class="post-nav-thumb" style="background-image: url('assets/images/gallery/1/style3-link.jpg')"></div>
+                <div class="post-nav-thumb" style="background-image: url('assets/images/gallery/1/style1-link.jpg')"></div>
                 <div class="post-nav-content">
                     <div class="post-nav-subtitle">Next Style</div>
-                    <h2 class="post-nav-title"><span>Style 3</span></h2>
+                    <h2 class="post-nav-title"><span>CasaNova</span></h2>
                 </div>
-                <a href="service-beards.html"></a>
+                <a href="gallery-details-1.html"></a>
             </div>
 
         </div><!-- end row -->
@@ -781,8 +792,10 @@
 				<!-- Footer Logo -->
 				<div class="footer__logo no-padding">
 					<div class="logo__container">
-						<h5>The</h5>
-						<h3>Shave</h3>
+						<div class="footer__logo--img">
+							<img class="img-responsive logo-white" src="assets/images/shave-logo-white.png" alt="The Shave barbershop HTML theme"/>
+						</div>
+						<h3>The Shave</h3>
 						<h4>Mens Barbershop</h4>
 					</div>
 				</div>
@@ -825,7 +838,7 @@
 
 						<!-- email -->
 						<div class="col-xs-12 col-sm-6 contact no-padding">
-							<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
+							<a class="email" href="mailto:info@theshave.com">info@theshaveemail.com</a>
 							<a class="phone" href="tel:303-313-0303">303-313-0303</a>
 						</div>
 
@@ -835,12 +848,12 @@
 					<div class="row social-footer">
 						<div class="col-xs-12 col-sm-6 col-md-8">
 							<ul>
-								<li><a href=""><i class="fa fa-facebook"></i></a></li>
-								<li><a href=""><i class="fa fa-twitter"></i></a></li>
-								<li><a href=""><i class="fa fa-instagram"></i></a></li>
-								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
-								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div><!-- end col -->
 
@@ -965,19 +978,18 @@
         <!-- end shop times -->
 
         <!-- Plugins -->
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/modernizr.min.js"></script>
 
-        <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
-        <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        <script src="assets/scripts/bootstrap.min.js"></script>
         <script src="assets/scripts/jquery.menu-aim.min.js"></script>
         <script src="assets/scripts/skrollr.min.js"></script>
         <script src="assets/scripts/imagesloaded.min.js"></script>
         <script src="assets/scripts/jquery-placeholder.min.js"></script>
         <script src="assets/scripts/jquery.prefetch.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+        <script src="assets/scripts/ScrollMagic.min.js"></script>
+        <script src="assets/scripts/debug.addIndicators.min.js"></script>
 
         <!-- Settings -->
         <script src="assets/scripts/nav-settings.min.js"></script>

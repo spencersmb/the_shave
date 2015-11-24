@@ -10,6 +10,9 @@
 .container-push-sm {
     min-height: 325px;
 }
+.container-push-xs {
+    min-height: 195px;
+}
 .divider__plus {
     margin: 0 auto;
     text-align: center;
@@ -262,6 +265,10 @@
 
 @include breakpoint(tablet) {
 
+    .container-push-xs {
+        min-height: 325px;
+    }
+
     .angle-top-bottom {
         bottom: 0;
         border-top: 35px solid transparent;
@@ -350,7 +357,7 @@
     .container-push {
         min-height: 540px;
     }
-    .container-push-sm {
+    .container-push-sm, .container-push-xs {
         min-height: 450px;
     }
     .angle-top-bottom {

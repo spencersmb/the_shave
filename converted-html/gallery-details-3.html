@@ -14,12 +14,12 @@
 
         <!-- Style block allowing child pages to inject their own styles -->
         
-	<link href="assets/css/flickity.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="assets/css/flickity.min.css" rel="stylesheet" type="text/css" media="all"/>
 
 
         <!-- Styles -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
 
         <!--[if IE 9]>
@@ -42,6 +42,10 @@
 
     <!--company name-->
     <a id="sv__logo" href="index.html">
+        <div class="sv__logo--img">
+            <img class="img-responsive logo-white" src="assets/images/shave-logo-white.png" alt="The Shave barbershop HTML theme"/>
+            <img class="img-responsive logo-black" src="assets/images/shave-logo-black.png" alt="The Shave barbershop HTML theme"/>
+        </div>
         <h1>The Shave</h1>
     </a>
 
@@ -441,103 +445,145 @@
         <main class="sv__main--content">
 
             
-<!--
-#################################
-	   - Gallery-Details -
-#################################
--->
-<div class="section container-fluid white-bg container-push">
-	<div class="row sv__container--sm">
-		<div class="col-xs-12 inner__header--sm">
-			<h2>Wild Stallion</h2>
-			<h3>A strong and bold cut for free spirits.</h3>
-		</div>
-	</div>
-</div><!-- end header -->
+    <!--
+    #################################
+           - Gallery-Details -
+    #################################
+    -->
+    <div class="section container-fluid white-bg container-push-sm">
+        <div class="row sv__container--sm">
+            <div class="col-xs-12 inner__header--sm">
+                <h2>The Lumberjack</h2>
+                <h3>A rugged cut ment for the outdoors</h3>
+            </div>
+        </div>
+    </div><!-- end header -->
 
-<!-- Flickity Feature Gallery -->
-<div class="section container-fluid grey-bg no-padding ">
-	<div class="angle-bottom-top" style="color: #fff;"></div>
+    <!-- Flickity Feature Gallery -->
+    <div class="section container-fluid grey-bg no-padding ">
 
-	<!-- feature gallery -->
-	<div class="gallery__inner--feature gallery__slider">
+        <div class="angle-top" style="color: rgb(232, 232, 232); border-right-color:rgb(232, 232, 232);"></div>
 
-		<div class="gallery__inner--content offset__width">
+        <div class="sv__container--md inner-lg space-desktop-lg">
 
-			<!-- Flickity HTML init -->
-			<div class="gallery gallery-main">
-				<div class="gallery-cell">
-					<img class="img-responsive" src="s1.jpg" alt="The Shave BarberShop Theme">
-				</div>
-				<!-- <div class="gallery-cell">
-					<img class="img-responsive" src="assets/images/gallery/1/stallion-lg-2.jpg" alt="The Shave BarberShop Theme">
-				</div>
-				<div class="gallery-cell">
-					<img class="img-responsive" src="assets/images/gallery/1/stallion-lg-3.jpg" alt="The Shave BarberShop Theme">
-				</div>
-				<div class="gallery-cell size-tall">
-					<img class="img-responsive" src="assets/images/gallery/1/stallion-lg-4.jpg" alt="The Shave BarberShop Theme">
-				</div>-->
-			</div>
+            <div class="row no-margin">
 
-			<!--flickity sub-nav -->
-			<div class="gallery-nav">
-			  <div class="gallery-cell"><img id="myThumb" class="img-responsive" src="assets/images/gallery/1/stallion-sm-1.jpg" alt="The Shave BarberShop Theme"></div>
-				<!--
-			  <div class="gallery-cell"><img class="img-responsive" src="assets/images/gallery/1/stallion-sm-2.jpg" alt="The Shave BarberShop Theme"></div>
-			  <div class="gallery-cell"><img class="img-responsive" src="assets/images/gallery/1/stallion-sm-3.jpg" alt="The Shave BarberShop Theme"></div>
-				<div class="gallery-cell"><img class="img-responsive" src="assets/images/gallery/1/stallion-sm-4.jpg" alt="The Shave BarberShop Theme"></div>-->
-			</div>
+                <div class="col-md-7 no-padding">
 
-		</div><!-- end offset content -->
+                    <!-- feature gallery -->
+                    <div class="gallery__inner--feature gallery__slider">
 
-	</div> <!-- end gallery slider -->
+                        <div class="gallery__inner--content">
 
-	<!-- offset container spacer -->
-	<div class="sv__container--sm">
-		<div class="offset__content--gallery">
-		</div>
-	</div>
+                            <!-- Flickity HTML init -->
+                            <div class="gallery gallery-main">
+                                <!-- flickity image -->
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/3/lumberjack-lg-1.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                                <!-- flickity image -->
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/3/lumberjack-lg-2.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                                <!-- flickity image -->
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/3/lumberjack-lg-3.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                            </div>
 
-</div><!-- end flickty feature gallery -->
+                            <!--flickity sub-nav -->
+                            <div id="subNav" class="gallery-nav">
+                                <!-- flickity image -->
+                                <div class="gallery-cell">
+                                    <img id="myThumb" class="img-responsive" src="assets/images/gallery/3/lumberjack-sm-1.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                                <!-- flickity image -->
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/3/lumberjack-sm-2.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                                <!-- flickity image -->
+                                <div class="gallery-cell">
+                                    <img class="img-responsive" src="assets/images/gallery/3/lumberjack-sm-3.jpg" alt="The Shave BarberShop Theme">
+                                </div>
+                            </div>
 
+                        </div><!-- end offset content -->
 
-<!-- Gallery Stats/Content -->
-<div class="section container-fluid grey-bg">
+                    </div> <!-- end gallery slider -->
 
-	<div class="container sv__container--md ">
+                </div><!-- end col-7 -->
 
-		<div class="stats__container">
+                <div class="col-md-5 no-padding">
+                    <div class="sv__container--md ">
 
-			<div class="stats__details">
-				<h3>The Stallion Style</h3>
-				<h4>$45.00</h4>
-				<div id="gallery-controls" class="gallery__controls">
-					<div class="col-xs-12 col-sm-3 left">
-						<a href="#"><i class="fa fa-chevron-left"></i><span>Prev Style</span></a>
-					</div>
-					<div class="col-xs-12 col-sm-3 right">
-						<a href="#"><span>Next Style</span><i class="fa fa-chevron-right"></i></a>
-					</div>
-				</div>
-				<p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
-				<p>Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante. Sed leo enim, iaculis ornare tristique non,</p>
-			</div>
+                        <div class="stats__container">
 
-			<div class="style__btn">
-				<div class="btn-group" role="group" aria-label="Styles">
-					<a role="button" class="btn book-now-btn" data-toggle="modal" data-target="#bookNowModal">Get this style</a>
-					<a role="button" href="full-gallery.html" class="btn book-now-btn">View All styles</a>
-				</div>
-			</div>
+                            <div class="stats__details">
+                                <h3>The Lumberjack Style</h3>
+                                <h4>$45.00</h4>
+                                <p>This cut was inspired by Bill and Ted's Excellent Adventure. It embodies the free spirit of a horse running through the sandy beaches etc.Introducing Playdium, the digital jukebox that delivers a new kind of entertainment experience.</p>
+                            </div>
 
-		</div><!-- end stats container -->
+                            <div class="gallery-details clearfix">
 
-	</div> <!-- end container -->
+                                <h4><a role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Style Details <span><i class="fa fa-chevron-down"></i></span></a></h4>
 
-</div><!-- end section -->
+                                <div class="collapse" id="collapseExample">
 
-<!-- Gallery Products -->
+                                    <ul>
+                                        <li>Curly or wavy hair preferred</li>
+                                        <li>45 min</li>
+                                        <li>For pear or diamond shaped faces with a prominent chin.</li>
+                                        <li>Maintain length and add layers all over the head, not shorter than 3 inches.</li>
+                                    </ul>
+
+                                </div><!-- end collapse -->
+
+                            </div><!-- end gallery details -->
+
+                            <div class="space-sm">
+                                <div class="style__btn">
+                                    <div class="btn-group" role="group" aria-label="Styles">
+                                        <a role="button" class="btn book-now-btn" data-toggle="modal" data-target="#bookNowModal">Get this style</a>
+                                        <a role="button" href="full-gallery.html" class="btn book-now-btn">View All styles</a>
+                                    </div>
+                                </div>
+                            </div><!-- end spacer -->
+
+                        </div><!-- end stats container -->
+
+                    </div><!-- end container -->
+
+                </div><!-- end col-5 -->
+
+            </div><!-- end row -->
+
+        </div><!-- end container -->
+
+    </div><!-- end section -->
+
+    <!-- gallery social block -->
+<div class="section">
+    <div class="social-container">
+        <a href="#">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-pinterest"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-youtube"></i>
+        </a>
+    </div><!-- end container -->
+</div><!-- end social block -->
+
+    <!-- Gallery Products -->
 <div class="section container sv__container--md inner-content-module">
 
     <div class="products">
@@ -566,7 +612,7 @@
 								<a class="open" href="">
 									<h5>Sandal Wood</h5>
 									<h6>Aftershave</h6>
-									<div class="product__bg--1" style="background-image: url('http://shawnbooth18.com/wp-content/uploads/2015/09/herschel-cover.jpg')">
+									<div class="product__bg--1" style="background-image: url('assets/images/services/products/pinewood.jpg')">
 
 									</div>
 								</a>
@@ -630,166 +676,90 @@
 
 </div><!-- end products section -->
 
-<!-- gallery social block -->
+    <!-- lead img/text block -->
+    <div class="section container-fluid no-padding grey-bg">
+        <div class="inner-lg">
+            <div class="sv__container--sm">
+                <div class="row no-margin">
+                    <div class="sv-wrapper">
+                        <!-- col-6 -->
+                        <div class="col-sm-12 col-md-6 mobile-space-sm">
+                            <img class="img-responsive img-center active" src="assets/images/mock-ups/device-mock-up2.png" alt="Mobile Phone">
+                        </div>
+                        <!-- col-6 -->
+                        <div class="col-sm-12 col-md-6 col-half margin-left-5 mobile-space-sm">
+                            <div class="headline-sm">
+                                <h2 class="text-left black">STUNNING DESIGN & GREAT FUNCTIONALITY</h2>
+                            </div>
+                            <div class="content black">
+                                <p>Ea mei nostrum imperdiet deterruisset, mei ludus efficiendi ei. Sea summo mazim ex, ea errem eleifend definitionem vim.</p>
+                            </div>
+                            <div class="approach-list inner-sm">
+                                <div class="approach-item">
+                                    <div class="approach-icon-wrapper">
+                                        <i class="icon-sv-arrows black"></i>
+                                    </div>
+                                    <div class="approach-content black">
+                                        <h6 class="title">Modern Techniques</h6>
+                                        <p>To change your password you need to do the following steps.</p>
+                                    </div>
+                                </div>
+                                <div class="approach-item">
+                                    <div class="approach-icon-wrapper">
+                                        <i class="icon-sv-products black"></i>
+                                    </div>
+                                    <div class="approach-content black">
+                                        <h6 class="title">Top of the line products</h6>
+                                        <p>To change your password you need to do the following steps.</p>
+                                    </div>
+                                </div>
+                                <div class="approach-item">
+                                    <div class="approach-icon-wrapper">
+                                        <i class="icon-sv-trophy black"></i>
+                                    </div>
+                                    <div class="approach-content black">
+                                        <h6 class="title">The best service</h6>
+                                        <p>To change your password you need to do the following steps.</p>
+                                    </div>
+                                </div>
+                            </div><!-- end approach-list -->
+                        </div><!-- end col-half -->
+                    </div><!-- end sv-wrapper -->
+                </div><!-- end row -->
+            </div><!-- end sv-container -->
+        </div><!-- end inner-lg -->
+    </div><!-- end lead img/text block -->
+
+    <!-- Service links -->
 <div class="section">
-    <div class="social-container">
-        <a href="#">
-            <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-pinterest"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-instagram"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-youtube"></i>
-        </a>
-    </div><!-- end container -->
-</div><!-- end social block -->
-
-<!-- gallery details -->
-<div class="section container-fluid grey-bg no-padding ">
-
-    <div class="sv__container--md inner-content-module">
-
-        <div class="gallery-details">
-
-            <div class="single-headline">
-                <h2 class="text-center">Style details</h2>
-            </div>
-
-            <div class="section__wrapper">
-
-                <div class="table-responsive">
-
-                    <table class="table">
-                        <tbody>
-                        <tr>
-                            <th>Hair Type</th>
-                            <td>Curly or wavy hair preferred</td>
-                        </tr>
-                        <tr>
-                            <th>Time to cut</th>
-                            <td>45 min</td>
-                        </tr>
-                        <tr>
-                            <th>Face Type</th>
-                            <td>For pear or diamond shaped faces with a prominent chin.</td>
-                        </tr>
-                        <tr>
-                            <th>The Style</th>
-                            <td>Maintain length and add layers all over the head, not shorter than 3 inches.</td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                </div><!-- end table -->
-
-            </div><!-- end section wrapper -->
-
-        </div><!-- end gallery details -->
-
-    </div><!-- end container md -->
-
-</div><!-- end section details -->
-
-<!-- barber section -->
-<div id="sec2" class="section white-bg">
-
-	<div class="container sv__container--md inner-content-module">
-
-		<div class="barbers">
-
-			<div class="single-headline">
-				<h2>Featured BARBERS</h2>
-			</div>
-
-			<div class="section__wrapper">
-
-				<!-- barber card -->
-				<div class="col-xs-12 col-sm-6 col-md-4 barber__wrapper">
-					<div class="barber__box card-shadow-md">
-
-						<div class="barber__image" style="background-image: url(/assets/images/team/barber-cover-4.jpg);">
-							<div class="overlay text-center">
-								<h3 class="white">The mountains is where you'll find me on the weekends.</h3>
-							</div>
-							<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
-						</div>
-						<img class="avatar" src="assets/images/team/avatar-4.jpg" alt="The Shave Barbershop HTML Theme"/>
-						<div class="title">
-							<h4>Adam Hinly</h4>
-							<h5>Owner & Master Barber</h5>
-						</div>
-						<a class="btn book-now-btn" href="" data-toggle="modal" data-target="#bookNowModal">Book now</a>
-
-					</div><!-- end box -->
-				</div><!-- end barber card -->
-
-				<!-- barber card -->
-				<div class="col-xs-12 col-sm-6 col-md-4 barber__wrapper">
-					<div class="barber__box card-shadow-md">
-
-						<div class="barber__image" style="background-image: url(/assets/images/team/barber-cover-6.jpg);">
-							<div class="overlay text-center">
-								<h3 class="white">When I have time, I love to travel.</h3>
-							</div>
-							<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
-						</div>
-						<img class="avatar" src="assets/images/team/avatar-6.jpg" alt="The Shave Barbershop HTML Theme"/>
-						<div class="title">
-							<h4>Lauren Beth</h4>
-							<h5>Stylist & Fashonista</h5>
-						</div>
-						<a class="btn book-now-btn" href="" data-toggle="modal" data-target="#bookNowModal">Book now</a>
-
-					</div><!-- end box -->
-				</div><!-- end barber card -->
-
-				<!-- barber card -->
-				<div class="col-xs-12 col-sm-6 col-md-4 barber__wrapper">
-					<div class="barber__box card-shadow-md">
-
-						<div class="barber__image" style="background-image: url(/assets/images/team/barber-cover-3.jpg);">
-							<div class="overlay text-center">
-								<h3 class="white">I love the true craftsmenship of the retro barber and want to bring that experience to a new generation.</h3>
-							</div>
-							<div class="angle-top-bottom-barber" style="border-right-color: #fff;"></div>
-						</div>
-						<img class="avatar" src="assets/images/team/avatar-3.jpg" alt="The Shave Barbershop HTML Theme"/>
-						<div class="title">
-							<h4>Mike Stewart</h4>
-							<h5>Master Barber</h5>
-						</div>
-						<a class="btn book-now-btn" href="" data-toggle="modal" data-target="#bookNowModal">Book now</a>
-
-					</div><!-- end box -->
-
-				</div><!-- end barber card -->
-
-			</div><!-- end section wrapper -->
-
-		</div><!-- end barber wrapper -->
-
-	</div><!-- end content wrapper -->
-
-</div><!-- end barber section -->
-
-
-<!-- Gold bar -->
-<div class="section container-fluid no-padding gold-bg">
-    <div class="inner-sm sv__container--md">
+    <nav class="post-nav">
         <div class="row no-margin">
-            <div class="col-xs-12">
-                <h4 class="text-center white">Clean Design and Powerful Features makes The Shave a superstar</h4>
+
+            <!-- Service Item -->
+            <div class="col-xs-12 col-sm-6 prev-post">
+                <div class="post-nav-thumb" style="background-image: url('assets/images/gallery/2/style2-link.jpg')"></div>
+                <div class="post-nav-content">
+                    <div class="post-nav-subtitle">Prev Style</div>
+                    <h2 class="post-nav-title"><span>Wild Stallion</span></h2>
+                </div>
+                <a href="gallery-details-2.html"></a>
             </div>
-        </div>
-    </div>
-</div><!-- end gold bar -->
+
+            <!-- Service Item -->
+            <div class="col-xs-12 col-sm-6 next-post">
+                <div class="post-nav-thumb" style="background-image: url('assets/images/gallery/1/style1-link.jpg')"></div>
+                <div class="post-nav-content">
+                    <div class="post-nav-subtitle">Next Style</div>
+                    <h2 class="post-nav-title"><span>CasaNova</span></h2>
+                </div>
+                <a href="gallery-details-1.html"></a>
+            </div>
+
+        </div><!-- end row -->
+
+    </nav> <!-- end nav -->
+
+</div><!-- End service links -->
 
 
 
@@ -814,8 +784,10 @@
 				<!-- Footer Logo -->
 				<div class="footer__logo no-padding">
 					<div class="logo__container">
-						<h5>The</h5>
-						<h3>Shave</h3>
+						<div class="footer__logo--img">
+							<img class="img-responsive logo-white" src="assets/images/shave-logo-white.png" alt="The Shave barbershop HTML theme"/>
+						</div>
+						<h3>The Shave</h3>
 						<h4>Mens Barbershop</h4>
 					</div>
 				</div>
@@ -858,7 +830,7 @@
 
 						<!-- email -->
 						<div class="col-xs-12 col-sm-6 contact no-padding">
-							<a class="email" href="mailto:info@theshave.com">info@theshave.com</a>
+							<a class="email" href="mailto:info@theshave.com">info@theshaveemail.com</a>
 							<a class="phone" href="tel:303-313-0303">303-313-0303</a>
 						</div>
 
@@ -868,12 +840,12 @@
 					<div class="row social-footer">
 						<div class="col-xs-12 col-sm-6 col-md-8">
 							<ul>
-								<li><a href=""><i class="fa fa-facebook"></i></a></li>
-								<li><a href=""><i class="fa fa-twitter"></i></a></li>
-								<li><a href=""><i class="fa fa-instagram"></i></a></li>
-								<li><a href=""><i class="fa fa-pinterest"></i></a></li>
-								<li><a href=""><i class="fa fa-youtube-play"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div><!-- end col -->
 
@@ -998,19 +970,18 @@
         <!-- end shop times -->
 
         <!-- Plugins -->
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="assets/scripts/jquery.min.js"></script>
+        <script src="assets/scripts/modernizr.min.js"></script>
 
-        <script src="assets/scripts/jquery.themepunch.tools.min.js"></script>
-        <script src="assets/scripts/jquery.themepunch.revolution.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        <script src="assets/scripts/bootstrap.min.js"></script>
         <script src="assets/scripts/jquery.menu-aim.min.js"></script>
         <script src="assets/scripts/skrollr.min.js"></script>
         <script src="assets/scripts/imagesloaded.min.js"></script>
         <script src="assets/scripts/jquery-placeholder.min.js"></script>
         <script src="assets/scripts/jquery.prefetch.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+        <script src="assets/scripts/ScrollMagic.min.js"></script>
+        <script src="assets/scripts/debug.addIndicators.min.js"></script>
 
         <!-- Settings -->
         <script src="assets/scripts/nav-settings.min.js"></script>
@@ -1018,9 +989,9 @@
 
         <!-- Script block allowing child pages to inject their own scripts -->
         
-	<script src="assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
-	<script src="assets/scripts/flickity-settings.min.js"></script>
-	<script src="assets/scripts/gallery-details.min.js"></script>
+    <script src="assets/bower_components/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="assets/scripts/flickity-settings.min.js"></script>
+    <script src="assets/scripts/gallery-details.min.js"></script>
 
 
     </body>

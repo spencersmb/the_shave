@@ -134,6 +134,10 @@ $(window).load(function(){
 
   });
 
+  //select show all on load
+  $('.filter-group').children('li').first().addClass('selected');
+
+
   //Filter URL
   var val = window.location.hash;
   var hash;

@@ -9,7 +9,17 @@ $(function() {
 		windowSize = myWindow.width(),
 		browserID = WhichBrowser(),
 		resizedWidth;
-	
+
+		// ==========================================================================
+		// Global A tag click
+		// ==========================================================================
+		$('a').click(function (e) {
+
+			if($(this).attr('href')==='#'){
+				e.preventDefault();
+			}
+
+		});
 		// ==========================================================================
 		// Master Resize
 		// ==========================================================================
@@ -86,6 +96,11 @@ $(function() {
 								$(this).css('opacity', 1);
 						});
 
+						//slide in for image text blocks
+						$('.text-image').find('.text-image-img').children('img').addClass('active');
+						$('.image-text').find('.image-text-img').children('img').addClass('active');
+
+
 						//ie9 fix for cards
 						ie9ProductsEvent();
 
@@ -94,7 +109,7 @@ $(function() {
 
 							setTimeout(function() {
 								ScrollCascade(windowSize, cascadeFeature)
-							});
+							},300);
 
 						modernProductsEvent();
 				}
@@ -296,15 +311,17 @@ $(function() {
 					preLoadElement(modal);
 
 				}).done(function (instance) {
-					var isoGalleryItem = $('.gallery-item').find('span').get();
+					var isoGalleryItem = $('.gallery-item').find('span').get(),
+						  heroItem = $('.hero-background');
 
 							//background image preloader
-							if(isoGalleryItem.length > 0 ) {
+							if(heroItem.length > 0){
+								preLoadElement(heroItem, initLayout);
+							}else if(isoGalleryItem.length > 0 ) {
 								preLoadElement(isoGalleryItem, initLayout);
 							}else{
 								initLayout();
 							}
-
 				});
 			}
 		}
@@ -440,7 +457,6 @@ $(function() {
 
 			$(window).on('resize', function() {
 				resizedWidth = $(window).width() + 15;
-				//console.log(resizedWidth);
 			});
 
 			if (resizedWidth >= tablet || screenSize >= tablet) {

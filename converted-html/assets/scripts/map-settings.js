@@ -4,6 +4,7 @@ function initialize() {
 
   var windowWidth = window.innerWidth;
 
+  //replace these variables with you new numbers
   var latitude = 33.9195276,
     longitude = -84.3493754;
 
@@ -242,7 +243,7 @@ function initialize() {
     }
 
     // INFO WINDOWS - POPUP MODAL
-    // Atlanta Office Details
+    // My Office Details
     var officeDetails = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+

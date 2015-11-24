@@ -96,7 +96,9 @@
         background-color: $black;
         opacity: 0;
         z-index: 3;
-        @include transition(all .3s);
+        border-radius: 50%;
+        @include transform(scale(.1));
+        @include transition(all .3s $ease-in-out-circ);
     }
     img {
         width: 100%;
@@ -107,7 +109,9 @@
                 @include transform(translateY(-36px));
             }
             .overlay {
+                @include transform(scale(1));
                 opacity: .7;
+                border-radius: 0;
             }
             .subtext {
                 @include transform(translateY(0));

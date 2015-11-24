@@ -7,7 +7,6 @@ $(function() {
 				menuOpen = false,
 				$navigation = $('#header');
 
-
 				//open dropdown nav
 				$menu_trigger.on('click', function(event){
 						event.preventDefault();
@@ -81,9 +80,12 @@ $(function() {
 	// ==========================================================================
 
 		var main = $('main'),
+			logoBlack = $('.logo-black'),
+			logoWhite = $('.logo-white'),
 			isHero = true,
+			winWidth = $(window).width() + 15;
 			firstSection = main.children().first();
-
+	
     //Get current position of Nav element
     var currentPosition = $(window).scrollTop();
 
@@ -92,42 +94,62 @@ $(function() {
 			isHero = false;
 		}
 
-		//if is Hero section
-		if(currentPosition > 50 && isHero){
-			$navigation.addClass('shadow-on');
-		}else{
-			$navigation.removeClass('shadow-on');
-		}
-
-		//if is not hero section
-		if(currentPosition > 50 && !isHero){
-			$navigation.addClass('shadow-on');
-			$navigation.removeClass('no-hero');
-		}else if(currentPosition < 50 && !isHero){
-			$navigation.removeClass('shadow-on');
-			$navigation.addClass('no-hero');
-		}
-
-
     function addShadow(){
 
     	currentPosition = $(window).scrollTop();
 
 			if(currentPosition > 50 && isHero){
 				$navigation.addClass('shadow-on');
-			}else{
+				logoWhite.addClass('active');
+				logoBlack.removeClass('active');
+			}else if(isHero){
 				$navigation.removeClass('shadow-on');
+				logoWhite.addClass('active');
+				logoBlack.removeClass('active');
 			}
 
 			if(currentPosition > 50 && !isHero){
 				$navigation.addClass('shadow-on');
 				$navigation.removeClass('no-hero');
+				logoWhite.addClass('active');
+				logoBlack.removeClass('active');
+
 			}else if(currentPosition < 50 && !isHero){
 				$navigation.removeClass('shadow-on');
 				$navigation.addClass('no-hero');
+				logoWhite.removeClass('active');
+				logoBlack.addClass('active');
 			}
 
     }
+		//on page load
+		addShadow();
+		navResize();
+
+		function navResize(){
+
+			//overide if mobile
+			if(winWidth < 768){
+				logoWhite.removeClass('active');
+				logoBlack.addClass('active');
+
+			}else if( winWidth > 786){
+				addShadow();
+			}
+		}
+
+		$(window).on('scroll', function(){
+			if(winWidth < 768){
+
+			}else{
+				(!window.requestAnimationFrame) ? addShadow() : window.requestAnimationFrame(addShadow);
+			}
+		});
+
+		$(window).on('resize', function(){
+			winWidth = $(window).width() + 15;
+			navResize();
+		});
 
 		// ==========================================================================
 		// Nav Short-Links
@@ -242,7 +264,6 @@ $(function() {
 						if(hours >= 9 && hours <= 12){
 							toastStatus.text(open);
 						}else{
-							console.log('closed');
 							toastStatus.text(closed);
 						}
 
@@ -308,9 +329,5 @@ $(function() {
 
 			modalOpen = false;
 		}
-
-    $(window).on('scroll', function(){
-    	(!window.requestAnimationFrame) ? addShadow() : window.requestAnimationFrame(addShadow);
-    });
 
 });
