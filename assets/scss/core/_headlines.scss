@@ -402,7 +402,6 @@
         border-style:none;
         color:$white;
         font-family: $ubuntu;
-        font-size:14px;
         font-weight: 500;
         letter-spacing: 2px;
         line-height: 20px;
@@ -448,9 +447,7 @@
 }
 
 .headline-left{
-    max-width: 300px !important;
-    min-width: 300px !important;
-    text-align: left;
+    text-align: center;
 }
 
 .headline-left-right{
@@ -480,6 +477,9 @@
 
 .col-block{
     width:47.5%;
+}
+.subtitle-left{
+    text-align: center;
 }
 
 // Displays greater than 768px
@@ -619,10 +619,6 @@
     .one-third{
         width:42%;
     }
-    .headline-left{
-        max-width: 350px !important;
-        min-width: 350px !important;
-    }
     .subtext{
         font-size: 19px;
         line-height: 30px;
@@ -634,17 +630,7 @@
     .headline-left-right{
         text-align: left;
     }
-    .sv-feature {
-        &-headline{
-            max-width: 800px !important;
-            min-width: 800px !important;
-        }
 
-    }
-    .headline-left{
-        max-width: 450px !important;
-        min-width: 450px !important;
-    }
     .pos-right{
         max-width: 500px !important;
         min-width: 500px !important;
@@ -716,6 +702,9 @@
             margin-bottom: 0;
         }
     }
+    .headline-left{
+        text-align: left;
+    }
 
 }
 
@@ -724,8 +713,8 @@
     .sv-feature {
 
         &-headline{
-            max-width: 1200px !important;
-            min-width: 1200px !important;
+//            max-width: 1200px !important;
+//            min-width: 1200px !important;
         }
         &-subtitle {
 
@@ -737,10 +726,7 @@
         }
     }
     .headline-left{
-        max-width: 700px !important;
-        min-width: 700px !important;
         text-align: left;
-
     }
     .pos-right{
         max-width: 45vw !important;

@@ -1179,7 +1179,6 @@ blockquote.reverse {
   border-style: none;
   color: #fff;
   font-family: "Ubuntu", sans-serif;
-  font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
   line-height: 20px;
@@ -1222,9 +1221,7 @@ blockquote.reverse {
 }
 
 .headline-left {
-  max-width: 300px !important;
-  min-width: 300px !important;
-  text-align: left;
+  text-align: center;
 }
 
 .headline-left-right {
@@ -1252,6 +1249,10 @@ blockquote.reverse {
 
 .col-block {
   width: 47.5%;
+}
+
+.subtitle-left {
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1391,11 +1392,6 @@ blockquote.reverse {
     width: 42%;
   }
 
-  .headline-left {
-    max-width: 350px !important;
-    min-width: 350px !important;
-  }
-
   .subtext {
     font-size: 19px;
     line-height: 30px;
@@ -1404,16 +1400,6 @@ blockquote.reverse {
 @media only screen and (min-width: 992px) {
   .headline-left-right {
     text-align: left;
-  }
-
-  .sv-feature-headline {
-    max-width: 800px !important;
-    min-width: 800px !important;
-  }
-
-  .headline-left {
-    max-width: 450px !important;
-    min-width: 450px !important;
   }
 
   .pos-right {
@@ -1482,20 +1468,17 @@ blockquote.reverse {
   .sv-col-block:nth-last-child(-n+2) {
     margin-bottom: 0;
   }
+
+  .headline-left {
+    text-align: left;
+  }
 }
 @media only screen and (min-width: 1200px) {
-  .sv-feature-headline {
-    max-width: 1200px !important;
-    min-width: 1200px !important;
-  }
-
   .sv-feature-Icon [class^="icon-sv"] {
     font-size: 55px;
   }
 
   .headline-left {
-    max-width: 700px !important;
-    min-width: 700px !important;
     text-align: left;
   }
 
