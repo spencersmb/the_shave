@@ -52,6 +52,7 @@
         margin:10px auto 0;
         font-size: 16px;
         letter-spacing: 0;
+        line-height: 28px;
     }
 }
 
@@ -356,7 +357,7 @@
     position: absolute;
     display: inline-block;
     float:left;
-    margin-right:30px;
+    margin-right:20px;
     margin-bottom: 30px;
     font-size: 34px;
     color:$darker-grey;
@@ -367,7 +368,7 @@
 }
 .sv-block-with-icon{
     position: relative;
-    padding-left:60px;
+    padding-left:50px;
     h6{
         text-transform: uppercase;
         letter-spacing: 2px;
