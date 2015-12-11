@@ -8,6 +8,10 @@
     margin-bottom: 30px;
     cursor: pointer;
 }
+.products__2col{
+    max-width: 700px;
+    margin:0 auto;
+}
 .card__slider {
     position: relative;
     overflow: hidden;
@@ -65,6 +69,10 @@
             font-weight: 400;
             padding-top: 0;
         }
+        p{
+            font-size: 16px;
+            line-height: 1.45;
+        }
         .angle-bottom-card {
             @extend .angle-bottom;
             border-left: 0 solid #fff;
@@ -119,7 +127,7 @@
     .bio {
         text-align: left;
         font-size: 14px;
-        margin-top: 25px;
+        margin-top: 20px;
         margin-bottom: 25px;
         opacity: 0;
         padding:0 20px;
@@ -128,7 +136,7 @@
         @include transform(translate3d(0, 225px, 0));
         h6{
             color:$black;
-            font-size:18px;
+            font-size:16px;
             font-weight: 500;
             padding:0;
         }
@@ -147,7 +155,7 @@
     }
     &.active {
         .open {
-            height:50%;
+            height:40%;
             &::before,
             &::after {
                 width: 14px;
@@ -196,6 +204,9 @@
     }
 }
 @include breakpoint(tablet) {
+    .products {
+        padding: 0;
+    }
     .content__wrapper {
         .image {
             overflow: visible;
@@ -205,6 +216,9 @@
         }
         .open {
             height: 70px;
+        }
+        .bio{
+            padding:0 25px;
         }
         &.active {
             .open {
@@ -227,13 +241,24 @@
 
 @include breakpoint(laptop) {
     .content__wrapper {
+
         .open {
 
         }
         .bio {
-            margin-top: 25px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             line-height: 24px;
+        }
+        .title{
+            p{
+                font-size: 15px;
+                line-height: 1.35;
+            }
+        }
+        &.active {
+            .open {
+                height:40%;
+            }
         }
     }
     //options for col-sm-6
@@ -243,6 +268,11 @@
                 .bio {
                     font-size: 14px;
                     line-height: 24px;
+                }
+                &.active {
+                    .open {
+                        height:40%;
+                    }
                 }
             }
             &.col-md-3 {
@@ -255,7 +285,24 @@
     }
 }
 
+@media only screen and (min-width: 1100px) {
+    .content__wrapper {
+        &.active {
+            .open {
+                height:50%;
+            }
+        }
+    }
+}
+
 @include breakpoint(desktop) {
+    .content__wrapper {
+        &.active {
+            .open {
+                height:40%;
+            }
+        }
+    }
     .card__slider {
         height: 100%;
     }
@@ -273,6 +320,23 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
+            }
+        }
+    }
+}
+@include breakpoint(desktopXL) {
+    .content__wrapper {
+        &.active {
+            .open {
+                height:50%;
+            }
+        }
+    }
+    .content__wrapper {
+        .title{
+            p{
+                font-size: 15px;
+                line-height: 1.35;
             }
         }
     }
