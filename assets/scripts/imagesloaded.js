@@ -13,7 +13,7 @@
  */
 
 (function () {
-	
+	'use strict';
 
 	/**
 	 * Class for managing events.

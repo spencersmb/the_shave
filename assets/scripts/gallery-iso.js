@@ -2,10 +2,14 @@
 // Gallery Isotope Settings
 // ==========================================================================
 $(window).load(function(){
+  'use strict';
 
   //Get grid to assign dynamically
   var gridId = $('.inner-content-module').children('div').attr('id'),
       reIso,
+      $grid,
+      $gallery_grid,
+      $gallery_wrapper_width,
       $fullGrid = $('#' + gridId);
 
       //add transition for intro animation
@@ -120,7 +124,7 @@ $(window).load(function(){
   //Filter on click
   $('.filter-group').on( 'click', 'li', function() {
 
-    $this = $(this);
+    var $this = $(this);
 
     $this.parent().children('li').each(function(){
       $(this).removeClass('selected');

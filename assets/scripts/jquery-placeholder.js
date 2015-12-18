@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	'use strict';
 	if(!Modernizr.input.placeholder){
 
 		$("input").each(

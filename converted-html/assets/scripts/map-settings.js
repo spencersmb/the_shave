@@ -243,16 +243,15 @@ function initialize() {
     }
 
     // INFO WINDOWS - POPUP MODAL
-    // My Office Details
+    // Edit Office Location
     var officeDetails = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">The Shave</h1>'+
       '<div id="bodyContent">'+
-      '<p>1150E Hammond Drive' +
-      '<br>Atlanta, GA 30328'+
-      '<br>Suites 400, 600 & 650</p>'+
-      '<a class="tel" href="tel:333-333-3333">333-333-3333</a>'+
+      '<p>2355 Two Bits St.' +
+      '<br>Grooming, CA 30003</p>'+
+      '<a class="tel" href="tel:123-456-7890">123.456.7890</a>'+
       '<a class="btn book-now-btn get-directions" href="' + buildLat(loc1) + '" target="_blank">Get Directions</a>'+
       '</div>'+
       '</div>';

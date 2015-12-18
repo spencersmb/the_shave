@@ -71,7 +71,7 @@
  * MIT License
 */
 (function($) {
-
+  'use strict';
     $.fn.menuAim = function(opts) {
         // Initialize menu-aim for all elements in jQuery collection
         this.each(function() {
@@ -319,6 +319,6 @@
 
         $(document).mousemove(mousemoveDocument);
 
-    };
+    }
 })(jQuery);
 

@@ -5,9 +5,7 @@
 
     var currHeight,
         currThumbHeight,
-        winWidth = function() {
-          return window.innerWidth;
-        };
+        winWidth = globalWindowWidth + 15;
 
     //get height of image on window resize
     function getImgHeightMaster(){
@@ -44,10 +42,10 @@
     }
 
     function galleryDetails(){
-      var win = winWidth();
-      if(win > 1200){
+
+      if(winWidth > 1200){
         showGalleryDetails();
-      }else if(win < 1200 && win > 991){
+      }else if(winWidth < 1200 && winWidth > 991){
         hideGalleryDetails();
       }else{
         showGalleryDetails();

@@ -1,15 +1,13 @@
 @charset "UTF-8";
 /*
 Theme Name: TheShave
-Theme URI: http://underscores.me/
+Theme URI: http://everytuesdayshop.com/html/shave/
 Author: Spencer Bigum
 Author URI: http://www.spencerbigum.com
-Description: Description
+Description: The Shave Barbershop HTML Theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:
-Tags:
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -2316,7 +2314,7 @@ blockquote.reverse {
   color: #252525;
 }
 #header.no-hero #sv__logo:hover {
-  color: #af8c45;
+  color: #252525;
 }
 #header.no-hero .cd-dropdown-trigger {
   color: #252525;
@@ -2381,7 +2379,7 @@ blockquote.reverse {
   overflow: hidden;
 }
 #sv__logo:hover {
-  color: #af8c45;
+  color: #fff;
 }
 #sv__logo .sv__logo--img {
   margin: 13px 10px 10px;
@@ -5834,7 +5832,7 @@ footer.loaded {
 .content__wrapper .title {
   text-align: left;
   position: absolute;
-  top: -75px;
+  top: -85px;
   background: #fff;
   width: 100%;
   height: 100%;

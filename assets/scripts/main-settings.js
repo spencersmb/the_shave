@@ -1,4 +1,5 @@
 $(function() {
+'use strict';
 
 		//Global Variables
 		var myWindow = $(window),
@@ -469,7 +470,7 @@ $(function() {
 
 		///Encapsulated States
 		(function() {
-
+			'use strict';
 			var header = $('#header');
 
 			// ==========================================================================
@@ -533,6 +534,7 @@ $(function() {
 			var myTab = $('#svfm2Tab'),
 					myTabNext = myTab.next(),
 					myTabContent = $('#myTabContent'),
+					mobilePanelHeight,
 					svfm2Wrapper = $('.svfm2__wrapper'),
 					svfm2ImageContainer = $('.svfm2__wrapper--images'),
 					svfm2Image = '.svfm2__image',

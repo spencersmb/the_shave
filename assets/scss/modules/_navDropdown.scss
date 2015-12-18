@@ -76,7 +76,7 @@
         #sv__logo{
             color:$black;
             &:hover{
-                color:$primary-color;
+                color:$black;
             }
         }
 
@@ -163,7 +163,7 @@
     overflow:hidden;
 
     &:hover{
-        color:$primary-color;
+        color:$white;
     }
 
     .sv__logo--img{
@@ -207,6 +207,7 @@
         font-size: em(16px);
         text-transform: uppercase;
         margin-top: 21px;
+
     }
     img {
         display: block;
@@ -223,6 +224,7 @@
             font-size: em(24px);
             margin-top: 28px;
         }
+
     }
 }
 

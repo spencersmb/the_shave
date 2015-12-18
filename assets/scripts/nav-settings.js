@@ -1,4 +1,5 @@
 $(function() {
+	'use strict';
 
 		//Open close
 		var $menu_trigger = $('.cd-dropdown-trigger'),
@@ -83,7 +84,7 @@ $(function() {
 			logoBlack = $('.logo-black'),
 			logoWhite = $('.logo-white'),
 			isHero = true,
-			winWidth = $(window).width() + 15;
+			winWidth = $(window).width() + 15,
 			firstSection = main.children().first();
 	
     //Get current position of Nav element
@@ -173,6 +174,9 @@ $(function() {
 
 		//Add click events to each link
 		$('.quick-link').each(function(index){
+			var id,
+					active;
+
 			return $(this).click(function(e){
 				e.preventDefault();
 
@@ -219,6 +223,8 @@ $(function() {
 
 		//attach click event to toast close button
 		$('.sv-toast').find('button').each(function(index){
+			var svToast;
+
 			return $(this).click(function(e){
 				e.preventDefault();
 				svToast = $(this).parent('div').parent('div');
@@ -285,6 +291,7 @@ $(function() {
 
 			var modal = $('.modal');
 
+
 			modal.on('show.bs.modal', centerModal);
 			modal.on('hide.bs.modal', modalOut);
 
@@ -327,7 +334,6 @@ $(function() {
 		function modalOut(){
 			$('.modal-content').find('.row').children('div').eq(1).removeClass('animate-in');
 
-			modalOpen = false;
 		}
 
 });
