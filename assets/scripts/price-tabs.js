@@ -1,4 +1,4 @@
-(function() {
+(function($) {
   'use strict';
 
   // Set tab active based on URL
@@ -59,4 +59,4 @@
 
   }
 
-})();
+})(jQuery);

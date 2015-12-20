@@ -315,7 +315,7 @@
             .find(options.rowSelector)
                 .mouseenter(mouseenterRow)
                 .mouseleave(mouseleaveRow)
-                .click(clickRow);
+                .on('click', clickRow);
 
         $(document).mousemove(mousemoveDocument);
 

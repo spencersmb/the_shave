@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
   'use strict';
 
 //GALLERY DETAILS PAGE
@@ -17,4 +17,4 @@ $(function() {
     pageDots: false
   });
 
-});
+})(jQuery);

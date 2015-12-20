@@ -1,4 +1,4 @@
-(function(){
+(function($){
   'use strict';
 
     var currHeight,
@@ -64,4 +64,4 @@
       galleryDetails();
     });
 
-})();
+})(jQuery);

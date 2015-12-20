@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
 'use strict';
 
 		//Global Variables
@@ -14,7 +14,7 @@ $(function() {
 		// ==========================================================================
 		// Global A tag click
 		// ==========================================================================
-		$('a').click(function (e) {
+		$('a').on("click", function (e) {
 
 			if($(this).attr('href')==='#'){
 				e.preventDefault();
@@ -468,158 +468,152 @@ $(function() {
 			}
 		}
 
-		///Encapsulated States
-		(function() {
-			'use strict';
-			var header = $('#header');
 
-			// ==========================================================================
-			// Modal click functions
-			// ==========================================================================
-			$('.modal-form').find('li').click(function (e) {
-				e.preventDefault();
-				var link = $(this).children('a').attr('href');
-				window.location = link;
-			});
+		var header = $('#header');
 
-			// ==========================================================================
-			// Form focus for comments
-			// ==========================================================================
-			$( ".comment__form" ).delegate( "*", "focus blur", function() {
-				var elem = $( this );
-				setTimeout(function() {
-					elem.prev().toggleClass('focused');
-					elem.toggleClass( "focused", elem.is( ":focus" ) );
-				}, 0 );
-			});
+		// ==========================================================================
+		// Modal click functions
+		// ==========================================================================
+		$('.modal-form').find('li').on('click', function (e) {
+			e.preventDefault();
+			var link = $(this).children('a').attr('href');
+			window.location = link;
+		});
 
-			// ==========================================================================
-			// FAQ
-			// ==========================================================================
-			var faqTrigger = $('.shave__faq--trigger');
+		// ==========================================================================
+		// Form focus for comments
+		// ==========================================================================
+		$( ".comment__form" ).delegate( "*", "focus blur", function() {
+			var elem = $( this );
+			setTimeout(function() {
+				elem.prev().toggleClass('focused');
+				elem.toggleClass( "focused", elem.is( ":focus" ) );
+			}, 0 );
+		});
 
-			faqTrigger.on('click', function(event){
-				event.preventDefault();
-				$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
-			});
+		// ==========================================================================
+		// FAQ
+		// ==========================================================================
+		var faqTrigger = $('.shave__faq--trigger');
 
-			// ==========================================================================
-			// Testimonial Carousel
-			// ==========================================================================
-			$('#testimonial-carousel').carousel({
-				interval: 15000,
-				pause: "false"
-			});
+		faqTrigger.on('click', function(event){
+			event.preventDefault();
+			$(this).next('.shave__faq--content').slideToggle(200).end().parent('li').toggleClass('active');
+		});
 
-			// ==========================================================================
-			// Scroll to functions
-			// ==========================================================================
-			$('.box-sm-hours').find('a').click(function (e) {
-				e.preventDefault();
+		// ==========================================================================
+		// Testimonial Carousel
+		// ==========================================================================
+		$('#testimonial-carousel').carousel({
+			interval: 15000,
+			pause: "false"
+		});
 
-				$('html, body').animate({
-					scrollTop: $( $.attr(this, 'href') ).offset().top - 80
-				}, 900);
-				return false;
+		// ==========================================================================
+		// Scroll to functions
+		// ==========================================================================
+		$('.box-sm-hours').find('a').on('click', function (e) {
+			e.preventDefault();
 
-			});
+			$('html, body').animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top - 80
+			}, 900);
+			return false;
 
-		})();
+		});
 
 		// ==========================================================================
 		// Feature Module 2
 		// ==========================================================================
-		(function() {
 
-			var myTab = $('#svfm2Tab'),
-					myTabNext = myTab.next(),
-					myTabContent = $('#myTabContent'),
-					mobilePanelHeight,
-					svfm2Wrapper = $('.svfm2__wrapper'),
-					svfm2ImageContainer = $('.svfm2__wrapper--images'),
-					svfm2Image = '.svfm2__image',
-					tabTitle = myTab.find('li.active').data('title'),
-					headline = svfm2Wrapper.find('.headline-container').children('h3');
 
-					//Change tab content
-					myTab.on('click', 'li', function(){
+		var myTab = $('#svfm2Tab'),
+				myTabNext = myTab.next(),
+				myTabContent = $('#myTabContent'),
+				mobilePanelHeight,
+				svfm2Wrapper = $('.svfm2__wrapper'),
+				svfm2ImageContainer = $('.svfm2__wrapper--images'),
+				svfm2Image = '.svfm2__image',
+				tabTitle = myTab.find('li.active').data('title'),
+				headline = svfm2Wrapper.find('.headline-container').children('h3');
 
-						var tab = $(this);
+				//Change tab content
+				myTab.on('click', 'li', function(){
 
-						//get panel ID that was clicked and remove the hash
-						var panelId = tab.find('a').attr('href').substr(1);
+					var tab = $(this);
 
-						//get the data-attrb for the current clicked tab
-						tabTitle = tab.data('title');
+					//get panel ID that was clicked and remove the hash
+					var panelId = tab.find('a').attr('href').substr(1);
 
-						myTabContent.children('div').each( function() {
+					//get the data-attrb for the current clicked tab
+					tabTitle = tab.data('title');
 
-							//first chck if the tab has active that was clicked
-							if(!$(this).hasClass('active')){
+					myTabContent.children('div').each( function() {
 
-								$(this).removeClass('active').removeClass('in');
+						//first chck if the tab has active that was clicked
+						if(!$(this).hasClass('active')){
 
-								if(panelId === this.id){
+							$(this).removeClass('active').removeClass('in');
 
-									var element = $(this),
-										  currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
+							if(panelId === this.id){
 
-									//get heigh of clicked content
-									var panelHeight = element.height(),
-										  imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
+								var element = $(this),
+										currentImage = svfm2Wrapper.children(svfm2ImageContainer).children('.active');
 
-									//loop through the images and match the title to the tab title
-									for( var i=0; i < imageTitle.length; i++){
+								//get heigh of clicked content
+								var panelHeight = element.height(),
+										imageTitle = svfm2Wrapper.children(svfm2ImageContainer).children(svfm2Image).get();
 
-										if($(imageTitle[i]).data('title') === panelId){
+								//loop through the images and match the title to the tab title
+								for( var i=0; i < imageTitle.length; i++){
 
-											$(imageTitle[i]).addClass('active');
-										}
+									if($(imageTitle[i]).data('title') === panelId){
+
+										$(imageTitle[i]).addClass('active');
 									}
-
-									//add hight to adj the for new content
-									if(windowSize <= 600){
-										//slide content out and then add the content back in
-										setTimeout(function(){
-											myTabNext.height(panelHeight);
-										}, 400);
-
-									}
-
-									currentImage.removeClass('active');
-
-									//change title
-									headline.fadeTo( "slow", 0, function(){
-										headline.text(tabTitle).fadeTo('fast', 1);
-									});
-
-									setTimeout(function(){
-										element.addClass('in');
-									}, 400);
 								}
-							}
 
-						});
+								//add hight to adj the for new content
+								if(windowSize <= 600){
+									//slide content out and then add the content back in
+									setTimeout(function(){
+										myTabNext.height(panelHeight);
+									}, 400);
+
+								}
+
+								currentImage.removeClass('active');
+
+								//change title
+								headline.fadeTo( "slow", 0, function(){
+									headline.text(tabTitle).fadeTo('fast', 1);
+								});
+
+								setTimeout(function(){
+									element.addClass('in');
+								}, 400);
+							}
+						}
 
 					});
 
-					//change title on page load
-					headline.text(tabTitle);
+				});
+
+				//change title on page load
+				headline.text(tabTitle);
+
+				mobilePanelHeight = myTabContent.find('.active').height();
+
+				myTabContent.height(mobilePanelHeight);
+
+				//set height for phones on load
+				if(windowSize <= 600){
 
 					mobilePanelHeight = myTabContent.find('.active').height();
 
 					myTabContent.height(mobilePanelHeight);
 
-					//set height for phones on load
-					if(windowSize <= 600){
-
-						mobilePanelHeight = myTabContent.find('.active').height();
-
-						myTabContent.height(mobilePanelHeight);
-
-					}
-
-			})();
+				}
 
 		// ==========================================================================
 		// Price Tab sizing function
@@ -689,4 +683,4 @@ $(function() {
 		//Image Preloader check
 		shavePreloader();
 
-});
+})(jQuery);

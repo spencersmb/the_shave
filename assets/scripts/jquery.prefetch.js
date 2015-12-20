@@ -12,7 +12,7 @@
  * jQuery.prefetch(["image1.jpg", "image2.jpg", ...], {delay: 1000});
  * jQuery("img").prefetch();
  */
-;(function($, undefined)
+(function($, undefined)
 {
     "use strict";
 

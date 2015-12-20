@@ -1,4 +1,4 @@
-$(function() {
+(function($) {
 	'use strict';
 
 		//Open close
@@ -177,7 +177,7 @@ $(function() {
 			var id,
 					active;
 
-			return $(this).click(function(e){
+			return $(this).on('click', function(e){
 				e.preventDefault();
 
 				//menu is open - close when activating a toast
@@ -225,7 +225,7 @@ $(function() {
 		$('.sv-toast').find('button').each(function(index){
 			var svToast;
 
-			return $(this).click(function(e){
+			return $(this).on('click', function(e){
 				e.preventDefault();
 				svToast = $(this).parent('div').parent('div');
 				toastAnimationOut(svToast);
@@ -287,19 +287,17 @@ $(function() {
 		// ==========================================================================
 		// Modal config
 		// ==========================================================================
-		(function() {
 
-			var modal = $('.modal');
+		var modal = $('.modal');
 
 
-			modal.on('show.bs.modal', centerModal);
-			modal.on('hide.bs.modal', modalOut);
+		modal.on('show.bs.modal', centerModal);
+		modal.on('hide.bs.modal', modalOut);
 
-			modal.click(function () {
-				$('.modal').modal('toggle');
-			});
+		modal.on('click', function () {
+			$('.modal').modal('toggle');
+		});
 
-		})();
 
 		function centerModal(){
 			//remove toast if toast is active
@@ -336,4 +334,4 @@ $(function() {
 
 		}
 
-});
+})(jQuery);
